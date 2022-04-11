@@ -5,6 +5,7 @@ package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class DatabaseInstanceSettingsMaintenanceWindowGetArgs extends io.p
       private final @Nullable Output<Integer> day;
 
     public Output<Integer> getDay() {
-        return this.day == null ? Output.empty() : this.day;
+        return this.day == null ? Codegen.empty() : this.day;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class DatabaseInstanceSettingsMaintenanceWindowGetArgs extends io.p
       private final @Nullable Output<Integer> hour;
 
     public Output<Integer> getHour() {
-        return this.hour == null ? Output.empty() : this.hour;
+        return this.hour == null ? Codegen.empty() : this.hour;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class DatabaseInstanceSettingsMaintenanceWindowGetArgs extends io.p
       private final @Nullable Output<String> updateTrack;
 
     public Output<String> getUpdateTrack() {
-        return this.updateTrack == null ? Output.empty() : this.updateTrack;
+        return this.updateTrack == null ? Codegen.empty() : this.updateTrack;
     }
 
     public DatabaseInstanceSettingsMaintenanceWindowGetArgs(
@@ -59,9 +60,9 @@ public final class DatabaseInstanceSettingsMaintenanceWindowGetArgs extends io.p
     }
 
     private DatabaseInstanceSettingsMaintenanceWindowGetArgs() {
-        this.day = Output.empty();
-        this.hour = Output.empty();
-        this.updateTrack = Output.empty();
+        this.day = Codegen.empty();
+        this.hour = Codegen.empty();
+        this.updateTrack = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class DatabaseInstanceSettingsMaintenanceWindowGetArgs extends io.p
             return this;
         }
         public Builder day(@Nullable Integer day) {
-            this.day = Output.ofNullable(day);
+            this.day = Codegen.ofNullable(day);
             return this;
         }
         public Builder hour(@Nullable Output<Integer> hour) {
@@ -101,7 +102,7 @@ public final class DatabaseInstanceSettingsMaintenanceWindowGetArgs extends io.p
             return this;
         }
         public Builder hour(@Nullable Integer hour) {
-            this.hour = Output.ofNullable(hour);
+            this.hour = Codegen.ofNullable(hour);
             return this;
         }
         public Builder updateTrack(@Nullable Output<String> updateTrack) {
@@ -109,7 +110,7 @@ public final class DatabaseInstanceSettingsMaintenanceWindowGetArgs extends io.p
             return this;
         }
         public Builder updateTrack(@Nullable String updateTrack) {
-            this.updateTrack = Output.ofNullable(updateTrack);
+            this.updateTrack = Codegen.ofNullable(updateTrack);
             return this;
         }        public DatabaseInstanceSettingsMaintenanceWindowGetArgs build() {
             return new DatabaseInstanceSettingsMaintenanceWindowGetArgs(day, hour, updateTrack);

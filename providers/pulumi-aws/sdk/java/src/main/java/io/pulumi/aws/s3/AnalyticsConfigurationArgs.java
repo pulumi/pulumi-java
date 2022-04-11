@@ -7,6 +7,7 @@ import io.pulumi.aws.s3.inputs.AnalyticsConfigurationFilterArgs;
 import io.pulumi.aws.s3.inputs.AnalyticsConfigurationStorageClassAnalysisArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -35,7 +36,7 @@ public final class AnalyticsConfigurationArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<AnalyticsConfigurationFilterArgs> filter;
 
     public Output<AnalyticsConfigurationFilterArgs> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class AnalyticsConfigurationArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class AnalyticsConfigurationArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<AnalyticsConfigurationStorageClassAnalysisArgs> storageClassAnalysis;
 
     public Output<AnalyticsConfigurationStorageClassAnalysisArgs> getStorageClassAnalysis() {
-        return this.storageClassAnalysis == null ? Output.empty() : this.storageClassAnalysis;
+        return this.storageClassAnalysis == null ? Codegen.empty() : this.storageClassAnalysis;
     }
 
     public AnalyticsConfigurationArgs(
@@ -72,10 +73,10 @@ public final class AnalyticsConfigurationArgs extends io.pulumi.resources.Resour
     }
 
     private AnalyticsConfigurationArgs() {
-        this.bucket = Output.empty();
-        this.filter = Output.empty();
-        this.name = Output.empty();
-        this.storageClassAnalysis = Output.empty();
+        this.bucket = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.name = Codegen.empty();
+        this.storageClassAnalysis = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -117,7 +118,7 @@ public final class AnalyticsConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder filter(@Nullable AnalyticsConfigurationFilterArgs filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -125,7 +126,7 @@ public final class AnalyticsConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder storageClassAnalysis(@Nullable Output<AnalyticsConfigurationStorageClassAnalysisArgs> storageClassAnalysis) {
@@ -133,7 +134,7 @@ public final class AnalyticsConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder storageClassAnalysis(@Nullable AnalyticsConfigurationStorageClassAnalysisArgs storageClassAnalysis) {
-            this.storageClassAnalysis = Output.ofNullable(storageClassAnalysis);
+            this.storageClassAnalysis = Codegen.ofNullable(storageClassAnalysis);
             return this;
         }        public AnalyticsConfigurationArgs build() {
             return new AnalyticsConfigurationArgs(bucket, filter, name, storageClassAnalysis);

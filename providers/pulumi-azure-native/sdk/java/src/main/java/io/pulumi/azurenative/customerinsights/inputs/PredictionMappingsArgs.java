@@ -5,6 +5,7 @@ package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -60,9 +61,9 @@ public final class PredictionMappingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private PredictionMappingsArgs() {
-        this.grade = Output.empty();
-        this.reason = Output.empty();
-        this.score = Output.empty();
+        this.grade = Codegen.empty();
+        this.reason = Codegen.empty();
+        this.score = Codegen.empty();
     }
 
     public static Builder builder() {

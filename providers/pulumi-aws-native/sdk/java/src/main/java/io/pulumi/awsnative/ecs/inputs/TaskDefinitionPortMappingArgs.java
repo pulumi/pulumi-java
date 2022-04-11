@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,21 +20,21 @@ public final class TaskDefinitionPortMappingArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Integer> containerPort;
 
     public Output<Integer> getContainerPort() {
-        return this.containerPort == null ? Output.empty() : this.containerPort;
+        return this.containerPort == null ? Codegen.empty() : this.containerPort;
     }
 
     @Import(name="hostPort")
       private final @Nullable Output<Integer> hostPort;
 
     public Output<Integer> getHostPort() {
-        return this.hostPort == null ? Output.empty() : this.hostPort;
+        return this.hostPort == null ? Codegen.empty() : this.hostPort;
     }
 
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
     public Output<String> getProtocol() {
-        return this.protocol == null ? Output.empty() : this.protocol;
+        return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     public TaskDefinitionPortMappingArgs(
@@ -46,9 +47,9 @@ public final class TaskDefinitionPortMappingArgs extends io.pulumi.resources.Res
     }
 
     private TaskDefinitionPortMappingArgs() {
-        this.containerPort = Output.empty();
-        this.hostPort = Output.empty();
-        this.protocol = Output.empty();
+        this.containerPort = Codegen.empty();
+        this.hostPort = Codegen.empty();
+        this.protocol = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class TaskDefinitionPortMappingArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder containerPort(@Nullable Integer containerPort) {
-            this.containerPort = Output.ofNullable(containerPort);
+            this.containerPort = Codegen.ofNullable(containerPort);
             return this;
         }
         public Builder hostPort(@Nullable Output<Integer> hostPort) {
@@ -88,7 +89,7 @@ public final class TaskDefinitionPortMappingArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder hostPort(@Nullable Integer hostPort) {
-            this.hostPort = Output.ofNullable(hostPort);
+            this.hostPort = Codegen.ofNullable(hostPort);
             return this;
         }
         public Builder protocol(@Nullable Output<String> protocol) {
@@ -96,7 +97,7 @@ public final class TaskDefinitionPortMappingArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Output.ofNullable(protocol);
+            this.protocol = Codegen.ofNullable(protocol);
             return this;
         }        public TaskDefinitionPortMappingArgs build() {
             return new TaskDefinitionPortMappingArgs(containerPort, hostPort, protocol);

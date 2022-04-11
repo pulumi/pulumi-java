@@ -9,6 +9,7 @@ import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationSnapshotState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -109,7 +110,7 @@ public class ApplicationSnapshot extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApplicationSnapshot(String name, ApplicationSnapshotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:kinesisanalyticsv2/applicationSnapshot:ApplicationSnapshot", name, args == null ? ApplicationSnapshotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:kinesisanalyticsv2/applicationSnapshot:ApplicationSnapshot", name, args == null ? ApplicationSnapshotArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApplicationSnapshot(String name, Output<String> id, @Nullable ApplicationSnapshotState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

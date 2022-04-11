@@ -5,6 +5,7 @@ package io.pulumi.googlenative.recaptchaenterprise_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.recaptchaenterprise_v1.enums.GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeature;
 import io.pulumi.googlenative.recaptchaenterprise_v1.enums.GoogleCloudRecaptchaenterpriseV1WafSettingsWafService;
 import java.util.Objects;
@@ -48,8 +49,8 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsArgs extends io.pu
     }
 
     private GoogleCloudRecaptchaenterpriseV1WafSettingsArgs() {
-        this.wafFeature = Output.empty();
-        this.wafService = Output.empty();
+        this.wafFeature = Codegen.empty();
+        this.wafService = Codegen.empty();
     }
 
     public static Builder builder() {

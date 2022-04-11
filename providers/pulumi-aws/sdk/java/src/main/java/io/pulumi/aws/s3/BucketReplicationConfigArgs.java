@@ -6,6 +6,7 @@ package io.pulumi.aws.s3;
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -58,9 +59,9 @@ public final class BucketReplicationConfigArgs extends io.pulumi.resources.Resou
     }
 
     private BucketReplicationConfigArgs() {
-        this.bucket = Output.empty();
-        this.role = Output.empty();
-        this.rules = Output.empty();
+        this.bucket = Codegen.empty();
+        this.role = Codegen.empty();
+        this.rules = Codegen.empty();
     }
 
     public static Builder builder() {

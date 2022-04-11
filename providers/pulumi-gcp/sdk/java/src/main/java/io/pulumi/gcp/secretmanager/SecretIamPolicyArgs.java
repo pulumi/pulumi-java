@@ -5,6 +5,7 @@ package io.pulumi.gcp.secretmanager;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -35,7 +36,7 @@ public final class SecretIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="secretId", required=true)
@@ -55,9 +56,9 @@ public final class SecretIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private SecretIamPolicyArgs() {
-        this.policyData = Output.empty();
-        this.project = Output.empty();
-        this.secretId = Output.empty();
+        this.policyData = Codegen.empty();
+        this.project = Codegen.empty();
+        this.secretId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class SecretIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder secretId(Output<String> secretId) {

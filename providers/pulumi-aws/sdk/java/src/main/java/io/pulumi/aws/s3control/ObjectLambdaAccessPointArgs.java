@@ -6,6 +6,7 @@ package io.pulumi.aws.s3control;
 import io.pulumi.aws.s3control.inputs.ObjectLambdaAccessPointConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ public final class ObjectLambdaAccessPointArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
-        return this.accountId == null ? Output.empty() : this.accountId;
+        return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class ObjectLambdaAccessPointArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public ObjectLambdaAccessPointArgs(
@@ -54,9 +55,9 @@ public final class ObjectLambdaAccessPointArgs extends io.pulumi.resources.Resou
     }
 
     private ObjectLambdaAccessPointArgs() {
-        this.accountId = Output.empty();
-        this.configuration = Output.empty();
-        this.name = Output.empty();
+        this.accountId = Codegen.empty();
+        this.configuration = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class ObjectLambdaAccessPointArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Output.ofNullable(accountId);
+            this.accountId = Codegen.ofNullable(accountId);
             return this;
         }
         public Builder configuration(Output<ObjectLambdaAccessPointConfigurationArgs> configuration) {
@@ -104,7 +105,7 @@ public final class ObjectLambdaAccessPointArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public ObjectLambdaAccessPointArgs build() {
             return new ObjectLambdaAccessPointArgs(accountId, configuration, name);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.networkconnectivity.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.networkconnectivity.inputs.HubRoutingVpcGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +26,7 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<HubRoutingVpcGetArgs>> routingVpcs;
 
     public Output<List<HubRoutingVpcGetArgs>> getRoutingVpcs() {
-        return this.routingVpcs == null ? Output.empty() : this.routingVpcs;
+        return this.routingVpcs == null ? Codegen.empty() : this.routingVpcs;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> uniqueId;
 
     public Output<String> getUniqueId() {
-        return this.uniqueId == null ? Output.empty() : this.uniqueId;
+        return this.uniqueId == null ? Codegen.empty() : this.uniqueId;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {
-        return this.updateTime == null ? Output.empty() : this.updateTime;
+        return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
     public HubState(
@@ -141,15 +142,15 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
     }
 
     private HubState() {
-        this.createTime = Output.empty();
-        this.description = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.routingVpcs = Output.empty();
-        this.state = Output.empty();
-        this.uniqueId = Output.empty();
-        this.updateTime = Output.empty();
+        this.createTime = Codegen.empty();
+        this.description = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.routingVpcs = Codegen.empty();
+        this.state = Codegen.empty();
+        this.uniqueId = Codegen.empty();
+        this.updateTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -193,7 +194,7 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -201,7 +202,7 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -209,7 +210,7 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -217,7 +218,7 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -225,7 +226,7 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder routingVpcs(@Nullable Output<List<HubRoutingVpcGetArgs>> routingVpcs) {
@@ -233,7 +234,7 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder routingVpcs(@Nullable List<HubRoutingVpcGetArgs> routingVpcs) {
-            this.routingVpcs = Output.ofNullable(routingVpcs);
+            this.routingVpcs = Codegen.ofNullable(routingVpcs);
             return this;
         }
         public Builder routingVpcs(HubRoutingVpcGetArgs... routingVpcs) {
@@ -244,7 +245,7 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder uniqueId(@Nullable Output<String> uniqueId) {
@@ -252,7 +253,7 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uniqueId(@Nullable String uniqueId) {
-            this.uniqueId = Output.ofNullable(uniqueId);
+            this.uniqueId = Codegen.ofNullable(uniqueId);
             return this;
         }
         public Builder updateTime(@Nullable Output<String> updateTime) {
@@ -260,7 +261,7 @@ public final class HubState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Output.ofNullable(updateTime);
+            this.updateTime = Codegen.ofNullable(updateTime);
             return this;
         }        public HubState build() {
             return new HubState(createTime, description, labels, name, project, routingVpcs, state, uniqueId, updateTime);

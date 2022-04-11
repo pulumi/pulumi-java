@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,8 +45,8 @@ public final class DistributionOrderedCacheBehaviorFunctionAssociationArgs exten
     }
 
     private DistributionOrderedCacheBehaviorFunctionAssociationArgs() {
-        this.eventType = Output.empty();
-        this.functionArn = Output.empty();
+        this.eventType = Codegen.empty();
+        this.functionArn = Codegen.empty();
     }
 
     public static Builder builder() {

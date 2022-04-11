@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningcompute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class ServiceAuthConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     private ServiceAuthConfigurationArgs() {
-        this.primaryAuthKeyHash = Output.empty();
-        this.secondaryAuthKeyHash = Output.empty();
+        this.primaryAuthKeyHash = Codegen.empty();
+        this.secondaryAuthKeyHash = Codegen.empty();
     }
 
     public static Builder builder() {

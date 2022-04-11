@@ -5,6 +5,7 @@ package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataArg
       private final @Nullable Output<Integer> agentChannel;
 
     public Output<Integer> getAgentChannel() {
-        return this.agentChannel == null ? Output.empty() : this.agentChannel;
+        return this.agentChannel == null ? Codegen.empty() : this.agentChannel;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataArg
       private final @Nullable Output<Integer> customerChannel;
 
     public Output<Integer> getCustomerChannel() {
-        return this.customerChannel == null ? Output.empty() : this.customerChannel;
+        return this.customerChannel == null ? Codegen.empty() : this.customerChannel;
     }
 
     public GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs(
@@ -48,8 +49,8 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataArg
     }
 
     private GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs() {
-        this.agentChannel = Output.empty();
-        this.customerChannel = Output.empty();
+        this.agentChannel = Codegen.empty();
+        this.customerChannel = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataArg
             return this;
         }
         public Builder agentChannel(@Nullable Integer agentChannel) {
-            this.agentChannel = Output.ofNullable(agentChannel);
+            this.agentChannel = Codegen.ofNullable(agentChannel);
             return this;
         }
         public Builder customerChannel(@Nullable Output<Integer> customerChannel) {
@@ -87,7 +88,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataArg
             return this;
         }
         public Builder customerChannel(@Nullable Integer customerChannel) {
-            this.customerChannel = Output.ofNullable(customerChannel);
+            this.customerChannel = Codegen.ofNullable(customerChannel);
             return this;
         }        public GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs build() {
             return new GoogleCloudContactcenterinsightsV1ConversationCallMetadataArgs(agentChannel, customerChannel);

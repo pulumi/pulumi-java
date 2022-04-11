@@ -5,6 +5,7 @@ package io.pulumi.aws.appstream.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ImageBuilderDomainJoinInfoArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> directoryName;
 
     public Output<String> getDirectoryName() {
-        return this.directoryName == null ? Output.empty() : this.directoryName;
+        return this.directoryName == null ? Codegen.empty() : this.directoryName;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ImageBuilderDomainJoinInfoArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> organizationalUnitDistinguishedName;
 
     public Output<String> getOrganizationalUnitDistinguishedName() {
-        return this.organizationalUnitDistinguishedName == null ? Output.empty() : this.organizationalUnitDistinguishedName;
+        return this.organizationalUnitDistinguishedName == null ? Codegen.empty() : this.organizationalUnitDistinguishedName;
     }
 
     public ImageBuilderDomainJoinInfoArgs(
@@ -44,8 +45,8 @@ public final class ImageBuilderDomainJoinInfoArgs extends io.pulumi.resources.Re
     }
 
     private ImageBuilderDomainJoinInfoArgs() {
-        this.directoryName = Output.empty();
-        this.organizationalUnitDistinguishedName = Output.empty();
+        this.directoryName = Codegen.empty();
+        this.organizationalUnitDistinguishedName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class ImageBuilderDomainJoinInfoArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder directoryName(@Nullable String directoryName) {
-            this.directoryName = Output.ofNullable(directoryName);
+            this.directoryName = Codegen.ofNullable(directoryName);
             return this;
         }
         public Builder organizationalUnitDistinguishedName(@Nullable Output<String> organizationalUnitDistinguishedName) {
@@ -83,7 +84,7 @@ public final class ImageBuilderDomainJoinInfoArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder organizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
-            this.organizationalUnitDistinguishedName = Output.ofNullable(organizationalUnitDistinguishedName);
+            this.organizationalUnitDistinguishedName = Codegen.ofNullable(organizationalUnitDistinguishedName);
             return this;
         }        public ImageBuilderDomainJoinInfoArgs build() {
             return new ImageBuilderDomainJoinInfoArgs(directoryName, organizationalUnitDistinguishedName);

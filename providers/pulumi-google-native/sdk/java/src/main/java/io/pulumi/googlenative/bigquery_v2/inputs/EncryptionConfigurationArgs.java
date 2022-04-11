@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> kmsKeyName;
 
     public Output<String> getKmsKeyName() {
-        return this.kmsKeyName == null ? Output.empty() : this.kmsKeyName;
+        return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
     }
 
     public EncryptionConfigurationArgs(@Nullable Output<String> kmsKeyName) {
@@ -30,7 +31,7 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
     }
 
     private EncryptionConfigurationArgs() {
-        this.kmsKeyName = Output.empty();
+        this.kmsKeyName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Output.ofNullable(kmsKeyName);
+            this.kmsKeyName = Codegen.ofNullable(kmsKeyName);
             return this;
         }        public EncryptionConfigurationArgs build() {
             return new EncryptionConfigurationArgs(kmsKeyName);

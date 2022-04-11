@@ -12,6 +12,7 @@ import io.pulumi.awsnative.kendra.inputs.IndexTagArgs;
 import io.pulumi.awsnative.kendra.inputs.IndexUserTokenConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<IndexCapacityUnitsConfigurationArgs> capacityUnits;
 
     public Output<IndexCapacityUnitsConfigurationArgs> getCapacityUnits() {
-        return this.capacityUnits == null ? Output.empty() : this.capacityUnits;
+        return this.capacityUnits == null ? Codegen.empty() : this.capacityUnits;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<IndexDocumentMetadataConfigurationArgs>> documentMetadataConfigurations;
 
     public Output<List<IndexDocumentMetadataConfigurationArgs>> getDocumentMetadataConfigurations() {
-        return this.documentMetadataConfigurations == null ? Output.empty() : this.documentMetadataConfigurations;
+        return this.documentMetadataConfigurations == null ? Codegen.empty() : this.documentMetadataConfigurations;
     }
 
     @Import(name="edition", required=true)
@@ -66,7 +67,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="roleArn", required=true)
@@ -84,7 +85,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<IndexServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
 
     public Output<IndexServerSideEncryptionConfigurationArgs> getServerSideEncryptionConfiguration() {
-        return this.serverSideEncryptionConfiguration == null ? Output.empty() : this.serverSideEncryptionConfiguration;
+        return this.serverSideEncryptionConfiguration == null ? Codegen.empty() : this.serverSideEncryptionConfiguration;
     }
 
     /**
@@ -95,21 +96,21 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<IndexTagArgs>> tags;
 
     public Output<List<IndexTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="userContextPolicy")
       private final @Nullable Output<IndexUserContextPolicy> userContextPolicy;
 
     public Output<IndexUserContextPolicy> getUserContextPolicy() {
-        return this.userContextPolicy == null ? Output.empty() : this.userContextPolicy;
+        return this.userContextPolicy == null ? Codegen.empty() : this.userContextPolicy;
     }
 
     @Import(name="userTokenConfigurations")
       private final @Nullable Output<List<IndexUserTokenConfigurationArgs>> userTokenConfigurations;
 
     public Output<List<IndexUserTokenConfigurationArgs>> getUserTokenConfigurations() {
-        return this.userTokenConfigurations == null ? Output.empty() : this.userTokenConfigurations;
+        return this.userTokenConfigurations == null ? Codegen.empty() : this.userTokenConfigurations;
     }
 
     public IndexArgs(
@@ -136,16 +137,16 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IndexArgs() {
-        this.capacityUnits = Output.empty();
-        this.description = Output.empty();
-        this.documentMetadataConfigurations = Output.empty();
-        this.edition = Output.empty();
-        this.name = Output.empty();
-        this.roleArn = Output.empty();
-        this.serverSideEncryptionConfiguration = Output.empty();
-        this.tags = Output.empty();
-        this.userContextPolicy = Output.empty();
-        this.userTokenConfigurations = Output.empty();
+        this.capacityUnits = Codegen.empty();
+        this.description = Codegen.empty();
+        this.documentMetadataConfigurations = Codegen.empty();
+        this.edition = Codegen.empty();
+        this.name = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.serverSideEncryptionConfiguration = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.userContextPolicy = Codegen.empty();
+        this.userTokenConfigurations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -191,7 +192,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder capacityUnits(@Nullable IndexCapacityUnitsConfigurationArgs capacityUnits) {
-            this.capacityUnits = Output.ofNullable(capacityUnits);
+            this.capacityUnits = Codegen.ofNullable(capacityUnits);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -199,7 +200,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder documentMetadataConfigurations(@Nullable Output<List<IndexDocumentMetadataConfigurationArgs>> documentMetadataConfigurations) {
@@ -207,7 +208,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder documentMetadataConfigurations(@Nullable List<IndexDocumentMetadataConfigurationArgs> documentMetadataConfigurations) {
-            this.documentMetadataConfigurations = Output.ofNullable(documentMetadataConfigurations);
+            this.documentMetadataConfigurations = Codegen.ofNullable(documentMetadataConfigurations);
             return this;
         }
         public Builder documentMetadataConfigurations(IndexDocumentMetadataConfigurationArgs... documentMetadataConfigurations) {
@@ -226,7 +227,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {
@@ -242,7 +243,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serverSideEncryptionConfiguration(@Nullable IndexServerSideEncryptionConfigurationArgs serverSideEncryptionConfiguration) {
-            this.serverSideEncryptionConfiguration = Output.ofNullable(serverSideEncryptionConfiguration);
+            this.serverSideEncryptionConfiguration = Codegen.ofNullable(serverSideEncryptionConfiguration);
             return this;
         }
         public Builder tags(@Nullable Output<List<IndexTagArgs>> tags) {
@@ -250,7 +251,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<IndexTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(IndexTagArgs... tags) {
@@ -261,7 +262,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userContextPolicy(@Nullable IndexUserContextPolicy userContextPolicy) {
-            this.userContextPolicy = Output.ofNullable(userContextPolicy);
+            this.userContextPolicy = Codegen.ofNullable(userContextPolicy);
             return this;
         }
         public Builder userTokenConfigurations(@Nullable Output<List<IndexUserTokenConfigurationArgs>> userTokenConfigurations) {
@@ -269,7 +270,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userTokenConfigurations(@Nullable List<IndexUserTokenConfigurationArgs> userTokenConfigurations) {
-            this.userTokenConfigurations = Output.ofNullable(userTokenConfigurations);
+            this.userTokenConfigurations = Codegen.ofNullable(userTokenConfigurations);
             return this;
         }
         public Builder userTokenConfigurations(IndexUserTokenConfigurationArgs... userTokenConfigurations) {

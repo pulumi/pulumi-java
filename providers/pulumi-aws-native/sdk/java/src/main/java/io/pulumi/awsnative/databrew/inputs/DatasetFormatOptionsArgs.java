@@ -8,6 +8,7 @@ import io.pulumi.awsnative.databrew.inputs.DatasetExcelOptionsArgs;
 import io.pulumi.awsnative.databrew.inputs.DatasetJsonOptionsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,21 +25,21 @@ public final class DatasetFormatOptionsArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<DatasetCsvOptionsArgs> csv;
 
     public Output<DatasetCsvOptionsArgs> getCsv() {
-        return this.csv == null ? Output.empty() : this.csv;
+        return this.csv == null ? Codegen.empty() : this.csv;
     }
 
     @Import(name="excel")
       private final @Nullable Output<DatasetExcelOptionsArgs> excel;
 
     public Output<DatasetExcelOptionsArgs> getExcel() {
-        return this.excel == null ? Output.empty() : this.excel;
+        return this.excel == null ? Codegen.empty() : this.excel;
     }
 
     @Import(name="json")
       private final @Nullable Output<DatasetJsonOptionsArgs> json;
 
     public Output<DatasetJsonOptionsArgs> getJson() {
-        return this.json == null ? Output.empty() : this.json;
+        return this.json == null ? Codegen.empty() : this.json;
     }
 
     public DatasetFormatOptionsArgs(
@@ -51,9 +52,9 @@ public final class DatasetFormatOptionsArgs extends io.pulumi.resources.Resource
     }
 
     private DatasetFormatOptionsArgs() {
-        this.csv = Output.empty();
-        this.excel = Output.empty();
-        this.json = Output.empty();
+        this.csv = Codegen.empty();
+        this.excel = Codegen.empty();
+        this.json = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -85,7 +86,7 @@ public final class DatasetFormatOptionsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder csv(@Nullable DatasetCsvOptionsArgs csv) {
-            this.csv = Output.ofNullable(csv);
+            this.csv = Codegen.ofNullable(csv);
             return this;
         }
         public Builder excel(@Nullable Output<DatasetExcelOptionsArgs> excel) {
@@ -93,7 +94,7 @@ public final class DatasetFormatOptionsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder excel(@Nullable DatasetExcelOptionsArgs excel) {
-            this.excel = Output.ofNullable(excel);
+            this.excel = Codegen.ofNullable(excel);
             return this;
         }
         public Builder json(@Nullable Output<DatasetJsonOptionsArgs> json) {
@@ -101,7 +102,7 @@ public final class DatasetFormatOptionsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder json(@Nullable DatasetJsonOptionsArgs json) {
-            this.json = Output.ofNullable(json);
+            this.json = Codegen.ofNullable(json);
             return this;
         }        public DatasetFormatOptionsArgs build() {
             return new DatasetFormatOptionsArgs(csv, excel, json);

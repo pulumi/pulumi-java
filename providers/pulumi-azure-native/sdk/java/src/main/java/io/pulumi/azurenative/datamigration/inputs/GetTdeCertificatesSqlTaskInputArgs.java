@@ -8,6 +8,7 @@ import io.pulumi.azurenative.datamigration.inputs.SelectedCertificateInputArgs;
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -63,9 +64,9 @@ public final class GetTdeCertificatesSqlTaskInputArgs extends io.pulumi.resource
     }
 
     private GetTdeCertificatesSqlTaskInputArgs() {
-        this.backupFileShare = Output.empty();
-        this.connectionInfo = Output.empty();
-        this.selectedCertificates = Output.empty();
+        this.backupFileShare = Codegen.empty();
+        this.connectionInfo = Codegen.empty();
+        this.selectedCertificates = Codegen.empty();
     }
 
     public static Builder builder() {

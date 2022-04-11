@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_beta.inputs.AuditLogConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class AuditConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<AuditLogConfigArgs>> auditLogConfigs;
 
     public Output<List<AuditLogConfigArgs>> getAuditLogConfigs() {
-        return this.auditLogConfigs == null ? Output.empty() : this.auditLogConfigs;
+        return this.auditLogConfigs == null ? Codegen.empty() : this.auditLogConfigs;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class AuditConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> exemptedMembers;
 
     public Output<List<String>> getExemptedMembers() {
-        return this.exemptedMembers == null ? Output.empty() : this.exemptedMembers;
+        return this.exemptedMembers == null ? Codegen.empty() : this.exemptedMembers;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class AuditConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> service;
 
     public Output<String> getService() {
-        return this.service == null ? Output.empty() : this.service;
+        return this.service == null ? Codegen.empty() : this.service;
     }
 
     public AuditConfigArgs(
@@ -63,9 +64,9 @@ public final class AuditConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AuditConfigArgs() {
-        this.auditLogConfigs = Output.empty();
-        this.exemptedMembers = Output.empty();
-        this.service = Output.empty();
+        this.auditLogConfigs = Codegen.empty();
+        this.exemptedMembers = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class AuditConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder auditLogConfigs(@Nullable List<AuditLogConfigArgs> auditLogConfigs) {
-            this.auditLogConfigs = Output.ofNullable(auditLogConfigs);
+            this.auditLogConfigs = Codegen.ofNullable(auditLogConfigs);
             return this;
         }
         public Builder auditLogConfigs(AuditLogConfigArgs... auditLogConfigs) {
@@ -108,7 +109,7 @@ public final class AuditConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder exemptedMembers(@Nullable List<String> exemptedMembers) {
-            this.exemptedMembers = Output.ofNullable(exemptedMembers);
+            this.exemptedMembers = Codegen.ofNullable(exemptedMembers);
             return this;
         }
         public Builder exemptedMembers(String... exemptedMembers) {
@@ -119,7 +120,7 @@ public final class AuditConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder service(@Nullable String service) {
-            this.service = Output.ofNullable(service);
+            this.service = Codegen.ofNullable(service);
             return this;
         }        public AuditConfigArgs build() {
             return new AuditConfigArgs(auditLogConfigs, exemptedMembers, service);

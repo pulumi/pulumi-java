@@ -8,6 +8,7 @@ import io.pulumi.awsnative.wafv2.enums.WebACLJsonMatchScope;
 import io.pulumi.awsnative.wafv2.inputs.WebACLJsonMatchPatternArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +25,7 @@ public final class WebACLJsonBodyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<WebACLBodyParsingFallbackBehavior> invalidFallbackBehavior;
 
     public Output<WebACLBodyParsingFallbackBehavior> getInvalidFallbackBehavior() {
-        return this.invalidFallbackBehavior == null ? Output.empty() : this.invalidFallbackBehavior;
+        return this.invalidFallbackBehavior == null ? Codegen.empty() : this.invalidFallbackBehavior;
     }
 
     @Import(name="matchPattern", required=true)
@@ -51,9 +52,9 @@ public final class WebACLJsonBodyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebACLJsonBodyArgs() {
-        this.invalidFallbackBehavior = Output.empty();
-        this.matchPattern = Output.empty();
-        this.matchScope = Output.empty();
+        this.invalidFallbackBehavior = Codegen.empty();
+        this.matchPattern = Codegen.empty();
+        this.matchScope = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -85,7 +86,7 @@ public final class WebACLJsonBodyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder invalidFallbackBehavior(@Nullable WebACLBodyParsingFallbackBehavior invalidFallbackBehavior) {
-            this.invalidFallbackBehavior = Output.ofNullable(invalidFallbackBehavior);
+            this.invalidFallbackBehavior = Codegen.ofNullable(invalidFallbackBehavior);
             return this;
         }
         public Builder matchPattern(Output<WebACLJsonMatchPatternArgs> matchPattern) {

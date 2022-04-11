@@ -10,6 +10,7 @@ import io.pulumi.aws.chime.outputs.VoiceConnectorTerminationCredentialsCredentia
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -83,7 +84,7 @@ public class VoiceConnectorTerminationCredentials extends io.pulumi.resources.Cu
      * @param options A bag of options that control this resource's behavior.
      */
     public VoiceConnectorTerminationCredentials(String name, VoiceConnectorTerminationCredentialsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:chime/voiceConnectorTerminationCredentials:VoiceConnectorTerminationCredentials", name, args == null ? VoiceConnectorTerminationCredentialsArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:chime/voiceConnectorTerminationCredentials:VoiceConnectorTerminationCredentials", name, args == null ? VoiceConnectorTerminationCredentialsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VoiceConnectorTerminationCredentials(String name, Output<String> id, @Nullable VoiceConnectorTerminationCredentialsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

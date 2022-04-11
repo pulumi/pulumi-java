@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class AllowedAudiencesValidationArgs extends io.pulumi.resources.Re
       private final @Nullable Output<List<String>> allowedAudiences;
 
     public Output<List<String>> getAllowedAudiences() {
-        return this.allowedAudiences == null ? Output.empty() : this.allowedAudiences;
+        return this.allowedAudiences == null ? Codegen.empty() : this.allowedAudiences;
     }
 
     public AllowedAudiencesValidationArgs(@Nullable Output<List<String>> allowedAudiences) {
@@ -35,7 +36,7 @@ public final class AllowedAudiencesValidationArgs extends io.pulumi.resources.Re
     }
 
     private AllowedAudiencesValidationArgs() {
-        this.allowedAudiences = Output.empty();
+        this.allowedAudiences = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class AllowedAudiencesValidationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder allowedAudiences(@Nullable List<String> allowedAudiences) {
-            this.allowedAudiences = Output.ofNullable(allowedAudiences);
+            this.allowedAudiences = Codegen.ofNullable(allowedAudiences);
             return this;
         }
         public Builder allowedAudiences(String... allowedAudiences) {

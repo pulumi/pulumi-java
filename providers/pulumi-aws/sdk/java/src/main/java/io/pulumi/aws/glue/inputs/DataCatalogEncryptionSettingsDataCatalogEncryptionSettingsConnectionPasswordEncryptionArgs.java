@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsCon
       private final @Nullable Output<String> awsKmsKeyId;
 
     public Output<String> getAwsKmsKeyId() {
-        return this.awsKmsKeyId == null ? Output.empty() : this.awsKmsKeyId;
+        return this.awsKmsKeyId == null ? Codegen.empty() : this.awsKmsKeyId;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsCon
     }
 
     private DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionArgs() {
-        this.awsKmsKeyId = Output.empty();
-        this.returnConnectionPasswordEncrypted = Output.empty();
+        this.awsKmsKeyId = Codegen.empty();
+        this.returnConnectionPasswordEncrypted = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsCon
             return this;
         }
         public Builder awsKmsKeyId(@Nullable String awsKmsKeyId) {
-            this.awsKmsKeyId = Output.ofNullable(awsKmsKeyId);
+            this.awsKmsKeyId = Codegen.ofNullable(awsKmsKeyId);
             return this;
         }
         public Builder returnConnectionPasswordEncrypted(Output<Boolean> returnConnectionPasswordEncrypted) {

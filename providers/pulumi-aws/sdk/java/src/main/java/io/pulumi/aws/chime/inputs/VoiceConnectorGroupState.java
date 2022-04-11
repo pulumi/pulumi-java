@@ -6,6 +6,7 @@ package io.pulumi.aws.chime.inputs;
 import io.pulumi.aws.chime.inputs.VoiceConnectorGroupConnectorGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class VoiceConnectorGroupState extends io.pulumi.resources.Resource
       private final @Nullable Output<List<VoiceConnectorGroupConnectorGetArgs>> connectors;
 
     public Output<List<VoiceConnectorGroupConnectorGetArgs>> getConnectors() {
-        return this.connectors == null ? Output.empty() : this.connectors;
+        return this.connectors == null ? Codegen.empty() : this.connectors;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class VoiceConnectorGroupState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public VoiceConnectorGroupState(
@@ -46,8 +47,8 @@ public final class VoiceConnectorGroupState extends io.pulumi.resources.Resource
     }
 
     private VoiceConnectorGroupState() {
-        this.connectors = Output.empty();
-        this.name = Output.empty();
+        this.connectors = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class VoiceConnectorGroupState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder connectors(@Nullable List<VoiceConnectorGroupConnectorGetArgs> connectors) {
-            this.connectors = Output.ofNullable(connectors);
+            this.connectors = Codegen.ofNullable(connectors);
             return this;
         }
         public Builder connectors(VoiceConnectorGroupConnectorGetArgs... connectors) {
@@ -88,7 +89,7 @@ public final class VoiceConnectorGroupState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public VoiceConnectorGroupState build() {
             return new VoiceConnectorGroupState(connectors, name);

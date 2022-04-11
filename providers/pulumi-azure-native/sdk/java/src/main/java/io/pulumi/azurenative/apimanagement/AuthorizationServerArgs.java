@@ -11,6 +11,7 @@ import io.pulumi.azurenative.apimanagement.inputs.TokenBodyParameterContractArgs
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -41,7 +42,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<AuthorizationMethod>> authorizationMethods;
 
     public Output<List<AuthorizationMethod>> getAuthorizationMethods() {
-        return this.authorizationMethods == null ? Output.empty() : this.authorizationMethods;
+        return this.authorizationMethods == null ? Codegen.empty() : this.authorizationMethods;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> authsid;
 
     public Output<String> getAuthsid() {
-        return this.authsid == null ? Output.empty() : this.authsid;
+        return this.authsid == null ? Codegen.empty() : this.authsid;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<Either<String,BearerTokenSendingMethod>>> bearerTokenSendingMethods;
 
     public Output<List<Either<String,BearerTokenSendingMethod>>> getBearerTokenSendingMethods() {
-        return this.bearerTokenSendingMethods == null ? Output.empty() : this.bearerTokenSendingMethods;
+        return this.bearerTokenSendingMethods == null ? Codegen.empty() : this.bearerTokenSendingMethods;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<Either<String,ClientAuthenticationMethod>>> clientAuthenticationMethod;
 
     public Output<List<Either<String,ClientAuthenticationMethod>>> getClientAuthenticationMethod() {
-        return this.clientAuthenticationMethod == null ? Output.empty() : this.clientAuthenticationMethod;
+        return this.clientAuthenticationMethod == null ? Codegen.empty() : this.clientAuthenticationMethod;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> clientSecret;
 
     public Output<String> getClientSecret() {
-        return this.clientSecret == null ? Output.empty() : this.clientSecret;
+        return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 
     /**
@@ -118,7 +119,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> defaultScope;
 
     public Output<String> getDefaultScope() {
-        return this.defaultScope == null ? Output.empty() : this.defaultScope;
+        return this.defaultScope == null ? Codegen.empty() : this.defaultScope;
     }
 
     /**
@@ -129,7 +130,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -173,7 +174,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> resourceOwnerPassword;
 
     public Output<String> getResourceOwnerPassword() {
-        return this.resourceOwnerPassword == null ? Output.empty() : this.resourceOwnerPassword;
+        return this.resourceOwnerPassword == null ? Codegen.empty() : this.resourceOwnerPassword;
     }
 
     /**
@@ -184,7 +185,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> resourceOwnerUsername;
 
     public Output<String> getResourceOwnerUsername() {
-        return this.resourceOwnerUsername == null ? Output.empty() : this.resourceOwnerUsername;
+        return this.resourceOwnerUsername == null ? Codegen.empty() : this.resourceOwnerUsername;
     }
 
     /**
@@ -206,7 +207,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Boolean> supportState;
 
     public Output<Boolean> getSupportState() {
-        return this.supportState == null ? Output.empty() : this.supportState;
+        return this.supportState == null ? Codegen.empty() : this.supportState;
     }
 
     /**
@@ -217,7 +218,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<TokenBodyParameterContractArgs>> tokenBodyParameters;
 
     public Output<List<TokenBodyParameterContractArgs>> getTokenBodyParameters() {
-        return this.tokenBodyParameters == null ? Output.empty() : this.tokenBodyParameters;
+        return this.tokenBodyParameters == null ? Codegen.empty() : this.tokenBodyParameters;
     }
 
     /**
@@ -228,7 +229,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> tokenEndpoint;
 
     public Output<String> getTokenEndpoint() {
-        return this.tokenEndpoint == null ? Output.empty() : this.tokenEndpoint;
+        return this.tokenEndpoint == null ? Codegen.empty() : this.tokenEndpoint;
     }
 
     public AuthorizationServerArgs(
@@ -273,25 +274,25 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
     }
 
     private AuthorizationServerArgs() {
-        this.authorizationEndpoint = Output.empty();
-        this.authorizationMethods = Output.empty();
-        this.authsid = Output.empty();
-        this.bearerTokenSendingMethods = Output.empty();
-        this.clientAuthenticationMethod = Output.empty();
-        this.clientId = Output.empty();
-        this.clientRegistrationEndpoint = Output.empty();
-        this.clientSecret = Output.empty();
-        this.defaultScope = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.grantTypes = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceOwnerPassword = Output.empty();
-        this.resourceOwnerUsername = Output.empty();
-        this.serviceName = Output.empty();
-        this.supportState = Output.empty();
-        this.tokenBodyParameters = Output.empty();
-        this.tokenEndpoint = Output.empty();
+        this.authorizationEndpoint = Codegen.empty();
+        this.authorizationMethods = Codegen.empty();
+        this.authsid = Codegen.empty();
+        this.bearerTokenSendingMethods = Codegen.empty();
+        this.clientAuthenticationMethod = Codegen.empty();
+        this.clientId = Codegen.empty();
+        this.clientRegistrationEndpoint = Codegen.empty();
+        this.clientSecret = Codegen.empty();
+        this.defaultScope = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.grantTypes = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceOwnerPassword = Codegen.empty();
+        this.resourceOwnerUsername = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.supportState = Codegen.empty();
+        this.tokenBodyParameters = Codegen.empty();
+        this.tokenEndpoint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -363,7 +364,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder authorizationMethods(@Nullable List<AuthorizationMethod> authorizationMethods) {
-            this.authorizationMethods = Output.ofNullable(authorizationMethods);
+            this.authorizationMethods = Codegen.ofNullable(authorizationMethods);
             return this;
         }
         public Builder authorizationMethods(AuthorizationMethod... authorizationMethods) {
@@ -374,7 +375,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder authsid(@Nullable String authsid) {
-            this.authsid = Output.ofNullable(authsid);
+            this.authsid = Codegen.ofNullable(authsid);
             return this;
         }
         public Builder bearerTokenSendingMethods(@Nullable Output<List<Either<String,BearerTokenSendingMethod>>> bearerTokenSendingMethods) {
@@ -382,7 +383,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder bearerTokenSendingMethods(@Nullable List<Either<String,BearerTokenSendingMethod>> bearerTokenSendingMethods) {
-            this.bearerTokenSendingMethods = Output.ofNullable(bearerTokenSendingMethods);
+            this.bearerTokenSendingMethods = Codegen.ofNullable(bearerTokenSendingMethods);
             return this;
         }
         public Builder bearerTokenSendingMethods(Either<String,BearerTokenSendingMethod>... bearerTokenSendingMethods) {
@@ -393,7 +394,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder clientAuthenticationMethod(@Nullable List<Either<String,ClientAuthenticationMethod>> clientAuthenticationMethod) {
-            this.clientAuthenticationMethod = Output.ofNullable(clientAuthenticationMethod);
+            this.clientAuthenticationMethod = Codegen.ofNullable(clientAuthenticationMethod);
             return this;
         }
         public Builder clientAuthenticationMethod(Either<String,ClientAuthenticationMethod>... clientAuthenticationMethod) {
@@ -420,7 +421,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Output.ofNullable(clientSecret);
+            this.clientSecret = Codegen.ofNullable(clientSecret);
             return this;
         }
         public Builder defaultScope(@Nullable Output<String> defaultScope) {
@@ -428,7 +429,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder defaultScope(@Nullable String defaultScope) {
-            this.defaultScope = Output.ofNullable(defaultScope);
+            this.defaultScope = Codegen.ofNullable(defaultScope);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -436,7 +437,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -471,7 +472,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder resourceOwnerPassword(@Nullable String resourceOwnerPassword) {
-            this.resourceOwnerPassword = Output.ofNullable(resourceOwnerPassword);
+            this.resourceOwnerPassword = Codegen.ofNullable(resourceOwnerPassword);
             return this;
         }
         public Builder resourceOwnerUsername(@Nullable Output<String> resourceOwnerUsername) {
@@ -479,7 +480,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder resourceOwnerUsername(@Nullable String resourceOwnerUsername) {
-            this.resourceOwnerUsername = Output.ofNullable(resourceOwnerUsername);
+            this.resourceOwnerUsername = Codegen.ofNullable(resourceOwnerUsername);
             return this;
         }
         public Builder serviceName(Output<String> serviceName) {
@@ -495,7 +496,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder supportState(@Nullable Boolean supportState) {
-            this.supportState = Output.ofNullable(supportState);
+            this.supportState = Codegen.ofNullable(supportState);
             return this;
         }
         public Builder tokenBodyParameters(@Nullable Output<List<TokenBodyParameterContractArgs>> tokenBodyParameters) {
@@ -503,7 +504,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder tokenBodyParameters(@Nullable List<TokenBodyParameterContractArgs> tokenBodyParameters) {
-            this.tokenBodyParameters = Output.ofNullable(tokenBodyParameters);
+            this.tokenBodyParameters = Codegen.ofNullable(tokenBodyParameters);
             return this;
         }
         public Builder tokenBodyParameters(TokenBodyParameterContractArgs... tokenBodyParameters) {
@@ -514,7 +515,7 @@ public final class AuthorizationServerArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder tokenEndpoint(@Nullable String tokenEndpoint) {
-            this.tokenEndpoint = Output.ofNullable(tokenEndpoint);
+            this.tokenEndpoint = Codegen.ofNullable(tokenEndpoint);
             return this;
         }        public AuthorizationServerArgs build() {
             return new AuthorizationServerArgs(authorizationEndpoint, authorizationMethods, authsid, bearerTokenSendingMethods, clientAuthenticationMethod, clientId, clientRegistrationEndpoint, clientSecret, defaultScope, description, displayName, grantTypes, resourceGroupName, resourceOwnerPassword, resourceOwnerUsername, serviceName, supportState, tokenBodyParameters, tokenEndpoint);

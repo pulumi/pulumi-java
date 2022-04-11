@@ -5,6 +5,7 @@ package io.pulumi.aws.organizations;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> awsServiceAccessPrincipals;
 
     public Output<List<String>> getAwsServiceAccessPrincipals() {
-        return this.awsServiceAccessPrincipals == null ? Output.empty() : this.awsServiceAccessPrincipals;
+        return this.awsServiceAccessPrincipals == null ? Codegen.empty() : this.awsServiceAccessPrincipals;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> enabledPolicyTypes;
 
     public Output<List<String>> getEnabledPolicyTypes() {
-        return this.enabledPolicyTypes == null ? Output.empty() : this.enabledPolicyTypes;
+        return this.enabledPolicyTypes == null ? Codegen.empty() : this.enabledPolicyTypes;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> featureSet;
 
     public Output<String> getFeatureSet() {
-        return this.featureSet == null ? Output.empty() : this.featureSet;
+        return this.featureSet == null ? Codegen.empty() : this.featureSet;
     }
 
     public OrganizationArgs(
@@ -58,9 +59,9 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OrganizationArgs() {
-        this.awsServiceAccessPrincipals = Output.empty();
-        this.enabledPolicyTypes = Output.empty();
-        this.featureSet = Output.empty();
+        this.awsServiceAccessPrincipals = Codegen.empty();
+        this.enabledPolicyTypes = Codegen.empty();
+        this.featureSet = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder awsServiceAccessPrincipals(@Nullable List<String> awsServiceAccessPrincipals) {
-            this.awsServiceAccessPrincipals = Output.ofNullable(awsServiceAccessPrincipals);
+            this.awsServiceAccessPrincipals = Codegen.ofNullable(awsServiceAccessPrincipals);
             return this;
         }
         public Builder awsServiceAccessPrincipals(String... awsServiceAccessPrincipals) {
@@ -103,7 +104,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabledPolicyTypes(@Nullable List<String> enabledPolicyTypes) {
-            this.enabledPolicyTypes = Output.ofNullable(enabledPolicyTypes);
+            this.enabledPolicyTypes = Codegen.ofNullable(enabledPolicyTypes);
             return this;
         }
         public Builder enabledPolicyTypes(String... enabledPolicyTypes) {
@@ -114,7 +115,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder featureSet(@Nullable String featureSet) {
-            this.featureSet = Output.ofNullable(featureSet);
+            this.featureSet = Codegen.ofNullable(featureSet);
             return this;
         }        public OrganizationArgs build() {
             return new OrganizationArgs(awsServiceAccessPrincipals, enabledPolicyTypes, featureSet);

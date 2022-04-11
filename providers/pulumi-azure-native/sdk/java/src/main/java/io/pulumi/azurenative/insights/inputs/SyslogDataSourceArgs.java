@@ -9,6 +9,7 @@ import io.pulumi.azurenative.insights.enums.KnownSyslogDataSourceStreams;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,7 +33,7 @@ public final class SyslogDataSourceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<Either<String,KnownSyslogDataSourceFacilityNames>>> facilityNames;
 
     public Output<List<Either<String,KnownSyslogDataSourceFacilityNames>>> getFacilityNames() {
-        return this.facilityNames == null ? Output.empty() : this.facilityNames;
+        return this.facilityNames == null ? Codegen.empty() : this.facilityNames;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class SyslogDataSourceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<Either<String,KnownSyslogDataSourceLogLevels>>> logLevels;
 
     public Output<List<Either<String,KnownSyslogDataSourceLogLevels>>> getLogLevels() {
-        return this.logLevels == null ? Output.empty() : this.logLevels;
+        return this.logLevels == null ? Codegen.empty() : this.logLevels;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class SyslogDataSourceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class SyslogDataSourceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<Either<String,KnownSyslogDataSourceStreams>>> streams;
 
     public Output<List<Either<String,KnownSyslogDataSourceStreams>>> getStreams() {
-        return this.streams == null ? Output.empty() : this.streams;
+        return this.streams == null ? Codegen.empty() : this.streams;
     }
 
     public SyslogDataSourceArgs(
@@ -82,10 +83,10 @@ public final class SyslogDataSourceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private SyslogDataSourceArgs() {
-        this.facilityNames = Output.empty();
-        this.logLevels = Output.empty();
-        this.name = Output.empty();
-        this.streams = Output.empty();
+        this.facilityNames = Codegen.empty();
+        this.logLevels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.streams = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -119,7 +120,7 @@ public final class SyslogDataSourceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder facilityNames(@Nullable List<Either<String,KnownSyslogDataSourceFacilityNames>> facilityNames) {
-            this.facilityNames = Output.ofNullable(facilityNames);
+            this.facilityNames = Codegen.ofNullable(facilityNames);
             return this;
         }
         public Builder facilityNames(Either<String,KnownSyslogDataSourceFacilityNames>... facilityNames) {
@@ -130,7 +131,7 @@ public final class SyslogDataSourceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder logLevels(@Nullable List<Either<String,KnownSyslogDataSourceLogLevels>> logLevels) {
-            this.logLevels = Output.ofNullable(logLevels);
+            this.logLevels = Codegen.ofNullable(logLevels);
             return this;
         }
         public Builder logLevels(Either<String,KnownSyslogDataSourceLogLevels>... logLevels) {
@@ -141,7 +142,7 @@ public final class SyslogDataSourceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder streams(@Nullable Output<List<Either<String,KnownSyslogDataSourceStreams>>> streams) {
@@ -149,7 +150,7 @@ public final class SyslogDataSourceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder streams(@Nullable List<Either<String,KnownSyslogDataSourceStreams>> streams) {
-            this.streams = Output.ofNullable(streams);
+            this.streams = Codegen.ofNullable(streams);
             return this;
         }
         public Builder streams(Either<String,KnownSyslogDataSourceStreams>... streams) {

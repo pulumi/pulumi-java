@@ -6,6 +6,7 @@ package io.pulumi.awsnative.appflow.inputs;
 import io.pulumi.awsnative.appflow.inputs.FlowS3InputFormatConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class FlowS3SourcePropertiesArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<FlowS3InputFormatConfigArgs> s3InputFormatConfig;
 
     public Output<FlowS3InputFormatConfigArgs> getS3InputFormatConfig() {
-        return this.s3InputFormatConfig == null ? Output.empty() : this.s3InputFormatConfig;
+        return this.s3InputFormatConfig == null ? Codegen.empty() : this.s3InputFormatConfig;
     }
 
     public FlowS3SourcePropertiesArgs(
@@ -46,9 +47,9 @@ public final class FlowS3SourcePropertiesArgs extends io.pulumi.resources.Resour
     }
 
     private FlowS3SourcePropertiesArgs() {
-        this.bucketName = Output.empty();
-        this.bucketPrefix = Output.empty();
-        this.s3InputFormatConfig = Output.empty();
+        this.bucketName = Codegen.empty();
+        this.bucketPrefix = Codegen.empty();
+        this.s3InputFormatConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class FlowS3SourcePropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder s3InputFormatConfig(@Nullable FlowS3InputFormatConfigArgs s3InputFormatConfig) {
-            this.s3InputFormatConfig = Output.ofNullable(s3InputFormatConfig);
+            this.s3InputFormatConfig = Codegen.ofNullable(s3InputFormatConfig);
             return this;
         }        public FlowS3SourcePropertiesArgs build() {
             return new FlowS3SourcePropertiesArgs(bucketName, bucketPrefix, s3InputFormatConfig);

@@ -13,6 +13,7 @@ import io.pulumi.aws.autoscaling.inputs.GroupWarmPoolArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -34,7 +35,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> availabilityZones;
 
     public Output<List<String>> getAvailabilityZones() {
-        return this.availabilityZones == null ? Output.empty() : this.availabilityZones;
+        return this.availabilityZones == null ? Codegen.empty() : this.availabilityZones;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> capacityRebalance;
 
     public Output<Boolean> getCapacityRebalance() {
-        return this.capacityRebalance == null ? Output.empty() : this.capacityRebalance;
+        return this.capacityRebalance == null ? Codegen.empty() : this.capacityRebalance;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> defaultCooldown;
 
     public Output<Integer> getDefaultCooldown() {
-        return this.defaultCooldown == null ? Output.empty() : this.defaultCooldown;
+        return this.defaultCooldown == null ? Codegen.empty() : this.defaultCooldown;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> desiredCapacity;
 
     public Output<Integer> getDesiredCapacity() {
-        return this.desiredCapacity == null ? Output.empty() : this.desiredCapacity;
+        return this.desiredCapacity == null ? Codegen.empty() : this.desiredCapacity;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> enabledMetrics;
 
     public Output<List<String>> getEnabledMetrics() {
-        return this.enabledMetrics == null ? Output.empty() : this.enabledMetrics;
+        return this.enabledMetrics == null ? Codegen.empty() : this.enabledMetrics;
     }
 
     /**
@@ -95,14 +96,14 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> forceDelete;
 
     public Output<Boolean> getForceDelete() {
-        return this.forceDelete == null ? Output.empty() : this.forceDelete;
+        return this.forceDelete == null ? Codegen.empty() : this.forceDelete;
     }
 
     @Import(name="forceDeleteWarmPool")
       private final @Nullable Output<Boolean> forceDeleteWarmPool;
 
     public Output<Boolean> getForceDeleteWarmPool() {
-        return this.forceDeleteWarmPool == null ? Output.empty() : this.forceDeleteWarmPool;
+        return this.forceDeleteWarmPool == null ? Codegen.empty() : this.forceDeleteWarmPool;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> healthCheckGracePeriod;
 
     public Output<Integer> getHealthCheckGracePeriod() {
-        return this.healthCheckGracePeriod == null ? Output.empty() : this.healthCheckGracePeriod;
+        return this.healthCheckGracePeriod == null ? Codegen.empty() : this.healthCheckGracePeriod;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> healthCheckType;
 
     public Output<String> getHealthCheckType() {
-        return this.healthCheckType == null ? Output.empty() : this.healthCheckType;
+        return this.healthCheckType == null ? Codegen.empty() : this.healthCheckType;
     }
 
     /**
@@ -141,7 +142,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<GroupInitialLifecycleHookArgs>> initialLifecycleHooks;
 
     public Output<List<GroupInitialLifecycleHookArgs>> getInitialLifecycleHooks() {
-        return this.initialLifecycleHooks == null ? Output.empty() : this.initialLifecycleHooks;
+        return this.initialLifecycleHooks == null ? Codegen.empty() : this.initialLifecycleHooks;
     }
 
     /**
@@ -154,7 +155,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GroupInstanceRefreshArgs> instanceRefresh;
 
     public Output<GroupInstanceRefreshArgs> getInstanceRefresh() {
-        return this.instanceRefresh == null ? Output.empty() : this.instanceRefresh;
+        return this.instanceRefresh == null ? Codegen.empty() : this.instanceRefresh;
     }
 
     /**
@@ -165,7 +166,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> launchConfiguration;
 
     public Output<String> getLaunchConfiguration() {
-        return this.launchConfiguration == null ? Output.empty() : this.launchConfiguration;
+        return this.launchConfiguration == null ? Codegen.empty() : this.launchConfiguration;
     }
 
     /**
@@ -176,7 +177,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GroupLaunchTemplateArgs> launchTemplate;
 
     public Output<GroupLaunchTemplateArgs> getLaunchTemplate() {
-        return this.launchTemplate == null ? Output.empty() : this.launchTemplate;
+        return this.launchTemplate == null ? Codegen.empty() : this.launchTemplate;
     }
 
     /**
@@ -188,7 +189,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> loadBalancers;
 
     public Output<List<String>> getLoadBalancers() {
-        return this.loadBalancers == null ? Output.empty() : this.loadBalancers;
+        return this.loadBalancers == null ? Codegen.empty() : this.loadBalancers;
     }
 
     /**
@@ -199,7 +200,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> maxInstanceLifetime;
 
     public Output<Integer> getMaxInstanceLifetime() {
-        return this.maxInstanceLifetime == null ? Output.empty() : this.maxInstanceLifetime;
+        return this.maxInstanceLifetime == null ? Codegen.empty() : this.maxInstanceLifetime;
     }
 
     /**
@@ -221,7 +222,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,MetricsGranularity>> metricsGranularity;
 
     public Output<Either<String,MetricsGranularity>> getMetricsGranularity() {
-        return this.metricsGranularity == null ? Output.empty() : this.metricsGranularity;
+        return this.metricsGranularity == null ? Codegen.empty() : this.metricsGranularity;
     }
 
     /**
@@ -235,7 +236,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> minElbCapacity;
 
     public Output<Integer> getMinElbCapacity() {
-        return this.minElbCapacity == null ? Output.empty() : this.minElbCapacity;
+        return this.minElbCapacity == null ? Codegen.empty() : this.minElbCapacity;
     }
 
     /**
@@ -257,7 +258,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GroupMixedInstancesPolicyArgs> mixedInstancesPolicy;
 
     public Output<GroupMixedInstancesPolicyArgs> getMixedInstancesPolicy() {
-        return this.mixedInstancesPolicy == null ? Output.empty() : this.mixedInstancesPolicy;
+        return this.mixedInstancesPolicy == null ? Codegen.empty() : this.mixedInstancesPolicy;
     }
 
     /**
@@ -268,7 +269,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -280,7 +281,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
-        return this.namePrefix == null ? Output.empty() : this.namePrefix;
+        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
     /**
@@ -291,7 +292,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> placementGroup;
 
     public Output<String> getPlacementGroup() {
-        return this.placementGroup == null ? Output.empty() : this.placementGroup;
+        return this.placementGroup == null ? Codegen.empty() : this.placementGroup;
     }
 
     /**
@@ -304,7 +305,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> protectFromScaleIn;
 
     public Output<Boolean> getProtectFromScaleIn() {
-        return this.protectFromScaleIn == null ? Output.empty() : this.protectFromScaleIn;
+        return this.protectFromScaleIn == null ? Codegen.empty() : this.protectFromScaleIn;
     }
 
     /**
@@ -315,7 +316,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serviceLinkedRoleArn;
 
     public Output<String> getServiceLinkedRoleArn() {
-        return this.serviceLinkedRoleArn == null ? Output.empty() : this.serviceLinkedRoleArn;
+        return this.serviceLinkedRoleArn == null ? Codegen.empty() : this.serviceLinkedRoleArn;
     }
 
     /**
@@ -327,7 +328,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> suspendedProcesses;
 
     public Output<List<String>> getSuspendedProcesses() {
-        return this.suspendedProcesses == null ? Output.empty() : this.suspendedProcesses;
+        return this.suspendedProcesses == null ? Codegen.empty() : this.suspendedProcesses;
     }
 
     /**
@@ -338,7 +339,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<GroupTagArgs>> tags;
 
     public Output<List<GroupTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -349,7 +350,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<Map<String,String>>> tagsCollection;
 
     public Output<List<Map<String,String>>> getTagsCollection() {
-        return this.tagsCollection == null ? Output.empty() : this.tagsCollection;
+        return this.tagsCollection == null ? Codegen.empty() : this.tagsCollection;
     }
 
     /**
@@ -360,7 +361,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> targetGroupArns;
 
     public Output<List<String>> getTargetGroupArns() {
-        return this.targetGroupArns == null ? Output.empty() : this.targetGroupArns;
+        return this.targetGroupArns == null ? Codegen.empty() : this.targetGroupArns;
     }
 
     /**
@@ -371,7 +372,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> terminationPolicies;
 
     public Output<List<String>> getTerminationPolicies() {
-        return this.terminationPolicies == null ? Output.empty() : this.terminationPolicies;
+        return this.terminationPolicies == null ? Codegen.empty() : this.terminationPolicies;
     }
 
     /**
@@ -382,7 +383,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> vpcZoneIdentifiers;
 
     public Output<List<String>> getVpcZoneIdentifiers() {
-        return this.vpcZoneIdentifiers == null ? Output.empty() : this.vpcZoneIdentifiers;
+        return this.vpcZoneIdentifiers == null ? Codegen.empty() : this.vpcZoneIdentifiers;
     }
 
     /**
@@ -397,7 +398,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> waitForCapacityTimeout;
 
     public Output<String> getWaitForCapacityTimeout() {
-        return this.waitForCapacityTimeout == null ? Output.empty() : this.waitForCapacityTimeout;
+        return this.waitForCapacityTimeout == null ? Codegen.empty() : this.waitForCapacityTimeout;
     }
 
     /**
@@ -412,7 +413,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> waitForElbCapacity;
 
     public Output<Integer> getWaitForElbCapacity() {
-        return this.waitForElbCapacity == null ? Output.empty() : this.waitForElbCapacity;
+        return this.waitForElbCapacity == null ? Codegen.empty() : this.waitForElbCapacity;
     }
 
     /**
@@ -424,7 +425,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GroupWarmPoolArgs> warmPool;
 
     public Output<GroupWarmPoolArgs> getWarmPool() {
-        return this.warmPool == null ? Output.empty() : this.warmPool;
+        return this.warmPool == null ? Codegen.empty() : this.warmPool;
     }
 
     public GroupArgs(
@@ -499,40 +500,40 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GroupArgs() {
-        this.availabilityZones = Output.empty();
-        this.capacityRebalance = Output.empty();
-        this.defaultCooldown = Output.empty();
-        this.desiredCapacity = Output.empty();
-        this.enabledMetrics = Output.empty();
-        this.forceDelete = Output.empty();
-        this.forceDeleteWarmPool = Output.empty();
-        this.healthCheckGracePeriod = Output.empty();
-        this.healthCheckType = Output.empty();
-        this.initialLifecycleHooks = Output.empty();
-        this.instanceRefresh = Output.empty();
-        this.launchConfiguration = Output.empty();
-        this.launchTemplate = Output.empty();
-        this.loadBalancers = Output.empty();
-        this.maxInstanceLifetime = Output.empty();
-        this.maxSize = Output.empty();
-        this.metricsGranularity = Output.empty();
-        this.minElbCapacity = Output.empty();
-        this.minSize = Output.empty();
-        this.mixedInstancesPolicy = Output.empty();
-        this.name = Output.empty();
-        this.namePrefix = Output.empty();
-        this.placementGroup = Output.empty();
-        this.protectFromScaleIn = Output.empty();
-        this.serviceLinkedRoleArn = Output.empty();
-        this.suspendedProcesses = Output.empty();
-        this.tags = Output.empty();
-        this.tagsCollection = Output.empty();
-        this.targetGroupArns = Output.empty();
-        this.terminationPolicies = Output.empty();
-        this.vpcZoneIdentifiers = Output.empty();
-        this.waitForCapacityTimeout = Output.empty();
-        this.waitForElbCapacity = Output.empty();
-        this.warmPool = Output.empty();
+        this.availabilityZones = Codegen.empty();
+        this.capacityRebalance = Codegen.empty();
+        this.defaultCooldown = Codegen.empty();
+        this.desiredCapacity = Codegen.empty();
+        this.enabledMetrics = Codegen.empty();
+        this.forceDelete = Codegen.empty();
+        this.forceDeleteWarmPool = Codegen.empty();
+        this.healthCheckGracePeriod = Codegen.empty();
+        this.healthCheckType = Codegen.empty();
+        this.initialLifecycleHooks = Codegen.empty();
+        this.instanceRefresh = Codegen.empty();
+        this.launchConfiguration = Codegen.empty();
+        this.launchTemplate = Codegen.empty();
+        this.loadBalancers = Codegen.empty();
+        this.maxInstanceLifetime = Codegen.empty();
+        this.maxSize = Codegen.empty();
+        this.metricsGranularity = Codegen.empty();
+        this.minElbCapacity = Codegen.empty();
+        this.minSize = Codegen.empty();
+        this.mixedInstancesPolicy = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namePrefix = Codegen.empty();
+        this.placementGroup = Codegen.empty();
+        this.protectFromScaleIn = Codegen.empty();
+        this.serviceLinkedRoleArn = Codegen.empty();
+        this.suspendedProcesses = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsCollection = Codegen.empty();
+        this.targetGroupArns = Codegen.empty();
+        this.terminationPolicies = Codegen.empty();
+        this.vpcZoneIdentifiers = Codegen.empty();
+        this.waitForCapacityTimeout = Codegen.empty();
+        this.waitForElbCapacity = Codegen.empty();
+        this.warmPool = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -626,7 +627,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder availabilityZones(@Nullable List<String> availabilityZones) {
-            this.availabilityZones = Output.ofNullable(availabilityZones);
+            this.availabilityZones = Codegen.ofNullable(availabilityZones);
             return this;
         }
         public Builder availabilityZones(String... availabilityZones) {
@@ -637,7 +638,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder capacityRebalance(@Nullable Boolean capacityRebalance) {
-            this.capacityRebalance = Output.ofNullable(capacityRebalance);
+            this.capacityRebalance = Codegen.ofNullable(capacityRebalance);
             return this;
         }
         public Builder defaultCooldown(@Nullable Output<Integer> defaultCooldown) {
@@ -645,7 +646,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultCooldown(@Nullable Integer defaultCooldown) {
-            this.defaultCooldown = Output.ofNullable(defaultCooldown);
+            this.defaultCooldown = Codegen.ofNullable(defaultCooldown);
             return this;
         }
         public Builder desiredCapacity(@Nullable Output<Integer> desiredCapacity) {
@@ -653,7 +654,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder desiredCapacity(@Nullable Integer desiredCapacity) {
-            this.desiredCapacity = Output.ofNullable(desiredCapacity);
+            this.desiredCapacity = Codegen.ofNullable(desiredCapacity);
             return this;
         }
         public Builder enabledMetrics(@Nullable Output<List<String>> enabledMetrics) {
@@ -661,7 +662,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabledMetrics(@Nullable List<String> enabledMetrics) {
-            this.enabledMetrics = Output.ofNullable(enabledMetrics);
+            this.enabledMetrics = Codegen.ofNullable(enabledMetrics);
             return this;
         }
         public Builder enabledMetrics(String... enabledMetrics) {
@@ -672,7 +673,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder forceDelete(@Nullable Boolean forceDelete) {
-            this.forceDelete = Output.ofNullable(forceDelete);
+            this.forceDelete = Codegen.ofNullable(forceDelete);
             return this;
         }
         public Builder forceDeleteWarmPool(@Nullable Output<Boolean> forceDeleteWarmPool) {
@@ -680,7 +681,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder forceDeleteWarmPool(@Nullable Boolean forceDeleteWarmPool) {
-            this.forceDeleteWarmPool = Output.ofNullable(forceDeleteWarmPool);
+            this.forceDeleteWarmPool = Codegen.ofNullable(forceDeleteWarmPool);
             return this;
         }
         public Builder healthCheckGracePeriod(@Nullable Output<Integer> healthCheckGracePeriod) {
@@ -688,7 +689,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder healthCheckGracePeriod(@Nullable Integer healthCheckGracePeriod) {
-            this.healthCheckGracePeriod = Output.ofNullable(healthCheckGracePeriod);
+            this.healthCheckGracePeriod = Codegen.ofNullable(healthCheckGracePeriod);
             return this;
         }
         public Builder healthCheckType(@Nullable Output<String> healthCheckType) {
@@ -696,7 +697,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder healthCheckType(@Nullable String healthCheckType) {
-            this.healthCheckType = Output.ofNullable(healthCheckType);
+            this.healthCheckType = Codegen.ofNullable(healthCheckType);
             return this;
         }
         public Builder initialLifecycleHooks(@Nullable Output<List<GroupInitialLifecycleHookArgs>> initialLifecycleHooks) {
@@ -704,7 +705,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder initialLifecycleHooks(@Nullable List<GroupInitialLifecycleHookArgs> initialLifecycleHooks) {
-            this.initialLifecycleHooks = Output.ofNullable(initialLifecycleHooks);
+            this.initialLifecycleHooks = Codegen.ofNullable(initialLifecycleHooks);
             return this;
         }
         public Builder initialLifecycleHooks(GroupInitialLifecycleHookArgs... initialLifecycleHooks) {
@@ -715,7 +716,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceRefresh(@Nullable GroupInstanceRefreshArgs instanceRefresh) {
-            this.instanceRefresh = Output.ofNullable(instanceRefresh);
+            this.instanceRefresh = Codegen.ofNullable(instanceRefresh);
             return this;
         }
         public Builder launchConfiguration(@Nullable Output<String> launchConfiguration) {
@@ -727,7 +728,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder launchTemplate(@Nullable GroupLaunchTemplateArgs launchTemplate) {
-            this.launchTemplate = Output.ofNullable(launchTemplate);
+            this.launchTemplate = Codegen.ofNullable(launchTemplate);
             return this;
         }
         public Builder loadBalancers(@Nullable Output<List<String>> loadBalancers) {
@@ -735,7 +736,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder loadBalancers(@Nullable List<String> loadBalancers) {
-            this.loadBalancers = Output.ofNullable(loadBalancers);
+            this.loadBalancers = Codegen.ofNullable(loadBalancers);
             return this;
         }
         public Builder loadBalancers(String... loadBalancers) {
@@ -746,7 +747,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxInstanceLifetime(@Nullable Integer maxInstanceLifetime) {
-            this.maxInstanceLifetime = Output.ofNullable(maxInstanceLifetime);
+            this.maxInstanceLifetime = Codegen.ofNullable(maxInstanceLifetime);
             return this;
         }
         public Builder maxSize(Output<Integer> maxSize) {
@@ -762,7 +763,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metricsGranularity(@Nullable Either<String,MetricsGranularity> metricsGranularity) {
-            this.metricsGranularity = Output.ofNullable(metricsGranularity);
+            this.metricsGranularity = Codegen.ofNullable(metricsGranularity);
             return this;
         }
         public Builder minElbCapacity(@Nullable Output<Integer> minElbCapacity) {
@@ -770,7 +771,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minElbCapacity(@Nullable Integer minElbCapacity) {
-            this.minElbCapacity = Output.ofNullable(minElbCapacity);
+            this.minElbCapacity = Codegen.ofNullable(minElbCapacity);
             return this;
         }
         public Builder minSize(Output<Integer> minSize) {
@@ -786,7 +787,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mixedInstancesPolicy(@Nullable GroupMixedInstancesPolicyArgs mixedInstancesPolicy) {
-            this.mixedInstancesPolicy = Output.ofNullable(mixedInstancesPolicy);
+            this.mixedInstancesPolicy = Codegen.ofNullable(mixedInstancesPolicy);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -794,7 +795,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
@@ -802,7 +803,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Output.ofNullable(namePrefix);
+            this.namePrefix = Codegen.ofNullable(namePrefix);
             return this;
         }
         public Builder placementGroup(@Nullable Output<String> placementGroup) {
@@ -814,7 +815,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder protectFromScaleIn(@Nullable Boolean protectFromScaleIn) {
-            this.protectFromScaleIn = Output.ofNullable(protectFromScaleIn);
+            this.protectFromScaleIn = Codegen.ofNullable(protectFromScaleIn);
             return this;
         }
         public Builder serviceLinkedRoleArn(@Nullable Output<String> serviceLinkedRoleArn) {
@@ -822,7 +823,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceLinkedRoleArn(@Nullable String serviceLinkedRoleArn) {
-            this.serviceLinkedRoleArn = Output.ofNullable(serviceLinkedRoleArn);
+            this.serviceLinkedRoleArn = Codegen.ofNullable(serviceLinkedRoleArn);
             return this;
         }
         public Builder suspendedProcesses(@Nullable Output<List<String>> suspendedProcesses) {
@@ -830,7 +831,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder suspendedProcesses(@Nullable List<String> suspendedProcesses) {
-            this.suspendedProcesses = Output.ofNullable(suspendedProcesses);
+            this.suspendedProcesses = Codegen.ofNullable(suspendedProcesses);
             return this;
         }
         public Builder suspendedProcesses(String... suspendedProcesses) {
@@ -841,7 +842,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<GroupTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(GroupTagArgs... tags) {
@@ -852,7 +853,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsCollection(@Nullable List<Map<String,String>> tagsCollection) {
-            this.tagsCollection = Output.ofNullable(tagsCollection);
+            this.tagsCollection = Codegen.ofNullable(tagsCollection);
             return this;
         }
         public Builder targetGroupArns(@Nullable Output<List<String>> targetGroupArns) {
@@ -860,7 +861,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetGroupArns(@Nullable List<String> targetGroupArns) {
-            this.targetGroupArns = Output.ofNullable(targetGroupArns);
+            this.targetGroupArns = Codegen.ofNullable(targetGroupArns);
             return this;
         }
         public Builder targetGroupArns(String... targetGroupArns) {
@@ -871,7 +872,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder terminationPolicies(@Nullable List<String> terminationPolicies) {
-            this.terminationPolicies = Output.ofNullable(terminationPolicies);
+            this.terminationPolicies = Codegen.ofNullable(terminationPolicies);
             return this;
         }
         public Builder terminationPolicies(String... terminationPolicies) {
@@ -882,7 +883,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcZoneIdentifiers(@Nullable List<String> vpcZoneIdentifiers) {
-            this.vpcZoneIdentifiers = Output.ofNullable(vpcZoneIdentifiers);
+            this.vpcZoneIdentifiers = Codegen.ofNullable(vpcZoneIdentifiers);
             return this;
         }
         public Builder vpcZoneIdentifiers(String... vpcZoneIdentifiers) {
@@ -893,7 +894,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder waitForCapacityTimeout(@Nullable String waitForCapacityTimeout) {
-            this.waitForCapacityTimeout = Output.ofNullable(waitForCapacityTimeout);
+            this.waitForCapacityTimeout = Codegen.ofNullable(waitForCapacityTimeout);
             return this;
         }
         public Builder waitForElbCapacity(@Nullable Output<Integer> waitForElbCapacity) {
@@ -901,7 +902,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder waitForElbCapacity(@Nullable Integer waitForElbCapacity) {
-            this.waitForElbCapacity = Output.ofNullable(waitForElbCapacity);
+            this.waitForElbCapacity = Codegen.ofNullable(waitForElbCapacity);
             return this;
         }
         public Builder warmPool(@Nullable Output<GroupWarmPoolArgs> warmPool) {
@@ -909,7 +910,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder warmPool(@Nullable GroupWarmPoolArgs warmPool) {
-            this.warmPool = Output.ofNullable(warmPool);
+            this.warmPool = Codegen.ofNullable(warmPool);
             return this;
         }        public GroupArgs build() {
             return new GroupArgs(availabilityZones, capacityRebalance, defaultCooldown, desiredCapacity, enabledMetrics, forceDelete, forceDeleteWarmPool, healthCheckGracePeriod, healthCheckType, initialLifecycleHooks, instanceRefresh, launchConfiguration, launchTemplate, loadBalancers, maxInstanceLifetime, maxSize, metricsGranularity, minElbCapacity, minSize, mixedInstancesPolicy, name, namePrefix, placementGroup, protectFromScaleIn, serviceLinkedRoleArn, suspendedProcesses, tags, tagsCollection, targetGroupArns, terminationPolicies, vpcZoneIdentifiers, waitForCapacityTimeout, waitForElbCapacity, warmPool);

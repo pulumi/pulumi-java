@@ -7,6 +7,7 @@ import io.pulumi.azurenative.recoveryservices.enums.ResourceHealthStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class KPIResourceHealthDetailsArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Either<String,ResourceHealthStatus>> resourceHealthStatus;
 
     public Output<Either<String,ResourceHealthStatus>> getResourceHealthStatus() {
-        return this.resourceHealthStatus == null ? Output.empty() : this.resourceHealthStatus;
+        return this.resourceHealthStatus == null ? Codegen.empty() : this.resourceHealthStatus;
     }
 
     public KPIResourceHealthDetailsArgs(@Nullable Output<Either<String,ResourceHealthStatus>> resourceHealthStatus) {
@@ -36,7 +37,7 @@ public final class KPIResourceHealthDetailsArgs extends io.pulumi.resources.Reso
     }
 
     private KPIResourceHealthDetailsArgs() {
-        this.resourceHealthStatus = Output.empty();
+        this.resourceHealthStatus = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -64,7 +65,7 @@ public final class KPIResourceHealthDetailsArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder resourceHealthStatus(@Nullable Either<String,ResourceHealthStatus> resourceHealthStatus) {
-            this.resourceHealthStatus = Output.ofNullable(resourceHealthStatus);
+            this.resourceHealthStatus = Codegen.ofNullable(resourceHealthStatus);
             return this;
         }        public KPIResourceHealthDetailsArgs build() {
             return new KPIResourceHealthDetailsArgs(resourceHealthStatus);

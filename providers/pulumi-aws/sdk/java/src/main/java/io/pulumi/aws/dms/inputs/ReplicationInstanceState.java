@@ -5,6 +5,7 @@ package io.pulumi.aws.dms.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +27,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
       private final @Nullable Output<Integer> allocatedStorage;
 
     public Output<Integer> getAllocatedStorage() {
-        return this.allocatedStorage == null ? Output.empty() : this.allocatedStorage;
+        return this.allocatedStorage == null ? Codegen.empty() : this.allocatedStorage;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> allowMajorVersionUpgrade;
 
     public Output<Boolean> getAllowMajorVersionUpgrade() {
-        return this.allowMajorVersionUpgrade == null ? Output.empty() : this.allowMajorVersionUpgrade;
+        return this.allowMajorVersionUpgrade == null ? Codegen.empty() : this.allowMajorVersionUpgrade;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> applyImmediately;
 
     public Output<Boolean> getApplyImmediately() {
-        return this.applyImmediately == null ? Output.empty() : this.applyImmediately;
+        return this.applyImmediately == null ? Codegen.empty() : this.applyImmediately;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> autoMinorVersionUpgrade;
 
     public Output<Boolean> getAutoMinorVersionUpgrade() {
-        return this.autoMinorVersionUpgrade == null ? Output.empty() : this.autoMinorVersionUpgrade;
+        return this.autoMinorVersionUpgrade == null ? Codegen.empty() : this.autoMinorVersionUpgrade;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
+        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> engineVersion;
 
     public Output<String> getEngineVersion() {
-        return this.engineVersion == null ? Output.empty() : this.engineVersion;
+        return this.engineVersion == null ? Codegen.empty() : this.engineVersion;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
+        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> multiAz;
 
     public Output<Boolean> getMultiAz() {
-        return this.multiAz == null ? Output.empty() : this.multiAz;
+        return this.multiAz == null ? Codegen.empty() : this.multiAz;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> preferredMaintenanceWindow;
 
     public Output<String> getPreferredMaintenanceWindow() {
-        return this.preferredMaintenanceWindow == null ? Output.empty() : this.preferredMaintenanceWindow;
+        return this.preferredMaintenanceWindow == null ? Codegen.empty() : this.preferredMaintenanceWindow;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> publiclyAccessible;
 
     public Output<Boolean> getPubliclyAccessible() {
-        return this.publiclyAccessible == null ? Output.empty() : this.publiclyAccessible;
+        return this.publiclyAccessible == null ? Codegen.empty() : this.publiclyAccessible;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> replicationInstanceArn;
 
     public Output<String> getReplicationInstanceArn() {
-        return this.replicationInstanceArn == null ? Output.empty() : this.replicationInstanceArn;
+        return this.replicationInstanceArn == null ? Codegen.empty() : this.replicationInstanceArn;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> replicationInstanceClass;
 
     public Output<String> getReplicationInstanceClass() {
-        return this.replicationInstanceClass == null ? Output.empty() : this.replicationInstanceClass;
+        return this.replicationInstanceClass == null ? Codegen.empty() : this.replicationInstanceClass;
     }
 
     /**
@@ -158,7 +159,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> replicationInstanceId;
 
     public Output<String> getReplicationInstanceId() {
-        return this.replicationInstanceId == null ? Output.empty() : this.replicationInstanceId;
+        return this.replicationInstanceId == null ? Codegen.empty() : this.replicationInstanceId;
     }
 
     /**
@@ -169,7 +170,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
       private final @Nullable Output<List<String>> replicationInstancePrivateIps;
 
     public Output<List<String>> getReplicationInstancePrivateIps() {
-        return this.replicationInstancePrivateIps == null ? Output.empty() : this.replicationInstancePrivateIps;
+        return this.replicationInstancePrivateIps == null ? Codegen.empty() : this.replicationInstancePrivateIps;
     }
 
     /**
@@ -180,7 +181,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
       private final @Nullable Output<List<String>> replicationInstancePublicIps;
 
     public Output<List<String>> getReplicationInstancePublicIps() {
-        return this.replicationInstancePublicIps == null ? Output.empty() : this.replicationInstancePublicIps;
+        return this.replicationInstancePublicIps == null ? Codegen.empty() : this.replicationInstancePublicIps;
     }
 
     /**
@@ -191,7 +192,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> replicationSubnetGroupId;
 
     public Output<String> getReplicationSubnetGroupId() {
-        return this.replicationSubnetGroupId == null ? Output.empty() : this.replicationSubnetGroupId;
+        return this.replicationSubnetGroupId == null ? Codegen.empty() : this.replicationSubnetGroupId;
     }
 
     /**
@@ -202,7 +203,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -213,7 +214,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -224,7 +225,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
       private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
     public Output<List<String>> getVpcSecurityGroupIds() {
-        return this.vpcSecurityGroupIds == null ? Output.empty() : this.vpcSecurityGroupIds;
+        return this.vpcSecurityGroupIds == null ? Codegen.empty() : this.vpcSecurityGroupIds;
     }
 
     public ReplicationInstanceState(
@@ -269,25 +270,25 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
     }
 
     private ReplicationInstanceState() {
-        this.allocatedStorage = Output.empty();
-        this.allowMajorVersionUpgrade = Output.empty();
-        this.applyImmediately = Output.empty();
-        this.autoMinorVersionUpgrade = Output.empty();
-        this.availabilityZone = Output.empty();
-        this.engineVersion = Output.empty();
-        this.kmsKeyArn = Output.empty();
-        this.multiAz = Output.empty();
-        this.preferredMaintenanceWindow = Output.empty();
-        this.publiclyAccessible = Output.empty();
-        this.replicationInstanceArn = Output.empty();
-        this.replicationInstanceClass = Output.empty();
-        this.replicationInstanceId = Output.empty();
-        this.replicationInstancePrivateIps = Output.empty();
-        this.replicationInstancePublicIps = Output.empty();
-        this.replicationSubnetGroupId = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.vpcSecurityGroupIds = Output.empty();
+        this.allocatedStorage = Codegen.empty();
+        this.allowMajorVersionUpgrade = Codegen.empty();
+        this.applyImmediately = Codegen.empty();
+        this.autoMinorVersionUpgrade = Codegen.empty();
+        this.availabilityZone = Codegen.empty();
+        this.engineVersion = Codegen.empty();
+        this.kmsKeyArn = Codegen.empty();
+        this.multiAz = Codegen.empty();
+        this.preferredMaintenanceWindow = Codegen.empty();
+        this.publiclyAccessible = Codegen.empty();
+        this.replicationInstanceArn = Codegen.empty();
+        this.replicationInstanceClass = Codegen.empty();
+        this.replicationInstanceId = Codegen.empty();
+        this.replicationInstancePrivateIps = Codegen.empty();
+        this.replicationInstancePublicIps = Codegen.empty();
+        this.replicationSubnetGroupId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.vpcSecurityGroupIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -351,7 +352,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder allocatedStorage(@Nullable Integer allocatedStorage) {
-            this.allocatedStorage = Output.ofNullable(allocatedStorage);
+            this.allocatedStorage = Codegen.ofNullable(allocatedStorage);
             return this;
         }
         public Builder allowMajorVersionUpgrade(@Nullable Output<Boolean> allowMajorVersionUpgrade) {
@@ -359,7 +360,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder allowMajorVersionUpgrade(@Nullable Boolean allowMajorVersionUpgrade) {
-            this.allowMajorVersionUpgrade = Output.ofNullable(allowMajorVersionUpgrade);
+            this.allowMajorVersionUpgrade = Codegen.ofNullable(allowMajorVersionUpgrade);
             return this;
         }
         public Builder applyImmediately(@Nullable Output<Boolean> applyImmediately) {
@@ -367,7 +368,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder applyImmediately(@Nullable Boolean applyImmediately) {
-            this.applyImmediately = Output.ofNullable(applyImmediately);
+            this.applyImmediately = Codegen.ofNullable(applyImmediately);
             return this;
         }
         public Builder autoMinorVersionUpgrade(@Nullable Output<Boolean> autoMinorVersionUpgrade) {
@@ -375,7 +376,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder autoMinorVersionUpgrade(@Nullable Boolean autoMinorVersionUpgrade) {
-            this.autoMinorVersionUpgrade = Output.ofNullable(autoMinorVersionUpgrade);
+            this.autoMinorVersionUpgrade = Codegen.ofNullable(autoMinorVersionUpgrade);
             return this;
         }
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
@@ -383,7 +384,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Output.ofNullable(availabilityZone);
+            this.availabilityZone = Codegen.ofNullable(availabilityZone);
             return this;
         }
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
@@ -391,7 +392,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder engineVersion(@Nullable String engineVersion) {
-            this.engineVersion = Output.ofNullable(engineVersion);
+            this.engineVersion = Codegen.ofNullable(engineVersion);
             return this;
         }
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
@@ -399,7 +400,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
             return this;
         }
         public Builder multiAz(@Nullable Output<Boolean> multiAz) {
@@ -407,7 +408,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder multiAz(@Nullable Boolean multiAz) {
-            this.multiAz = Output.ofNullable(multiAz);
+            this.multiAz = Codegen.ofNullable(multiAz);
             return this;
         }
         public Builder preferredMaintenanceWindow(@Nullable Output<String> preferredMaintenanceWindow) {
@@ -415,7 +416,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder preferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
-            this.preferredMaintenanceWindow = Output.ofNullable(preferredMaintenanceWindow);
+            this.preferredMaintenanceWindow = Codegen.ofNullable(preferredMaintenanceWindow);
             return this;
         }
         public Builder publiclyAccessible(@Nullable Output<Boolean> publiclyAccessible) {
@@ -423,7 +424,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder publiclyAccessible(@Nullable Boolean publiclyAccessible) {
-            this.publiclyAccessible = Output.ofNullable(publiclyAccessible);
+            this.publiclyAccessible = Codegen.ofNullable(publiclyAccessible);
             return this;
         }
         public Builder replicationInstanceArn(@Nullable Output<String> replicationInstanceArn) {
@@ -431,7 +432,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder replicationInstanceArn(@Nullable String replicationInstanceArn) {
-            this.replicationInstanceArn = Output.ofNullable(replicationInstanceArn);
+            this.replicationInstanceArn = Codegen.ofNullable(replicationInstanceArn);
             return this;
         }
         public Builder replicationInstanceClass(@Nullable Output<String> replicationInstanceClass) {
@@ -439,7 +440,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder replicationInstanceClass(@Nullable String replicationInstanceClass) {
-            this.replicationInstanceClass = Output.ofNullable(replicationInstanceClass);
+            this.replicationInstanceClass = Codegen.ofNullable(replicationInstanceClass);
             return this;
         }
         public Builder replicationInstanceId(@Nullable Output<String> replicationInstanceId) {
@@ -447,7 +448,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder replicationInstanceId(@Nullable String replicationInstanceId) {
-            this.replicationInstanceId = Output.ofNullable(replicationInstanceId);
+            this.replicationInstanceId = Codegen.ofNullable(replicationInstanceId);
             return this;
         }
         public Builder replicationInstancePrivateIps(@Nullable Output<List<String>> replicationInstancePrivateIps) {
@@ -455,7 +456,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder replicationInstancePrivateIps(@Nullable List<String> replicationInstancePrivateIps) {
-            this.replicationInstancePrivateIps = Output.ofNullable(replicationInstancePrivateIps);
+            this.replicationInstancePrivateIps = Codegen.ofNullable(replicationInstancePrivateIps);
             return this;
         }
         public Builder replicationInstancePrivateIps(String... replicationInstancePrivateIps) {
@@ -466,7 +467,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder replicationInstancePublicIps(@Nullable List<String> replicationInstancePublicIps) {
-            this.replicationInstancePublicIps = Output.ofNullable(replicationInstancePublicIps);
+            this.replicationInstancePublicIps = Codegen.ofNullable(replicationInstancePublicIps);
             return this;
         }
         public Builder replicationInstancePublicIps(String... replicationInstancePublicIps) {
@@ -477,7 +478,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder replicationSubnetGroupId(@Nullable String replicationSubnetGroupId) {
-            this.replicationSubnetGroupId = Output.ofNullable(replicationSubnetGroupId);
+            this.replicationSubnetGroupId = Codegen.ofNullable(replicationSubnetGroupId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -485,7 +486,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -493,7 +494,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
@@ -501,7 +502,7 @@ public final class ReplicationInstanceState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
-            this.vpcSecurityGroupIds = Output.ofNullable(vpcSecurityGroupIds);
+            this.vpcSecurityGroupIds = Codegen.ofNullable(vpcSecurityGroupIds);
             return this;
         }
         public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.macie.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class S3BucketAssociationClassificationTypeArgs extends io.pulumi.r
       private final @Nullable Output<String> continuous;
 
     public Output<String> getContinuous() {
-        return this.continuous == null ? Output.empty() : this.continuous;
+        return this.continuous == null ? Codegen.empty() : this.continuous;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class S3BucketAssociationClassificationTypeArgs extends io.pulumi.r
       private final @Nullable Output<String> oneTime;
 
     public Output<String> getOneTime() {
-        return this.oneTime == null ? Output.empty() : this.oneTime;
+        return this.oneTime == null ? Codegen.empty() : this.oneTime;
     }
 
     public S3BucketAssociationClassificationTypeArgs(
@@ -46,8 +47,8 @@ public final class S3BucketAssociationClassificationTypeArgs extends io.pulumi.r
     }
 
     private S3BucketAssociationClassificationTypeArgs() {
-        this.continuous = Output.empty();
-        this.oneTime = Output.empty();
+        this.continuous = Codegen.empty();
+        this.oneTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class S3BucketAssociationClassificationTypeArgs extends io.pulumi.r
             return this;
         }
         public Builder continuous(@Nullable String continuous) {
-            this.continuous = Output.ofNullable(continuous);
+            this.continuous = Codegen.ofNullable(continuous);
             return this;
         }
         public Builder oneTime(@Nullable Output<String> oneTime) {
@@ -85,7 +86,7 @@ public final class S3BucketAssociationClassificationTypeArgs extends io.pulumi.r
             return this;
         }
         public Builder oneTime(@Nullable String oneTime) {
-            this.oneTime = Output.ofNullable(oneTime);
+            this.oneTime = Codegen.ofNullable(oneTime);
             return this;
         }        public S3BucketAssociationClassificationTypeArgs build() {
             return new S3BucketAssociationClassificationTypeArgs(continuous, oneTime);

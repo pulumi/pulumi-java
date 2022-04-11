@@ -7,6 +7,7 @@ import io.pulumi.azurenative.devtestlab.enums.EnableStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Either<String,EnableStatus>> enabled;
 
     public Output<Either<String,EnableStatus>> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> expirationDate;
 
     public Output<String> getExpirationDate() {
-        return this.expirationDate == null ? Output.empty() : this.expirationDate;
+        return this.expirationDate == null ? Codegen.empty() : this.expirationDate;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Boolean> expired;
 
     public Output<Boolean> getExpired() {
-        return this.expired == null ? Output.empty() : this.expired;
+        return this.expired == null ? Codegen.empty() : this.expired;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> markdown;
 
     public Output<String> getMarkdown() {
-        return this.markdown == null ? Output.empty() : this.markdown;
+        return this.markdown == null ? Codegen.empty() : this.markdown;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     public LabAnnouncementPropertiesArgs(
@@ -90,11 +91,11 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
     }
 
     private LabAnnouncementPropertiesArgs() {
-        this.enabled = Output.empty();
-        this.expirationDate = Output.empty();
-        this.expired = Output.empty();
-        this.markdown = Output.empty();
-        this.title = Output.empty();
+        this.enabled = Codegen.empty();
+        this.expirationDate = Codegen.empty();
+        this.expired = Codegen.empty();
+        this.markdown = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder enabled(@Nullable Either<String,EnableStatus> enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder expirationDate(@Nullable Output<String> expirationDate) {
@@ -138,7 +139,7 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder expirationDate(@Nullable String expirationDate) {
-            this.expirationDate = Output.ofNullable(expirationDate);
+            this.expirationDate = Codegen.ofNullable(expirationDate);
             return this;
         }
         public Builder expired(@Nullable Output<Boolean> expired) {
@@ -146,7 +147,7 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder expired(@Nullable Boolean expired) {
-            this.expired = Output.ofNullable(expired);
+            this.expired = Codegen.ofNullable(expired);
             return this;
         }
         public Builder markdown(@Nullable Output<String> markdown) {
@@ -154,7 +155,7 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder markdown(@Nullable String markdown) {
-            this.markdown = Output.ofNullable(markdown);
+            this.markdown = Codegen.ofNullable(markdown);
             return this;
         }
         public Builder title(@Nullable Output<String> title) {
@@ -162,7 +163,7 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }        public LabAnnouncementPropertiesArgs build() {
             return new LabAnnouncementPropertiesArgs(enabled, expirationDate, expired, markdown, title);

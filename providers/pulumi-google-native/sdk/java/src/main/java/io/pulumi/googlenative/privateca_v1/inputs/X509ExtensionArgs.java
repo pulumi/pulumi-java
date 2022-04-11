@@ -5,6 +5,7 @@ package io.pulumi.googlenative.privateca_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.privateca_v1.inputs.ObjectIdArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class X509ExtensionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> critical;
 
     public Output<Boolean> getCritical() {
-        return this.critical == null ? Output.empty() : this.critical;
+        return this.critical == null ? Codegen.empty() : this.critical;
     }
 
     /**
@@ -63,9 +64,9 @@ public final class X509ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private X509ExtensionArgs() {
-        this.critical = Output.empty();
-        this.objectId = Output.empty();
-        this.value = Output.empty();
+        this.critical = Codegen.empty();
+        this.objectId = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class X509ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder critical(@Nullable Boolean critical) {
-            this.critical = Output.ofNullable(critical);
+            this.critical = Codegen.ofNullable(critical);
             return this;
         }
         public Builder objectId(Output<ObjectIdArgs> objectId) {

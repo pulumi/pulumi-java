@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,14 +20,14 @@ public final class AuthorityAccessUrlArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> caCertificateAccessUrl;
 
     public Output<String> getCaCertificateAccessUrl() {
-        return this.caCertificateAccessUrl == null ? Output.empty() : this.caCertificateAccessUrl;
+        return this.caCertificateAccessUrl == null ? Codegen.empty() : this.caCertificateAccessUrl;
     }
 
     @Import(name="crlAccessUrls")
       private final @Nullable Output<List<String>> crlAccessUrls;
 
     public Output<List<String>> getCrlAccessUrls() {
-        return this.crlAccessUrls == null ? Output.empty() : this.crlAccessUrls;
+        return this.crlAccessUrls == null ? Codegen.empty() : this.crlAccessUrls;
     }
 
     public AuthorityAccessUrlArgs(
@@ -37,8 +38,8 @@ public final class AuthorityAccessUrlArgs extends io.pulumi.resources.ResourceAr
     }
 
     private AuthorityAccessUrlArgs() {
-        this.caCertificateAccessUrl = Output.empty();
-        this.crlAccessUrls = Output.empty();
+        this.caCertificateAccessUrl = Codegen.empty();
+        this.crlAccessUrls = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class AuthorityAccessUrlArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder caCertificateAccessUrl(@Nullable String caCertificateAccessUrl) {
-            this.caCertificateAccessUrl = Output.ofNullable(caCertificateAccessUrl);
+            this.caCertificateAccessUrl = Codegen.ofNullable(caCertificateAccessUrl);
             return this;
         }
         public Builder crlAccessUrls(@Nullable Output<List<String>> crlAccessUrls) {
@@ -76,7 +77,7 @@ public final class AuthorityAccessUrlArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder crlAccessUrls(@Nullable List<String> crlAccessUrls) {
-            this.crlAccessUrls = Output.ofNullable(crlAccessUrls);
+            this.crlAccessUrls = Codegen.ofNullable(crlAccessUrls);
             return this;
         }
         public Builder crlAccessUrls(String... crlAccessUrls) {

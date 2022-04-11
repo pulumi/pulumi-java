@@ -5,6 +5,7 @@ package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ResolverRuleAssociationState extends io.pulumi.resources.Reso
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ResolverRuleAssociationState extends io.pulumi.resources.Reso
       private final @Nullable Output<String> resolverRuleId;
 
     public Output<String> getResolverRuleId() {
-        return this.resolverRuleId == null ? Output.empty() : this.resolverRuleId;
+        return this.resolverRuleId == null ? Codegen.empty() : this.resolverRuleId;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ResolverRuleAssociationState extends io.pulumi.resources.Reso
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     public ResolverRuleAssociationState(
@@ -57,9 +58,9 @@ public final class ResolverRuleAssociationState extends io.pulumi.resources.Reso
     }
 
     private ResolverRuleAssociationState() {
-        this.name = Output.empty();
-        this.resolverRuleId = Output.empty();
-        this.vpcId = Output.empty();
+        this.name = Codegen.empty();
+        this.resolverRuleId = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class ResolverRuleAssociationState extends io.pulumi.resources.Reso
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resolverRuleId(@Nullable Output<String> resolverRuleId) {
@@ -99,7 +100,7 @@ public final class ResolverRuleAssociationState extends io.pulumi.resources.Reso
             return this;
         }
         public Builder resolverRuleId(@Nullable String resolverRuleId) {
-            this.resolverRuleId = Output.ofNullable(resolverRuleId);
+            this.resolverRuleId = Codegen.ofNullable(resolverRuleId);
             return this;
         }
         public Builder vpcId(@Nullable Output<String> vpcId) {
@@ -107,7 +108,7 @@ public final class ResolverRuleAssociationState extends io.pulumi.resources.Reso
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }        public ResolverRuleAssociationState build() {
             return new ResolverRuleAssociationState(name, resolverRuleId, vpcId);

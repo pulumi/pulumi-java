@@ -6,6 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.enums.BucketTieringAccessTier;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -44,8 +45,8 @@ public final class BucketTieringArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BucketTieringArgs() {
-        this.accessTier = Output.empty();
-        this.days = Output.empty();
+        this.accessTier = Codegen.empty();
+        this.days = Codegen.empty();
     }
 
     public static Builder builder() {

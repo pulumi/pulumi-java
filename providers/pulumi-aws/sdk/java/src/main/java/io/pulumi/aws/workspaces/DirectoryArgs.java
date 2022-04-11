@@ -8,6 +8,7 @@ import io.pulumi.aws.workspaces.inputs.DirectoryWorkspaceAccessPropertiesArgs;
 import io.pulumi.aws.workspaces.inputs.DirectoryWorkspaceCreationPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -38,7 +39,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> ipGroupIds;
 
     public Output<List<String>> getIpGroupIds() {
-        return this.ipGroupIds == null ? Output.empty() : this.ipGroupIds;
+        return this.ipGroupIds == null ? Codegen.empty() : this.ipGroupIds;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DirectorySelfServicePermissionsArgs> selfServicePermissions;
 
     public Output<DirectorySelfServicePermissionsArgs> getSelfServicePermissions() {
-        return this.selfServicePermissions == null ? Output.empty() : this.selfServicePermissions;
+        return this.selfServicePermissions == null ? Codegen.empty() : this.selfServicePermissions;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Output.empty() : this.subnetIds;
+        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DirectoryWorkspaceAccessPropertiesArgs> workspaceAccessProperties;
 
     public Output<DirectoryWorkspaceAccessPropertiesArgs> getWorkspaceAccessProperties() {
-        return this.workspaceAccessProperties == null ? Output.empty() : this.workspaceAccessProperties;
+        return this.workspaceAccessProperties == null ? Codegen.empty() : this.workspaceAccessProperties;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DirectoryWorkspaceCreationPropertiesArgs> workspaceCreationProperties;
 
     public Output<DirectoryWorkspaceCreationPropertiesArgs> getWorkspaceCreationProperties() {
-        return this.workspaceCreationProperties == null ? Output.empty() : this.workspaceCreationProperties;
+        return this.workspaceCreationProperties == null ? Codegen.empty() : this.workspaceCreationProperties;
     }
 
     public DirectoryArgs(
@@ -114,13 +115,13 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DirectoryArgs() {
-        this.directoryId = Output.empty();
-        this.ipGroupIds = Output.empty();
-        this.selfServicePermissions = Output.empty();
-        this.subnetIds = Output.empty();
-        this.tags = Output.empty();
-        this.workspaceAccessProperties = Output.empty();
-        this.workspaceCreationProperties = Output.empty();
+        this.directoryId = Codegen.empty();
+        this.ipGroupIds = Codegen.empty();
+        this.selfServicePermissions = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.workspaceAccessProperties = Codegen.empty();
+        this.workspaceCreationProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -168,7 +169,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipGroupIds(@Nullable List<String> ipGroupIds) {
-            this.ipGroupIds = Output.ofNullable(ipGroupIds);
+            this.ipGroupIds = Codegen.ofNullable(ipGroupIds);
             return this;
         }
         public Builder ipGroupIds(String... ipGroupIds) {
@@ -179,7 +180,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selfServicePermissions(@Nullable DirectorySelfServicePermissionsArgs selfServicePermissions) {
-            this.selfServicePermissions = Output.ofNullable(selfServicePermissions);
+            this.selfServicePermissions = Codegen.ofNullable(selfServicePermissions);
             return this;
         }
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
@@ -187,7 +188,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Output.ofNullable(subnetIds);
+            this.subnetIds = Codegen.ofNullable(subnetIds);
             return this;
         }
         public Builder subnetIds(String... subnetIds) {
@@ -198,7 +199,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder workspaceAccessProperties(@Nullable Output<DirectoryWorkspaceAccessPropertiesArgs> workspaceAccessProperties) {
@@ -206,7 +207,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workspaceAccessProperties(@Nullable DirectoryWorkspaceAccessPropertiesArgs workspaceAccessProperties) {
-            this.workspaceAccessProperties = Output.ofNullable(workspaceAccessProperties);
+            this.workspaceAccessProperties = Codegen.ofNullable(workspaceAccessProperties);
             return this;
         }
         public Builder workspaceCreationProperties(@Nullable Output<DirectoryWorkspaceCreationPropertiesArgs> workspaceCreationProperties) {
@@ -214,7 +215,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workspaceCreationProperties(@Nullable DirectoryWorkspaceCreationPropertiesArgs workspaceCreationProperties) {
-            this.workspaceCreationProperties = Output.ofNullable(workspaceCreationProperties);
+            this.workspaceCreationProperties = Codegen.ofNullable(workspaceCreationProperties);
             return this;
         }        public DirectoryArgs build() {
             return new DirectoryArgs(directoryId, ipGroupIds, selfServicePermissions, subnetIds, tags, workspaceAccessProperties, workspaceCreationProperties);

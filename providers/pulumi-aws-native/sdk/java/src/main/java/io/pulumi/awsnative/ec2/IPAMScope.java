@@ -10,6 +10,7 @@ import io.pulumi.awsnative.ec2.outputs.IPAMScopeTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -163,7 +164,7 @@ public class IPAMScope extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IPAMScope(String name, IPAMScopeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ec2:IPAMScope", name, args == null ? IPAMScopeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ec2:IPAMScope", name, args == null ? IPAMScopeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IPAMScope(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

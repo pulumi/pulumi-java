@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_v1.inputs.HttpFaultAbortArgs;
 import io.pulumi.googlenative.compute_v1.inputs.HttpFaultDelayArgs;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class HttpFaultInjectionArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<HttpFaultAbortArgs> abort;
 
     public Output<HttpFaultAbortArgs> getAbort() {
-        return this.abort == null ? Output.empty() : this.abort;
+        return this.abort == null ? Codegen.empty() : this.abort;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class HttpFaultInjectionArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<HttpFaultDelayArgs> delay;
 
     public Output<HttpFaultDelayArgs> getDelay() {
-        return this.delay == null ? Output.empty() : this.delay;
+        return this.delay == null ? Codegen.empty() : this.delay;
     }
 
     public HttpFaultInjectionArgs(
@@ -49,8 +50,8 @@ public final class HttpFaultInjectionArgs extends io.pulumi.resources.ResourceAr
     }
 
     private HttpFaultInjectionArgs() {
-        this.abort = Output.empty();
-        this.delay = Output.empty();
+        this.abort = Codegen.empty();
+        this.delay = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class HttpFaultInjectionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder abort(@Nullable HttpFaultAbortArgs abort) {
-            this.abort = Output.ofNullable(abort);
+            this.abort = Codegen.ofNullable(abort);
             return this;
         }
         public Builder delay(@Nullable Output<HttpFaultDelayArgs> delay) {
@@ -88,7 +89,7 @@ public final class HttpFaultInjectionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder delay(@Nullable HttpFaultDelayArgs delay) {
-            this.delay = Output.ofNullable(delay);
+            this.delay = Codegen.ofNullable(delay);
             return this;
         }        public HttpFaultInjectionArgs build() {
             return new HttpFaultInjectionArgs(abort, delay);

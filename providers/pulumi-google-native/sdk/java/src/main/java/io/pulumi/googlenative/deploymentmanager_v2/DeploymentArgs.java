@@ -5,6 +5,7 @@ package io.pulumi.googlenative.deploymentmanager_v2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.deploymentmanager_v2.inputs.DeploymentLabelEntryArgs;
 import io.pulumi.googlenative.deploymentmanager_v2.inputs.TargetConfigurationArgs;
 import java.lang.String;
@@ -21,7 +22,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> createPolicy;
 
     public Output<String> getCreatePolicy() {
-        return this.createPolicy == null ? Output.empty() : this.createPolicy;
+        return this.createPolicy == null ? Codegen.empty() : this.createPolicy;
     }
 
     /**
@@ -32,14 +33,14 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DeploymentLabelEntryArgs>> labels;
 
     public Output<List<DeploymentLabelEntryArgs>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -61,21 +62,21 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="preview")
       private final @Nullable Output<String> preview;
 
     public Output<String> getPreview() {
-        return this.preview == null ? Output.empty() : this.preview;
+        return this.preview == null ? Codegen.empty() : this.preview;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TargetConfigurationArgs> target;
 
     public Output<TargetConfigurationArgs> getTarget() {
-        return this.target == null ? Output.empty() : this.target;
+        return this.target == null ? Codegen.empty() : this.target;
     }
 
     public DeploymentArgs(
@@ -109,14 +110,14 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeploymentArgs() {
-        this.createPolicy = Output.empty();
-        this.description = Output.empty();
-        this.id = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.preview = Output.empty();
-        this.project = Output.empty();
-        this.target = Output.empty();
+        this.createPolicy = Codegen.empty();
+        this.description = Codegen.empty();
+        this.id = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.preview = Codegen.empty();
+        this.project = Codegen.empty();
+        this.target = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createPolicy(@Nullable String createPolicy) {
-            this.createPolicy = Output.ofNullable(createPolicy);
+            this.createPolicy = Codegen.ofNullable(createPolicy);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -166,7 +167,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -174,7 +175,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder labels(@Nullable Output<List<DeploymentLabelEntryArgs>> labels) {
@@ -182,7 +183,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable List<DeploymentLabelEntryArgs> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder labels(DeploymentLabelEntryArgs... labels) {
@@ -193,7 +194,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder preview(@Nullable Output<String> preview) {
@@ -201,7 +202,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder preview(@Nullable String preview) {
-            this.preview = Output.ofNullable(preview);
+            this.preview = Codegen.ofNullable(preview);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -209,7 +210,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder target(@Nullable Output<TargetConfigurationArgs> target) {
@@ -217,7 +218,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder target(@Nullable TargetConfigurationArgs target) {
-            this.target = Output.ofNullable(target);
+            this.target = Codegen.ofNullable(target);
             return this;
         }        public DeploymentArgs build() {
             return new DeploymentArgs(createPolicy, description, id, labels, name, preview, project, target);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.appengine.inputs.ServiceNetworkSettingsNetworkSettingsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -36,7 +37,7 @@ public final class ServiceNetworkSettingsArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -60,9 +61,9 @@ public final class ServiceNetworkSettingsArgs extends io.pulumi.resources.Resour
     }
 
     private ServiceNetworkSettingsArgs() {
-        this.networkSettings = Output.empty();
-        this.project = Output.empty();
-        this.service = Output.empty();
+        this.networkSettings = Codegen.empty();
+        this.project = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -102,7 +103,7 @@ public final class ServiceNetworkSettingsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder service(Output<String> service) {

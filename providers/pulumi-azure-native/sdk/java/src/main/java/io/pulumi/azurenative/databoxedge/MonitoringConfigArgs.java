@@ -6,6 +6,7 @@ package io.pulumi.azurenative.databoxedge;
 import io.pulumi.azurenative.databoxedge.inputs.MetricConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -71,10 +72,10 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private MonitoringConfigArgs() {
-        this.deviceName = Output.empty();
-        this.metricConfigurations = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.roleName = Output.empty();
+        this.deviceName = Codegen.empty();
+        this.metricConfigurations = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.roleName = Codegen.empty();
     }
 
     public static Builder builder() {

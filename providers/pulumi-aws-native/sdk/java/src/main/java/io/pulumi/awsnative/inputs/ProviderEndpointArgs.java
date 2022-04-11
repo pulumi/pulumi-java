@@ -5,6 +5,7 @@ package io.pulumi.awsnative.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> accessanalyzer;
 
     public Output<String> getAccessanalyzer() {
-        return this.accessanalyzer == null ? Output.empty() : this.accessanalyzer;
+        return this.accessanalyzer == null ? Codegen.empty() : this.accessanalyzer;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> acm;
 
     public Output<String> getAcm() {
-        return this.acm == null ? Output.empty() : this.acm;
+        return this.acm == null ? Codegen.empty() : this.acm;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> acmpca;
 
     public Output<String> getAcmpca() {
-        return this.acmpca == null ? Output.empty() : this.acmpca;
+        return this.acmpca == null ? Codegen.empty() : this.acmpca;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> amplify;
 
     public Output<String> getAmplify() {
-        return this.amplify == null ? Output.empty() : this.amplify;
+        return this.amplify == null ? Codegen.empty() : this.amplify;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> appconfig;
 
     public Output<String> getAppconfig() {
-        return this.appconfig == null ? Output.empty() : this.appconfig;
+        return this.appconfig == null ? Codegen.empty() : this.appconfig;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> applicationautoscaling;
 
     public Output<String> getApplicationautoscaling() {
-        return this.applicationautoscaling == null ? Output.empty() : this.applicationautoscaling;
+        return this.applicationautoscaling == null ? Codegen.empty() : this.applicationautoscaling;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> applicationinsights;
 
     public Output<String> getApplicationinsights() {
-        return this.applicationinsights == null ? Output.empty() : this.applicationinsights;
+        return this.applicationinsights == null ? Codegen.empty() : this.applicationinsights;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> appmesh;
 
     public Output<String> getAppmesh() {
-        return this.appmesh == null ? Output.empty() : this.appmesh;
+        return this.appmesh == null ? Codegen.empty() : this.appmesh;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> apprunner;
 
     public Output<String> getApprunner() {
-        return this.apprunner == null ? Output.empty() : this.apprunner;
+        return this.apprunner == null ? Codegen.empty() : this.apprunner;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> appstream;
 
     public Output<String> getAppstream() {
-        return this.appstream == null ? Output.empty() : this.appstream;
+        return this.appstream == null ? Codegen.empty() : this.appstream;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> appsync;
 
     public Output<String> getAppsync() {
-        return this.appsync == null ? Output.empty() : this.appsync;
+        return this.appsync == null ? Codegen.empty() : this.appsync;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> athena;
 
     public Output<String> getAthena() {
-        return this.athena == null ? Output.empty() : this.athena;
+        return this.athena == null ? Codegen.empty() : this.athena;
     }
 
     /**
@@ -158,7 +159,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> auditmanager;
 
     public Output<String> getAuditmanager() {
-        return this.auditmanager == null ? Output.empty() : this.auditmanager;
+        return this.auditmanager == null ? Codegen.empty() : this.auditmanager;
     }
 
     /**
@@ -169,7 +170,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> autoscaling;
 
     public Output<String> getAutoscaling() {
-        return this.autoscaling == null ? Output.empty() : this.autoscaling;
+        return this.autoscaling == null ? Codegen.empty() : this.autoscaling;
     }
 
     /**
@@ -180,7 +181,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> backup;
 
     public Output<String> getBackup() {
-        return this.backup == null ? Output.empty() : this.backup;
+        return this.backup == null ? Codegen.empty() : this.backup;
     }
 
     /**
@@ -191,7 +192,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> batch;
 
     public Output<String> getBatch() {
-        return this.batch == null ? Output.empty() : this.batch;
+        return this.batch == null ? Codegen.empty() : this.batch;
     }
 
     /**
@@ -202,7 +203,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> budgets;
 
     public Output<String> getBudgets() {
-        return this.budgets == null ? Output.empty() : this.budgets;
+        return this.budgets == null ? Codegen.empty() : this.budgets;
     }
 
     /**
@@ -213,7 +214,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> chime;
 
     public Output<String> getChime() {
-        return this.chime == null ? Output.empty() : this.chime;
+        return this.chime == null ? Codegen.empty() : this.chime;
     }
 
     /**
@@ -224,7 +225,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> cloud9;
 
     public Output<String> getCloud9() {
-        return this.cloud9 == null ? Output.empty() : this.cloud9;
+        return this.cloud9 == null ? Codegen.empty() : this.cloud9;
     }
 
     /**
@@ -235,7 +236,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> cloudformation;
 
     public Output<String> getCloudformation() {
-        return this.cloudformation == null ? Output.empty() : this.cloudformation;
+        return this.cloudformation == null ? Codegen.empty() : this.cloudformation;
     }
 
     /**
@@ -246,7 +247,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> cloudfront;
 
     public Output<String> getCloudfront() {
-        return this.cloudfront == null ? Output.empty() : this.cloudfront;
+        return this.cloudfront == null ? Codegen.empty() : this.cloudfront;
     }
 
     /**
@@ -257,7 +258,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> cloudhsm;
 
     public Output<String> getCloudhsm() {
-        return this.cloudhsm == null ? Output.empty() : this.cloudhsm;
+        return this.cloudhsm == null ? Codegen.empty() : this.cloudhsm;
     }
 
     /**
@@ -268,7 +269,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> cloudsearch;
 
     public Output<String> getCloudsearch() {
-        return this.cloudsearch == null ? Output.empty() : this.cloudsearch;
+        return this.cloudsearch == null ? Codegen.empty() : this.cloudsearch;
     }
 
     /**
@@ -279,7 +280,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> cloudtrail;
 
     public Output<String> getCloudtrail() {
-        return this.cloudtrail == null ? Output.empty() : this.cloudtrail;
+        return this.cloudtrail == null ? Codegen.empty() : this.cloudtrail;
     }
 
     /**
@@ -290,7 +291,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> cloudwatch;
 
     public Output<String> getCloudwatch() {
-        return this.cloudwatch == null ? Output.empty() : this.cloudwatch;
+        return this.cloudwatch == null ? Codegen.empty() : this.cloudwatch;
     }
 
     /**
@@ -301,7 +302,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> cloudwatchevents;
 
     public Output<String> getCloudwatchevents() {
-        return this.cloudwatchevents == null ? Output.empty() : this.cloudwatchevents;
+        return this.cloudwatchevents == null ? Codegen.empty() : this.cloudwatchevents;
     }
 
     /**
@@ -312,7 +313,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> cloudwatchlogs;
 
     public Output<String> getCloudwatchlogs() {
-        return this.cloudwatchlogs == null ? Output.empty() : this.cloudwatchlogs;
+        return this.cloudwatchlogs == null ? Codegen.empty() : this.cloudwatchlogs;
     }
 
     /**
@@ -323,7 +324,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> codeartifact;
 
     public Output<String> getCodeartifact() {
-        return this.codeartifact == null ? Output.empty() : this.codeartifact;
+        return this.codeartifact == null ? Codegen.empty() : this.codeartifact;
     }
 
     /**
@@ -334,7 +335,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> codebuild;
 
     public Output<String> getCodebuild() {
-        return this.codebuild == null ? Output.empty() : this.codebuild;
+        return this.codebuild == null ? Codegen.empty() : this.codebuild;
     }
 
     /**
@@ -345,7 +346,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> codecommit;
 
     public Output<String> getCodecommit() {
-        return this.codecommit == null ? Output.empty() : this.codecommit;
+        return this.codecommit == null ? Codegen.empty() : this.codecommit;
     }
 
     /**
@@ -356,7 +357,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> codedeploy;
 
     public Output<String> getCodedeploy() {
-        return this.codedeploy == null ? Output.empty() : this.codedeploy;
+        return this.codedeploy == null ? Codegen.empty() : this.codedeploy;
     }
 
     /**
@@ -367,7 +368,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> codepipeline;
 
     public Output<String> getCodepipeline() {
-        return this.codepipeline == null ? Output.empty() : this.codepipeline;
+        return this.codepipeline == null ? Codegen.empty() : this.codepipeline;
     }
 
     /**
@@ -378,7 +379,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> codestarconnections;
 
     public Output<String> getCodestarconnections() {
-        return this.codestarconnections == null ? Output.empty() : this.codestarconnections;
+        return this.codestarconnections == null ? Codegen.empty() : this.codestarconnections;
     }
 
     /**
@@ -389,7 +390,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> cognitoidentity;
 
     public Output<String> getCognitoidentity() {
-        return this.cognitoidentity == null ? Output.empty() : this.cognitoidentity;
+        return this.cognitoidentity == null ? Codegen.empty() : this.cognitoidentity;
     }
 
     /**
@@ -400,7 +401,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> configservice;
 
     public Output<String> getConfigservice() {
-        return this.configservice == null ? Output.empty() : this.configservice;
+        return this.configservice == null ? Codegen.empty() : this.configservice;
     }
 
     /**
@@ -411,7 +412,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> connect;
 
     public Output<String> getConnect() {
-        return this.connect == null ? Output.empty() : this.connect;
+        return this.connect == null ? Codegen.empty() : this.connect;
     }
 
     /**
@@ -422,7 +423,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> cur;
 
     public Output<String> getCur() {
-        return this.cur == null ? Output.empty() : this.cur;
+        return this.cur == null ? Codegen.empty() : this.cur;
     }
 
     /**
@@ -433,7 +434,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> dataexchange;
 
     public Output<String> getDataexchange() {
-        return this.dataexchange == null ? Output.empty() : this.dataexchange;
+        return this.dataexchange == null ? Codegen.empty() : this.dataexchange;
     }
 
     /**
@@ -444,7 +445,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> datapipeline;
 
     public Output<String> getDatapipeline() {
-        return this.datapipeline == null ? Output.empty() : this.datapipeline;
+        return this.datapipeline == null ? Codegen.empty() : this.datapipeline;
     }
 
     /**
@@ -455,7 +456,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> datasync;
 
     public Output<String> getDatasync() {
-        return this.datasync == null ? Output.empty() : this.datasync;
+        return this.datasync == null ? Codegen.empty() : this.datasync;
     }
 
     /**
@@ -466,7 +467,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> dax;
 
     public Output<String> getDax() {
-        return this.dax == null ? Output.empty() : this.dax;
+        return this.dax == null ? Codegen.empty() : this.dax;
     }
 
     /**
@@ -477,7 +478,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> detective;
 
     public Output<String> getDetective() {
-        return this.detective == null ? Output.empty() : this.detective;
+        return this.detective == null ? Codegen.empty() : this.detective;
     }
 
     /**
@@ -488,7 +489,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> devicefarm;
 
     public Output<String> getDevicefarm() {
-        return this.devicefarm == null ? Output.empty() : this.devicefarm;
+        return this.devicefarm == null ? Codegen.empty() : this.devicefarm;
     }
 
     /**
@@ -499,7 +500,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> directconnect;
 
     public Output<String> getDirectconnect() {
-        return this.directconnect == null ? Output.empty() : this.directconnect;
+        return this.directconnect == null ? Codegen.empty() : this.directconnect;
     }
 
     /**
@@ -510,7 +511,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> dlm;
 
     public Output<String> getDlm() {
-        return this.dlm == null ? Output.empty() : this.dlm;
+        return this.dlm == null ? Codegen.empty() : this.dlm;
     }
 
     /**
@@ -521,7 +522,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> dms;
 
     public Output<String> getDms() {
-        return this.dms == null ? Output.empty() : this.dms;
+        return this.dms == null ? Codegen.empty() : this.dms;
     }
 
     /**
@@ -532,7 +533,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> docdb;
 
     public Output<String> getDocdb() {
-        return this.docdb == null ? Output.empty() : this.docdb;
+        return this.docdb == null ? Codegen.empty() : this.docdb;
     }
 
     /**
@@ -543,7 +544,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> ds;
 
     public Output<String> getDs() {
-        return this.ds == null ? Output.empty() : this.ds;
+        return this.ds == null ? Codegen.empty() : this.ds;
     }
 
     /**
@@ -554,7 +555,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> dynamodb;
 
     public Output<String> getDynamodb() {
-        return this.dynamodb == null ? Output.empty() : this.dynamodb;
+        return this.dynamodb == null ? Codegen.empty() : this.dynamodb;
     }
 
     /**
@@ -565,7 +566,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> ec2;
 
     public Output<String> getEc2() {
-        return this.ec2 == null ? Output.empty() : this.ec2;
+        return this.ec2 == null ? Codegen.empty() : this.ec2;
     }
 
     /**
@@ -576,7 +577,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> ecr;
 
     public Output<String> getEcr() {
-        return this.ecr == null ? Output.empty() : this.ecr;
+        return this.ecr == null ? Codegen.empty() : this.ecr;
     }
 
     /**
@@ -587,7 +588,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> ecrpublic;
 
     public Output<String> getEcrpublic() {
-        return this.ecrpublic == null ? Output.empty() : this.ecrpublic;
+        return this.ecrpublic == null ? Codegen.empty() : this.ecrpublic;
     }
 
     /**
@@ -598,7 +599,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> ecs;
 
     public Output<String> getEcs() {
-        return this.ecs == null ? Output.empty() : this.ecs;
+        return this.ecs == null ? Codegen.empty() : this.ecs;
     }
 
     /**
@@ -609,7 +610,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> efs;
 
     public Output<String> getEfs() {
-        return this.efs == null ? Output.empty() : this.efs;
+        return this.efs == null ? Codegen.empty() : this.efs;
     }
 
     /**
@@ -620,7 +621,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> eks;
 
     public Output<String> getEks() {
-        return this.eks == null ? Output.empty() : this.eks;
+        return this.eks == null ? Codegen.empty() : this.eks;
     }
 
     /**
@@ -631,7 +632,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> elasticache;
 
     public Output<String> getElasticache() {
-        return this.elasticache == null ? Output.empty() : this.elasticache;
+        return this.elasticache == null ? Codegen.empty() : this.elasticache;
     }
 
     /**
@@ -642,7 +643,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> elasticbeanstalk;
 
     public Output<String> getElasticbeanstalk() {
-        return this.elasticbeanstalk == null ? Output.empty() : this.elasticbeanstalk;
+        return this.elasticbeanstalk == null ? Codegen.empty() : this.elasticbeanstalk;
     }
 
     /**
@@ -653,7 +654,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> elastictranscoder;
 
     public Output<String> getElastictranscoder() {
-        return this.elastictranscoder == null ? Output.empty() : this.elastictranscoder;
+        return this.elastictranscoder == null ? Codegen.empty() : this.elastictranscoder;
     }
 
     /**
@@ -664,7 +665,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> elb;
 
     public Output<String> getElb() {
-        return this.elb == null ? Output.empty() : this.elb;
+        return this.elb == null ? Codegen.empty() : this.elb;
     }
 
     /**
@@ -675,7 +676,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> elbv2;
 
     public Output<String> getElbv2() {
-        return this.elbv2 == null ? Output.empty() : this.elbv2;
+        return this.elbv2 == null ? Codegen.empty() : this.elbv2;
     }
 
     /**
@@ -686,7 +687,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> emr;
 
     public Output<String> getEmr() {
-        return this.emr == null ? Output.empty() : this.emr;
+        return this.emr == null ? Codegen.empty() : this.emr;
     }
 
     /**
@@ -697,7 +698,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> emrcontainers;
 
     public Output<String> getEmrcontainers() {
-        return this.emrcontainers == null ? Output.empty() : this.emrcontainers;
+        return this.emrcontainers == null ? Codegen.empty() : this.emrcontainers;
     }
 
     /**
@@ -708,7 +709,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> es;
 
     public Output<String> getEs() {
-        return this.es == null ? Output.empty() : this.es;
+        return this.es == null ? Codegen.empty() : this.es;
     }
 
     /**
@@ -719,7 +720,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> firehose;
 
     public Output<String> getFirehose() {
-        return this.firehose == null ? Output.empty() : this.firehose;
+        return this.firehose == null ? Codegen.empty() : this.firehose;
     }
 
     /**
@@ -730,7 +731,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> fms;
 
     public Output<String> getFms() {
-        return this.fms == null ? Output.empty() : this.fms;
+        return this.fms == null ? Codegen.empty() : this.fms;
     }
 
     /**
@@ -741,7 +742,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> forecast;
 
     public Output<String> getForecast() {
-        return this.forecast == null ? Output.empty() : this.forecast;
+        return this.forecast == null ? Codegen.empty() : this.forecast;
     }
 
     /**
@@ -752,7 +753,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> fsx;
 
     public Output<String> getFsx() {
-        return this.fsx == null ? Output.empty() : this.fsx;
+        return this.fsx == null ? Codegen.empty() : this.fsx;
     }
 
     /**
@@ -763,7 +764,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> gamelift;
 
     public Output<String> getGamelift() {
-        return this.gamelift == null ? Output.empty() : this.gamelift;
+        return this.gamelift == null ? Codegen.empty() : this.gamelift;
     }
 
     /**
@@ -774,7 +775,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> glacier;
 
     public Output<String> getGlacier() {
-        return this.glacier == null ? Output.empty() : this.glacier;
+        return this.glacier == null ? Codegen.empty() : this.glacier;
     }
 
     /**
@@ -785,7 +786,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> globalaccelerator;
 
     public Output<String> getGlobalaccelerator() {
-        return this.globalaccelerator == null ? Output.empty() : this.globalaccelerator;
+        return this.globalaccelerator == null ? Codegen.empty() : this.globalaccelerator;
     }
 
     /**
@@ -796,7 +797,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> glue;
 
     public Output<String> getGlue() {
-        return this.glue == null ? Output.empty() : this.glue;
+        return this.glue == null ? Codegen.empty() : this.glue;
     }
 
     /**
@@ -807,7 +808,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> greengrass;
 
     public Output<String> getGreengrass() {
-        return this.greengrass == null ? Output.empty() : this.greengrass;
+        return this.greengrass == null ? Codegen.empty() : this.greengrass;
     }
 
     /**
@@ -818,7 +819,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> guardduty;
 
     public Output<String> getGuardduty() {
-        return this.guardduty == null ? Output.empty() : this.guardduty;
+        return this.guardduty == null ? Codegen.empty() : this.guardduty;
     }
 
     /**
@@ -829,7 +830,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> iam;
 
     public Output<String> getIam() {
-        return this.iam == null ? Output.empty() : this.iam;
+        return this.iam == null ? Codegen.empty() : this.iam;
     }
 
     /**
@@ -840,7 +841,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> identitystore;
 
     public Output<String> getIdentitystore() {
-        return this.identitystore == null ? Output.empty() : this.identitystore;
+        return this.identitystore == null ? Codegen.empty() : this.identitystore;
     }
 
     /**
@@ -851,7 +852,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> imagebuilder;
 
     public Output<String> getImagebuilder() {
-        return this.imagebuilder == null ? Output.empty() : this.imagebuilder;
+        return this.imagebuilder == null ? Codegen.empty() : this.imagebuilder;
     }
 
     /**
@@ -862,7 +863,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> inspector;
 
     public Output<String> getInspector() {
-        return this.inspector == null ? Output.empty() : this.inspector;
+        return this.inspector == null ? Codegen.empty() : this.inspector;
     }
 
     /**
@@ -873,7 +874,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> iot;
 
     public Output<String> getIot() {
-        return this.iot == null ? Output.empty() : this.iot;
+        return this.iot == null ? Codegen.empty() : this.iot;
     }
 
     /**
@@ -884,7 +885,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> iotanalytics;
 
     public Output<String> getIotanalytics() {
-        return this.iotanalytics == null ? Output.empty() : this.iotanalytics;
+        return this.iotanalytics == null ? Codegen.empty() : this.iotanalytics;
     }
 
     /**
@@ -895,7 +896,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> iotevents;
 
     public Output<String> getIotevents() {
-        return this.iotevents == null ? Output.empty() : this.iotevents;
+        return this.iotevents == null ? Codegen.empty() : this.iotevents;
     }
 
     /**
@@ -906,7 +907,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> kafka;
 
     public Output<String> getKafka() {
-        return this.kafka == null ? Output.empty() : this.kafka;
+        return this.kafka == null ? Codegen.empty() : this.kafka;
     }
 
     /**
@@ -917,7 +918,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> kinesis;
 
     public Output<String> getKinesis() {
-        return this.kinesis == null ? Output.empty() : this.kinesis;
+        return this.kinesis == null ? Codegen.empty() : this.kinesis;
     }
 
     /**
@@ -928,7 +929,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> kinesisanalytics;
 
     public Output<String> getKinesisanalytics() {
-        return this.kinesisanalytics == null ? Output.empty() : this.kinesisanalytics;
+        return this.kinesisanalytics == null ? Codegen.empty() : this.kinesisanalytics;
     }
 
     /**
@@ -939,7 +940,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> kinesisanalyticsv2;
 
     public Output<String> getKinesisanalyticsv2() {
-        return this.kinesisanalyticsv2 == null ? Output.empty() : this.kinesisanalyticsv2;
+        return this.kinesisanalyticsv2 == null ? Codegen.empty() : this.kinesisanalyticsv2;
     }
 
     /**
@@ -950,7 +951,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> kinesisvideo;
 
     public Output<String> getKinesisvideo() {
-        return this.kinesisvideo == null ? Output.empty() : this.kinesisvideo;
+        return this.kinesisvideo == null ? Codegen.empty() : this.kinesisvideo;
     }
 
     /**
@@ -961,7 +962,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> kms;
 
     public Output<String> getKms() {
-        return this.kms == null ? Output.empty() : this.kms;
+        return this.kms == null ? Codegen.empty() : this.kms;
     }
 
     /**
@@ -972,7 +973,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> lakeformation;
 
     public Output<String> getLakeformation() {
-        return this.lakeformation == null ? Output.empty() : this.lakeformation;
+        return this.lakeformation == null ? Codegen.empty() : this.lakeformation;
     }
 
     /**
@@ -983,7 +984,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> lambda;
 
     public Output<String> getLambda() {
-        return this.lambda == null ? Output.empty() : this.lambda;
+        return this.lambda == null ? Codegen.empty() : this.lambda;
     }
 
     /**
@@ -994,7 +995,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> lexmodels;
 
     public Output<String> getLexmodels() {
-        return this.lexmodels == null ? Output.empty() : this.lexmodels;
+        return this.lexmodels == null ? Codegen.empty() : this.lexmodels;
     }
 
     /**
@@ -1005,7 +1006,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> licensemanager;
 
     public Output<String> getLicensemanager() {
-        return this.licensemanager == null ? Output.empty() : this.licensemanager;
+        return this.licensemanager == null ? Codegen.empty() : this.licensemanager;
     }
 
     /**
@@ -1016,7 +1017,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> lightsail;
 
     public Output<String> getLightsail() {
-        return this.lightsail == null ? Output.empty() : this.lightsail;
+        return this.lightsail == null ? Codegen.empty() : this.lightsail;
     }
 
     /**
@@ -1027,7 +1028,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -1038,7 +1039,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> macie;
 
     public Output<String> getMacie() {
-        return this.macie == null ? Output.empty() : this.macie;
+        return this.macie == null ? Codegen.empty() : this.macie;
     }
 
     /**
@@ -1049,7 +1050,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> macie2;
 
     public Output<String> getMacie2() {
-        return this.macie2 == null ? Output.empty() : this.macie2;
+        return this.macie2 == null ? Codegen.empty() : this.macie2;
     }
 
     /**
@@ -1060,7 +1061,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> managedblockchain;
 
     public Output<String> getManagedblockchain() {
-        return this.managedblockchain == null ? Output.empty() : this.managedblockchain;
+        return this.managedblockchain == null ? Codegen.empty() : this.managedblockchain;
     }
 
     /**
@@ -1071,7 +1072,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> marketplacecatalog;
 
     public Output<String> getMarketplacecatalog() {
-        return this.marketplacecatalog == null ? Output.empty() : this.marketplacecatalog;
+        return this.marketplacecatalog == null ? Codegen.empty() : this.marketplacecatalog;
     }
 
     /**
@@ -1082,7 +1083,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> mediaconnect;
 
     public Output<String> getMediaconnect() {
-        return this.mediaconnect == null ? Output.empty() : this.mediaconnect;
+        return this.mediaconnect == null ? Codegen.empty() : this.mediaconnect;
     }
 
     /**
@@ -1093,7 +1094,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> mediaconvert;
 
     public Output<String> getMediaconvert() {
-        return this.mediaconvert == null ? Output.empty() : this.mediaconvert;
+        return this.mediaconvert == null ? Codegen.empty() : this.mediaconvert;
     }
 
     /**
@@ -1104,7 +1105,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> medialive;
 
     public Output<String> getMedialive() {
-        return this.medialive == null ? Output.empty() : this.medialive;
+        return this.medialive == null ? Codegen.empty() : this.medialive;
     }
 
     /**
@@ -1115,7 +1116,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> mediapackage;
 
     public Output<String> getMediapackage() {
-        return this.mediapackage == null ? Output.empty() : this.mediapackage;
+        return this.mediapackage == null ? Codegen.empty() : this.mediapackage;
     }
 
     /**
@@ -1126,7 +1127,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> mediastore;
 
     public Output<String> getMediastore() {
-        return this.mediastore == null ? Output.empty() : this.mediastore;
+        return this.mediastore == null ? Codegen.empty() : this.mediastore;
     }
 
     /**
@@ -1137,7 +1138,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> mediastoredata;
 
     public Output<String> getMediastoredata() {
-        return this.mediastoredata == null ? Output.empty() : this.mediastoredata;
+        return this.mediastoredata == null ? Codegen.empty() : this.mediastoredata;
     }
 
     /**
@@ -1148,7 +1149,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> memorydb;
 
     public Output<String> getMemorydb() {
-        return this.memorydb == null ? Output.empty() : this.memorydb;
+        return this.memorydb == null ? Codegen.empty() : this.memorydb;
     }
 
     /**
@@ -1159,7 +1160,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> mq;
 
     public Output<String> getMq() {
-        return this.mq == null ? Output.empty() : this.mq;
+        return this.mq == null ? Codegen.empty() : this.mq;
     }
 
     /**
@@ -1170,7 +1171,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> mwaa;
 
     public Output<String> getMwaa() {
-        return this.mwaa == null ? Output.empty() : this.mwaa;
+        return this.mwaa == null ? Codegen.empty() : this.mwaa;
     }
 
     /**
@@ -1181,7 +1182,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> neptune;
 
     public Output<String> getNeptune() {
-        return this.neptune == null ? Output.empty() : this.neptune;
+        return this.neptune == null ? Codegen.empty() : this.neptune;
     }
 
     /**
@@ -1192,7 +1193,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> networkfirewall;
 
     public Output<String> getNetworkfirewall() {
-        return this.networkfirewall == null ? Output.empty() : this.networkfirewall;
+        return this.networkfirewall == null ? Codegen.empty() : this.networkfirewall;
     }
 
     /**
@@ -1203,7 +1204,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> networkmanager;
 
     public Output<String> getNetworkmanager() {
-        return this.networkmanager == null ? Output.empty() : this.networkmanager;
+        return this.networkmanager == null ? Codegen.empty() : this.networkmanager;
     }
 
     /**
@@ -1214,7 +1215,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> opsworks;
 
     public Output<String> getOpsworks() {
-        return this.opsworks == null ? Output.empty() : this.opsworks;
+        return this.opsworks == null ? Codegen.empty() : this.opsworks;
     }
 
     /**
@@ -1225,7 +1226,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> organizations;
 
     public Output<String> getOrganizations() {
-        return this.organizations == null ? Output.empty() : this.organizations;
+        return this.organizations == null ? Codegen.empty() : this.organizations;
     }
 
     /**
@@ -1236,7 +1237,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> outposts;
 
     public Output<String> getOutposts() {
-        return this.outposts == null ? Output.empty() : this.outposts;
+        return this.outposts == null ? Codegen.empty() : this.outposts;
     }
 
     /**
@@ -1247,7 +1248,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> personalize;
 
     public Output<String> getPersonalize() {
-        return this.personalize == null ? Output.empty() : this.personalize;
+        return this.personalize == null ? Codegen.empty() : this.personalize;
     }
 
     /**
@@ -1258,7 +1259,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> pinpoint;
 
     public Output<String> getPinpoint() {
-        return this.pinpoint == null ? Output.empty() : this.pinpoint;
+        return this.pinpoint == null ? Codegen.empty() : this.pinpoint;
     }
 
     /**
@@ -1269,7 +1270,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> pricing;
 
     public Output<String> getPricing() {
-        return this.pricing == null ? Output.empty() : this.pricing;
+        return this.pricing == null ? Codegen.empty() : this.pricing;
     }
 
     /**
@@ -1280,7 +1281,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> qldb;
 
     public Output<String> getQldb() {
-        return this.qldb == null ? Output.empty() : this.qldb;
+        return this.qldb == null ? Codegen.empty() : this.qldb;
     }
 
     /**
@@ -1291,7 +1292,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> quicksight;
 
     public Output<String> getQuicksight() {
-        return this.quicksight == null ? Output.empty() : this.quicksight;
+        return this.quicksight == null ? Codegen.empty() : this.quicksight;
     }
 
     /**
@@ -1302,7 +1303,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> ram;
 
     public Output<String> getRam() {
-        return this.ram == null ? Output.empty() : this.ram;
+        return this.ram == null ? Codegen.empty() : this.ram;
     }
 
     /**
@@ -1313,7 +1314,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> rds;
 
     public Output<String> getRds() {
-        return this.rds == null ? Output.empty() : this.rds;
+        return this.rds == null ? Codegen.empty() : this.rds;
     }
 
     /**
@@ -1324,7 +1325,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> redshift;
 
     public Output<String> getRedshift() {
-        return this.redshift == null ? Output.empty() : this.redshift;
+        return this.redshift == null ? Codegen.empty() : this.redshift;
     }
 
     /**
@@ -1335,7 +1336,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> resourcegroups;
 
     public Output<String> getResourcegroups() {
-        return this.resourcegroups == null ? Output.empty() : this.resourcegroups;
+        return this.resourcegroups == null ? Codegen.empty() : this.resourcegroups;
     }
 
     /**
@@ -1346,7 +1347,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> resourcegroupstaggingapi;
 
     public Output<String> getResourcegroupstaggingapi() {
-        return this.resourcegroupstaggingapi == null ? Output.empty() : this.resourcegroupstaggingapi;
+        return this.resourcegroupstaggingapi == null ? Codegen.empty() : this.resourcegroupstaggingapi;
     }
 
     /**
@@ -1357,7 +1358,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> route53;
 
     public Output<String> getRoute53() {
-        return this.route53 == null ? Output.empty() : this.route53;
+        return this.route53 == null ? Codegen.empty() : this.route53;
     }
 
     /**
@@ -1368,7 +1369,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> route53domains;
 
     public Output<String> getRoute53domains() {
-        return this.route53domains == null ? Output.empty() : this.route53domains;
+        return this.route53domains == null ? Codegen.empty() : this.route53domains;
     }
 
     /**
@@ -1379,7 +1380,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> route53recoverycontrolconfig;
 
     public Output<String> getRoute53recoverycontrolconfig() {
-        return this.route53recoverycontrolconfig == null ? Output.empty() : this.route53recoverycontrolconfig;
+        return this.route53recoverycontrolconfig == null ? Codegen.empty() : this.route53recoverycontrolconfig;
     }
 
     /**
@@ -1390,7 +1391,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> route53recoveryreadiness;
 
     public Output<String> getRoute53recoveryreadiness() {
-        return this.route53recoveryreadiness == null ? Output.empty() : this.route53recoveryreadiness;
+        return this.route53recoveryreadiness == null ? Codegen.empty() : this.route53recoveryreadiness;
     }
 
     /**
@@ -1401,7 +1402,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> route53resolver;
 
     public Output<String> getRoute53resolver() {
-        return this.route53resolver == null ? Output.empty() : this.route53resolver;
+        return this.route53resolver == null ? Codegen.empty() : this.route53resolver;
     }
 
     /**
@@ -1412,7 +1413,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> s3;
 
     public Output<String> getS3() {
-        return this.s3 == null ? Output.empty() : this.s3;
+        return this.s3 == null ? Codegen.empty() : this.s3;
     }
 
     /**
@@ -1423,7 +1424,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> s3control;
 
     public Output<String> getS3control() {
-        return this.s3control == null ? Output.empty() : this.s3control;
+        return this.s3control == null ? Codegen.empty() : this.s3control;
     }
 
     /**
@@ -1434,7 +1435,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> s3outposts;
 
     public Output<String> getS3outposts() {
-        return this.s3outposts == null ? Output.empty() : this.s3outposts;
+        return this.s3outposts == null ? Codegen.empty() : this.s3outposts;
     }
 
     /**
@@ -1445,7 +1446,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> sagemaker;
 
     public Output<String> getSagemaker() {
-        return this.sagemaker == null ? Output.empty() : this.sagemaker;
+        return this.sagemaker == null ? Codegen.empty() : this.sagemaker;
     }
 
     /**
@@ -1456,7 +1457,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> schemas;
 
     public Output<String> getSchemas() {
-        return this.schemas == null ? Output.empty() : this.schemas;
+        return this.schemas == null ? Codegen.empty() : this.schemas;
     }
 
     /**
@@ -1467,7 +1468,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> sdb;
 
     public Output<String> getSdb() {
-        return this.sdb == null ? Output.empty() : this.sdb;
+        return this.sdb == null ? Codegen.empty() : this.sdb;
     }
 
     /**
@@ -1478,7 +1479,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> secretsmanager;
 
     public Output<String> getSecretsmanager() {
-        return this.secretsmanager == null ? Output.empty() : this.secretsmanager;
+        return this.secretsmanager == null ? Codegen.empty() : this.secretsmanager;
     }
 
     /**
@@ -1489,7 +1490,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> securityhub;
 
     public Output<String> getSecurityhub() {
-        return this.securityhub == null ? Output.empty() : this.securityhub;
+        return this.securityhub == null ? Codegen.empty() : this.securityhub;
     }
 
     /**
@@ -1500,7 +1501,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> serverlessrepo;
 
     public Output<String> getServerlessrepo() {
-        return this.serverlessrepo == null ? Output.empty() : this.serverlessrepo;
+        return this.serverlessrepo == null ? Codegen.empty() : this.serverlessrepo;
     }
 
     /**
@@ -1511,7 +1512,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> servicecatalog;
 
     public Output<String> getServicecatalog() {
-        return this.servicecatalog == null ? Output.empty() : this.servicecatalog;
+        return this.servicecatalog == null ? Codegen.empty() : this.servicecatalog;
     }
 
     /**
@@ -1522,7 +1523,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> servicediscovery;
 
     public Output<String> getServicediscovery() {
-        return this.servicediscovery == null ? Output.empty() : this.servicediscovery;
+        return this.servicediscovery == null ? Codegen.empty() : this.servicediscovery;
     }
 
     /**
@@ -1533,7 +1534,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> servicequotas;
 
     public Output<String> getServicequotas() {
-        return this.servicequotas == null ? Output.empty() : this.servicequotas;
+        return this.servicequotas == null ? Codegen.empty() : this.servicequotas;
     }
 
     /**
@@ -1544,7 +1545,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> ses;
 
     public Output<String> getSes() {
-        return this.ses == null ? Output.empty() : this.ses;
+        return this.ses == null ? Codegen.empty() : this.ses;
     }
 
     /**
@@ -1555,7 +1556,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> shield;
 
     public Output<String> getShield() {
-        return this.shield == null ? Output.empty() : this.shield;
+        return this.shield == null ? Codegen.empty() : this.shield;
     }
 
     /**
@@ -1566,7 +1567,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> signer;
 
     public Output<String> getSigner() {
-        return this.signer == null ? Output.empty() : this.signer;
+        return this.signer == null ? Codegen.empty() : this.signer;
     }
 
     /**
@@ -1577,7 +1578,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> sns;
 
     public Output<String> getSns() {
-        return this.sns == null ? Output.empty() : this.sns;
+        return this.sns == null ? Codegen.empty() : this.sns;
     }
 
     /**
@@ -1588,7 +1589,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> sqs;
 
     public Output<String> getSqs() {
-        return this.sqs == null ? Output.empty() : this.sqs;
+        return this.sqs == null ? Codegen.empty() : this.sqs;
     }
 
     /**
@@ -1599,7 +1600,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> ssm;
 
     public Output<String> getSsm() {
-        return this.ssm == null ? Output.empty() : this.ssm;
+        return this.ssm == null ? Codegen.empty() : this.ssm;
     }
 
     /**
@@ -1610,7 +1611,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> ssoadmin;
 
     public Output<String> getSsoadmin() {
-        return this.ssoadmin == null ? Output.empty() : this.ssoadmin;
+        return this.ssoadmin == null ? Codegen.empty() : this.ssoadmin;
     }
 
     /**
@@ -1621,7 +1622,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> stepfunctions;
 
     public Output<String> getStepfunctions() {
-        return this.stepfunctions == null ? Output.empty() : this.stepfunctions;
+        return this.stepfunctions == null ? Codegen.empty() : this.stepfunctions;
     }
 
     /**
@@ -1632,7 +1633,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> storagegateway;
 
     public Output<String> getStoragegateway() {
-        return this.storagegateway == null ? Output.empty() : this.storagegateway;
+        return this.storagegateway == null ? Codegen.empty() : this.storagegateway;
     }
 
     /**
@@ -1643,7 +1644,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> sts;
 
     public Output<String> getSts() {
-        return this.sts == null ? Output.empty() : this.sts;
+        return this.sts == null ? Codegen.empty() : this.sts;
     }
 
     /**
@@ -1654,7 +1655,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> swf;
 
     public Output<String> getSwf() {
-        return this.swf == null ? Output.empty() : this.swf;
+        return this.swf == null ? Codegen.empty() : this.swf;
     }
 
     /**
@@ -1665,7 +1666,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> synthetics;
 
     public Output<String> getSynthetics() {
-        return this.synthetics == null ? Output.empty() : this.synthetics;
+        return this.synthetics == null ? Codegen.empty() : this.synthetics;
     }
 
     /**
@@ -1676,7 +1677,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> timestreamwrite;
 
     public Output<String> getTimestreamwrite() {
-        return this.timestreamwrite == null ? Output.empty() : this.timestreamwrite;
+        return this.timestreamwrite == null ? Codegen.empty() : this.timestreamwrite;
     }
 
     /**
@@ -1687,7 +1688,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> transfer;
 
     public Output<String> getTransfer() {
-        return this.transfer == null ? Output.empty() : this.transfer;
+        return this.transfer == null ? Codegen.empty() : this.transfer;
     }
 
     /**
@@ -1698,7 +1699,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> waf;
 
     public Output<String> getWaf() {
-        return this.waf == null ? Output.empty() : this.waf;
+        return this.waf == null ? Codegen.empty() : this.waf;
     }
 
     /**
@@ -1709,7 +1710,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> wafregional;
 
     public Output<String> getWafregional() {
-        return this.wafregional == null ? Output.empty() : this.wafregional;
+        return this.wafregional == null ? Codegen.empty() : this.wafregional;
     }
 
     /**
@@ -1720,7 +1721,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> wafv2;
 
     public Output<String> getWafv2() {
-        return this.wafv2 == null ? Output.empty() : this.wafv2;
+        return this.wafv2 == null ? Codegen.empty() : this.wafv2;
     }
 
     /**
@@ -1731,7 +1732,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> worklink;
 
     public Output<String> getWorklink() {
-        return this.worklink == null ? Output.empty() : this.worklink;
+        return this.worklink == null ? Codegen.empty() : this.worklink;
     }
 
     /**
@@ -1742,7 +1743,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> workmail;
 
     public Output<String> getWorkmail() {
-        return this.workmail == null ? Output.empty() : this.workmail;
+        return this.workmail == null ? Codegen.empty() : this.workmail;
     }
 
     /**
@@ -1753,7 +1754,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> workspaces;
 
     public Output<String> getWorkspaces() {
-        return this.workspaces == null ? Output.empty() : this.workspaces;
+        return this.workspaces == null ? Codegen.empty() : this.workspaces;
     }
 
     /**
@@ -1764,7 +1765,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> xray;
 
     public Output<String> getXray() {
-        return this.xray == null ? Output.empty() : this.xray;
+        return this.xray == null ? Codegen.empty() : this.xray;
     }
 
     public ProviderEndpointArgs(
@@ -2089,165 +2090,165 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ProviderEndpointArgs() {
-        this.accessanalyzer = Output.empty();
-        this.acm = Output.empty();
-        this.acmpca = Output.empty();
-        this.amplify = Output.empty();
-        this.appconfig = Output.empty();
-        this.applicationautoscaling = Output.empty();
-        this.applicationinsights = Output.empty();
-        this.appmesh = Output.empty();
-        this.apprunner = Output.empty();
-        this.appstream = Output.empty();
-        this.appsync = Output.empty();
-        this.athena = Output.empty();
-        this.auditmanager = Output.empty();
-        this.autoscaling = Output.empty();
-        this.backup = Output.empty();
-        this.batch = Output.empty();
-        this.budgets = Output.empty();
-        this.chime = Output.empty();
-        this.cloud9 = Output.empty();
-        this.cloudformation = Output.empty();
-        this.cloudfront = Output.empty();
-        this.cloudhsm = Output.empty();
-        this.cloudsearch = Output.empty();
-        this.cloudtrail = Output.empty();
-        this.cloudwatch = Output.empty();
-        this.cloudwatchevents = Output.empty();
-        this.cloudwatchlogs = Output.empty();
-        this.codeartifact = Output.empty();
-        this.codebuild = Output.empty();
-        this.codecommit = Output.empty();
-        this.codedeploy = Output.empty();
-        this.codepipeline = Output.empty();
-        this.codestarconnections = Output.empty();
-        this.cognitoidentity = Output.empty();
-        this.configservice = Output.empty();
-        this.connect = Output.empty();
-        this.cur = Output.empty();
-        this.dataexchange = Output.empty();
-        this.datapipeline = Output.empty();
-        this.datasync = Output.empty();
-        this.dax = Output.empty();
-        this.detective = Output.empty();
-        this.devicefarm = Output.empty();
-        this.directconnect = Output.empty();
-        this.dlm = Output.empty();
-        this.dms = Output.empty();
-        this.docdb = Output.empty();
-        this.ds = Output.empty();
-        this.dynamodb = Output.empty();
-        this.ec2 = Output.empty();
-        this.ecr = Output.empty();
-        this.ecrpublic = Output.empty();
-        this.ecs = Output.empty();
-        this.efs = Output.empty();
-        this.eks = Output.empty();
-        this.elasticache = Output.empty();
-        this.elasticbeanstalk = Output.empty();
-        this.elastictranscoder = Output.empty();
-        this.elb = Output.empty();
-        this.elbv2 = Output.empty();
-        this.emr = Output.empty();
-        this.emrcontainers = Output.empty();
-        this.es = Output.empty();
-        this.firehose = Output.empty();
-        this.fms = Output.empty();
-        this.forecast = Output.empty();
-        this.fsx = Output.empty();
-        this.gamelift = Output.empty();
-        this.glacier = Output.empty();
-        this.globalaccelerator = Output.empty();
-        this.glue = Output.empty();
-        this.greengrass = Output.empty();
-        this.guardduty = Output.empty();
-        this.iam = Output.empty();
-        this.identitystore = Output.empty();
-        this.imagebuilder = Output.empty();
-        this.inspector = Output.empty();
-        this.iot = Output.empty();
-        this.iotanalytics = Output.empty();
-        this.iotevents = Output.empty();
-        this.kafka = Output.empty();
-        this.kinesis = Output.empty();
-        this.kinesisanalytics = Output.empty();
-        this.kinesisanalyticsv2 = Output.empty();
-        this.kinesisvideo = Output.empty();
-        this.kms = Output.empty();
-        this.lakeformation = Output.empty();
-        this.lambda = Output.empty();
-        this.lexmodels = Output.empty();
-        this.licensemanager = Output.empty();
-        this.lightsail = Output.empty();
-        this.location = Output.empty();
-        this.macie = Output.empty();
-        this.macie2 = Output.empty();
-        this.managedblockchain = Output.empty();
-        this.marketplacecatalog = Output.empty();
-        this.mediaconnect = Output.empty();
-        this.mediaconvert = Output.empty();
-        this.medialive = Output.empty();
-        this.mediapackage = Output.empty();
-        this.mediastore = Output.empty();
-        this.mediastoredata = Output.empty();
-        this.memorydb = Output.empty();
-        this.mq = Output.empty();
-        this.mwaa = Output.empty();
-        this.neptune = Output.empty();
-        this.networkfirewall = Output.empty();
-        this.networkmanager = Output.empty();
-        this.opsworks = Output.empty();
-        this.organizations = Output.empty();
-        this.outposts = Output.empty();
-        this.personalize = Output.empty();
-        this.pinpoint = Output.empty();
-        this.pricing = Output.empty();
-        this.qldb = Output.empty();
-        this.quicksight = Output.empty();
-        this.ram = Output.empty();
-        this.rds = Output.empty();
-        this.redshift = Output.empty();
-        this.resourcegroups = Output.empty();
-        this.resourcegroupstaggingapi = Output.empty();
-        this.route53 = Output.empty();
-        this.route53domains = Output.empty();
-        this.route53recoverycontrolconfig = Output.empty();
-        this.route53recoveryreadiness = Output.empty();
-        this.route53resolver = Output.empty();
-        this.s3 = Output.empty();
-        this.s3control = Output.empty();
-        this.s3outposts = Output.empty();
-        this.sagemaker = Output.empty();
-        this.schemas = Output.empty();
-        this.sdb = Output.empty();
-        this.secretsmanager = Output.empty();
-        this.securityhub = Output.empty();
-        this.serverlessrepo = Output.empty();
-        this.servicecatalog = Output.empty();
-        this.servicediscovery = Output.empty();
-        this.servicequotas = Output.empty();
-        this.ses = Output.empty();
-        this.shield = Output.empty();
-        this.signer = Output.empty();
-        this.sns = Output.empty();
-        this.sqs = Output.empty();
-        this.ssm = Output.empty();
-        this.ssoadmin = Output.empty();
-        this.stepfunctions = Output.empty();
-        this.storagegateway = Output.empty();
-        this.sts = Output.empty();
-        this.swf = Output.empty();
-        this.synthetics = Output.empty();
-        this.timestreamwrite = Output.empty();
-        this.transfer = Output.empty();
-        this.waf = Output.empty();
-        this.wafregional = Output.empty();
-        this.wafv2 = Output.empty();
-        this.worklink = Output.empty();
-        this.workmail = Output.empty();
-        this.workspaces = Output.empty();
-        this.xray = Output.empty();
+        this.accessanalyzer = Codegen.empty();
+        this.acm = Codegen.empty();
+        this.acmpca = Codegen.empty();
+        this.amplify = Codegen.empty();
+        this.appconfig = Codegen.empty();
+        this.applicationautoscaling = Codegen.empty();
+        this.applicationinsights = Codegen.empty();
+        this.appmesh = Codegen.empty();
+        this.apprunner = Codegen.empty();
+        this.appstream = Codegen.empty();
+        this.appsync = Codegen.empty();
+        this.athena = Codegen.empty();
+        this.auditmanager = Codegen.empty();
+        this.autoscaling = Codegen.empty();
+        this.backup = Codegen.empty();
+        this.batch = Codegen.empty();
+        this.budgets = Codegen.empty();
+        this.chime = Codegen.empty();
+        this.cloud9 = Codegen.empty();
+        this.cloudformation = Codegen.empty();
+        this.cloudfront = Codegen.empty();
+        this.cloudhsm = Codegen.empty();
+        this.cloudsearch = Codegen.empty();
+        this.cloudtrail = Codegen.empty();
+        this.cloudwatch = Codegen.empty();
+        this.cloudwatchevents = Codegen.empty();
+        this.cloudwatchlogs = Codegen.empty();
+        this.codeartifact = Codegen.empty();
+        this.codebuild = Codegen.empty();
+        this.codecommit = Codegen.empty();
+        this.codedeploy = Codegen.empty();
+        this.codepipeline = Codegen.empty();
+        this.codestarconnections = Codegen.empty();
+        this.cognitoidentity = Codegen.empty();
+        this.configservice = Codegen.empty();
+        this.connect = Codegen.empty();
+        this.cur = Codegen.empty();
+        this.dataexchange = Codegen.empty();
+        this.datapipeline = Codegen.empty();
+        this.datasync = Codegen.empty();
+        this.dax = Codegen.empty();
+        this.detective = Codegen.empty();
+        this.devicefarm = Codegen.empty();
+        this.directconnect = Codegen.empty();
+        this.dlm = Codegen.empty();
+        this.dms = Codegen.empty();
+        this.docdb = Codegen.empty();
+        this.ds = Codegen.empty();
+        this.dynamodb = Codegen.empty();
+        this.ec2 = Codegen.empty();
+        this.ecr = Codegen.empty();
+        this.ecrpublic = Codegen.empty();
+        this.ecs = Codegen.empty();
+        this.efs = Codegen.empty();
+        this.eks = Codegen.empty();
+        this.elasticache = Codegen.empty();
+        this.elasticbeanstalk = Codegen.empty();
+        this.elastictranscoder = Codegen.empty();
+        this.elb = Codegen.empty();
+        this.elbv2 = Codegen.empty();
+        this.emr = Codegen.empty();
+        this.emrcontainers = Codegen.empty();
+        this.es = Codegen.empty();
+        this.firehose = Codegen.empty();
+        this.fms = Codegen.empty();
+        this.forecast = Codegen.empty();
+        this.fsx = Codegen.empty();
+        this.gamelift = Codegen.empty();
+        this.glacier = Codegen.empty();
+        this.globalaccelerator = Codegen.empty();
+        this.glue = Codegen.empty();
+        this.greengrass = Codegen.empty();
+        this.guardduty = Codegen.empty();
+        this.iam = Codegen.empty();
+        this.identitystore = Codegen.empty();
+        this.imagebuilder = Codegen.empty();
+        this.inspector = Codegen.empty();
+        this.iot = Codegen.empty();
+        this.iotanalytics = Codegen.empty();
+        this.iotevents = Codegen.empty();
+        this.kafka = Codegen.empty();
+        this.kinesis = Codegen.empty();
+        this.kinesisanalytics = Codegen.empty();
+        this.kinesisanalyticsv2 = Codegen.empty();
+        this.kinesisvideo = Codegen.empty();
+        this.kms = Codegen.empty();
+        this.lakeformation = Codegen.empty();
+        this.lambda = Codegen.empty();
+        this.lexmodels = Codegen.empty();
+        this.licensemanager = Codegen.empty();
+        this.lightsail = Codegen.empty();
+        this.location = Codegen.empty();
+        this.macie = Codegen.empty();
+        this.macie2 = Codegen.empty();
+        this.managedblockchain = Codegen.empty();
+        this.marketplacecatalog = Codegen.empty();
+        this.mediaconnect = Codegen.empty();
+        this.mediaconvert = Codegen.empty();
+        this.medialive = Codegen.empty();
+        this.mediapackage = Codegen.empty();
+        this.mediastore = Codegen.empty();
+        this.mediastoredata = Codegen.empty();
+        this.memorydb = Codegen.empty();
+        this.mq = Codegen.empty();
+        this.mwaa = Codegen.empty();
+        this.neptune = Codegen.empty();
+        this.networkfirewall = Codegen.empty();
+        this.networkmanager = Codegen.empty();
+        this.opsworks = Codegen.empty();
+        this.organizations = Codegen.empty();
+        this.outposts = Codegen.empty();
+        this.personalize = Codegen.empty();
+        this.pinpoint = Codegen.empty();
+        this.pricing = Codegen.empty();
+        this.qldb = Codegen.empty();
+        this.quicksight = Codegen.empty();
+        this.ram = Codegen.empty();
+        this.rds = Codegen.empty();
+        this.redshift = Codegen.empty();
+        this.resourcegroups = Codegen.empty();
+        this.resourcegroupstaggingapi = Codegen.empty();
+        this.route53 = Codegen.empty();
+        this.route53domains = Codegen.empty();
+        this.route53recoverycontrolconfig = Codegen.empty();
+        this.route53recoveryreadiness = Codegen.empty();
+        this.route53resolver = Codegen.empty();
+        this.s3 = Codegen.empty();
+        this.s3control = Codegen.empty();
+        this.s3outposts = Codegen.empty();
+        this.sagemaker = Codegen.empty();
+        this.schemas = Codegen.empty();
+        this.sdb = Codegen.empty();
+        this.secretsmanager = Codegen.empty();
+        this.securityhub = Codegen.empty();
+        this.serverlessrepo = Codegen.empty();
+        this.servicecatalog = Codegen.empty();
+        this.servicediscovery = Codegen.empty();
+        this.servicequotas = Codegen.empty();
+        this.ses = Codegen.empty();
+        this.shield = Codegen.empty();
+        this.signer = Codegen.empty();
+        this.sns = Codegen.empty();
+        this.sqs = Codegen.empty();
+        this.ssm = Codegen.empty();
+        this.ssoadmin = Codegen.empty();
+        this.stepfunctions = Codegen.empty();
+        this.storagegateway = Codegen.empty();
+        this.sts = Codegen.empty();
+        this.swf = Codegen.empty();
+        this.synthetics = Codegen.empty();
+        this.timestreamwrite = Codegen.empty();
+        this.transfer = Codegen.empty();
+        this.waf = Codegen.empty();
+        this.wafregional = Codegen.empty();
+        this.wafv2 = Codegen.empty();
+        this.worklink = Codegen.empty();
+        this.workmail = Codegen.empty();
+        this.workspaces = Codegen.empty();
+        this.xray = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -2591,7 +2592,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder accessanalyzer(@Nullable String accessanalyzer) {
-            this.accessanalyzer = Output.ofNullable(accessanalyzer);
+            this.accessanalyzer = Codegen.ofNullable(accessanalyzer);
             return this;
         }
         public Builder acm(@Nullable Output<String> acm) {
@@ -2599,7 +2600,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder acm(@Nullable String acm) {
-            this.acm = Output.ofNullable(acm);
+            this.acm = Codegen.ofNullable(acm);
             return this;
         }
         public Builder acmpca(@Nullable Output<String> acmpca) {
@@ -2607,7 +2608,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder acmpca(@Nullable String acmpca) {
-            this.acmpca = Output.ofNullable(acmpca);
+            this.acmpca = Codegen.ofNullable(acmpca);
             return this;
         }
         public Builder amplify(@Nullable Output<String> amplify) {
@@ -2615,7 +2616,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder amplify(@Nullable String amplify) {
-            this.amplify = Output.ofNullable(amplify);
+            this.amplify = Codegen.ofNullable(amplify);
             return this;
         }
         public Builder appconfig(@Nullable Output<String> appconfig) {
@@ -2623,7 +2624,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder appconfig(@Nullable String appconfig) {
-            this.appconfig = Output.ofNullable(appconfig);
+            this.appconfig = Codegen.ofNullable(appconfig);
             return this;
         }
         public Builder applicationautoscaling(@Nullable Output<String> applicationautoscaling) {
@@ -2631,7 +2632,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder applicationautoscaling(@Nullable String applicationautoscaling) {
-            this.applicationautoscaling = Output.ofNullable(applicationautoscaling);
+            this.applicationautoscaling = Codegen.ofNullable(applicationautoscaling);
             return this;
         }
         public Builder applicationinsights(@Nullable Output<String> applicationinsights) {
@@ -2639,7 +2640,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder applicationinsights(@Nullable String applicationinsights) {
-            this.applicationinsights = Output.ofNullable(applicationinsights);
+            this.applicationinsights = Codegen.ofNullable(applicationinsights);
             return this;
         }
         public Builder appmesh(@Nullable Output<String> appmesh) {
@@ -2647,7 +2648,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder appmesh(@Nullable String appmesh) {
-            this.appmesh = Output.ofNullable(appmesh);
+            this.appmesh = Codegen.ofNullable(appmesh);
             return this;
         }
         public Builder apprunner(@Nullable Output<String> apprunner) {
@@ -2655,7 +2656,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder apprunner(@Nullable String apprunner) {
-            this.apprunner = Output.ofNullable(apprunner);
+            this.apprunner = Codegen.ofNullable(apprunner);
             return this;
         }
         public Builder appstream(@Nullable Output<String> appstream) {
@@ -2663,7 +2664,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder appstream(@Nullable String appstream) {
-            this.appstream = Output.ofNullable(appstream);
+            this.appstream = Codegen.ofNullable(appstream);
             return this;
         }
         public Builder appsync(@Nullable Output<String> appsync) {
@@ -2671,7 +2672,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder appsync(@Nullable String appsync) {
-            this.appsync = Output.ofNullable(appsync);
+            this.appsync = Codegen.ofNullable(appsync);
             return this;
         }
         public Builder athena(@Nullable Output<String> athena) {
@@ -2679,7 +2680,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder athena(@Nullable String athena) {
-            this.athena = Output.ofNullable(athena);
+            this.athena = Codegen.ofNullable(athena);
             return this;
         }
         public Builder auditmanager(@Nullable Output<String> auditmanager) {
@@ -2687,7 +2688,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder auditmanager(@Nullable String auditmanager) {
-            this.auditmanager = Output.ofNullable(auditmanager);
+            this.auditmanager = Codegen.ofNullable(auditmanager);
             return this;
         }
         public Builder autoscaling(@Nullable Output<String> autoscaling) {
@@ -2695,7 +2696,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder autoscaling(@Nullable String autoscaling) {
-            this.autoscaling = Output.ofNullable(autoscaling);
+            this.autoscaling = Codegen.ofNullable(autoscaling);
             return this;
         }
         public Builder backup(@Nullable Output<String> backup) {
@@ -2703,7 +2704,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder backup(@Nullable String backup) {
-            this.backup = Output.ofNullable(backup);
+            this.backup = Codegen.ofNullable(backup);
             return this;
         }
         public Builder batch(@Nullable Output<String> batch) {
@@ -2711,7 +2712,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder batch(@Nullable String batch) {
-            this.batch = Output.ofNullable(batch);
+            this.batch = Codegen.ofNullable(batch);
             return this;
         }
         public Builder budgets(@Nullable Output<String> budgets) {
@@ -2719,7 +2720,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder budgets(@Nullable String budgets) {
-            this.budgets = Output.ofNullable(budgets);
+            this.budgets = Codegen.ofNullable(budgets);
             return this;
         }
         public Builder chime(@Nullable Output<String> chime) {
@@ -2727,7 +2728,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder chime(@Nullable String chime) {
-            this.chime = Output.ofNullable(chime);
+            this.chime = Codegen.ofNullable(chime);
             return this;
         }
         public Builder cloud9(@Nullable Output<String> cloud9) {
@@ -2735,7 +2736,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder cloud9(@Nullable String cloud9) {
-            this.cloud9 = Output.ofNullable(cloud9);
+            this.cloud9 = Codegen.ofNullable(cloud9);
             return this;
         }
         public Builder cloudformation(@Nullable Output<String> cloudformation) {
@@ -2743,7 +2744,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder cloudformation(@Nullable String cloudformation) {
-            this.cloudformation = Output.ofNullable(cloudformation);
+            this.cloudformation = Codegen.ofNullable(cloudformation);
             return this;
         }
         public Builder cloudfront(@Nullable Output<String> cloudfront) {
@@ -2751,7 +2752,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder cloudfront(@Nullable String cloudfront) {
-            this.cloudfront = Output.ofNullable(cloudfront);
+            this.cloudfront = Codegen.ofNullable(cloudfront);
             return this;
         }
         public Builder cloudhsm(@Nullable Output<String> cloudhsm) {
@@ -2759,7 +2760,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder cloudhsm(@Nullable String cloudhsm) {
-            this.cloudhsm = Output.ofNullable(cloudhsm);
+            this.cloudhsm = Codegen.ofNullable(cloudhsm);
             return this;
         }
         public Builder cloudsearch(@Nullable Output<String> cloudsearch) {
@@ -2767,7 +2768,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder cloudsearch(@Nullable String cloudsearch) {
-            this.cloudsearch = Output.ofNullable(cloudsearch);
+            this.cloudsearch = Codegen.ofNullable(cloudsearch);
             return this;
         }
         public Builder cloudtrail(@Nullable Output<String> cloudtrail) {
@@ -2775,7 +2776,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder cloudtrail(@Nullable String cloudtrail) {
-            this.cloudtrail = Output.ofNullable(cloudtrail);
+            this.cloudtrail = Codegen.ofNullable(cloudtrail);
             return this;
         }
         public Builder cloudwatch(@Nullable Output<String> cloudwatch) {
@@ -2783,7 +2784,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder cloudwatch(@Nullable String cloudwatch) {
-            this.cloudwatch = Output.ofNullable(cloudwatch);
+            this.cloudwatch = Codegen.ofNullable(cloudwatch);
             return this;
         }
         public Builder cloudwatchevents(@Nullable Output<String> cloudwatchevents) {
@@ -2791,7 +2792,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder cloudwatchevents(@Nullable String cloudwatchevents) {
-            this.cloudwatchevents = Output.ofNullable(cloudwatchevents);
+            this.cloudwatchevents = Codegen.ofNullable(cloudwatchevents);
             return this;
         }
         public Builder cloudwatchlogs(@Nullable Output<String> cloudwatchlogs) {
@@ -2799,7 +2800,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder cloudwatchlogs(@Nullable String cloudwatchlogs) {
-            this.cloudwatchlogs = Output.ofNullable(cloudwatchlogs);
+            this.cloudwatchlogs = Codegen.ofNullable(cloudwatchlogs);
             return this;
         }
         public Builder codeartifact(@Nullable Output<String> codeartifact) {
@@ -2807,7 +2808,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder codeartifact(@Nullable String codeartifact) {
-            this.codeartifact = Output.ofNullable(codeartifact);
+            this.codeartifact = Codegen.ofNullable(codeartifact);
             return this;
         }
         public Builder codebuild(@Nullable Output<String> codebuild) {
@@ -2815,7 +2816,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder codebuild(@Nullable String codebuild) {
-            this.codebuild = Output.ofNullable(codebuild);
+            this.codebuild = Codegen.ofNullable(codebuild);
             return this;
         }
         public Builder codecommit(@Nullable Output<String> codecommit) {
@@ -2823,7 +2824,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder codecommit(@Nullable String codecommit) {
-            this.codecommit = Output.ofNullable(codecommit);
+            this.codecommit = Codegen.ofNullable(codecommit);
             return this;
         }
         public Builder codedeploy(@Nullable Output<String> codedeploy) {
@@ -2831,7 +2832,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder codedeploy(@Nullable String codedeploy) {
-            this.codedeploy = Output.ofNullable(codedeploy);
+            this.codedeploy = Codegen.ofNullable(codedeploy);
             return this;
         }
         public Builder codepipeline(@Nullable Output<String> codepipeline) {
@@ -2839,7 +2840,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder codepipeline(@Nullable String codepipeline) {
-            this.codepipeline = Output.ofNullable(codepipeline);
+            this.codepipeline = Codegen.ofNullable(codepipeline);
             return this;
         }
         public Builder codestarconnections(@Nullable Output<String> codestarconnections) {
@@ -2847,7 +2848,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder codestarconnections(@Nullable String codestarconnections) {
-            this.codestarconnections = Output.ofNullable(codestarconnections);
+            this.codestarconnections = Codegen.ofNullable(codestarconnections);
             return this;
         }
         public Builder cognitoidentity(@Nullable Output<String> cognitoidentity) {
@@ -2855,7 +2856,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder cognitoidentity(@Nullable String cognitoidentity) {
-            this.cognitoidentity = Output.ofNullable(cognitoidentity);
+            this.cognitoidentity = Codegen.ofNullable(cognitoidentity);
             return this;
         }
         public Builder configservice(@Nullable Output<String> configservice) {
@@ -2863,7 +2864,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder configservice(@Nullable String configservice) {
-            this.configservice = Output.ofNullable(configservice);
+            this.configservice = Codegen.ofNullable(configservice);
             return this;
         }
         public Builder connect(@Nullable Output<String> connect) {
@@ -2871,7 +2872,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder connect(@Nullable String connect) {
-            this.connect = Output.ofNullable(connect);
+            this.connect = Codegen.ofNullable(connect);
             return this;
         }
         public Builder cur(@Nullable Output<String> cur) {
@@ -2879,7 +2880,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder cur(@Nullable String cur) {
-            this.cur = Output.ofNullable(cur);
+            this.cur = Codegen.ofNullable(cur);
             return this;
         }
         public Builder dataexchange(@Nullable Output<String> dataexchange) {
@@ -2887,7 +2888,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder dataexchange(@Nullable String dataexchange) {
-            this.dataexchange = Output.ofNullable(dataexchange);
+            this.dataexchange = Codegen.ofNullable(dataexchange);
             return this;
         }
         public Builder datapipeline(@Nullable Output<String> datapipeline) {
@@ -2895,7 +2896,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder datapipeline(@Nullable String datapipeline) {
-            this.datapipeline = Output.ofNullable(datapipeline);
+            this.datapipeline = Codegen.ofNullable(datapipeline);
             return this;
         }
         public Builder datasync(@Nullable Output<String> datasync) {
@@ -2903,7 +2904,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder datasync(@Nullable String datasync) {
-            this.datasync = Output.ofNullable(datasync);
+            this.datasync = Codegen.ofNullable(datasync);
             return this;
         }
         public Builder dax(@Nullable Output<String> dax) {
@@ -2911,7 +2912,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder dax(@Nullable String dax) {
-            this.dax = Output.ofNullable(dax);
+            this.dax = Codegen.ofNullable(dax);
             return this;
         }
         public Builder detective(@Nullable Output<String> detective) {
@@ -2919,7 +2920,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder detective(@Nullable String detective) {
-            this.detective = Output.ofNullable(detective);
+            this.detective = Codegen.ofNullable(detective);
             return this;
         }
         public Builder devicefarm(@Nullable Output<String> devicefarm) {
@@ -2927,7 +2928,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder devicefarm(@Nullable String devicefarm) {
-            this.devicefarm = Output.ofNullable(devicefarm);
+            this.devicefarm = Codegen.ofNullable(devicefarm);
             return this;
         }
         public Builder directconnect(@Nullable Output<String> directconnect) {
@@ -2935,7 +2936,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder directconnect(@Nullable String directconnect) {
-            this.directconnect = Output.ofNullable(directconnect);
+            this.directconnect = Codegen.ofNullable(directconnect);
             return this;
         }
         public Builder dlm(@Nullable Output<String> dlm) {
@@ -2943,7 +2944,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder dlm(@Nullable String dlm) {
-            this.dlm = Output.ofNullable(dlm);
+            this.dlm = Codegen.ofNullable(dlm);
             return this;
         }
         public Builder dms(@Nullable Output<String> dms) {
@@ -2951,7 +2952,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder dms(@Nullable String dms) {
-            this.dms = Output.ofNullable(dms);
+            this.dms = Codegen.ofNullable(dms);
             return this;
         }
         public Builder docdb(@Nullable Output<String> docdb) {
@@ -2959,7 +2960,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder docdb(@Nullable String docdb) {
-            this.docdb = Output.ofNullable(docdb);
+            this.docdb = Codegen.ofNullable(docdb);
             return this;
         }
         public Builder ds(@Nullable Output<String> ds) {
@@ -2967,7 +2968,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ds(@Nullable String ds) {
-            this.ds = Output.ofNullable(ds);
+            this.ds = Codegen.ofNullable(ds);
             return this;
         }
         public Builder dynamodb(@Nullable Output<String> dynamodb) {
@@ -2975,7 +2976,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder dynamodb(@Nullable String dynamodb) {
-            this.dynamodb = Output.ofNullable(dynamodb);
+            this.dynamodb = Codegen.ofNullable(dynamodb);
             return this;
         }
         public Builder ec2(@Nullable Output<String> ec2) {
@@ -2983,7 +2984,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ec2(@Nullable String ec2) {
-            this.ec2 = Output.ofNullable(ec2);
+            this.ec2 = Codegen.ofNullable(ec2);
             return this;
         }
         public Builder ecr(@Nullable Output<String> ecr) {
@@ -2991,7 +2992,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ecr(@Nullable String ecr) {
-            this.ecr = Output.ofNullable(ecr);
+            this.ecr = Codegen.ofNullable(ecr);
             return this;
         }
         public Builder ecrpublic(@Nullable Output<String> ecrpublic) {
@@ -2999,7 +3000,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ecrpublic(@Nullable String ecrpublic) {
-            this.ecrpublic = Output.ofNullable(ecrpublic);
+            this.ecrpublic = Codegen.ofNullable(ecrpublic);
             return this;
         }
         public Builder ecs(@Nullable Output<String> ecs) {
@@ -3007,7 +3008,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ecs(@Nullable String ecs) {
-            this.ecs = Output.ofNullable(ecs);
+            this.ecs = Codegen.ofNullable(ecs);
             return this;
         }
         public Builder efs(@Nullable Output<String> efs) {
@@ -3015,7 +3016,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder efs(@Nullable String efs) {
-            this.efs = Output.ofNullable(efs);
+            this.efs = Codegen.ofNullable(efs);
             return this;
         }
         public Builder eks(@Nullable Output<String> eks) {
@@ -3023,7 +3024,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder eks(@Nullable String eks) {
-            this.eks = Output.ofNullable(eks);
+            this.eks = Codegen.ofNullable(eks);
             return this;
         }
         public Builder elasticache(@Nullable Output<String> elasticache) {
@@ -3031,7 +3032,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder elasticache(@Nullable String elasticache) {
-            this.elasticache = Output.ofNullable(elasticache);
+            this.elasticache = Codegen.ofNullable(elasticache);
             return this;
         }
         public Builder elasticbeanstalk(@Nullable Output<String> elasticbeanstalk) {
@@ -3039,7 +3040,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder elasticbeanstalk(@Nullable String elasticbeanstalk) {
-            this.elasticbeanstalk = Output.ofNullable(elasticbeanstalk);
+            this.elasticbeanstalk = Codegen.ofNullable(elasticbeanstalk);
             return this;
         }
         public Builder elastictranscoder(@Nullable Output<String> elastictranscoder) {
@@ -3047,7 +3048,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder elastictranscoder(@Nullable String elastictranscoder) {
-            this.elastictranscoder = Output.ofNullable(elastictranscoder);
+            this.elastictranscoder = Codegen.ofNullable(elastictranscoder);
             return this;
         }
         public Builder elb(@Nullable Output<String> elb) {
@@ -3055,7 +3056,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder elb(@Nullable String elb) {
-            this.elb = Output.ofNullable(elb);
+            this.elb = Codegen.ofNullable(elb);
             return this;
         }
         public Builder elbv2(@Nullable Output<String> elbv2) {
@@ -3063,7 +3064,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder elbv2(@Nullable String elbv2) {
-            this.elbv2 = Output.ofNullable(elbv2);
+            this.elbv2 = Codegen.ofNullable(elbv2);
             return this;
         }
         public Builder emr(@Nullable Output<String> emr) {
@@ -3071,7 +3072,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder emr(@Nullable String emr) {
-            this.emr = Output.ofNullable(emr);
+            this.emr = Codegen.ofNullable(emr);
             return this;
         }
         public Builder emrcontainers(@Nullable Output<String> emrcontainers) {
@@ -3079,7 +3080,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder emrcontainers(@Nullable String emrcontainers) {
-            this.emrcontainers = Output.ofNullable(emrcontainers);
+            this.emrcontainers = Codegen.ofNullable(emrcontainers);
             return this;
         }
         public Builder es(@Nullable Output<String> es) {
@@ -3087,7 +3088,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder es(@Nullable String es) {
-            this.es = Output.ofNullable(es);
+            this.es = Codegen.ofNullable(es);
             return this;
         }
         public Builder firehose(@Nullable Output<String> firehose) {
@@ -3095,7 +3096,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder firehose(@Nullable String firehose) {
-            this.firehose = Output.ofNullable(firehose);
+            this.firehose = Codegen.ofNullable(firehose);
             return this;
         }
         public Builder fms(@Nullable Output<String> fms) {
@@ -3103,7 +3104,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder fms(@Nullable String fms) {
-            this.fms = Output.ofNullable(fms);
+            this.fms = Codegen.ofNullable(fms);
             return this;
         }
         public Builder forecast(@Nullable Output<String> forecast) {
@@ -3111,7 +3112,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder forecast(@Nullable String forecast) {
-            this.forecast = Output.ofNullable(forecast);
+            this.forecast = Codegen.ofNullable(forecast);
             return this;
         }
         public Builder fsx(@Nullable Output<String> fsx) {
@@ -3119,7 +3120,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder fsx(@Nullable String fsx) {
-            this.fsx = Output.ofNullable(fsx);
+            this.fsx = Codegen.ofNullable(fsx);
             return this;
         }
         public Builder gamelift(@Nullable Output<String> gamelift) {
@@ -3127,7 +3128,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder gamelift(@Nullable String gamelift) {
-            this.gamelift = Output.ofNullable(gamelift);
+            this.gamelift = Codegen.ofNullable(gamelift);
             return this;
         }
         public Builder glacier(@Nullable Output<String> glacier) {
@@ -3135,7 +3136,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder glacier(@Nullable String glacier) {
-            this.glacier = Output.ofNullable(glacier);
+            this.glacier = Codegen.ofNullable(glacier);
             return this;
         }
         public Builder globalaccelerator(@Nullable Output<String> globalaccelerator) {
@@ -3143,7 +3144,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder globalaccelerator(@Nullable String globalaccelerator) {
-            this.globalaccelerator = Output.ofNullable(globalaccelerator);
+            this.globalaccelerator = Codegen.ofNullable(globalaccelerator);
             return this;
         }
         public Builder glue(@Nullable Output<String> glue) {
@@ -3151,7 +3152,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder glue(@Nullable String glue) {
-            this.glue = Output.ofNullable(glue);
+            this.glue = Codegen.ofNullable(glue);
             return this;
         }
         public Builder greengrass(@Nullable Output<String> greengrass) {
@@ -3159,7 +3160,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder greengrass(@Nullable String greengrass) {
-            this.greengrass = Output.ofNullable(greengrass);
+            this.greengrass = Codegen.ofNullable(greengrass);
             return this;
         }
         public Builder guardduty(@Nullable Output<String> guardduty) {
@@ -3167,7 +3168,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder guardduty(@Nullable String guardduty) {
-            this.guardduty = Output.ofNullable(guardduty);
+            this.guardduty = Codegen.ofNullable(guardduty);
             return this;
         }
         public Builder iam(@Nullable Output<String> iam) {
@@ -3175,7 +3176,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder iam(@Nullable String iam) {
-            this.iam = Output.ofNullable(iam);
+            this.iam = Codegen.ofNullable(iam);
             return this;
         }
         public Builder identitystore(@Nullable Output<String> identitystore) {
@@ -3183,7 +3184,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder identitystore(@Nullable String identitystore) {
-            this.identitystore = Output.ofNullable(identitystore);
+            this.identitystore = Codegen.ofNullable(identitystore);
             return this;
         }
         public Builder imagebuilder(@Nullable Output<String> imagebuilder) {
@@ -3191,7 +3192,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder imagebuilder(@Nullable String imagebuilder) {
-            this.imagebuilder = Output.ofNullable(imagebuilder);
+            this.imagebuilder = Codegen.ofNullable(imagebuilder);
             return this;
         }
         public Builder inspector(@Nullable Output<String> inspector) {
@@ -3199,7 +3200,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder inspector(@Nullable String inspector) {
-            this.inspector = Output.ofNullable(inspector);
+            this.inspector = Codegen.ofNullable(inspector);
             return this;
         }
         public Builder iot(@Nullable Output<String> iot) {
@@ -3207,7 +3208,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder iot(@Nullable String iot) {
-            this.iot = Output.ofNullable(iot);
+            this.iot = Codegen.ofNullable(iot);
             return this;
         }
         public Builder iotanalytics(@Nullable Output<String> iotanalytics) {
@@ -3215,7 +3216,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder iotanalytics(@Nullable String iotanalytics) {
-            this.iotanalytics = Output.ofNullable(iotanalytics);
+            this.iotanalytics = Codegen.ofNullable(iotanalytics);
             return this;
         }
         public Builder iotevents(@Nullable Output<String> iotevents) {
@@ -3223,7 +3224,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder iotevents(@Nullable String iotevents) {
-            this.iotevents = Output.ofNullable(iotevents);
+            this.iotevents = Codegen.ofNullable(iotevents);
             return this;
         }
         public Builder kafka(@Nullable Output<String> kafka) {
@@ -3231,7 +3232,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder kafka(@Nullable String kafka) {
-            this.kafka = Output.ofNullable(kafka);
+            this.kafka = Codegen.ofNullable(kafka);
             return this;
         }
         public Builder kinesis(@Nullable Output<String> kinesis) {
@@ -3239,7 +3240,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder kinesis(@Nullable String kinesis) {
-            this.kinesis = Output.ofNullable(kinesis);
+            this.kinesis = Codegen.ofNullable(kinesis);
             return this;
         }
         public Builder kinesisanalytics(@Nullable Output<String> kinesisanalytics) {
@@ -3247,7 +3248,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder kinesisanalytics(@Nullable String kinesisanalytics) {
-            this.kinesisanalytics = Output.ofNullable(kinesisanalytics);
+            this.kinesisanalytics = Codegen.ofNullable(kinesisanalytics);
             return this;
         }
         public Builder kinesisanalyticsv2(@Nullable Output<String> kinesisanalyticsv2) {
@@ -3255,7 +3256,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder kinesisanalyticsv2(@Nullable String kinesisanalyticsv2) {
-            this.kinesisanalyticsv2 = Output.ofNullable(kinesisanalyticsv2);
+            this.kinesisanalyticsv2 = Codegen.ofNullable(kinesisanalyticsv2);
             return this;
         }
         public Builder kinesisvideo(@Nullable Output<String> kinesisvideo) {
@@ -3263,7 +3264,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder kinesisvideo(@Nullable String kinesisvideo) {
-            this.kinesisvideo = Output.ofNullable(kinesisvideo);
+            this.kinesisvideo = Codegen.ofNullable(kinesisvideo);
             return this;
         }
         public Builder kms(@Nullable Output<String> kms) {
@@ -3271,7 +3272,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder kms(@Nullable String kms) {
-            this.kms = Output.ofNullable(kms);
+            this.kms = Codegen.ofNullable(kms);
             return this;
         }
         public Builder lakeformation(@Nullable Output<String> lakeformation) {
@@ -3279,7 +3280,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder lakeformation(@Nullable String lakeformation) {
-            this.lakeformation = Output.ofNullable(lakeformation);
+            this.lakeformation = Codegen.ofNullable(lakeformation);
             return this;
         }
         public Builder lambda(@Nullable Output<String> lambda) {
@@ -3287,7 +3288,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder lambda(@Nullable String lambda) {
-            this.lambda = Output.ofNullable(lambda);
+            this.lambda = Codegen.ofNullable(lambda);
             return this;
         }
         public Builder lexmodels(@Nullable Output<String> lexmodels) {
@@ -3295,7 +3296,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder lexmodels(@Nullable String lexmodels) {
-            this.lexmodels = Output.ofNullable(lexmodels);
+            this.lexmodels = Codegen.ofNullable(lexmodels);
             return this;
         }
         public Builder licensemanager(@Nullable Output<String> licensemanager) {
@@ -3303,7 +3304,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder licensemanager(@Nullable String licensemanager) {
-            this.licensemanager = Output.ofNullable(licensemanager);
+            this.licensemanager = Codegen.ofNullable(licensemanager);
             return this;
         }
         public Builder lightsail(@Nullable Output<String> lightsail) {
@@ -3311,7 +3312,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder lightsail(@Nullable String lightsail) {
-            this.lightsail = Output.ofNullable(lightsail);
+            this.lightsail = Codegen.ofNullable(lightsail);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -3319,7 +3320,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder macie(@Nullable Output<String> macie) {
@@ -3327,7 +3328,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder macie(@Nullable String macie) {
-            this.macie = Output.ofNullable(macie);
+            this.macie = Codegen.ofNullable(macie);
             return this;
         }
         public Builder macie2(@Nullable Output<String> macie2) {
@@ -3335,7 +3336,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder macie2(@Nullable String macie2) {
-            this.macie2 = Output.ofNullable(macie2);
+            this.macie2 = Codegen.ofNullable(macie2);
             return this;
         }
         public Builder managedblockchain(@Nullable Output<String> managedblockchain) {
@@ -3343,7 +3344,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder managedblockchain(@Nullable String managedblockchain) {
-            this.managedblockchain = Output.ofNullable(managedblockchain);
+            this.managedblockchain = Codegen.ofNullable(managedblockchain);
             return this;
         }
         public Builder marketplacecatalog(@Nullable Output<String> marketplacecatalog) {
@@ -3351,7 +3352,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder marketplacecatalog(@Nullable String marketplacecatalog) {
-            this.marketplacecatalog = Output.ofNullable(marketplacecatalog);
+            this.marketplacecatalog = Codegen.ofNullable(marketplacecatalog);
             return this;
         }
         public Builder mediaconnect(@Nullable Output<String> mediaconnect) {
@@ -3359,7 +3360,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder mediaconnect(@Nullable String mediaconnect) {
-            this.mediaconnect = Output.ofNullable(mediaconnect);
+            this.mediaconnect = Codegen.ofNullable(mediaconnect);
             return this;
         }
         public Builder mediaconvert(@Nullable Output<String> mediaconvert) {
@@ -3367,7 +3368,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder mediaconvert(@Nullable String mediaconvert) {
-            this.mediaconvert = Output.ofNullable(mediaconvert);
+            this.mediaconvert = Codegen.ofNullable(mediaconvert);
             return this;
         }
         public Builder medialive(@Nullable Output<String> medialive) {
@@ -3375,7 +3376,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder medialive(@Nullable String medialive) {
-            this.medialive = Output.ofNullable(medialive);
+            this.medialive = Codegen.ofNullable(medialive);
             return this;
         }
         public Builder mediapackage(@Nullable Output<String> mediapackage) {
@@ -3383,7 +3384,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder mediapackage(@Nullable String mediapackage) {
-            this.mediapackage = Output.ofNullable(mediapackage);
+            this.mediapackage = Codegen.ofNullable(mediapackage);
             return this;
         }
         public Builder mediastore(@Nullable Output<String> mediastore) {
@@ -3391,7 +3392,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder mediastore(@Nullable String mediastore) {
-            this.mediastore = Output.ofNullable(mediastore);
+            this.mediastore = Codegen.ofNullable(mediastore);
             return this;
         }
         public Builder mediastoredata(@Nullable Output<String> mediastoredata) {
@@ -3399,7 +3400,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder mediastoredata(@Nullable String mediastoredata) {
-            this.mediastoredata = Output.ofNullable(mediastoredata);
+            this.mediastoredata = Codegen.ofNullable(mediastoredata);
             return this;
         }
         public Builder memorydb(@Nullable Output<String> memorydb) {
@@ -3407,7 +3408,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder memorydb(@Nullable String memorydb) {
-            this.memorydb = Output.ofNullable(memorydb);
+            this.memorydb = Codegen.ofNullable(memorydb);
             return this;
         }
         public Builder mq(@Nullable Output<String> mq) {
@@ -3415,7 +3416,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder mq(@Nullable String mq) {
-            this.mq = Output.ofNullable(mq);
+            this.mq = Codegen.ofNullable(mq);
             return this;
         }
         public Builder mwaa(@Nullable Output<String> mwaa) {
@@ -3423,7 +3424,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder mwaa(@Nullable String mwaa) {
-            this.mwaa = Output.ofNullable(mwaa);
+            this.mwaa = Codegen.ofNullable(mwaa);
             return this;
         }
         public Builder neptune(@Nullable Output<String> neptune) {
@@ -3431,7 +3432,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder neptune(@Nullable String neptune) {
-            this.neptune = Output.ofNullable(neptune);
+            this.neptune = Codegen.ofNullable(neptune);
             return this;
         }
         public Builder networkfirewall(@Nullable Output<String> networkfirewall) {
@@ -3439,7 +3440,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder networkfirewall(@Nullable String networkfirewall) {
-            this.networkfirewall = Output.ofNullable(networkfirewall);
+            this.networkfirewall = Codegen.ofNullable(networkfirewall);
             return this;
         }
         public Builder networkmanager(@Nullable Output<String> networkmanager) {
@@ -3447,7 +3448,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder networkmanager(@Nullable String networkmanager) {
-            this.networkmanager = Output.ofNullable(networkmanager);
+            this.networkmanager = Codegen.ofNullable(networkmanager);
             return this;
         }
         public Builder opsworks(@Nullable Output<String> opsworks) {
@@ -3455,7 +3456,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder opsworks(@Nullable String opsworks) {
-            this.opsworks = Output.ofNullable(opsworks);
+            this.opsworks = Codegen.ofNullable(opsworks);
             return this;
         }
         public Builder organizations(@Nullable Output<String> organizations) {
@@ -3463,7 +3464,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder organizations(@Nullable String organizations) {
-            this.organizations = Output.ofNullable(organizations);
+            this.organizations = Codegen.ofNullable(organizations);
             return this;
         }
         public Builder outposts(@Nullable Output<String> outposts) {
@@ -3471,7 +3472,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder outposts(@Nullable String outposts) {
-            this.outposts = Output.ofNullable(outposts);
+            this.outposts = Codegen.ofNullable(outposts);
             return this;
         }
         public Builder personalize(@Nullable Output<String> personalize) {
@@ -3479,7 +3480,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder personalize(@Nullable String personalize) {
-            this.personalize = Output.ofNullable(personalize);
+            this.personalize = Codegen.ofNullable(personalize);
             return this;
         }
         public Builder pinpoint(@Nullable Output<String> pinpoint) {
@@ -3487,7 +3488,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder pinpoint(@Nullable String pinpoint) {
-            this.pinpoint = Output.ofNullable(pinpoint);
+            this.pinpoint = Codegen.ofNullable(pinpoint);
             return this;
         }
         public Builder pricing(@Nullable Output<String> pricing) {
@@ -3495,7 +3496,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder pricing(@Nullable String pricing) {
-            this.pricing = Output.ofNullable(pricing);
+            this.pricing = Codegen.ofNullable(pricing);
             return this;
         }
         public Builder qldb(@Nullable Output<String> qldb) {
@@ -3503,7 +3504,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder qldb(@Nullable String qldb) {
-            this.qldb = Output.ofNullable(qldb);
+            this.qldb = Codegen.ofNullable(qldb);
             return this;
         }
         public Builder quicksight(@Nullable Output<String> quicksight) {
@@ -3511,7 +3512,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder quicksight(@Nullable String quicksight) {
-            this.quicksight = Output.ofNullable(quicksight);
+            this.quicksight = Codegen.ofNullable(quicksight);
             return this;
         }
         public Builder ram(@Nullable Output<String> ram) {
@@ -3519,7 +3520,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ram(@Nullable String ram) {
-            this.ram = Output.ofNullable(ram);
+            this.ram = Codegen.ofNullable(ram);
             return this;
         }
         public Builder rds(@Nullable Output<String> rds) {
@@ -3527,7 +3528,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder rds(@Nullable String rds) {
-            this.rds = Output.ofNullable(rds);
+            this.rds = Codegen.ofNullable(rds);
             return this;
         }
         public Builder redshift(@Nullable Output<String> redshift) {
@@ -3535,7 +3536,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder redshift(@Nullable String redshift) {
-            this.redshift = Output.ofNullable(redshift);
+            this.redshift = Codegen.ofNullable(redshift);
             return this;
         }
         public Builder resourcegroups(@Nullable Output<String> resourcegroups) {
@@ -3543,7 +3544,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder resourcegroups(@Nullable String resourcegroups) {
-            this.resourcegroups = Output.ofNullable(resourcegroups);
+            this.resourcegroups = Codegen.ofNullable(resourcegroups);
             return this;
         }
         public Builder resourcegroupstaggingapi(@Nullable Output<String> resourcegroupstaggingapi) {
@@ -3551,7 +3552,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder resourcegroupstaggingapi(@Nullable String resourcegroupstaggingapi) {
-            this.resourcegroupstaggingapi = Output.ofNullable(resourcegroupstaggingapi);
+            this.resourcegroupstaggingapi = Codegen.ofNullable(resourcegroupstaggingapi);
             return this;
         }
         public Builder route53(@Nullable Output<String> route53) {
@@ -3559,7 +3560,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder route53(@Nullable String route53) {
-            this.route53 = Output.ofNullable(route53);
+            this.route53 = Codegen.ofNullable(route53);
             return this;
         }
         public Builder route53domains(@Nullable Output<String> route53domains) {
@@ -3567,7 +3568,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder route53domains(@Nullable String route53domains) {
-            this.route53domains = Output.ofNullable(route53domains);
+            this.route53domains = Codegen.ofNullable(route53domains);
             return this;
         }
         public Builder route53recoverycontrolconfig(@Nullable Output<String> route53recoverycontrolconfig) {
@@ -3575,7 +3576,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder route53recoverycontrolconfig(@Nullable String route53recoverycontrolconfig) {
-            this.route53recoverycontrolconfig = Output.ofNullable(route53recoverycontrolconfig);
+            this.route53recoverycontrolconfig = Codegen.ofNullable(route53recoverycontrolconfig);
             return this;
         }
         public Builder route53recoveryreadiness(@Nullable Output<String> route53recoveryreadiness) {
@@ -3583,7 +3584,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder route53recoveryreadiness(@Nullable String route53recoveryreadiness) {
-            this.route53recoveryreadiness = Output.ofNullable(route53recoveryreadiness);
+            this.route53recoveryreadiness = Codegen.ofNullable(route53recoveryreadiness);
             return this;
         }
         public Builder route53resolver(@Nullable Output<String> route53resolver) {
@@ -3591,7 +3592,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder route53resolver(@Nullable String route53resolver) {
-            this.route53resolver = Output.ofNullable(route53resolver);
+            this.route53resolver = Codegen.ofNullable(route53resolver);
             return this;
         }
         public Builder s3(@Nullable Output<String> s3) {
@@ -3599,7 +3600,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder s3(@Nullable String s3) {
-            this.s3 = Output.ofNullable(s3);
+            this.s3 = Codegen.ofNullable(s3);
             return this;
         }
         public Builder s3control(@Nullable Output<String> s3control) {
@@ -3607,7 +3608,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder s3control(@Nullable String s3control) {
-            this.s3control = Output.ofNullable(s3control);
+            this.s3control = Codegen.ofNullable(s3control);
             return this;
         }
         public Builder s3outposts(@Nullable Output<String> s3outposts) {
@@ -3615,7 +3616,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder s3outposts(@Nullable String s3outposts) {
-            this.s3outposts = Output.ofNullable(s3outposts);
+            this.s3outposts = Codegen.ofNullable(s3outposts);
             return this;
         }
         public Builder sagemaker(@Nullable Output<String> sagemaker) {
@@ -3623,7 +3624,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder sagemaker(@Nullable String sagemaker) {
-            this.sagemaker = Output.ofNullable(sagemaker);
+            this.sagemaker = Codegen.ofNullable(sagemaker);
             return this;
         }
         public Builder schemas(@Nullable Output<String> schemas) {
@@ -3631,7 +3632,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder schemas(@Nullable String schemas) {
-            this.schemas = Output.ofNullable(schemas);
+            this.schemas = Codegen.ofNullable(schemas);
             return this;
         }
         public Builder sdb(@Nullable Output<String> sdb) {
@@ -3639,7 +3640,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder sdb(@Nullable String sdb) {
-            this.sdb = Output.ofNullable(sdb);
+            this.sdb = Codegen.ofNullable(sdb);
             return this;
         }
         public Builder secretsmanager(@Nullable Output<String> secretsmanager) {
@@ -3647,7 +3648,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder secretsmanager(@Nullable String secretsmanager) {
-            this.secretsmanager = Output.ofNullable(secretsmanager);
+            this.secretsmanager = Codegen.ofNullable(secretsmanager);
             return this;
         }
         public Builder securityhub(@Nullable Output<String> securityhub) {
@@ -3655,7 +3656,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder securityhub(@Nullable String securityhub) {
-            this.securityhub = Output.ofNullable(securityhub);
+            this.securityhub = Codegen.ofNullable(securityhub);
             return this;
         }
         public Builder serverlessrepo(@Nullable Output<String> serverlessrepo) {
@@ -3663,7 +3664,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder serverlessrepo(@Nullable String serverlessrepo) {
-            this.serverlessrepo = Output.ofNullable(serverlessrepo);
+            this.serverlessrepo = Codegen.ofNullable(serverlessrepo);
             return this;
         }
         public Builder servicecatalog(@Nullable Output<String> servicecatalog) {
@@ -3671,7 +3672,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder servicecatalog(@Nullable String servicecatalog) {
-            this.servicecatalog = Output.ofNullable(servicecatalog);
+            this.servicecatalog = Codegen.ofNullable(servicecatalog);
             return this;
         }
         public Builder servicediscovery(@Nullable Output<String> servicediscovery) {
@@ -3679,7 +3680,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder servicediscovery(@Nullable String servicediscovery) {
-            this.servicediscovery = Output.ofNullable(servicediscovery);
+            this.servicediscovery = Codegen.ofNullable(servicediscovery);
             return this;
         }
         public Builder servicequotas(@Nullable Output<String> servicequotas) {
@@ -3687,7 +3688,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder servicequotas(@Nullable String servicequotas) {
-            this.servicequotas = Output.ofNullable(servicequotas);
+            this.servicequotas = Codegen.ofNullable(servicequotas);
             return this;
         }
         public Builder ses(@Nullable Output<String> ses) {
@@ -3695,7 +3696,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ses(@Nullable String ses) {
-            this.ses = Output.ofNullable(ses);
+            this.ses = Codegen.ofNullable(ses);
             return this;
         }
         public Builder shield(@Nullable Output<String> shield) {
@@ -3703,7 +3704,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder shield(@Nullable String shield) {
-            this.shield = Output.ofNullable(shield);
+            this.shield = Codegen.ofNullable(shield);
             return this;
         }
         public Builder signer(@Nullable Output<String> signer) {
@@ -3711,7 +3712,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder signer(@Nullable String signer) {
-            this.signer = Output.ofNullable(signer);
+            this.signer = Codegen.ofNullable(signer);
             return this;
         }
         public Builder sns(@Nullable Output<String> sns) {
@@ -3719,7 +3720,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder sns(@Nullable String sns) {
-            this.sns = Output.ofNullable(sns);
+            this.sns = Codegen.ofNullable(sns);
             return this;
         }
         public Builder sqs(@Nullable Output<String> sqs) {
@@ -3727,7 +3728,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder sqs(@Nullable String sqs) {
-            this.sqs = Output.ofNullable(sqs);
+            this.sqs = Codegen.ofNullable(sqs);
             return this;
         }
         public Builder ssm(@Nullable Output<String> ssm) {
@@ -3735,7 +3736,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ssm(@Nullable String ssm) {
-            this.ssm = Output.ofNullable(ssm);
+            this.ssm = Codegen.ofNullable(ssm);
             return this;
         }
         public Builder ssoadmin(@Nullable Output<String> ssoadmin) {
@@ -3743,7 +3744,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ssoadmin(@Nullable String ssoadmin) {
-            this.ssoadmin = Output.ofNullable(ssoadmin);
+            this.ssoadmin = Codegen.ofNullable(ssoadmin);
             return this;
         }
         public Builder stepfunctions(@Nullable Output<String> stepfunctions) {
@@ -3751,7 +3752,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder stepfunctions(@Nullable String stepfunctions) {
-            this.stepfunctions = Output.ofNullable(stepfunctions);
+            this.stepfunctions = Codegen.ofNullable(stepfunctions);
             return this;
         }
         public Builder storagegateway(@Nullable Output<String> storagegateway) {
@@ -3759,7 +3760,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder storagegateway(@Nullable String storagegateway) {
-            this.storagegateway = Output.ofNullable(storagegateway);
+            this.storagegateway = Codegen.ofNullable(storagegateway);
             return this;
         }
         public Builder sts(@Nullable Output<String> sts) {
@@ -3767,7 +3768,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder sts(@Nullable String sts) {
-            this.sts = Output.ofNullable(sts);
+            this.sts = Codegen.ofNullable(sts);
             return this;
         }
         public Builder swf(@Nullable Output<String> swf) {
@@ -3775,7 +3776,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder swf(@Nullable String swf) {
-            this.swf = Output.ofNullable(swf);
+            this.swf = Codegen.ofNullable(swf);
             return this;
         }
         public Builder synthetics(@Nullable Output<String> synthetics) {
@@ -3783,7 +3784,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder synthetics(@Nullable String synthetics) {
-            this.synthetics = Output.ofNullable(synthetics);
+            this.synthetics = Codegen.ofNullable(synthetics);
             return this;
         }
         public Builder timestreamwrite(@Nullable Output<String> timestreamwrite) {
@@ -3791,7 +3792,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder timestreamwrite(@Nullable String timestreamwrite) {
-            this.timestreamwrite = Output.ofNullable(timestreamwrite);
+            this.timestreamwrite = Codegen.ofNullable(timestreamwrite);
             return this;
         }
         public Builder transfer(@Nullable Output<String> transfer) {
@@ -3799,7 +3800,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder transfer(@Nullable String transfer) {
-            this.transfer = Output.ofNullable(transfer);
+            this.transfer = Codegen.ofNullable(transfer);
             return this;
         }
         public Builder waf(@Nullable Output<String> waf) {
@@ -3807,7 +3808,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder waf(@Nullable String waf) {
-            this.waf = Output.ofNullable(waf);
+            this.waf = Codegen.ofNullable(waf);
             return this;
         }
         public Builder wafregional(@Nullable Output<String> wafregional) {
@@ -3815,7 +3816,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder wafregional(@Nullable String wafregional) {
-            this.wafregional = Output.ofNullable(wafregional);
+            this.wafregional = Codegen.ofNullable(wafregional);
             return this;
         }
         public Builder wafv2(@Nullable Output<String> wafv2) {
@@ -3823,7 +3824,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder wafv2(@Nullable String wafv2) {
-            this.wafv2 = Output.ofNullable(wafv2);
+            this.wafv2 = Codegen.ofNullable(wafv2);
             return this;
         }
         public Builder worklink(@Nullable Output<String> worklink) {
@@ -3831,7 +3832,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder worklink(@Nullable String worklink) {
-            this.worklink = Output.ofNullable(worklink);
+            this.worklink = Codegen.ofNullable(worklink);
             return this;
         }
         public Builder workmail(@Nullable Output<String> workmail) {
@@ -3839,7 +3840,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder workmail(@Nullable String workmail) {
-            this.workmail = Output.ofNullable(workmail);
+            this.workmail = Codegen.ofNullable(workmail);
             return this;
         }
         public Builder workspaces(@Nullable Output<String> workspaces) {
@@ -3847,7 +3848,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder workspaces(@Nullable String workspaces) {
-            this.workspaces = Output.ofNullable(workspaces);
+            this.workspaces = Codegen.ofNullable(workspaces);
             return this;
         }
         public Builder xray(@Nullable Output<String> xray) {
@@ -3855,7 +3856,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder xray(@Nullable String xray) {
-            this.xray = Output.ofNullable(xray);
+            this.xray = Codegen.ofNullable(xray);
             return this;
         }        public ProviderEndpointArgs build() {
             return new ProviderEndpointArgs(accessanalyzer, acm, acmpca, amplify, appconfig, applicationautoscaling, applicationinsights, appmesh, apprunner, appstream, appsync, athena, auditmanager, autoscaling, backup, batch, budgets, chime, cloud9, cloudformation, cloudfront, cloudhsm, cloudsearch, cloudtrail, cloudwatch, cloudwatchevents, cloudwatchlogs, codeartifact, codebuild, codecommit, codedeploy, codepipeline, codestarconnections, cognitoidentity, configservice, connect, cur, dataexchange, datapipeline, datasync, dax, detective, devicefarm, directconnect, dlm, dms, docdb, ds, dynamodb, ec2, ecr, ecrpublic, ecs, efs, eks, elasticache, elasticbeanstalk, elastictranscoder, elb, elbv2, emr, emrcontainers, es, firehose, fms, forecast, fsx, gamelift, glacier, globalaccelerator, glue, greengrass, guardduty, iam, identitystore, imagebuilder, inspector, iot, iotanalytics, iotevents, kafka, kinesis, kinesisanalytics, kinesisanalyticsv2, kinesisvideo, kms, lakeformation, lambda, lexmodels, licensemanager, lightsail, location, macie, macie2, managedblockchain, marketplacecatalog, mediaconnect, mediaconvert, medialive, mediapackage, mediastore, mediastoredata, memorydb, mq, mwaa, neptune, networkfirewall, networkmanager, opsworks, organizations, outposts, personalize, pinpoint, pricing, qldb, quicksight, ram, rds, redshift, resourcegroups, resourcegroupstaggingapi, route53, route53domains, route53recoverycontrolconfig, route53recoveryreadiness, route53resolver, s3, s3control, s3outposts, sagemaker, schemas, sdb, secretsmanager, securityhub, serverlessrepo, servicecatalog, servicediscovery, servicequotas, ses, shield, signer, sns, sqs, ssm, ssoadmin, stepfunctions, storagegateway, sts, swf, synthetics, timestreamwrite, transfer, waf, wafregional, wafv2, worklink, workmail, workspaces, xray);

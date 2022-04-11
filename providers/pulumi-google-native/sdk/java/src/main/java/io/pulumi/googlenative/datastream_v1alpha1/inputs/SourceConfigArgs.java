@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.MysqlSourceConfigArgs;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.OracleSourceConfigArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<MysqlSourceConfigArgs> mysqlSourceConfig;
 
     public Output<MysqlSourceConfigArgs> getMysqlSourceConfig() {
-        return this.mysqlSourceConfig == null ? Output.empty() : this.mysqlSourceConfig;
+        return this.mysqlSourceConfig == null ? Codegen.empty() : this.mysqlSourceConfig;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<OracleSourceConfigArgs> oracleSourceConfig;
 
     public Output<OracleSourceConfigArgs> getOracleSourceConfig() {
-        return this.oracleSourceConfig == null ? Output.empty() : this.oracleSourceConfig;
+        return this.oracleSourceConfig == null ? Codegen.empty() : this.oracleSourceConfig;
     }
 
     /**
@@ -63,9 +64,9 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SourceConfigArgs() {
-        this.mysqlSourceConfig = Output.empty();
-        this.oracleSourceConfig = Output.empty();
-        this.sourceConnectionProfileName = Output.empty();
+        this.mysqlSourceConfig = Codegen.empty();
+        this.oracleSourceConfig = Codegen.empty();
+        this.sourceConnectionProfileName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mysqlSourceConfig(@Nullable MysqlSourceConfigArgs mysqlSourceConfig) {
-            this.mysqlSourceConfig = Output.ofNullable(mysqlSourceConfig);
+            this.mysqlSourceConfig = Codegen.ofNullable(mysqlSourceConfig);
             return this;
         }
         public Builder oracleSourceConfig(@Nullable Output<OracleSourceConfigArgs> oracleSourceConfig) {
@@ -105,7 +106,7 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder oracleSourceConfig(@Nullable OracleSourceConfigArgs oracleSourceConfig) {
-            this.oracleSourceConfig = Output.ofNullable(oracleSourceConfig);
+            this.oracleSourceConfig = Codegen.ofNullable(oracleSourceConfig);
             return this;
         }
         public Builder sourceConnectionProfileName(Output<String> sourceConnectionProfileName) {

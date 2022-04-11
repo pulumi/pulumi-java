@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.docker.inputs.ServiceTaskSpecContainerSpecMountVolumeOptionsLabelArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,28 +23,28 @@ public final class ServiceTaskSpecContainerSpecMountVolumeOptionsArgs extends io
       private final @Nullable Output<String> driverName;
 
     public Output<String> getDriverName() {
-        return this.driverName == null ? Output.empty() : this.driverName;
+        return this.driverName == null ? Codegen.empty() : this.driverName;
     }
 
     @Import(name="driverOptions")
       private final @Nullable Output<Map<String,String>> driverOptions;
 
     public Output<Map<String,String>> getDriverOptions() {
-        return this.driverOptions == null ? Output.empty() : this.driverOptions;
+        return this.driverOptions == null ? Codegen.empty() : this.driverOptions;
     }
 
     @Import(name="labels")
       private final @Nullable Output<List<ServiceTaskSpecContainerSpecMountVolumeOptionsLabelArgs>> labels;
 
     public Output<List<ServiceTaskSpecContainerSpecMountVolumeOptionsLabelArgs>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="noCopy")
       private final @Nullable Output<Boolean> noCopy;
 
     public Output<Boolean> getNoCopy() {
-        return this.noCopy == null ? Output.empty() : this.noCopy;
+        return this.noCopy == null ? Codegen.empty() : this.noCopy;
     }
 
     public ServiceTaskSpecContainerSpecMountVolumeOptionsArgs(
@@ -58,10 +59,10 @@ public final class ServiceTaskSpecContainerSpecMountVolumeOptionsArgs extends io
     }
 
     private ServiceTaskSpecContainerSpecMountVolumeOptionsArgs() {
-        this.driverName = Output.empty();
-        this.driverOptions = Output.empty();
-        this.labels = Output.empty();
-        this.noCopy = Output.empty();
+        this.driverName = Codegen.empty();
+        this.driverOptions = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.noCopy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class ServiceTaskSpecContainerSpecMountVolumeOptionsArgs extends io
             return this;
         }
         public Builder driverName(@Nullable String driverName) {
-            this.driverName = Output.ofNullable(driverName);
+            this.driverName = Codegen.ofNullable(driverName);
             return this;
         }
         public Builder driverOptions(@Nullable Output<Map<String,String>> driverOptions) {
@@ -103,7 +104,7 @@ public final class ServiceTaskSpecContainerSpecMountVolumeOptionsArgs extends io
             return this;
         }
         public Builder driverOptions(@Nullable Map<String,String> driverOptions) {
-            this.driverOptions = Output.ofNullable(driverOptions);
+            this.driverOptions = Codegen.ofNullable(driverOptions);
             return this;
         }
         public Builder labels(@Nullable Output<List<ServiceTaskSpecContainerSpecMountVolumeOptionsLabelArgs>> labels) {
@@ -111,7 +112,7 @@ public final class ServiceTaskSpecContainerSpecMountVolumeOptionsArgs extends io
             return this;
         }
         public Builder labels(@Nullable List<ServiceTaskSpecContainerSpecMountVolumeOptionsLabelArgs> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder labels(ServiceTaskSpecContainerSpecMountVolumeOptionsLabelArgs... labels) {
@@ -122,7 +123,7 @@ public final class ServiceTaskSpecContainerSpecMountVolumeOptionsArgs extends io
             return this;
         }
         public Builder noCopy(@Nullable Boolean noCopy) {
-            this.noCopy = Output.ofNullable(noCopy);
+            this.noCopy = Codegen.ofNullable(noCopy);
             return this;
         }        public ServiceTaskSpecContainerSpecMountVolumeOptionsArgs build() {
             return new ServiceTaskSpecContainerSpecMountVolumeOptionsArgs(driverName, driverOptions, labels, noCopy);

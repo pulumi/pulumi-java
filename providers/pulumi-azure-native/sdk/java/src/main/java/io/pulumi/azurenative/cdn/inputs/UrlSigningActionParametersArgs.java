@@ -8,6 +8,7 @@ import io.pulumi.azurenative.cdn.inputs.UrlSigningParamIdentifierArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class UrlSigningActionParametersArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Either<String,Algorithm>> algorithm;
 
     public Output<Either<String,Algorithm>> getAlgorithm() {
-        return this.algorithm == null ? Output.empty() : this.algorithm;
+        return this.algorithm == null ? Codegen.empty() : this.algorithm;
     }
 
     @Import(name="odataType", required=true)
@@ -48,7 +49,7 @@ public final class UrlSigningActionParametersArgs extends io.pulumi.resources.Re
       private final @Nullable Output<List<UrlSigningParamIdentifierArgs>> parameterNameOverride;
 
     public Output<List<UrlSigningParamIdentifierArgs>> getParameterNameOverride() {
-        return this.parameterNameOverride == null ? Output.empty() : this.parameterNameOverride;
+        return this.parameterNameOverride == null ? Codegen.empty() : this.parameterNameOverride;
     }
 
     public UrlSigningActionParametersArgs(
@@ -61,9 +62,9 @@ public final class UrlSigningActionParametersArgs extends io.pulumi.resources.Re
     }
 
     private UrlSigningActionParametersArgs() {
-        this.algorithm = Output.empty();
-        this.odataType = Output.empty();
-        this.parameterNameOverride = Output.empty();
+        this.algorithm = Codegen.empty();
+        this.odataType = Codegen.empty();
+        this.parameterNameOverride = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class UrlSigningActionParametersArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder algorithm(@Nullable Either<String,Algorithm> algorithm) {
-            this.algorithm = Output.ofNullable(algorithm);
+            this.algorithm = Codegen.ofNullable(algorithm);
             return this;
         }
         public Builder odataType(Output<String> odataType) {
@@ -111,7 +112,7 @@ public final class UrlSigningActionParametersArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder parameterNameOverride(@Nullable List<UrlSigningParamIdentifierArgs> parameterNameOverride) {
-            this.parameterNameOverride = Output.ofNullable(parameterNameOverride);
+            this.parameterNameOverride = Codegen.ofNullable(parameterNameOverride);
             return this;
         }
         public Builder parameterNameOverride(UrlSigningParamIdentifierArgs... parameterNameOverride) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_beta.inputs.Int64RangeMatchArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> exactMatch;
 
     public Output<String> getExactMatch() {
-        return this.exactMatch == null ? Output.empty() : this.exactMatch;
+        return this.exactMatch == null ? Codegen.empty() : this.exactMatch;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> headerName;
 
     public Output<String> getHeaderName() {
-        return this.headerName == null ? Output.empty() : this.headerName;
+        return this.headerName == null ? Codegen.empty() : this.headerName;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Boolean> invertMatch;
 
     public Output<Boolean> getInvertMatch() {
-        return this.invertMatch == null ? Output.empty() : this.invertMatch;
+        return this.invertMatch == null ? Codegen.empty() : this.invertMatch;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> prefixMatch;
 
     public Output<String> getPrefixMatch() {
-        return this.prefixMatch == null ? Output.empty() : this.prefixMatch;
+        return this.prefixMatch == null ? Codegen.empty() : this.prefixMatch;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Boolean> presentMatch;
 
     public Output<Boolean> getPresentMatch() {
-        return this.presentMatch == null ? Output.empty() : this.presentMatch;
+        return this.presentMatch == null ? Codegen.empty() : this.presentMatch;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Int64RangeMatchArgs> rangeMatch;
 
     public Output<Int64RangeMatchArgs> getRangeMatch() {
-        return this.rangeMatch == null ? Output.empty() : this.rangeMatch;
+        return this.rangeMatch == null ? Codegen.empty() : this.rangeMatch;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> regexMatch;
 
     public Output<String> getRegexMatch() {
-        return this.regexMatch == null ? Output.empty() : this.regexMatch;
+        return this.regexMatch == null ? Codegen.empty() : this.regexMatch;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> suffixMatch;
 
     public Output<String> getSuffixMatch() {
-        return this.suffixMatch == null ? Output.empty() : this.suffixMatch;
+        return this.suffixMatch == null ? Codegen.empty() : this.suffixMatch;
     }
 
     public HttpHeaderMatchArgs(
@@ -128,14 +129,14 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private HttpHeaderMatchArgs() {
-        this.exactMatch = Output.empty();
-        this.headerName = Output.empty();
-        this.invertMatch = Output.empty();
-        this.prefixMatch = Output.empty();
-        this.presentMatch = Output.empty();
-        this.rangeMatch = Output.empty();
-        this.regexMatch = Output.empty();
-        this.suffixMatch = Output.empty();
+        this.exactMatch = Codegen.empty();
+        this.headerName = Codegen.empty();
+        this.invertMatch = Codegen.empty();
+        this.prefixMatch = Codegen.empty();
+        this.presentMatch = Codegen.empty();
+        this.rangeMatch = Codegen.empty();
+        this.regexMatch = Codegen.empty();
+        this.suffixMatch = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -177,7 +178,7 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder exactMatch(@Nullable String exactMatch) {
-            this.exactMatch = Output.ofNullable(exactMatch);
+            this.exactMatch = Codegen.ofNullable(exactMatch);
             return this;
         }
         public Builder headerName(@Nullable Output<String> headerName) {
@@ -185,7 +186,7 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder headerName(@Nullable String headerName) {
-            this.headerName = Output.ofNullable(headerName);
+            this.headerName = Codegen.ofNullable(headerName);
             return this;
         }
         public Builder invertMatch(@Nullable Output<Boolean> invertMatch) {
@@ -193,7 +194,7 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder invertMatch(@Nullable Boolean invertMatch) {
-            this.invertMatch = Output.ofNullable(invertMatch);
+            this.invertMatch = Codegen.ofNullable(invertMatch);
             return this;
         }
         public Builder prefixMatch(@Nullable Output<String> prefixMatch) {
@@ -201,7 +202,7 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder prefixMatch(@Nullable String prefixMatch) {
-            this.prefixMatch = Output.ofNullable(prefixMatch);
+            this.prefixMatch = Codegen.ofNullable(prefixMatch);
             return this;
         }
         public Builder presentMatch(@Nullable Output<Boolean> presentMatch) {
@@ -209,7 +210,7 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder presentMatch(@Nullable Boolean presentMatch) {
-            this.presentMatch = Output.ofNullable(presentMatch);
+            this.presentMatch = Codegen.ofNullable(presentMatch);
             return this;
         }
         public Builder rangeMatch(@Nullable Output<Int64RangeMatchArgs> rangeMatch) {
@@ -217,7 +218,7 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder rangeMatch(@Nullable Int64RangeMatchArgs rangeMatch) {
-            this.rangeMatch = Output.ofNullable(rangeMatch);
+            this.rangeMatch = Codegen.ofNullable(rangeMatch);
             return this;
         }
         public Builder regexMatch(@Nullable Output<String> regexMatch) {
@@ -225,7 +226,7 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder regexMatch(@Nullable String regexMatch) {
-            this.regexMatch = Output.ofNullable(regexMatch);
+            this.regexMatch = Codegen.ofNullable(regexMatch);
             return this;
         }
         public Builder suffixMatch(@Nullable Output<String> suffixMatch) {
@@ -233,7 +234,7 @@ public final class HttpHeaderMatchArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder suffixMatch(@Nullable String suffixMatch) {
-            this.suffixMatch = Output.ofNullable(suffixMatch);
+            this.suffixMatch = Codegen.ofNullable(suffixMatch);
             return this;
         }        public HttpHeaderMatchArgs build() {
             return new HttpHeaderMatchArgs(exactMatch, headerName, invertMatch, prefixMatch, presentMatch, rangeMatch, regexMatch, suffixMatch);

@@ -5,6 +5,7 @@ package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class SamlProviderState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class SamlProviderState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class SamlProviderState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> samlMetadataDocument;
 
     public Output<String> getSamlMetadataDocument() {
-        return this.samlMetadataDocument == null ? Output.empty() : this.samlMetadataDocument;
+        return this.samlMetadataDocument == null ? Codegen.empty() : this.samlMetadataDocument;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class SamlProviderState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class SamlProviderState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class SamlProviderState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> validUntil;
 
     public Output<String> getValidUntil() {
-        return this.validUntil == null ? Output.empty() : this.validUntil;
+        return this.validUntil == null ? Codegen.empty() : this.validUntil;
     }
 
     public SamlProviderState(
@@ -97,12 +98,12 @@ public final class SamlProviderState extends io.pulumi.resources.ResourceArgs {
     }
 
     private SamlProviderState() {
-        this.arn = Output.empty();
-        this.name = Output.empty();
-        this.samlMetadataDocument = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.validUntil = Output.empty();
+        this.arn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.samlMetadataDocument = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.validUntil = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class SamlProviderState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -148,7 +149,7 @@ public final class SamlProviderState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder samlMetadataDocument(@Nullable Output<String> samlMetadataDocument) {
@@ -156,7 +157,7 @@ public final class SamlProviderState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder samlMetadataDocument(@Nullable String samlMetadataDocument) {
-            this.samlMetadataDocument = Output.ofNullable(samlMetadataDocument);
+            this.samlMetadataDocument = Codegen.ofNullable(samlMetadataDocument);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -164,7 +165,7 @@ public final class SamlProviderState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -172,7 +173,7 @@ public final class SamlProviderState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder validUntil(@Nullable Output<String> validUntil) {
@@ -180,7 +181,7 @@ public final class SamlProviderState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder validUntil(@Nullable String validUntil) {
-            this.validUntil = Output.ofNullable(validUntil);
+            this.validUntil = Codegen.ofNullable(validUntil);
             return this;
         }        public SamlProviderState build() {
             return new SamlProviderState(arn, name, samlMetadataDocument, tags, tagsAll, validUntil);

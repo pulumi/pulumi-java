@@ -7,6 +7,7 @@ import io.pulumi.azurenative.apimanagement.enums.LoggerType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -27,7 +28,7 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> credentials;
 
     public Output<Map<String,String>> getCredentials() {
-        return this.credentials == null ? Output.empty() : this.credentials;
+        return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> isBuffered;
 
     public Output<Boolean> getIsBuffered() {
-        return this.isBuffered == null ? Output.empty() : this.isBuffered;
+        return this.isBuffered == null ? Codegen.empty() : this.isBuffered;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> loggerId;
 
     public Output<String> getLoggerId() {
-        return this.loggerId == null ? Output.empty() : this.loggerId;
+        return this.loggerId == null ? Codegen.empty() : this.loggerId;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {
-        return this.resourceId == null ? Output.empty() : this.resourceId;
+        return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     /**
@@ -127,14 +128,14 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LoggerArgs() {
-        this.credentials = Output.empty();
-        this.description = Output.empty();
-        this.isBuffered = Output.empty();
-        this.loggerId = Output.empty();
-        this.loggerType = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceId = Output.empty();
-        this.serviceName = Output.empty();
+        this.credentials = Codegen.empty();
+        this.description = Codegen.empty();
+        this.isBuffered = Codegen.empty();
+        this.loggerId = Codegen.empty();
+        this.loggerType = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceId = Codegen.empty();
+        this.serviceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -176,7 +177,7 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder credentials(@Nullable Map<String,String> credentials) {
-            this.credentials = Output.ofNullable(credentials);
+            this.credentials = Codegen.ofNullable(credentials);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -184,7 +185,7 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder isBuffered(@Nullable Output<Boolean> isBuffered) {
@@ -192,7 +193,7 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isBuffered(@Nullable Boolean isBuffered) {
-            this.isBuffered = Output.ofNullable(isBuffered);
+            this.isBuffered = Codegen.ofNullable(isBuffered);
             return this;
         }
         public Builder loggerId(@Nullable Output<String> loggerId) {
@@ -200,7 +201,7 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder loggerId(@Nullable String loggerId) {
-            this.loggerId = Output.ofNullable(loggerId);
+            this.loggerId = Codegen.ofNullable(loggerId);
             return this;
         }
         public Builder loggerType(Output<Either<String,LoggerType>> loggerType) {
@@ -224,7 +225,7 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Output.ofNullable(resourceId);
+            this.resourceId = Codegen.ofNullable(resourceId);
             return this;
         }
         public Builder serviceName(Output<String> serviceName) {

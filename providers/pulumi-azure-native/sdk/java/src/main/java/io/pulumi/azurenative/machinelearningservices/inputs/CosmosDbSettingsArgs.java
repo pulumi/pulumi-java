@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class CosmosDbSettingsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Integer> collectionsThroughput;
 
     public Output<Integer> getCollectionsThroughput() {
-        return this.collectionsThroughput == null ? Output.empty() : this.collectionsThroughput;
+        return this.collectionsThroughput == null ? Codegen.empty() : this.collectionsThroughput;
     }
 
     public CosmosDbSettingsArgs(@Nullable Output<Integer> collectionsThroughput) {
@@ -30,7 +31,7 @@ public final class CosmosDbSettingsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private CosmosDbSettingsArgs() {
-        this.collectionsThroughput = Output.empty();
+        this.collectionsThroughput = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class CosmosDbSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder collectionsThroughput(@Nullable Integer collectionsThroughput) {
-            this.collectionsThroughput = Output.ofNullable(collectionsThroughput);
+            this.collectionsThroughput = Codegen.ofNullable(collectionsThroughput);
             return this;
         }        public CosmosDbSettingsArgs build() {
             return new CosmosDbSettingsArgs(collectionsThroughput);

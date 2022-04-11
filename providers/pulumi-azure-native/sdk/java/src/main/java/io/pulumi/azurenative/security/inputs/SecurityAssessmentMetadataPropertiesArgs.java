@@ -13,6 +13,7 @@ import io.pulumi.azurenative.security.inputs.SecurityAssessmentMetadataPartnerDa
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -43,7 +44,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
       private final @Nullable Output<List<Either<String,Categories>>> categories;
 
     public Output<List<Either<String,Categories>>> getCategories() {
-        return this.categories == null ? Output.empty() : this.categories;
+        return this.categories == null ? Codegen.empty() : this.categories;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
       private final @Nullable Output<Either<String,ImplementationEffort>> implementationEffort;
 
     public Output<Either<String,ImplementationEffort>> getImplementationEffort() {
-        return this.implementationEffort == null ? Output.empty() : this.implementationEffort;
+        return this.implementationEffort == null ? Codegen.empty() : this.implementationEffort;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
       private final @Nullable Output<SecurityAssessmentMetadataPartnerDataArgs> partnerData;
 
     public Output<SecurityAssessmentMetadataPartnerDataArgs> getPartnerData() {
-        return this.partnerData == null ? Output.empty() : this.partnerData;
+        return this.partnerData == null ? Codegen.empty() : this.partnerData;
     }
 
     /**
@@ -98,7 +99,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
       private final @Nullable Output<Boolean> preview;
 
     public Output<Boolean> getPreview() {
-        return this.preview == null ? Output.empty() : this.preview;
+        return this.preview == null ? Codegen.empty() : this.preview;
     }
 
     /**
@@ -109,7 +110,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
       private final @Nullable Output<String> remediationDescription;
 
     public Output<String> getRemediationDescription() {
-        return this.remediationDescription == null ? Output.empty() : this.remediationDescription;
+        return this.remediationDescription == null ? Codegen.empty() : this.remediationDescription;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
       private final @Nullable Output<List<Either<String,Threats>>> threats;
 
     public Output<List<Either<String,Threats>>> getThreats() {
-        return this.threats == null ? Output.empty() : this.threats;
+        return this.threats == null ? Codegen.empty() : this.threats;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
       private final @Nullable Output<Either<String,UserImpact>> userImpact;
 
     public Output<Either<String,UserImpact>> getUserImpact() {
-        return this.userImpact == null ? Output.empty() : this.userImpact;
+        return this.userImpact == null ? Codegen.empty() : this.userImpact;
     }
 
     public SecurityAssessmentMetadataPropertiesArgs(
@@ -167,17 +168,17 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
     }
 
     private SecurityAssessmentMetadataPropertiesArgs() {
-        this.assessmentType = Output.empty();
-        this.categories = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.implementationEffort = Output.empty();
-        this.partnerData = Output.empty();
-        this.preview = Output.empty();
-        this.remediationDescription = Output.empty();
-        this.severity = Output.empty();
-        this.threats = Output.empty();
-        this.userImpact = Output.empty();
+        this.assessmentType = Codegen.empty();
+        this.categories = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.implementationEffort = Codegen.empty();
+        this.partnerData = Codegen.empty();
+        this.preview = Codegen.empty();
+        this.remediationDescription = Codegen.empty();
+        this.severity = Codegen.empty();
+        this.threats = Codegen.empty();
+        this.userImpact = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -233,7 +234,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
             return this;
         }
         public Builder categories(@Nullable List<Either<String,Categories>> categories) {
-            this.categories = Output.ofNullable(categories);
+            this.categories = Codegen.ofNullable(categories);
             return this;
         }
         public Builder categories(Either<String,Categories>... categories) {
@@ -244,7 +245,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -260,7 +261,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
             return this;
         }
         public Builder implementationEffort(@Nullable Either<String,ImplementationEffort> implementationEffort) {
-            this.implementationEffort = Output.ofNullable(implementationEffort);
+            this.implementationEffort = Codegen.ofNullable(implementationEffort);
             return this;
         }
         public Builder partnerData(@Nullable Output<SecurityAssessmentMetadataPartnerDataArgs> partnerData) {
@@ -268,7 +269,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
             return this;
         }
         public Builder partnerData(@Nullable SecurityAssessmentMetadataPartnerDataArgs partnerData) {
-            this.partnerData = Output.ofNullable(partnerData);
+            this.partnerData = Codegen.ofNullable(partnerData);
             return this;
         }
         public Builder preview(@Nullable Output<Boolean> preview) {
@@ -276,7 +277,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
             return this;
         }
         public Builder preview(@Nullable Boolean preview) {
-            this.preview = Output.ofNullable(preview);
+            this.preview = Codegen.ofNullable(preview);
             return this;
         }
         public Builder remediationDescription(@Nullable Output<String> remediationDescription) {
@@ -284,7 +285,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
             return this;
         }
         public Builder remediationDescription(@Nullable String remediationDescription) {
-            this.remediationDescription = Output.ofNullable(remediationDescription);
+            this.remediationDescription = Codegen.ofNullable(remediationDescription);
             return this;
         }
         public Builder severity(Output<Either<String,Severity>> severity) {
@@ -300,7 +301,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
             return this;
         }
         public Builder threats(@Nullable List<Either<String,Threats>> threats) {
-            this.threats = Output.ofNullable(threats);
+            this.threats = Codegen.ofNullable(threats);
             return this;
         }
         public Builder threats(Either<String,Threats>... threats) {
@@ -311,7 +312,7 @@ public final class SecurityAssessmentMetadataPropertiesArgs extends io.pulumi.re
             return this;
         }
         public Builder userImpact(@Nullable Either<String,UserImpact> userImpact) {
-            this.userImpact = Output.ofNullable(userImpact);
+            this.userImpact = Codegen.ofNullable(userImpact);
             return this;
         }        public SecurityAssessmentMetadataPropertiesArgs build() {
             return new SecurityAssessmentMetadataPropertiesArgs(assessmentType, categories, description, displayName, implementationEffort, partnerData, preview, remediationDescription, severity, threats, userImpact);

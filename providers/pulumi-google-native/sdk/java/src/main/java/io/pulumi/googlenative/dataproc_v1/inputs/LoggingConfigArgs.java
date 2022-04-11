@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> driverLogLevels;
 
     public Output<Map<String,String>> getDriverLogLevels() {
-        return this.driverLogLevels == null ? Output.empty() : this.driverLogLevels;
+        return this.driverLogLevels == null ? Codegen.empty() : this.driverLogLevels;
     }
 
     public LoggingConfigArgs(@Nullable Output<Map<String,String>> driverLogLevels) {
@@ -35,7 +36,7 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LoggingConfigArgs() {
-        this.driverLogLevels = Output.empty();
+        this.driverLogLevels = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class LoggingConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder driverLogLevels(@Nullable Map<String,String> driverLogLevels) {
-            this.driverLogLevels = Output.ofNullable(driverLogLevels);
+            this.driverLogLevels = Codegen.ofNullable(driverLogLevels);
             return this;
         }        public LoggingConfigArgs build() {
             return new LoggingConfigArgs(driverLogLevels);

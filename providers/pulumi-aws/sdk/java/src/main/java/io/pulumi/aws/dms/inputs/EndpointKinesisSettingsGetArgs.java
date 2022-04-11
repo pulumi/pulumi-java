@@ -5,6 +5,7 @@ package io.pulumi.aws.dms.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Boolean> includeControlDetails;
 
     public Output<Boolean> getIncludeControlDetails() {
-        return this.includeControlDetails == null ? Output.empty() : this.includeControlDetails;
+        return this.includeControlDetails == null ? Codegen.empty() : this.includeControlDetails;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Boolean> includeNullAndEmpty;
 
     public Output<Boolean> getIncludeNullAndEmpty() {
-        return this.includeNullAndEmpty == null ? Output.empty() : this.includeNullAndEmpty;
+        return this.includeNullAndEmpty == null ? Codegen.empty() : this.includeNullAndEmpty;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Boolean> includePartitionValue;
 
     public Output<Boolean> getIncludePartitionValue() {
-        return this.includePartitionValue == null ? Output.empty() : this.includePartitionValue;
+        return this.includePartitionValue == null ? Codegen.empty() : this.includePartitionValue;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Boolean> includeTableAlterOperations;
 
     public Output<Boolean> getIncludeTableAlterOperations() {
-        return this.includeTableAlterOperations == null ? Output.empty() : this.includeTableAlterOperations;
+        return this.includeTableAlterOperations == null ? Codegen.empty() : this.includeTableAlterOperations;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Boolean> includeTransactionDetails;
 
     public Output<Boolean> getIncludeTransactionDetails() {
-        return this.includeTransactionDetails == null ? Output.empty() : this.includeTransactionDetails;
+        return this.includeTransactionDetails == null ? Codegen.empty() : this.includeTransactionDetails;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> messageFormat;
 
     public Output<String> getMessageFormat() {
-        return this.messageFormat == null ? Output.empty() : this.messageFormat;
+        return this.messageFormat == null ? Codegen.empty() : this.messageFormat;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Boolean> partitionIncludeSchemaTable;
 
     public Output<Boolean> getPartitionIncludeSchemaTable() {
-        return this.partitionIncludeSchemaTable == null ? Output.empty() : this.partitionIncludeSchemaTable;
+        return this.partitionIncludeSchemaTable == null ? Codegen.empty() : this.partitionIncludeSchemaTable;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> serviceAccessRoleArn;
 
     public Output<String> getServiceAccessRoleArn() {
-        return this.serviceAccessRoleArn == null ? Output.empty() : this.serviceAccessRoleArn;
+        return this.serviceAccessRoleArn == null ? Codegen.empty() : this.serviceAccessRoleArn;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> streamArn;
 
     public Output<String> getStreamArn() {
-        return this.streamArn == null ? Output.empty() : this.streamArn;
+        return this.streamArn == null ? Codegen.empty() : this.streamArn;
     }
 
     public EndpointKinesisSettingsGetArgs(
@@ -136,15 +137,15 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
     }
 
     private EndpointKinesisSettingsGetArgs() {
-        this.includeControlDetails = Output.empty();
-        this.includeNullAndEmpty = Output.empty();
-        this.includePartitionValue = Output.empty();
-        this.includeTableAlterOperations = Output.empty();
-        this.includeTransactionDetails = Output.empty();
-        this.messageFormat = Output.empty();
-        this.partitionIncludeSchemaTable = Output.empty();
-        this.serviceAccessRoleArn = Output.empty();
-        this.streamArn = Output.empty();
+        this.includeControlDetails = Codegen.empty();
+        this.includeNullAndEmpty = Codegen.empty();
+        this.includePartitionValue = Codegen.empty();
+        this.includeTableAlterOperations = Codegen.empty();
+        this.includeTransactionDetails = Codegen.empty();
+        this.messageFormat = Codegen.empty();
+        this.partitionIncludeSchemaTable = Codegen.empty();
+        this.serviceAccessRoleArn = Codegen.empty();
+        this.streamArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -188,7 +189,7 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder includeControlDetails(@Nullable Boolean includeControlDetails) {
-            this.includeControlDetails = Output.ofNullable(includeControlDetails);
+            this.includeControlDetails = Codegen.ofNullable(includeControlDetails);
             return this;
         }
         public Builder includeNullAndEmpty(@Nullable Output<Boolean> includeNullAndEmpty) {
@@ -196,7 +197,7 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder includeNullAndEmpty(@Nullable Boolean includeNullAndEmpty) {
-            this.includeNullAndEmpty = Output.ofNullable(includeNullAndEmpty);
+            this.includeNullAndEmpty = Codegen.ofNullable(includeNullAndEmpty);
             return this;
         }
         public Builder includePartitionValue(@Nullable Output<Boolean> includePartitionValue) {
@@ -204,7 +205,7 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder includePartitionValue(@Nullable Boolean includePartitionValue) {
-            this.includePartitionValue = Output.ofNullable(includePartitionValue);
+            this.includePartitionValue = Codegen.ofNullable(includePartitionValue);
             return this;
         }
         public Builder includeTableAlterOperations(@Nullable Output<Boolean> includeTableAlterOperations) {
@@ -212,7 +213,7 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder includeTableAlterOperations(@Nullable Boolean includeTableAlterOperations) {
-            this.includeTableAlterOperations = Output.ofNullable(includeTableAlterOperations);
+            this.includeTableAlterOperations = Codegen.ofNullable(includeTableAlterOperations);
             return this;
         }
         public Builder includeTransactionDetails(@Nullable Output<Boolean> includeTransactionDetails) {
@@ -220,7 +221,7 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder includeTransactionDetails(@Nullable Boolean includeTransactionDetails) {
-            this.includeTransactionDetails = Output.ofNullable(includeTransactionDetails);
+            this.includeTransactionDetails = Codegen.ofNullable(includeTransactionDetails);
             return this;
         }
         public Builder messageFormat(@Nullable Output<String> messageFormat) {
@@ -228,7 +229,7 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder messageFormat(@Nullable String messageFormat) {
-            this.messageFormat = Output.ofNullable(messageFormat);
+            this.messageFormat = Codegen.ofNullable(messageFormat);
             return this;
         }
         public Builder partitionIncludeSchemaTable(@Nullable Output<Boolean> partitionIncludeSchemaTable) {
@@ -236,7 +237,7 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder partitionIncludeSchemaTable(@Nullable Boolean partitionIncludeSchemaTable) {
-            this.partitionIncludeSchemaTable = Output.ofNullable(partitionIncludeSchemaTable);
+            this.partitionIncludeSchemaTable = Codegen.ofNullable(partitionIncludeSchemaTable);
             return this;
         }
         public Builder serviceAccessRoleArn(@Nullable Output<String> serviceAccessRoleArn) {
@@ -244,7 +245,7 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder serviceAccessRoleArn(@Nullable String serviceAccessRoleArn) {
-            this.serviceAccessRoleArn = Output.ofNullable(serviceAccessRoleArn);
+            this.serviceAccessRoleArn = Codegen.ofNullable(serviceAccessRoleArn);
             return this;
         }
         public Builder streamArn(@Nullable Output<String> streamArn) {
@@ -252,7 +253,7 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder streamArn(@Nullable String streamArn) {
-            this.streamArn = Output.ofNullable(streamArn);
+            this.streamArn = Codegen.ofNullable(streamArn);
             return this;
         }        public EndpointKinesisSettingsGetArgs build() {
             return new EndpointKinesisSettingsGetArgs(includeControlDetails, includeNullAndEmpty, includePartitionValue, includeTableAlterOperations, includeTransactionDetails, messageFormat, partitionIncludeSchemaTable, serviceAccessRoleArn, streamArn);

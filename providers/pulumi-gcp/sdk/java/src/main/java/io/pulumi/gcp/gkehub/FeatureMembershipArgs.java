@@ -5,6 +5,7 @@ package io.pulumi.gcp.gkehub;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.gkehub.inputs.FeatureMembershipConfigmanagementArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -67,7 +68,7 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public FeatureMembershipArgs(
@@ -84,11 +85,11 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
     }
 
     private FeatureMembershipArgs() {
-        this.configmanagement = Output.empty();
-        this.feature = Output.empty();
-        this.location = Output.empty();
-        this.membership = Output.empty();
-        this.project = Output.empty();
+        this.configmanagement = Codegen.empty();
+        this.feature = Codegen.empty();
+        this.location = Codegen.empty();
+        this.membership = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public FeatureMembershipArgs build() {
             return new FeatureMembershipArgs(configmanagement, feature, location, membership, project);

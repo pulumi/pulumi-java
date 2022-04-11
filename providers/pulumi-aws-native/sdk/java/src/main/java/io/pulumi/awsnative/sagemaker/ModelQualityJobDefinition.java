@@ -16,6 +16,7 @@ import io.pulumi.awsnative.sagemaker.outputs.ModelQualityJobDefinitionTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -153,7 +154,7 @@ public class ModelQualityJobDefinition extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public ModelQualityJobDefinition(String name, ModelQualityJobDefinitionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:sagemaker:ModelQualityJobDefinition", name, args == null ? ModelQualityJobDefinitionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:sagemaker:ModelQualityJobDefinition", name, args == null ? ModelQualityJobDefinitionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ModelQualityJobDefinition(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

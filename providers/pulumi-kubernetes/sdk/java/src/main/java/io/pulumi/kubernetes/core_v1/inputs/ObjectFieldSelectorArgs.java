@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ObjectFieldSelectorArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> apiVersion;
 
     public Output<String> getApiVersion() {
-        return this.apiVersion == null ? Output.empty() : this.apiVersion;
+        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ObjectFieldSelectorArgs extends io.pulumi.resources.ResourceA
     }
 
     private ObjectFieldSelectorArgs() {
-        this.apiVersion = Output.empty();
-        this.fieldPath = Output.empty();
+        this.apiVersion = Codegen.empty();
+        this.fieldPath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ObjectFieldSelectorArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Output.ofNullable(apiVersion);
+            this.apiVersion = Codegen.ofNullable(apiVersion);
             return this;
         }
         public Builder fieldPath(Output<String> fieldPath) {

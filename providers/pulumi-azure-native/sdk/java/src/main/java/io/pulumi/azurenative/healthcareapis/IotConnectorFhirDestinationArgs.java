@@ -8,6 +8,7 @@ import io.pulumi.azurenative.healthcareapis.inputs.IotMappingPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> fhirDestinationName;
 
     public Output<String> getFhirDestinationName() {
-        return this.fhirDestinationName == null ? Output.empty() : this.fhirDestinationName;
+        return this.fhirDestinationName == null ? Codegen.empty() : this.fhirDestinationName;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -125,14 +126,14 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
     }
 
     private IotConnectorFhirDestinationArgs() {
-        this.fhirDestinationName = Output.empty();
-        this.fhirMapping = Output.empty();
-        this.fhirServiceResourceId = Output.empty();
-        this.iotConnectorName = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceIdentityResolutionType = Output.empty();
-        this.workspaceName = Output.empty();
+        this.fhirDestinationName = Codegen.empty();
+        this.fhirMapping = Codegen.empty();
+        this.fhirServiceResourceId = Codegen.empty();
+        this.iotConnectorName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceIdentityResolutionType = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -174,7 +175,7 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder fhirDestinationName(@Nullable String fhirDestinationName) {
-            this.fhirDestinationName = Output.ofNullable(fhirDestinationName);
+            this.fhirDestinationName = Codegen.ofNullable(fhirDestinationName);
             return this;
         }
         public Builder fhirMapping(Output<IotMappingPropertiesArgs> fhirMapping) {
@@ -206,7 +207,7 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

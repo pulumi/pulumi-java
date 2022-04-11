@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -21,28 +22,28 @@ public final class InstanceFromMachineImageBootDiskInitializeParamsGetArgs exten
       private final @Nullable Output<String> image;
 
     public Output<String> getImage() {
-        return this.image == null ? Output.empty() : this.image;
+        return this.image == null ? Codegen.empty() : this.image;
     }
 
     @Import(name="labels")
       private final @Nullable Output<Map<String,Object>> labels;
 
     public Output<Map<String,Object>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="size")
       private final @Nullable Output<Integer> size;
 
     public Output<Integer> getSize() {
-        return this.size == null ? Output.empty() : this.size;
+        return this.size == null ? Codegen.empty() : this.size;
     }
 
     @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public InstanceFromMachineImageBootDiskInitializeParamsGetArgs(
@@ -57,10 +58,10 @@ public final class InstanceFromMachineImageBootDiskInitializeParamsGetArgs exten
     }
 
     private InstanceFromMachineImageBootDiskInitializeParamsGetArgs() {
-        this.image = Output.empty();
-        this.labels = Output.empty();
-        this.size = Output.empty();
-        this.type = Output.empty();
+        this.image = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.size = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class InstanceFromMachineImageBootDiskInitializeParamsGetArgs exten
             return this;
         }
         public Builder image(@Nullable String image) {
-            this.image = Output.ofNullable(image);
+            this.image = Codegen.ofNullable(image);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,Object>> labels) {
@@ -102,7 +103,7 @@ public final class InstanceFromMachineImageBootDiskInitializeParamsGetArgs exten
             return this;
         }
         public Builder labels(@Nullable Map<String,Object> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder size(@Nullable Output<Integer> size) {
@@ -110,7 +111,7 @@ public final class InstanceFromMachineImageBootDiskInitializeParamsGetArgs exten
             return this;
         }
         public Builder size(@Nullable Integer size) {
-            this.size = Output.ofNullable(size);
+            this.size = Codegen.ofNullable(size);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -118,7 +119,7 @@ public final class InstanceFromMachineImageBootDiskInitializeParamsGetArgs exten
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public InstanceFromMachineImageBootDiskInitializeParamsGetArgs build() {
             return new InstanceFromMachineImageBootDiskInitializeParamsGetArgs(image, labels, size, type);

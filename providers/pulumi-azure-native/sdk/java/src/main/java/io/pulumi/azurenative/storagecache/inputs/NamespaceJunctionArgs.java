@@ -5,6 +5,7 @@ package io.pulumi.azurenative.storagecache.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class NamespaceJunctionArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> namespacePath;
 
     public Output<String> getNamespacePath() {
-        return this.namespacePath == null ? Output.empty() : this.namespacePath;
+        return this.namespacePath == null ? Codegen.empty() : this.namespacePath;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class NamespaceJunctionArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> nfsAccessPolicy;
 
     public Output<String> getNfsAccessPolicy() {
-        return this.nfsAccessPolicy == null ? Output.empty() : this.nfsAccessPolicy;
+        return this.nfsAccessPolicy == null ? Codegen.empty() : this.nfsAccessPolicy;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class NamespaceJunctionArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> nfsExport;
 
     public Output<String> getNfsExport() {
-        return this.nfsExport == null ? Output.empty() : this.nfsExport;
+        return this.nfsExport == null ? Codegen.empty() : this.nfsExport;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class NamespaceJunctionArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> targetPath;
 
     public Output<String> getTargetPath() {
-        return this.targetPath == null ? Output.empty() : this.targetPath;
+        return this.targetPath == null ? Codegen.empty() : this.targetPath;
     }
 
     public NamespaceJunctionArgs(
@@ -68,16 +69,16 @@ public final class NamespaceJunctionArgs extends io.pulumi.resources.ResourceArg
         @Nullable Output<String> nfsExport,
         @Nullable Output<String> targetPath) {
         this.namespacePath = namespacePath;
-        this.nfsAccessPolicy = nfsAccessPolicy == null ? Output.ofNullable("default") : nfsAccessPolicy;
+        this.nfsAccessPolicy = nfsAccessPolicy == null ? Codegen.ofNullable("default") : nfsAccessPolicy;
         this.nfsExport = nfsExport;
         this.targetPath = targetPath;
     }
 
     private NamespaceJunctionArgs() {
-        this.namespacePath = Output.empty();
-        this.nfsAccessPolicy = Output.empty();
-        this.nfsExport = Output.empty();
-        this.targetPath = Output.empty();
+        this.namespacePath = Codegen.empty();
+        this.nfsAccessPolicy = Codegen.empty();
+        this.nfsExport = Codegen.empty();
+        this.targetPath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class NamespaceJunctionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder namespacePath(@Nullable String namespacePath) {
-            this.namespacePath = Output.ofNullable(namespacePath);
+            this.namespacePath = Codegen.ofNullable(namespacePath);
             return this;
         }
         public Builder nfsAccessPolicy(@Nullable Output<String> nfsAccessPolicy) {
@@ -119,7 +120,7 @@ public final class NamespaceJunctionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder nfsAccessPolicy(@Nullable String nfsAccessPolicy) {
-            this.nfsAccessPolicy = Output.ofNullable(nfsAccessPolicy);
+            this.nfsAccessPolicy = Codegen.ofNullable(nfsAccessPolicy);
             return this;
         }
         public Builder nfsExport(@Nullable Output<String> nfsExport) {
@@ -127,7 +128,7 @@ public final class NamespaceJunctionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder nfsExport(@Nullable String nfsExport) {
-            this.nfsExport = Output.ofNullable(nfsExport);
+            this.nfsExport = Codegen.ofNullable(nfsExport);
             return this;
         }
         public Builder targetPath(@Nullable Output<String> targetPath) {
@@ -135,7 +136,7 @@ public final class NamespaceJunctionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder targetPath(@Nullable String targetPath) {
-            this.targetPath = Output.ofNullable(targetPath);
+            this.targetPath = Codegen.ofNullable(targetPath);
             return this;
         }        public NamespaceJunctionArgs build() {
             return new NamespaceJunctionArgs(namespacePath, nfsAccessPolicy, nfsExport, targetPath);

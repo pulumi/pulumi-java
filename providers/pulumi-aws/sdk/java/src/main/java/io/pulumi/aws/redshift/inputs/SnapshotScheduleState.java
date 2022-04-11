@@ -5,6 +5,7 @@ package io.pulumi.aws.redshift.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +26,7 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<String>> definitions;
 
     public Output<List<String>> getDefinitions() {
-        return this.definitions == null ? Output.empty() : this.definitions;
+        return this.definitions == null ? Codegen.empty() : this.definitions;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Boolean> forceDestroy;
 
     public Output<Boolean> getForceDestroy() {
-        return this.forceDestroy == null ? Output.empty() : this.forceDestroy;
+        return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> identifier;
 
     public Output<String> getIdentifier() {
-        return this.identifier == null ? Output.empty() : this.identifier;
+        return this.identifier == null ? Codegen.empty() : this.identifier;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> identifierPrefix;
 
     public Output<String> getIdentifierPrefix() {
-        return this.identifierPrefix == null ? Output.empty() : this.identifierPrefix;
+        return this.identifierPrefix == null ? Codegen.empty() : this.identifierPrefix;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public SnapshotScheduleState(
@@ -126,14 +127,14 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
     }
 
     private SnapshotScheduleState() {
-        this.arn = Output.empty();
-        this.definitions = Output.empty();
-        this.description = Output.empty();
-        this.forceDestroy = Output.empty();
-        this.identifier = Output.empty();
-        this.identifierPrefix = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.definitions = Codegen.empty();
+        this.description = Codegen.empty();
+        this.forceDestroy = Codegen.empty();
+        this.identifier = Codegen.empty();
+        this.identifierPrefix = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -175,7 +176,7 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder definitions(@Nullable Output<List<String>> definitions) {
@@ -183,7 +184,7 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder definitions(@Nullable List<String> definitions) {
-            this.definitions = Output.ofNullable(definitions);
+            this.definitions = Codegen.ofNullable(definitions);
             return this;
         }
         public Builder definitions(String... definitions) {
@@ -194,7 +195,7 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
@@ -202,7 +203,7 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Output.ofNullable(forceDestroy);
+            this.forceDestroy = Codegen.ofNullable(forceDestroy);
             return this;
         }
         public Builder identifier(@Nullable Output<String> identifier) {
@@ -210,7 +211,7 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder identifier(@Nullable String identifier) {
-            this.identifier = Output.ofNullable(identifier);
+            this.identifier = Codegen.ofNullable(identifier);
             return this;
         }
         public Builder identifierPrefix(@Nullable Output<String> identifierPrefix) {
@@ -218,7 +219,7 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder identifierPrefix(@Nullable String identifierPrefix) {
-            this.identifierPrefix = Output.ofNullable(identifierPrefix);
+            this.identifierPrefix = Codegen.ofNullable(identifierPrefix);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -226,7 +227,7 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -234,7 +235,7 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public SnapshotScheduleState build() {
             return new SnapshotScheduleState(arn, definitions, description, forceDestroy, identifier, identifierPrefix, tags, tagsAll);

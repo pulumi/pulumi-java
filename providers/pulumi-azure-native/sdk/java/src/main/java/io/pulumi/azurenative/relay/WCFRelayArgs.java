@@ -6,6 +6,7 @@ package io.pulumi.azurenative.relay;
 import io.pulumi.azurenative.relay.enums.Relaytype;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> relayName;
 
     public Output<String> getRelayName() {
-        return this.relayName == null ? Output.empty() : this.relayName;
+        return this.relayName == null ? Codegen.empty() : this.relayName;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Relaytype> relayType;
 
     public Output<Relaytype> getRelayType() {
-        return this.relayType == null ? Output.empty() : this.relayType;
+        return this.relayType == null ? Codegen.empty() : this.relayType;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> requiresClientAuthorization;
 
     public Output<Boolean> getRequiresClientAuthorization() {
-        return this.requiresClientAuthorization == null ? Output.empty() : this.requiresClientAuthorization;
+        return this.requiresClientAuthorization == null ? Codegen.empty() : this.requiresClientAuthorization;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> requiresTransportSecurity;
 
     public Output<Boolean> getRequiresTransportSecurity() {
-        return this.requiresTransportSecurity == null ? Output.empty() : this.requiresTransportSecurity;
+        return this.requiresTransportSecurity == null ? Codegen.empty() : this.requiresTransportSecurity;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> userMetadata;
 
     public Output<String> getUserMetadata() {
-        return this.userMetadata == null ? Output.empty() : this.userMetadata;
+        return this.userMetadata == null ? Codegen.empty() : this.userMetadata;
     }
 
     public WCFRelayArgs(
@@ -111,13 +112,13 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WCFRelayArgs() {
-        this.namespaceName = Output.empty();
-        this.relayName = Output.empty();
-        this.relayType = Output.empty();
-        this.requiresClientAuthorization = Output.empty();
-        this.requiresTransportSecurity = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.userMetadata = Output.empty();
+        this.namespaceName = Codegen.empty();
+        this.relayName = Codegen.empty();
+        this.relayType = Codegen.empty();
+        this.requiresClientAuthorization = Codegen.empty();
+        this.requiresTransportSecurity = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.userMetadata = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -165,7 +166,7 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder relayName(@Nullable String relayName) {
-            this.relayName = Output.ofNullable(relayName);
+            this.relayName = Codegen.ofNullable(relayName);
             return this;
         }
         public Builder relayType(@Nullable Output<Relaytype> relayType) {
@@ -173,7 +174,7 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder relayType(@Nullable Relaytype relayType) {
-            this.relayType = Output.ofNullable(relayType);
+            this.relayType = Codegen.ofNullable(relayType);
             return this;
         }
         public Builder requiresClientAuthorization(@Nullable Output<Boolean> requiresClientAuthorization) {
@@ -181,7 +182,7 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requiresClientAuthorization(@Nullable Boolean requiresClientAuthorization) {
-            this.requiresClientAuthorization = Output.ofNullable(requiresClientAuthorization);
+            this.requiresClientAuthorization = Codegen.ofNullable(requiresClientAuthorization);
             return this;
         }
         public Builder requiresTransportSecurity(@Nullable Output<Boolean> requiresTransportSecurity) {
@@ -189,7 +190,7 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requiresTransportSecurity(@Nullable Boolean requiresTransportSecurity) {
-            this.requiresTransportSecurity = Output.ofNullable(requiresTransportSecurity);
+            this.requiresTransportSecurity = Codegen.ofNullable(requiresTransportSecurity);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -205,7 +206,7 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userMetadata(@Nullable String userMetadata) {
-            this.userMetadata = Output.ofNullable(userMetadata);
+            this.userMetadata = Codegen.ofNullable(userMetadata);
             return this;
         }        public WCFRelayArgs build() {
             return new WCFRelayArgs(namespaceName, relayName, relayType, requiresClientAuthorization, requiresTransportSecurity, resourceGroupName, userMetadata);

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.DWCopyCommandDefaultValueArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -29,7 +30,7 @@ public final class DWCopyCommandSettingsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Map<String,String>> additionalOptions;
 
     public Output<Map<String,String>> getAdditionalOptions() {
-        return this.additionalOptions == null ? Output.empty() : this.additionalOptions;
+        return this.additionalOptions == null ? Codegen.empty() : this.additionalOptions;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class DWCopyCommandSettingsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<DWCopyCommandDefaultValueArgs>> defaultValues;
 
     public Output<List<DWCopyCommandDefaultValueArgs>> getDefaultValues() {
-        return this.defaultValues == null ? Output.empty() : this.defaultValues;
+        return this.defaultValues == null ? Codegen.empty() : this.defaultValues;
     }
 
     public DWCopyCommandSettingsArgs(
@@ -51,8 +52,8 @@ public final class DWCopyCommandSettingsArgs extends io.pulumi.resources.Resourc
     }
 
     private DWCopyCommandSettingsArgs() {
-        this.additionalOptions = Output.empty();
-        this.defaultValues = Output.empty();
+        this.additionalOptions = Codegen.empty();
+        this.defaultValues = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class DWCopyCommandSettingsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder additionalOptions(@Nullable Map<String,String> additionalOptions) {
-            this.additionalOptions = Output.ofNullable(additionalOptions);
+            this.additionalOptions = Codegen.ofNullable(additionalOptions);
             return this;
         }
         public Builder defaultValues(@Nullable Output<List<DWCopyCommandDefaultValueArgs>> defaultValues) {
@@ -90,7 +91,7 @@ public final class DWCopyCommandSettingsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder defaultValues(@Nullable List<DWCopyCommandDefaultValueArgs> defaultValues) {
-            this.defaultValues = Output.ofNullable(defaultValues);
+            this.defaultValues = Codegen.ofNullable(defaultValues);
             return this;
         }
         public Builder defaultValues(DWCopyCommandDefaultValueArgs... defaultValues) {

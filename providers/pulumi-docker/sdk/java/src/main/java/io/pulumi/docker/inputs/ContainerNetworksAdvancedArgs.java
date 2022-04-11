@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,21 +20,21 @@ public final class ContainerNetworksAdvancedArgs extends io.pulumi.resources.Res
       private final @Nullable Output<List<String>> aliases;
 
     public Output<List<String>> getAliases() {
-        return this.aliases == null ? Output.empty() : this.aliases;
+        return this.aliases == null ? Codegen.empty() : this.aliases;
     }
 
     @Import(name="ipv4Address")
       private final @Nullable Output<String> ipv4Address;
 
     public Output<String> getIpv4Address() {
-        return this.ipv4Address == null ? Output.empty() : this.ipv4Address;
+        return this.ipv4Address == null ? Codegen.empty() : this.ipv4Address;
     }
 
     @Import(name="ipv6Address")
       private final @Nullable Output<String> ipv6Address;
 
     public Output<String> getIpv6Address() {
-        return this.ipv6Address == null ? Output.empty() : this.ipv6Address;
+        return this.ipv6Address == null ? Codegen.empty() : this.ipv6Address;
     }
 
     @Import(name="name", required=true)
@@ -55,10 +56,10 @@ public final class ContainerNetworksAdvancedArgs extends io.pulumi.resources.Res
     }
 
     private ContainerNetworksAdvancedArgs() {
-        this.aliases = Output.empty();
-        this.ipv4Address = Output.empty();
-        this.ipv6Address = Output.empty();
-        this.name = Output.empty();
+        this.aliases = Codegen.empty();
+        this.ipv4Address = Codegen.empty();
+        this.ipv6Address = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class ContainerNetworksAdvancedArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder aliases(@Nullable List<String> aliases) {
-            this.aliases = Output.ofNullable(aliases);
+            this.aliases = Codegen.ofNullable(aliases);
             return this;
         }
         public Builder aliases(String... aliases) {
@@ -103,7 +104,7 @@ public final class ContainerNetworksAdvancedArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder ipv4Address(@Nullable String ipv4Address) {
-            this.ipv4Address = Output.ofNullable(ipv4Address);
+            this.ipv4Address = Codegen.ofNullable(ipv4Address);
             return this;
         }
         public Builder ipv6Address(@Nullable Output<String> ipv6Address) {
@@ -111,7 +112,7 @@ public final class ContainerNetworksAdvancedArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder ipv6Address(@Nullable String ipv6Address) {
-            this.ipv6Address = Output.ofNullable(ipv6Address);
+            this.ipv6Address = Codegen.ofNullable(ipv6Address);
             return this;
         }
         public Builder name(Output<String> name) {

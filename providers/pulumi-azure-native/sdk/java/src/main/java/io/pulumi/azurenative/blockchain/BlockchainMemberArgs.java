@@ -10,6 +10,7 @@ import io.pulumi.azurenative.blockchain.inputs.SkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -29,7 +30,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> blockchainMemberName;
 
     public Output<String> getBlockchainMemberName() {
-        return this.blockchainMemberName == null ? Output.empty() : this.blockchainMemberName;
+        return this.blockchainMemberName == null ? Codegen.empty() : this.blockchainMemberName;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> consortium;
 
     public Output<String> getConsortium() {
-        return this.consortium == null ? Output.empty() : this.consortium;
+        return this.consortium == null ? Codegen.empty() : this.consortium;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> consortiumManagementAccountPassword;
 
     public Output<String> getConsortiumManagementAccountPassword() {
-        return this.consortiumManagementAccountPassword == null ? Output.empty() : this.consortiumManagementAccountPassword;
+        return this.consortiumManagementAccountPassword == null ? Codegen.empty() : this.consortiumManagementAccountPassword;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> consortiumMemberDisplayName;
 
     public Output<String> getConsortiumMemberDisplayName() {
-        return this.consortiumMemberDisplayName == null ? Output.empty() : this.consortiumMemberDisplayName;
+        return this.consortiumMemberDisplayName == null ? Codegen.empty() : this.consortiumMemberDisplayName;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> consortiumRole;
 
     public Output<String> getConsortiumRole() {
-        return this.consortiumRole == null ? Output.empty() : this.consortiumRole;
+        return this.consortiumRole == null ? Codegen.empty() : this.consortiumRole;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<FirewallRuleArgs>> firewallRules;
 
     public Output<List<FirewallRuleArgs>> getFirewallRules() {
-        return this.firewallRules == null ? Output.empty() : this.firewallRules;
+        return this.firewallRules == null ? Codegen.empty() : this.firewallRules;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Either<String,BlockchainProtocol>> protocol;
 
     public Output<Either<String,BlockchainProtocol>> getProtocol() {
-        return this.protocol == null ? Output.empty() : this.protocol;
+        return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     /**
@@ -139,7 +140,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -150,7 +151,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -161,7 +162,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<BlockchainMemberNodesSkuArgs> validatorNodesSku;
 
     public Output<BlockchainMemberNodesSkuArgs> getValidatorNodesSku() {
-        return this.validatorNodesSku == null ? Output.empty() : this.validatorNodesSku;
+        return this.validatorNodesSku == null ? Codegen.empty() : this.validatorNodesSku;
     }
 
     public BlockchainMemberArgs(
@@ -194,19 +195,19 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private BlockchainMemberArgs() {
-        this.blockchainMemberName = Output.empty();
-        this.consortium = Output.empty();
-        this.consortiumManagementAccountPassword = Output.empty();
-        this.consortiumMemberDisplayName = Output.empty();
-        this.consortiumRole = Output.empty();
-        this.firewallRules = Output.empty();
-        this.location = Output.empty();
-        this.password = Output.empty();
-        this.protocol = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
-        this.validatorNodesSku = Output.empty();
+        this.blockchainMemberName = Codegen.empty();
+        this.consortium = Codegen.empty();
+        this.consortiumManagementAccountPassword = Codegen.empty();
+        this.consortiumMemberDisplayName = Codegen.empty();
+        this.consortiumRole = Codegen.empty();
+        this.firewallRules = Codegen.empty();
+        this.location = Codegen.empty();
+        this.password = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.validatorNodesSku = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -258,7 +259,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder blockchainMemberName(@Nullable String blockchainMemberName) {
-            this.blockchainMemberName = Output.ofNullable(blockchainMemberName);
+            this.blockchainMemberName = Codegen.ofNullable(blockchainMemberName);
             return this;
         }
         public Builder consortium(@Nullable Output<String> consortium) {
@@ -266,7 +267,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder consortium(@Nullable String consortium) {
-            this.consortium = Output.ofNullable(consortium);
+            this.consortium = Codegen.ofNullable(consortium);
             return this;
         }
         public Builder consortiumManagementAccountPassword(@Nullable Output<String> consortiumManagementAccountPassword) {
@@ -274,7 +275,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder consortiumManagementAccountPassword(@Nullable String consortiumManagementAccountPassword) {
-            this.consortiumManagementAccountPassword = Output.ofNullable(consortiumManagementAccountPassword);
+            this.consortiumManagementAccountPassword = Codegen.ofNullable(consortiumManagementAccountPassword);
             return this;
         }
         public Builder consortiumMemberDisplayName(@Nullable Output<String> consortiumMemberDisplayName) {
@@ -282,7 +283,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder consortiumMemberDisplayName(@Nullable String consortiumMemberDisplayName) {
-            this.consortiumMemberDisplayName = Output.ofNullable(consortiumMemberDisplayName);
+            this.consortiumMemberDisplayName = Codegen.ofNullable(consortiumMemberDisplayName);
             return this;
         }
         public Builder consortiumRole(@Nullable Output<String> consortiumRole) {
@@ -290,7 +291,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder consortiumRole(@Nullable String consortiumRole) {
-            this.consortiumRole = Output.ofNullable(consortiumRole);
+            this.consortiumRole = Codegen.ofNullable(consortiumRole);
             return this;
         }
         public Builder firewallRules(@Nullable Output<List<FirewallRuleArgs>> firewallRules) {
@@ -298,7 +299,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder firewallRules(@Nullable List<FirewallRuleArgs> firewallRules) {
-            this.firewallRules = Output.ofNullable(firewallRules);
+            this.firewallRules = Codegen.ofNullable(firewallRules);
             return this;
         }
         public Builder firewallRules(FirewallRuleArgs... firewallRules) {
@@ -309,7 +310,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder password(@Nullable Output<String> password) {
@@ -317,7 +318,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder protocol(@Nullable Output<Either<String,BlockchainProtocol>> protocol) {
@@ -325,7 +326,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder protocol(@Nullable Either<String,BlockchainProtocol> protocol) {
-            this.protocol = Output.ofNullable(protocol);
+            this.protocol = Codegen.ofNullable(protocol);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -341,7 +342,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -349,7 +350,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder validatorNodesSku(@Nullable Output<BlockchainMemberNodesSkuArgs> validatorNodesSku) {
@@ -357,7 +358,7 @@ public final class BlockchainMemberArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder validatorNodesSku(@Nullable BlockchainMemberNodesSkuArgs validatorNodesSku) {
-            this.validatorNodesSku = Output.ofNullable(validatorNodesSku);
+            this.validatorNodesSku = Codegen.ofNullable(validatorNodesSku);
             return this;
         }        public BlockchainMemberArgs build() {
             return new BlockchainMemberArgs(blockchainMemberName, consortium, consortiumManagementAccountPassword, consortiumMemberDisplayName, consortiumRole, firewallRules, location, password, protocol, resourceGroupName, sku, tags, validatorNodesSku);

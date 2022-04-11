@@ -6,6 +6,7 @@ package io.pulumi.awsnative.memorydb.inputs;
 import io.pulumi.awsnative.memorydb.enums.UserAuthenticationModePropertiesType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class AuthenticationModePropertiesArgs extends io.pulumi.resources.
       private final @Nullable Output<List<String>> passwords;
 
     public Output<List<String>> getPasswords() {
-        return this.passwords == null ? Output.empty() : this.passwords;
+        return this.passwords == null ? Codegen.empty() : this.passwords;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class AuthenticationModePropertiesArgs extends io.pulumi.resources.
       private final @Nullable Output<UserAuthenticationModePropertiesType> type;
 
     public Output<UserAuthenticationModePropertiesType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public AuthenticationModePropertiesArgs(
@@ -46,8 +47,8 @@ public final class AuthenticationModePropertiesArgs extends io.pulumi.resources.
     }
 
     private AuthenticationModePropertiesArgs() {
-        this.passwords = Output.empty();
-        this.type = Output.empty();
+        this.passwords = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class AuthenticationModePropertiesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder passwords(@Nullable List<String> passwords) {
-            this.passwords = Output.ofNullable(passwords);
+            this.passwords = Codegen.ofNullable(passwords);
             return this;
         }
         public Builder passwords(String... passwords) {
@@ -88,7 +89,7 @@ public final class AuthenticationModePropertiesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder type(@Nullable UserAuthenticationModePropertiesType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public AuthenticationModePropertiesArgs build() {
             return new AuthenticationModePropertiesArgs(passwords, type);

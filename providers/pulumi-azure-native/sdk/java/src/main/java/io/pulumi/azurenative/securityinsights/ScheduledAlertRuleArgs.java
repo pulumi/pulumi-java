@@ -9,6 +9,7 @@ import io.pulumi.azurenative.securityinsights.enums.TriggerOperator;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> alertRuleTemplateName;
 
     public Output<String> getAlertRuleTemplateName() {
-        return this.alertRuleTemplateName == null ? Output.empty() : this.alertRuleTemplateName;
+        return this.alertRuleTemplateName == null ? Codegen.empty() : this.alertRuleTemplateName;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -129,7 +130,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> ruleId;
 
     public Output<String> getRuleId() {
-        return this.ruleId == null ? Output.empty() : this.ruleId;
+        return this.ruleId == null ? Codegen.empty() : this.ruleId;
     }
 
     /**
@@ -173,7 +174,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<Either<String,AttackTactic>>> tactics;
 
     public Output<List<Either<String,AttackTactic>>> getTactics() {
-        return this.tactics == null ? Output.empty() : this.tactics;
+        return this.tactics == null ? Codegen.empty() : this.tactics;
     }
 
     /**
@@ -247,23 +248,23 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ScheduledAlertRuleArgs() {
-        this.alertRuleTemplateName = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.enabled = Output.empty();
-        this.kind = Output.empty();
-        this.query = Output.empty();
-        this.queryFrequency = Output.empty();
-        this.queryPeriod = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.ruleId = Output.empty();
-        this.severity = Output.empty();
-        this.suppressionDuration = Output.empty();
-        this.suppressionEnabled = Output.empty();
-        this.tactics = Output.empty();
-        this.triggerOperator = Output.empty();
-        this.triggerThreshold = Output.empty();
-        this.workspaceName = Output.empty();
+        this.alertRuleTemplateName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.query = Codegen.empty();
+        this.queryFrequency = Codegen.empty();
+        this.queryPeriod = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.ruleId = Codegen.empty();
+        this.severity = Codegen.empty();
+        this.suppressionDuration = Codegen.empty();
+        this.suppressionEnabled = Codegen.empty();
+        this.tactics = Codegen.empty();
+        this.triggerOperator = Codegen.empty();
+        this.triggerThreshold = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -323,7 +324,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder alertRuleTemplateName(@Nullable String alertRuleTemplateName) {
-            this.alertRuleTemplateName = Output.ofNullable(alertRuleTemplateName);
+            this.alertRuleTemplateName = Codegen.ofNullable(alertRuleTemplateName);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -331,7 +332,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -395,7 +396,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder ruleId(@Nullable String ruleId) {
-            this.ruleId = Output.ofNullable(ruleId);
+            this.ruleId = Codegen.ofNullable(ruleId);
             return this;
         }
         public Builder severity(Output<Either<String,AlertSeverity>> severity) {
@@ -427,7 +428,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tactics(@Nullable List<Either<String,AttackTactic>> tactics) {
-            this.tactics = Output.ofNullable(tactics);
+            this.tactics = Codegen.ofNullable(tactics);
             return this;
         }
         public Builder tactics(Either<String,AttackTactic>... tactics) {

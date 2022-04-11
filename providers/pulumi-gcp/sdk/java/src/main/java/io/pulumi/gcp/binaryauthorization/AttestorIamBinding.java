@@ -6,6 +6,7 @@ package io.pulumi.gcp.binaryauthorization;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.binaryauthorization.AttestorIamBindingArgs;
 import io.pulumi.gcp.binaryauthorization.inputs.AttestorIamBindingState;
@@ -155,7 +156,7 @@ public class AttestorIamBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AttestorIamBinding(String name, AttestorIamBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:binaryauthorization/attestorIamBinding:AttestorIamBinding", name, args == null ? AttestorIamBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:binaryauthorization/attestorIamBinding:AttestorIamBinding", name, args == null ? AttestorIamBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AttestorIamBinding(String name, Output<String> id, @Nullable AttestorIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -40,7 +40,7 @@ class ResourceOptionsTest {
                         new TestResourceOptions(
                                 Output.of("id"),
                                 null,
-                                Output.empty(),
+                                Output.of(List.of()),
                                 true,
                                 List.of("b"),
                                 "test",

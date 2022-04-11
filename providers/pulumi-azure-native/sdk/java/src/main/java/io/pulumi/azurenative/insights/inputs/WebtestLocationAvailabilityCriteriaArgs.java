@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -75,10 +76,10 @@ public final class WebtestLocationAvailabilityCriteriaArgs extends io.pulumi.res
     }
 
     private WebtestLocationAvailabilityCriteriaArgs() {
-        this.componentId = Output.empty();
-        this.failedLocationCount = Output.empty();
-        this.odataType = Output.empty();
-        this.webTestId = Output.empty();
+        this.componentId = Codegen.empty();
+        this.failedLocationCount = Codegen.empty();
+        this.odataType = Codegen.empty();
+        this.webTestId = Codegen.empty();
     }
 
     public static Builder builder() {

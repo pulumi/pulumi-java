@@ -10,6 +10,7 @@ import io.pulumi.aws.ecs.outputs.CapacityProviderAutoScalingGroupProvider;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -117,7 +118,7 @@ public class CapacityProvider extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CapacityProvider(String name, CapacityProviderArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ecs/capacityProvider:CapacityProvider", name, args == null ? CapacityProviderArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ecs/capacityProvider:CapacityProvider", name, args == null ? CapacityProviderArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CapacityProvider(String name, Output<String> id, @Nullable CapacityProviderState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

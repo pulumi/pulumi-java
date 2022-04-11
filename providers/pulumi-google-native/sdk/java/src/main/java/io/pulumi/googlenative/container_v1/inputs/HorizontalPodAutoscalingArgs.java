@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class HorizontalPodAutoscalingArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
-        return this.disabled == null ? Output.empty() : this.disabled;
+        return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
     public HorizontalPodAutoscalingArgs(@Nullable Output<Boolean> disabled) {
@@ -34,7 +35,7 @@ public final class HorizontalPodAutoscalingArgs extends io.pulumi.resources.Reso
     }
 
     private HorizontalPodAutoscalingArgs() {
-        this.disabled = Output.empty();
+        this.disabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class HorizontalPodAutoscalingArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Output.ofNullable(disabled);
+            this.disabled = Codegen.ofNullable(disabled);
             return this;
         }        public HorizontalPodAutoscalingArgs build() {
             return new HorizontalPodAutoscalingArgs(disabled);

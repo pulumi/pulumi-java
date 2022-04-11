@@ -5,6 +5,7 @@ package io.pulumi.gcp.memcache.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class InstanceNodeConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     private InstanceNodeConfigArgs() {
-        this.cpuCount = Output.empty();
-        this.memorySizeMb = Output.empty();
+        this.cpuCount = Codegen.empty();
+        this.memorySizeMb = Codegen.empty();
     }
 
     public static Builder builder() {

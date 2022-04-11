@@ -5,6 +5,7 @@ package io.pulumi.gcp.kms;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class SecretCiphertextArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> additionalAuthenticatedData;
 
     public Output<String> getAdditionalAuthenticatedData() {
-        return this.additionalAuthenticatedData == null ? Output.empty() : this.additionalAuthenticatedData;
+        return this.additionalAuthenticatedData == null ? Codegen.empty() : this.additionalAuthenticatedData;
     }
 
     /**
@@ -60,9 +61,9 @@ public final class SecretCiphertextArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private SecretCiphertextArgs() {
-        this.additionalAuthenticatedData = Output.empty();
-        this.cryptoKey = Output.empty();
-        this.plaintext = Output.empty();
+        this.additionalAuthenticatedData = Codegen.empty();
+        this.cryptoKey = Codegen.empty();
+        this.plaintext = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class SecretCiphertextArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder additionalAuthenticatedData(@Nullable String additionalAuthenticatedData) {
-            this.additionalAuthenticatedData = Output.ofNullable(additionalAuthenticatedData);
+            this.additionalAuthenticatedData = Codegen.ofNullable(additionalAuthenticatedData);
             return this;
         }
         public Builder cryptoKey(Output<String> cryptoKey) {

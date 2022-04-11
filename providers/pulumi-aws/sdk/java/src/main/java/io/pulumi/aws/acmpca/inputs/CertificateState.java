@@ -6,6 +6,7 @@ package io.pulumi.aws.acmpca.inputs;
 import io.pulumi.aws.acmpca.inputs.CertificateValidityGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> certificate;
 
     public Output<String> getCertificate() {
-        return this.certificate == null ? Output.empty() : this.certificate;
+        return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> certificateAuthorityArn;
 
     public Output<String> getCertificateAuthorityArn() {
-        return this.certificateAuthorityArn == null ? Output.empty() : this.certificateAuthorityArn;
+        return this.certificateAuthorityArn == null ? Codegen.empty() : this.certificateAuthorityArn;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> certificateChain;
 
     public Output<String> getCertificateChain() {
-        return this.certificateChain == null ? Output.empty() : this.certificateChain;
+        return this.certificateChain == null ? Codegen.empty() : this.certificateChain;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> certificateSigningRequest;
 
     public Output<String> getCertificateSigningRequest() {
-        return this.certificateSigningRequest == null ? Output.empty() : this.certificateSigningRequest;
+        return this.certificateSigningRequest == null ? Codegen.empty() : this.certificateSigningRequest;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> signingAlgorithm;
 
     public Output<String> getSigningAlgorithm() {
-        return this.signingAlgorithm == null ? Output.empty() : this.signingAlgorithm;
+        return this.signingAlgorithm == null ? Codegen.empty() : this.signingAlgorithm;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> templateArn;
 
     public Output<String> getTemplateArn() {
-        return this.templateArn == null ? Output.empty() : this.templateArn;
+        return this.templateArn == null ? Codegen.empty() : this.templateArn;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<CertificateValidityGetArgs> validity;
 
     public Output<CertificateValidityGetArgs> getValidity() {
-        return this.validity == null ? Output.empty() : this.validity;
+        return this.validity == null ? Codegen.empty() : this.validity;
     }
 
     public CertificateState(
@@ -123,14 +124,14 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
     }
 
     private CertificateState() {
-        this.arn = Output.empty();
-        this.certificate = Output.empty();
-        this.certificateAuthorityArn = Output.empty();
-        this.certificateChain = Output.empty();
-        this.certificateSigningRequest = Output.empty();
-        this.signingAlgorithm = Output.empty();
-        this.templateArn = Output.empty();
-        this.validity = Output.empty();
+        this.arn = Codegen.empty();
+        this.certificate = Codegen.empty();
+        this.certificateAuthorityArn = Codegen.empty();
+        this.certificateChain = Codegen.empty();
+        this.certificateSigningRequest = Codegen.empty();
+        this.signingAlgorithm = Codegen.empty();
+        this.templateArn = Codegen.empty();
+        this.validity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -172,7 +173,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder certificate(@Nullable Output<String> certificate) {
@@ -180,7 +181,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certificate(@Nullable String certificate) {
-            this.certificate = Output.ofNullable(certificate);
+            this.certificate = Codegen.ofNullable(certificate);
             return this;
         }
         public Builder certificateAuthorityArn(@Nullable Output<String> certificateAuthorityArn) {
@@ -188,7 +189,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certificateAuthorityArn(@Nullable String certificateAuthorityArn) {
-            this.certificateAuthorityArn = Output.ofNullable(certificateAuthorityArn);
+            this.certificateAuthorityArn = Codegen.ofNullable(certificateAuthorityArn);
             return this;
         }
         public Builder certificateChain(@Nullable Output<String> certificateChain) {
@@ -196,7 +197,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certificateChain(@Nullable String certificateChain) {
-            this.certificateChain = Output.ofNullable(certificateChain);
+            this.certificateChain = Codegen.ofNullable(certificateChain);
             return this;
         }
         public Builder certificateSigningRequest(@Nullable Output<String> certificateSigningRequest) {
@@ -204,7 +205,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certificateSigningRequest(@Nullable String certificateSigningRequest) {
-            this.certificateSigningRequest = Output.ofNullable(certificateSigningRequest);
+            this.certificateSigningRequest = Codegen.ofNullable(certificateSigningRequest);
             return this;
         }
         public Builder signingAlgorithm(@Nullable Output<String> signingAlgorithm) {
@@ -212,7 +213,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder signingAlgorithm(@Nullable String signingAlgorithm) {
-            this.signingAlgorithm = Output.ofNullable(signingAlgorithm);
+            this.signingAlgorithm = Codegen.ofNullable(signingAlgorithm);
             return this;
         }
         public Builder templateArn(@Nullable Output<String> templateArn) {
@@ -220,7 +221,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder templateArn(@Nullable String templateArn) {
-            this.templateArn = Output.ofNullable(templateArn);
+            this.templateArn = Codegen.ofNullable(templateArn);
             return this;
         }
         public Builder validity(@Nullable Output<CertificateValidityGetArgs> validity) {
@@ -228,7 +229,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder validity(@Nullable CertificateValidityGetArgs validity) {
-            this.validity = Output.ofNullable(validity);
+            this.validity = Codegen.ofNullable(validity);
             return this;
         }        public CertificateState build() {
             return new CertificateState(arn, certificate, certificateAuthorityArn, certificateChain, certificateSigningRequest, signingAlgorithm, templateArn, validity);

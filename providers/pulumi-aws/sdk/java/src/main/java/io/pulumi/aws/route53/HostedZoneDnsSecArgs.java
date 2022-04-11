@@ -5,6 +5,7 @@ package io.pulumi.aws.route53;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class HostedZoneDnsSecArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> signingStatus;
 
     public Output<String> getSigningStatus() {
-        return this.signingStatus == null ? Output.empty() : this.signingStatus;
+        return this.signingStatus == null ? Codegen.empty() : this.signingStatus;
     }
 
     public HostedZoneDnsSecArgs(
@@ -44,8 +45,8 @@ public final class HostedZoneDnsSecArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private HostedZoneDnsSecArgs() {
-        this.hostedZoneId = Output.empty();
-        this.signingStatus = Output.empty();
+        this.hostedZoneId = Codegen.empty();
+        this.signingStatus = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class HostedZoneDnsSecArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder signingStatus(@Nullable String signingStatus) {
-            this.signingStatus = Output.ofNullable(signingStatus);
+            this.signingStatus = Codegen.ofNullable(signingStatus);
             return this;
         }        public HostedZoneDnsSecArgs build() {
             return new HostedZoneDnsSecArgs(hostedZoneId, signingStatus);

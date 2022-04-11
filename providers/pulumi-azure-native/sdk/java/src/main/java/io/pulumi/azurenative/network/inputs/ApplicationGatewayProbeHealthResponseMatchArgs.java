@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ApplicationGatewayProbeHealthResponseMatchArgs extends io.pul
       private final @Nullable Output<String> body;
 
     public Output<String> getBody() {
-        return this.body == null ? Output.empty() : this.body;
+        return this.body == null ? Codegen.empty() : this.body;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ApplicationGatewayProbeHealthResponseMatchArgs extends io.pul
       private final @Nullable Output<List<String>> statusCodes;
 
     public Output<List<String>> getStatusCodes() {
-        return this.statusCodes == null ? Output.empty() : this.statusCodes;
+        return this.statusCodes == null ? Codegen.empty() : this.statusCodes;
     }
 
     public ApplicationGatewayProbeHealthResponseMatchArgs(
@@ -49,8 +50,8 @@ public final class ApplicationGatewayProbeHealthResponseMatchArgs extends io.pul
     }
 
     private ApplicationGatewayProbeHealthResponseMatchArgs() {
-        this.body = Output.empty();
-        this.statusCodes = Output.empty();
+        this.body = Codegen.empty();
+        this.statusCodes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ApplicationGatewayProbeHealthResponseMatchArgs extends io.pul
             return this;
         }
         public Builder body(@Nullable String body) {
-            this.body = Output.ofNullable(body);
+            this.body = Codegen.ofNullable(body);
             return this;
         }
         public Builder statusCodes(@Nullable Output<List<String>> statusCodes) {
@@ -88,7 +89,7 @@ public final class ApplicationGatewayProbeHealthResponseMatchArgs extends io.pul
             return this;
         }
         public Builder statusCodes(@Nullable List<String> statusCodes) {
-            this.statusCodes = Output.ofNullable(statusCodes);
+            this.statusCodes = Codegen.ofNullable(statusCodes);
             return this;
         }
         public Builder statusCodes(String... statusCodes) {

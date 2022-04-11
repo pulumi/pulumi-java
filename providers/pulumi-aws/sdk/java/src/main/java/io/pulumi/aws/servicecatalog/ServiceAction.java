@@ -10,6 +10,7 @@ import io.pulumi.aws.servicecatalog.outputs.ServiceActionDefinition;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -108,7 +109,7 @@ public class ServiceAction extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ServiceAction(String name, ServiceActionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:servicecatalog/serviceAction:ServiceAction", name, args == null ? ServiceActionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:servicecatalog/serviceAction:ServiceAction", name, args == null ? ServiceActionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ServiceAction(String name, Output<String> id, @Nullable ServiceActionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

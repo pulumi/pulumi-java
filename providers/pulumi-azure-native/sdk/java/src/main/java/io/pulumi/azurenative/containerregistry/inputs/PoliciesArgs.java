@@ -8,6 +8,7 @@ import io.pulumi.azurenative.containerregistry.inputs.RetentionPolicyArgs;
 import io.pulumi.azurenative.containerregistry.inputs.TrustPolicyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -28,7 +29,7 @@ public final class PoliciesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<QuarantinePolicyArgs> quarantinePolicy;
 
     public Output<QuarantinePolicyArgs> getQuarantinePolicy() {
-        return this.quarantinePolicy == null ? Output.empty() : this.quarantinePolicy;
+        return this.quarantinePolicy == null ? Codegen.empty() : this.quarantinePolicy;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class PoliciesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RetentionPolicyArgs> retentionPolicy;
 
     public Output<RetentionPolicyArgs> getRetentionPolicy() {
-        return this.retentionPolicy == null ? Output.empty() : this.retentionPolicy;
+        return this.retentionPolicy == null ? Codegen.empty() : this.retentionPolicy;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class PoliciesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TrustPolicyArgs> trustPolicy;
 
     public Output<TrustPolicyArgs> getTrustPolicy() {
-        return this.trustPolicy == null ? Output.empty() : this.trustPolicy;
+        return this.trustPolicy == null ? Codegen.empty() : this.trustPolicy;
     }
 
     public PoliciesArgs(
@@ -63,9 +64,9 @@ public final class PoliciesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PoliciesArgs() {
-        this.quarantinePolicy = Output.empty();
-        this.retentionPolicy = Output.empty();
-        this.trustPolicy = Output.empty();
+        this.quarantinePolicy = Codegen.empty();
+        this.retentionPolicy = Codegen.empty();
+        this.trustPolicy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class PoliciesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder quarantinePolicy(@Nullable QuarantinePolicyArgs quarantinePolicy) {
-            this.quarantinePolicy = Output.ofNullable(quarantinePolicy);
+            this.quarantinePolicy = Codegen.ofNullable(quarantinePolicy);
             return this;
         }
         public Builder retentionPolicy(@Nullable Output<RetentionPolicyArgs> retentionPolicy) {
@@ -105,7 +106,7 @@ public final class PoliciesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retentionPolicy(@Nullable RetentionPolicyArgs retentionPolicy) {
-            this.retentionPolicy = Output.ofNullable(retentionPolicy);
+            this.retentionPolicy = Codegen.ofNullable(retentionPolicy);
             return this;
         }
         public Builder trustPolicy(@Nullable Output<TrustPolicyArgs> trustPolicy) {
@@ -113,7 +114,7 @@ public final class PoliciesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder trustPolicy(@Nullable TrustPolicyArgs trustPolicy) {
-            this.trustPolicy = Output.ofNullable(trustPolicy);
+            this.trustPolicy = Codegen.ofNullable(trustPolicy);
             return this;
         }        public PoliciesArgs build() {
             return new PoliciesArgs(quarantinePolicy, retentionPolicy, trustPolicy);

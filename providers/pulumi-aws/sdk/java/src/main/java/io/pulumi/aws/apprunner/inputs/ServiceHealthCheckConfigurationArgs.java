@@ -5,6 +5,7 @@ package io.pulumi.aws.apprunner.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
       private final @Nullable Output<Integer> healthyThreshold;
 
     public Output<Integer> getHealthyThreshold() {
-        return this.healthyThreshold == null ? Output.empty() : this.healthyThreshold;
+        return this.healthyThreshold == null ? Codegen.empty() : this.healthyThreshold;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
       private final @Nullable Output<Integer> interval;
 
     public Output<Integer> getInterval() {
-        return this.interval == null ? Output.empty() : this.interval;
+        return this.interval == null ? Codegen.empty() : this.interval;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
       private final @Nullable Output<String> protocol;
 
     public Output<String> getProtocol() {
-        return this.protocol == null ? Output.empty() : this.protocol;
+        return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
       private final @Nullable Output<Integer> timeout;
 
     public Output<Integer> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
       private final @Nullable Output<Integer> unhealthyThreshold;
 
     public Output<Integer> getUnhealthyThreshold() {
-        return this.unhealthyThreshold == null ? Output.empty() : this.unhealthyThreshold;
+        return this.unhealthyThreshold == null ? Codegen.empty() : this.unhealthyThreshold;
     }
 
     public ServiceHealthCheckConfigurationArgs(
@@ -97,12 +98,12 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
     }
 
     private ServiceHealthCheckConfigurationArgs() {
-        this.healthyThreshold = Output.empty();
-        this.interval = Output.empty();
-        this.path = Output.empty();
-        this.protocol = Output.empty();
-        this.timeout = Output.empty();
-        this.unhealthyThreshold = Output.empty();
+        this.healthyThreshold = Codegen.empty();
+        this.interval = Codegen.empty();
+        this.path = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.timeout = Codegen.empty();
+        this.unhealthyThreshold = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder healthyThreshold(@Nullable Integer healthyThreshold) {
-            this.healthyThreshold = Output.ofNullable(healthyThreshold);
+            this.healthyThreshold = Codegen.ofNullable(healthyThreshold);
             return this;
         }
         public Builder interval(@Nullable Output<Integer> interval) {
@@ -148,7 +149,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder interval(@Nullable Integer interval) {
-            this.interval = Output.ofNullable(interval);
+            this.interval = Codegen.ofNullable(interval);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -156,7 +157,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder protocol(@Nullable Output<String> protocol) {
@@ -164,7 +165,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Output.ofNullable(protocol);
+            this.protocol = Codegen.ofNullable(protocol);
             return this;
         }
         public Builder timeout(@Nullable Output<Integer> timeout) {
@@ -172,7 +173,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }
         public Builder unhealthyThreshold(@Nullable Output<Integer> unhealthyThreshold) {
@@ -180,7 +181,7 @@ public final class ServiceHealthCheckConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
-            this.unhealthyThreshold = Output.ofNullable(unhealthyThreshold);
+            this.unhealthyThreshold = Codegen.ofNullable(unhealthyThreshold);
             return this;
         }        public ServiceHealthCheckConfigurationArgs build() {
             return new ServiceHealthCheckConfigurationArgs(healthyThreshold, interval, path, protocol, timeout, unhealthyThreshold);

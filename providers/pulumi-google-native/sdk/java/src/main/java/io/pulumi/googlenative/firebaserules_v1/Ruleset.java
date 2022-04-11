@@ -6,6 +6,7 @@ package io.pulumi.googlenative.firebaserules_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.firebaserules_v1.RulesetArgs;
 import io.pulumi.googlenative.firebaserules_v1.outputs.MetadataResponse;
@@ -99,7 +100,7 @@ public class Ruleset extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Ruleset(String name, RulesetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:firebaserules/v1:Ruleset", name, args == null ? RulesetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:firebaserules/v1:Ruleset", name, args == null ? RulesetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Ruleset(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

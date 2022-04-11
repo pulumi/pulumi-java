@@ -13,6 +13,7 @@ import io.pulumi.awsnative.sagemaker.inputs.ModelBiasJobDefinitionStoppingCondit
 import io.pulumi.awsnative.sagemaker.inputs.ModelBiasJobDefinitionTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ModelBiasJobDefinitionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> jobDefinitionName;
 
     public Output<String> getJobDefinitionName() {
-        return this.jobDefinitionName == null ? Output.empty() : this.jobDefinitionName;
+        return this.jobDefinitionName == null ? Codegen.empty() : this.jobDefinitionName;
     }
 
     @Import(name="jobResources", required=true)
@@ -48,7 +49,7 @@ public final class ModelBiasJobDefinitionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<ModelBiasJobDefinitionModelBiasBaselineConfigArgs> modelBiasBaselineConfig;
 
     public Output<ModelBiasJobDefinitionModelBiasBaselineConfigArgs> getModelBiasBaselineConfig() {
-        return this.modelBiasBaselineConfig == null ? Output.empty() : this.modelBiasBaselineConfig;
+        return this.modelBiasBaselineConfig == null ? Codegen.empty() : this.modelBiasBaselineConfig;
     }
 
     @Import(name="modelBiasJobInput", required=true)
@@ -69,7 +70,7 @@ public final class ModelBiasJobDefinitionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<ModelBiasJobDefinitionNetworkConfigArgs> networkConfig;
 
     public Output<ModelBiasJobDefinitionNetworkConfigArgs> getNetworkConfig() {
-        return this.networkConfig == null ? Output.empty() : this.networkConfig;
+        return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class ModelBiasJobDefinitionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<ModelBiasJobDefinitionStoppingConditionArgs> stoppingCondition;
 
     public Output<ModelBiasJobDefinitionStoppingConditionArgs> getStoppingCondition() {
-        return this.stoppingCondition == null ? Output.empty() : this.stoppingCondition;
+        return this.stoppingCondition == null ? Codegen.empty() : this.stoppingCondition;
     }
 
     /**
@@ -98,7 +99,7 @@ public final class ModelBiasJobDefinitionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<ModelBiasJobDefinitionTagArgs>> tags;
 
     public Output<List<ModelBiasJobDefinitionTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ModelBiasJobDefinitionArgs(
@@ -125,16 +126,16 @@ public final class ModelBiasJobDefinitionArgs extends io.pulumi.resources.Resour
     }
 
     private ModelBiasJobDefinitionArgs() {
-        this.jobDefinitionName = Output.empty();
-        this.jobResources = Output.empty();
-        this.modelBiasAppSpecification = Output.empty();
-        this.modelBiasBaselineConfig = Output.empty();
-        this.modelBiasJobInput = Output.empty();
-        this.modelBiasJobOutputConfig = Output.empty();
-        this.networkConfig = Output.empty();
-        this.roleArn = Output.empty();
-        this.stoppingCondition = Output.empty();
-        this.tags = Output.empty();
+        this.jobDefinitionName = Codegen.empty();
+        this.jobResources = Codegen.empty();
+        this.modelBiasAppSpecification = Codegen.empty();
+        this.modelBiasBaselineConfig = Codegen.empty();
+        this.modelBiasJobInput = Codegen.empty();
+        this.modelBiasJobOutputConfig = Codegen.empty();
+        this.networkConfig = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.stoppingCondition = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -180,7 +181,7 @@ public final class ModelBiasJobDefinitionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder jobDefinitionName(@Nullable String jobDefinitionName) {
-            this.jobDefinitionName = Output.ofNullable(jobDefinitionName);
+            this.jobDefinitionName = Codegen.ofNullable(jobDefinitionName);
             return this;
         }
         public Builder jobResources(Output<ModelBiasJobDefinitionMonitoringResourcesArgs> jobResources) {
@@ -204,7 +205,7 @@ public final class ModelBiasJobDefinitionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder modelBiasBaselineConfig(@Nullable ModelBiasJobDefinitionModelBiasBaselineConfigArgs modelBiasBaselineConfig) {
-            this.modelBiasBaselineConfig = Output.ofNullable(modelBiasBaselineConfig);
+            this.modelBiasBaselineConfig = Codegen.ofNullable(modelBiasBaselineConfig);
             return this;
         }
         public Builder modelBiasJobInput(Output<ModelBiasJobDefinitionModelBiasJobInputArgs> modelBiasJobInput) {
@@ -228,7 +229,7 @@ public final class ModelBiasJobDefinitionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder networkConfig(@Nullable ModelBiasJobDefinitionNetworkConfigArgs networkConfig) {
-            this.networkConfig = Output.ofNullable(networkConfig);
+            this.networkConfig = Codegen.ofNullable(networkConfig);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {
@@ -244,7 +245,7 @@ public final class ModelBiasJobDefinitionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder stoppingCondition(@Nullable ModelBiasJobDefinitionStoppingConditionArgs stoppingCondition) {
-            this.stoppingCondition = Output.ofNullable(stoppingCondition);
+            this.stoppingCondition = Codegen.ofNullable(stoppingCondition);
             return this;
         }
         public Builder tags(@Nullable Output<List<ModelBiasJobDefinitionTagArgs>> tags) {
@@ -252,7 +253,7 @@ public final class ModelBiasJobDefinitionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder tags(@Nullable List<ModelBiasJobDefinitionTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ModelBiasJobDefinitionTagArgs... tags) {

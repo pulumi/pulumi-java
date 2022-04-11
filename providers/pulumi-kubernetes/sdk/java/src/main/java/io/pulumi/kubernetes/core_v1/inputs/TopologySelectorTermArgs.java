@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.TopologySelectorLabelRequirementArgs;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class TopologySelectorTermArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<TopologySelectorLabelRequirementArgs>> matchLabelExpressions;
 
     public Output<List<TopologySelectorLabelRequirementArgs>> getMatchLabelExpressions() {
-        return this.matchLabelExpressions == null ? Output.empty() : this.matchLabelExpressions;
+        return this.matchLabelExpressions == null ? Codegen.empty() : this.matchLabelExpressions;
     }
 
     public TopologySelectorTermArgs(@Nullable Output<List<TopologySelectorLabelRequirementArgs>> matchLabelExpressions) {
@@ -35,7 +36,7 @@ public final class TopologySelectorTermArgs extends io.pulumi.resources.Resource
     }
 
     private TopologySelectorTermArgs() {
-        this.matchLabelExpressions = Output.empty();
+        this.matchLabelExpressions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class TopologySelectorTermArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder matchLabelExpressions(@Nullable List<TopologySelectorLabelRequirementArgs> matchLabelExpressions) {
-            this.matchLabelExpressions = Output.ofNullable(matchLabelExpressions);
+            this.matchLabelExpressions = Codegen.ofNullable(matchLabelExpressions);
             return this;
         }
         public Builder matchLabelExpressions(TopologySelectorLabelRequirementArgs... matchLabelExpressions) {

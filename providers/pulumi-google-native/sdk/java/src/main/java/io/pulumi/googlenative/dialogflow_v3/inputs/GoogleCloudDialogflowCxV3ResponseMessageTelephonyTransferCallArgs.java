@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCall
       private final @Nullable Output<String> phoneNumber;
 
     public Output<String> getPhoneNumber() {
-        return this.phoneNumber == null ? Output.empty() : this.phoneNumber;
+        return this.phoneNumber == null ? Codegen.empty() : this.phoneNumber;
     }
 
     public GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCallArgs(@Nullable Output<String> phoneNumber) {
@@ -34,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCall
     }
 
     private GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCallArgs() {
-        this.phoneNumber = Output.empty();
+        this.phoneNumber = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCall
             return this;
         }
         public Builder phoneNumber(@Nullable String phoneNumber) {
-            this.phoneNumber = Output.ofNullable(phoneNumber);
+            this.phoneNumber = Codegen.ofNullable(phoneNumber);
             return this;
         }        public GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCallArgs build() {
             return new GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCallArgs(phoneNumber);

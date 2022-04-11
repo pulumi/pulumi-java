@@ -5,6 +5,7 @@ package io.pulumi.googlenative.notebooks_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.notebooks_v1.enums.UpgradeHistoryEntryAction;
 import io.pulumi.googlenative.notebooks_v1.enums.UpgradeHistoryEntryState;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<UpgradeHistoryEntryAction> action;
 
     public Output<UpgradeHistoryEntryAction> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> containerImage;
 
     public Output<String> getContainerImage() {
-        return this.containerImage == null ? Output.empty() : this.containerImage;
+        return this.containerImage == null ? Codegen.empty() : this.containerImage;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> framework;
 
     public Output<String> getFramework() {
-        return this.framework == null ? Output.empty() : this.framework;
+        return this.framework == null ? Codegen.empty() : this.framework;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> snapshot;
 
     public Output<String> getSnapshot() {
-        return this.snapshot == null ? Output.empty() : this.snapshot;
+        return this.snapshot == null ? Codegen.empty() : this.snapshot;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<UpgradeHistoryEntryState> state;
 
     public Output<UpgradeHistoryEntryState> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> targetImage;
 
     public Output<String> getTargetImage() {
-        return this.targetImage == null ? Output.empty() : this.targetImage;
+        return this.targetImage == null ? Codegen.empty() : this.targetImage;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> targetVersion;
 
     public Output<String> getTargetVersion() {
-        return this.targetVersion == null ? Output.empty() : this.targetVersion;
+        return this.targetVersion == null ? Codegen.empty() : this.targetVersion;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> vmImage;
 
     public Output<String> getVmImage() {
-        return this.vmImage == null ? Output.empty() : this.vmImage;
+        return this.vmImage == null ? Codegen.empty() : this.vmImage;
     }
 
     public UpgradeHistoryEntryArgs(
@@ -154,16 +155,16 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
     }
 
     private UpgradeHistoryEntryArgs() {
-        this.action = Output.empty();
-        this.containerImage = Output.empty();
-        this.createTime = Output.empty();
-        this.framework = Output.empty();
-        this.snapshot = Output.empty();
-        this.state = Output.empty();
-        this.targetImage = Output.empty();
-        this.targetVersion = Output.empty();
-        this.version = Output.empty();
-        this.vmImage = Output.empty();
+        this.action = Codegen.empty();
+        this.containerImage = Codegen.empty();
+        this.createTime = Codegen.empty();
+        this.framework = Codegen.empty();
+        this.snapshot = Codegen.empty();
+        this.state = Codegen.empty();
+        this.targetImage = Codegen.empty();
+        this.targetVersion = Codegen.empty();
+        this.version = Codegen.empty();
+        this.vmImage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -209,7 +210,7 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder action(@Nullable UpgradeHistoryEntryAction action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder containerImage(@Nullable Output<String> containerImage) {
@@ -217,7 +218,7 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder containerImage(@Nullable String containerImage) {
-            this.containerImage = Output.ofNullable(containerImage);
+            this.containerImage = Codegen.ofNullable(containerImage);
             return this;
         }
         public Builder createTime(@Nullable Output<String> createTime) {
@@ -225,7 +226,7 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder framework(@Nullable Output<String> framework) {
@@ -233,7 +234,7 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder framework(@Nullable String framework) {
-            this.framework = Output.ofNullable(framework);
+            this.framework = Codegen.ofNullable(framework);
             return this;
         }
         public Builder snapshot(@Nullable Output<String> snapshot) {
@@ -241,7 +242,7 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder snapshot(@Nullable String snapshot) {
-            this.snapshot = Output.ofNullable(snapshot);
+            this.snapshot = Codegen.ofNullable(snapshot);
             return this;
         }
         public Builder state(@Nullable Output<UpgradeHistoryEntryState> state) {
@@ -249,7 +250,7 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder state(@Nullable UpgradeHistoryEntryState state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder targetImage(@Nullable Output<String> targetImage) {
@@ -257,7 +258,7 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder targetImage(@Nullable String targetImage) {
-            this.targetImage = Output.ofNullable(targetImage);
+            this.targetImage = Codegen.ofNullable(targetImage);
             return this;
         }
         public Builder targetVersion(@Nullable Output<String> targetVersion) {
@@ -265,7 +266,7 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder targetVersion(@Nullable String targetVersion) {
-            this.targetVersion = Output.ofNullable(targetVersion);
+            this.targetVersion = Codegen.ofNullable(targetVersion);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -273,7 +274,7 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }
         public Builder vmImage(@Nullable Output<String> vmImage) {
@@ -281,7 +282,7 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder vmImage(@Nullable String vmImage) {
-            this.vmImage = Output.ofNullable(vmImage);
+            this.vmImage = Codegen.ofNullable(vmImage);
             return this;
         }        public UpgradeHistoryEntryArgs build() {
             return new UpgradeHistoryEntryArgs(action, containerImage, createTime, framework, snapshot, state, targetImage, targetVersion, version, vmImage);

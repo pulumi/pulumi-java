@@ -5,6 +5,7 @@ package io.pulumi.awsnative.mediaconnect;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class FlowVpcInterfaceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -84,11 +85,11 @@ public final class FlowVpcInterfaceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private FlowVpcInterfaceArgs() {
-        this.flowArn = Output.empty();
-        this.name = Output.empty();
-        this.roleArn = Output.empty();
-        this.securityGroupIds = Output.empty();
-        this.subnetId = Output.empty();
+        this.flowArn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.securityGroupIds = Codegen.empty();
+        this.subnetId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class FlowVpcInterfaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {

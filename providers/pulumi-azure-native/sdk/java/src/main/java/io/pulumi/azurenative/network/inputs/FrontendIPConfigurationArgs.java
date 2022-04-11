@@ -11,6 +11,7 @@ import io.pulumi.azurenative.network.inputs.SubnetArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,7 +34,7 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> privateIPAddress;
 
     public Output<String> getPrivateIPAddress() {
-        return this.privateIPAddress == null ? Output.empty() : this.privateIPAddress;
+        return this.privateIPAddress == null ? Codegen.empty() : this.privateIPAddress;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Either<String,IPVersion>> privateIPAddressVersion;
 
     public Output<Either<String,IPVersion>> getPrivateIPAddressVersion() {
-        return this.privateIPAddressVersion == null ? Output.empty() : this.privateIPAddressVersion;
+        return this.privateIPAddressVersion == null ? Codegen.empty() : this.privateIPAddressVersion;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
     public Output<Either<String,IPAllocationMethod>> getPrivateIPAllocationMethod() {
-        return this.privateIPAllocationMethod == null ? Output.empty() : this.privateIPAllocationMethod;
+        return this.privateIPAllocationMethod == null ? Codegen.empty() : this.privateIPAllocationMethod;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<PublicIPAddressArgs> publicIPAddress;
 
     public Output<PublicIPAddressArgs> getPublicIPAddress() {
-        return this.publicIPAddress == null ? Output.empty() : this.publicIPAddress;
+        return this.publicIPAddress == null ? Codegen.empty() : this.publicIPAddress;
     }
 
     /**
@@ -99,7 +100,7 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<SubResourceArgs> publicIPPrefix;
 
     public Output<SubResourceArgs> getPublicIPPrefix() {
-        return this.publicIPPrefix == null ? Output.empty() : this.publicIPPrefix;
+        return this.publicIPPrefix == null ? Codegen.empty() : this.publicIPPrefix;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<SubnetArgs> subnet;
 
     public Output<SubnetArgs> getSubnet() {
-        return this.subnet == null ? Output.empty() : this.subnet;
+        return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 
     /**
@@ -121,7 +122,7 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<List<String>> zones;
 
     public Output<List<String>> getZones() {
-        return this.zones == null ? Output.empty() : this.zones;
+        return this.zones == null ? Codegen.empty() : this.zones;
     }
 
     public FrontendIPConfigurationArgs(
@@ -146,15 +147,15 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
     }
 
     private FrontendIPConfigurationArgs() {
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.privateIPAddress = Output.empty();
-        this.privateIPAddressVersion = Output.empty();
-        this.privateIPAllocationMethod = Output.empty();
-        this.publicIPAddress = Output.empty();
-        this.publicIPPrefix = Output.empty();
-        this.subnet = Output.empty();
-        this.zones = Output.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.privateIPAddress = Codegen.empty();
+        this.privateIPAddressVersion = Codegen.empty();
+        this.privateIPAllocationMethod = Codegen.empty();
+        this.publicIPAddress = Codegen.empty();
+        this.publicIPPrefix = Codegen.empty();
+        this.subnet = Codegen.empty();
+        this.zones = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -198,7 +199,7 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -206,7 +207,7 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder privateIPAddress(@Nullable Output<String> privateIPAddress) {
@@ -214,7 +215,7 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
-            this.privateIPAddress = Output.ofNullable(privateIPAddress);
+            this.privateIPAddress = Codegen.ofNullable(privateIPAddress);
             return this;
         }
         public Builder privateIPAddressVersion(@Nullable Output<Either<String,IPVersion>> privateIPAddressVersion) {
@@ -222,7 +223,7 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder privateIPAddressVersion(@Nullable Either<String,IPVersion> privateIPAddressVersion) {
-            this.privateIPAddressVersion = Output.ofNullable(privateIPAddressVersion);
+            this.privateIPAddressVersion = Codegen.ofNullable(privateIPAddressVersion);
             return this;
         }
         public Builder privateIPAllocationMethod(@Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod) {
@@ -230,7 +231,7 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder privateIPAllocationMethod(@Nullable Either<String,IPAllocationMethod> privateIPAllocationMethod) {
-            this.privateIPAllocationMethod = Output.ofNullable(privateIPAllocationMethod);
+            this.privateIPAllocationMethod = Codegen.ofNullable(privateIPAllocationMethod);
             return this;
         }
         public Builder publicIPAddress(@Nullable Output<PublicIPAddressArgs> publicIPAddress) {
@@ -238,7 +239,7 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder publicIPAddress(@Nullable PublicIPAddressArgs publicIPAddress) {
-            this.publicIPAddress = Output.ofNullable(publicIPAddress);
+            this.publicIPAddress = Codegen.ofNullable(publicIPAddress);
             return this;
         }
         public Builder publicIPPrefix(@Nullable Output<SubResourceArgs> publicIPPrefix) {
@@ -246,7 +247,7 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder publicIPPrefix(@Nullable SubResourceArgs publicIPPrefix) {
-            this.publicIPPrefix = Output.ofNullable(publicIPPrefix);
+            this.publicIPPrefix = Codegen.ofNullable(publicIPPrefix);
             return this;
         }
         public Builder subnet(@Nullable Output<SubnetArgs> subnet) {
@@ -254,7 +255,7 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder subnet(@Nullable SubnetArgs subnet) {
-            this.subnet = Output.ofNullable(subnet);
+            this.subnet = Codegen.ofNullable(subnet);
             return this;
         }
         public Builder zones(@Nullable Output<List<String>> zones) {
@@ -262,7 +263,7 @@ public final class FrontendIPConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = Output.ofNullable(zones);
+            this.zones = Codegen.ofNullable(zones);
             return this;
         }
         public Builder zones(String... zones) {

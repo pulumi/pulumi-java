@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class SharedVPCHostProjectArgs extends io.pulumi.resources.Resource
     }
 
     private SharedVPCHostProjectArgs() {
-        this.project = Output.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {

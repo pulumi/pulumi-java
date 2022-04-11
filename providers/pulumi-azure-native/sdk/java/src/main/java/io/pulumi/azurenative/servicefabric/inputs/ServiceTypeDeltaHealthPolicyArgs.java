@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,15 +29,15 @@ public final class ServiceTypeDeltaHealthPolicyArgs extends io.pulumi.resources.
       private final @Nullable Output<Integer> maxPercentDeltaUnhealthyServices;
 
     public Output<Integer> getMaxPercentDeltaUnhealthyServices() {
-        return this.maxPercentDeltaUnhealthyServices == null ? Output.empty() : this.maxPercentDeltaUnhealthyServices;
+        return this.maxPercentDeltaUnhealthyServices == null ? Codegen.empty() : this.maxPercentDeltaUnhealthyServices;
     }
 
     public ServiceTypeDeltaHealthPolicyArgs(@Nullable Output<Integer> maxPercentDeltaUnhealthyServices) {
-        this.maxPercentDeltaUnhealthyServices = maxPercentDeltaUnhealthyServices == null ? Output.ofNullable(0) : maxPercentDeltaUnhealthyServices;
+        this.maxPercentDeltaUnhealthyServices = maxPercentDeltaUnhealthyServices == null ? Codegen.ofNullable(0) : maxPercentDeltaUnhealthyServices;
     }
 
     private ServiceTypeDeltaHealthPolicyArgs() {
-        this.maxPercentDeltaUnhealthyServices = Output.empty();
+        this.maxPercentDeltaUnhealthyServices = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -64,7 +65,7 @@ public final class ServiceTypeDeltaHealthPolicyArgs extends io.pulumi.resources.
             return this;
         }
         public Builder maxPercentDeltaUnhealthyServices(@Nullable Integer maxPercentDeltaUnhealthyServices) {
-            this.maxPercentDeltaUnhealthyServices = Output.ofNullable(maxPercentDeltaUnhealthyServices);
+            this.maxPercentDeltaUnhealthyServices = Codegen.ofNullable(maxPercentDeltaUnhealthyServices);
             return this;
         }        public ServiceTypeDeltaHealthPolicyArgs build() {
             return new ServiceTypeDeltaHealthPolicyArgs(maxPercentDeltaUnhealthyServices);

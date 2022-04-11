@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class FunctionMetadataArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> functionARN;
 
     public Output<String> getFunctionARN() {
-        return this.functionARN == null ? Output.empty() : this.functionARN;
+        return this.functionARN == null ? Codegen.empty() : this.functionARN;
     }
 
     public FunctionMetadataArgs(@Nullable Output<String> functionARN) {
@@ -26,7 +27,7 @@ public final class FunctionMetadataArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private FunctionMetadataArgs() {
-        this.functionARN = Output.empty();
+        this.functionARN = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class FunctionMetadataArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder functionARN(@Nullable String functionARN) {
-            this.functionARN = Output.ofNullable(functionARN);
+            this.functionARN = Codegen.ofNullable(functionARN);
             return this;
         }        public FunctionMetadataArgs build() {
             return new FunctionMetadataArgs(functionARN);

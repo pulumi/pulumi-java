@@ -6,6 +6,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
       private final @Nullable Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs> s3ContentLocation;
 
     public Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs> getS3ContentLocation() {
-        return this.s3ContentLocation == null ? Output.empty() : this.s3ContentLocation;
+        return this.s3ContentLocation == null ? Codegen.empty() : this.s3ContentLocation;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
       private final @Nullable Output<String> textContent;
 
     public Output<String> getTextContent() {
-        return this.textContent == null ? Output.empty() : this.textContent;
+        return this.textContent == null ? Codegen.empty() : this.textContent;
     }
 
     public ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs(
@@ -45,8 +46,8 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
     }
 
     private ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs() {
-        this.s3ContentLocation = Output.empty();
-        this.textContent = Output.empty();
+        this.s3ContentLocation = Codegen.empty();
+        this.textContent = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
             return this;
         }
         public Builder s3ContentLocation(@Nullable ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs s3ContentLocation) {
-            this.s3ContentLocation = Output.ofNullable(s3ContentLocation);
+            this.s3ContentLocation = Codegen.ofNullable(s3ContentLocation);
             return this;
         }
         public Builder textContent(@Nullable Output<String> textContent) {
@@ -84,7 +85,7 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
             return this;
         }
         public Builder textContent(@Nullable String textContent) {
-            this.textContent = Output.ofNullable(textContent);
+            this.textContent = Codegen.ofNullable(textContent);
             return this;
         }        public ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs build() {
             return new ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs(s3ContentLocation, textContent);

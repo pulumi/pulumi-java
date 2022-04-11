@@ -5,6 +5,7 @@ package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class UserPoolUsernameConfigurationArgs extends io.pulumi.resources
     }
 
     private UserPoolUsernameConfigurationArgs() {
-        this.caseSensitive = Output.empty();
+        this.caseSensitive = Codegen.empty();
     }
 
     public static Builder builder() {

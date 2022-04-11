@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> allocationId;
 
     public Output<String> getAllocationId() {
-        return this.allocationId == null ? Output.empty() : this.allocationId;
+        return this.allocationId == null ? Codegen.empty() : this.allocationId;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> connectivityType;
 
     public Output<String> getConnectivityType() {
-        return this.connectivityType == null ? Output.empty() : this.connectivityType;
+        return this.connectivityType == null ? Codegen.empty() : this.connectivityType;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> networkInterfaceId;
 
     public Output<String> getNetworkInterfaceId() {
-        return this.networkInterfaceId == null ? Output.empty() : this.networkInterfaceId;
+        return this.networkInterfaceId == null ? Codegen.empty() : this.networkInterfaceId;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> privateIp;
 
     public Output<String> getPrivateIp() {
-        return this.privateIp == null ? Output.empty() : this.privateIp;
+        return this.privateIp == null ? Codegen.empty() : this.privateIp;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> publicIp;
 
     public Output<String> getPublicIp() {
-        return this.publicIp == null ? Output.empty() : this.publicIp;
+        return this.publicIp == null ? Codegen.empty() : this.publicIp;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
-        return this.subnetId == null ? Output.empty() : this.subnetId;
+        return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public NatGatewayState(
@@ -123,14 +124,14 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
     }
 
     private NatGatewayState() {
-        this.allocationId = Output.empty();
-        this.connectivityType = Output.empty();
-        this.networkInterfaceId = Output.empty();
-        this.privateIp = Output.empty();
-        this.publicIp = Output.empty();
-        this.subnetId = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.allocationId = Codegen.empty();
+        this.connectivityType = Codegen.empty();
+        this.networkInterfaceId = Codegen.empty();
+        this.privateIp = Codegen.empty();
+        this.publicIp = Codegen.empty();
+        this.subnetId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -172,7 +173,7 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allocationId(@Nullable String allocationId) {
-            this.allocationId = Output.ofNullable(allocationId);
+            this.allocationId = Codegen.ofNullable(allocationId);
             return this;
         }
         public Builder connectivityType(@Nullable Output<String> connectivityType) {
@@ -180,7 +181,7 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder connectivityType(@Nullable String connectivityType) {
-            this.connectivityType = Output.ofNullable(connectivityType);
+            this.connectivityType = Codegen.ofNullable(connectivityType);
             return this;
         }
         public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
@@ -188,7 +189,7 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
-            this.networkInterfaceId = Output.ofNullable(networkInterfaceId);
+            this.networkInterfaceId = Codegen.ofNullable(networkInterfaceId);
             return this;
         }
         public Builder privateIp(@Nullable Output<String> privateIp) {
@@ -196,7 +197,7 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder privateIp(@Nullable String privateIp) {
-            this.privateIp = Output.ofNullable(privateIp);
+            this.privateIp = Codegen.ofNullable(privateIp);
             return this;
         }
         public Builder publicIp(@Nullable Output<String> publicIp) {
@@ -204,7 +205,7 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicIp(@Nullable String publicIp) {
-            this.publicIp = Output.ofNullable(publicIp);
+            this.publicIp = Codegen.ofNullable(publicIp);
             return this;
         }
         public Builder subnetId(@Nullable Output<String> subnetId) {
@@ -212,7 +213,7 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Output.ofNullable(subnetId);
+            this.subnetId = Codegen.ofNullable(subnetId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -220,7 +221,7 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -228,7 +229,7 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public NatGatewayState build() {
             return new NatGatewayState(allocationId, connectivityType, networkInterfaceId, privateIp, publicIp, subnetId, tags, tagsAll);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class NodePoolManagementGetArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Boolean> autoRepair;
 
     public Output<Boolean> getAutoRepair() {
-        return this.autoRepair == null ? Output.empty() : this.autoRepair;
+        return this.autoRepair == null ? Codegen.empty() : this.autoRepair;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class NodePoolManagementGetArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Boolean> autoUpgrade;
 
     public Output<Boolean> getAutoUpgrade() {
-        return this.autoUpgrade == null ? Output.empty() : this.autoUpgrade;
+        return this.autoUpgrade == null ? Codegen.empty() : this.autoUpgrade;
     }
 
     public NodePoolManagementGetArgs(
@@ -44,8 +45,8 @@ public final class NodePoolManagementGetArgs extends io.pulumi.resources.Resourc
     }
 
     private NodePoolManagementGetArgs() {
-        this.autoRepair = Output.empty();
-        this.autoUpgrade = Output.empty();
+        this.autoRepair = Codegen.empty();
+        this.autoUpgrade = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class NodePoolManagementGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder autoRepair(@Nullable Boolean autoRepair) {
-            this.autoRepair = Output.ofNullable(autoRepair);
+            this.autoRepair = Codegen.ofNullable(autoRepair);
             return this;
         }
         public Builder autoUpgrade(@Nullable Output<Boolean> autoUpgrade) {
@@ -83,7 +84,7 @@ public final class NodePoolManagementGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder autoUpgrade(@Nullable Boolean autoUpgrade) {
-            this.autoUpgrade = Output.ofNullable(autoUpgrade);
+            this.autoUpgrade = Codegen.ofNullable(autoUpgrade);
             return this;
         }        public NodePoolManagementGetArgs build() {
             return new NodePoolManagementGetArgs(autoRepair, autoUpgrade);

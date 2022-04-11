@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class ProjectDefaultNetworkTierState extends io.pulumi.resources.Re
       private final @Nullable Output<String> networkTier;
 
     public Output<String> getNetworkTier() {
-        return this.networkTier == null ? Output.empty() : this.networkTier;
+        return this.networkTier == null ? Codegen.empty() : this.networkTier;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ProjectDefaultNetworkTierState extends io.pulumi.resources.Re
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public ProjectDefaultNetworkTierState(
@@ -46,8 +47,8 @@ public final class ProjectDefaultNetworkTierState extends io.pulumi.resources.Re
     }
 
     private ProjectDefaultNetworkTierState() {
-        this.networkTier = Output.empty();
-        this.project = Output.empty();
+        this.networkTier = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class ProjectDefaultNetworkTierState extends io.pulumi.resources.Re
             return this;
         }
         public Builder networkTier(@Nullable String networkTier) {
-            this.networkTier = Output.ofNullable(networkTier);
+            this.networkTier = Codegen.ofNullable(networkTier);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -85,7 +86,7 @@ public final class ProjectDefaultNetworkTierState extends io.pulumi.resources.Re
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public ProjectDefaultNetworkTierState build() {
             return new ProjectDefaultNetworkTierState(networkTier, project);

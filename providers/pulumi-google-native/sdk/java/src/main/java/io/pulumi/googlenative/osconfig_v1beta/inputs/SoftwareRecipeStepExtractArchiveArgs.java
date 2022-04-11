@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.osconfig_v1beta.enums.SoftwareRecipeStepExtractArchiveType;
 import java.lang.String;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class SoftwareRecipeStepExtractArchiveArgs extends io.pulumi.resour
       private final @Nullable Output<String> destination;
 
     public Output<String> getDestination() {
-        return this.destination == null ? Output.empty() : this.destination;
+        return this.destination == null ? Codegen.empty() : this.destination;
     }
 
     /**
@@ -62,9 +63,9 @@ public final class SoftwareRecipeStepExtractArchiveArgs extends io.pulumi.resour
     }
 
     private SoftwareRecipeStepExtractArchiveArgs() {
-        this.artifactId = Output.empty();
-        this.destination = Output.empty();
-        this.type = Output.empty();
+        this.artifactId = Codegen.empty();
+        this.destination = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class SoftwareRecipeStepExtractArchiveArgs extends io.pulumi.resour
             return this;
         }
         public Builder destination(@Nullable String destination) {
-            this.destination = Output.ofNullable(destination);
+            this.destination = Codegen.ofNullable(destination);
             return this;
         }
         public Builder type(Output<SoftwareRecipeStepExtractArchiveType> type) {

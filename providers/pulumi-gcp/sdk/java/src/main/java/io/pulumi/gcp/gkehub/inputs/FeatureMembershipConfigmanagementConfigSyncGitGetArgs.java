@@ -5,6 +5,7 @@ package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
       private final @Nullable Output<String> gcpServiceAccountEmail;
 
     public Output<String> getGcpServiceAccountEmail() {
-        return this.gcpServiceAccountEmail == null ? Output.empty() : this.gcpServiceAccountEmail;
+        return this.gcpServiceAccountEmail == null ? Codegen.empty() : this.gcpServiceAccountEmail;
     }
 
     /**
@@ -29,7 +30,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
       private final @Nullable Output<String> httpsProxy;
 
     public Output<String> getHttpsProxy() {
-        return this.httpsProxy == null ? Output.empty() : this.httpsProxy;
+        return this.httpsProxy == null ? Codegen.empty() : this.httpsProxy;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
       private final @Nullable Output<String> policyDir;
 
     public Output<String> getPolicyDir() {
-        return this.policyDir == null ? Output.empty() : this.policyDir;
+        return this.policyDir == null ? Codegen.empty() : this.policyDir;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
       private final @Nullable Output<String> secretType;
 
     public Output<String> getSecretType() {
-        return this.secretType == null ? Output.empty() : this.secretType;
+        return this.secretType == null ? Codegen.empty() : this.secretType;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
       private final @Nullable Output<String> syncBranch;
 
     public Output<String> getSyncBranch() {
-        return this.syncBranch == null ? Output.empty() : this.syncBranch;
+        return this.syncBranch == null ? Codegen.empty() : this.syncBranch;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
       private final @Nullable Output<String> syncRepo;
 
     public Output<String> getSyncRepo() {
-        return this.syncRepo == null ? Output.empty() : this.syncRepo;
+        return this.syncRepo == null ? Codegen.empty() : this.syncRepo;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
       private final @Nullable Output<String> syncRev;
 
     public Output<String> getSyncRev() {
-        return this.syncRev == null ? Output.empty() : this.syncRev;
+        return this.syncRev == null ? Codegen.empty() : this.syncRev;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
       private final @Nullable Output<String> syncWaitSecs;
 
     public Output<String> getSyncWaitSecs() {
-        return this.syncWaitSecs == null ? Output.empty() : this.syncWaitSecs;
+        return this.syncWaitSecs == null ? Codegen.empty() : this.syncWaitSecs;
     }
 
     public FeatureMembershipConfigmanagementConfigSyncGitGetArgs(
@@ -118,14 +119,14 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
     }
 
     private FeatureMembershipConfigmanagementConfigSyncGitGetArgs() {
-        this.gcpServiceAccountEmail = Output.empty();
-        this.httpsProxy = Output.empty();
-        this.policyDir = Output.empty();
-        this.secretType = Output.empty();
-        this.syncBranch = Output.empty();
-        this.syncRepo = Output.empty();
-        this.syncRev = Output.empty();
-        this.syncWaitSecs = Output.empty();
+        this.gcpServiceAccountEmail = Codegen.empty();
+        this.httpsProxy = Codegen.empty();
+        this.policyDir = Codegen.empty();
+        this.secretType = Codegen.empty();
+        this.syncBranch = Codegen.empty();
+        this.syncRepo = Codegen.empty();
+        this.syncRev = Codegen.empty();
+        this.syncWaitSecs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -167,7 +168,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
             return this;
         }
         public Builder gcpServiceAccountEmail(@Nullable String gcpServiceAccountEmail) {
-            this.gcpServiceAccountEmail = Output.ofNullable(gcpServiceAccountEmail);
+            this.gcpServiceAccountEmail = Codegen.ofNullable(gcpServiceAccountEmail);
             return this;
         }
         public Builder httpsProxy(@Nullable Output<String> httpsProxy) {
@@ -175,7 +176,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
             return this;
         }
         public Builder httpsProxy(@Nullable String httpsProxy) {
-            this.httpsProxy = Output.ofNullable(httpsProxy);
+            this.httpsProxy = Codegen.ofNullable(httpsProxy);
             return this;
         }
         public Builder policyDir(@Nullable Output<String> policyDir) {
@@ -183,7 +184,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
             return this;
         }
         public Builder policyDir(@Nullable String policyDir) {
-            this.policyDir = Output.ofNullable(policyDir);
+            this.policyDir = Codegen.ofNullable(policyDir);
             return this;
         }
         public Builder secretType(@Nullable Output<String> secretType) {
@@ -191,7 +192,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
             return this;
         }
         public Builder secretType(@Nullable String secretType) {
-            this.secretType = Output.ofNullable(secretType);
+            this.secretType = Codegen.ofNullable(secretType);
             return this;
         }
         public Builder syncBranch(@Nullable Output<String> syncBranch) {
@@ -199,7 +200,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
             return this;
         }
         public Builder syncBranch(@Nullable String syncBranch) {
-            this.syncBranch = Output.ofNullable(syncBranch);
+            this.syncBranch = Codegen.ofNullable(syncBranch);
             return this;
         }
         public Builder syncRepo(@Nullable Output<String> syncRepo) {
@@ -207,7 +208,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
             return this;
         }
         public Builder syncRepo(@Nullable String syncRepo) {
-            this.syncRepo = Output.ofNullable(syncRepo);
+            this.syncRepo = Codegen.ofNullable(syncRepo);
             return this;
         }
         public Builder syncRev(@Nullable Output<String> syncRev) {
@@ -215,7 +216,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
             return this;
         }
         public Builder syncRev(@Nullable String syncRev) {
-            this.syncRev = Output.ofNullable(syncRev);
+            this.syncRev = Codegen.ofNullable(syncRev);
             return this;
         }
         public Builder syncWaitSecs(@Nullable Output<String> syncWaitSecs) {
@@ -223,7 +224,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGitGetArgs extends
             return this;
         }
         public Builder syncWaitSecs(@Nullable String syncWaitSecs) {
-            this.syncWaitSecs = Output.ofNullable(syncWaitSecs);
+            this.syncWaitSecs = Codegen.ofNullable(syncWaitSecs);
             return this;
         }        public FeatureMembershipConfigmanagementConfigSyncGitGetArgs build() {
             return new FeatureMembershipConfigmanagementConfigSyncGitGetArgs(gcpServiceAccountEmail, httpsProxy, policyDir, secretType, syncBranch, syncRepo, syncRev, syncWaitSecs);

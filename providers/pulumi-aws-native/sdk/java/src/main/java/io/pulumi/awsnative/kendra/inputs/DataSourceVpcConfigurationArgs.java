@@ -5,6 +5,7 @@ package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -36,8 +37,8 @@ public final class DataSourceVpcConfigurationArgs extends io.pulumi.resources.Re
     }
 
     private DataSourceVpcConfigurationArgs() {
-        this.securityGroupIds = Output.empty();
-        this.subnetIds = Output.empty();
+        this.securityGroupIds = Codegen.empty();
+        this.subnetIds = Codegen.empty();
     }
 
     public static Builder builder() {

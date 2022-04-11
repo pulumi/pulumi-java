@@ -5,6 +5,7 @@ package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class ReportGroupExportConfigS3DestinationGetArgs extends io.pulumi
       private final @Nullable Output<Boolean> encryptionDisabled;
 
     public Output<Boolean> getEncryptionDisabled() {
-        return this.encryptionDisabled == null ? Output.empty() : this.encryptionDisabled;
+        return this.encryptionDisabled == null ? Codegen.empty() : this.encryptionDisabled;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class ReportGroupExportConfigS3DestinationGetArgs extends io.pulumi
       private final @Nullable Output<String> packaging;
 
     public Output<String> getPackaging() {
-        return this.packaging == null ? Output.empty() : this.packaging;
+        return this.packaging == null ? Codegen.empty() : this.packaging;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class ReportGroupExportConfigS3DestinationGetArgs extends io.pulumi
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     public ReportGroupExportConfigS3DestinationGetArgs(
@@ -85,11 +86,11 @@ public final class ReportGroupExportConfigS3DestinationGetArgs extends io.pulumi
     }
 
     private ReportGroupExportConfigS3DestinationGetArgs() {
-        this.bucket = Output.empty();
-        this.encryptionDisabled = Output.empty();
-        this.encryptionKey = Output.empty();
-        this.packaging = Output.empty();
-        this.path = Output.empty();
+        this.bucket = Codegen.empty();
+        this.encryptionDisabled = Codegen.empty();
+        this.encryptionKey = Codegen.empty();
+        this.packaging = Codegen.empty();
+        this.path = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -133,7 +134,7 @@ public final class ReportGroupExportConfigS3DestinationGetArgs extends io.pulumi
             return this;
         }
         public Builder encryptionDisabled(@Nullable Boolean encryptionDisabled) {
-            this.encryptionDisabled = Output.ofNullable(encryptionDisabled);
+            this.encryptionDisabled = Codegen.ofNullable(encryptionDisabled);
             return this;
         }
         public Builder encryptionKey(Output<String> encryptionKey) {
@@ -149,7 +150,7 @@ public final class ReportGroupExportConfigS3DestinationGetArgs extends io.pulumi
             return this;
         }
         public Builder packaging(@Nullable String packaging) {
-            this.packaging = Output.ofNullable(packaging);
+            this.packaging = Codegen.ofNullable(packaging);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -157,7 +158,7 @@ public final class ReportGroupExportConfigS3DestinationGetArgs extends io.pulumi
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }        public ReportGroupExportConfigS3DestinationGetArgs build() {
             return new ReportGroupExportConfigS3DestinationGetArgs(bucket, encryptionDisabled, encryptionKey, packaging, path);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class RestorePolicyPropertiesArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Integer> days;
 
     public Output<Integer> getDays() {
-        return this.days == null ? Output.empty() : this.days;
+        return this.days == null ? Codegen.empty() : this.days;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class RestorePolicyPropertiesArgs extends io.pulumi.resources.Resou
     }
 
     private RestorePolicyPropertiesArgs() {
-        this.days = Output.empty();
-        this.enabled = Output.empty();
+        this.days = Codegen.empty();
+        this.enabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class RestorePolicyPropertiesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder days(@Nullable Integer days) {
-            this.days = Output.ofNullable(days);
+            this.days = Codegen.ofNullable(days);
             return this;
         }
         public Builder enabled(Output<Boolean> enabled) {

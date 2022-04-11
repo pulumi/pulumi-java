@@ -7,6 +7,7 @@ import io.pulumi.azurenative.media.inputs.LiveEventInputTrackSelectionArgs;
 import io.pulumi.azurenative.media.inputs.LiveEventOutputTranscriptionTrackArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class LiveEventTranscriptionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<LiveEventInputTrackSelectionArgs>> inputTrackSelection;
 
     public Output<List<LiveEventInputTrackSelectionArgs>> getInputTrackSelection() {
-        return this.inputTrackSelection == null ? Output.empty() : this.inputTrackSelection;
+        return this.inputTrackSelection == null ? Codegen.empty() : this.inputTrackSelection;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class LiveEventTranscriptionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> language;
 
     public Output<String> getLanguage() {
-        return this.language == null ? Output.empty() : this.language;
+        return this.language == null ? Codegen.empty() : this.language;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class LiveEventTranscriptionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<LiveEventOutputTranscriptionTrackArgs> outputTranscriptionTrack;
 
     public Output<LiveEventOutputTranscriptionTrackArgs> getOutputTranscriptionTrack() {
-        return this.outputTranscriptionTrack == null ? Output.empty() : this.outputTranscriptionTrack;
+        return this.outputTranscriptionTrack == null ? Codegen.empty() : this.outputTranscriptionTrack;
     }
 
     public LiveEventTranscriptionArgs(
@@ -64,9 +65,9 @@ public final class LiveEventTranscriptionArgs extends io.pulumi.resources.Resour
     }
 
     private LiveEventTranscriptionArgs() {
-        this.inputTrackSelection = Output.empty();
-        this.language = Output.empty();
-        this.outputTranscriptionTrack = Output.empty();
+        this.inputTrackSelection = Codegen.empty();
+        this.language = Codegen.empty();
+        this.outputTranscriptionTrack = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class LiveEventTranscriptionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder inputTrackSelection(@Nullable List<LiveEventInputTrackSelectionArgs> inputTrackSelection) {
-            this.inputTrackSelection = Output.ofNullable(inputTrackSelection);
+            this.inputTrackSelection = Codegen.ofNullable(inputTrackSelection);
             return this;
         }
         public Builder inputTrackSelection(LiveEventInputTrackSelectionArgs... inputTrackSelection) {
@@ -109,7 +110,7 @@ public final class LiveEventTranscriptionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder language(@Nullable String language) {
-            this.language = Output.ofNullable(language);
+            this.language = Codegen.ofNullable(language);
             return this;
         }
         public Builder outputTranscriptionTrack(@Nullable Output<LiveEventOutputTranscriptionTrackArgs> outputTranscriptionTrack) {
@@ -117,7 +118,7 @@ public final class LiveEventTranscriptionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder outputTranscriptionTrack(@Nullable LiveEventOutputTranscriptionTrackArgs outputTranscriptionTrack) {
-            this.outputTranscriptionTrack = Output.ofNullable(outputTranscriptionTrack);
+            this.outputTranscriptionTrack = Codegen.ofNullable(outputTranscriptionTrack);
             return this;
         }        public LiveEventTranscriptionArgs build() {
             return new LiveEventTranscriptionArgs(inputTrackSelection, language, outputTranscriptionTrack);

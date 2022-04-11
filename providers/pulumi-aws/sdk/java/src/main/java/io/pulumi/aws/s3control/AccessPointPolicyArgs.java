@@ -5,6 +5,7 @@ package io.pulumi.aws.s3control;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class AccessPointPolicyArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AccessPointPolicyArgs() {
-        this.accessPointArn = Output.empty();
-        this.policy = Output.empty();
+        this.accessPointArn = Codegen.empty();
+        this.policy = Codegen.empty();
     }
 
     public static Builder builder() {

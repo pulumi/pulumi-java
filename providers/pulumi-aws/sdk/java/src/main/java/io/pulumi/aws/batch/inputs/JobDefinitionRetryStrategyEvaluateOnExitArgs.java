@@ -5,6 +5,7 @@ package io.pulumi.aws.batch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class JobDefinitionRetryStrategyEvaluateOnExitArgs extends io.pulum
       private final @Nullable Output<String> onExitCode;
 
     public Output<String> getOnExitCode() {
-        return this.onExitCode == null ? Output.empty() : this.onExitCode;
+        return this.onExitCode == null ? Codegen.empty() : this.onExitCode;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class JobDefinitionRetryStrategyEvaluateOnExitArgs extends io.pulum
       private final @Nullable Output<String> onReason;
 
     public Output<String> getOnReason() {
-        return this.onReason == null ? Output.empty() : this.onReason;
+        return this.onReason == null ? Codegen.empty() : this.onReason;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class JobDefinitionRetryStrategyEvaluateOnExitArgs extends io.pulum
       private final @Nullable Output<String> onStatusReason;
 
     public Output<String> getOnStatusReason() {
-        return this.onStatusReason == null ? Output.empty() : this.onStatusReason;
+        return this.onStatusReason == null ? Codegen.empty() : this.onStatusReason;
     }
 
     public JobDefinitionRetryStrategyEvaluateOnExitArgs(
@@ -70,10 +71,10 @@ public final class JobDefinitionRetryStrategyEvaluateOnExitArgs extends io.pulum
     }
 
     private JobDefinitionRetryStrategyEvaluateOnExitArgs() {
-        this.action = Output.empty();
-        this.onExitCode = Output.empty();
-        this.onReason = Output.empty();
-        this.onStatusReason = Output.empty();
+        this.action = Codegen.empty();
+        this.onExitCode = Codegen.empty();
+        this.onReason = Codegen.empty();
+        this.onStatusReason = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class JobDefinitionRetryStrategyEvaluateOnExitArgs extends io.pulum
             return this;
         }
         public Builder onExitCode(@Nullable String onExitCode) {
-            this.onExitCode = Output.ofNullable(onExitCode);
+            this.onExitCode = Codegen.ofNullable(onExitCode);
             return this;
         }
         public Builder onReason(@Nullable Output<String> onReason) {
@@ -123,7 +124,7 @@ public final class JobDefinitionRetryStrategyEvaluateOnExitArgs extends io.pulum
             return this;
         }
         public Builder onReason(@Nullable String onReason) {
-            this.onReason = Output.ofNullable(onReason);
+            this.onReason = Codegen.ofNullable(onReason);
             return this;
         }
         public Builder onStatusReason(@Nullable Output<String> onStatusReason) {
@@ -131,7 +132,7 @@ public final class JobDefinitionRetryStrategyEvaluateOnExitArgs extends io.pulum
             return this;
         }
         public Builder onStatusReason(@Nullable String onStatusReason) {
-            this.onStatusReason = Output.ofNullable(onStatusReason);
+            this.onStatusReason = Codegen.ofNullable(onStatusReason);
             return this;
         }        public JobDefinitionRetryStrategyEvaluateOnExitArgs build() {
             return new JobDefinitionRetryStrategyEvaluateOnExitArgs(action, onExitCode, onReason, onStatusReason);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ClusterClusterConfigGceClusterConfigShieldedInstanceConfigGet
       private final @Nullable Output<Boolean> enableIntegrityMonitoring;
 
     public Output<Boolean> getEnableIntegrityMonitoring() {
-        return this.enableIntegrityMonitoring == null ? Output.empty() : this.enableIntegrityMonitoring;
+        return this.enableIntegrityMonitoring == null ? Codegen.empty() : this.enableIntegrityMonitoring;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ClusterClusterConfigGceClusterConfigShieldedInstanceConfigGet
       private final @Nullable Output<Boolean> enableSecureBoot;
 
     public Output<Boolean> getEnableSecureBoot() {
-        return this.enableSecureBoot == null ? Output.empty() : this.enableSecureBoot;
+        return this.enableSecureBoot == null ? Codegen.empty() : this.enableSecureBoot;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ClusterClusterConfigGceClusterConfigShieldedInstanceConfigGet
       private final @Nullable Output<Boolean> enableVtpm;
 
     public Output<Boolean> getEnableVtpm() {
-        return this.enableVtpm == null ? Output.empty() : this.enableVtpm;
+        return this.enableVtpm == null ? Codegen.empty() : this.enableVtpm;
     }
 
     public ClusterClusterConfigGceClusterConfigShieldedInstanceConfigGetArgs(
@@ -57,9 +58,9 @@ public final class ClusterClusterConfigGceClusterConfigShieldedInstanceConfigGet
     }
 
     private ClusterClusterConfigGceClusterConfigShieldedInstanceConfigGetArgs() {
-        this.enableIntegrityMonitoring = Output.empty();
-        this.enableSecureBoot = Output.empty();
-        this.enableVtpm = Output.empty();
+        this.enableIntegrityMonitoring = Codegen.empty();
+        this.enableSecureBoot = Codegen.empty();
+        this.enableVtpm = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class ClusterClusterConfigGceClusterConfigShieldedInstanceConfigGet
             return this;
         }
         public Builder enableIntegrityMonitoring(@Nullable Boolean enableIntegrityMonitoring) {
-            this.enableIntegrityMonitoring = Output.ofNullable(enableIntegrityMonitoring);
+            this.enableIntegrityMonitoring = Codegen.ofNullable(enableIntegrityMonitoring);
             return this;
         }
         public Builder enableSecureBoot(@Nullable Output<Boolean> enableSecureBoot) {
@@ -99,7 +100,7 @@ public final class ClusterClusterConfigGceClusterConfigShieldedInstanceConfigGet
             return this;
         }
         public Builder enableSecureBoot(@Nullable Boolean enableSecureBoot) {
-            this.enableSecureBoot = Output.ofNullable(enableSecureBoot);
+            this.enableSecureBoot = Codegen.ofNullable(enableSecureBoot);
             return this;
         }
         public Builder enableVtpm(@Nullable Output<Boolean> enableVtpm) {
@@ -107,7 +108,7 @@ public final class ClusterClusterConfigGceClusterConfigShieldedInstanceConfigGet
             return this;
         }
         public Builder enableVtpm(@Nullable Boolean enableVtpm) {
-            this.enableVtpm = Output.ofNullable(enableVtpm);
+            this.enableVtpm = Codegen.ofNullable(enableVtpm);
             return this;
         }        public ClusterClusterConfigGceClusterConfigShieldedInstanceConfigGetArgs build() {
             return new ClusterClusterConfigGceClusterConfigShieldedInstanceConfigGetArgs(enableIntegrityMonitoring, enableSecureBoot, enableVtpm);

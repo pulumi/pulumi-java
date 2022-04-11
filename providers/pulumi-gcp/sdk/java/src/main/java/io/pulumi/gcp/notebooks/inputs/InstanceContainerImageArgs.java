@@ -5,6 +5,7 @@ package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class InstanceContainerImageArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> tag;
 
     public Output<String> getTag() {
-        return this.tag == null ? Output.empty() : this.tag;
+        return this.tag == null ? Codegen.empty() : this.tag;
     }
 
     public InstanceContainerImageArgs(
@@ -45,8 +46,8 @@ public final class InstanceContainerImageArgs extends io.pulumi.resources.Resour
     }
 
     private InstanceContainerImageArgs() {
-        this.repository = Output.empty();
-        this.tag = Output.empty();
+        this.repository = Codegen.empty();
+        this.tag = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class InstanceContainerImageArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder tag(@Nullable String tag) {
-            this.tag = Output.ofNullable(tag);
+            this.tag = Codegen.ofNullable(tag);
             return this;
         }        public InstanceContainerImageArgs build() {
             return new InstanceContainerImageArgs(repository, tag);

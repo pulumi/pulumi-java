@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class ContainerDeviceGetArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> containerPath;
 
     public Output<String> getContainerPath() {
-        return this.containerPath == null ? Output.empty() : this.containerPath;
+        return this.containerPath == null ? Codegen.empty() : this.containerPath;
     }
 
     @Import(name="hostPath", required=true)
@@ -32,7 +33,7 @@ public final class ContainerDeviceGetArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> permissions;
 
     public Output<String> getPermissions() {
-        return this.permissions == null ? Output.empty() : this.permissions;
+        return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 
     public ContainerDeviceGetArgs(
@@ -45,9 +46,9 @@ public final class ContainerDeviceGetArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ContainerDeviceGetArgs() {
-        this.containerPath = Output.empty();
-        this.hostPath = Output.empty();
-        this.permissions = Output.empty();
+        this.containerPath = Codegen.empty();
+        this.hostPath = Codegen.empty();
+        this.permissions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ContainerDeviceGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder containerPath(@Nullable String containerPath) {
-            this.containerPath = Output.ofNullable(containerPath);
+            this.containerPath = Codegen.ofNullable(containerPath);
             return this;
         }
         public Builder hostPath(Output<String> hostPath) {
@@ -95,7 +96,7 @@ public final class ContainerDeviceGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder permissions(@Nullable String permissions) {
-            this.permissions = Output.ofNullable(permissions);
+            this.permissions = Codegen.ofNullable(permissions);
             return this;
         }        public ContainerDeviceGetArgs build() {
             return new ContainerDeviceGetArgs(containerPath, hostPath, permissions);

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -49,8 +50,8 @@ public final class DetectorModelPayloadArgs extends io.pulumi.resources.Resource
     }
 
     private DetectorModelPayloadArgs() {
-        this.contentExpression = Output.empty();
-        this.type = Output.empty();
+        this.contentExpression = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

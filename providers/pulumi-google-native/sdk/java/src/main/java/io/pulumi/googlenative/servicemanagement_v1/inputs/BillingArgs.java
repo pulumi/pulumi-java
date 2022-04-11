@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.BillingDestinationArgs;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class BillingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<BillingDestinationArgs>> consumerDestinations;
 
     public Output<List<BillingDestinationArgs>> getConsumerDestinations() {
-        return this.consumerDestinations == null ? Output.empty() : this.consumerDestinations;
+        return this.consumerDestinations == null ? Codegen.empty() : this.consumerDestinations;
     }
 
     public BillingArgs(@Nullable Output<List<BillingDestinationArgs>> consumerDestinations) {
@@ -35,7 +36,7 @@ public final class BillingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BillingArgs() {
-        this.consumerDestinations = Output.empty();
+        this.consumerDestinations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class BillingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder consumerDestinations(@Nullable List<BillingDestinationArgs> consumerDestinations) {
-            this.consumerDestinations = Output.ofNullable(consumerDestinations);
+            this.consumerDestinations = Codegen.ofNullable(consumerDestinations);
             return this;
         }
         public Builder consumerDestinations(BillingDestinationArgs... consumerDestinations) {

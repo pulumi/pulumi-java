@@ -6,6 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupStatementArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -25,7 +26,7 @@ public final class RuleGroupNotStatementArgs extends io.pulumi.resources.Resourc
     }
 
     private RuleGroupNotStatementArgs() {
-        this.statement = Output.empty();
+        this.statement = Codegen.empty();
     }
 
     public static Builder builder() {

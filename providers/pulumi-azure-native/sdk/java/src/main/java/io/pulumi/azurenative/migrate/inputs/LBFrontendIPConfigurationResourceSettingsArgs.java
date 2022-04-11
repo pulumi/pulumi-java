@@ -6,6 +6,7 @@ package io.pulumi.azurenative.migrate.inputs;
 import io.pulumi.azurenative.migrate.inputs.SubnetReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
       private final @Nullable Output<String> privateIpAddress;
 
     public Output<String> getPrivateIpAddress() {
-        return this.privateIpAddress == null ? Output.empty() : this.privateIpAddress;
+        return this.privateIpAddress == null ? Codegen.empty() : this.privateIpAddress;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
       private final @Nullable Output<String> privateIpAllocationMethod;
 
     public Output<String> getPrivateIpAllocationMethod() {
-        return this.privateIpAllocationMethod == null ? Output.empty() : this.privateIpAllocationMethod;
+        return this.privateIpAllocationMethod == null ? Codegen.empty() : this.privateIpAllocationMethod;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
       private final @Nullable Output<SubnetReferenceArgs> subnet;
 
     public Output<SubnetReferenceArgs> getSubnet() {
-        return this.subnet == null ? Output.empty() : this.subnet;
+        return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
       private final @Nullable Output<String> zones;
 
     public Output<String> getZones() {
-        return this.zones == null ? Output.empty() : this.zones;
+        return this.zones == null ? Codegen.empty() : this.zones;
     }
 
     public LBFrontendIPConfigurationResourceSettingsArgs(
@@ -89,11 +90,11 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
     }
 
     private LBFrontendIPConfigurationResourceSettingsArgs() {
-        this.name = Output.empty();
-        this.privateIpAddress = Output.empty();
-        this.privateIpAllocationMethod = Output.empty();
-        this.subnet = Output.empty();
-        this.zones = Output.empty();
+        this.name = Codegen.empty();
+        this.privateIpAddress = Codegen.empty();
+        this.privateIpAllocationMethod = Codegen.empty();
+        this.subnet = Codegen.empty();
+        this.zones = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
@@ -137,7 +138,7 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
             return this;
         }
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
-            this.privateIpAddress = Output.ofNullable(privateIpAddress);
+            this.privateIpAddress = Codegen.ofNullable(privateIpAddress);
             return this;
         }
         public Builder privateIpAllocationMethod(@Nullable Output<String> privateIpAllocationMethod) {
@@ -145,7 +146,7 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
             return this;
         }
         public Builder privateIpAllocationMethod(@Nullable String privateIpAllocationMethod) {
-            this.privateIpAllocationMethod = Output.ofNullable(privateIpAllocationMethod);
+            this.privateIpAllocationMethod = Codegen.ofNullable(privateIpAllocationMethod);
             return this;
         }
         public Builder subnet(@Nullable Output<SubnetReferenceArgs> subnet) {
@@ -153,7 +154,7 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
             return this;
         }
         public Builder subnet(@Nullable SubnetReferenceArgs subnet) {
-            this.subnet = Output.ofNullable(subnet);
+            this.subnet = Codegen.ofNullable(subnet);
             return this;
         }
         public Builder zones(@Nullable Output<String> zones) {
@@ -161,7 +162,7 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
             return this;
         }
         public Builder zones(@Nullable String zones) {
-            this.zones = Output.ofNullable(zones);
+            this.zones = Codegen.ofNullable(zones);
             return this;
         }        public LBFrontendIPConfigurationResourceSettingsArgs build() {
             return new LBFrontendIPConfigurationResourceSettingsArgs(name, privateIpAddress, privateIpAllocationMethod, subnet, zones);

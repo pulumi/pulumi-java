@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs.WebhookClientConfigArgs;
 import io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs.WebhookThrottleConfigArgs;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<WebhookThrottleConfigArgs> throttle;
 
     public Output<WebhookThrottleConfigArgs> getThrottle() {
-        return this.throttle == null ? Output.empty() : this.throttle;
+        return this.throttle == null ? Codegen.empty() : this.throttle;
     }
 
     public WebhookArgs(
@@ -49,8 +50,8 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebhookArgs() {
-        this.clientConfig = Output.empty();
-        this.throttle = Output.empty();
+        this.clientConfig = Codegen.empty();
+        this.throttle = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder throttle(@Nullable WebhookThrottleConfigArgs throttle) {
-            this.throttle = Output.ofNullable(throttle);
+            this.throttle = Codegen.ofNullable(throttle);
             return this;
         }        public WebhookArgs build() {
             return new WebhookArgs(clientConfig, throttle);

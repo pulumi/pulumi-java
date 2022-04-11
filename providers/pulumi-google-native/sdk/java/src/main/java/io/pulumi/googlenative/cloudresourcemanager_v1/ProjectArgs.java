@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudresourcemanager_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudresourcemanager_v1.enums.ProjectLifecycleState;
 import io.pulumi.googlenative.cloudresourcemanager_v1.inputs.ResourceIdArgs;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ProjectLifecycleState> lifecycleState;
 
     public Output<ProjectLifecycleState> getLifecycleState() {
-        return this.lifecycleState == null ? Output.empty() : this.lifecycleState;
+        return this.lifecycleState == null ? Codegen.empty() : this.lifecycleState;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ResourceIdArgs> parent;
 
     public Output<ResourceIdArgs> getParent() {
-        return this.parent == null ? Output.empty() : this.parent;
+        return this.parent == null ? Codegen.empty() : this.parent;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> projectId;
 
     public Output<String> getProjectId() {
-        return this.projectId == null ? Output.empty() : this.projectId;
+        return this.projectId == null ? Codegen.empty() : this.projectId;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> projectNumber;
 
     public Output<String> getProjectNumber() {
-        return this.projectNumber == null ? Output.empty() : this.projectNumber;
+        return this.projectNumber == null ? Codegen.empty() : this.projectNumber;
     }
 
     public ProjectArgs(
@@ -112,13 +113,13 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProjectArgs() {
-        this.createTime = Output.empty();
-        this.labels = Output.empty();
-        this.lifecycleState = Output.empty();
-        this.name = Output.empty();
-        this.parent = Output.empty();
-        this.projectId = Output.empty();
-        this.projectNumber = Output.empty();
+        this.createTime = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.lifecycleState = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parent = Codegen.empty();
+        this.projectId = Codegen.empty();
+        this.projectNumber = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -166,7 +167,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder lifecycleState(@Nullable Output<ProjectLifecycleState> lifecycleState) {
@@ -174,7 +175,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lifecycleState(@Nullable ProjectLifecycleState lifecycleState) {
-            this.lifecycleState = Output.ofNullable(lifecycleState);
+            this.lifecycleState = Codegen.ofNullable(lifecycleState);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -182,7 +183,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parent(@Nullable Output<ResourceIdArgs> parent) {
@@ -190,7 +191,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parent(@Nullable ResourceIdArgs parent) {
-            this.parent = Output.ofNullable(parent);
+            this.parent = Codegen.ofNullable(parent);
             return this;
         }
         public Builder projectId(@Nullable Output<String> projectId) {
@@ -198,7 +199,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder projectId(@Nullable String projectId) {
-            this.projectId = Output.ofNullable(projectId);
+            this.projectId = Codegen.ofNullable(projectId);
             return this;
         }
         public Builder projectNumber(@Nullable Output<String> projectNumber) {
@@ -206,7 +207,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder projectNumber(@Nullable String projectNumber) {
-            this.projectNumber = Output.ofNullable(projectNumber);
+            this.projectNumber = Codegen.ofNullable(projectNumber);
             return this;
         }        public ProjectArgs build() {
             return new ProjectArgs(createTime, labels, lifecycleState, name, parent, projectId, projectNumber);

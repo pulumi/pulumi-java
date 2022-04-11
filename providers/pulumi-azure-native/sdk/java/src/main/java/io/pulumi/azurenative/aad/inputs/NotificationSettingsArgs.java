@@ -8,6 +8,7 @@ import io.pulumi.azurenative.aad.enums.NotifyGlobalAdmins;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<String>> additionalRecipients;
 
     public Output<List<String>> getAdditionalRecipients() {
-        return this.additionalRecipients == null ? Output.empty() : this.additionalRecipients;
+        return this.additionalRecipients == null ? Codegen.empty() : this.additionalRecipients;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Either<String,NotifyDcAdmins>> notifyDcAdmins;
 
     public Output<Either<String,NotifyDcAdmins>> getNotifyDcAdmins() {
-        return this.notifyDcAdmins == null ? Output.empty() : this.notifyDcAdmins;
+        return this.notifyDcAdmins == null ? Codegen.empty() : this.notifyDcAdmins;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Either<String,NotifyGlobalAdmins>> notifyGlobalAdmins;
 
     public Output<Either<String,NotifyGlobalAdmins>> getNotifyGlobalAdmins() {
-        return this.notifyGlobalAdmins == null ? Output.empty() : this.notifyGlobalAdmins;
+        return this.notifyGlobalAdmins == null ? Codegen.empty() : this.notifyGlobalAdmins;
     }
 
     public NotificationSettingsArgs(
@@ -65,9 +66,9 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
     }
 
     private NotificationSettingsArgs() {
-        this.additionalRecipients = Output.empty();
-        this.notifyDcAdmins = Output.empty();
-        this.notifyGlobalAdmins = Output.empty();
+        this.additionalRecipients = Codegen.empty();
+        this.notifyDcAdmins = Codegen.empty();
+        this.notifyGlobalAdmins = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder additionalRecipients(@Nullable List<String> additionalRecipients) {
-            this.additionalRecipients = Output.ofNullable(additionalRecipients);
+            this.additionalRecipients = Codegen.ofNullable(additionalRecipients);
             return this;
         }
         public Builder additionalRecipients(String... additionalRecipients) {
@@ -110,7 +111,7 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder notifyDcAdmins(@Nullable Either<String,NotifyDcAdmins> notifyDcAdmins) {
-            this.notifyDcAdmins = Output.ofNullable(notifyDcAdmins);
+            this.notifyDcAdmins = Codegen.ofNullable(notifyDcAdmins);
             return this;
         }
         public Builder notifyGlobalAdmins(@Nullable Output<Either<String,NotifyGlobalAdmins>> notifyGlobalAdmins) {
@@ -118,7 +119,7 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder notifyGlobalAdmins(@Nullable Either<String,NotifyGlobalAdmins> notifyGlobalAdmins) {
-            this.notifyGlobalAdmins = Output.ofNullable(notifyGlobalAdmins);
+            this.notifyGlobalAdmins = Codegen.ofNullable(notifyGlobalAdmins);
             return this;
         }        public NotificationSettingsArgs build() {
             return new NotificationSettingsArgs(additionalRecipients, notifyDcAdmins, notifyGlobalAdmins);

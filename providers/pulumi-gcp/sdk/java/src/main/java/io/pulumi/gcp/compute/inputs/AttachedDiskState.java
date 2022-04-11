@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class AttachedDiskState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> deviceName;
 
     public Output<String> getDeviceName() {
-        return this.deviceName == null ? Output.empty() : this.deviceName;
+        return this.deviceName == null ? Codegen.empty() : this.deviceName;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class AttachedDiskState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> disk;
 
     public Output<String> getDisk() {
-        return this.disk == null ? Output.empty() : this.disk;
+        return this.disk == null ? Codegen.empty() : this.disk;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class AttachedDiskState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> instance;
 
     public Output<String> getInstance() {
-        return this.instance == null ? Output.empty() : this.instance;
+        return this.instance == null ? Codegen.empty() : this.instance;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class AttachedDiskState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> mode;
 
     public Output<String> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class AttachedDiskState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class AttachedDiskState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public AttachedDiskState(
@@ -107,12 +108,12 @@ public final class AttachedDiskState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AttachedDiskState() {
-        this.deviceName = Output.empty();
-        this.disk = Output.empty();
-        this.instance = Output.empty();
-        this.mode = Output.empty();
-        this.project = Output.empty();
-        this.zone = Output.empty();
+        this.deviceName = Codegen.empty();
+        this.disk = Codegen.empty();
+        this.instance = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.project = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -150,7 +151,7 @@ public final class AttachedDiskState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Output.ofNullable(deviceName);
+            this.deviceName = Codegen.ofNullable(deviceName);
             return this;
         }
         public Builder disk(@Nullable Output<String> disk) {
@@ -158,7 +159,7 @@ public final class AttachedDiskState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disk(@Nullable String disk) {
-            this.disk = Output.ofNullable(disk);
+            this.disk = Codegen.ofNullable(disk);
             return this;
         }
         public Builder instance(@Nullable Output<String> instance) {
@@ -166,7 +167,7 @@ public final class AttachedDiskState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instance(@Nullable String instance) {
-            this.instance = Output.ofNullable(instance);
+            this.instance = Codegen.ofNullable(instance);
             return this;
         }
         public Builder mode(@Nullable Output<String> mode) {
@@ -174,7 +175,7 @@ public final class AttachedDiskState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mode(@Nullable String mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -182,7 +183,7 @@ public final class AttachedDiskState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder zone(@Nullable Output<String> zone) {
@@ -190,7 +191,7 @@ public final class AttachedDiskState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public AttachedDiskState build() {
             return new AttachedDiskState(deviceName, disk, instance, mode, project, zone);

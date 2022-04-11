@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2EntityIdArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class GooglePrivacyDlpV2KAnonymityConfigArgs extends io.pulumi.reso
       private final @Nullable Output<GooglePrivacyDlpV2EntityIdArgs> entityId;
 
     public Output<GooglePrivacyDlpV2EntityIdArgs> getEntityId() {
-        return this.entityId == null ? Output.empty() : this.entityId;
+        return this.entityId == null ? Codegen.empty() : this.entityId;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class GooglePrivacyDlpV2KAnonymityConfigArgs extends io.pulumi.reso
       private final @Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds;
 
     public Output<List<GooglePrivacyDlpV2FieldIdArgs>> getQuasiIds() {
-        return this.quasiIds == null ? Output.empty() : this.quasiIds;
+        return this.quasiIds == null ? Codegen.empty() : this.quasiIds;
     }
 
     public GooglePrivacyDlpV2KAnonymityConfigArgs(
@@ -50,8 +51,8 @@ public final class GooglePrivacyDlpV2KAnonymityConfigArgs extends io.pulumi.reso
     }
 
     private GooglePrivacyDlpV2KAnonymityConfigArgs() {
-        this.entityId = Output.empty();
-        this.quasiIds = Output.empty();
+        this.entityId = Codegen.empty();
+        this.quasiIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class GooglePrivacyDlpV2KAnonymityConfigArgs extends io.pulumi.reso
             return this;
         }
         public Builder entityId(@Nullable GooglePrivacyDlpV2EntityIdArgs entityId) {
-            this.entityId = Output.ofNullable(entityId);
+            this.entityId = Codegen.ofNullable(entityId);
             return this;
         }
         public Builder quasiIds(@Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds) {
@@ -89,7 +90,7 @@ public final class GooglePrivacyDlpV2KAnonymityConfigArgs extends io.pulumi.reso
             return this;
         }
         public Builder quasiIds(@Nullable List<GooglePrivacyDlpV2FieldIdArgs> quasiIds) {
-            this.quasiIds = Output.ofNullable(quasiIds);
+            this.quasiIds = Codegen.ofNullable(quasiIds);
             return this;
         }
         public Builder quasiIds(GooglePrivacyDlpV2FieldIdArgs... quasiIds) {

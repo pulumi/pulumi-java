@@ -7,6 +7,7 @@ import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigContentTypeProf
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigQueryArgProfileConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class FieldLevelEncryptionConfigArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
-        return this.comment == null ? Output.empty() : this.comment;
+        return this.comment == null ? Codegen.empty() : this.comment;
     }
 
     /**
@@ -59,9 +60,9 @@ public final class FieldLevelEncryptionConfigArgs extends io.pulumi.resources.Re
     }
 
     private FieldLevelEncryptionConfigArgs() {
-        this.comment = Output.empty();
-        this.contentTypeProfileConfig = Output.empty();
-        this.queryArgProfileConfig = Output.empty();
+        this.comment = Codegen.empty();
+        this.contentTypeProfileConfig = Codegen.empty();
+        this.queryArgProfileConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class FieldLevelEncryptionConfigArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder comment(@Nullable String comment) {
-            this.comment = Output.ofNullable(comment);
+            this.comment = Codegen.ofNullable(comment);
             return this;
         }
         public Builder contentTypeProfileConfig(Output<FieldLevelEncryptionConfigContentTypeProfileConfigArgs> contentTypeProfileConfig) {

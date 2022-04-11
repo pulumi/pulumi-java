@@ -5,6 +5,7 @@ package io.pulumi.aws.connect.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class BotAssociationLexBotArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> lexRegion;
 
     public Output<String> getLexRegion() {
-        return this.lexRegion == null ? Output.empty() : this.lexRegion;
+        return this.lexRegion == null ? Codegen.empty() : this.lexRegion;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class BotAssociationLexBotArgs extends io.pulumi.resources.Resource
     }
 
     private BotAssociationLexBotArgs() {
-        this.lexRegion = Output.empty();
-        this.name = Output.empty();
+        this.lexRegion = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class BotAssociationLexBotArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder lexRegion(@Nullable String lexRegion) {
-            this.lexRegion = Output.ofNullable(lexRegion);
+            this.lexRegion = Codegen.ofNullable(lexRegion);
             return this;
         }
         public Builder name(Output<String> name) {

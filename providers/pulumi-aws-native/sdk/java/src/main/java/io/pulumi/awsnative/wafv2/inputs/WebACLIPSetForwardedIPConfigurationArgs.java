@@ -7,6 +7,7 @@ import io.pulumi.awsnative.wafv2.enums.WebACLIPSetForwardedIPConfigurationFallba
 import io.pulumi.awsnative.wafv2.enums.WebACLIPSetForwardedIPConfigurationPosition;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -46,9 +47,9 @@ public final class WebACLIPSetForwardedIPConfigurationArgs extends io.pulumi.res
     }
 
     private WebACLIPSetForwardedIPConfigurationArgs() {
-        this.fallbackBehavior = Output.empty();
-        this.headerName = Output.empty();
-        this.position = Output.empty();
+        this.fallbackBehavior = Codegen.empty();
+        this.headerName = Codegen.empty();
+        this.position = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationSpekeKeyProviderArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -29,7 +30,7 @@ public final class PackagingConfigurationCmafEncryptionArgs extends io.pulumi.re
     }
 
     private PackagingConfigurationCmafEncryptionArgs() {
-        this.spekeKeyProvider = Output.empty();
+        this.spekeKeyProvider = Codegen.empty();
     }
 
     public static Builder builder() {

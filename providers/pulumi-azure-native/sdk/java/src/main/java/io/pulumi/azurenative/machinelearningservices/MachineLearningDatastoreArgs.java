@@ -7,6 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.enums.DatastoreTypeArm;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> accountKey;
 
     public Output<String> getAccountKey() {
-        return this.accountKey == null ? Output.empty() : this.accountKey;
+        return this.accountKey == null ? Codegen.empty() : this.accountKey;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> accountName;
 
     public Output<String> getAccountName() {
-        return this.accountName == null ? Output.empty() : this.accountName;
+        return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> adlsResourceGroup;
 
     public Output<String> getAdlsResourceGroup() {
-        return this.adlsResourceGroup == null ? Output.empty() : this.adlsResourceGroup;
+        return this.adlsResourceGroup == null ? Codegen.empty() : this.adlsResourceGroup;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> adlsSubscriptionId;
 
     public Output<String> getAdlsSubscriptionId() {
-        return this.adlsSubscriptionId == null ? Output.empty() : this.adlsSubscriptionId;
+        return this.adlsSubscriptionId == null ? Codegen.empty() : this.adlsSubscriptionId;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> authorityUrl;
 
     public Output<String> getAuthorityUrl() {
-        return this.authorityUrl == null ? Output.empty() : this.authorityUrl;
+        return this.authorityUrl == null ? Codegen.empty() : this.authorityUrl;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> clientId;
 
     public Output<String> getClientId() {
-        return this.clientId == null ? Output.empty() : this.clientId;
+        return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> clientSecret;
 
     public Output<String> getClientSecret() {
-        return this.clientSecret == null ? Output.empty() : this.clientSecret;
+        return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> containerName;
 
     public Output<String> getContainerName() {
-        return this.containerName == null ? Output.empty() : this.containerName;
+        return this.containerName == null ? Codegen.empty() : this.containerName;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
-        return this.databaseName == null ? Output.empty() : this.databaseName;
+        return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
     /**
@@ -135,7 +136,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> datastoreName;
 
     public Output<String> getDatastoreName() {
-        return this.datastoreName == null ? Output.empty() : this.datastoreName;
+        return this.datastoreName == null ? Codegen.empty() : this.datastoreName;
     }
 
     /**
@@ -146,7 +147,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -157,7 +158,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> endpoint;
 
     public Output<String> getEndpoint() {
-        return this.endpoint == null ? Output.empty() : this.endpoint;
+        return this.endpoint == null ? Codegen.empty() : this.endpoint;
     }
 
     /**
@@ -168,7 +169,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Boolean> enforceSSL;
 
     public Output<Boolean> getEnforceSSL() {
-        return this.enforceSSL == null ? Output.empty() : this.enforceSSL;
+        return this.enforceSSL == null ? Codegen.empty() : this.enforceSSL;
     }
 
     /**
@@ -179,7 +180,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> fileSystem;
 
     public Output<String> getFileSystem() {
-        return this.fileSystem == null ? Output.empty() : this.fileSystem;
+        return this.fileSystem == null ? Codegen.empty() : this.fileSystem;
     }
 
     /**
@@ -190,7 +191,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Boolean> includeSecret;
 
     public Output<Boolean> getIncludeSecret() {
-        return this.includeSecret == null ? Output.empty() : this.includeSecret;
+        return this.includeSecret == null ? Codegen.empty() : this.includeSecret;
     }
 
     /**
@@ -201,7 +202,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -212,7 +213,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -223,7 +224,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> port;
 
     public Output<String> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -234,7 +235,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> protocol;
 
     public Output<String> getProtocol() {
-        return this.protocol == null ? Output.empty() : this.protocol;
+        return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     /**
@@ -256,7 +257,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> resourceUrl;
 
     public Output<String> getResourceUrl() {
-        return this.resourceUrl == null ? Output.empty() : this.resourceUrl;
+        return this.resourceUrl == null ? Codegen.empty() : this.resourceUrl;
     }
 
     /**
@@ -267,7 +268,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> sasToken;
 
     public Output<String> getSasToken() {
-        return this.sasToken == null ? Output.empty() : this.sasToken;
+        return this.sasToken == null ? Codegen.empty() : this.sasToken;
     }
 
     /**
@@ -278,7 +279,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> serverName;
 
     public Output<String> getServerName() {
-        return this.serverName == null ? Output.empty() : this.serverName;
+        return this.serverName == null ? Codegen.empty() : this.serverName;
     }
 
     /**
@@ -289,7 +290,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> shareName;
 
     public Output<String> getShareName() {
-        return this.shareName == null ? Output.empty() : this.shareName;
+        return this.shareName == null ? Codegen.empty() : this.shareName;
     }
 
     /**
@@ -300,7 +301,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Boolean> skipValidation;
 
     public Output<Boolean> getSkipValidation() {
-        return this.skipValidation == null ? Output.empty() : this.skipValidation;
+        return this.skipValidation == null ? Codegen.empty() : this.skipValidation;
     }
 
     /**
@@ -311,7 +312,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> storageAccountResourceGroup;
 
     public Output<String> getStorageAccountResourceGroup() {
-        return this.storageAccountResourceGroup == null ? Output.empty() : this.storageAccountResourceGroup;
+        return this.storageAccountResourceGroup == null ? Codegen.empty() : this.storageAccountResourceGroup;
     }
 
     /**
@@ -322,7 +323,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> storageAccountSubscriptionId;
 
     public Output<String> getStorageAccountSubscriptionId() {
-        return this.storageAccountSubscriptionId == null ? Output.empty() : this.storageAccountSubscriptionId;
+        return this.storageAccountSubscriptionId == null ? Codegen.empty() : this.storageAccountSubscriptionId;
     }
 
     /**
@@ -333,7 +334,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> storeName;
 
     public Output<String> getStoreName() {
-        return this.storeName == null ? Output.empty() : this.storeName;
+        return this.storeName == null ? Codegen.empty() : this.storeName;
     }
 
     /**
@@ -344,7 +345,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {
-        return this.tenantId == null ? Output.empty() : this.tenantId;
+        return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
     /**
@@ -355,7 +356,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> userId;
 
     public Output<String> getUserId() {
-        return this.userId == null ? Output.empty() : this.userId;
+        return this.userId == null ? Codegen.empty() : this.userId;
     }
 
     /**
@@ -366,7 +367,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> userName;
 
     public Output<String> getUserName() {
-        return this.userName == null ? Output.empty() : this.userName;
+        return this.userName == null ? Codegen.empty() : this.userName;
     }
 
     /**
@@ -388,7 +389,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Boolean> workspaceSystemAssignedIdentity;
 
     public Output<Boolean> getWorkspaceSystemAssignedIdentity() {
-        return this.workspaceSystemAssignedIdentity == null ? Output.empty() : this.workspaceSystemAssignedIdentity;
+        return this.workspaceSystemAssignedIdentity == null ? Codegen.empty() : this.workspaceSystemAssignedIdentity;
     }
 
     public MachineLearningDatastoreArgs(
@@ -439,9 +440,9 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
         this.datastoreName = datastoreName;
         this.description = description;
         this.endpoint = endpoint;
-        this.enforceSSL = enforceSSL == null ? Output.ofNullable(true) : enforceSSL;
+        this.enforceSSL = enforceSSL == null ? Codegen.ofNullable(true) : enforceSSL;
         this.fileSystem = fileSystem;
-        this.includeSecret = includeSecret == null ? Output.ofNullable(true) : includeSecret;
+        this.includeSecret = includeSecret == null ? Codegen.ofNullable(true) : includeSecret;
         this.name = name;
         this.password = password;
         this.port = port;
@@ -463,40 +464,40 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
     }
 
     private MachineLearningDatastoreArgs() {
-        this.accountKey = Output.empty();
-        this.accountName = Output.empty();
-        this.adlsResourceGroup = Output.empty();
-        this.adlsSubscriptionId = Output.empty();
-        this.authorityUrl = Output.empty();
-        this.clientId = Output.empty();
-        this.clientSecret = Output.empty();
-        this.containerName = Output.empty();
-        this.dataStoreType = Output.empty();
-        this.databaseName = Output.empty();
-        this.datastoreName = Output.empty();
-        this.description = Output.empty();
-        this.endpoint = Output.empty();
-        this.enforceSSL = Output.empty();
-        this.fileSystem = Output.empty();
-        this.includeSecret = Output.empty();
-        this.name = Output.empty();
-        this.password = Output.empty();
-        this.port = Output.empty();
-        this.protocol = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceUrl = Output.empty();
-        this.sasToken = Output.empty();
-        this.serverName = Output.empty();
-        this.shareName = Output.empty();
-        this.skipValidation = Output.empty();
-        this.storageAccountResourceGroup = Output.empty();
-        this.storageAccountSubscriptionId = Output.empty();
-        this.storeName = Output.empty();
-        this.tenantId = Output.empty();
-        this.userId = Output.empty();
-        this.userName = Output.empty();
-        this.workspaceName = Output.empty();
-        this.workspaceSystemAssignedIdentity = Output.empty();
+        this.accountKey = Codegen.empty();
+        this.accountName = Codegen.empty();
+        this.adlsResourceGroup = Codegen.empty();
+        this.adlsSubscriptionId = Codegen.empty();
+        this.authorityUrl = Codegen.empty();
+        this.clientId = Codegen.empty();
+        this.clientSecret = Codegen.empty();
+        this.containerName = Codegen.empty();
+        this.dataStoreType = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.datastoreName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.endpoint = Codegen.empty();
+        this.enforceSSL = Codegen.empty();
+        this.fileSystem = Codegen.empty();
+        this.includeSecret = Codegen.empty();
+        this.name = Codegen.empty();
+        this.password = Codegen.empty();
+        this.port = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceUrl = Codegen.empty();
+        this.sasToken = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.shareName = Codegen.empty();
+        this.skipValidation = Codegen.empty();
+        this.storageAccountResourceGroup = Codegen.empty();
+        this.storageAccountSubscriptionId = Codegen.empty();
+        this.storeName = Codegen.empty();
+        this.tenantId = Codegen.empty();
+        this.userId = Codegen.empty();
+        this.userName = Codegen.empty();
+        this.workspaceName = Codegen.empty();
+        this.workspaceSystemAssignedIdentity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -590,7 +591,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder accountKey(@Nullable String accountKey) {
-            this.accountKey = Output.ofNullable(accountKey);
+            this.accountKey = Codegen.ofNullable(accountKey);
             return this;
         }
         public Builder accountName(@Nullable Output<String> accountName) {
@@ -598,7 +599,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = Output.ofNullable(accountName);
+            this.accountName = Codegen.ofNullable(accountName);
             return this;
         }
         public Builder adlsResourceGroup(@Nullable Output<String> adlsResourceGroup) {
@@ -606,7 +607,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder adlsResourceGroup(@Nullable String adlsResourceGroup) {
-            this.adlsResourceGroup = Output.ofNullable(adlsResourceGroup);
+            this.adlsResourceGroup = Codegen.ofNullable(adlsResourceGroup);
             return this;
         }
         public Builder adlsSubscriptionId(@Nullable Output<String> adlsSubscriptionId) {
@@ -614,7 +615,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder adlsSubscriptionId(@Nullable String adlsSubscriptionId) {
-            this.adlsSubscriptionId = Output.ofNullable(adlsSubscriptionId);
+            this.adlsSubscriptionId = Codegen.ofNullable(adlsSubscriptionId);
             return this;
         }
         public Builder authorityUrl(@Nullable Output<String> authorityUrl) {
@@ -622,7 +623,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder authorityUrl(@Nullable String authorityUrl) {
-            this.authorityUrl = Output.ofNullable(authorityUrl);
+            this.authorityUrl = Codegen.ofNullable(authorityUrl);
             return this;
         }
         public Builder clientId(@Nullable Output<String> clientId) {
@@ -630,7 +631,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Output.ofNullable(clientId);
+            this.clientId = Codegen.ofNullable(clientId);
             return this;
         }
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
@@ -638,7 +639,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Output.ofNullable(clientSecret);
+            this.clientSecret = Codegen.ofNullable(clientSecret);
             return this;
         }
         public Builder containerName(@Nullable Output<String> containerName) {
@@ -646,7 +647,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder containerName(@Nullable String containerName) {
-            this.containerName = Output.ofNullable(containerName);
+            this.containerName = Codegen.ofNullable(containerName);
             return this;
         }
         public Builder dataStoreType(Output<Either<String,DatastoreTypeArm>> dataStoreType) {
@@ -662,7 +663,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Output.ofNullable(databaseName);
+            this.databaseName = Codegen.ofNullable(databaseName);
             return this;
         }
         public Builder datastoreName(@Nullable Output<String> datastoreName) {
@@ -670,7 +671,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder datastoreName(@Nullable String datastoreName) {
-            this.datastoreName = Output.ofNullable(datastoreName);
+            this.datastoreName = Codegen.ofNullable(datastoreName);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -678,7 +679,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder endpoint(@Nullable Output<String> endpoint) {
@@ -686,7 +687,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Output.ofNullable(endpoint);
+            this.endpoint = Codegen.ofNullable(endpoint);
             return this;
         }
         public Builder enforceSSL(@Nullable Output<Boolean> enforceSSL) {
@@ -694,7 +695,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder enforceSSL(@Nullable Boolean enforceSSL) {
-            this.enforceSSL = Output.ofNullable(enforceSSL);
+            this.enforceSSL = Codegen.ofNullable(enforceSSL);
             return this;
         }
         public Builder fileSystem(@Nullable Output<String> fileSystem) {
@@ -702,7 +703,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder fileSystem(@Nullable String fileSystem) {
-            this.fileSystem = Output.ofNullable(fileSystem);
+            this.fileSystem = Codegen.ofNullable(fileSystem);
             return this;
         }
         public Builder includeSecret(@Nullable Output<Boolean> includeSecret) {
@@ -710,7 +711,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder includeSecret(@Nullable Boolean includeSecret) {
-            this.includeSecret = Output.ofNullable(includeSecret);
+            this.includeSecret = Codegen.ofNullable(includeSecret);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -718,7 +719,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder password(@Nullable Output<String> password) {
@@ -726,7 +727,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder port(@Nullable Output<String> port) {
@@ -734,7 +735,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder port(@Nullable String port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder protocol(@Nullable Output<String> protocol) {
@@ -742,7 +743,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Output.ofNullable(protocol);
+            this.protocol = Codegen.ofNullable(protocol);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -758,7 +759,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder resourceUrl(@Nullable String resourceUrl) {
-            this.resourceUrl = Output.ofNullable(resourceUrl);
+            this.resourceUrl = Codegen.ofNullable(resourceUrl);
             return this;
         }
         public Builder sasToken(@Nullable Output<String> sasToken) {
@@ -766,7 +767,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder sasToken(@Nullable String sasToken) {
-            this.sasToken = Output.ofNullable(sasToken);
+            this.sasToken = Codegen.ofNullable(sasToken);
             return this;
         }
         public Builder serverName(@Nullable Output<String> serverName) {
@@ -774,7 +775,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder serverName(@Nullable String serverName) {
-            this.serverName = Output.ofNullable(serverName);
+            this.serverName = Codegen.ofNullable(serverName);
             return this;
         }
         public Builder shareName(@Nullable Output<String> shareName) {
@@ -782,7 +783,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder shareName(@Nullable String shareName) {
-            this.shareName = Output.ofNullable(shareName);
+            this.shareName = Codegen.ofNullable(shareName);
             return this;
         }
         public Builder skipValidation(@Nullable Output<Boolean> skipValidation) {
@@ -790,7 +791,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder skipValidation(@Nullable Boolean skipValidation) {
-            this.skipValidation = Output.ofNullable(skipValidation);
+            this.skipValidation = Codegen.ofNullable(skipValidation);
             return this;
         }
         public Builder storageAccountResourceGroup(@Nullable Output<String> storageAccountResourceGroup) {
@@ -798,7 +799,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder storageAccountResourceGroup(@Nullable String storageAccountResourceGroup) {
-            this.storageAccountResourceGroup = Output.ofNullable(storageAccountResourceGroup);
+            this.storageAccountResourceGroup = Codegen.ofNullable(storageAccountResourceGroup);
             return this;
         }
         public Builder storageAccountSubscriptionId(@Nullable Output<String> storageAccountSubscriptionId) {
@@ -806,7 +807,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder storageAccountSubscriptionId(@Nullable String storageAccountSubscriptionId) {
-            this.storageAccountSubscriptionId = Output.ofNullable(storageAccountSubscriptionId);
+            this.storageAccountSubscriptionId = Codegen.ofNullable(storageAccountSubscriptionId);
             return this;
         }
         public Builder storeName(@Nullable Output<String> storeName) {
@@ -814,7 +815,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder storeName(@Nullable String storeName) {
-            this.storeName = Output.ofNullable(storeName);
+            this.storeName = Codegen.ofNullable(storeName);
             return this;
         }
         public Builder tenantId(@Nullable Output<String> tenantId) {
@@ -822,7 +823,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Output.ofNullable(tenantId);
+            this.tenantId = Codegen.ofNullable(tenantId);
             return this;
         }
         public Builder userId(@Nullable Output<String> userId) {
@@ -830,7 +831,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder userId(@Nullable String userId) {
-            this.userId = Output.ofNullable(userId);
+            this.userId = Codegen.ofNullable(userId);
             return this;
         }
         public Builder userName(@Nullable Output<String> userName) {
@@ -838,7 +839,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder userName(@Nullable String userName) {
-            this.userName = Output.ofNullable(userName);
+            this.userName = Codegen.ofNullable(userName);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {
@@ -854,7 +855,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder workspaceSystemAssignedIdentity(@Nullable Boolean workspaceSystemAssignedIdentity) {
-            this.workspaceSystemAssignedIdentity = Output.ofNullable(workspaceSystemAssignedIdentity);
+            this.workspaceSystemAssignedIdentity = Codegen.ofNullable(workspaceSystemAssignedIdentity);
             return this;
         }        public MachineLearningDatastoreArgs build() {
             return new MachineLearningDatastoreArgs(accountKey, accountName, adlsResourceGroup, adlsSubscriptionId, authorityUrl, clientId, clientSecret, containerName, dataStoreType, databaseName, datastoreName, description, endpoint, enforceSSL, fileSystem, includeSecret, name, password, port, protocol, resourceGroupName, resourceUrl, sasToken, serverName, shareName, skipValidation, storageAccountResourceGroup, storageAccountSubscriptionId, storeName, tenantId, userId, userName, workspaceName, workspaceSystemAssignedIdentity);

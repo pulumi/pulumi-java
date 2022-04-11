@@ -9,6 +9,7 @@ import io.pulumi.awsnative.resiliencehub.inputs.ResiliencyPolicyPolicyMapArgs;
 import io.pulumi.awsnative.resiliencehub.inputs.ResiliencyPolicyTagMapArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ResiliencyPolicyArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<ResiliencyPolicyDataLocationConstraint> dataLocationConstraint;
 
     public Output<ResiliencyPolicyDataLocationConstraint> getDataLocationConstraint() {
-        return this.dataLocationConstraint == null ? Output.empty() : this.dataLocationConstraint;
+        return this.dataLocationConstraint == null ? Codegen.empty() : this.dataLocationConstraint;
     }
 
     @Import(name="policy", required=true)
@@ -44,7 +45,7 @@ public final class ResiliencyPolicyArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> policyDescription;
 
     public Output<String> getPolicyDescription() {
-        return this.policyDescription == null ? Output.empty() : this.policyDescription;
+        return this.policyDescription == null ? Codegen.empty() : this.policyDescription;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class ResiliencyPolicyArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<ResiliencyPolicyTagMapArgs> tags;
 
     public Output<ResiliencyPolicyTagMapArgs> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -92,12 +93,12 @@ public final class ResiliencyPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ResiliencyPolicyArgs() {
-        this.dataLocationConstraint = Output.empty();
-        this.policy = Output.empty();
-        this.policyDescription = Output.empty();
-        this.policyName = Output.empty();
-        this.tags = Output.empty();
-        this.tier = Output.empty();
+        this.dataLocationConstraint = Codegen.empty();
+        this.policy = Codegen.empty();
+        this.policyDescription = Codegen.empty();
+        this.policyName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -135,7 +136,7 @@ public final class ResiliencyPolicyArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder dataLocationConstraint(@Nullable ResiliencyPolicyDataLocationConstraint dataLocationConstraint) {
-            this.dataLocationConstraint = Output.ofNullable(dataLocationConstraint);
+            this.dataLocationConstraint = Codegen.ofNullable(dataLocationConstraint);
             return this;
         }
         public Builder policy(Output<ResiliencyPolicyPolicyMapArgs> policy) {
@@ -151,7 +152,7 @@ public final class ResiliencyPolicyArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder policyDescription(@Nullable String policyDescription) {
-            this.policyDescription = Output.ofNullable(policyDescription);
+            this.policyDescription = Codegen.ofNullable(policyDescription);
             return this;
         }
         public Builder policyName(Output<String> policyName) {
@@ -167,7 +168,7 @@ public final class ResiliencyPolicyArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tags(@Nullable ResiliencyPolicyTagMapArgs tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tier(Output<ResiliencyPolicyTier> tier) {

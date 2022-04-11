@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class SigningKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> keyId;
 
     public Output<String> getKeyId() {
-        return this.keyId == null ? Output.empty() : this.keyId;
+        return this.keyId == null ? Codegen.empty() : this.keyId;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class SigningKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> keyScheme;
 
     public Output<String> getKeyScheme() {
-        return this.keyScheme == null ? Output.empty() : this.keyScheme;
+        return this.keyScheme == null ? Codegen.empty() : this.keyScheme;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class SigningKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> keyType;
 
     public Output<String> getKeyType() {
-        return this.keyType == null ? Output.empty() : this.keyType;
+        return this.keyType == null ? Codegen.empty() : this.keyType;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class SigningKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> publicKeyValue;
 
     public Output<String> getPublicKeyValue() {
-        return this.publicKeyValue == null ? Output.empty() : this.publicKeyValue;
+        return this.publicKeyValue == null ? Codegen.empty() : this.publicKeyValue;
     }
 
     public SigningKeyArgs(
@@ -74,10 +75,10 @@ public final class SigningKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SigningKeyArgs() {
-        this.keyId = Output.empty();
-        this.keyScheme = Output.empty();
-        this.keyType = Output.empty();
-        this.publicKeyValue = Output.empty();
+        this.keyId = Codegen.empty();
+        this.keyScheme = Codegen.empty();
+        this.keyType = Codegen.empty();
+        this.publicKeyValue = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class SigningKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyId(@Nullable String keyId) {
-            this.keyId = Output.ofNullable(keyId);
+            this.keyId = Codegen.ofNullable(keyId);
             return this;
         }
         public Builder keyScheme(@Nullable Output<String> keyScheme) {
@@ -119,7 +120,7 @@ public final class SigningKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyScheme(@Nullable String keyScheme) {
-            this.keyScheme = Output.ofNullable(keyScheme);
+            this.keyScheme = Codegen.ofNullable(keyScheme);
             return this;
         }
         public Builder keyType(@Nullable Output<String> keyType) {
@@ -127,7 +128,7 @@ public final class SigningKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyType(@Nullable String keyType) {
-            this.keyType = Output.ofNullable(keyType);
+            this.keyType = Codegen.ofNullable(keyType);
             return this;
         }
         public Builder publicKeyValue(@Nullable Output<String> publicKeyValue) {
@@ -135,7 +136,7 @@ public final class SigningKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicKeyValue(@Nullable String publicKeyValue) {
-            this.publicKeyValue = Output.ofNullable(publicKeyValue);
+            this.publicKeyValue = Codegen.ofNullable(publicKeyValue);
             return this;
         }        public SigningKeyArgs build() {
             return new SigningKeyArgs(keyId, keyScheme, keyType, publicKeyValue);

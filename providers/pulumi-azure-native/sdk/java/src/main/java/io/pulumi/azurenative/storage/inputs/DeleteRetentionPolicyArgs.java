@@ -5,6 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class DeleteRetentionPolicyArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Integer> days;
 
     public Output<Integer> getDays() {
-        return this.days == null ? Output.empty() : this.days;
+        return this.days == null ? Codegen.empty() : this.days;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class DeleteRetentionPolicyArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     public DeleteRetentionPolicyArgs(
@@ -49,8 +50,8 @@ public final class DeleteRetentionPolicyArgs extends io.pulumi.resources.Resourc
     }
 
     private DeleteRetentionPolicyArgs() {
-        this.days = Output.empty();
-        this.enabled = Output.empty();
+        this.days = Codegen.empty();
+        this.enabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class DeleteRetentionPolicyArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder days(@Nullable Integer days) {
-            this.days = Output.ofNullable(days);
+            this.days = Codegen.ofNullable(days);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -88,7 +89,7 @@ public final class DeleteRetentionPolicyArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }        public DeleteRetentionPolicyArgs build() {
             return new DeleteRetentionPolicyArgs(days, enabled);

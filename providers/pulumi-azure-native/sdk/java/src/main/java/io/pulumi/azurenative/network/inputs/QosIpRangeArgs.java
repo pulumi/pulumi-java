@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class QosIpRangeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> endIP;
 
     public Output<String> getEndIP() {
-        return this.endIP == null ? Output.empty() : this.endIP;
+        return this.endIP == null ? Codegen.empty() : this.endIP;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class QosIpRangeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> startIP;
 
     public Output<String> getStartIP() {
-        return this.startIP == null ? Output.empty() : this.startIP;
+        return this.startIP == null ? Codegen.empty() : this.startIP;
     }
 
     public QosIpRangeArgs(
@@ -48,8 +49,8 @@ public final class QosIpRangeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private QosIpRangeArgs() {
-        this.endIP = Output.empty();
-        this.startIP = Output.empty();
+        this.endIP = Codegen.empty();
+        this.startIP = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class QosIpRangeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endIP(@Nullable String endIP) {
-            this.endIP = Output.ofNullable(endIP);
+            this.endIP = Codegen.ofNullable(endIP);
             return this;
         }
         public Builder startIP(@Nullable Output<String> startIP) {
@@ -87,7 +88,7 @@ public final class QosIpRangeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder startIP(@Nullable String startIP) {
-            this.startIP = Output.ofNullable(startIP);
+            this.startIP = Codegen.ofNullable(startIP);
             return this;
         }        public QosIpRangeArgs build() {
             return new QosIpRangeArgs(endIP, startIP);

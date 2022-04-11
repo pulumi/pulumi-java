@@ -5,6 +5,7 @@ package io.pulumi.gcp.logging.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -32,7 +33,7 @@ public final class ProjectSinkBigqueryOptionsGetArgs extends io.pulumi.resources
     }
 
     private ProjectSinkBigqueryOptionsGetArgs() {
-        this.usePartitionedTables = Output.empty();
+        this.usePartitionedTables = Codegen.empty();
     }
 
     public static Builder builder() {

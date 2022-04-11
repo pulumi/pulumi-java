@@ -5,6 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -60,9 +61,9 @@ public final class GalleryImageIdentifierArgs extends io.pulumi.resources.Resour
     }
 
     private GalleryImageIdentifierArgs() {
-        this.offer = Output.empty();
-        this.publisher = Output.empty();
-        this.sku = Output.empty();
+        this.offer = Codegen.empty();
+        this.publisher = Codegen.empty();
+        this.sku = Codegen.empty();
     }
 
     public static Builder builder() {

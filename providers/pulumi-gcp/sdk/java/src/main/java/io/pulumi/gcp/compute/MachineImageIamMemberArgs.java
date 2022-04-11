@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.MachineImageIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class MachineImageIamMemberArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<MachineImageIamMemberConditionArgs> condition;
 
     public Output<MachineImageIamMemberConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class MachineImageIamMemberArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -84,11 +85,11 @@ public final class MachineImageIamMemberArgs extends io.pulumi.resources.Resourc
     }
 
     private MachineImageIamMemberArgs() {
-        this.condition = Output.empty();
-        this.machineImage = Output.empty();
-        this.member = Output.empty();
-        this.project = Output.empty();
-        this.role = Output.empty();
+        this.condition = Codegen.empty();
+        this.machineImage = Codegen.empty();
+        this.member = Codegen.empty();
+        this.project = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class MachineImageIamMemberArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder condition(@Nullable MachineImageIamMemberConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder machineImage(Output<String> machineImage) {
@@ -148,7 +149,7 @@ public final class MachineImageIamMemberArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder role(Output<String> role) {

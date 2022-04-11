@@ -6,6 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLIPSetForwardedIPConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class WebACLIPSetReferenceStatementArgs extends io.pulumi.resources
       private final @Nullable Output<WebACLIPSetForwardedIPConfigurationArgs> iPSetForwardedIPConfig;
 
     public Output<WebACLIPSetForwardedIPConfigurationArgs> getIPSetForwardedIPConfig() {
-        return this.iPSetForwardedIPConfig == null ? Output.empty() : this.iPSetForwardedIPConfig;
+        return this.iPSetForwardedIPConfig == null ? Codegen.empty() : this.iPSetForwardedIPConfig;
     }
 
     public WebACLIPSetReferenceStatementArgs(
@@ -37,8 +38,8 @@ public final class WebACLIPSetReferenceStatementArgs extends io.pulumi.resources
     }
 
     private WebACLIPSetReferenceStatementArgs() {
-        this.arn = Output.empty();
-        this.iPSetForwardedIPConfig = Output.empty();
+        this.arn = Codegen.empty();
+        this.iPSetForwardedIPConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class WebACLIPSetReferenceStatementArgs extends io.pulumi.resources
             return this;
         }
         public Builder iPSetForwardedIPConfig(@Nullable WebACLIPSetForwardedIPConfigurationArgs iPSetForwardedIPConfig) {
-            this.iPSetForwardedIPConfig = Output.ofNullable(iPSetForwardedIPConfig);
+            this.iPSetForwardedIPConfig = Codegen.ofNullable(iPSetForwardedIPConfig);
             return this;
         }        public WebACLIPSetReferenceStatementArgs build() {
             return new WebACLIPSetReferenceStatementArgs(arn, iPSetForwardedIPConfig);

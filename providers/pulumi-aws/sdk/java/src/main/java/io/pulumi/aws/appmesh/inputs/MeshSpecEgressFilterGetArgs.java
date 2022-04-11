@@ -5,6 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class MeshSpecEgressFilterGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public MeshSpecEgressFilterGetArgs(@Nullable Output<String> type) {
@@ -31,7 +32,7 @@ public final class MeshSpecEgressFilterGetArgs extends io.pulumi.resources.Resou
     }
 
     private MeshSpecEgressFilterGetArgs() {
-        this.type = Output.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class MeshSpecEgressFilterGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public MeshSpecEgressFilterGetArgs build() {
             return new MeshSpecEgressFilterGetArgs(type);

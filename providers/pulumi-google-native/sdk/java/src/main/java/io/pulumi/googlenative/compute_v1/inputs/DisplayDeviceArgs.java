@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class DisplayDeviceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableDisplay;
 
     public Output<Boolean> getEnableDisplay() {
-        return this.enableDisplay == null ? Output.empty() : this.enableDisplay;
+        return this.enableDisplay == null ? Codegen.empty() : this.enableDisplay;
     }
 
     public DisplayDeviceArgs(@Nullable Output<Boolean> enableDisplay) {
@@ -34,7 +35,7 @@ public final class DisplayDeviceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DisplayDeviceArgs() {
-        this.enableDisplay = Output.empty();
+        this.enableDisplay = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class DisplayDeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableDisplay(@Nullable Boolean enableDisplay) {
-            this.enableDisplay = Output.ofNullable(enableDisplay);
+            this.enableDisplay = Codegen.ofNullable(enableDisplay);
             return this;
         }        public DisplayDeviceArgs build() {
             return new DisplayDeviceArgs(enableDisplay);

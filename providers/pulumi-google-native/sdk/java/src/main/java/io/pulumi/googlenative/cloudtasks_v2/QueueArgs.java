@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudtasks_v2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudtasks_v2.inputs.AppEngineRoutingArgs;
 import io.pulumi.googlenative.cloudtasks_v2.inputs.RateLimitsArgs;
 import io.pulumi.googlenative.cloudtasks_v2.inputs.RetryConfigArgs;
@@ -26,14 +27,14 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AppEngineRoutingArgs> appEngineRoutingOverride;
 
     public Output<AppEngineRoutingArgs> getAppEngineRoutingOverride() {
-        return this.appEngineRoutingOverride == null ? Output.empty() : this.appEngineRoutingOverride;
+        return this.appEngineRoutingOverride == null ? Codegen.empty() : this.appEngineRoutingOverride;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -44,14 +45,14 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RateLimitsArgs> rateLimits;
 
     public Output<RateLimitsArgs> getRateLimits() {
-        return this.rateLimits == null ? Output.empty() : this.rateLimits;
+        return this.rateLimits == null ? Codegen.empty() : this.rateLimits;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RetryConfigArgs> retryConfig;
 
     public Output<RetryConfigArgs> getRetryConfig() {
-        return this.retryConfig == null ? Output.empty() : this.retryConfig;
+        return this.retryConfig == null ? Codegen.empty() : this.retryConfig;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<StackdriverLoggingConfigArgs> stackdriverLoggingConfig;
 
     public Output<StackdriverLoggingConfigArgs> getStackdriverLoggingConfig() {
-        return this.stackdriverLoggingConfig == null ? Output.empty() : this.stackdriverLoggingConfig;
+        return this.stackdriverLoggingConfig == null ? Codegen.empty() : this.stackdriverLoggingConfig;
     }
 
     public QueueArgs(
@@ -105,13 +106,13 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private QueueArgs() {
-        this.appEngineRoutingOverride = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.rateLimits = Output.empty();
-        this.retryConfig = Output.empty();
-        this.stackdriverLoggingConfig = Output.empty();
+        this.appEngineRoutingOverride = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.rateLimits = Codegen.empty();
+        this.retryConfig = Codegen.empty();
+        this.stackdriverLoggingConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -151,7 +152,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appEngineRoutingOverride(@Nullable AppEngineRoutingArgs appEngineRoutingOverride) {
-            this.appEngineRoutingOverride = Output.ofNullable(appEngineRoutingOverride);
+            this.appEngineRoutingOverride = Codegen.ofNullable(appEngineRoutingOverride);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -159,7 +160,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -167,7 +168,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -175,7 +176,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder rateLimits(@Nullable Output<RateLimitsArgs> rateLimits) {
@@ -183,7 +184,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rateLimits(@Nullable RateLimitsArgs rateLimits) {
-            this.rateLimits = Output.ofNullable(rateLimits);
+            this.rateLimits = Codegen.ofNullable(rateLimits);
             return this;
         }
         public Builder retryConfig(@Nullable Output<RetryConfigArgs> retryConfig) {
@@ -191,7 +192,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retryConfig(@Nullable RetryConfigArgs retryConfig) {
-            this.retryConfig = Output.ofNullable(retryConfig);
+            this.retryConfig = Codegen.ofNullable(retryConfig);
             return this;
         }
         public Builder stackdriverLoggingConfig(@Nullable Output<StackdriverLoggingConfigArgs> stackdriverLoggingConfig) {
@@ -199,7 +200,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stackdriverLoggingConfig(@Nullable StackdriverLoggingConfigArgs stackdriverLoggingConfig) {
-            this.stackdriverLoggingConfig = Output.ofNullable(stackdriverLoggingConfig);
+            this.stackdriverLoggingConfig = Codegen.ofNullable(stackdriverLoggingConfig);
             return this;
         }        public QueueArgs build() {
             return new QueueArgs(appEngineRoutingOverride, location, name, project, rateLimits, retryConfig, stackdriverLoggingConfig);

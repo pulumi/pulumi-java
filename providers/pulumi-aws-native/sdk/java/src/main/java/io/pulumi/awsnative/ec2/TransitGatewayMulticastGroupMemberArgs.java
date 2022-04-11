@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -56,9 +57,9 @@ public final class TransitGatewayMulticastGroupMemberArgs extends io.pulumi.reso
     }
 
     private TransitGatewayMulticastGroupMemberArgs() {
-        this.groupIpAddress = Output.empty();
-        this.networkInterfaceId = Output.empty();
-        this.transitGatewayMulticastDomainId = Output.empty();
+        this.groupIpAddress = Codegen.empty();
+        this.networkInterfaceId = Codegen.empty();
+        this.transitGatewayMulticastDomainId = Codegen.empty();
     }
 
     public static Builder builder() {

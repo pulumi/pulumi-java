@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ec2.inputs;
 import io.pulumi.awsnative.ec2.enums.FlowLogDestinationOptionsPropertiesFileFormat;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -45,9 +46,9 @@ public final class DestinationOptionsPropertiesArgs extends io.pulumi.resources.
     }
 
     private DestinationOptionsPropertiesArgs() {
-        this.fileFormat = Output.empty();
-        this.hiveCompatiblePartitions = Output.empty();
-        this.perHourPartition = Output.empty();
+        this.fileFormat = Codegen.empty();
+        this.hiveCompatiblePartitions = Codegen.empty();
+        this.perHourPartition = Codegen.empty();
     }
 
     public static Builder builder() {

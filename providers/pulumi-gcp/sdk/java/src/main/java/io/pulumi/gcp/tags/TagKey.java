@@ -6,6 +6,7 @@ package io.pulumi.gcp.tags;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.tags.TagKeyArgs;
 import io.pulumi.gcp.tags.inputs.TagKeyState;
@@ -165,7 +166,7 @@ public class TagKey extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TagKey(String name, TagKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:tags/tagKey:TagKey", name, args == null ? TagKeyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:tags/tagKey:TagKey", name, args == null ? TagKeyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TagKey(String name, Output<String> id, @Nullable TagKeyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

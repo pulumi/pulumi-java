@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.EnvelopeSignatureArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,21 +25,21 @@ public final class EnvelopeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> payload;
 
     public Output<String> getPayload() {
-        return this.payload == null ? Output.empty() : this.payload;
+        return this.payload == null ? Codegen.empty() : this.payload;
     }
 
     @Import(name="payloadType")
       private final @Nullable Output<String> payloadType;
 
     public Output<String> getPayloadType() {
-        return this.payloadType == null ? Output.empty() : this.payloadType;
+        return this.payloadType == null ? Codegen.empty() : this.payloadType;
     }
 
     @Import(name="signatures")
       private final @Nullable Output<List<EnvelopeSignatureArgs>> signatures;
 
     public Output<List<EnvelopeSignatureArgs>> getSignatures() {
-        return this.signatures == null ? Output.empty() : this.signatures;
+        return this.signatures == null ? Codegen.empty() : this.signatures;
     }
 
     public EnvelopeArgs(
@@ -51,9 +52,9 @@ public final class EnvelopeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EnvelopeArgs() {
-        this.payload = Output.empty();
-        this.payloadType = Output.empty();
-        this.signatures = Output.empty();
+        this.payload = Codegen.empty();
+        this.payloadType = Codegen.empty();
+        this.signatures = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -85,7 +86,7 @@ public final class EnvelopeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder payload(@Nullable String payload) {
-            this.payload = Output.ofNullable(payload);
+            this.payload = Codegen.ofNullable(payload);
             return this;
         }
         public Builder payloadType(@Nullable Output<String> payloadType) {
@@ -93,7 +94,7 @@ public final class EnvelopeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder payloadType(@Nullable String payloadType) {
-            this.payloadType = Output.ofNullable(payloadType);
+            this.payloadType = Codegen.ofNullable(payloadType);
             return this;
         }
         public Builder signatures(@Nullable Output<List<EnvelopeSignatureArgs>> signatures) {
@@ -101,7 +102,7 @@ public final class EnvelopeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder signatures(@Nullable List<EnvelopeSignatureArgs> signatures) {
-            this.signatures = Output.ofNullable(signatures);
+            this.signatures = Codegen.ofNullable(signatures);
             return this;
         }
         public Builder signatures(EnvelopeSignatureArgs... signatures) {

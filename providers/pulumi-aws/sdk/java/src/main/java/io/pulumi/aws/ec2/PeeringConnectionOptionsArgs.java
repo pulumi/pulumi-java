@@ -7,6 +7,7 @@ import io.pulumi.aws.ec2.inputs.PeeringConnectionOptionsAccepterArgs;
 import io.pulumi.aws.ec2.inputs.PeeringConnectionOptionsRequesterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class PeeringConnectionOptionsArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<PeeringConnectionOptionsAccepterArgs> accepter;
 
     public Output<PeeringConnectionOptionsAccepterArgs> getAccepter() {
-        return this.accepter == null ? Output.empty() : this.accepter;
+        return this.accepter == null ? Codegen.empty() : this.accepter;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class PeeringConnectionOptionsArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<PeeringConnectionOptionsRequesterArgs> requester;
 
     public Output<PeeringConnectionOptionsRequesterArgs> getRequester() {
-        return this.requester == null ? Output.empty() : this.requester;
+        return this.requester == null ? Codegen.empty() : this.requester;
     }
 
     /**
@@ -63,9 +64,9 @@ public final class PeeringConnectionOptionsArgs extends io.pulumi.resources.Reso
     }
 
     private PeeringConnectionOptionsArgs() {
-        this.accepter = Output.empty();
-        this.requester = Output.empty();
-        this.vpcPeeringConnectionId = Output.empty();
+        this.accepter = Codegen.empty();
+        this.requester = Codegen.empty();
+        this.vpcPeeringConnectionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class PeeringConnectionOptionsArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder accepter(@Nullable PeeringConnectionOptionsAccepterArgs accepter) {
-            this.accepter = Output.ofNullable(accepter);
+            this.accepter = Codegen.ofNullable(accepter);
             return this;
         }
         public Builder requester(@Nullable Output<PeeringConnectionOptionsRequesterArgs> requester) {
@@ -105,7 +106,7 @@ public final class PeeringConnectionOptionsArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder requester(@Nullable PeeringConnectionOptionsRequesterArgs requester) {
-            this.requester = Output.ofNullable(requester);
+            this.requester = Codegen.ofNullable(requester);
             return this;
         }
         public Builder vpcPeeringConnectionId(Output<String> vpcPeeringConnectionId) {

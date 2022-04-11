@@ -11,6 +11,7 @@ import io.pulumi.azurenative.servicefabricmesh.inputs.NetworkRefArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +35,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
       private final @Nullable Output<List<AutoScalingPolicyArgs>> autoScalingPolicies;
 
     public Output<List<AutoScalingPolicyArgs>> getAutoScalingPolicies() {
-        return this.autoScalingPolicies == null ? Output.empty() : this.autoScalingPolicies;
+        return this.autoScalingPolicies == null ? Codegen.empty() : this.autoScalingPolicies;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
       private final @Nullable Output<DiagnosticsRefArgs> diagnostics;
 
     public Output<DiagnosticsRefArgs> getDiagnostics() {
-        return this.diagnostics == null ? Output.empty() : this.diagnostics;
+        return this.diagnostics == null ? Codegen.empty() : this.diagnostics;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
       private final @Nullable Output<List<NetworkRefArgs>> networkRefs;
 
     public Output<List<NetworkRefArgs>> getNetworkRefs() {
-        return this.networkRefs == null ? Output.empty() : this.networkRefs;
+        return this.networkRefs == null ? Codegen.empty() : this.networkRefs;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Integer> replicaCount;
 
     public Output<Integer> getReplicaCount() {
-        return this.replicaCount == null ? Output.empty() : this.replicaCount;
+        return this.replicaCount == null ? Codegen.empty() : this.replicaCount;
     }
 
     public ServiceResourceDescriptionArgs(
@@ -134,14 +135,14 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
     }
 
     private ServiceResourceDescriptionArgs() {
-        this.autoScalingPolicies = Output.empty();
-        this.codePackages = Output.empty();
-        this.description = Output.empty();
-        this.diagnostics = Output.empty();
-        this.name = Output.empty();
-        this.networkRefs = Output.empty();
-        this.osType = Output.empty();
-        this.replicaCount = Output.empty();
+        this.autoScalingPolicies = Codegen.empty();
+        this.codePackages = Codegen.empty();
+        this.description = Codegen.empty();
+        this.diagnostics = Codegen.empty();
+        this.name = Codegen.empty();
+        this.networkRefs = Codegen.empty();
+        this.osType = Codegen.empty();
+        this.replicaCount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -183,7 +184,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder autoScalingPolicies(@Nullable List<AutoScalingPolicyArgs> autoScalingPolicies) {
-            this.autoScalingPolicies = Output.ofNullable(autoScalingPolicies);
+            this.autoScalingPolicies = Codegen.ofNullable(autoScalingPolicies);
             return this;
         }
         public Builder autoScalingPolicies(AutoScalingPolicyArgs... autoScalingPolicies) {
@@ -205,7 +206,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder diagnostics(@Nullable Output<DiagnosticsRefArgs> diagnostics) {
@@ -213,7 +214,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder diagnostics(@Nullable DiagnosticsRefArgs diagnostics) {
-            this.diagnostics = Output.ofNullable(diagnostics);
+            this.diagnostics = Codegen.ofNullable(diagnostics);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -221,7 +222,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder networkRefs(@Nullable Output<List<NetworkRefArgs>> networkRefs) {
@@ -229,7 +230,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder networkRefs(@Nullable List<NetworkRefArgs> networkRefs) {
-            this.networkRefs = Output.ofNullable(networkRefs);
+            this.networkRefs = Codegen.ofNullable(networkRefs);
             return this;
         }
         public Builder networkRefs(NetworkRefArgs... networkRefs) {
@@ -248,7 +249,7 @@ public final class ServiceResourceDescriptionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder replicaCount(@Nullable Integer replicaCount) {
-            this.replicaCount = Output.ofNullable(replicaCount);
+            this.replicaCount = Codegen.ofNullable(replicaCount);
             return this;
         }        public ServiceResourceDescriptionArgs build() {
             return new ServiceResourceDescriptionArgs(autoScalingPolicies, codePackages, description, diagnostics, name, networkRefs, osType, replicaCount);

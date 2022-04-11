@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudrun.inputs.DomainMappingStatusConditionGetArgs;
 import io.pulumi.gcp.cloudrun.inputs.DomainMappingStatusResourceRecordGetArgs;
 import java.lang.Integer;
@@ -22,28 +23,28 @@ public final class DomainMappingStatusGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<DomainMappingStatusConditionGetArgs>> conditions;
 
     public Output<List<DomainMappingStatusConditionGetArgs>> getConditions() {
-        return this.conditions == null ? Output.empty() : this.conditions;
+        return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
     @Import(name="mappedRouteName")
       private final @Nullable Output<String> mappedRouteName;
 
     public Output<String> getMappedRouteName() {
-        return this.mappedRouteName == null ? Output.empty() : this.mappedRouteName;
+        return this.mappedRouteName == null ? Codegen.empty() : this.mappedRouteName;
     }
 
     @Import(name="observedGeneration")
       private final @Nullable Output<Integer> observedGeneration;
 
     public Output<Integer> getObservedGeneration() {
-        return this.observedGeneration == null ? Output.empty() : this.observedGeneration;
+        return this.observedGeneration == null ? Codegen.empty() : this.observedGeneration;
     }
 
     @Import(name="resourceRecords")
       private final @Nullable Output<List<DomainMappingStatusResourceRecordGetArgs>> resourceRecords;
 
     public Output<List<DomainMappingStatusResourceRecordGetArgs>> getResourceRecords() {
-        return this.resourceRecords == null ? Output.empty() : this.resourceRecords;
+        return this.resourceRecords == null ? Codegen.empty() : this.resourceRecords;
     }
 
     public DomainMappingStatusGetArgs(
@@ -58,10 +59,10 @@ public final class DomainMappingStatusGetArgs extends io.pulumi.resources.Resour
     }
 
     private DomainMappingStatusGetArgs() {
-        this.conditions = Output.empty();
-        this.mappedRouteName = Output.empty();
-        this.observedGeneration = Output.empty();
-        this.resourceRecords = Output.empty();
+        this.conditions = Codegen.empty();
+        this.mappedRouteName = Codegen.empty();
+        this.observedGeneration = Codegen.empty();
+        this.resourceRecords = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class DomainMappingStatusGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder conditions(@Nullable List<DomainMappingStatusConditionGetArgs> conditions) {
-            this.conditions = Output.ofNullable(conditions);
+            this.conditions = Codegen.ofNullable(conditions);
             return this;
         }
         public Builder conditions(DomainMappingStatusConditionGetArgs... conditions) {
@@ -106,7 +107,7 @@ public final class DomainMappingStatusGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder mappedRouteName(@Nullable String mappedRouteName) {
-            this.mappedRouteName = Output.ofNullable(mappedRouteName);
+            this.mappedRouteName = Codegen.ofNullable(mappedRouteName);
             return this;
         }
         public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
@@ -114,7 +115,7 @@ public final class DomainMappingStatusGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
-            this.observedGeneration = Output.ofNullable(observedGeneration);
+            this.observedGeneration = Codegen.ofNullable(observedGeneration);
             return this;
         }
         public Builder resourceRecords(@Nullable Output<List<DomainMappingStatusResourceRecordGetArgs>> resourceRecords) {
@@ -122,7 +123,7 @@ public final class DomainMappingStatusGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder resourceRecords(@Nullable List<DomainMappingStatusResourceRecordGetArgs> resourceRecords) {
-            this.resourceRecords = Output.ofNullable(resourceRecords);
+            this.resourceRecords = Codegen.ofNullable(resourceRecords);
             return this;
         }
         public Builder resourceRecords(DomainMappingStatusResourceRecordGetArgs... resourceRecords) {

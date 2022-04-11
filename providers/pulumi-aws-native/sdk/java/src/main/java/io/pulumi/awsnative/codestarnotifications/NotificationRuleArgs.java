@@ -8,6 +8,7 @@ import io.pulumi.awsnative.codestarnotifications.enums.NotificationRuleStatus;
 import io.pulumi.awsnative.codestarnotifications.inputs.NotificationRuleTargetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +24,7 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> createdBy;
 
     public Output<String> getCreatedBy() {
-        return this.createdBy == null ? Output.empty() : this.createdBy;
+        return this.createdBy == null ? Codegen.empty() : this.createdBy;
     }
 
     @Import(name="detailType", required=true)
@@ -37,7 +38,7 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> eventTypeId;
 
     public Output<String> getEventTypeId() {
-        return this.eventTypeId == null ? Output.empty() : this.eventTypeId;
+        return this.eventTypeId == null ? Codegen.empty() : this.eventTypeId;
     }
 
     @Import(name="eventTypeIds", required=true)
@@ -51,7 +52,7 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="resource", required=true)
@@ -65,21 +66,21 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<NotificationRuleStatus> status;
 
     public Output<NotificationRuleStatus> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     @Import(name="tags")
       private final @Nullable Output<Object> tags;
 
     public Output<Object> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="targetAddress")
       private final @Nullable Output<String> targetAddress;
 
     public Output<String> getTargetAddress() {
-        return this.targetAddress == null ? Output.empty() : this.targetAddress;
+        return this.targetAddress == null ? Codegen.empty() : this.targetAddress;
     }
 
     @Import(name="targets", required=true)
@@ -113,16 +114,16 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private NotificationRuleArgs() {
-        this.createdBy = Output.empty();
-        this.detailType = Output.empty();
-        this.eventTypeId = Output.empty();
-        this.eventTypeIds = Output.empty();
-        this.name = Output.empty();
-        this.resource = Output.empty();
-        this.status = Output.empty();
-        this.tags = Output.empty();
-        this.targetAddress = Output.empty();
-        this.targets = Output.empty();
+        this.createdBy = Codegen.empty();
+        this.detailType = Codegen.empty();
+        this.eventTypeId = Codegen.empty();
+        this.eventTypeIds = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resource = Codegen.empty();
+        this.status = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.targetAddress = Codegen.empty();
+        this.targets = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -168,7 +169,7 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder createdBy(@Nullable String createdBy) {
-            this.createdBy = Output.ofNullable(createdBy);
+            this.createdBy = Codegen.ofNullable(createdBy);
             return this;
         }
         public Builder detailType(Output<NotificationRuleDetailType> detailType) {
@@ -184,7 +185,7 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder eventTypeId(@Nullable String eventTypeId) {
-            this.eventTypeId = Output.ofNullable(eventTypeId);
+            this.eventTypeId = Codegen.ofNullable(eventTypeId);
             return this;
         }
         public Builder eventTypeIds(Output<List<String>> eventTypeIds) {
@@ -203,7 +204,7 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resource(Output<String> resource) {
@@ -219,7 +220,7 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder status(@Nullable NotificationRuleStatus status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder tags(@Nullable Output<Object> tags) {
@@ -227,7 +228,7 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tags(@Nullable Object tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder targetAddress(@Nullable Output<String> targetAddress) {
@@ -235,7 +236,7 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder targetAddress(@Nullable String targetAddress) {
-            this.targetAddress = Output.ofNullable(targetAddress);
+            this.targetAddress = Codegen.ofNullable(targetAddress);
             return this;
         }
         public Builder targets(Output<List<NotificationRuleTargetArgs>> targets) {

@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.SharedVPCHostProjectArgs;
 import io.pulumi.gcp.compute.inputs.SharedVPCHostProjectState;
@@ -71,7 +72,7 @@ public class SharedVPCHostProject extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SharedVPCHostProject(String name, SharedVPCHostProjectArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/sharedVPCHostProject:SharedVPCHostProject", name, args == null ? SharedVPCHostProjectArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/sharedVPCHostProject:SharedVPCHostProject", name, args == null ? SharedVPCHostProjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SharedVPCHostProject(String name, Output<String> id, @Nullable SharedVPCHostProjectState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

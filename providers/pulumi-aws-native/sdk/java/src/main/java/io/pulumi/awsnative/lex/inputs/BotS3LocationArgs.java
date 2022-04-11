@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -48,7 +49,7 @@ public final class BotS3LocationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> s3ObjectVersion;
 
     public Output<String> getS3ObjectVersion() {
-        return this.s3ObjectVersion == null ? Output.empty() : this.s3ObjectVersion;
+        return this.s3ObjectVersion == null ? Codegen.empty() : this.s3ObjectVersion;
     }
 
     public BotS3LocationArgs(
@@ -61,9 +62,9 @@ public final class BotS3LocationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BotS3LocationArgs() {
-        this.s3Bucket = Output.empty();
-        this.s3ObjectKey = Output.empty();
-        this.s3ObjectVersion = Output.empty();
+        this.s3Bucket = Codegen.empty();
+        this.s3ObjectKey = Codegen.empty();
+        this.s3ObjectVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class BotS3LocationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder s3ObjectVersion(@Nullable String s3ObjectVersion) {
-            this.s3ObjectVersion = Output.ofNullable(s3ObjectVersion);
+            this.s3ObjectVersion = Codegen.ofNullable(s3ObjectVersion);
             return this;
         }        public BotS3LocationArgs build() {
             return new BotS3LocationArgs(s3Bucket, s3ObjectKey, s3ObjectVersion);

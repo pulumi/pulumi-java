@@ -6,6 +6,7 @@ package io.pulumi.awsnative.servicecatalogappregistry;
 import io.pulumi.awsnative.servicecatalogappregistry.enums.ResourceAssociationResourceType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -57,9 +58,9 @@ public final class ResourceAssociationArgs extends io.pulumi.resources.ResourceA
     }
 
     private ResourceAssociationArgs() {
-        this.application = Output.empty();
-        this.resource = Output.empty();
-        this.resourceType = Output.empty();
+        this.application = Codegen.empty();
+        this.resource = Codegen.empty();
+        this.resourceType = Codegen.empty();
     }
 
     public static Builder builder() {

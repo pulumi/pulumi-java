@@ -6,6 +6,7 @@ package io.pulumi.awsnative.sagemaker;
 import io.pulumi.awsnative.sagemaker.inputs.ImageTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,21 +21,21 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> imageDescription;
 
     public Output<String> getImageDescription() {
-        return this.imageDescription == null ? Output.empty() : this.imageDescription;
+        return this.imageDescription == null ? Codegen.empty() : this.imageDescription;
     }
 
     @Import(name="imageDisplayName")
       private final @Nullable Output<String> imageDisplayName;
 
     public Output<String> getImageDisplayName() {
-        return this.imageDisplayName == null ? Output.empty() : this.imageDisplayName;
+        return this.imageDisplayName == null ? Codegen.empty() : this.imageDisplayName;
     }
 
     @Import(name="imageName")
       private final @Nullable Output<String> imageName;
 
     public Output<String> getImageName() {
-        return this.imageName == null ? Output.empty() : this.imageName;
+        return this.imageName == null ? Codegen.empty() : this.imageName;
     }
 
     @Import(name="imageRoleArn", required=true)
@@ -52,7 +53,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ImageTagArgs>> tags;
 
     public Output<List<ImageTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ImageArgs(
@@ -69,11 +70,11 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ImageArgs() {
-        this.imageDescription = Output.empty();
-        this.imageDisplayName = Output.empty();
-        this.imageName = Output.empty();
-        this.imageRoleArn = Output.empty();
-        this.tags = Output.empty();
+        this.imageDescription = Codegen.empty();
+        this.imageDisplayName = Codegen.empty();
+        this.imageName = Codegen.empty();
+        this.imageRoleArn = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageDescription(@Nullable String imageDescription) {
-            this.imageDescription = Output.ofNullable(imageDescription);
+            this.imageDescription = Codegen.ofNullable(imageDescription);
             return this;
         }
         public Builder imageDisplayName(@Nullable Output<String> imageDisplayName) {
@@ -117,7 +118,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageDisplayName(@Nullable String imageDisplayName) {
-            this.imageDisplayName = Output.ofNullable(imageDisplayName);
+            this.imageDisplayName = Codegen.ofNullable(imageDisplayName);
             return this;
         }
         public Builder imageName(@Nullable Output<String> imageName) {
@@ -125,7 +126,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageName(@Nullable String imageName) {
-            this.imageName = Output.ofNullable(imageName);
+            this.imageName = Codegen.ofNullable(imageName);
             return this;
         }
         public Builder imageRoleArn(Output<String> imageRoleArn) {
@@ -141,7 +142,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<ImageTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ImageTagArgs... tags) {

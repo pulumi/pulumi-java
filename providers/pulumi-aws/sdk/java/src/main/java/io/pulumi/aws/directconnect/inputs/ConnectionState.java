@@ -5,6 +5,7 @@ package io.pulumi.aws.directconnect.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> awsDevice;
 
     public Output<String> getAwsDevice() {
-        return this.awsDevice == null ? Output.empty() : this.awsDevice;
+        return this.awsDevice == null ? Codegen.empty() : this.awsDevice;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> bandwidth;
 
     public Output<String> getBandwidth() {
-        return this.bandwidth == null ? Output.empty() : this.bandwidth;
+        return this.bandwidth == null ? Codegen.empty() : this.bandwidth;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> hasLogicalRedundancy;
 
     public Output<String> getHasLogicalRedundancy() {
-        return this.hasLogicalRedundancy == null ? Output.empty() : this.hasLogicalRedundancy;
+        return this.hasLogicalRedundancy == null ? Codegen.empty() : this.hasLogicalRedundancy;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> jumboFrameCapable;
 
     public Output<Boolean> getJumboFrameCapable() {
-        return this.jumboFrameCapable == null ? Output.empty() : this.jumboFrameCapable;
+        return this.jumboFrameCapable == null ? Codegen.empty() : this.jumboFrameCapable;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ownerAccountId;
 
     public Output<String> getOwnerAccountId() {
-        return this.ownerAccountId == null ? Output.empty() : this.ownerAccountId;
+        return this.ownerAccountId == null ? Codegen.empty() : this.ownerAccountId;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> providerName;
 
     public Output<String> getProviderName() {
-        return this.providerName == null ? Output.empty() : this.providerName;
+        return this.providerName == null ? Codegen.empty() : this.providerName;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public ConnectionState(
@@ -163,17 +164,17 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConnectionState() {
-        this.arn = Output.empty();
-        this.awsDevice = Output.empty();
-        this.bandwidth = Output.empty();
-        this.hasLogicalRedundancy = Output.empty();
-        this.jumboFrameCapable = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.ownerAccountId = Output.empty();
-        this.providerName = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.awsDevice = Codegen.empty();
+        this.bandwidth = Codegen.empty();
+        this.hasLogicalRedundancy = Codegen.empty();
+        this.jumboFrameCapable = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.ownerAccountId = Codegen.empty();
+        this.providerName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -221,7 +222,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder awsDevice(@Nullable Output<String> awsDevice) {
@@ -229,7 +230,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder awsDevice(@Nullable String awsDevice) {
-            this.awsDevice = Output.ofNullable(awsDevice);
+            this.awsDevice = Codegen.ofNullable(awsDevice);
             return this;
         }
         public Builder bandwidth(@Nullable Output<String> bandwidth) {
@@ -237,7 +238,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bandwidth(@Nullable String bandwidth) {
-            this.bandwidth = Output.ofNullable(bandwidth);
+            this.bandwidth = Codegen.ofNullable(bandwidth);
             return this;
         }
         public Builder hasLogicalRedundancy(@Nullable Output<String> hasLogicalRedundancy) {
@@ -245,7 +246,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hasLogicalRedundancy(@Nullable String hasLogicalRedundancy) {
-            this.hasLogicalRedundancy = Output.ofNullable(hasLogicalRedundancy);
+            this.hasLogicalRedundancy = Codegen.ofNullable(hasLogicalRedundancy);
             return this;
         }
         public Builder jumboFrameCapable(@Nullable Output<Boolean> jumboFrameCapable) {
@@ -253,7 +254,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jumboFrameCapable(@Nullable Boolean jumboFrameCapable) {
-            this.jumboFrameCapable = Output.ofNullable(jumboFrameCapable);
+            this.jumboFrameCapable = Codegen.ofNullable(jumboFrameCapable);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -261,7 +262,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -269,7 +270,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder ownerAccountId(@Nullable Output<String> ownerAccountId) {
@@ -277,7 +278,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ownerAccountId(@Nullable String ownerAccountId) {
-            this.ownerAccountId = Output.ofNullable(ownerAccountId);
+            this.ownerAccountId = Codegen.ofNullable(ownerAccountId);
             return this;
         }
         public Builder providerName(@Nullable Output<String> providerName) {
@@ -285,7 +286,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder providerName(@Nullable String providerName) {
-            this.providerName = Output.ofNullable(providerName);
+            this.providerName = Codegen.ofNullable(providerName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -293,7 +294,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -301,7 +302,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public ConnectionState build() {
             return new ConnectionState(arn, awsDevice, bandwidth, hasLogicalRedundancy, jumboFrameCapable, location, name, ownerAccountId, providerName, tags, tagsAll);

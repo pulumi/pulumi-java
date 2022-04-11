@@ -7,6 +7,7 @@ import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRuleVariablesIpSet
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRuleVariablesPortSetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class RuleGroupRuleGroupRuleVariablesArgs extends io.pulumi.resourc
       private final @Nullable Output<List<RuleGroupRuleGroupRuleVariablesIpSetArgs>> ipSets;
 
     public Output<List<RuleGroupRuleGroupRuleVariablesIpSetArgs>> getIpSets() {
-        return this.ipSets == null ? Output.empty() : this.ipSets;
+        return this.ipSets == null ? Codegen.empty() : this.ipSets;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class RuleGroupRuleGroupRuleVariablesArgs extends io.pulumi.resourc
       private final @Nullable Output<List<RuleGroupRuleGroupRuleVariablesPortSetArgs>> portSets;
 
     public Output<List<RuleGroupRuleGroupRuleVariablesPortSetArgs>> getPortSets() {
-        return this.portSets == null ? Output.empty() : this.portSets;
+        return this.portSets == null ? Codegen.empty() : this.portSets;
     }
 
     public RuleGroupRuleGroupRuleVariablesArgs(
@@ -46,8 +47,8 @@ public final class RuleGroupRuleGroupRuleVariablesArgs extends io.pulumi.resourc
     }
 
     private RuleGroupRuleGroupRuleVariablesArgs() {
-        this.ipSets = Output.empty();
-        this.portSets = Output.empty();
+        this.ipSets = Codegen.empty();
+        this.portSets = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class RuleGroupRuleGroupRuleVariablesArgs extends io.pulumi.resourc
             return this;
         }
         public Builder ipSets(@Nullable List<RuleGroupRuleGroupRuleVariablesIpSetArgs> ipSets) {
-            this.ipSets = Output.ofNullable(ipSets);
+            this.ipSets = Codegen.ofNullable(ipSets);
             return this;
         }
         public Builder ipSets(RuleGroupRuleGroupRuleVariablesIpSetArgs... ipSets) {
@@ -88,7 +89,7 @@ public final class RuleGroupRuleGroupRuleVariablesArgs extends io.pulumi.resourc
             return this;
         }
         public Builder portSets(@Nullable List<RuleGroupRuleGroupRuleVariablesPortSetArgs> portSets) {
-            this.portSets = Output.ofNullable(portSets);
+            this.portSets = Codegen.ofNullable(portSets);
             return this;
         }
         public Builder portSets(RuleGroupRuleGroupRuleVariablesPortSetArgs... portSets) {

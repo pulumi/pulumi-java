@@ -5,6 +5,7 @@ package io.pulumi.googlenative.recommendationengine_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.recommendationengine_v1beta1.enums.GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockState;
 import io.pulumi.googlenative.recommendationengine_v1beta1.inputs.GoogleCloudRecommendationengineV1beta1ImageArgs;
 import io.pulumi.googlenative.recommendationengine_v1beta1.inputs.GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs;
@@ -32,7 +33,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
       private final @Nullable Output<String> availableQuantity;
 
     public Output<String> getAvailableQuantity() {
-        return this.availableQuantity == null ? Output.empty() : this.availableQuantity;
+        return this.availableQuantity == null ? Codegen.empty() : this.availableQuantity;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
       private final @Nullable Output<String> canonicalProductUri;
 
     public Output<String> getCanonicalProductUri() {
-        return this.canonicalProductUri == null ? Output.empty() : this.canonicalProductUri;
+        return this.canonicalProductUri == null ? Codegen.empty() : this.canonicalProductUri;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
       private final @Nullable Output<Map<String,String>> costs;
 
     public Output<Map<String,String>> getCosts() {
-        return this.costs == null ? Output.empty() : this.costs;
+        return this.costs == null ? Codegen.empty() : this.costs;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
       private final @Nullable Output<String> currencyCode;
 
     public Output<String> getCurrencyCode() {
-        return this.currencyCode == null ? Output.empty() : this.currencyCode;
+        return this.currencyCode == null ? Codegen.empty() : this.currencyCode;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
       private final @Nullable Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs> exactPrice;
 
     public Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs> getExactPrice() {
-        return this.exactPrice == null ? Output.empty() : this.exactPrice;
+        return this.exactPrice == null ? Codegen.empty() : this.exactPrice;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
       private final @Nullable Output<List<GoogleCloudRecommendationengineV1beta1ImageArgs>> images;
 
     public Output<List<GoogleCloudRecommendationengineV1beta1ImageArgs>> getImages() {
-        return this.images == null ? Output.empty() : this.images;
+        return this.images == null ? Codegen.empty() : this.images;
     }
 
     /**
@@ -98,7 +99,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
       private final @Nullable Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeArgs> priceRange;
 
     public Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeArgs> getPriceRange() {
-        return this.priceRange == null ? Output.empty() : this.priceRange;
+        return this.priceRange == null ? Codegen.empty() : this.priceRange;
     }
 
     /**
@@ -109,7 +110,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
       private final @Nullable Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockState> stockState;
 
     public Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockState> getStockState() {
-        return this.stockState == null ? Output.empty() : this.stockState;
+        return this.stockState == null ? Codegen.empty() : this.stockState;
     }
 
     public GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs(
@@ -132,14 +133,14 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
     }
 
     private GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs() {
-        this.availableQuantity = Output.empty();
-        this.canonicalProductUri = Output.empty();
-        this.costs = Output.empty();
-        this.currencyCode = Output.empty();
-        this.exactPrice = Output.empty();
-        this.images = Output.empty();
-        this.priceRange = Output.empty();
-        this.stockState = Output.empty();
+        this.availableQuantity = Codegen.empty();
+        this.canonicalProductUri = Codegen.empty();
+        this.costs = Codegen.empty();
+        this.currencyCode = Codegen.empty();
+        this.exactPrice = Codegen.empty();
+        this.images = Codegen.empty();
+        this.priceRange = Codegen.empty();
+        this.stockState = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -181,7 +182,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
             return this;
         }
         public Builder availableQuantity(@Nullable String availableQuantity) {
-            this.availableQuantity = Output.ofNullable(availableQuantity);
+            this.availableQuantity = Codegen.ofNullable(availableQuantity);
             return this;
         }
         public Builder canonicalProductUri(@Nullable Output<String> canonicalProductUri) {
@@ -189,7 +190,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
             return this;
         }
         public Builder canonicalProductUri(@Nullable String canonicalProductUri) {
-            this.canonicalProductUri = Output.ofNullable(canonicalProductUri);
+            this.canonicalProductUri = Codegen.ofNullable(canonicalProductUri);
             return this;
         }
         public Builder costs(@Nullable Output<Map<String,String>> costs) {
@@ -197,7 +198,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
             return this;
         }
         public Builder costs(@Nullable Map<String,String> costs) {
-            this.costs = Output.ofNullable(costs);
+            this.costs = Codegen.ofNullable(costs);
             return this;
         }
         public Builder currencyCode(@Nullable Output<String> currencyCode) {
@@ -205,7 +206,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
             return this;
         }
         public Builder currencyCode(@Nullable String currencyCode) {
-            this.currencyCode = Output.ofNullable(currencyCode);
+            this.currencyCode = Codegen.ofNullable(currencyCode);
             return this;
         }
         public Builder exactPrice(@Nullable Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs> exactPrice) {
@@ -213,7 +214,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
             return this;
         }
         public Builder exactPrice(@Nullable GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs exactPrice) {
-            this.exactPrice = Output.ofNullable(exactPrice);
+            this.exactPrice = Codegen.ofNullable(exactPrice);
             return this;
         }
         public Builder images(@Nullable Output<List<GoogleCloudRecommendationengineV1beta1ImageArgs>> images) {
@@ -221,7 +222,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
             return this;
         }
         public Builder images(@Nullable List<GoogleCloudRecommendationengineV1beta1ImageArgs> images) {
-            this.images = Output.ofNullable(images);
+            this.images = Codegen.ofNullable(images);
             return this;
         }
         public Builder images(GoogleCloudRecommendationengineV1beta1ImageArgs... images) {
@@ -232,7 +233,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
             return this;
         }
         public Builder priceRange(@Nullable GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeArgs priceRange) {
-            this.priceRange = Output.ofNullable(priceRange);
+            this.priceRange = Codegen.ofNullable(priceRange);
             return this;
         }
         public Builder stockState(@Nullable Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockState> stockState) {
@@ -240,7 +241,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
             return this;
         }
         public Builder stockState(@Nullable GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockState stockState) {
-            this.stockState = Output.ofNullable(stockState);
+            this.stockState = Codegen.ofNullable(stockState);
             return this;
         }        public GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs build() {
             return new GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs(availableQuantity, canonicalProductUri, costs, currencyCode, exactPrice, images, priceRange, stockState);

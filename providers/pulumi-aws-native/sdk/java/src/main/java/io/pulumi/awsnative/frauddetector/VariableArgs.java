@@ -9,6 +9,7 @@ import io.pulumi.awsnative.frauddetector.enums.VariableType;
 import io.pulumi.awsnative.frauddetector.inputs.VariableTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -60,7 +61,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<VariableTagArgs>> tags;
 
     public Output<List<VariableTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<VariableType> variableType;
 
     public Output<VariableType> getVariableType() {
-        return this.variableType == null ? Output.empty() : this.variableType;
+        return this.variableType == null ? Codegen.empty() : this.variableType;
     }
 
     public VariableArgs(
@@ -114,13 +115,13 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VariableArgs() {
-        this.dataSource = Output.empty();
-        this.dataType = Output.empty();
-        this.defaultValue = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
-        this.variableType = Output.empty();
+        this.dataSource = Codegen.empty();
+        this.dataType = Codegen.empty();
+        this.defaultValue = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.variableType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -184,7 +185,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -192,7 +193,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<List<VariableTagArgs>> tags) {
@@ -200,7 +201,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<VariableTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(VariableTagArgs... tags) {
@@ -211,7 +212,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder variableType(@Nullable VariableType variableType) {
-            this.variableType = Output.ofNullable(variableType);
+            this.variableType = Codegen.ofNullable(variableType);
             return this;
         }        public VariableArgs build() {
             return new VariableArgs(dataSource, dataType, defaultValue, description, name, tags, variableType);

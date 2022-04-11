@@ -5,6 +5,7 @@ package io.pulumi.aws.iam;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class AccessKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> pgpKey;
 
     public Output<String> getPgpKey() {
-        return this.pgpKey == null ? Output.empty() : this.pgpKey;
+        return this.pgpKey == null ? Codegen.empty() : this.pgpKey;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class AccessKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -57,9 +58,9 @@ public final class AccessKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccessKeyArgs() {
-        this.pgpKey = Output.empty();
-        this.status = Output.empty();
-        this.user = Output.empty();
+        this.pgpKey = Codegen.empty();
+        this.status = Codegen.empty();
+        this.user = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class AccessKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pgpKey(@Nullable String pgpKey) {
-            this.pgpKey = Output.ofNullable(pgpKey);
+            this.pgpKey = Codegen.ofNullable(pgpKey);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -99,7 +100,7 @@ public final class AccessKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder user(Output<String> user) {

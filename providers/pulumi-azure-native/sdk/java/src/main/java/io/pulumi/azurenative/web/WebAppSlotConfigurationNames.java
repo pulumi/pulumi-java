@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -134,7 +135,7 @@ public class WebAppSlotConfigurationNames extends io.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAppSlotConfigurationNames(String name, WebAppSlotConfigurationNamesArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppSlotConfigurationNames", name, args == null ? WebAppSlotConfigurationNamesArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:web:WebAppSlotConfigurationNames", name, args == null ? WebAppSlotConfigurationNamesArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebAppSlotConfigurationNames(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

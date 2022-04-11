@@ -6,6 +6,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 import io.pulumi.azurenative.databoxedge.inputs.MountPointMapArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class KubernetesRoleStorageArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<MountPointMapArgs>> endpoints;
 
     public Output<List<MountPointMapArgs>> getEndpoints() {
-        return this.endpoints == null ? Output.empty() : this.endpoints;
+        return this.endpoints == null ? Codegen.empty() : this.endpoints;
     }
 
     public KubernetesRoleStorageArgs(@Nullable Output<List<MountPointMapArgs>> endpoints) {
@@ -35,7 +36,7 @@ public final class KubernetesRoleStorageArgs extends io.pulumi.resources.Resourc
     }
 
     private KubernetesRoleStorageArgs() {
-        this.endpoints = Output.empty();
+        this.endpoints = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class KubernetesRoleStorageArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder endpoints(@Nullable List<MountPointMapArgs> endpoints) {
-            this.endpoints = Output.ofNullable(endpoints);
+            this.endpoints = Codegen.ofNullable(endpoints);
             return this;
         }
         public Builder endpoints(MountPointMapArgs... endpoints) {

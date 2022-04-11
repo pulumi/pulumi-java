@@ -6,6 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualServiceSpecProviderArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +23,7 @@ public final class VirtualServiceSpecArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<VirtualServiceSpecProviderArgs> provider;
 
     public Output<VirtualServiceSpecProviderArgs> getProvider() {
-        return this.provider == null ? Output.empty() : this.provider;
+        return this.provider == null ? Codegen.empty() : this.provider;
     }
 
     public VirtualServiceSpecArgs(@Nullable Output<VirtualServiceSpecProviderArgs> provider) {
@@ -30,7 +31,7 @@ public final class VirtualServiceSpecArgs extends io.pulumi.resources.ResourceAr
     }
 
     private VirtualServiceSpecArgs() {
-        this.provider = Output.empty();
+        this.provider = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class VirtualServiceSpecArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder provider(@Nullable VirtualServiceSpecProviderArgs provider) {
-            this.provider = Output.ofNullable(provider);
+            this.provider = Codegen.ofNullable(provider);
             return this;
         }        public VirtualServiceSpecArgs build() {
             return new VirtualServiceSpecArgs(provider);

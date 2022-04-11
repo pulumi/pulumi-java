@@ -6,6 +6,7 @@ package io.pulumi.azurenative.batch.inputs;
 import io.pulumi.azurenative.batch.inputs.InboundNatPoolArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -30,7 +31,7 @@ public final class PoolEndpointConfigurationArgs extends io.pulumi.resources.Res
     }
 
     private PoolEndpointConfigurationArgs() {
-        this.inboundNatPools = Output.empty();
+        this.inboundNatPools = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ivs.inputs;
 import io.pulumi.awsnative.ivs.enums.RecordingConfigurationThumbnailConfigurationRecordingMode;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -38,7 +39,7 @@ public final class RecordingConfigurationThumbnailConfigurationArgs extends io.p
       private final @Nullable Output<Integer> targetIntervalSeconds;
 
     public Output<Integer> getTargetIntervalSeconds() {
-        return this.targetIntervalSeconds == null ? Output.empty() : this.targetIntervalSeconds;
+        return this.targetIntervalSeconds == null ? Codegen.empty() : this.targetIntervalSeconds;
     }
 
     public RecordingConfigurationThumbnailConfigurationArgs(
@@ -49,8 +50,8 @@ public final class RecordingConfigurationThumbnailConfigurationArgs extends io.p
     }
 
     private RecordingConfigurationThumbnailConfigurationArgs() {
-        this.recordingMode = Output.empty();
-        this.targetIntervalSeconds = Output.empty();
+        this.recordingMode = Codegen.empty();
+        this.targetIntervalSeconds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class RecordingConfigurationThumbnailConfigurationArgs extends io.p
             return this;
         }
         public Builder targetIntervalSeconds(@Nullable Integer targetIntervalSeconds) {
-            this.targetIntervalSeconds = Output.ofNullable(targetIntervalSeconds);
+            this.targetIntervalSeconds = Codegen.ofNullable(targetIntervalSeconds);
             return this;
         }        public RecordingConfigurationThumbnailConfigurationArgs build() {
             return new RecordingConfigurationThumbnailConfigurationArgs(recordingMode, targetIntervalSeconds);

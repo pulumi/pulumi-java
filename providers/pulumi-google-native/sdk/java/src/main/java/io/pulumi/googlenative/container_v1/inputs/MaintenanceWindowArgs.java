@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.container_v1.inputs.DailyMaintenanceWindowArgs;
 import io.pulumi.googlenative.container_v1.inputs.RecurringTimeWindowArgs;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<DailyMaintenanceWindowArgs> dailyMaintenanceWindow;
 
     public Output<DailyMaintenanceWindowArgs> getDailyMaintenanceWindow() {
-        return this.dailyMaintenanceWindow == null ? Output.empty() : this.dailyMaintenanceWindow;
+        return this.dailyMaintenanceWindow == null ? Codegen.empty() : this.dailyMaintenanceWindow;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Map<String,String>> maintenanceExclusions;
 
     public Output<Map<String,String>> getMaintenanceExclusions() {
-        return this.maintenanceExclusions == null ? Output.empty() : this.maintenanceExclusions;
+        return this.maintenanceExclusions == null ? Codegen.empty() : this.maintenanceExclusions;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<RecurringTimeWindowArgs> recurringWindow;
 
     public Output<RecurringTimeWindowArgs> getRecurringWindow() {
-        return this.recurringWindow == null ? Output.empty() : this.recurringWindow;
+        return this.recurringWindow == null ? Codegen.empty() : this.recurringWindow;
     }
 
     public MaintenanceWindowArgs(
@@ -64,9 +65,9 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
     }
 
     private MaintenanceWindowArgs() {
-        this.dailyMaintenanceWindow = Output.empty();
-        this.maintenanceExclusions = Output.empty();
-        this.recurringWindow = Output.empty();
+        this.dailyMaintenanceWindow = Codegen.empty();
+        this.maintenanceExclusions = Codegen.empty();
+        this.recurringWindow = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder dailyMaintenanceWindow(@Nullable DailyMaintenanceWindowArgs dailyMaintenanceWindow) {
-            this.dailyMaintenanceWindow = Output.ofNullable(dailyMaintenanceWindow);
+            this.dailyMaintenanceWindow = Codegen.ofNullable(dailyMaintenanceWindow);
             return this;
         }
         public Builder maintenanceExclusions(@Nullable Output<Map<String,String>> maintenanceExclusions) {
@@ -106,7 +107,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder maintenanceExclusions(@Nullable Map<String,String> maintenanceExclusions) {
-            this.maintenanceExclusions = Output.ofNullable(maintenanceExclusions);
+            this.maintenanceExclusions = Codegen.ofNullable(maintenanceExclusions);
             return this;
         }
         public Builder recurringWindow(@Nullable Output<RecurringTimeWindowArgs> recurringWindow) {
@@ -114,7 +115,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder recurringWindow(@Nullable RecurringTimeWindowArgs recurringWindow) {
-            this.recurringWindow = Output.ofNullable(recurringWindow);
+            this.recurringWindow = Codegen.ofNullable(recurringWindow);
             return this;
         }        public MaintenanceWindowArgs build() {
             return new MaintenanceWindowArgs(dailyMaintenanceWindow, maintenanceExclusions, recurringWindow);

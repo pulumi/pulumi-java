@@ -5,6 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,14 +24,14 @@ public final class ConnectorProfileSalesforceConnectorProfilePropertiesArgs exte
       private final @Nullable Output<String> instanceUrl;
 
     public Output<String> getInstanceUrl() {
-        return this.instanceUrl == null ? Output.empty() : this.instanceUrl;
+        return this.instanceUrl == null ? Codegen.empty() : this.instanceUrl;
     }
 
     @Import(name="isSandboxEnvironment")
       private final @Nullable Output<Boolean> isSandboxEnvironment;
 
     public Output<Boolean> getIsSandboxEnvironment() {
-        return this.isSandboxEnvironment == null ? Output.empty() : this.isSandboxEnvironment;
+        return this.isSandboxEnvironment == null ? Codegen.empty() : this.isSandboxEnvironment;
     }
 
     public ConnectorProfileSalesforceConnectorProfilePropertiesArgs(
@@ -41,8 +42,8 @@ public final class ConnectorProfileSalesforceConnectorProfilePropertiesArgs exte
     }
 
     private ConnectorProfileSalesforceConnectorProfilePropertiesArgs() {
-        this.instanceUrl = Output.empty();
-        this.isSandboxEnvironment = Output.empty();
+        this.instanceUrl = Codegen.empty();
+        this.isSandboxEnvironment = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class ConnectorProfileSalesforceConnectorProfilePropertiesArgs exte
             return this;
         }
         public Builder instanceUrl(@Nullable String instanceUrl) {
-            this.instanceUrl = Output.ofNullable(instanceUrl);
+            this.instanceUrl = Codegen.ofNullable(instanceUrl);
             return this;
         }
         public Builder isSandboxEnvironment(@Nullable Output<Boolean> isSandboxEnvironment) {
@@ -80,7 +81,7 @@ public final class ConnectorProfileSalesforceConnectorProfilePropertiesArgs exte
             return this;
         }
         public Builder isSandboxEnvironment(@Nullable Boolean isSandboxEnvironment) {
-            this.isSandboxEnvironment = Output.ofNullable(isSandboxEnvironment);
+            this.isSandboxEnvironment = Codegen.ofNullable(isSandboxEnvironment);
             return this;
         }        public ConnectorProfileSalesforceConnectorProfilePropertiesArgs build() {
             return new ConnectorProfileSalesforceConnectorProfilePropertiesArgs(instanceUrl, isSandboxEnvironment);

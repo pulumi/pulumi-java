@@ -5,6 +5,7 @@ package io.pulumi.gcp.identityplatform;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -45,7 +46,7 @@ public final class TenantDefaultSupportedIdpConfigArgs extends io.pulumi.resourc
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class TenantDefaultSupportedIdpConfigArgs extends io.pulumi.resourc
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -108,12 +109,12 @@ public final class TenantDefaultSupportedIdpConfigArgs extends io.pulumi.resourc
     }
 
     private TenantDefaultSupportedIdpConfigArgs() {
-        this.clientId = Output.empty();
-        this.clientSecret = Output.empty();
-        this.enabled = Output.empty();
-        this.idpId = Output.empty();
-        this.project = Output.empty();
-        this.tenant = Output.empty();
+        this.clientId = Codegen.empty();
+        this.clientSecret = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.idpId = Codegen.empty();
+        this.project = Codegen.empty();
+        this.tenant = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -167,7 +168,7 @@ public final class TenantDefaultSupportedIdpConfigArgs extends io.pulumi.resourc
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder idpId(Output<String> idpId) {
@@ -183,7 +184,7 @@ public final class TenantDefaultSupportedIdpConfigArgs extends io.pulumi.resourc
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder tenant(Output<String> tenant) {

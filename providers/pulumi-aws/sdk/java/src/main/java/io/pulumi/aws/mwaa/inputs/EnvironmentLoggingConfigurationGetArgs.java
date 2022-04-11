@@ -10,6 +10,7 @@ import io.pulumi.aws.mwaa.inputs.EnvironmentLoggingConfigurationWebserverLogsGet
 import io.pulumi.aws.mwaa.inputs.EnvironmentLoggingConfigurationWorkerLogsGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,7 +27,7 @@ public final class EnvironmentLoggingConfigurationGetArgs extends io.pulumi.reso
       private final @Nullable Output<EnvironmentLoggingConfigurationDagProcessingLogsGetArgs> dagProcessingLogs;
 
     public Output<EnvironmentLoggingConfigurationDagProcessingLogsGetArgs> getDagProcessingLogs() {
-        return this.dagProcessingLogs == null ? Output.empty() : this.dagProcessingLogs;
+        return this.dagProcessingLogs == null ? Codegen.empty() : this.dagProcessingLogs;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class EnvironmentLoggingConfigurationGetArgs extends io.pulumi.reso
       private final @Nullable Output<EnvironmentLoggingConfigurationSchedulerLogsGetArgs> schedulerLogs;
 
     public Output<EnvironmentLoggingConfigurationSchedulerLogsGetArgs> getSchedulerLogs() {
-        return this.schedulerLogs == null ? Output.empty() : this.schedulerLogs;
+        return this.schedulerLogs == null ? Codegen.empty() : this.schedulerLogs;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class EnvironmentLoggingConfigurationGetArgs extends io.pulumi.reso
       private final @Nullable Output<EnvironmentLoggingConfigurationTaskLogsGetArgs> taskLogs;
 
     public Output<EnvironmentLoggingConfigurationTaskLogsGetArgs> getTaskLogs() {
-        return this.taskLogs == null ? Output.empty() : this.taskLogs;
+        return this.taskLogs == null ? Codegen.empty() : this.taskLogs;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class EnvironmentLoggingConfigurationGetArgs extends io.pulumi.reso
       private final @Nullable Output<EnvironmentLoggingConfigurationWebserverLogsGetArgs> webserverLogs;
 
     public Output<EnvironmentLoggingConfigurationWebserverLogsGetArgs> getWebserverLogs() {
-        return this.webserverLogs == null ? Output.empty() : this.webserverLogs;
+        return this.webserverLogs == null ? Codegen.empty() : this.webserverLogs;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class EnvironmentLoggingConfigurationGetArgs extends io.pulumi.reso
       private final @Nullable Output<EnvironmentLoggingConfigurationWorkerLogsGetArgs> workerLogs;
 
     public Output<EnvironmentLoggingConfigurationWorkerLogsGetArgs> getWorkerLogs() {
-        return this.workerLogs == null ? Output.empty() : this.workerLogs;
+        return this.workerLogs == null ? Codegen.empty() : this.workerLogs;
     }
 
     public EnvironmentLoggingConfigurationGetArgs(
@@ -87,11 +88,11 @@ public final class EnvironmentLoggingConfigurationGetArgs extends io.pulumi.reso
     }
 
     private EnvironmentLoggingConfigurationGetArgs() {
-        this.dagProcessingLogs = Output.empty();
-        this.schedulerLogs = Output.empty();
-        this.taskLogs = Output.empty();
-        this.webserverLogs = Output.empty();
-        this.workerLogs = Output.empty();
+        this.dagProcessingLogs = Codegen.empty();
+        this.schedulerLogs = Codegen.empty();
+        this.taskLogs = Codegen.empty();
+        this.webserverLogs = Codegen.empty();
+        this.workerLogs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class EnvironmentLoggingConfigurationGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder dagProcessingLogs(@Nullable EnvironmentLoggingConfigurationDagProcessingLogsGetArgs dagProcessingLogs) {
-            this.dagProcessingLogs = Output.ofNullable(dagProcessingLogs);
+            this.dagProcessingLogs = Codegen.ofNullable(dagProcessingLogs);
             return this;
         }
         public Builder schedulerLogs(@Nullable Output<EnvironmentLoggingConfigurationSchedulerLogsGetArgs> schedulerLogs) {
@@ -135,7 +136,7 @@ public final class EnvironmentLoggingConfigurationGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder schedulerLogs(@Nullable EnvironmentLoggingConfigurationSchedulerLogsGetArgs schedulerLogs) {
-            this.schedulerLogs = Output.ofNullable(schedulerLogs);
+            this.schedulerLogs = Codegen.ofNullable(schedulerLogs);
             return this;
         }
         public Builder taskLogs(@Nullable Output<EnvironmentLoggingConfigurationTaskLogsGetArgs> taskLogs) {
@@ -143,7 +144,7 @@ public final class EnvironmentLoggingConfigurationGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder taskLogs(@Nullable EnvironmentLoggingConfigurationTaskLogsGetArgs taskLogs) {
-            this.taskLogs = Output.ofNullable(taskLogs);
+            this.taskLogs = Codegen.ofNullable(taskLogs);
             return this;
         }
         public Builder webserverLogs(@Nullable Output<EnvironmentLoggingConfigurationWebserverLogsGetArgs> webserverLogs) {
@@ -151,7 +152,7 @@ public final class EnvironmentLoggingConfigurationGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder webserverLogs(@Nullable EnvironmentLoggingConfigurationWebserverLogsGetArgs webserverLogs) {
-            this.webserverLogs = Output.ofNullable(webserverLogs);
+            this.webserverLogs = Codegen.ofNullable(webserverLogs);
             return this;
         }
         public Builder workerLogs(@Nullable Output<EnvironmentLoggingConfigurationWorkerLogsGetArgs> workerLogs) {
@@ -159,7 +160,7 @@ public final class EnvironmentLoggingConfigurationGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder workerLogs(@Nullable EnvironmentLoggingConfigurationWorkerLogsGetArgs workerLogs) {
-            this.workerLogs = Output.ofNullable(workerLogs);
+            this.workerLogs = Codegen.ofNullable(workerLogs);
             return this;
         }        public EnvironmentLoggingConfigurationGetArgs build() {
             return new EnvironmentLoggingConfigurationGetArgs(dagProcessingLogs, schedulerLogs, taskLogs, webserverLogs, workerLogs);

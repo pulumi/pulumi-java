@@ -5,6 +5,7 @@ package io.pulumi.aws.servicecatalog;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ConstraintArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> acceptLanguage;
 
     public Output<String> getAcceptLanguage() {
-        return this.acceptLanguage == null ? Output.empty() : this.acceptLanguage;
+        return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ConstraintArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -96,12 +97,12 @@ public final class ConstraintArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConstraintArgs() {
-        this.acceptLanguage = Output.empty();
-        this.description = Output.empty();
-        this.parameters = Output.empty();
-        this.portfolioId = Output.empty();
-        this.productId = Output.empty();
-        this.type = Output.empty();
+        this.acceptLanguage = Codegen.empty();
+        this.description = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.portfolioId = Codegen.empty();
+        this.productId = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class ConstraintArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Output.ofNullable(acceptLanguage);
+            this.acceptLanguage = Codegen.ofNullable(acceptLanguage);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -147,7 +148,7 @@ public final class ConstraintArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder parameters(Output<String> parameters) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.apigee.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.apigee.inputs.EnvironmentIamBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ public final class EnvironmentIamBindingState extends io.pulumi.resources.Resour
       private final @Nullable Output<EnvironmentIamBindingConditionGetArgs> condition;
 
     public Output<EnvironmentIamBindingConditionGetArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -31,7 +32,7 @@ public final class EnvironmentIamBindingState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> envId;
 
     public Output<String> getEnvId() {
-        return this.envId == null ? Output.empty() : this.envId;
+        return this.envId == null ? Codegen.empty() : this.envId;
     }
 
     /**
@@ -42,21 +43,21 @@ public final class EnvironmentIamBindingState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
-        return this.members == null ? Output.empty() : this.members;
+        return this.members == null ? Codegen.empty() : this.members;
     }
 
     @Import(name="orgId")
       private final @Nullable Output<String> orgId;
 
     public Output<String> getOrgId() {
-        return this.orgId == null ? Output.empty() : this.orgId;
+        return this.orgId == null ? Codegen.empty() : this.orgId;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class EnvironmentIamBindingState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     public EnvironmentIamBindingState(
@@ -88,12 +89,12 @@ public final class EnvironmentIamBindingState extends io.pulumi.resources.Resour
     }
 
     private EnvironmentIamBindingState() {
-        this.condition = Output.empty();
-        this.envId = Output.empty();
-        this.etag = Output.empty();
-        this.members = Output.empty();
-        this.orgId = Output.empty();
-        this.role = Output.empty();
+        this.condition = Codegen.empty();
+        this.envId = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.members = Codegen.empty();
+        this.orgId = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class EnvironmentIamBindingState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder condition(@Nullable EnvironmentIamBindingConditionGetArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder envId(@Nullable Output<String> envId) {
@@ -139,7 +140,7 @@ public final class EnvironmentIamBindingState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder envId(@Nullable String envId) {
-            this.envId = Output.ofNullable(envId);
+            this.envId = Codegen.ofNullable(envId);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -147,7 +148,7 @@ public final class EnvironmentIamBindingState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder members(@Nullable Output<List<String>> members) {
@@ -155,7 +156,7 @@ public final class EnvironmentIamBindingState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder members(@Nullable List<String> members) {
-            this.members = Output.ofNullable(members);
+            this.members = Codegen.ofNullable(members);
             return this;
         }
         public Builder members(String... members) {
@@ -166,7 +167,7 @@ public final class EnvironmentIamBindingState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder orgId(@Nullable String orgId) {
-            this.orgId = Output.ofNullable(orgId);
+            this.orgId = Codegen.ofNullable(orgId);
             return this;
         }
         public Builder role(@Nullable Output<String> role) {
@@ -174,7 +175,7 @@ public final class EnvironmentIamBindingState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }        public EnvironmentIamBindingState build() {
             return new EnvironmentIamBindingState(condition, envId, etag, members, orgId, role);

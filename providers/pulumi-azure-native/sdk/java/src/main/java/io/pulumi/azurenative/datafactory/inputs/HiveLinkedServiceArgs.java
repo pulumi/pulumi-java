@@ -13,6 +13,7 @@ import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +38,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Object> allowHostNameCNMismatch;
 
     public Output<Object> getAllowHostNameCNMismatch() {
-        return this.allowHostNameCNMismatch == null ? Output.empty() : this.allowHostNameCNMismatch;
+        return this.allowHostNameCNMismatch == null ? Codegen.empty() : this.allowHostNameCNMismatch;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Object> allowSelfSignedServerCert;
 
     public Output<Object> getAllowSelfSignedServerCert() {
-        return this.allowSelfSignedServerCert == null ? Output.empty() : this.allowSelfSignedServerCert;
+        return this.allowSelfSignedServerCert == null ? Codegen.empty() : this.allowSelfSignedServerCert;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Output.empty() : this.connectVia;
+        return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Object> enableSsl;
 
     public Output<Object> getEnableSsl() {
-        return this.enableSsl == null ? Output.empty() : this.enableSsl;
+        return this.enableSsl == null ? Codegen.empty() : this.enableSsl;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Object> encryptedCredential;
 
     public Output<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
+        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Object> httpPath;
 
     public Output<Object> getHttpPath() {
-        return this.httpPath == null ? Output.empty() : this.httpPath;
+        return this.httpPath == null ? Codegen.empty() : this.httpPath;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -158,7 +159,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -169,7 +170,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Object> port;
 
     public Output<Object> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -180,7 +181,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Either<String,HiveServerType>> serverType;
 
     public Output<Either<String,HiveServerType>> getServerType() {
-        return this.serverType == null ? Output.empty() : this.serverType;
+        return this.serverType == null ? Codegen.empty() : this.serverType;
     }
 
     /**
@@ -191,7 +192,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Object> serviceDiscoveryMode;
 
     public Output<Object> getServiceDiscoveryMode() {
-        return this.serviceDiscoveryMode == null ? Output.empty() : this.serviceDiscoveryMode;
+        return this.serviceDiscoveryMode == null ? Codegen.empty() : this.serviceDiscoveryMode;
     }
 
     /**
@@ -202,7 +203,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Either<String,HiveThriftTransportProtocol>> thriftTransportProtocol;
 
     public Output<Either<String,HiveThriftTransportProtocol>> getThriftTransportProtocol() {
-        return this.thriftTransportProtocol == null ? Output.empty() : this.thriftTransportProtocol;
+        return this.thriftTransportProtocol == null ? Codegen.empty() : this.thriftTransportProtocol;
     }
 
     /**
@@ -213,7 +214,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Object> trustedCertPath;
 
     public Output<Object> getTrustedCertPath() {
-        return this.trustedCertPath == null ? Output.empty() : this.trustedCertPath;
+        return this.trustedCertPath == null ? Codegen.empty() : this.trustedCertPath;
     }
 
     /**
@@ -236,7 +237,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Object> useNativeQuery;
 
     public Output<Object> getUseNativeQuery() {
-        return this.useNativeQuery == null ? Output.empty() : this.useNativeQuery;
+        return this.useNativeQuery == null ? Codegen.empty() : this.useNativeQuery;
     }
 
     /**
@@ -247,7 +248,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Object> useSystemTrustStore;
 
     public Output<Object> getUseSystemTrustStore() {
-        return this.useSystemTrustStore == null ? Output.empty() : this.useSystemTrustStore;
+        return this.useSystemTrustStore == null ? Codegen.empty() : this.useSystemTrustStore;
     }
 
     /**
@@ -258,7 +259,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Object> username;
 
     public Output<Object> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     /**
@@ -269,7 +270,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Object> zooKeeperNameSpace;
 
     public Output<Object> getZooKeeperNameSpace() {
-        return this.zooKeeperNameSpace == null ? Output.empty() : this.zooKeeperNameSpace;
+        return this.zooKeeperNameSpace == null ? Codegen.empty() : this.zooKeeperNameSpace;
     }
 
     public HiveLinkedServiceArgs(
@@ -320,28 +321,28 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
     }
 
     private HiveLinkedServiceArgs() {
-        this.allowHostNameCNMismatch = Output.empty();
-        this.allowSelfSignedServerCert = Output.empty();
-        this.annotations = Output.empty();
-        this.authenticationType = Output.empty();
-        this.connectVia = Output.empty();
-        this.description = Output.empty();
-        this.enableSsl = Output.empty();
-        this.encryptedCredential = Output.empty();
-        this.host = Output.empty();
-        this.httpPath = Output.empty();
-        this.parameters = Output.empty();
-        this.password = Output.empty();
-        this.port = Output.empty();
-        this.serverType = Output.empty();
-        this.serviceDiscoveryMode = Output.empty();
-        this.thriftTransportProtocol = Output.empty();
-        this.trustedCertPath = Output.empty();
-        this.type = Output.empty();
-        this.useNativeQuery = Output.empty();
-        this.useSystemTrustStore = Output.empty();
-        this.username = Output.empty();
-        this.zooKeeperNameSpace = Output.empty();
+        this.allowHostNameCNMismatch = Codegen.empty();
+        this.allowSelfSignedServerCert = Codegen.empty();
+        this.annotations = Codegen.empty();
+        this.authenticationType = Codegen.empty();
+        this.connectVia = Codegen.empty();
+        this.description = Codegen.empty();
+        this.enableSsl = Codegen.empty();
+        this.encryptedCredential = Codegen.empty();
+        this.host = Codegen.empty();
+        this.httpPath = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.password = Codegen.empty();
+        this.port = Codegen.empty();
+        this.serverType = Codegen.empty();
+        this.serviceDiscoveryMode = Codegen.empty();
+        this.thriftTransportProtocol = Codegen.empty();
+        this.trustedCertPath = Codegen.empty();
+        this.type = Codegen.empty();
+        this.useNativeQuery = Codegen.empty();
+        this.useSystemTrustStore = Codegen.empty();
+        this.username = Codegen.empty();
+        this.zooKeeperNameSpace = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -411,7 +412,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder allowHostNameCNMismatch(@Nullable Object allowHostNameCNMismatch) {
-            this.allowHostNameCNMismatch = Output.ofNullable(allowHostNameCNMismatch);
+            this.allowHostNameCNMismatch = Codegen.ofNullable(allowHostNameCNMismatch);
             return this;
         }
         public Builder allowSelfSignedServerCert(@Nullable Output<Object> allowSelfSignedServerCert) {
@@ -419,7 +420,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder allowSelfSignedServerCert(@Nullable Object allowSelfSignedServerCert) {
-            this.allowSelfSignedServerCert = Output.ofNullable(allowSelfSignedServerCert);
+            this.allowSelfSignedServerCert = Codegen.ofNullable(allowSelfSignedServerCert);
             return this;
         }
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
@@ -427,7 +428,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -446,7 +447,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Output.ofNullable(connectVia);
+            this.connectVia = Codegen.ofNullable(connectVia);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -454,7 +455,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder enableSsl(@Nullable Output<Object> enableSsl) {
@@ -462,7 +463,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder enableSsl(@Nullable Object enableSsl) {
-            this.enableSsl = Output.ofNullable(enableSsl);
+            this.enableSsl = Codegen.ofNullable(enableSsl);
             return this;
         }
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
@@ -470,7 +471,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Output.ofNullable(encryptedCredential);
+            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
             return this;
         }
         public Builder host(Output<Object> host) {
@@ -486,7 +487,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder httpPath(@Nullable Object httpPath) {
-            this.httpPath = Output.ofNullable(httpPath);
+            this.httpPath = Codegen.ofNullable(httpPath);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
@@ -494,7 +495,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
@@ -502,7 +503,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder port(@Nullable Output<Object> port) {
@@ -510,7 +511,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder port(@Nullable Object port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder serverType(@Nullable Output<Either<String,HiveServerType>> serverType) {
@@ -518,7 +519,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder serverType(@Nullable Either<String,HiveServerType> serverType) {
-            this.serverType = Output.ofNullable(serverType);
+            this.serverType = Codegen.ofNullable(serverType);
             return this;
         }
         public Builder serviceDiscoveryMode(@Nullable Output<Object> serviceDiscoveryMode) {
@@ -526,7 +527,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder serviceDiscoveryMode(@Nullable Object serviceDiscoveryMode) {
-            this.serviceDiscoveryMode = Output.ofNullable(serviceDiscoveryMode);
+            this.serviceDiscoveryMode = Codegen.ofNullable(serviceDiscoveryMode);
             return this;
         }
         public Builder thriftTransportProtocol(@Nullable Output<Either<String,HiveThriftTransportProtocol>> thriftTransportProtocol) {
@@ -534,7 +535,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder thriftTransportProtocol(@Nullable Either<String,HiveThriftTransportProtocol> thriftTransportProtocol) {
-            this.thriftTransportProtocol = Output.ofNullable(thriftTransportProtocol);
+            this.thriftTransportProtocol = Codegen.ofNullable(thriftTransportProtocol);
             return this;
         }
         public Builder trustedCertPath(@Nullable Output<Object> trustedCertPath) {
@@ -542,7 +543,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder trustedCertPath(@Nullable Object trustedCertPath) {
-            this.trustedCertPath = Output.ofNullable(trustedCertPath);
+            this.trustedCertPath = Codegen.ofNullable(trustedCertPath);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -558,7 +559,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder useNativeQuery(@Nullable Object useNativeQuery) {
-            this.useNativeQuery = Output.ofNullable(useNativeQuery);
+            this.useNativeQuery = Codegen.ofNullable(useNativeQuery);
             return this;
         }
         public Builder useSystemTrustStore(@Nullable Output<Object> useSystemTrustStore) {
@@ -566,7 +567,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder useSystemTrustStore(@Nullable Object useSystemTrustStore) {
-            this.useSystemTrustStore = Output.ofNullable(useSystemTrustStore);
+            this.useSystemTrustStore = Codegen.ofNullable(useSystemTrustStore);
             return this;
         }
         public Builder username(@Nullable Output<Object> username) {
@@ -574,7 +575,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder username(@Nullable Object username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }
         public Builder zooKeeperNameSpace(@Nullable Output<Object> zooKeeperNameSpace) {
@@ -582,7 +583,7 @@ public final class HiveLinkedServiceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder zooKeeperNameSpace(@Nullable Object zooKeeperNameSpace) {
-            this.zooKeeperNameSpace = Output.ofNullable(zooKeeperNameSpace);
+            this.zooKeeperNameSpace = Codegen.ofNullable(zooKeeperNameSpace);
             return this;
         }        public HiveLinkedServiceArgs build() {
             return new HiveLinkedServiceArgs(allowHostNameCNMismatch, allowSelfSignedServerCert, annotations, authenticationType, connectVia, description, enableSsl, encryptedCredential, host, httpPath, parameters, password, port, serverType, serviceDiscoveryMode, thriftTransportProtocol, trustedCertPath, type, useNativeQuery, useSystemTrustStore, username, zooKeeperNameSpace);

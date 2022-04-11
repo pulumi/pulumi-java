@@ -9,6 +9,7 @@ import io.pulumi.aws.elasticache.inputs.UserGroupState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -113,7 +114,7 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public UserGroup(String name, UserGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:elasticache/userGroup:UserGroup", name, args == null ? UserGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:elasticache/userGroup:UserGroup", name, args == null ? UserGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private UserGroup(String name, Output<String> id, @Nullable UserGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

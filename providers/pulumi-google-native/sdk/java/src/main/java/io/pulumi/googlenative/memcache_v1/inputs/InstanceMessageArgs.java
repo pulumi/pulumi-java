@@ -5,6 +5,7 @@ package io.pulumi.googlenative.memcache_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.memcache_v1.enums.InstanceMessageCode;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class InstanceMessageArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<InstanceMessageCode> code;
 
     public Output<InstanceMessageCode> getCode() {
-        return this.code == null ? Output.empty() : this.code;
+        return this.code == null ? Codegen.empty() : this.code;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class InstanceMessageArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {
-        return this.message == null ? Output.empty() : this.message;
+        return this.message == null ? Codegen.empty() : this.message;
     }
 
     public InstanceMessageArgs(
@@ -45,8 +46,8 @@ public final class InstanceMessageArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private InstanceMessageArgs() {
-        this.code = Output.empty();
-        this.message = Output.empty();
+        this.code = Codegen.empty();
+        this.message = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class InstanceMessageArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder code(@Nullable InstanceMessageCode code) {
-            this.code = Output.ofNullable(code);
+            this.code = Codegen.ofNullable(code);
             return this;
         }
         public Builder message(@Nullable Output<String> message) {
@@ -84,7 +85,7 @@ public final class InstanceMessageArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder message(@Nullable String message) {
-            this.message = Output.ofNullable(message);
+            this.message = Codegen.ofNullable(message);
             return this;
         }        public InstanceMessageArgs build() {
             return new InstanceMessageArgs(code, message);

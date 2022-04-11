@@ -5,6 +5,7 @@ package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.MethodMapArgs;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.OptionsArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class CollectionOverrideArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> collection;
 
     public Output<String> getCollection() {
-        return this.collection == null ? Output.empty() : this.collection;
+        return this.collection == null ? Codegen.empty() : this.collection;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class CollectionOverrideArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<MethodMapArgs> methodMap;
 
     public Output<MethodMapArgs> getMethodMap() {
-        return this.methodMap == null ? Output.empty() : this.methodMap;
+        return this.methodMap == null ? Codegen.empty() : this.methodMap;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class CollectionOverrideArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<OptionsArgs> options;
 
     public Output<OptionsArgs> getOptions() {
-        return this.options == null ? Output.empty() : this.options;
+        return this.options == null ? Codegen.empty() : this.options;
     }
 
     public CollectionOverrideArgs(
@@ -63,9 +64,9 @@ public final class CollectionOverrideArgs extends io.pulumi.resources.ResourceAr
     }
 
     private CollectionOverrideArgs() {
-        this.collection = Output.empty();
-        this.methodMap = Output.empty();
-        this.options = Output.empty();
+        this.collection = Codegen.empty();
+        this.methodMap = Codegen.empty();
+        this.options = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class CollectionOverrideArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder collection(@Nullable String collection) {
-            this.collection = Output.ofNullable(collection);
+            this.collection = Codegen.ofNullable(collection);
             return this;
         }
         public Builder methodMap(@Nullable Output<MethodMapArgs> methodMap) {
@@ -105,7 +106,7 @@ public final class CollectionOverrideArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder methodMap(@Nullable MethodMapArgs methodMap) {
-            this.methodMap = Output.ofNullable(methodMap);
+            this.methodMap = Codegen.ofNullable(methodMap);
             return this;
         }
         public Builder options(@Nullable Output<OptionsArgs> options) {
@@ -113,7 +114,7 @@ public final class CollectionOverrideArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder options(@Nullable OptionsArgs options) {
-            this.options = Output.ofNullable(options);
+            this.options = Codegen.ofNullable(options);
             return this;
         }        public CollectionOverrideArgs build() {
             return new CollectionOverrideArgs(collection, methodMap, options);

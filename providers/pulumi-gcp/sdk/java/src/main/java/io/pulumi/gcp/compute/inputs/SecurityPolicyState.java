@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.SecurityPolicyAdaptiveProtectionConfigGetArgs;
 import io.pulumi.gcp.compute.inputs.SecurityPolicyRuleGetArgs;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<SecurityPolicyAdaptiveProtectionConfigGetArgs> adaptiveProtectionConfig;
 
     public Output<SecurityPolicyAdaptiveProtectionConfigGetArgs> getAdaptiveProtectionConfig() {
-        return this.adaptiveProtectionConfig == null ? Output.empty() : this.adaptiveProtectionConfig;
+        return this.adaptiveProtectionConfig == null ? Codegen.empty() : this.adaptiveProtectionConfig;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> fingerprint;
 
     public Output<String> getFingerprint() {
-        return this.fingerprint == null ? Output.empty() : this.fingerprint;
+        return this.fingerprint == null ? Codegen.empty() : this.fingerprint;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<SecurityPolicyRuleGetArgs>> rules;
 
     public Output<List<SecurityPolicyRuleGetArgs>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
-        return this.selfLink == null ? Output.empty() : this.selfLink;
+        return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
     public SecurityPolicyState(
@@ -115,13 +116,13 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
     }
 
     private SecurityPolicyState() {
-        this.adaptiveProtectionConfig = Output.empty();
-        this.description = Output.empty();
-        this.fingerprint = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.rules = Output.empty();
-        this.selfLink = Output.empty();
+        this.adaptiveProtectionConfig = Codegen.empty();
+        this.description = Codegen.empty();
+        this.fingerprint = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.rules = Codegen.empty();
+        this.selfLink = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -161,7 +162,7 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder adaptiveProtectionConfig(@Nullable SecurityPolicyAdaptiveProtectionConfigGetArgs adaptiveProtectionConfig) {
-            this.adaptiveProtectionConfig = Output.ofNullable(adaptiveProtectionConfig);
+            this.adaptiveProtectionConfig = Codegen.ofNullable(adaptiveProtectionConfig);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -169,7 +170,7 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
@@ -177,7 +178,7 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder fingerprint(@Nullable String fingerprint) {
-            this.fingerprint = Output.ofNullable(fingerprint);
+            this.fingerprint = Codegen.ofNullable(fingerprint);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -185,7 +186,7 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -193,7 +194,7 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder rules(@Nullable Output<List<SecurityPolicyRuleGetArgs>> rules) {
@@ -201,7 +202,7 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder rules(@Nullable List<SecurityPolicyRuleGetArgs> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(SecurityPolicyRuleGetArgs... rules) {
@@ -212,7 +213,7 @@ public final class SecurityPolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Output.ofNullable(selfLink);
+            this.selfLink = Codegen.ofNullable(selfLink);
             return this;
         }        public SecurityPolicyState build() {
             return new SecurityPolicyState(adaptiveProtectionConfig, description, fingerprint, name, project, rules, selfLink);

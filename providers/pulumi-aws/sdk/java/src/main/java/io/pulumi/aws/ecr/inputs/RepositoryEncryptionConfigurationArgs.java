@@ -5,6 +5,7 @@ package io.pulumi.aws.ecr.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class RepositoryEncryptionConfigurationArgs extends io.pulumi.resou
       private final @Nullable Output<String> encryptionType;
 
     public Output<String> getEncryptionType() {
-        return this.encryptionType == null ? Output.empty() : this.encryptionType;
+        return this.encryptionType == null ? Codegen.empty() : this.encryptionType;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class RepositoryEncryptionConfigurationArgs extends io.pulumi.resou
       private final @Nullable Output<String> kmsKey;
 
     public Output<String> getKmsKey() {
-        return this.kmsKey == null ? Output.empty() : this.kmsKey;
+        return this.kmsKey == null ? Codegen.empty() : this.kmsKey;
     }
 
     public RepositoryEncryptionConfigurationArgs(
@@ -44,8 +45,8 @@ public final class RepositoryEncryptionConfigurationArgs extends io.pulumi.resou
     }
 
     private RepositoryEncryptionConfigurationArgs() {
-        this.encryptionType = Output.empty();
-        this.kmsKey = Output.empty();
+        this.encryptionType = Codegen.empty();
+        this.kmsKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class RepositoryEncryptionConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder encryptionType(@Nullable String encryptionType) {
-            this.encryptionType = Output.ofNullable(encryptionType);
+            this.encryptionType = Codegen.ofNullable(encryptionType);
             return this;
         }
         public Builder kmsKey(@Nullable Output<String> kmsKey) {
@@ -83,7 +84,7 @@ public final class RepositoryEncryptionConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder kmsKey(@Nullable String kmsKey) {
-            this.kmsKey = Output.ofNullable(kmsKey);
+            this.kmsKey = Codegen.ofNullable(kmsKey);
             return this;
         }        public RepositoryEncryptionConfigurationArgs build() {
             return new RepositoryEncryptionConfigurationArgs(encryptionType, kmsKey);

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.lambda.inputs;
 import io.pulumi.awsnative.lambda.inputs.EventSourceMappingEndpointsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,7 +27,7 @@ public final class EventSourceMappingSelfManagedEventSourceArgs extends io.pulum
       private final @Nullable Output<EventSourceMappingEndpointsArgs> endpoints;
 
     public Output<EventSourceMappingEndpointsArgs> getEndpoints() {
-        return this.endpoints == null ? Output.empty() : this.endpoints;
+        return this.endpoints == null ? Codegen.empty() : this.endpoints;
     }
 
     public EventSourceMappingSelfManagedEventSourceArgs(@Nullable Output<EventSourceMappingEndpointsArgs> endpoints) {
@@ -34,7 +35,7 @@ public final class EventSourceMappingSelfManagedEventSourceArgs extends io.pulum
     }
 
     private EventSourceMappingSelfManagedEventSourceArgs() {
-        this.endpoints = Output.empty();
+        this.endpoints = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class EventSourceMappingSelfManagedEventSourceArgs extends io.pulum
             return this;
         }
         public Builder endpoints(@Nullable EventSourceMappingEndpointsArgs endpoints) {
-            this.endpoints = Output.ofNullable(endpoints);
+            this.endpoints = Codegen.ofNullable(endpoints);
             return this;
         }        public EventSourceMappingSelfManagedEventSourceArgs build() {
             return new EventSourceMappingSelfManagedEventSourceArgs(endpoints);

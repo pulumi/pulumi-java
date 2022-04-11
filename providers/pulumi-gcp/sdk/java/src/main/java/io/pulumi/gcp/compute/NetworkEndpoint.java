@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.NetworkEndpointArgs;
 import io.pulumi.gcp.compute.inputs.NetworkEndpointState;
@@ -168,7 +169,7 @@ public class NetworkEndpoint extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NetworkEndpoint(String name, NetworkEndpointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/networkEndpoint:NetworkEndpoint", name, args == null ? NetworkEndpointArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/networkEndpoint:NetworkEndpoint", name, args == null ? NetworkEndpointArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NetworkEndpoint(String name, Output<String> id, @Nullable NetworkEndpointState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

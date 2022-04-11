@@ -5,6 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -73,10 +74,10 @@ public final class AS2MessageConnectionSettingsArgs extends io.pulumi.resources.
     }
 
     private AS2MessageConnectionSettingsArgs() {
-        this.ignoreCertificateNameMismatch = Output.empty();
-        this.keepHttpConnectionAlive = Output.empty();
-        this.supportHttpStatusCodeContinue = Output.empty();
-        this.unfoldHttpHeaders = Output.empty();
+        this.ignoreCertificateNameMismatch = Codegen.empty();
+        this.keepHttpConnectionAlive = Codegen.empty();
+        this.supportHttpStatusCodeContinue = Codegen.empty();
+        this.unfoldHttpHeaders = Codegen.empty();
     }
 
     public static Builder builder() {

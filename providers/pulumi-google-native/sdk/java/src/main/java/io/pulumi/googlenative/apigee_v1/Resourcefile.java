@@ -6,6 +6,7 @@ package io.pulumi.googlenative.apigee_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.ResourcefileArgs;
 import java.lang.String;
@@ -84,7 +85,7 @@ public class Resourcefile extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Resourcefile(String name, ResourcefileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:apigee/v1:Resourcefile", name, args == null ? ResourcefileArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:apigee/v1:Resourcefile", name, args == null ? ResourcefileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Resourcefile(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class CustomDnsConfigPropertiesFormatArgs extends io.pulumi.resourc
       private final @Nullable Output<String> fqdn;
 
     public Output<String> getFqdn() {
-        return this.fqdn == null ? Output.empty() : this.fqdn;
+        return this.fqdn == null ? Codegen.empty() : this.fqdn;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class CustomDnsConfigPropertiesFormatArgs extends io.pulumi.resourc
       private final @Nullable Output<List<String>> ipAddresses;
 
     public Output<List<String>> getIpAddresses() {
-        return this.ipAddresses == null ? Output.empty() : this.ipAddresses;
+        return this.ipAddresses == null ? Codegen.empty() : this.ipAddresses;
     }
 
     public CustomDnsConfigPropertiesFormatArgs(
@@ -49,8 +50,8 @@ public final class CustomDnsConfigPropertiesFormatArgs extends io.pulumi.resourc
     }
 
     private CustomDnsConfigPropertiesFormatArgs() {
-        this.fqdn = Output.empty();
-        this.ipAddresses = Output.empty();
+        this.fqdn = Codegen.empty();
+        this.ipAddresses = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class CustomDnsConfigPropertiesFormatArgs extends io.pulumi.resourc
             return this;
         }
         public Builder fqdn(@Nullable String fqdn) {
-            this.fqdn = Output.ofNullable(fqdn);
+            this.fqdn = Codegen.ofNullable(fqdn);
             return this;
         }
         public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
@@ -88,7 +89,7 @@ public final class CustomDnsConfigPropertiesFormatArgs extends io.pulumi.resourc
             return this;
         }
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
-            this.ipAddresses = Output.ofNullable(ipAddresses);
+            this.ipAddresses = Codegen.ofNullable(ipAddresses);
             return this;
         }
         public Builder ipAddresses(String... ipAddresses) {

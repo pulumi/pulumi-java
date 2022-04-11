@@ -5,6 +5,7 @@ package io.pulumi.azurenative.cache.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
       private final @Nullable Output<String> aofStorageConnectionString0;
 
     public Output<String> getAofStorageConnectionString0() {
-        return this.aofStorageConnectionString0 == null ? Output.empty() : this.aofStorageConnectionString0;
+        return this.aofStorageConnectionString0 == null ? Codegen.empty() : this.aofStorageConnectionString0;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
       private final @Nullable Output<String> aofStorageConnectionString1;
 
     public Output<String> getAofStorageConnectionString1() {
-        return this.aofStorageConnectionString1 == null ? Output.empty() : this.aofStorageConnectionString1;
+        return this.aofStorageConnectionString1 == null ? Codegen.empty() : this.aofStorageConnectionString1;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
       private final @Nullable Output<String> maxfragmentationmemoryReserved;
 
     public Output<String> getMaxfragmentationmemoryReserved() {
-        return this.maxfragmentationmemoryReserved == null ? Output.empty() : this.maxfragmentationmemoryReserved;
+        return this.maxfragmentationmemoryReserved == null ? Codegen.empty() : this.maxfragmentationmemoryReserved;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
       private final @Nullable Output<String> maxmemoryDelta;
 
     public Output<String> getMaxmemoryDelta() {
-        return this.maxmemoryDelta == null ? Output.empty() : this.maxmemoryDelta;
+        return this.maxmemoryDelta == null ? Codegen.empty() : this.maxmemoryDelta;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
       private final @Nullable Output<String> maxmemoryPolicy;
 
     public Output<String> getMaxmemoryPolicy() {
-        return this.maxmemoryPolicy == null ? Output.empty() : this.maxmemoryPolicy;
+        return this.maxmemoryPolicy == null ? Codegen.empty() : this.maxmemoryPolicy;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
       private final @Nullable Output<String> maxmemoryReserved;
 
     public Output<String> getMaxmemoryReserved() {
-        return this.maxmemoryReserved == null ? Output.empty() : this.maxmemoryReserved;
+        return this.maxmemoryReserved == null ? Codegen.empty() : this.maxmemoryReserved;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
       private final @Nullable Output<String> rdbBackupEnabled;
 
     public Output<String> getRdbBackupEnabled() {
-        return this.rdbBackupEnabled == null ? Output.empty() : this.rdbBackupEnabled;
+        return this.rdbBackupEnabled == null ? Codegen.empty() : this.rdbBackupEnabled;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
       private final @Nullable Output<String> rdbBackupFrequency;
 
     public Output<String> getRdbBackupFrequency() {
-        return this.rdbBackupFrequency == null ? Output.empty() : this.rdbBackupFrequency;
+        return this.rdbBackupFrequency == null ? Codegen.empty() : this.rdbBackupFrequency;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
       private final @Nullable Output<String> rdbBackupMaxSnapshotCount;
 
     public Output<String> getRdbBackupMaxSnapshotCount() {
-        return this.rdbBackupMaxSnapshotCount == null ? Output.empty() : this.rdbBackupMaxSnapshotCount;
+        return this.rdbBackupMaxSnapshotCount == null ? Codegen.empty() : this.rdbBackupMaxSnapshotCount;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
       private final @Nullable Output<String> rdbStorageConnectionString;
 
     public Output<String> getRdbStorageConnectionString() {
-        return this.rdbStorageConnectionString == null ? Output.empty() : this.rdbStorageConnectionString;
+        return this.rdbStorageConnectionString == null ? Codegen.empty() : this.rdbStorageConnectionString;
     }
 
     public RedisCommonPropertiesRedisConfigurationArgs(
@@ -152,16 +153,16 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
     }
 
     private RedisCommonPropertiesRedisConfigurationArgs() {
-        this.aofStorageConnectionString0 = Output.empty();
-        this.aofStorageConnectionString1 = Output.empty();
-        this.maxfragmentationmemoryReserved = Output.empty();
-        this.maxmemoryDelta = Output.empty();
-        this.maxmemoryPolicy = Output.empty();
-        this.maxmemoryReserved = Output.empty();
-        this.rdbBackupEnabled = Output.empty();
-        this.rdbBackupFrequency = Output.empty();
-        this.rdbBackupMaxSnapshotCount = Output.empty();
-        this.rdbStorageConnectionString = Output.empty();
+        this.aofStorageConnectionString0 = Codegen.empty();
+        this.aofStorageConnectionString1 = Codegen.empty();
+        this.maxfragmentationmemoryReserved = Codegen.empty();
+        this.maxmemoryDelta = Codegen.empty();
+        this.maxmemoryPolicy = Codegen.empty();
+        this.maxmemoryReserved = Codegen.empty();
+        this.rdbBackupEnabled = Codegen.empty();
+        this.rdbBackupFrequency = Codegen.empty();
+        this.rdbBackupMaxSnapshotCount = Codegen.empty();
+        this.rdbStorageConnectionString = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -207,7 +208,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
             return this;
         }
         public Builder aofStorageConnectionString0(@Nullable String aofStorageConnectionString0) {
-            this.aofStorageConnectionString0 = Output.ofNullable(aofStorageConnectionString0);
+            this.aofStorageConnectionString0 = Codegen.ofNullable(aofStorageConnectionString0);
             return this;
         }
         public Builder aofStorageConnectionString1(@Nullable Output<String> aofStorageConnectionString1) {
@@ -215,7 +216,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
             return this;
         }
         public Builder aofStorageConnectionString1(@Nullable String aofStorageConnectionString1) {
-            this.aofStorageConnectionString1 = Output.ofNullable(aofStorageConnectionString1);
+            this.aofStorageConnectionString1 = Codegen.ofNullable(aofStorageConnectionString1);
             return this;
         }
         public Builder maxfragmentationmemoryReserved(@Nullable Output<String> maxfragmentationmemoryReserved) {
@@ -223,7 +224,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
             return this;
         }
         public Builder maxfragmentationmemoryReserved(@Nullable String maxfragmentationmemoryReserved) {
-            this.maxfragmentationmemoryReserved = Output.ofNullable(maxfragmentationmemoryReserved);
+            this.maxfragmentationmemoryReserved = Codegen.ofNullable(maxfragmentationmemoryReserved);
             return this;
         }
         public Builder maxmemoryDelta(@Nullable Output<String> maxmemoryDelta) {
@@ -231,7 +232,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
             return this;
         }
         public Builder maxmemoryDelta(@Nullable String maxmemoryDelta) {
-            this.maxmemoryDelta = Output.ofNullable(maxmemoryDelta);
+            this.maxmemoryDelta = Codegen.ofNullable(maxmemoryDelta);
             return this;
         }
         public Builder maxmemoryPolicy(@Nullable Output<String> maxmemoryPolicy) {
@@ -239,7 +240,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
             return this;
         }
         public Builder maxmemoryPolicy(@Nullable String maxmemoryPolicy) {
-            this.maxmemoryPolicy = Output.ofNullable(maxmemoryPolicy);
+            this.maxmemoryPolicy = Codegen.ofNullable(maxmemoryPolicy);
             return this;
         }
         public Builder maxmemoryReserved(@Nullable Output<String> maxmemoryReserved) {
@@ -247,7 +248,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
             return this;
         }
         public Builder maxmemoryReserved(@Nullable String maxmemoryReserved) {
-            this.maxmemoryReserved = Output.ofNullable(maxmemoryReserved);
+            this.maxmemoryReserved = Codegen.ofNullable(maxmemoryReserved);
             return this;
         }
         public Builder rdbBackupEnabled(@Nullable Output<String> rdbBackupEnabled) {
@@ -255,7 +256,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
             return this;
         }
         public Builder rdbBackupEnabled(@Nullable String rdbBackupEnabled) {
-            this.rdbBackupEnabled = Output.ofNullable(rdbBackupEnabled);
+            this.rdbBackupEnabled = Codegen.ofNullable(rdbBackupEnabled);
             return this;
         }
         public Builder rdbBackupFrequency(@Nullable Output<String> rdbBackupFrequency) {
@@ -263,7 +264,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
             return this;
         }
         public Builder rdbBackupFrequency(@Nullable String rdbBackupFrequency) {
-            this.rdbBackupFrequency = Output.ofNullable(rdbBackupFrequency);
+            this.rdbBackupFrequency = Codegen.ofNullable(rdbBackupFrequency);
             return this;
         }
         public Builder rdbBackupMaxSnapshotCount(@Nullable Output<String> rdbBackupMaxSnapshotCount) {
@@ -271,7 +272,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
             return this;
         }
         public Builder rdbBackupMaxSnapshotCount(@Nullable String rdbBackupMaxSnapshotCount) {
-            this.rdbBackupMaxSnapshotCount = Output.ofNullable(rdbBackupMaxSnapshotCount);
+            this.rdbBackupMaxSnapshotCount = Codegen.ofNullable(rdbBackupMaxSnapshotCount);
             return this;
         }
         public Builder rdbStorageConnectionString(@Nullable Output<String> rdbStorageConnectionString) {
@@ -279,7 +280,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
             return this;
         }
         public Builder rdbStorageConnectionString(@Nullable String rdbStorageConnectionString) {
-            this.rdbStorageConnectionString = Output.ofNullable(rdbStorageConnectionString);
+            this.rdbStorageConnectionString = Codegen.ofNullable(rdbStorageConnectionString);
             return this;
         }        public RedisCommonPropertiesRedisConfigurationArgs build() {
             return new RedisCommonPropertiesRedisConfigurationArgs(aofStorageConnectionString0, aofStorageConnectionString1, maxfragmentationmemoryReserved, maxmemoryDelta, maxmemoryPolicy, maxmemoryReserved, rdbBackupEnabled, rdbBackupFrequency, rdbBackupMaxSnapshotCount, rdbStorageConnectionString);

@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2clientvpn.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class EndpointConnectionLogOptionsGetArgs extends io.pulumi.resourc
       private final @Nullable Output<String> cloudwatchLogGroup;
 
     public Output<String> getCloudwatchLogGroup() {
-        return this.cloudwatchLogGroup == null ? Output.empty() : this.cloudwatchLogGroup;
+        return this.cloudwatchLogGroup == null ? Codegen.empty() : this.cloudwatchLogGroup;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class EndpointConnectionLogOptionsGetArgs extends io.pulumi.resourc
       private final @Nullable Output<String> cloudwatchLogStream;
 
     public Output<String> getCloudwatchLogStream() {
-        return this.cloudwatchLogStream == null ? Output.empty() : this.cloudwatchLogStream;
+        return this.cloudwatchLogStream == null ? Codegen.empty() : this.cloudwatchLogStream;
     }
 
     /**
@@ -58,9 +59,9 @@ public final class EndpointConnectionLogOptionsGetArgs extends io.pulumi.resourc
     }
 
     private EndpointConnectionLogOptionsGetArgs() {
-        this.cloudwatchLogGroup = Output.empty();
-        this.cloudwatchLogStream = Output.empty();
-        this.enabled = Output.empty();
+        this.cloudwatchLogGroup = Codegen.empty();
+        this.cloudwatchLogStream = Codegen.empty();
+        this.enabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class EndpointConnectionLogOptionsGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder cloudwatchLogGroup(@Nullable String cloudwatchLogGroup) {
-            this.cloudwatchLogGroup = Output.ofNullable(cloudwatchLogGroup);
+            this.cloudwatchLogGroup = Codegen.ofNullable(cloudwatchLogGroup);
             return this;
         }
         public Builder cloudwatchLogStream(@Nullable Output<String> cloudwatchLogStream) {
@@ -100,7 +101,7 @@ public final class EndpointConnectionLogOptionsGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder cloudwatchLogStream(@Nullable String cloudwatchLogStream) {
-            this.cloudwatchLogStream = Output.ofNullable(cloudwatchLogStream);
+            this.cloudwatchLogStream = Codegen.ofNullable(cloudwatchLogStream);
             return this;
         }
         public Builder enabled(Output<Boolean> enabled) {

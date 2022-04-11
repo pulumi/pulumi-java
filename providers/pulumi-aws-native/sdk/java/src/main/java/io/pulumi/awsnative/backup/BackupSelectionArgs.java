@@ -6,6 +6,7 @@ package io.pulumi.awsnative.backup;
 import io.pulumi.awsnative.backup.inputs.BackupSelectionResourceTypeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -36,8 +37,8 @@ public final class BackupSelectionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private BackupSelectionArgs() {
-        this.backupPlanId = Output.empty();
-        this.backupSelection = Output.empty();
+        this.backupPlanId = Codegen.empty();
+        this.backupSelection = Codegen.empty();
     }
 
     public static Builder builder() {

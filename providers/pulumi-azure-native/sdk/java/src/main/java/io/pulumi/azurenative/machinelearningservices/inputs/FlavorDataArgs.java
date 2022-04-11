@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class FlavorDataArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> data;
 
     public Output<Map<String,String>> getData() {
-        return this.data == null ? Output.empty() : this.data;
+        return this.data == null ? Codegen.empty() : this.data;
     }
 
     public FlavorDataArgs(@Nullable Output<Map<String,String>> data) {
@@ -31,7 +32,7 @@ public final class FlavorDataArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FlavorDataArgs() {
-        this.data = Output.empty();
+        this.data = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class FlavorDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder data(@Nullable Map<String,String> data) {
-            this.data = Output.ofNullable(data);
+            this.data = Codegen.ofNullable(data);
             return this;
         }        public FlavorDataArgs build() {
             return new FlavorDataArgs(data);

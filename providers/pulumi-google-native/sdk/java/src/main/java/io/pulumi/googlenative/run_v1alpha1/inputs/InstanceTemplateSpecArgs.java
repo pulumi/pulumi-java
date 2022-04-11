@@ -5,6 +5,7 @@ package io.pulumi.googlenative.run_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.run_v1alpha1.inputs.InstanceSpecArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class InstanceTemplateSpecArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<InstanceSpecArgs> spec;
 
     public Output<InstanceSpecArgs> getSpec() {
-        return this.spec == null ? Output.empty() : this.spec;
+        return this.spec == null ? Codegen.empty() : this.spec;
     }
 
     public InstanceTemplateSpecArgs(@Nullable Output<InstanceSpecArgs> spec) {
@@ -34,7 +35,7 @@ public final class InstanceTemplateSpecArgs extends io.pulumi.resources.Resource
     }
 
     private InstanceTemplateSpecArgs() {
-        this.spec = Output.empty();
+        this.spec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class InstanceTemplateSpecArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder spec(@Nullable InstanceSpecArgs spec) {
-            this.spec = Output.ofNullable(spec);
+            this.spec = Codegen.ofNullable(spec);
             return this;
         }        public InstanceTemplateSpecArgs build() {
             return new InstanceTemplateSpecArgs(spec);

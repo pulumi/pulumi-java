@@ -5,6 +5,7 @@ package io.pulumi.azurenative.avs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -49,7 +50,7 @@ public final class ScriptStringExecutionParameterArgs extends io.pulumi.resource
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public ScriptStringExecutionParameterArgs(
@@ -62,9 +63,9 @@ public final class ScriptStringExecutionParameterArgs extends io.pulumi.resource
     }
 
     private ScriptStringExecutionParameterArgs() {
-        this.name = Output.empty();
-        this.type = Output.empty();
-        this.value = Output.empty();
+        this.name = Codegen.empty();
+        this.type = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class ScriptStringExecutionParameterArgs extends io.pulumi.resource
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public ScriptStringExecutionParameterArgs build() {
             return new ScriptStringExecutionParameterArgs(name, type, value);

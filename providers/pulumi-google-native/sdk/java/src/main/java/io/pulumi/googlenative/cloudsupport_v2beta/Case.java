@@ -6,6 +6,7 @@ package io.pulumi.googlenative.cloudsupport_v2beta;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudsupport_v2beta.CaseArgs;
 import io.pulumi.googlenative.cloudsupport_v2beta.outputs.ActorResponse;
@@ -228,7 +229,7 @@ public class Case extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Case(String name, CaseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudsupport/v2beta:Case", name, args == null ? CaseArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:cloudsupport/v2beta:Case", name, args == null ? CaseArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Case(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

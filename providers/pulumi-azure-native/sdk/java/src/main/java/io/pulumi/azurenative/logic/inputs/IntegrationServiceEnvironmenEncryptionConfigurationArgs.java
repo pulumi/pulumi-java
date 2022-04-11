@@ -6,6 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.inputs.IntegrationServiceEnvironmenEncryptionKeyReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,7 +27,7 @@ public final class IntegrationServiceEnvironmenEncryptionConfigurationArgs exten
       private final @Nullable Output<IntegrationServiceEnvironmenEncryptionKeyReferenceArgs> encryptionKeyReference;
 
     public Output<IntegrationServiceEnvironmenEncryptionKeyReferenceArgs> getEncryptionKeyReference() {
-        return this.encryptionKeyReference == null ? Output.empty() : this.encryptionKeyReference;
+        return this.encryptionKeyReference == null ? Codegen.empty() : this.encryptionKeyReference;
     }
 
     public IntegrationServiceEnvironmenEncryptionConfigurationArgs(@Nullable Output<IntegrationServiceEnvironmenEncryptionKeyReferenceArgs> encryptionKeyReference) {
@@ -34,7 +35,7 @@ public final class IntegrationServiceEnvironmenEncryptionConfigurationArgs exten
     }
 
     private IntegrationServiceEnvironmenEncryptionConfigurationArgs() {
-        this.encryptionKeyReference = Output.empty();
+        this.encryptionKeyReference = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class IntegrationServiceEnvironmenEncryptionConfigurationArgs exten
             return this;
         }
         public Builder encryptionKeyReference(@Nullable IntegrationServiceEnvironmenEncryptionKeyReferenceArgs encryptionKeyReference) {
-            this.encryptionKeyReference = Output.ofNullable(encryptionKeyReference);
+            this.encryptionKeyReference = Codegen.ofNullable(encryptionKeyReference);
             return this;
         }        public IntegrationServiceEnvironmenEncryptionConfigurationArgs build() {
             return new IntegrationServiceEnvironmenEncryptionConfigurationArgs(encryptionKeyReference);

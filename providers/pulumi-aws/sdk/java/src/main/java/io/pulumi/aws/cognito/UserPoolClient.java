@@ -11,6 +11,7 @@ import io.pulumi.aws.cognito.outputs.UserPoolClientTokenValidityUnits;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -350,7 +351,7 @@ public class UserPoolClient extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public UserPoolClient(String name, UserPoolClientArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cognito/userPoolClient:UserPoolClient", name, args == null ? UserPoolClientArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cognito/userPoolClient:UserPoolClient", name, args == null ? UserPoolClientArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private UserPoolClient(String name, Output<String> id, @Nullable UserPoolClientState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

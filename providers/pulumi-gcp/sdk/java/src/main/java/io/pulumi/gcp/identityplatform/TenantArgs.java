@@ -5,6 +5,7 @@ package io.pulumi.gcp.identityplatform;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class TenantArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> allowPasswordSignup;
 
     public Output<Boolean> getAllowPasswordSignup() {
-        return this.allowPasswordSignup == null ? Output.empty() : this.allowPasswordSignup;
+        return this.allowPasswordSignup == null ? Codegen.empty() : this.allowPasswordSignup;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class TenantArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> disableAuth;
 
     public Output<Boolean> getDisableAuth() {
-        return this.disableAuth == null ? Output.empty() : this.disableAuth;
+        return this.disableAuth == null ? Codegen.empty() : this.disableAuth;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class TenantArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableEmailLinkSignin;
 
     public Output<Boolean> getEnableEmailLinkSignin() {
-        return this.enableEmailLinkSignin == null ? Output.empty() : this.enableEmailLinkSignin;
+        return this.enableEmailLinkSignin == null ? Codegen.empty() : this.enableEmailLinkSignin;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class TenantArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public TenantArgs(
@@ -87,11 +88,11 @@ public final class TenantArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TenantArgs() {
-        this.allowPasswordSignup = Output.empty();
-        this.disableAuth = Output.empty();
-        this.displayName = Output.empty();
-        this.enableEmailLinkSignin = Output.empty();
-        this.project = Output.empty();
+        this.allowPasswordSignup = Codegen.empty();
+        this.disableAuth = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.enableEmailLinkSignin = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class TenantArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowPasswordSignup(@Nullable Boolean allowPasswordSignup) {
-            this.allowPasswordSignup = Output.ofNullable(allowPasswordSignup);
+            this.allowPasswordSignup = Codegen.ofNullable(allowPasswordSignup);
             return this;
         }
         public Builder disableAuth(@Nullable Output<Boolean> disableAuth) {
@@ -135,7 +136,7 @@ public final class TenantArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disableAuth(@Nullable Boolean disableAuth) {
-            this.disableAuth = Output.ofNullable(disableAuth);
+            this.disableAuth = Codegen.ofNullable(disableAuth);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -151,7 +152,7 @@ public final class TenantArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableEmailLinkSignin(@Nullable Boolean enableEmailLinkSignin) {
-            this.enableEmailLinkSignin = Output.ofNullable(enableEmailLinkSignin);
+            this.enableEmailLinkSignin = Codegen.ofNullable(enableEmailLinkSignin);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -159,7 +160,7 @@ public final class TenantArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public TenantArgs build() {
             return new TenantArgs(allowPasswordSignup, disableAuth, displayName, enableEmailLinkSignin, project);

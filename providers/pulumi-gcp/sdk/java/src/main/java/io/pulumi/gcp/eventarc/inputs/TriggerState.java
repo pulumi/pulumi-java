@@ -5,6 +5,7 @@ package io.pulumi.gcp.eventarc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.eventarc.inputs.TriggerDestinationGetArgs;
 import io.pulumi.gcp.eventarc.inputs.TriggerMatchingCriteriaGetArgs;
 import io.pulumi.gcp.eventarc.inputs.TriggerTransportGetArgs;
@@ -27,7 +28,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TriggerDestinationGetArgs> destination;
 
     public Output<TriggerDestinationGetArgs> getDestination() {
-        return this.destination == null ? Output.empty() : this.destination;
+        return this.destination == null ? Codegen.empty() : this.destination;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<TriggerMatchingCriteriaGetArgs>> matchingCriterias;
 
     public Output<List<TriggerMatchingCriteriaGetArgs>> getMatchingCriterias() {
-        return this.matchingCriterias == null ? Output.empty() : this.matchingCriterias;
+        return this.matchingCriterias == null ? Codegen.empty() : this.matchingCriterias;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serviceAccount;
 
     public Output<String> getServiceAccount() {
-        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
+        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<TriggerTransportGetArgs>> transports;
 
     public Output<List<TriggerTransportGetArgs>> getTransports() {
-        return this.transports == null ? Output.empty() : this.transports;
+        return this.transports == null ? Codegen.empty() : this.transports;
     }
 
     /**
@@ -139,7 +140,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> uid;
 
     public Output<String> getUid() {
-        return this.uid == null ? Output.empty() : this.uid;
+        return this.uid == null ? Codegen.empty() : this.uid;
     }
 
     /**
@@ -150,7 +151,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {
-        return this.updateTime == null ? Output.empty() : this.updateTime;
+        return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
     public TriggerState(
@@ -181,18 +182,18 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
     }
 
     private TriggerState() {
-        this.createTime = Output.empty();
-        this.destination = Output.empty();
-        this.etag = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.matchingCriterias = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.serviceAccount = Output.empty();
-        this.transports = Output.empty();
-        this.uid = Output.empty();
-        this.updateTime = Output.empty();
+        this.createTime = Codegen.empty();
+        this.destination = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.matchingCriterias = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.serviceAccount = Codegen.empty();
+        this.transports = Codegen.empty();
+        this.uid = Codegen.empty();
+        this.updateTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -242,7 +243,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder destination(@Nullable Output<TriggerDestinationGetArgs> destination) {
@@ -250,7 +251,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder destination(@Nullable TriggerDestinationGetArgs destination) {
-            this.destination = Output.ofNullable(destination);
+            this.destination = Codegen.ofNullable(destination);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -258,7 +259,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -266,7 +267,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -274,7 +275,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder matchingCriterias(@Nullable Output<List<TriggerMatchingCriteriaGetArgs>> matchingCriterias) {
@@ -282,7 +283,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder matchingCriterias(@Nullable List<TriggerMatchingCriteriaGetArgs> matchingCriterias) {
-            this.matchingCriterias = Output.ofNullable(matchingCriterias);
+            this.matchingCriterias = Codegen.ofNullable(matchingCriterias);
             return this;
         }
         public Builder matchingCriterias(TriggerMatchingCriteriaGetArgs... matchingCriterias) {
@@ -293,7 +294,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -301,7 +302,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
@@ -309,7 +310,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Output.ofNullable(serviceAccount);
+            this.serviceAccount = Codegen.ofNullable(serviceAccount);
             return this;
         }
         public Builder transports(@Nullable Output<List<TriggerTransportGetArgs>> transports) {
@@ -317,7 +318,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transports(@Nullable List<TriggerTransportGetArgs> transports) {
-            this.transports = Output.ofNullable(transports);
+            this.transports = Codegen.ofNullable(transports);
             return this;
         }
         public Builder transports(TriggerTransportGetArgs... transports) {
@@ -328,7 +329,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uid(@Nullable String uid) {
-            this.uid = Output.ofNullable(uid);
+            this.uid = Codegen.ofNullable(uid);
             return this;
         }
         public Builder updateTime(@Nullable Output<String> updateTime) {
@@ -336,7 +337,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Output.ofNullable(updateTime);
+            this.updateTime = Codegen.ofNullable(updateTime);
             return this;
         }        public TriggerState build() {
             return new TriggerState(createTime, destination, etag, labels, location, matchingCriterias, name, project, serviceAccount, transports, uid, updateTime);

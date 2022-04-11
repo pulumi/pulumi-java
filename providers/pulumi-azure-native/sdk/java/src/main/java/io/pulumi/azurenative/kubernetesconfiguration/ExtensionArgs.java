@@ -8,6 +8,7 @@ import io.pulumi.azurenative.kubernetesconfiguration.inputs.ExtensionStatusArgs;
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.ScopeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> autoUpgradeMinorVersion;
 
     public Output<Boolean> getAutoUpgradeMinorVersion() {
-        return this.autoUpgradeMinorVersion == null ? Output.empty() : this.autoUpgradeMinorVersion;
+        return this.autoUpgradeMinorVersion == null ? Codegen.empty() : this.autoUpgradeMinorVersion;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> configurationProtectedSettings;
 
     public Output<Map<String,String>> getConfigurationProtectedSettings() {
-        return this.configurationProtectedSettings == null ? Output.empty() : this.configurationProtectedSettings;
+        return this.configurationProtectedSettings == null ? Codegen.empty() : this.configurationProtectedSettings;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> configurationSettings;
 
     public Output<Map<String,String>> getConfigurationSettings() {
-        return this.configurationSettings == null ? Output.empty() : this.configurationSettings;
+        return this.configurationSettings == null ? Codegen.empty() : this.configurationSettings;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> extensionInstanceName;
 
     public Output<String> getExtensionInstanceName() {
-        return this.extensionInstanceName == null ? Output.empty() : this.extensionInstanceName;
+        return this.extensionInstanceName == null ? Codegen.empty() : this.extensionInstanceName;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> extensionType;
 
     public Output<String> getExtensionType() {
-        return this.extensionType == null ? Output.empty() : this.extensionType;
+        return this.extensionType == null ? Codegen.empty() : this.extensionType;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ConfigurationIdentityArgs> identity;
 
     public Output<ConfigurationIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> releaseTrain;
 
     public Output<String> getReleaseTrain() {
-        return this.releaseTrain == null ? Output.empty() : this.releaseTrain;
+        return this.releaseTrain == null ? Codegen.empty() : this.releaseTrain;
     }
 
     /**
@@ -149,7 +150,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ScopeArgs> scope;
 
     public Output<ScopeArgs> getScope() {
-        return this.scope == null ? Output.empty() : this.scope;
+        return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     /**
@@ -160,7 +161,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ExtensionStatusArgs>> statuses;
 
     public Output<List<ExtensionStatusArgs>> getStatuses() {
-        return this.statuses == null ? Output.empty() : this.statuses;
+        return this.statuses == null ? Codegen.empty() : this.statuses;
     }
 
     /**
@@ -171,7 +172,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public ExtensionArgs(
@@ -206,20 +207,20 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExtensionArgs() {
-        this.autoUpgradeMinorVersion = Output.empty();
-        this.clusterName = Output.empty();
-        this.clusterResourceName = Output.empty();
-        this.clusterRp = Output.empty();
-        this.configurationProtectedSettings = Output.empty();
-        this.configurationSettings = Output.empty();
-        this.extensionInstanceName = Output.empty();
-        this.extensionType = Output.empty();
-        this.identity = Output.empty();
-        this.releaseTrain = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.scope = Output.empty();
-        this.statuses = Output.empty();
-        this.version = Output.empty();
+        this.autoUpgradeMinorVersion = Codegen.empty();
+        this.clusterName = Codegen.empty();
+        this.clusterResourceName = Codegen.empty();
+        this.clusterRp = Codegen.empty();
+        this.configurationProtectedSettings = Codegen.empty();
+        this.configurationSettings = Codegen.empty();
+        this.extensionInstanceName = Codegen.empty();
+        this.extensionType = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.releaseTrain = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.scope = Codegen.empty();
+        this.statuses = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -273,7 +274,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
-            this.autoUpgradeMinorVersion = Output.ofNullable(autoUpgradeMinorVersion);
+            this.autoUpgradeMinorVersion = Codegen.ofNullable(autoUpgradeMinorVersion);
             return this;
         }
         public Builder clusterName(Output<String> clusterName) {
@@ -305,7 +306,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder configurationProtectedSettings(@Nullable Map<String,String> configurationProtectedSettings) {
-            this.configurationProtectedSettings = Output.ofNullable(configurationProtectedSettings);
+            this.configurationProtectedSettings = Codegen.ofNullable(configurationProtectedSettings);
             return this;
         }
         public Builder configurationSettings(@Nullable Output<Map<String,String>> configurationSettings) {
@@ -313,7 +314,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder configurationSettings(@Nullable Map<String,String> configurationSettings) {
-            this.configurationSettings = Output.ofNullable(configurationSettings);
+            this.configurationSettings = Codegen.ofNullable(configurationSettings);
             return this;
         }
         public Builder extensionInstanceName(@Nullable Output<String> extensionInstanceName) {
@@ -321,7 +322,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder extensionInstanceName(@Nullable String extensionInstanceName) {
-            this.extensionInstanceName = Output.ofNullable(extensionInstanceName);
+            this.extensionInstanceName = Codegen.ofNullable(extensionInstanceName);
             return this;
         }
         public Builder extensionType(@Nullable Output<String> extensionType) {
@@ -329,7 +330,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder extensionType(@Nullable String extensionType) {
-            this.extensionType = Output.ofNullable(extensionType);
+            this.extensionType = Codegen.ofNullable(extensionType);
             return this;
         }
         public Builder identity(@Nullable Output<ConfigurationIdentityArgs> identity) {
@@ -337,7 +338,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable ConfigurationIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder releaseTrain(@Nullable Output<String> releaseTrain) {
@@ -345,7 +346,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder releaseTrain(@Nullable String releaseTrain) {
-            this.releaseTrain = Output.ofNullable(releaseTrain);
+            this.releaseTrain = Codegen.ofNullable(releaseTrain);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -361,7 +362,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scope(@Nullable ScopeArgs scope) {
-            this.scope = Output.ofNullable(scope);
+            this.scope = Codegen.ofNullable(scope);
             return this;
         }
         public Builder statuses(@Nullable Output<List<ExtensionStatusArgs>> statuses) {
@@ -369,7 +370,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder statuses(@Nullable List<ExtensionStatusArgs> statuses) {
-            this.statuses = Output.ofNullable(statuses);
+            this.statuses = Codegen.ofNullable(statuses);
             return this;
         }
         public Builder statuses(ExtensionStatusArgs... statuses) {
@@ -380,7 +381,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public ExtensionArgs build() {
             return new ExtensionArgs(autoUpgradeMinorVersion, clusterName, clusterResourceName, clusterRp, configurationProtectedSettings, configurationSettings, extensionInstanceName, extensionType, identity, releaseTrain, resourceGroupName, scope, statuses, version);

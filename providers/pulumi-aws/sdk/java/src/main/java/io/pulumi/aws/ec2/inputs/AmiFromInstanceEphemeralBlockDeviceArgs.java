@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class AmiFromInstanceEphemeralBlockDeviceArgs extends io.pulumi.res
       private final @Nullable Output<String> deviceName;
 
     public Output<String> getDeviceName() {
-        return this.deviceName == null ? Output.empty() : this.deviceName;
+        return this.deviceName == null ? Codegen.empty() : this.deviceName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class AmiFromInstanceEphemeralBlockDeviceArgs extends io.pulumi.res
       private final @Nullable Output<String> virtualName;
 
     public Output<String> getVirtualName() {
-        return this.virtualName == null ? Output.empty() : this.virtualName;
+        return this.virtualName == null ? Codegen.empty() : this.virtualName;
     }
 
     public AmiFromInstanceEphemeralBlockDeviceArgs(
@@ -45,8 +46,8 @@ public final class AmiFromInstanceEphemeralBlockDeviceArgs extends io.pulumi.res
     }
 
     private AmiFromInstanceEphemeralBlockDeviceArgs() {
-        this.deviceName = Output.empty();
-        this.virtualName = Output.empty();
+        this.deviceName = Codegen.empty();
+        this.virtualName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class AmiFromInstanceEphemeralBlockDeviceArgs extends io.pulumi.res
             return this;
         }
         public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Output.ofNullable(deviceName);
+            this.deviceName = Codegen.ofNullable(deviceName);
             return this;
         }
         public Builder virtualName(@Nullable Output<String> virtualName) {
@@ -84,7 +85,7 @@ public final class AmiFromInstanceEphemeralBlockDeviceArgs extends io.pulumi.res
             return this;
         }
         public Builder virtualName(@Nullable String virtualName) {
-            this.virtualName = Output.ofNullable(virtualName);
+            this.virtualName = Codegen.ofNullable(virtualName);
             return this;
         }        public AmiFromInstanceEphemeralBlockDeviceArgs build() {
             return new AmiFromInstanceEphemeralBlockDeviceArgs(deviceName, virtualName);

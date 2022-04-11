@@ -5,6 +5,7 @@ package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +25,7 @@ public final class UsagePlanApiStageThrottleGetArgs extends io.pulumi.resources.
       private final @Nullable Output<Integer> burstLimit;
 
     public Output<Integer> getBurstLimit() {
-        return this.burstLimit == null ? Output.empty() : this.burstLimit;
+        return this.burstLimit == null ? Codegen.empty() : this.burstLimit;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class UsagePlanApiStageThrottleGetArgs extends io.pulumi.resources.
       private final @Nullable Output<Double> rateLimit;
 
     public Output<Double> getRateLimit() {
-        return this.rateLimit == null ? Output.empty() : this.rateLimit;
+        return this.rateLimit == null ? Codegen.empty() : this.rateLimit;
     }
 
     public UsagePlanApiStageThrottleGetArgs(
@@ -59,9 +60,9 @@ public final class UsagePlanApiStageThrottleGetArgs extends io.pulumi.resources.
     }
 
     private UsagePlanApiStageThrottleGetArgs() {
-        this.burstLimit = Output.empty();
-        this.path = Output.empty();
-        this.rateLimit = Output.empty();
+        this.burstLimit = Codegen.empty();
+        this.path = Codegen.empty();
+        this.rateLimit = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class UsagePlanApiStageThrottleGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder burstLimit(@Nullable Integer burstLimit) {
-            this.burstLimit = Output.ofNullable(burstLimit);
+            this.burstLimit = Codegen.ofNullable(burstLimit);
             return this;
         }
         public Builder path(Output<String> path) {
@@ -109,7 +110,7 @@ public final class UsagePlanApiStageThrottleGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder rateLimit(@Nullable Double rateLimit) {
-            this.rateLimit = Output.ofNullable(rateLimit);
+            this.rateLimit = Codegen.ofNullable(rateLimit);
             return this;
         }        public UsagePlanApiStageThrottleGetArgs build() {
             return new UsagePlanApiStageThrottleGetArgs(burstLimit, path, rateLimit);

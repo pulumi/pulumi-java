@@ -5,6 +5,7 @@ package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.IngressFromArgs;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.IngressToArgs;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class IngressPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<IngressFromArgs> ingressFrom;
 
     public Output<IngressFromArgs> getIngressFrom() {
-        return this.ingressFrom == null ? Output.empty() : this.ingressFrom;
+        return this.ingressFrom == null ? Codegen.empty() : this.ingressFrom;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class IngressPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<IngressToArgs> ingressTo;
 
     public Output<IngressToArgs> getIngressTo() {
-        return this.ingressTo == null ? Output.empty() : this.ingressTo;
+        return this.ingressTo == null ? Codegen.empty() : this.ingressTo;
     }
 
     public IngressPolicyArgs(
@@ -49,8 +50,8 @@ public final class IngressPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IngressPolicyArgs() {
-        this.ingressFrom = Output.empty();
-        this.ingressTo = Output.empty();
+        this.ingressFrom = Codegen.empty();
+        this.ingressTo = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class IngressPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ingressFrom(@Nullable IngressFromArgs ingressFrom) {
-            this.ingressFrom = Output.ofNullable(ingressFrom);
+            this.ingressFrom = Codegen.ofNullable(ingressFrom);
             return this;
         }
         public Builder ingressTo(@Nullable Output<IngressToArgs> ingressTo) {
@@ -88,7 +89,7 @@ public final class IngressPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ingressTo(@Nullable IngressToArgs ingressTo) {
-            this.ingressTo = Output.ofNullable(ingressTo);
+            this.ingressTo = Codegen.ofNullable(ingressTo);
             return this;
         }        public IngressPolicyArgs build() {
             return new IngressPolicyArgs(ingressFrom, ingressTo);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.healthcare.inputs.ConsentStoreIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
       private final @Nullable Output<ConsentStoreIamMemberConditionGetArgs> condition;
 
     public Output<ConsentStoreIamMemberConditionGetArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -30,7 +31,7 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> consentStoreId;
 
     public Output<String> getConsentStoreId() {
-        return this.consentStoreId == null ? Output.empty() : this.consentStoreId;
+        return this.consentStoreId == null ? Codegen.empty() : this.consentStoreId;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> dataset;
 
     public Output<String> getDataset() {
-        return this.dataset == null ? Output.empty() : this.dataset;
+        return this.dataset == null ? Codegen.empty() : this.dataset;
     }
 
     /**
@@ -54,14 +55,14 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="member")
       private final @Nullable Output<String> member;
 
     public Output<String> getMember() {
-        return this.member == null ? Output.empty() : this.member;
+        return this.member == null ? Codegen.empty() : this.member;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     public ConsentStoreIamMemberState(
@@ -93,12 +94,12 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
     }
 
     private ConsentStoreIamMemberState() {
-        this.condition = Output.empty();
-        this.consentStoreId = Output.empty();
-        this.dataset = Output.empty();
-        this.etag = Output.empty();
-        this.member = Output.empty();
-        this.role = Output.empty();
+        this.condition = Codegen.empty();
+        this.consentStoreId = Codegen.empty();
+        this.dataset = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.member = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -136,7 +137,7 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder condition(@Nullable ConsentStoreIamMemberConditionGetArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder consentStoreId(@Nullable Output<String> consentStoreId) {
@@ -144,7 +145,7 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder consentStoreId(@Nullable String consentStoreId) {
-            this.consentStoreId = Output.ofNullable(consentStoreId);
+            this.consentStoreId = Codegen.ofNullable(consentStoreId);
             return this;
         }
         public Builder dataset(@Nullable Output<String> dataset) {
@@ -152,7 +153,7 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder dataset(@Nullable String dataset) {
-            this.dataset = Output.ofNullable(dataset);
+            this.dataset = Codegen.ofNullable(dataset);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -160,7 +161,7 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder member(@Nullable Output<String> member) {
@@ -168,7 +169,7 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder member(@Nullable String member) {
-            this.member = Output.ofNullable(member);
+            this.member = Codegen.ofNullable(member);
             return this;
         }
         public Builder role(@Nullable Output<String> role) {
@@ -176,7 +177,7 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }        public ConsentStoreIamMemberState build() {
             return new ConsentStoreIamMemberState(condition, consentStoreId, dataset, etag, member, role);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudbilling_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class BillingAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class BillingAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> masterBillingAccount;
 
     public Output<String> getMasterBillingAccount() {
-        return this.masterBillingAccount == null ? Output.empty() : this.masterBillingAccount;
+        return this.masterBillingAccount == null ? Codegen.empty() : this.masterBillingAccount;
     }
 
     public BillingAccountArgs(
@@ -44,8 +45,8 @@ public final class BillingAccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BillingAccountArgs() {
-        this.displayName = Output.empty();
-        this.masterBillingAccount = Output.empty();
+        this.displayName = Codegen.empty();
+        this.masterBillingAccount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class BillingAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder masterBillingAccount(@Nullable Output<String> masterBillingAccount) {
@@ -83,7 +84,7 @@ public final class BillingAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder masterBillingAccount(@Nullable String masterBillingAccount) {
-            this.masterBillingAccount = Output.ofNullable(masterBillingAccount);
+            this.masterBillingAccount = Codegen.ofNullable(masterBillingAccount);
             return this;
         }        public BillingAccountArgs build() {
             return new BillingAccountArgs(displayName, masterBillingAccount);

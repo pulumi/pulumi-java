@@ -10,6 +10,7 @@ import io.pulumi.aws.mwaa.inputs.EnvironmentLoggingConfigurationWebserverLogsArg
 import io.pulumi.aws.mwaa.inputs.EnvironmentLoggingConfigurationWorkerLogsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,7 +27,7 @@ public final class EnvironmentLoggingConfigurationArgs extends io.pulumi.resourc
       private final @Nullable Output<EnvironmentLoggingConfigurationDagProcessingLogsArgs> dagProcessingLogs;
 
     public Output<EnvironmentLoggingConfigurationDagProcessingLogsArgs> getDagProcessingLogs() {
-        return this.dagProcessingLogs == null ? Output.empty() : this.dagProcessingLogs;
+        return this.dagProcessingLogs == null ? Codegen.empty() : this.dagProcessingLogs;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class EnvironmentLoggingConfigurationArgs extends io.pulumi.resourc
       private final @Nullable Output<EnvironmentLoggingConfigurationSchedulerLogsArgs> schedulerLogs;
 
     public Output<EnvironmentLoggingConfigurationSchedulerLogsArgs> getSchedulerLogs() {
-        return this.schedulerLogs == null ? Output.empty() : this.schedulerLogs;
+        return this.schedulerLogs == null ? Codegen.empty() : this.schedulerLogs;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class EnvironmentLoggingConfigurationArgs extends io.pulumi.resourc
       private final @Nullable Output<EnvironmentLoggingConfigurationTaskLogsArgs> taskLogs;
 
     public Output<EnvironmentLoggingConfigurationTaskLogsArgs> getTaskLogs() {
-        return this.taskLogs == null ? Output.empty() : this.taskLogs;
+        return this.taskLogs == null ? Codegen.empty() : this.taskLogs;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class EnvironmentLoggingConfigurationArgs extends io.pulumi.resourc
       private final @Nullable Output<EnvironmentLoggingConfigurationWebserverLogsArgs> webserverLogs;
 
     public Output<EnvironmentLoggingConfigurationWebserverLogsArgs> getWebserverLogs() {
-        return this.webserverLogs == null ? Output.empty() : this.webserverLogs;
+        return this.webserverLogs == null ? Codegen.empty() : this.webserverLogs;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class EnvironmentLoggingConfigurationArgs extends io.pulumi.resourc
       private final @Nullable Output<EnvironmentLoggingConfigurationWorkerLogsArgs> workerLogs;
 
     public Output<EnvironmentLoggingConfigurationWorkerLogsArgs> getWorkerLogs() {
-        return this.workerLogs == null ? Output.empty() : this.workerLogs;
+        return this.workerLogs == null ? Codegen.empty() : this.workerLogs;
     }
 
     public EnvironmentLoggingConfigurationArgs(
@@ -87,11 +88,11 @@ public final class EnvironmentLoggingConfigurationArgs extends io.pulumi.resourc
     }
 
     private EnvironmentLoggingConfigurationArgs() {
-        this.dagProcessingLogs = Output.empty();
-        this.schedulerLogs = Output.empty();
-        this.taskLogs = Output.empty();
-        this.webserverLogs = Output.empty();
-        this.workerLogs = Output.empty();
+        this.dagProcessingLogs = Codegen.empty();
+        this.schedulerLogs = Codegen.empty();
+        this.taskLogs = Codegen.empty();
+        this.webserverLogs = Codegen.empty();
+        this.workerLogs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class EnvironmentLoggingConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder dagProcessingLogs(@Nullable EnvironmentLoggingConfigurationDagProcessingLogsArgs dagProcessingLogs) {
-            this.dagProcessingLogs = Output.ofNullable(dagProcessingLogs);
+            this.dagProcessingLogs = Codegen.ofNullable(dagProcessingLogs);
             return this;
         }
         public Builder schedulerLogs(@Nullable Output<EnvironmentLoggingConfigurationSchedulerLogsArgs> schedulerLogs) {
@@ -135,7 +136,7 @@ public final class EnvironmentLoggingConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder schedulerLogs(@Nullable EnvironmentLoggingConfigurationSchedulerLogsArgs schedulerLogs) {
-            this.schedulerLogs = Output.ofNullable(schedulerLogs);
+            this.schedulerLogs = Codegen.ofNullable(schedulerLogs);
             return this;
         }
         public Builder taskLogs(@Nullable Output<EnvironmentLoggingConfigurationTaskLogsArgs> taskLogs) {
@@ -143,7 +144,7 @@ public final class EnvironmentLoggingConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder taskLogs(@Nullable EnvironmentLoggingConfigurationTaskLogsArgs taskLogs) {
-            this.taskLogs = Output.ofNullable(taskLogs);
+            this.taskLogs = Codegen.ofNullable(taskLogs);
             return this;
         }
         public Builder webserverLogs(@Nullable Output<EnvironmentLoggingConfigurationWebserverLogsArgs> webserverLogs) {
@@ -151,7 +152,7 @@ public final class EnvironmentLoggingConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder webserverLogs(@Nullable EnvironmentLoggingConfigurationWebserverLogsArgs webserverLogs) {
-            this.webserverLogs = Output.ofNullable(webserverLogs);
+            this.webserverLogs = Codegen.ofNullable(webserverLogs);
             return this;
         }
         public Builder workerLogs(@Nullable Output<EnvironmentLoggingConfigurationWorkerLogsArgs> workerLogs) {
@@ -159,7 +160,7 @@ public final class EnvironmentLoggingConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder workerLogs(@Nullable EnvironmentLoggingConfigurationWorkerLogsArgs workerLogs) {
-            this.workerLogs = Output.ofNullable(workerLogs);
+            this.workerLogs = Codegen.ofNullable(workerLogs);
             return this;
         }        public EnvironmentLoggingConfigurationArgs build() {
             return new EnvironmentLoggingConfigurationArgs(dagProcessingLogs, schedulerLogs, taskLogs, webserverLogs, workerLogs);

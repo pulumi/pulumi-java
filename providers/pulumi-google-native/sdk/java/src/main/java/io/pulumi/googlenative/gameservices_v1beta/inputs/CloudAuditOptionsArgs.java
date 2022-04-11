@@ -5,6 +5,7 @@ package io.pulumi.googlenative.gameservices_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.gameservices_v1beta.enums.CloudAuditOptionsLogName;
 import io.pulumi.googlenative.gameservices_v1beta.inputs.AuthorizationLoggingOptionsArgs;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class CloudAuditOptionsArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<AuthorizationLoggingOptionsArgs> authorizationLoggingOptions;
 
     public Output<AuthorizationLoggingOptionsArgs> getAuthorizationLoggingOptions() {
-        return this.authorizationLoggingOptions == null ? Output.empty() : this.authorizationLoggingOptions;
+        return this.authorizationLoggingOptions == null ? Codegen.empty() : this.authorizationLoggingOptions;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class CloudAuditOptionsArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<CloudAuditOptionsLogName> logName;
 
     public Output<CloudAuditOptionsLogName> getLogName() {
-        return this.logName == null ? Output.empty() : this.logName;
+        return this.logName == null ? Codegen.empty() : this.logName;
     }
 
     public CloudAuditOptionsArgs(
@@ -49,8 +50,8 @@ public final class CloudAuditOptionsArgs extends io.pulumi.resources.ResourceArg
     }
 
     private CloudAuditOptionsArgs() {
-        this.authorizationLoggingOptions = Output.empty();
-        this.logName = Output.empty();
+        this.authorizationLoggingOptions = Codegen.empty();
+        this.logName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class CloudAuditOptionsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder authorizationLoggingOptions(@Nullable AuthorizationLoggingOptionsArgs authorizationLoggingOptions) {
-            this.authorizationLoggingOptions = Output.ofNullable(authorizationLoggingOptions);
+            this.authorizationLoggingOptions = Codegen.ofNullable(authorizationLoggingOptions);
             return this;
         }
         public Builder logName(@Nullable Output<CloudAuditOptionsLogName> logName) {
@@ -88,7 +89,7 @@ public final class CloudAuditOptionsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder logName(@Nullable CloudAuditOptionsLogName logName) {
-            this.logName = Output.ofNullable(logName);
+            this.logName = Codegen.ofNullable(logName);
             return this;
         }        public CloudAuditOptionsArgs build() {
             return new CloudAuditOptionsArgs(authorizationLoggingOptions, logName);

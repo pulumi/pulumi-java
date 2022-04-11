@@ -6,6 +6,7 @@ package io.pulumi.azurenative.devices.inputs;
 import io.pulumi.azurenative.devices.enums.IpFilterActionType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -61,9 +62,9 @@ public final class IpFilterRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IpFilterRuleArgs() {
-        this.action = Output.empty();
-        this.filterName = Output.empty();
-        this.ipMask = Output.empty();
+        this.action = Codegen.empty();
+        this.filterName = Codegen.empty();
+        this.ipMask = Codegen.empty();
     }
 
     public static Builder builder() {

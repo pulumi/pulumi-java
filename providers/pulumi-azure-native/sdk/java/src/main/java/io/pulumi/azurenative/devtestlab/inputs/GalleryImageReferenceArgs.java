@@ -5,6 +5,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GalleryImageReferenceArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> offer;
 
     public Output<String> getOffer() {
-        return this.offer == null ? Output.empty() : this.offer;
+        return this.offer == null ? Codegen.empty() : this.offer;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class GalleryImageReferenceArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> osType;
 
     public Output<String> getOsType() {
-        return this.osType == null ? Output.empty() : this.osType;
+        return this.osType == null ? Codegen.empty() : this.osType;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class GalleryImageReferenceArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> publisher;
 
     public Output<String> getPublisher() {
-        return this.publisher == null ? Output.empty() : this.publisher;
+        return this.publisher == null ? Codegen.empty() : this.publisher;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class GalleryImageReferenceArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> sku;
 
     public Output<String> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class GalleryImageReferenceArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public GalleryImageReferenceArgs(
@@ -87,11 +88,11 @@ public final class GalleryImageReferenceArgs extends io.pulumi.resources.Resourc
     }
 
     private GalleryImageReferenceArgs() {
-        this.offer = Output.empty();
-        this.osType = Output.empty();
-        this.publisher = Output.empty();
-        this.sku = Output.empty();
-        this.version = Output.empty();
+        this.offer = Codegen.empty();
+        this.osType = Codegen.empty();
+        this.publisher = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class GalleryImageReferenceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder offer(@Nullable String offer) {
-            this.offer = Output.ofNullable(offer);
+            this.offer = Codegen.ofNullable(offer);
             return this;
         }
         public Builder osType(@Nullable Output<String> osType) {
@@ -135,7 +136,7 @@ public final class GalleryImageReferenceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder osType(@Nullable String osType) {
-            this.osType = Output.ofNullable(osType);
+            this.osType = Codegen.ofNullable(osType);
             return this;
         }
         public Builder publisher(@Nullable Output<String> publisher) {
@@ -143,7 +144,7 @@ public final class GalleryImageReferenceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder publisher(@Nullable String publisher) {
-            this.publisher = Output.ofNullable(publisher);
+            this.publisher = Codegen.ofNullable(publisher);
             return this;
         }
         public Builder sku(@Nullable Output<String> sku) {
@@ -151,7 +152,7 @@ public final class GalleryImageReferenceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder sku(@Nullable String sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -159,7 +160,7 @@ public final class GalleryImageReferenceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public GalleryImageReferenceArgs build() {
             return new GalleryImageReferenceArgs(offer, osType, publisher, sku, version);

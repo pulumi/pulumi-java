@@ -5,6 +5,7 @@ package io.pulumi.aws.amp.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> alias;
 
     public Output<String> getAlias() {
-        return this.alias == null ? Output.empty() : this.alias;
+        return this.alias == null ? Codegen.empty() : this.alias;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> prometheusEndpoint;
 
     public Output<String> getPrometheusEndpoint() {
-        return this.prometheusEndpoint == null ? Output.empty() : this.prometheusEndpoint;
+        return this.prometheusEndpoint == null ? Codegen.empty() : this.prometheusEndpoint;
     }
 
     public WorkspaceState(
@@ -57,9 +58,9 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkspaceState() {
-        this.alias = Output.empty();
-        this.arn = Output.empty();
-        this.prometheusEndpoint = Output.empty();
+        this.alias = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.prometheusEndpoint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder alias(@Nullable String alias) {
-            this.alias = Output.ofNullable(alias);
+            this.alias = Codegen.ofNullable(alias);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -99,7 +100,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder prometheusEndpoint(@Nullable Output<String> prometheusEndpoint) {
@@ -107,7 +108,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder prometheusEndpoint(@Nullable String prometheusEndpoint) {
-            this.prometheusEndpoint = Output.ofNullable(prometheusEndpoint);
+            this.prometheusEndpoint = Codegen.ofNullable(prometheusEndpoint);
             return this;
         }        public WorkspaceState build() {
             return new WorkspaceState(alias, arn, prometheusEndpoint);

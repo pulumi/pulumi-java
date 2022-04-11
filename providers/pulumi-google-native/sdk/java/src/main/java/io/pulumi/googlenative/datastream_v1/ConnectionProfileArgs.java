@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datastream_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datastream_v1.inputs.ForwardSshTunnelConnectivityArgs;
 import io.pulumi.googlenative.datastream_v1.inputs.GcsProfileArgs;
 import io.pulumi.googlenative.datastream_v1.inputs.MysqlProfileArgs;
@@ -43,7 +44,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> force;
 
     public Output<String> getForce() {
-        return this.force == null ? Output.empty() : this.force;
+        return this.force == null ? Codegen.empty() : this.force;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<ForwardSshTunnelConnectivityArgs> forwardSshConnectivity;
 
     public Output<ForwardSshTunnelConnectivityArgs> getForwardSshConnectivity() {
-        return this.forwardSshConnectivity == null ? Output.empty() : this.forwardSshConnectivity;
+        return this.forwardSshConnectivity == null ? Codegen.empty() : this.forwardSshConnectivity;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<GcsProfileArgs> gcsProfile;
 
     public Output<GcsProfileArgs> getGcsProfile() {
-        return this.gcsProfile == null ? Output.empty() : this.gcsProfile;
+        return this.gcsProfile == null ? Codegen.empty() : this.gcsProfile;
     }
 
     /**
@@ -76,14 +77,14 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<MysqlProfileArgs> mysqlProfile;
 
     public Output<MysqlProfileArgs> getMysqlProfile() {
-        return this.mysqlProfile == null ? Output.empty() : this.mysqlProfile;
+        return this.mysqlProfile == null ? Codegen.empty() : this.mysqlProfile;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<OracleProfileArgs> oracleProfile;
 
     public Output<OracleProfileArgs> getOracleProfile() {
-        return this.oracleProfile == null ? Output.empty() : this.oracleProfile;
+        return this.oracleProfile == null ? Codegen.empty() : this.oracleProfile;
     }
 
     /**
@@ -116,21 +117,21 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<PrivateConnectivityArgs> privateConnectivity;
 
     public Output<PrivateConnectivityArgs> getPrivateConnectivity() {
-        return this.privateConnectivity == null ? Output.empty() : this.privateConnectivity;
+        return this.privateConnectivity == null ? Codegen.empty() : this.privateConnectivity;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -141,14 +142,14 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<StaticServiceIpConnectivityArgs> staticServiceIpConnectivity;
 
     public Output<StaticServiceIpConnectivityArgs> getStaticServiceIpConnectivity() {
-        return this.staticServiceIpConnectivity == null ? Output.empty() : this.staticServiceIpConnectivity;
+        return this.staticServiceIpConnectivity == null ? Codegen.empty() : this.staticServiceIpConnectivity;
     }
 
     @Import(name="validateOnly")
       private final @Nullable Output<String> validateOnly;
 
     public Output<String> getValidateOnly() {
-        return this.validateOnly == null ? Output.empty() : this.validateOnly;
+        return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
     }
 
     public ConnectionProfileArgs(
@@ -183,20 +184,20 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ConnectionProfileArgs() {
-        this.connectionProfileId = Output.empty();
-        this.displayName = Output.empty();
-        this.force = Output.empty();
-        this.forwardSshConnectivity = Output.empty();
-        this.gcsProfile = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.mysqlProfile = Output.empty();
-        this.oracleProfile = Output.empty();
-        this.privateConnectivity = Output.empty();
-        this.project = Output.empty();
-        this.requestId = Output.empty();
-        this.staticServiceIpConnectivity = Output.empty();
-        this.validateOnly = Output.empty();
+        this.connectionProfileId = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.force = Codegen.empty();
+        this.forwardSshConnectivity = Codegen.empty();
+        this.gcsProfile = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.mysqlProfile = Codegen.empty();
+        this.oracleProfile = Codegen.empty();
+        this.privateConnectivity = Codegen.empty();
+        this.project = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.staticServiceIpConnectivity = Codegen.empty();
+        this.validateOnly = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -266,7 +267,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder force(@Nullable String force) {
-            this.force = Output.ofNullable(force);
+            this.force = Codegen.ofNullable(force);
             return this;
         }
         public Builder forwardSshConnectivity(@Nullable Output<ForwardSshTunnelConnectivityArgs> forwardSshConnectivity) {
@@ -274,7 +275,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder forwardSshConnectivity(@Nullable ForwardSshTunnelConnectivityArgs forwardSshConnectivity) {
-            this.forwardSshConnectivity = Output.ofNullable(forwardSshConnectivity);
+            this.forwardSshConnectivity = Codegen.ofNullable(forwardSshConnectivity);
             return this;
         }
         public Builder gcsProfile(@Nullable Output<GcsProfileArgs> gcsProfile) {
@@ -282,7 +283,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder gcsProfile(@Nullable GcsProfileArgs gcsProfile) {
-            this.gcsProfile = Output.ofNullable(gcsProfile);
+            this.gcsProfile = Codegen.ofNullable(gcsProfile);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -290,7 +291,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -298,7 +299,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder mysqlProfile(@Nullable Output<MysqlProfileArgs> mysqlProfile) {
@@ -306,7 +307,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder mysqlProfile(@Nullable MysqlProfileArgs mysqlProfile) {
-            this.mysqlProfile = Output.ofNullable(mysqlProfile);
+            this.mysqlProfile = Codegen.ofNullable(mysqlProfile);
             return this;
         }
         public Builder oracleProfile(@Nullable Output<OracleProfileArgs> oracleProfile) {
@@ -314,7 +315,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder oracleProfile(@Nullable OracleProfileArgs oracleProfile) {
-            this.oracleProfile = Output.ofNullable(oracleProfile);
+            this.oracleProfile = Codegen.ofNullable(oracleProfile);
             return this;
         }
         public Builder privateConnectivity(@Nullable Output<PrivateConnectivityArgs> privateConnectivity) {
@@ -322,7 +323,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder privateConnectivity(@Nullable PrivateConnectivityArgs privateConnectivity) {
-            this.privateConnectivity = Output.ofNullable(privateConnectivity);
+            this.privateConnectivity = Codegen.ofNullable(privateConnectivity);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -330,7 +331,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -338,7 +339,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder staticServiceIpConnectivity(@Nullable Output<StaticServiceIpConnectivityArgs> staticServiceIpConnectivity) {
@@ -346,7 +347,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder staticServiceIpConnectivity(@Nullable StaticServiceIpConnectivityArgs staticServiceIpConnectivity) {
-            this.staticServiceIpConnectivity = Output.ofNullable(staticServiceIpConnectivity);
+            this.staticServiceIpConnectivity = Codegen.ofNullable(staticServiceIpConnectivity);
             return this;
         }
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
@@ -354,7 +355,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder validateOnly(@Nullable String validateOnly) {
-            this.validateOnly = Output.ofNullable(validateOnly);
+            this.validateOnly = Codegen.ofNullable(validateOnly);
             return this;
         }        public ConnectionProfileArgs build() {
             return new ConnectionProfileArgs(connectionProfileId, displayName, force, forwardSshConnectivity, gcsProfile, labels, location, mysqlProfile, oracleProfile, privateConnectivity, project, requestId, staticServiceIpConnectivity, validateOnly);

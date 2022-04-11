@@ -5,6 +5,7 @@ package io.pulumi.aws.datasync.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class TaskExcludesGetArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> filterType;
 
     public Output<String> getFilterType() {
-        return this.filterType == null ? Output.empty() : this.filterType;
+        return this.filterType == null ? Codegen.empty() : this.filterType;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class TaskExcludesGetArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public TaskExcludesGetArgs(
@@ -44,8 +45,8 @@ public final class TaskExcludesGetArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private TaskExcludesGetArgs() {
-        this.filterType = Output.empty();
-        this.value = Output.empty();
+        this.filterType = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class TaskExcludesGetArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder filterType(@Nullable String filterType) {
-            this.filterType = Output.ofNullable(filterType);
+            this.filterType = Codegen.ofNullable(filterType);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -83,7 +84,7 @@ public final class TaskExcludesGetArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public TaskExcludesGetArgs build() {
             return new TaskExcludesGetArgs(filterType, value);

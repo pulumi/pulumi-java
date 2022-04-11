@@ -11,6 +11,7 @@ import io.pulumi.aws.wafv2.outputs.WebAclLoggingConfigurationRedactedField;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -114,7 +115,7 @@ public class WebAclLoggingConfiguration extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAclLoggingConfiguration(String name, WebAclLoggingConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:wafv2/webAclLoggingConfiguration:WebAclLoggingConfiguration", name, args == null ? WebAclLoggingConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:wafv2/webAclLoggingConfiguration:WebAclLoggingConfiguration", name, args == null ? WebAclLoggingConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebAclLoggingConfiguration(String name, Output<String> id, @Nullable WebAclLoggingConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

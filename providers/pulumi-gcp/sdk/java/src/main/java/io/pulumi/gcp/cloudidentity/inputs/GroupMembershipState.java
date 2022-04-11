@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudidentity.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudidentity.inputs.GroupMembershipMemberKeyGetArgs;
 import io.pulumi.gcp.cloudidentity.inputs.GroupMembershipPreferredMemberKeyGetArgs;
 import io.pulumi.gcp.cloudidentity.inputs.GroupMembershipRoleGetArgs;
@@ -26,7 +27,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> group;
 
     public Output<String> getGroup() {
-        return this.group == null ? Output.empty() : this.group;
+        return this.group == null ? Codegen.empty() : this.group;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<GroupMembershipMemberKeyGetArgs> memberKey;
 
     public Output<GroupMembershipMemberKeyGetArgs> getMemberKey() {
-        return this.memberKey == null ? Output.empty() : this.memberKey;
+        return this.memberKey == null ? Codegen.empty() : this.memberKey;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<GroupMembershipPreferredMemberKeyGetArgs> preferredMemberKey;
 
     public Output<GroupMembershipPreferredMemberKeyGetArgs> getPreferredMemberKey() {
-        return this.preferredMemberKey == null ? Output.empty() : this.preferredMemberKey;
+        return this.preferredMemberKey == null ? Codegen.empty() : this.preferredMemberKey;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<GroupMembershipRoleGetArgs>> roles;
 
     public Output<List<GroupMembershipRoleGetArgs>> getRoles() {
-        return this.roles == null ? Output.empty() : this.roles;
+        return this.roles == null ? Codegen.empty() : this.roles;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -108,7 +109,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {
-        return this.updateTime == null ? Output.empty() : this.updateTime;
+        return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
     public GroupMembershipState(
@@ -131,14 +132,14 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
     }
 
     private GroupMembershipState() {
-        this.createTime = Output.empty();
-        this.group = Output.empty();
-        this.memberKey = Output.empty();
-        this.name = Output.empty();
-        this.preferredMemberKey = Output.empty();
-        this.roles = Output.empty();
-        this.type = Output.empty();
-        this.updateTime = Output.empty();
+        this.createTime = Codegen.empty();
+        this.group = Codegen.empty();
+        this.memberKey = Codegen.empty();
+        this.name = Codegen.empty();
+        this.preferredMemberKey = Codegen.empty();
+        this.roles = Codegen.empty();
+        this.type = Codegen.empty();
+        this.updateTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -180,7 +181,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder group(@Nullable Output<String> group) {
@@ -188,7 +189,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder group(@Nullable String group) {
-            this.group = Output.ofNullable(group);
+            this.group = Codegen.ofNullable(group);
             return this;
         }
         public Builder memberKey(@Nullable Output<GroupMembershipMemberKeyGetArgs> memberKey) {
@@ -196,7 +197,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder memberKey(@Nullable GroupMembershipMemberKeyGetArgs memberKey) {
-            this.memberKey = Output.ofNullable(memberKey);
+            this.memberKey = Codegen.ofNullable(memberKey);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -204,7 +205,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder preferredMemberKey(@Nullable Output<GroupMembershipPreferredMemberKeyGetArgs> preferredMemberKey) {
@@ -212,7 +213,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder preferredMemberKey(@Nullable GroupMembershipPreferredMemberKeyGetArgs preferredMemberKey) {
-            this.preferredMemberKey = Output.ofNullable(preferredMemberKey);
+            this.preferredMemberKey = Codegen.ofNullable(preferredMemberKey);
             return this;
         }
         public Builder roles(@Nullable Output<List<GroupMembershipRoleGetArgs>> roles) {
@@ -220,7 +221,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder roles(@Nullable List<GroupMembershipRoleGetArgs> roles) {
-            this.roles = Output.ofNullable(roles);
+            this.roles = Codegen.ofNullable(roles);
             return this;
         }
         public Builder roles(GroupMembershipRoleGetArgs... roles) {
@@ -231,7 +232,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder updateTime(@Nullable Output<String> updateTime) {
@@ -239,7 +240,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Output.ofNullable(updateTime);
+            this.updateTime = Codegen.ofNullable(updateTime);
             return this;
         }        public GroupMembershipState build() {
             return new GroupMembershipState(createTime, group, memberKey, name, preferredMemberKey, roles, type, updateTime);

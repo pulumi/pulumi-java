@@ -5,6 +5,7 @@ package io.pulumi.aws.securityhub;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class StandardsSubscriptionArgs extends io.pulumi.resources.Resourc
     }
 
     private StandardsSubscriptionArgs() {
-        this.standardsArn = Output.empty();
+        this.standardsArn = Codegen.empty();
     }
 
     public static Builder builder() {

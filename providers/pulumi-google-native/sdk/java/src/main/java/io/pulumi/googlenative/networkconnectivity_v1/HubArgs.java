@@ -5,6 +5,7 @@ package io.pulumi.googlenative.networkconnectivity_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.networkconnectivity_v1.inputs.RoutingVPCArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +26,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="hubId", required=true)
@@ -43,7 +44,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -54,21 +55,21 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<RoutingVPCArgs>> routingVpcs;
 
     public Output<List<RoutingVPCArgs>> getRoutingVpcs() {
-        return this.routingVpcs == null ? Output.empty() : this.routingVpcs;
+        return this.routingVpcs == null ? Codegen.empty() : this.routingVpcs;
     }
 
     public HubArgs(
@@ -100,13 +101,13 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HubArgs() {
-        this.description = Output.empty();
-        this.hubId = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.requestId = Output.empty();
-        this.routingVpcs = Output.empty();
+        this.description = Codegen.empty();
+        this.hubId = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.routingVpcs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder hubId(Output<String> hubId) {
@@ -162,7 +163,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -170,7 +171,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -178,7 +179,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -186,7 +187,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder routingVpcs(@Nullable Output<List<RoutingVPCArgs>> routingVpcs) {
@@ -194,7 +195,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder routingVpcs(@Nullable List<RoutingVPCArgs> routingVpcs) {
-            this.routingVpcs = Output.ofNullable(routingVpcs);
+            this.routingVpcs = Codegen.ofNullable(routingVpcs);
             return this;
         }
         public Builder routingVpcs(RoutingVPCArgs... routingVpcs) {

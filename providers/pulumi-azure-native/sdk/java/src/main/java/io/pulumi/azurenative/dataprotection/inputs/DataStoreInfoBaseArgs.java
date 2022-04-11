@@ -7,6 +7,7 @@ import io.pulumi.azurenative.dataprotection.enums.DataStoreTypes;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -49,8 +50,8 @@ public final class DataStoreInfoBaseArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DataStoreInfoBaseArgs() {
-        this.dataStoreType = Output.empty();
-        this.objectType = Output.empty();
+        this.dataStoreType = Codegen.empty();
+        this.objectType = Codegen.empty();
     }
 
     public static Builder builder() {

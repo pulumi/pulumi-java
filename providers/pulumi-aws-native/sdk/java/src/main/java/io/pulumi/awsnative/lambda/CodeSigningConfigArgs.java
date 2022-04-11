@@ -7,6 +7,7 @@ import io.pulumi.awsnative.lambda.inputs.CodeSigningConfigAllowedPublishersArgs;
 import io.pulumi.awsnative.lambda.inputs.CodeSigningConfigCodeSigningPoliciesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -35,7 +36,7 @@ public final class CodeSigningConfigArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<CodeSigningConfigCodeSigningPoliciesArgs> codeSigningPolicies;
 
     public Output<CodeSigningConfigCodeSigningPoliciesArgs> getCodeSigningPolicies() {
-        return this.codeSigningPolicies == null ? Output.empty() : this.codeSigningPolicies;
+        return this.codeSigningPolicies == null ? Codegen.empty() : this.codeSigningPolicies;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class CodeSigningConfigArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     public CodeSigningConfigArgs(
@@ -59,9 +60,9 @@ public final class CodeSigningConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     private CodeSigningConfigArgs() {
-        this.allowedPublishers = Output.empty();
-        this.codeSigningPolicies = Output.empty();
-        this.description = Output.empty();
+        this.allowedPublishers = Codegen.empty();
+        this.codeSigningPolicies = Codegen.empty();
+        this.description = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -101,7 +102,7 @@ public final class CodeSigningConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder codeSigningPolicies(@Nullable CodeSigningConfigCodeSigningPoliciesArgs codeSigningPolicies) {
-            this.codeSigningPolicies = Output.ofNullable(codeSigningPolicies);
+            this.codeSigningPolicies = Codegen.ofNullable(codeSigningPolicies);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -109,7 +110,7 @@ public final class CodeSigningConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }        public CodeSigningConfigArgs build() {
             return new CodeSigningConfigArgs(allowedPublishers, codeSigningPolicies, description);

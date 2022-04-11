@@ -18,6 +18,7 @@ import io.pulumi.azurenative.virtualmachineimages.inputs.ImageTemplateVmProfileA
 import io.pulumi.azurenative.virtualmachineimages.inputs.ImageTemplateWindowsUpdateCustomizerArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -39,7 +40,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
       private final @Nullable Output<Integer> buildTimeoutInMinutes;
 
     public Output<Integer> getBuildTimeoutInMinutes() {
-        return this.buildTimeoutInMinutes == null ? Output.empty() : this.buildTimeoutInMinutes;
+        return this.buildTimeoutInMinutes == null ? Codegen.empty() : this.buildTimeoutInMinutes;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
       private final @Nullable Output<List<Object>> customize;
 
     public Output<List<Object>> getCustomize() {
-        return this.customize == null ? Output.empty() : this.customize;
+        return this.customize == null ? Codegen.empty() : this.customize;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> imageTemplateName;
 
     public Output<String> getImageTemplateName() {
-        return this.imageTemplateName == null ? Output.empty() : this.imageTemplateName;
+        return this.imageTemplateName == null ? Codegen.empty() : this.imageTemplateName;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
       private final @Nullable Output<ImageTemplateVmProfileArgs> vmProfile;
 
     public Output<ImageTemplateVmProfileArgs> getVmProfile() {
-        return this.vmProfile == null ? Output.empty() : this.vmProfile;
+        return this.vmProfile == null ? Codegen.empty() : this.vmProfile;
     }
 
     public VirtualMachineImageTemplateArgs(
@@ -152,7 +153,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
         Output<Object> source,
         @Nullable Output<Map<String,String>> tags,
         @Nullable Output<ImageTemplateVmProfileArgs> vmProfile) {
-        this.buildTimeoutInMinutes = buildTimeoutInMinutes == null ? Output.ofNullable(0) : buildTimeoutInMinutes;
+        this.buildTimeoutInMinutes = buildTimeoutInMinutes == null ? Codegen.ofNullable(0) : buildTimeoutInMinutes;
         this.customize = customize;
         this.distribute = Objects.requireNonNull(distribute, "expected parameter 'distribute' to be non-null");
         this.identity = Objects.requireNonNull(identity, "expected parameter 'identity' to be non-null");
@@ -165,16 +166,16 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
     }
 
     private VirtualMachineImageTemplateArgs() {
-        this.buildTimeoutInMinutes = Output.empty();
-        this.customize = Output.empty();
-        this.distribute = Output.empty();
-        this.identity = Output.empty();
-        this.imageTemplateName = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.source = Output.empty();
-        this.tags = Output.empty();
-        this.vmProfile = Output.empty();
+        this.buildTimeoutInMinutes = Codegen.empty();
+        this.customize = Codegen.empty();
+        this.distribute = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.imageTemplateName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.source = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vmProfile = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -220,7 +221,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder buildTimeoutInMinutes(@Nullable Integer buildTimeoutInMinutes) {
-            this.buildTimeoutInMinutes = Output.ofNullable(buildTimeoutInMinutes);
+            this.buildTimeoutInMinutes = Codegen.ofNullable(buildTimeoutInMinutes);
             return this;
         }
         public Builder customize(@Nullable Output<List<Object>> customize) {
@@ -228,7 +229,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder customize(@Nullable List<Object> customize) {
-            this.customize = Output.ofNullable(customize);
+            this.customize = Codegen.ofNullable(customize);
             return this;
         }
         public Builder customize(Object... customize) {
@@ -258,7 +259,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder imageTemplateName(@Nullable String imageTemplateName) {
-            this.imageTemplateName = Output.ofNullable(imageTemplateName);
+            this.imageTemplateName = Codegen.ofNullable(imageTemplateName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -266,7 +267,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -290,7 +291,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder vmProfile(@Nullable Output<ImageTemplateVmProfileArgs> vmProfile) {
@@ -298,7 +299,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder vmProfile(@Nullable ImageTemplateVmProfileArgs vmProfile) {
-            this.vmProfile = Output.ofNullable(vmProfile);
+            this.vmProfile = Codegen.ofNullable(vmProfile);
             return this;
         }        public VirtualMachineImageTemplateArgs build() {
             return new VirtualMachineImageTemplateArgs(buildTimeoutInMinutes, customize, distribute, identity, imageTemplateName, location, resourceGroupName, source, tags, vmProfile);

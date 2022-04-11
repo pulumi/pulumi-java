@@ -6,6 +6,7 @@ package io.pulumi.azurenative.logz;
 import io.pulumi.azurenative.logz.inputs.MetricsTagRulesPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -45,7 +46,7 @@ public final class MetricsSourceTagRuleArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<MetricsTagRulesPropertiesArgs> properties;
 
     public Output<MetricsTagRulesPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class MetricsSourceTagRuleArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> ruleSetName;
 
     public Output<String> getRuleSetName() {
-        return this.ruleSetName == null ? Output.empty() : this.ruleSetName;
+        return this.ruleSetName == null ? Codegen.empty() : this.ruleSetName;
     }
 
     public MetricsSourceTagRuleArgs(
@@ -80,11 +81,11 @@ public final class MetricsSourceTagRuleArgs extends io.pulumi.resources.Resource
     }
 
     private MetricsSourceTagRuleArgs() {
-        this.metricsSourceName = Output.empty();
-        this.monitorName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.ruleSetName = Output.empty();
+        this.metricsSourceName = Codegen.empty();
+        this.monitorName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.ruleSetName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -136,7 +137,7 @@ public final class MetricsSourceTagRuleArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder properties(@Nullable MetricsTagRulesPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -152,7 +153,7 @@ public final class MetricsSourceTagRuleArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder ruleSetName(@Nullable String ruleSetName) {
-            this.ruleSetName = Output.ofNullable(ruleSetName);
+            this.ruleSetName = Codegen.ofNullable(ruleSetName);
             return this;
         }        public MetricsSourceTagRuleArgs build() {
             return new MetricsSourceTagRuleArgs(metricsSourceName, monitorName, properties, resourceGroupName, ruleSetName);

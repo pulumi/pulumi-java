@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_v1.inputs.HttpHeaderOptionArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class HttpHeaderActionArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<HttpHeaderOptionArgs>> requestHeadersToAdd;
 
     public Output<List<HttpHeaderOptionArgs>> getRequestHeadersToAdd() {
-        return this.requestHeadersToAdd == null ? Output.empty() : this.requestHeadersToAdd;
+        return this.requestHeadersToAdd == null ? Codegen.empty() : this.requestHeadersToAdd;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class HttpHeaderActionArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> requestHeadersToRemove;
 
     public Output<List<String>> getRequestHeadersToRemove() {
-        return this.requestHeadersToRemove == null ? Output.empty() : this.requestHeadersToRemove;
+        return this.requestHeadersToRemove == null ? Codegen.empty() : this.requestHeadersToRemove;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class HttpHeaderActionArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<HttpHeaderOptionArgs>> responseHeadersToAdd;
 
     public Output<List<HttpHeaderOptionArgs>> getResponseHeadersToAdd() {
-        return this.responseHeadersToAdd == null ? Output.empty() : this.responseHeadersToAdd;
+        return this.responseHeadersToAdd == null ? Codegen.empty() : this.responseHeadersToAdd;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class HttpHeaderActionArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> responseHeadersToRemove;
 
     public Output<List<String>> getResponseHeadersToRemove() {
-        return this.responseHeadersToRemove == null ? Output.empty() : this.responseHeadersToRemove;
+        return this.responseHeadersToRemove == null ? Codegen.empty() : this.responseHeadersToRemove;
     }
 
     public HttpHeaderActionArgs(
@@ -76,10 +77,10 @@ public final class HttpHeaderActionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private HttpHeaderActionArgs() {
-        this.requestHeadersToAdd = Output.empty();
-        this.requestHeadersToRemove = Output.empty();
-        this.responseHeadersToAdd = Output.empty();
-        this.responseHeadersToRemove = Output.empty();
+        this.requestHeadersToAdd = Codegen.empty();
+        this.requestHeadersToRemove = Codegen.empty();
+        this.responseHeadersToAdd = Codegen.empty();
+        this.responseHeadersToRemove = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class HttpHeaderActionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder requestHeadersToAdd(@Nullable List<HttpHeaderOptionArgs> requestHeadersToAdd) {
-            this.requestHeadersToAdd = Output.ofNullable(requestHeadersToAdd);
+            this.requestHeadersToAdd = Codegen.ofNullable(requestHeadersToAdd);
             return this;
         }
         public Builder requestHeadersToAdd(HttpHeaderOptionArgs... requestHeadersToAdd) {
@@ -124,7 +125,7 @@ public final class HttpHeaderActionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder requestHeadersToRemove(@Nullable List<String> requestHeadersToRemove) {
-            this.requestHeadersToRemove = Output.ofNullable(requestHeadersToRemove);
+            this.requestHeadersToRemove = Codegen.ofNullable(requestHeadersToRemove);
             return this;
         }
         public Builder requestHeadersToRemove(String... requestHeadersToRemove) {
@@ -135,7 +136,7 @@ public final class HttpHeaderActionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder responseHeadersToAdd(@Nullable List<HttpHeaderOptionArgs> responseHeadersToAdd) {
-            this.responseHeadersToAdd = Output.ofNullable(responseHeadersToAdd);
+            this.responseHeadersToAdd = Codegen.ofNullable(responseHeadersToAdd);
             return this;
         }
         public Builder responseHeadersToAdd(HttpHeaderOptionArgs... responseHeadersToAdd) {
@@ -146,7 +147,7 @@ public final class HttpHeaderActionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder responseHeadersToRemove(@Nullable List<String> responseHeadersToRemove) {
-            this.responseHeadersToRemove = Output.ofNullable(responseHeadersToRemove);
+            this.responseHeadersToRemove = Codegen.ofNullable(responseHeadersToRemove);
             return this;
         }
         public Builder responseHeadersToRemove(String... responseHeadersToRemove) {

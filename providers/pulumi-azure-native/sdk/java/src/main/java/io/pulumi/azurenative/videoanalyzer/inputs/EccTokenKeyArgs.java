@@ -7,6 +7,7 @@ import io.pulumi.azurenative.videoanalyzer.enums.AccessPolicyEccAlgo;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -89,11 +90,11 @@ public final class EccTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EccTokenKeyArgs() {
-        this.alg = Output.empty();
-        this.kid = Output.empty();
-        this.type = Output.empty();
-        this.x = Output.empty();
-        this.y = Output.empty();
+        this.alg = Codegen.empty();
+        this.kid = Codegen.empty();
+        this.type = Codegen.empty();
+        this.x = Codegen.empty();
+        this.y = Codegen.empty();
     }
 
     public static Builder builder() {

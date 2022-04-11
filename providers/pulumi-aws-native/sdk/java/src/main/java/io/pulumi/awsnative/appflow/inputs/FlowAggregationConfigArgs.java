@@ -6,6 +6,7 @@ package io.pulumi.awsnative.appflow.inputs;
 import io.pulumi.awsnative.appflow.enums.FlowAggregationType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +19,7 @@ public final class FlowAggregationConfigArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<FlowAggregationType> aggregationType;
 
     public Output<FlowAggregationType> getAggregationType() {
-        return this.aggregationType == null ? Output.empty() : this.aggregationType;
+        return this.aggregationType == null ? Codegen.empty() : this.aggregationType;
     }
 
     public FlowAggregationConfigArgs(@Nullable Output<FlowAggregationType> aggregationType) {
@@ -26,7 +27,7 @@ public final class FlowAggregationConfigArgs extends io.pulumi.resources.Resourc
     }
 
     private FlowAggregationConfigArgs() {
-        this.aggregationType = Output.empty();
+        this.aggregationType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class FlowAggregationConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder aggregationType(@Nullable FlowAggregationType aggregationType) {
-            this.aggregationType = Output.ofNullable(aggregationType);
+            this.aggregationType = Codegen.ofNullable(aggregationType);
             return this;
         }        public FlowAggregationConfigArgs build() {
             return new FlowAggregationConfigArgs(aggregationType);

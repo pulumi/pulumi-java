@@ -13,6 +13,7 @@ import io.pulumi.azurenative.videoanalyzer.inputs.VideoSourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -42,7 +43,7 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<ParameterDeclarationArgs>> parameters;
 
     public Output<List<ParameterDeclarationArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> pipelineTopologyName;
 
     public Output<String> getPipelineTopologyName() {
-        return this.pipelineTopologyName == null ? Output.empty() : this.pipelineTopologyName;
+        return this.pipelineTopologyName == null ? Codegen.empty() : this.pipelineTopologyName;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<EncoderProcessorArgs>> processors;
 
     public Output<List<EncoderProcessorArgs>> getProcessors() {
-        return this.processors == null ? Output.empty() : this.processors;
+        return this.processors == null ? Codegen.empty() : this.processors;
     }
 
     /**
@@ -157,16 +158,16 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private PipelineTopologyArgs() {
-        this.accountName = Output.empty();
-        this.description = Output.empty();
-        this.kind = Output.empty();
-        this.parameters = Output.empty();
-        this.pipelineTopologyName = Output.empty();
-        this.processors = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sinks = Output.empty();
-        this.sku = Output.empty();
-        this.sources = Output.empty();
+        this.accountName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.pipelineTopologyName = Codegen.empty();
+        this.processors = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sinks = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.sources = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -220,7 +221,7 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder kind(Output<Either<String,Kind>> kind) {
@@ -236,7 +237,7 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder parameters(@Nullable List<ParameterDeclarationArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(ParameterDeclarationArgs... parameters) {
@@ -247,7 +248,7 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder pipelineTopologyName(@Nullable String pipelineTopologyName) {
-            this.pipelineTopologyName = Output.ofNullable(pipelineTopologyName);
+            this.pipelineTopologyName = Codegen.ofNullable(pipelineTopologyName);
             return this;
         }
         public Builder processors(@Nullable Output<List<EncoderProcessorArgs>> processors) {
@@ -255,7 +256,7 @@ public final class PipelineTopologyArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder processors(@Nullable List<EncoderProcessorArgs> processors) {
-            this.processors = Output.ofNullable(processors);
+            this.processors = Codegen.ofNullable(processors);
             return this;
         }
         public Builder processors(EncoderProcessorArgs... processors) {

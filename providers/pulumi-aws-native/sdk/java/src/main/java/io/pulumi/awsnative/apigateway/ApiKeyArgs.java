@@ -7,6 +7,7 @@ import io.pulumi.awsnative.apigateway.inputs.ApiKeyStageKeyArgs;
 import io.pulumi.awsnative.apigateway.inputs.ApiKeyTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> customerId;
 
     public Output<String> getCustomerId() {
-        return this.customerId == null ? Output.empty() : this.customerId;
+        return this.customerId == null ? Codegen.empty() : this.customerId;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> generateDistinctId;
 
     public Output<Boolean> getGenerateDistinctId() {
-        return this.generateDistinctId == null ? Output.empty() : this.generateDistinctId;
+        return this.generateDistinctId == null ? Codegen.empty() : this.generateDistinctId;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ApiKeyStageKeyArgs>> stageKeys;
 
     public Output<List<ApiKeyStageKeyArgs>> getStageKeys() {
-        return this.stageKeys == null ? Output.empty() : this.stageKeys;
+        return this.stageKeys == null ? Codegen.empty() : this.stageKeys;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ApiKeyTagArgs>> tags;
 
     public Output<List<ApiKeyTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public ApiKeyArgs(
@@ -126,14 +127,14 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApiKeyArgs() {
-        this.customerId = Output.empty();
-        this.description = Output.empty();
-        this.enabled = Output.empty();
-        this.generateDistinctId = Output.empty();
-        this.name = Output.empty();
-        this.stageKeys = Output.empty();
-        this.tags = Output.empty();
-        this.value = Output.empty();
+        this.customerId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.generateDistinctId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.stageKeys = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -175,7 +176,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customerId(@Nullable String customerId) {
-            this.customerId = Output.ofNullable(customerId);
+            this.customerId = Codegen.ofNullable(customerId);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -183,7 +184,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -191,7 +192,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder generateDistinctId(@Nullable Output<Boolean> generateDistinctId) {
@@ -199,7 +200,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder generateDistinctId(@Nullable Boolean generateDistinctId) {
-            this.generateDistinctId = Output.ofNullable(generateDistinctId);
+            this.generateDistinctId = Codegen.ofNullable(generateDistinctId);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -207,7 +208,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder stageKeys(@Nullable Output<List<ApiKeyStageKeyArgs>> stageKeys) {
@@ -215,7 +216,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stageKeys(@Nullable List<ApiKeyStageKeyArgs> stageKeys) {
-            this.stageKeys = Output.ofNullable(stageKeys);
+            this.stageKeys = Codegen.ofNullable(stageKeys);
             return this;
         }
         public Builder stageKeys(ApiKeyStageKeyArgs... stageKeys) {
@@ -226,7 +227,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<ApiKeyTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ApiKeyTagArgs... tags) {
@@ -237,7 +238,7 @@ public final class ApiKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public ApiKeyArgs build() {
             return new ApiKeyArgs(customerId, description, enabled, generateDistinctId, name, stageKeys, tags, value);

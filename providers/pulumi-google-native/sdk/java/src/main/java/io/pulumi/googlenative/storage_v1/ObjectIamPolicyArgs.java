@@ -5,6 +5,7 @@ package io.pulumi.googlenative.storage_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.storage_v1.inputs.ObjectIamPolicyBindingsItemArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class ObjectIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<ObjectIamPolicyBindingsItemArgs>> bindings;
 
     public Output<List<ObjectIamPolicyBindingsItemArgs>> getBindings() {
-        return this.bindings == null ? Output.empty() : this.bindings;
+        return this.bindings == null ? Codegen.empty() : this.bindings;
     }
 
     @Import(name="bucket", required=true)
@@ -43,14 +44,14 @@ public final class ObjectIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="generation")
       private final @Nullable Output<String> generation;
 
     public Output<String> getGeneration() {
-        return this.generation == null ? Output.empty() : this.generation;
+        return this.generation == null ? Codegen.empty() : this.generation;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class ObjectIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     @Import(name="object", required=true)
@@ -75,7 +76,7 @@ public final class ObjectIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> provisionalUserProject;
 
     public Output<String> getProvisionalUserProject() {
-        return this.provisionalUserProject == null ? Output.empty() : this.provisionalUserProject;
+        return this.provisionalUserProject == null ? Codegen.empty() : this.provisionalUserProject;
     }
 
     /**
@@ -86,14 +87,14 @@ public final class ObjectIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {
-        return this.resourceId == null ? Output.empty() : this.resourceId;
+        return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     @Import(name="userProject")
       private final @Nullable Output<String> userProject;
 
     public Output<String> getUserProject() {
-        return this.userProject == null ? Output.empty() : this.userProject;
+        return this.userProject == null ? Codegen.empty() : this.userProject;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class ObjectIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Integer> version;
 
     public Output<Integer> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public ObjectIamPolicyArgs(
@@ -131,16 +132,16 @@ public final class ObjectIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ObjectIamPolicyArgs() {
-        this.bindings = Output.empty();
-        this.bucket = Output.empty();
-        this.etag = Output.empty();
-        this.generation = Output.empty();
-        this.kind = Output.empty();
-        this.object = Output.empty();
-        this.provisionalUserProject = Output.empty();
-        this.resourceId = Output.empty();
-        this.userProject = Output.empty();
-        this.version = Output.empty();
+        this.bindings = Codegen.empty();
+        this.bucket = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.generation = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.object = Codegen.empty();
+        this.provisionalUserProject = Codegen.empty();
+        this.resourceId = Codegen.empty();
+        this.userProject = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -186,7 +187,7 @@ public final class ObjectIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder bindings(@Nullable List<ObjectIamPolicyBindingsItemArgs> bindings) {
-            this.bindings = Output.ofNullable(bindings);
+            this.bindings = Codegen.ofNullable(bindings);
             return this;
         }
         public Builder bindings(ObjectIamPolicyBindingsItemArgs... bindings) {
@@ -205,7 +206,7 @@ public final class ObjectIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder generation(@Nullable Output<String> generation) {
@@ -213,7 +214,7 @@ public final class ObjectIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder generation(@Nullable String generation) {
-            this.generation = Output.ofNullable(generation);
+            this.generation = Codegen.ofNullable(generation);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -221,7 +222,7 @@ public final class ObjectIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder object(Output<String> object) {
@@ -237,7 +238,7 @@ public final class ObjectIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
-            this.provisionalUserProject = Output.ofNullable(provisionalUserProject);
+            this.provisionalUserProject = Codegen.ofNullable(provisionalUserProject);
             return this;
         }
         public Builder resourceId(@Nullable Output<String> resourceId) {
@@ -245,7 +246,7 @@ public final class ObjectIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Output.ofNullable(resourceId);
+            this.resourceId = Codegen.ofNullable(resourceId);
             return this;
         }
         public Builder userProject(@Nullable Output<String> userProject) {
@@ -253,7 +254,7 @@ public final class ObjectIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder userProject(@Nullable String userProject) {
-            this.userProject = Output.ofNullable(userProject);
+            this.userProject = Codegen.ofNullable(userProject);
             return this;
         }
         public Builder version(@Nullable Output<Integer> version) {
@@ -261,7 +262,7 @@ public final class ObjectIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder version(@Nullable Integer version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public ObjectIamPolicyArgs build() {
             return new ObjectIamPolicyArgs(bindings, bucket, etag, generation, kind, object, provisionalUserProject, resourceId, userProject, version);

@@ -5,6 +5,7 @@ package io.pulumi.aws.dms.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class EndpointMongodbSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> authMechanism;
 
     public Output<String> getAuthMechanism() {
-        return this.authMechanism == null ? Output.empty() : this.authMechanism;
+        return this.authMechanism == null ? Codegen.empty() : this.authMechanism;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class EndpointMongodbSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> authSource;
 
     public Output<String> getAuthSource() {
-        return this.authSource == null ? Output.empty() : this.authSource;
+        return this.authSource == null ? Codegen.empty() : this.authSource;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class EndpointMongodbSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> authType;
 
     public Output<String> getAuthType() {
-        return this.authType == null ? Output.empty() : this.authType;
+        return this.authType == null ? Codegen.empty() : this.authType;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class EndpointMongodbSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> docsToInvestigate;
 
     public Output<String> getDocsToInvestigate() {
-        return this.docsToInvestigate == null ? Output.empty() : this.docsToInvestigate;
+        return this.docsToInvestigate == null ? Codegen.empty() : this.docsToInvestigate;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class EndpointMongodbSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> extractDocId;
 
     public Output<String> getExtractDocId() {
-        return this.extractDocId == null ? Output.empty() : this.extractDocId;
+        return this.extractDocId == null ? Codegen.empty() : this.extractDocId;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class EndpointMongodbSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> nestingLevel;
 
     public Output<String> getNestingLevel() {
-        return this.nestingLevel == null ? Output.empty() : this.nestingLevel;
+        return this.nestingLevel == null ? Codegen.empty() : this.nestingLevel;
     }
 
     public EndpointMongodbSettingsArgs(
@@ -96,12 +97,12 @@ public final class EndpointMongodbSettingsArgs extends io.pulumi.resources.Resou
     }
 
     private EndpointMongodbSettingsArgs() {
-        this.authMechanism = Output.empty();
-        this.authSource = Output.empty();
-        this.authType = Output.empty();
-        this.docsToInvestigate = Output.empty();
-        this.extractDocId = Output.empty();
-        this.nestingLevel = Output.empty();
+        this.authMechanism = Codegen.empty();
+        this.authSource = Codegen.empty();
+        this.authType = Codegen.empty();
+        this.docsToInvestigate = Codegen.empty();
+        this.extractDocId = Codegen.empty();
+        this.nestingLevel = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class EndpointMongodbSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder authMechanism(@Nullable String authMechanism) {
-            this.authMechanism = Output.ofNullable(authMechanism);
+            this.authMechanism = Codegen.ofNullable(authMechanism);
             return this;
         }
         public Builder authSource(@Nullable Output<String> authSource) {
@@ -147,7 +148,7 @@ public final class EndpointMongodbSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder authSource(@Nullable String authSource) {
-            this.authSource = Output.ofNullable(authSource);
+            this.authSource = Codegen.ofNullable(authSource);
             return this;
         }
         public Builder authType(@Nullable Output<String> authType) {
@@ -155,7 +156,7 @@ public final class EndpointMongodbSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder authType(@Nullable String authType) {
-            this.authType = Output.ofNullable(authType);
+            this.authType = Codegen.ofNullable(authType);
             return this;
         }
         public Builder docsToInvestigate(@Nullable Output<String> docsToInvestigate) {
@@ -163,7 +164,7 @@ public final class EndpointMongodbSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder docsToInvestigate(@Nullable String docsToInvestigate) {
-            this.docsToInvestigate = Output.ofNullable(docsToInvestigate);
+            this.docsToInvestigate = Codegen.ofNullable(docsToInvestigate);
             return this;
         }
         public Builder extractDocId(@Nullable Output<String> extractDocId) {
@@ -171,7 +172,7 @@ public final class EndpointMongodbSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder extractDocId(@Nullable String extractDocId) {
-            this.extractDocId = Output.ofNullable(extractDocId);
+            this.extractDocId = Codegen.ofNullable(extractDocId);
             return this;
         }
         public Builder nestingLevel(@Nullable Output<String> nestingLevel) {
@@ -179,7 +180,7 @@ public final class EndpointMongodbSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder nestingLevel(@Nullable String nestingLevel) {
-            this.nestingLevel = Output.ofNullable(nestingLevel);
+            this.nestingLevel = Codegen.ofNullable(nestingLevel);
             return this;
         }        public EndpointMongodbSettingsArgs build() {
             return new EndpointMongodbSettingsArgs(authMechanism, authSource, authType, docsToInvestigate, extractDocId, nestingLevel);

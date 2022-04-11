@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.InstanceGroupManagerStatusStatefulArgs;
 import io.pulumi.gcp.compute.inputs.InstanceGroupManagerStatusVersionTargetArgs;
 import java.lang.Boolean;
@@ -25,7 +26,7 @@ public final class InstanceGroupManagerStatusArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Boolean> isStable;
 
     public Output<Boolean> getIsStable() {
-        return this.isStable == null ? Output.empty() : this.isStable;
+        return this.isStable == null ? Codegen.empty() : this.isStable;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class InstanceGroupManagerStatusArgs extends io.pulumi.resources.Re
       private final @Nullable Output<List<InstanceGroupManagerStatusStatefulArgs>> statefuls;
 
     public Output<List<InstanceGroupManagerStatusStatefulArgs>> getStatefuls() {
-        return this.statefuls == null ? Output.empty() : this.statefuls;
+        return this.statefuls == null ? Codegen.empty() : this.statefuls;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class InstanceGroupManagerStatusArgs extends io.pulumi.resources.Re
       private final @Nullable Output<List<InstanceGroupManagerStatusVersionTargetArgs>> versionTargets;
 
     public Output<List<InstanceGroupManagerStatusVersionTargetArgs>> getVersionTargets() {
-        return this.versionTargets == null ? Output.empty() : this.versionTargets;
+        return this.versionTargets == null ? Codegen.empty() : this.versionTargets;
     }
 
     public InstanceGroupManagerStatusArgs(
@@ -60,9 +61,9 @@ public final class InstanceGroupManagerStatusArgs extends io.pulumi.resources.Re
     }
 
     private InstanceGroupManagerStatusArgs() {
-        this.isStable = Output.empty();
-        this.statefuls = Output.empty();
-        this.versionTargets = Output.empty();
+        this.isStable = Codegen.empty();
+        this.statefuls = Codegen.empty();
+        this.versionTargets = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class InstanceGroupManagerStatusArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder isStable(@Nullable Boolean isStable) {
-            this.isStable = Output.ofNullable(isStable);
+            this.isStable = Codegen.ofNullable(isStable);
             return this;
         }
         public Builder statefuls(@Nullable Output<List<InstanceGroupManagerStatusStatefulArgs>> statefuls) {
@@ -102,7 +103,7 @@ public final class InstanceGroupManagerStatusArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder statefuls(@Nullable List<InstanceGroupManagerStatusStatefulArgs> statefuls) {
-            this.statefuls = Output.ofNullable(statefuls);
+            this.statefuls = Codegen.ofNullable(statefuls);
             return this;
         }
         public Builder statefuls(InstanceGroupManagerStatusStatefulArgs... statefuls) {
@@ -113,7 +114,7 @@ public final class InstanceGroupManagerStatusArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder versionTargets(@Nullable List<InstanceGroupManagerStatusVersionTargetArgs> versionTargets) {
-            this.versionTargets = Output.ofNullable(versionTargets);
+            this.versionTargets = Codegen.ofNullable(versionTargets);
             return this;
         }
         public Builder versionTargets(InstanceGroupManagerStatusVersionTargetArgs... versionTargets) {

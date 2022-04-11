@@ -10,6 +10,7 @@ import io.pulumi.azurenative.servicefabric.inputs.SettingsSectionDescriptionArgs
 import io.pulumi.azurenative.servicefabric.inputs.SkuArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +31,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> addonFeatures;
 
     public Output<List<String>> getAddonFeatures() {
-        return this.addonFeatures == null ? Output.empty() : this.addonFeatures;
+        return this.addonFeatures == null ? Codegen.empty() : this.addonFeatures;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> adminPassword;
 
     public Output<String> getAdminPassword() {
-        return this.adminPassword == null ? Output.empty() : this.adminPassword;
+        return this.adminPassword == null ? Codegen.empty() : this.adminPassword;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AzureActiveDirectoryArgs> azureActiveDirectory;
 
     public Output<AzureActiveDirectoryArgs> getAzureActiveDirectory() {
-        return this.azureActiveDirectory == null ? Output.empty() : this.azureActiveDirectory;
+        return this.azureActiveDirectory == null ? Codegen.empty() : this.azureActiveDirectory;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> clientConnectionPort;
 
     public Output<Integer> getClientConnectionPort() {
-        return this.clientConnectionPort == null ? Output.empty() : this.clientConnectionPort;
+        return this.clientConnectionPort == null ? Codegen.empty() : this.clientConnectionPort;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ClientCertificateArgs>> clients;
 
     public Output<List<ClientCertificateArgs>> getClients() {
-        return this.clients == null ? Output.empty() : this.clients;
+        return this.clients == null ? Codegen.empty() : this.clients;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> clusterCodeVersion;
 
     public Output<String> getClusterCodeVersion() {
-        return this.clusterCodeVersion == null ? Output.empty() : this.clusterCodeVersion;
+        return this.clusterCodeVersion == null ? Codegen.empty() : this.clusterCodeVersion;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> clusterName;
 
     public Output<String> getClusterName() {
-        return this.clusterName == null ? Output.empty() : this.clusterName;
+        return this.clusterName == null ? Codegen.empty() : this.clusterName;
     }
 
     /**
@@ -129,7 +130,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<SettingsSectionDescriptionArgs>> fabricSettings;
 
     public Output<List<SettingsSectionDescriptionArgs>> getFabricSettings() {
-        return this.fabricSettings == null ? Output.empty() : this.fabricSettings;
+        return this.fabricSettings == null ? Codegen.empty() : this.fabricSettings;
     }
 
     /**
@@ -140,7 +141,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> httpGatewayConnectionPort;
 
     public Output<Integer> getHttpGatewayConnectionPort() {
-        return this.httpGatewayConnectionPort == null ? Output.empty() : this.httpGatewayConnectionPort;
+        return this.httpGatewayConnectionPort == null ? Codegen.empty() : this.httpGatewayConnectionPort;
     }
 
     /**
@@ -151,7 +152,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<LoadBalancingRuleArgs>> loadBalancingRules;
 
     public Output<List<LoadBalancingRuleArgs>> getLoadBalancingRules() {
-        return this.loadBalancingRules == null ? Output.empty() : this.loadBalancingRules;
+        return this.loadBalancingRules == null ? Codegen.empty() : this.loadBalancingRules;
     }
 
     /**
@@ -162,7 +163,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -184,7 +185,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -195,7 +196,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ManagedClusterArgs(
@@ -219,13 +220,13 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
         this.adminPassword = adminPassword;
         this.adminUserName = Objects.requireNonNull(adminUserName, "expected parameter 'adminUserName' to be non-null");
         this.azureActiveDirectory = azureActiveDirectory;
-        this.clientConnectionPort = clientConnectionPort == null ? Output.ofNullable(19000) : clientConnectionPort;
+        this.clientConnectionPort = clientConnectionPort == null ? Codegen.ofNullable(19000) : clientConnectionPort;
         this.clients = clients;
         this.clusterCodeVersion = clusterCodeVersion;
         this.clusterName = clusterName;
         this.dnsName = Objects.requireNonNull(dnsName, "expected parameter 'dnsName' to be non-null");
         this.fabricSettings = fabricSettings;
-        this.httpGatewayConnectionPort = httpGatewayConnectionPort == null ? Output.ofNullable(19080) : httpGatewayConnectionPort;
+        this.httpGatewayConnectionPort = httpGatewayConnectionPort == null ? Codegen.ofNullable(19080) : httpGatewayConnectionPort;
         this.loadBalancingRules = loadBalancingRules;
         this.location = location;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -234,22 +235,22 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ManagedClusterArgs() {
-        this.addonFeatures = Output.empty();
-        this.adminPassword = Output.empty();
-        this.adminUserName = Output.empty();
-        this.azureActiveDirectory = Output.empty();
-        this.clientConnectionPort = Output.empty();
-        this.clients = Output.empty();
-        this.clusterCodeVersion = Output.empty();
-        this.clusterName = Output.empty();
-        this.dnsName = Output.empty();
-        this.fabricSettings = Output.empty();
-        this.httpGatewayConnectionPort = Output.empty();
-        this.loadBalancingRules = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
+        this.addonFeatures = Codegen.empty();
+        this.adminPassword = Codegen.empty();
+        this.adminUserName = Codegen.empty();
+        this.azureActiveDirectory = Codegen.empty();
+        this.clientConnectionPort = Codegen.empty();
+        this.clients = Codegen.empty();
+        this.clusterCodeVersion = Codegen.empty();
+        this.clusterName = Codegen.empty();
+        this.dnsName = Codegen.empty();
+        this.fabricSettings = Codegen.empty();
+        this.httpGatewayConnectionPort = Codegen.empty();
+        this.loadBalancingRules = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -307,7 +308,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder addonFeatures(@Nullable List<String> addonFeatures) {
-            this.addonFeatures = Output.ofNullable(addonFeatures);
+            this.addonFeatures = Codegen.ofNullable(addonFeatures);
             return this;
         }
         public Builder addonFeatures(String... addonFeatures) {
@@ -318,7 +319,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder adminPassword(@Nullable String adminPassword) {
-            this.adminPassword = Output.ofNullable(adminPassword);
+            this.adminPassword = Codegen.ofNullable(adminPassword);
             return this;
         }
         public Builder adminUserName(Output<String> adminUserName) {
@@ -334,7 +335,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder azureActiveDirectory(@Nullable AzureActiveDirectoryArgs azureActiveDirectory) {
-            this.azureActiveDirectory = Output.ofNullable(azureActiveDirectory);
+            this.azureActiveDirectory = Codegen.ofNullable(azureActiveDirectory);
             return this;
         }
         public Builder clientConnectionPort(@Nullable Output<Integer> clientConnectionPort) {
@@ -342,7 +343,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientConnectionPort(@Nullable Integer clientConnectionPort) {
-            this.clientConnectionPort = Output.ofNullable(clientConnectionPort);
+            this.clientConnectionPort = Codegen.ofNullable(clientConnectionPort);
             return this;
         }
         public Builder clients(@Nullable Output<List<ClientCertificateArgs>> clients) {
@@ -350,7 +351,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clients(@Nullable List<ClientCertificateArgs> clients) {
-            this.clients = Output.ofNullable(clients);
+            this.clients = Codegen.ofNullable(clients);
             return this;
         }
         public Builder clients(ClientCertificateArgs... clients) {
@@ -361,7 +362,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterCodeVersion(@Nullable String clusterCodeVersion) {
-            this.clusterCodeVersion = Output.ofNullable(clusterCodeVersion);
+            this.clusterCodeVersion = Codegen.ofNullable(clusterCodeVersion);
             return this;
         }
         public Builder clusterName(@Nullable Output<String> clusterName) {
@@ -369,7 +370,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Output.ofNullable(clusterName);
+            this.clusterName = Codegen.ofNullable(clusterName);
             return this;
         }
         public Builder dnsName(Output<String> dnsName) {
@@ -385,7 +386,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fabricSettings(@Nullable List<SettingsSectionDescriptionArgs> fabricSettings) {
-            this.fabricSettings = Output.ofNullable(fabricSettings);
+            this.fabricSettings = Codegen.ofNullable(fabricSettings);
             return this;
         }
         public Builder fabricSettings(SettingsSectionDescriptionArgs... fabricSettings) {
@@ -396,7 +397,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder httpGatewayConnectionPort(@Nullable Integer httpGatewayConnectionPort) {
-            this.httpGatewayConnectionPort = Output.ofNullable(httpGatewayConnectionPort);
+            this.httpGatewayConnectionPort = Codegen.ofNullable(httpGatewayConnectionPort);
             return this;
         }
         public Builder loadBalancingRules(@Nullable Output<List<LoadBalancingRuleArgs>> loadBalancingRules) {
@@ -404,7 +405,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder loadBalancingRules(@Nullable List<LoadBalancingRuleArgs> loadBalancingRules) {
-            this.loadBalancingRules = Output.ofNullable(loadBalancingRules);
+            this.loadBalancingRules = Codegen.ofNullable(loadBalancingRules);
             return this;
         }
         public Builder loadBalancingRules(LoadBalancingRuleArgs... loadBalancingRules) {
@@ -415,7 +416,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -431,7 +432,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -439,7 +440,7 @@ public final class ManagedClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ManagedClusterArgs build() {
             return new ManagedClusterArgs(addonFeatures, adminPassword, adminUserName, azureActiveDirectory, clientConnectionPort, clients, clusterCodeVersion, clusterName, dnsName, fabricSettings, httpGatewayConnectionPort, loadBalancingRules, location, resourceGroupName, sku, tags);

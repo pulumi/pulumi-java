@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1PropertyArgs;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GoogleCloudApigeeV1PropertiesArgs extends io.pulumi.resources
       private final @Nullable Output<List<GoogleCloudApigeeV1PropertyArgs>> property;
 
     public Output<List<GoogleCloudApigeeV1PropertyArgs>> getProperty() {
-        return this.property == null ? Output.empty() : this.property;
+        return this.property == null ? Codegen.empty() : this.property;
     }
 
     public GoogleCloudApigeeV1PropertiesArgs(@Nullable Output<List<GoogleCloudApigeeV1PropertyArgs>> property) {
@@ -35,7 +36,7 @@ public final class GoogleCloudApigeeV1PropertiesArgs extends io.pulumi.resources
     }
 
     private GoogleCloudApigeeV1PropertiesArgs() {
-        this.property = Output.empty();
+        this.property = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class GoogleCloudApigeeV1PropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder property(@Nullable List<GoogleCloudApigeeV1PropertyArgs> property) {
-            this.property = Output.ofNullable(property);
+            this.property = Codegen.ofNullable(property);
             return this;
         }
         public Builder property(GoogleCloudApigeeV1PropertyArgs... property) {

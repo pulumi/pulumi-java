@@ -7,6 +7,7 @@ import io.pulumi.aws.imagebuilder.inputs.ImageRecipeBlockDeviceMappingGetArgs;
 import io.pulumi.aws.imagebuilder.inputs.ImageRecipeComponentGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +27,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ImageRecipeBlockDeviceMappingGetArgs>> blockDeviceMappings;
 
     public Output<List<ImageRecipeBlockDeviceMappingGetArgs>> getBlockDeviceMappings() {
-        return this.blockDeviceMappings == null ? Output.empty() : this.blockDeviceMappings;
+        return this.blockDeviceMappings == null ? Codegen.empty() : this.blockDeviceMappings;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ImageRecipeComponentGetArgs>> components;
 
     public Output<List<ImageRecipeComponentGetArgs>> getComponents() {
-        return this.components == null ? Output.empty() : this.components;
+        return this.components == null ? Codegen.empty() : this.components;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> dateCreated;
 
     public Output<String> getDateCreated() {
-        return this.dateCreated == null ? Output.empty() : this.dateCreated;
+        return this.dateCreated == null ? Codegen.empty() : this.dateCreated;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> owner;
 
     public Output<String> getOwner() {
-        return this.owner == null ? Output.empty() : this.owner;
+        return this.owner == null ? Codegen.empty() : this.owner;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> parentImage;
 
     public Output<String> getParentImage() {
-        return this.parentImage == null ? Output.empty() : this.parentImage;
+        return this.parentImage == null ? Codegen.empty() : this.parentImage;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> platform;
 
     public Output<String> getPlatform() {
-        return this.platform == null ? Output.empty() : this.platform;
+        return this.platform == null ? Codegen.empty() : this.platform;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> userDataBase64;
 
     public Output<String> getUserDataBase64() {
-        return this.userDataBase64 == null ? Output.empty() : this.userDataBase64;
+        return this.userDataBase64 == null ? Codegen.empty() : this.userDataBase64;
     }
 
     /**
@@ -158,7 +159,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     /**
@@ -169,7 +170,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> workingDirectory;
 
     public Output<String> getWorkingDirectory() {
-        return this.workingDirectory == null ? Output.empty() : this.workingDirectory;
+        return this.workingDirectory == null ? Codegen.empty() : this.workingDirectory;
     }
 
     public ImageRecipeState(
@@ -204,20 +205,20 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ImageRecipeState() {
-        this.arn = Output.empty();
-        this.blockDeviceMappings = Output.empty();
-        this.components = Output.empty();
-        this.dateCreated = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.owner = Output.empty();
-        this.parentImage = Output.empty();
-        this.platform = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.userDataBase64 = Output.empty();
-        this.version = Output.empty();
-        this.workingDirectory = Output.empty();
+        this.arn = Codegen.empty();
+        this.blockDeviceMappings = Codegen.empty();
+        this.components = Codegen.empty();
+        this.dateCreated = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.owner = Codegen.empty();
+        this.parentImage = Codegen.empty();
+        this.platform = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.userDataBase64 = Codegen.empty();
+        this.version = Codegen.empty();
+        this.workingDirectory = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -271,7 +272,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder blockDeviceMappings(@Nullable Output<List<ImageRecipeBlockDeviceMappingGetArgs>> blockDeviceMappings) {
@@ -279,7 +280,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder blockDeviceMappings(@Nullable List<ImageRecipeBlockDeviceMappingGetArgs> blockDeviceMappings) {
-            this.blockDeviceMappings = Output.ofNullable(blockDeviceMappings);
+            this.blockDeviceMappings = Codegen.ofNullable(blockDeviceMappings);
             return this;
         }
         public Builder blockDeviceMappings(ImageRecipeBlockDeviceMappingGetArgs... blockDeviceMappings) {
@@ -290,7 +291,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder components(@Nullable List<ImageRecipeComponentGetArgs> components) {
-            this.components = Output.ofNullable(components);
+            this.components = Codegen.ofNullable(components);
             return this;
         }
         public Builder components(ImageRecipeComponentGetArgs... components) {
@@ -301,7 +302,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dateCreated(@Nullable String dateCreated) {
-            this.dateCreated = Output.ofNullable(dateCreated);
+            this.dateCreated = Codegen.ofNullable(dateCreated);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -309,7 +310,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -317,7 +318,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder owner(@Nullable Output<String> owner) {
@@ -325,7 +326,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder owner(@Nullable String owner) {
-            this.owner = Output.ofNullable(owner);
+            this.owner = Codegen.ofNullable(owner);
             return this;
         }
         public Builder parentImage(@Nullable Output<String> parentImage) {
@@ -333,7 +334,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parentImage(@Nullable String parentImage) {
-            this.parentImage = Output.ofNullable(parentImage);
+            this.parentImage = Codegen.ofNullable(parentImage);
             return this;
         }
         public Builder platform(@Nullable Output<String> platform) {
@@ -341,7 +342,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder platform(@Nullable String platform) {
-            this.platform = Output.ofNullable(platform);
+            this.platform = Codegen.ofNullable(platform);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -349,7 +350,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -357,7 +358,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder userDataBase64(@Nullable Output<String> userDataBase64) {
@@ -365,7 +366,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userDataBase64(@Nullable String userDataBase64) {
-            this.userDataBase64 = Output.ofNullable(userDataBase64);
+            this.userDataBase64 = Codegen.ofNullable(userDataBase64);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -373,7 +374,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }
         public Builder workingDirectory(@Nullable Output<String> workingDirectory) {
@@ -381,7 +382,7 @@ public final class ImageRecipeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workingDirectory(@Nullable String workingDirectory) {
-            this.workingDirectory = Output.ofNullable(workingDirectory);
+            this.workingDirectory = Codegen.ofNullable(workingDirectory);
             return this;
         }        public ImageRecipeState build() {
             return new ImageRecipeState(arn, blockDeviceMappings, components, dateCreated, description, name, owner, parentImage, platform, tags, tagsAll, userDataBase64, version, workingDirectory);

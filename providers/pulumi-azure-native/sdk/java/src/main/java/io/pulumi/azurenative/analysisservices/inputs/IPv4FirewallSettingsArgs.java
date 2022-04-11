@@ -6,6 +6,7 @@ package io.pulumi.azurenative.analysisservices.inputs;
 import io.pulumi.azurenative.analysisservices.inputs.IPv4FirewallRuleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class IPv4FirewallSettingsArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> enablePowerBIService;
 
     public Output<Boolean> getEnablePowerBIService() {
-        return this.enablePowerBIService == null ? Output.empty() : this.enablePowerBIService;
+        return this.enablePowerBIService == null ? Codegen.empty() : this.enablePowerBIService;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class IPv4FirewallSettingsArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<IPv4FirewallRuleArgs>> firewallRules;
 
     public Output<List<IPv4FirewallRuleArgs>> getFirewallRules() {
-        return this.firewallRules == null ? Output.empty() : this.firewallRules;
+        return this.firewallRules == null ? Codegen.empty() : this.firewallRules;
     }
 
     public IPv4FirewallSettingsArgs(
@@ -50,8 +51,8 @@ public final class IPv4FirewallSettingsArgs extends io.pulumi.resources.Resource
     }
 
     private IPv4FirewallSettingsArgs() {
-        this.enablePowerBIService = Output.empty();
-        this.firewallRules = Output.empty();
+        this.enablePowerBIService = Codegen.empty();
+        this.firewallRules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class IPv4FirewallSettingsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder enablePowerBIService(@Nullable Boolean enablePowerBIService) {
-            this.enablePowerBIService = Output.ofNullable(enablePowerBIService);
+            this.enablePowerBIService = Codegen.ofNullable(enablePowerBIService);
             return this;
         }
         public Builder firewallRules(@Nullable Output<List<IPv4FirewallRuleArgs>> firewallRules) {
@@ -89,7 +90,7 @@ public final class IPv4FirewallSettingsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder firewallRules(@Nullable List<IPv4FirewallRuleArgs> firewallRules) {
-            this.firewallRules = Output.ofNullable(firewallRules);
+            this.firewallRules = Codegen.ofNullable(firewallRules);
             return this;
         }
         public Builder firewallRules(IPv4FirewallRuleArgs... firewallRules) {

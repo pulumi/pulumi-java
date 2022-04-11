@@ -6,6 +6,7 @@ package io.pulumi.aws.waf;
 import io.pulumi.aws.waf.inputs.IpSetIpSetDescriptorArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class IpSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<IpSetIpSetDescriptorArgs>> ipSetDescriptors;
 
     public Output<List<IpSetIpSetDescriptorArgs>> getIpSetDescriptors() {
-        return this.ipSetDescriptors == null ? Output.empty() : this.ipSetDescriptors;
+        return this.ipSetDescriptors == null ? Codegen.empty() : this.ipSetDescriptors;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class IpSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public IpSetArgs(
@@ -46,8 +47,8 @@ public final class IpSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IpSetArgs() {
-        this.ipSetDescriptors = Output.empty();
-        this.name = Output.empty();
+        this.ipSetDescriptors = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class IpSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipSetDescriptors(@Nullable List<IpSetIpSetDescriptorArgs> ipSetDescriptors) {
-            this.ipSetDescriptors = Output.ofNullable(ipSetDescriptors);
+            this.ipSetDescriptors = Codegen.ofNullable(ipSetDescriptors);
             return this;
         }
         public Builder ipSetDescriptors(IpSetIpSetDescriptorArgs... ipSetDescriptors) {
@@ -88,7 +89,7 @@ public final class IpSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public IpSetArgs build() {
             return new IpSetArgs(ipSetDescriptors, name);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -55,7 +56,7 @@ public final class NotificationRecipientUserArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> userId;
 
     public Output<String> getUserId() {
-        return this.userId == null ? Output.empty() : this.userId;
+        return this.userId == null ? Codegen.empty() : this.userId;
     }
 
     public NotificationRecipientUserArgs(
@@ -70,10 +71,10 @@ public final class NotificationRecipientUserArgs extends io.pulumi.resources.Res
     }
 
     private NotificationRecipientUserArgs() {
-        this.notificationName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
-        this.userId = Output.empty();
+        this.notificationName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.userId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class NotificationRecipientUserArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder userId(@Nullable String userId) {
-            this.userId = Output.ofNullable(userId);
+            this.userId = Codegen.ofNullable(userId);
             return this;
         }        public NotificationRecipientUserArgs build() {
             return new NotificationRecipientUserArgs(notificationName, resourceGroupName, serviceName, userId);

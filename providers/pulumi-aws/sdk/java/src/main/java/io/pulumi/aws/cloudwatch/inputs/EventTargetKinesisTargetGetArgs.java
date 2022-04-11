@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class EventTargetKinesisTargetGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> partitionKeyPath;
 
     public Output<String> getPartitionKeyPath() {
-        return this.partitionKeyPath == null ? Output.empty() : this.partitionKeyPath;
+        return this.partitionKeyPath == null ? Codegen.empty() : this.partitionKeyPath;
     }
 
     public EventTargetKinesisTargetGetArgs(@Nullable Output<String> partitionKeyPath) {
@@ -30,7 +31,7 @@ public final class EventTargetKinesisTargetGetArgs extends io.pulumi.resources.R
     }
 
     private EventTargetKinesisTargetGetArgs() {
-        this.partitionKeyPath = Output.empty();
+        this.partitionKeyPath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class EventTargetKinesisTargetGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder partitionKeyPath(@Nullable String partitionKeyPath) {
-            this.partitionKeyPath = Output.ofNullable(partitionKeyPath);
+            this.partitionKeyPath = Codegen.ofNullable(partitionKeyPath);
             return this;
         }        public EventTargetKinesisTargetGetArgs build() {
             return new EventTargetKinesisTargetGetArgs(partitionKeyPath);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class GoogleCloudDialogflowCxV3beta1VersionVariantsVariantArgs exte
       private final @Nullable Output<Boolean> isControlGroup;
 
     public Output<Boolean> getIsControlGroup() {
-        return this.isControlGroup == null ? Output.empty() : this.isControlGroup;
+        return this.isControlGroup == null ? Codegen.empty() : this.isControlGroup;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class GoogleCloudDialogflowCxV3beta1VersionVariantsVariantArgs exte
       private final @Nullable Output<Double> trafficAllocation;
 
     public Output<Double> getTrafficAllocation() {
-        return this.trafficAllocation == null ? Output.empty() : this.trafficAllocation;
+        return this.trafficAllocation == null ? Codegen.empty() : this.trafficAllocation;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class GoogleCloudDialogflowCxV3beta1VersionVariantsVariantArgs exte
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public GoogleCloudDialogflowCxV3beta1VersionVariantsVariantArgs(
@@ -63,9 +64,9 @@ public final class GoogleCloudDialogflowCxV3beta1VersionVariantsVariantArgs exte
     }
 
     private GoogleCloudDialogflowCxV3beta1VersionVariantsVariantArgs() {
-        this.isControlGroup = Output.empty();
-        this.trafficAllocation = Output.empty();
-        this.version = Output.empty();
+        this.isControlGroup = Codegen.empty();
+        this.trafficAllocation = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class GoogleCloudDialogflowCxV3beta1VersionVariantsVariantArgs exte
             return this;
         }
         public Builder isControlGroup(@Nullable Boolean isControlGroup) {
-            this.isControlGroup = Output.ofNullable(isControlGroup);
+            this.isControlGroup = Codegen.ofNullable(isControlGroup);
             return this;
         }
         public Builder trafficAllocation(@Nullable Output<Double> trafficAllocation) {
@@ -105,7 +106,7 @@ public final class GoogleCloudDialogflowCxV3beta1VersionVariantsVariantArgs exte
             return this;
         }
         public Builder trafficAllocation(@Nullable Double trafficAllocation) {
-            this.trafficAllocation = Output.ofNullable(trafficAllocation);
+            this.trafficAllocation = Codegen.ofNullable(trafficAllocation);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -113,7 +114,7 @@ public final class GoogleCloudDialogflowCxV3beta1VersionVariantsVariantArgs exte
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public GoogleCloudDialogflowCxV3beta1VersionVariantsVariantArgs build() {
             return new GoogleCloudDialogflowCxV3beta1VersionVariantsVariantArgs(isControlGroup, trafficAllocation, version);

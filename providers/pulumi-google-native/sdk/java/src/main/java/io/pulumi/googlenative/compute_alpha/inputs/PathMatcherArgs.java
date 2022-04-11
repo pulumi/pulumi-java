@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.inputs.HttpHeaderActionArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.HttpRedirectActionArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.HttpRouteActionArgs;
@@ -32,7 +33,7 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<HttpRouteActionArgs> defaultRouteAction;
 
     public Output<HttpRouteActionArgs> getDefaultRouteAction() {
-        return this.defaultRouteAction == null ? Output.empty() : this.defaultRouteAction;
+        return this.defaultRouteAction == null ? Codegen.empty() : this.defaultRouteAction;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> defaultService;
 
     public Output<String> getDefaultService() {
-        return this.defaultService == null ? Output.empty() : this.defaultService;
+        return this.defaultService == null ? Codegen.empty() : this.defaultService;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<HttpRedirectActionArgs> defaultUrlRedirect;
 
     public Output<HttpRedirectActionArgs> getDefaultUrlRedirect() {
-        return this.defaultUrlRedirect == null ? Output.empty() : this.defaultUrlRedirect;
+        return this.defaultUrlRedirect == null ? Codegen.empty() : this.defaultUrlRedirect;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<HttpHeaderActionArgs> headerAction;
 
     public Output<HttpHeaderActionArgs> getHeaderAction() {
-        return this.headerAction == null ? Output.empty() : this.headerAction;
+        return this.headerAction == null ? Codegen.empty() : this.headerAction;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -98,7 +99,7 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<PathRuleArgs>> pathRules;
 
     public Output<List<PathRuleArgs>> getPathRules() {
-        return this.pathRules == null ? Output.empty() : this.pathRules;
+        return this.pathRules == null ? Codegen.empty() : this.pathRules;
     }
 
     /**
@@ -109,7 +110,7 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<HttpRouteRuleArgs>> routeRules;
 
     public Output<List<HttpRouteRuleArgs>> getRouteRules() {
-        return this.routeRules == null ? Output.empty() : this.routeRules;
+        return this.routeRules == null ? Codegen.empty() : this.routeRules;
     }
 
     public PathMatcherArgs(
@@ -132,14 +133,14 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PathMatcherArgs() {
-        this.defaultRouteAction = Output.empty();
-        this.defaultService = Output.empty();
-        this.defaultUrlRedirect = Output.empty();
-        this.description = Output.empty();
-        this.headerAction = Output.empty();
-        this.name = Output.empty();
-        this.pathRules = Output.empty();
-        this.routeRules = Output.empty();
+        this.defaultRouteAction = Codegen.empty();
+        this.defaultService = Codegen.empty();
+        this.defaultUrlRedirect = Codegen.empty();
+        this.description = Codegen.empty();
+        this.headerAction = Codegen.empty();
+        this.name = Codegen.empty();
+        this.pathRules = Codegen.empty();
+        this.routeRules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -181,7 +182,7 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultRouteAction(@Nullable HttpRouteActionArgs defaultRouteAction) {
-            this.defaultRouteAction = Output.ofNullable(defaultRouteAction);
+            this.defaultRouteAction = Codegen.ofNullable(defaultRouteAction);
             return this;
         }
         public Builder defaultService(@Nullable Output<String> defaultService) {
@@ -189,7 +190,7 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultService(@Nullable String defaultService) {
-            this.defaultService = Output.ofNullable(defaultService);
+            this.defaultService = Codegen.ofNullable(defaultService);
             return this;
         }
         public Builder defaultUrlRedirect(@Nullable Output<HttpRedirectActionArgs> defaultUrlRedirect) {
@@ -197,7 +198,7 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultUrlRedirect(@Nullable HttpRedirectActionArgs defaultUrlRedirect) {
-            this.defaultUrlRedirect = Output.ofNullable(defaultUrlRedirect);
+            this.defaultUrlRedirect = Codegen.ofNullable(defaultUrlRedirect);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -205,7 +206,7 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder headerAction(@Nullable Output<HttpHeaderActionArgs> headerAction) {
@@ -213,7 +214,7 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder headerAction(@Nullable HttpHeaderActionArgs headerAction) {
-            this.headerAction = Output.ofNullable(headerAction);
+            this.headerAction = Codegen.ofNullable(headerAction);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -221,7 +222,7 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder pathRules(@Nullable Output<List<PathRuleArgs>> pathRules) {
@@ -229,7 +230,7 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pathRules(@Nullable List<PathRuleArgs> pathRules) {
-            this.pathRules = Output.ofNullable(pathRules);
+            this.pathRules = Codegen.ofNullable(pathRules);
             return this;
         }
         public Builder pathRules(PathRuleArgs... pathRules) {
@@ -240,7 +241,7 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder routeRules(@Nullable List<HttpRouteRuleArgs> routeRules) {
-            this.routeRules = Output.ofNullable(routeRules);
+            this.routeRules = Codegen.ofNullable(routeRules);
             return this;
         }
         public Builder routeRules(HttpRouteRuleArgs... routeRules) {

@@ -10,6 +10,7 @@ import io.pulumi.aws.transfer.outputs.ServerEndpointDetails;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -331,7 +332,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Server(String name, @Nullable ServerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:transfer/server:Server", name, args == null ? ServerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:transfer/server:Server", name, args == null ? ServerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Server(String name, Output<String> id, @Nullable ServerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

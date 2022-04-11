@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ecr.inputs;
 import io.pulumi.awsnative.ecr.enums.ReplicationConfigurationFilterType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -40,8 +41,8 @@ public final class ReplicationConfigurationRepositoryFilterArgs extends io.pulum
     }
 
     private ReplicationConfigurationRepositoryFilterArgs() {
-        this.filter = Output.empty();
-        this.filterType = Output.empty();
+        this.filter = Codegen.empty();
+        this.filterType = Codegen.empty();
     }
 
     public static Builder builder() {

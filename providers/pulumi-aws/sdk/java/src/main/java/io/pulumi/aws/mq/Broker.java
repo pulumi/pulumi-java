@@ -16,6 +16,7 @@ import io.pulumi.aws.mq.outputs.BrokerUser;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -397,7 +398,7 @@ public class Broker extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Broker(String name, BrokerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:mq/broker:Broker", name, args == null ? BrokerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:mq/broker:Broker", name, args == null ? BrokerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Broker(String name, Output<String> id, @Nullable BrokerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

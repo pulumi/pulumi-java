@@ -9,6 +9,7 @@ import io.pulumi.azurenative.insights.inputs.ApplicationInsightsComponentAnalyti
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
-        return this.content == null ? Output.empty() : this.content;
+        return this.content == null ? Codegen.empty() : this.content;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> overrideItem;
 
     public Output<Boolean> getOverrideItem() {
-        return this.overrideItem == null ? Output.empty() : this.overrideItem;
+        return this.overrideItem == null ? Codegen.empty() : this.overrideItem;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> properties;
 
     public Output<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,ItemScope>> scope;
 
     public Output<Either<String,ItemScope>> getScope() {
-        return this.scope == null ? Output.empty() : this.scope;
+        return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     /**
@@ -126,7 +127,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,ItemType>> type;
 
     public Output<Either<String,ItemType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public AnalyticsItemArgs(
@@ -153,16 +154,16 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AnalyticsItemArgs() {
-        this.content = Output.empty();
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.overrideItem = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
-        this.scope = Output.empty();
-        this.scopePath = Output.empty();
-        this.type = Output.empty();
+        this.content = Codegen.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.overrideItem = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.scope = Codegen.empty();
+        this.scopePath = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -208,7 +209,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder content(@Nullable String content) {
-            this.content = Output.ofNullable(content);
+            this.content = Codegen.ofNullable(content);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -216,7 +217,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -224,7 +225,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder overrideItem(@Nullable Output<Boolean> overrideItem) {
@@ -232,7 +233,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder overrideItem(@Nullable Boolean overrideItem) {
-            this.overrideItem = Output.ofNullable(overrideItem);
+            this.overrideItem = Codegen.ofNullable(overrideItem);
             return this;
         }
         public Builder properties(@Nullable Output<ApplicationInsightsComponentAnalyticsItemPropertiesArgs> properties) {
@@ -240,7 +241,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable ApplicationInsightsComponentAnalyticsItemPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -264,7 +265,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scope(@Nullable Either<String,ItemScope> scope) {
-            this.scope = Output.ofNullable(scope);
+            this.scope = Codegen.ofNullable(scope);
             return this;
         }
         public Builder scopePath(Output<String> scopePath) {
@@ -280,7 +281,7 @@ public final class AnalyticsItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable Either<String,ItemType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public AnalyticsItemArgs build() {
             return new AnalyticsItemArgs(content, id, name, overrideItem, properties, resourceGroupName, resourceName, scope, scopePath, type);

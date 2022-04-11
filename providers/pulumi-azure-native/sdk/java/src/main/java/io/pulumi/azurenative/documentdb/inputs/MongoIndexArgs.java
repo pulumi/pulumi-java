@@ -7,6 +7,7 @@ import io.pulumi.azurenative.documentdb.inputs.MongoIndexKeysArgs;
 import io.pulumi.azurenative.documentdb.inputs.MongoIndexOptionsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -27,7 +28,7 @@ public final class MongoIndexArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<MongoIndexKeysArgs> key;
 
     public Output<MongoIndexKeysArgs> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class MongoIndexArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<MongoIndexOptionsArgs> options;
 
     public Output<MongoIndexOptionsArgs> getOptions() {
-        return this.options == null ? Output.empty() : this.options;
+        return this.options == null ? Codegen.empty() : this.options;
     }
 
     public MongoIndexArgs(
@@ -49,8 +50,8 @@ public final class MongoIndexArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MongoIndexArgs() {
-        this.key = Output.empty();
-        this.options = Output.empty();
+        this.key = Codegen.empty();
+        this.options = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class MongoIndexArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder key(@Nullable MongoIndexKeysArgs key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }
         public Builder options(@Nullable Output<MongoIndexOptionsArgs> options) {
@@ -88,7 +89,7 @@ public final class MongoIndexArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder options(@Nullable MongoIndexOptionsArgs options) {
-            this.options = Output.ofNullable(options);
+            this.options = Codegen.ofNullable(options);
             return this;
         }        public MongoIndexArgs build() {
             return new MongoIndexArgs(key, options);

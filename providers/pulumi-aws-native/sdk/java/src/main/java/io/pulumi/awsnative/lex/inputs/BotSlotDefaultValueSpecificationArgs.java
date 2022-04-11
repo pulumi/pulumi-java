@@ -6,6 +6,7 @@ package io.pulumi.awsnative.lex.inputs;
 import io.pulumi.awsnative.lex.inputs.BotSlotDefaultValueArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -34,7 +35,7 @@ public final class BotSlotDefaultValueSpecificationArgs extends io.pulumi.resour
     }
 
     private BotSlotDefaultValueSpecificationArgs() {
-        this.defaultValueList = Output.empty();
+        this.defaultValueList = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iotevents.inputs;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelAssetPropertyValueArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class DetectorModelIotSiteWiseArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> assetId;
 
     public Output<String> getAssetId() {
-        return this.assetId == null ? Output.empty() : this.assetId;
+        return this.assetId == null ? Codegen.empty() : this.assetId;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class DetectorModelIotSiteWiseArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> entryId;
 
     public Output<String> getEntryId() {
-        return this.entryId == null ? Output.empty() : this.entryId;
+        return this.entryId == null ? Codegen.empty() : this.entryId;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class DetectorModelIotSiteWiseArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> propertyAlias;
 
     public Output<String> getPropertyAlias() {
-        return this.propertyAlias == null ? Output.empty() : this.propertyAlias;
+        return this.propertyAlias == null ? Codegen.empty() : this.propertyAlias;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class DetectorModelIotSiteWiseArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> propertyId;
 
     public Output<String> getPropertyId() {
-        return this.propertyId == null ? Output.empty() : this.propertyId;
+        return this.propertyId == null ? Codegen.empty() : this.propertyId;
     }
 
     @Import(name="propertyValue", required=true)
@@ -84,11 +85,11 @@ public final class DetectorModelIotSiteWiseArgs extends io.pulumi.resources.Reso
     }
 
     private DetectorModelIotSiteWiseArgs() {
-        this.assetId = Output.empty();
-        this.entryId = Output.empty();
-        this.propertyAlias = Output.empty();
-        this.propertyId = Output.empty();
-        this.propertyValue = Output.empty();
+        this.assetId = Codegen.empty();
+        this.entryId = Codegen.empty();
+        this.propertyAlias = Codegen.empty();
+        this.propertyId = Codegen.empty();
+        this.propertyValue = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class DetectorModelIotSiteWiseArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder assetId(@Nullable String assetId) {
-            this.assetId = Output.ofNullable(assetId);
+            this.assetId = Codegen.ofNullable(assetId);
             return this;
         }
         public Builder entryId(@Nullable Output<String> entryId) {
@@ -132,7 +133,7 @@ public final class DetectorModelIotSiteWiseArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder entryId(@Nullable String entryId) {
-            this.entryId = Output.ofNullable(entryId);
+            this.entryId = Codegen.ofNullable(entryId);
             return this;
         }
         public Builder propertyAlias(@Nullable Output<String> propertyAlias) {
@@ -140,7 +141,7 @@ public final class DetectorModelIotSiteWiseArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder propertyAlias(@Nullable String propertyAlias) {
-            this.propertyAlias = Output.ofNullable(propertyAlias);
+            this.propertyAlias = Codegen.ofNullable(propertyAlias);
             return this;
         }
         public Builder propertyId(@Nullable Output<String> propertyId) {
@@ -148,7 +149,7 @@ public final class DetectorModelIotSiteWiseArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder propertyId(@Nullable String propertyId) {
-            this.propertyId = Output.ofNullable(propertyId);
+            this.propertyId = Codegen.ofNullable(propertyId);
             return this;
         }
         public Builder propertyValue(Output<DetectorModelAssetPropertyValueArgs> propertyValue) {

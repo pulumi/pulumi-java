@@ -14,6 +14,7 @@ import io.pulumi.azurenative.compute.inputs.VirtualHardDiskArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -37,7 +38,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<CachingTypes> caching;
 
     public Output<CachingTypes> getCaching() {
-        return this.caching == null ? Output.empty() : this.caching;
+        return this.caching == null ? Codegen.empty() : this.caching;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,DiskDeleteOptionTypes>> deleteOption;
 
     public Output<Either<String,DiskDeleteOptionTypes>> getDeleteOption() {
-        return this.deleteOption == null ? Output.empty() : this.deleteOption;
+        return this.deleteOption == null ? Codegen.empty() : this.deleteOption;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DiffDiskSettingsArgs> diffDiskSettings;
 
     public Output<DiffDiskSettingsArgs> getDiffDiskSettings() {
-        return this.diffDiskSettings == null ? Output.empty() : this.diffDiskSettings;
+        return this.diffDiskSettings == null ? Codegen.empty() : this.diffDiskSettings;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> diskSizeGB;
 
     public Output<Integer> getDiskSizeGB() {
-        return this.diskSizeGB == null ? Output.empty() : this.diskSizeGB;
+        return this.diskSizeGB == null ? Codegen.empty() : this.diskSizeGB;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DiskEncryptionSettingsArgs> encryptionSettings;
 
     public Output<DiskEncryptionSettingsArgs> getEncryptionSettings() {
-        return this.encryptionSettings == null ? Output.empty() : this.encryptionSettings;
+        return this.encryptionSettings == null ? Codegen.empty() : this.encryptionSettings;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<VirtualHardDiskArgs> image;
 
     public Output<VirtualHardDiskArgs> getImage() {
-        return this.image == null ? Output.empty() : this.image;
+        return this.image == null ? Codegen.empty() : this.image;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ManagedDiskParametersArgs> managedDisk;
 
     public Output<ManagedDiskParametersArgs> getManagedDisk() {
-        return this.managedDisk == null ? Output.empty() : this.managedDisk;
+        return this.managedDisk == null ? Codegen.empty() : this.managedDisk;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<OperatingSystemTypes> osType;
 
     public Output<OperatingSystemTypes> getOsType() {
-        return this.osType == null ? Output.empty() : this.osType;
+        return this.osType == null ? Codegen.empty() : this.osType;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<VirtualHardDiskArgs> vhd;
 
     public Output<VirtualHardDiskArgs> getVhd() {
-        return this.vhd == null ? Output.empty() : this.vhd;
+        return this.vhd == null ? Codegen.empty() : this.vhd;
     }
 
     /**
@@ -158,7 +159,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> writeAcceleratorEnabled;
 
     public Output<Boolean> getWriteAcceleratorEnabled() {
-        return this.writeAcceleratorEnabled == null ? Output.empty() : this.writeAcceleratorEnabled;
+        return this.writeAcceleratorEnabled == null ? Codegen.empty() : this.writeAcceleratorEnabled;
     }
 
     public OSDiskArgs(
@@ -189,18 +190,18 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OSDiskArgs() {
-        this.caching = Output.empty();
-        this.createOption = Output.empty();
-        this.deleteOption = Output.empty();
-        this.diffDiskSettings = Output.empty();
-        this.diskSizeGB = Output.empty();
-        this.encryptionSettings = Output.empty();
-        this.image = Output.empty();
-        this.managedDisk = Output.empty();
-        this.name = Output.empty();
-        this.osType = Output.empty();
-        this.vhd = Output.empty();
-        this.writeAcceleratorEnabled = Output.empty();
+        this.caching = Codegen.empty();
+        this.createOption = Codegen.empty();
+        this.deleteOption = Codegen.empty();
+        this.diffDiskSettings = Codegen.empty();
+        this.diskSizeGB = Codegen.empty();
+        this.encryptionSettings = Codegen.empty();
+        this.image = Codegen.empty();
+        this.managedDisk = Codegen.empty();
+        this.name = Codegen.empty();
+        this.osType = Codegen.empty();
+        this.vhd = Codegen.empty();
+        this.writeAcceleratorEnabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -250,7 +251,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder caching(@Nullable CachingTypes caching) {
-            this.caching = Output.ofNullable(caching);
+            this.caching = Codegen.ofNullable(caching);
             return this;
         }
         public Builder createOption(Output<Either<String,DiskCreateOptionTypes>> createOption) {
@@ -266,7 +267,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deleteOption(@Nullable Either<String,DiskDeleteOptionTypes> deleteOption) {
-            this.deleteOption = Output.ofNullable(deleteOption);
+            this.deleteOption = Codegen.ofNullable(deleteOption);
             return this;
         }
         public Builder diffDiskSettings(@Nullable Output<DiffDiskSettingsArgs> diffDiskSettings) {
@@ -274,7 +275,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diffDiskSettings(@Nullable DiffDiskSettingsArgs diffDiskSettings) {
-            this.diffDiskSettings = Output.ofNullable(diffDiskSettings);
+            this.diffDiskSettings = Codegen.ofNullable(diffDiskSettings);
             return this;
         }
         public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
@@ -282,7 +283,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = Output.ofNullable(diskSizeGB);
+            this.diskSizeGB = Codegen.ofNullable(diskSizeGB);
             return this;
         }
         public Builder encryptionSettings(@Nullable Output<DiskEncryptionSettingsArgs> encryptionSettings) {
@@ -290,7 +291,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptionSettings(@Nullable DiskEncryptionSettingsArgs encryptionSettings) {
-            this.encryptionSettings = Output.ofNullable(encryptionSettings);
+            this.encryptionSettings = Codegen.ofNullable(encryptionSettings);
             return this;
         }
         public Builder image(@Nullable Output<VirtualHardDiskArgs> image) {
@@ -298,7 +299,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder image(@Nullable VirtualHardDiskArgs image) {
-            this.image = Output.ofNullable(image);
+            this.image = Codegen.ofNullable(image);
             return this;
         }
         public Builder managedDisk(@Nullable Output<ManagedDiskParametersArgs> managedDisk) {
@@ -306,7 +307,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder managedDisk(@Nullable ManagedDiskParametersArgs managedDisk) {
-            this.managedDisk = Output.ofNullable(managedDisk);
+            this.managedDisk = Codegen.ofNullable(managedDisk);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -314,7 +315,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder osType(@Nullable Output<OperatingSystemTypes> osType) {
@@ -322,7 +323,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder osType(@Nullable OperatingSystemTypes osType) {
-            this.osType = Output.ofNullable(osType);
+            this.osType = Codegen.ofNullable(osType);
             return this;
         }
         public Builder vhd(@Nullable Output<VirtualHardDiskArgs> vhd) {
@@ -330,7 +331,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vhd(@Nullable VirtualHardDiskArgs vhd) {
-            this.vhd = Output.ofNullable(vhd);
+            this.vhd = Codegen.ofNullable(vhd);
             return this;
         }
         public Builder writeAcceleratorEnabled(@Nullable Output<Boolean> writeAcceleratorEnabled) {
@@ -338,7 +339,7 @@ public final class OSDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder writeAcceleratorEnabled(@Nullable Boolean writeAcceleratorEnabled) {
-            this.writeAcceleratorEnabled = Output.ofNullable(writeAcceleratorEnabled);
+            this.writeAcceleratorEnabled = Codegen.ofNullable(writeAcceleratorEnabled);
             return this;
         }        public OSDiskArgs build() {
             return new OSDiskArgs(caching, createOption, deleteOption, diffDiskSettings, diskSizeGB, encryptionSettings, image, managedDisk, name, osType, vhd, writeAcceleratorEnabled);

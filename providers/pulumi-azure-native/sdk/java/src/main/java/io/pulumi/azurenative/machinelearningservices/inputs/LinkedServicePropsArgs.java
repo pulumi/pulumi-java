@@ -6,6 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 import io.pulumi.azurenative.machinelearningservices.enums.LinkedServiceLinkType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class LinkedServicePropsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> createdTime;
 
     public Output<String> getCreatedTime() {
-        return this.createdTime == null ? Output.empty() : this.createdTime;
+        return this.createdTime == null ? Codegen.empty() : this.createdTime;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class LinkedServicePropsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<LinkedServiceLinkType> linkType;
 
     public Output<LinkedServiceLinkType> getLinkType() {
-        return this.linkType == null ? Output.empty() : this.linkType;
+        return this.linkType == null ? Codegen.empty() : this.linkType;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class LinkedServicePropsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> modifiedTime;
 
     public Output<String> getModifiedTime() {
-        return this.modifiedTime == null ? Output.empty() : this.modifiedTime;
+        return this.modifiedTime == null ? Codegen.empty() : this.modifiedTime;
     }
 
     public LinkedServicePropsArgs(
@@ -75,10 +76,10 @@ public final class LinkedServicePropsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private LinkedServicePropsArgs() {
-        this.createdTime = Output.empty();
-        this.linkType = Output.empty();
-        this.linkedServiceResourceId = Output.empty();
-        this.modifiedTime = Output.empty();
+        this.createdTime = Codegen.empty();
+        this.linkType = Codegen.empty();
+        this.linkedServiceResourceId = Codegen.empty();
+        this.modifiedTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class LinkedServicePropsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Output.ofNullable(createdTime);
+            this.createdTime = Codegen.ofNullable(createdTime);
             return this;
         }
         public Builder linkType(@Nullable Output<LinkedServiceLinkType> linkType) {
@@ -120,7 +121,7 @@ public final class LinkedServicePropsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder linkType(@Nullable LinkedServiceLinkType linkType) {
-            this.linkType = Output.ofNullable(linkType);
+            this.linkType = Codegen.ofNullable(linkType);
             return this;
         }
         public Builder linkedServiceResourceId(Output<String> linkedServiceResourceId) {
@@ -136,7 +137,7 @@ public final class LinkedServicePropsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder modifiedTime(@Nullable String modifiedTime) {
-            this.modifiedTime = Output.ofNullable(modifiedTime);
+            this.modifiedTime = Codegen.ofNullable(modifiedTime);
             return this;
         }        public LinkedServicePropsArgs build() {
             return new LinkedServicePropsArgs(createdTime, linkType, linkedServiceResourceId, modifiedTime);

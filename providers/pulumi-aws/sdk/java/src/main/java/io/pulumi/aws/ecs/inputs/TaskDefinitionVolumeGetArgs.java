@@ -8,6 +8,7 @@ import io.pulumi.aws.ecs.inputs.TaskDefinitionVolumeEfsVolumeConfigurationGetArg
 import io.pulumi.aws.ecs.inputs.TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class TaskDefinitionVolumeGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<TaskDefinitionVolumeDockerVolumeConfigurationGetArgs> dockerVolumeConfiguration;
 
     public Output<TaskDefinitionVolumeDockerVolumeConfigurationGetArgs> getDockerVolumeConfiguration() {
-        return this.dockerVolumeConfiguration == null ? Output.empty() : this.dockerVolumeConfiguration;
+        return this.dockerVolumeConfiguration == null ? Codegen.empty() : this.dockerVolumeConfiguration;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class TaskDefinitionVolumeGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<TaskDefinitionVolumeEfsVolumeConfigurationGetArgs> efsVolumeConfiguration;
 
     public Output<TaskDefinitionVolumeEfsVolumeConfigurationGetArgs> getEfsVolumeConfiguration() {
-        return this.efsVolumeConfiguration == null ? Output.empty() : this.efsVolumeConfiguration;
+        return this.efsVolumeConfiguration == null ? Codegen.empty() : this.efsVolumeConfiguration;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class TaskDefinitionVolumeGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationGetArgs> fsxWindowsFileServerVolumeConfiguration;
 
     public Output<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationGetArgs> getFsxWindowsFileServerVolumeConfiguration() {
-        return this.fsxWindowsFileServerVolumeConfiguration == null ? Output.empty() : this.fsxWindowsFileServerVolumeConfiguration;
+        return this.fsxWindowsFileServerVolumeConfiguration == null ? Codegen.empty() : this.fsxWindowsFileServerVolumeConfiguration;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class TaskDefinitionVolumeGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> hostPath;
 
     public Output<String> getHostPath() {
-        return this.hostPath == null ? Output.empty() : this.hostPath;
+        return this.hostPath == null ? Codegen.empty() : this.hostPath;
     }
 
     /**
@@ -87,11 +88,11 @@ public final class TaskDefinitionVolumeGetArgs extends io.pulumi.resources.Resou
     }
 
     private TaskDefinitionVolumeGetArgs() {
-        this.dockerVolumeConfiguration = Output.empty();
-        this.efsVolumeConfiguration = Output.empty();
-        this.fsxWindowsFileServerVolumeConfiguration = Output.empty();
-        this.hostPath = Output.empty();
-        this.name = Output.empty();
+        this.dockerVolumeConfiguration = Codegen.empty();
+        this.efsVolumeConfiguration = Codegen.empty();
+        this.fsxWindowsFileServerVolumeConfiguration = Codegen.empty();
+        this.hostPath = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class TaskDefinitionVolumeGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder dockerVolumeConfiguration(@Nullable TaskDefinitionVolumeDockerVolumeConfigurationGetArgs dockerVolumeConfiguration) {
-            this.dockerVolumeConfiguration = Output.ofNullable(dockerVolumeConfiguration);
+            this.dockerVolumeConfiguration = Codegen.ofNullable(dockerVolumeConfiguration);
             return this;
         }
         public Builder efsVolumeConfiguration(@Nullable Output<TaskDefinitionVolumeEfsVolumeConfigurationGetArgs> efsVolumeConfiguration) {
@@ -135,7 +136,7 @@ public final class TaskDefinitionVolumeGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder efsVolumeConfiguration(@Nullable TaskDefinitionVolumeEfsVolumeConfigurationGetArgs efsVolumeConfiguration) {
-            this.efsVolumeConfiguration = Output.ofNullable(efsVolumeConfiguration);
+            this.efsVolumeConfiguration = Codegen.ofNullable(efsVolumeConfiguration);
             return this;
         }
         public Builder fsxWindowsFileServerVolumeConfiguration(@Nullable Output<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationGetArgs> fsxWindowsFileServerVolumeConfiguration) {
@@ -143,7 +144,7 @@ public final class TaskDefinitionVolumeGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder fsxWindowsFileServerVolumeConfiguration(@Nullable TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationGetArgs fsxWindowsFileServerVolumeConfiguration) {
-            this.fsxWindowsFileServerVolumeConfiguration = Output.ofNullable(fsxWindowsFileServerVolumeConfiguration);
+            this.fsxWindowsFileServerVolumeConfiguration = Codegen.ofNullable(fsxWindowsFileServerVolumeConfiguration);
             return this;
         }
         public Builder hostPath(@Nullable Output<String> hostPath) {
@@ -151,7 +152,7 @@ public final class TaskDefinitionVolumeGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder hostPath(@Nullable String hostPath) {
-            this.hostPath = Output.ofNullable(hostPath);
+            this.hostPath = Codegen.ofNullable(hostPath);
             return this;
         }
         public Builder name(Output<String> name) {

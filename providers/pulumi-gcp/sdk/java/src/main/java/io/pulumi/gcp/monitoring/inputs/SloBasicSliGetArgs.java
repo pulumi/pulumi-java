@@ -5,6 +5,7 @@ package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.monitoring.inputs.SloBasicSliAvailabilityGetArgs;
 import io.pulumi.gcp.monitoring.inputs.SloBasicSliLatencyGetArgs;
 import java.lang.String;
@@ -26,7 +27,7 @@ public final class SloBasicSliGetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SloBasicSliAvailabilityGetArgs> availability;
 
     public Output<SloBasicSliAvailabilityGetArgs> getAvailability() {
-        return this.availability == null ? Output.empty() : this.availability;
+        return this.availability == null ? Codegen.empty() : this.availability;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class SloBasicSliGetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SloBasicSliLatencyGetArgs> latency;
 
     public Output<SloBasicSliLatencyGetArgs> getLatency() {
-        return this.latency == null ? Output.empty() : this.latency;
+        return this.latency == null ? Codegen.empty() : this.latency;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class SloBasicSliGetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> locations;
 
     public Output<List<String>> getLocations() {
-        return this.locations == null ? Output.empty() : this.locations;
+        return this.locations == null ? Codegen.empty() : this.locations;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class SloBasicSliGetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> methods;
 
     public Output<List<String>> getMethods() {
-        return this.methods == null ? Output.empty() : this.methods;
+        return this.methods == null ? Codegen.empty() : this.methods;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class SloBasicSliGetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> versions;
 
     public Output<List<String>> getVersions() {
-        return this.versions == null ? Output.empty() : this.versions;
+        return this.versions == null ? Codegen.empty() : this.versions;
     }
 
     public SloBasicSliGetArgs(
@@ -103,11 +104,11 @@ public final class SloBasicSliGetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SloBasicSliGetArgs() {
-        this.availability = Output.empty();
-        this.latency = Output.empty();
-        this.locations = Output.empty();
-        this.methods = Output.empty();
-        this.versions = Output.empty();
+        this.availability = Codegen.empty();
+        this.latency = Codegen.empty();
+        this.locations = Codegen.empty();
+        this.methods = Codegen.empty();
+        this.versions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -143,7 +144,7 @@ public final class SloBasicSliGetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder availability(@Nullable SloBasicSliAvailabilityGetArgs availability) {
-            this.availability = Output.ofNullable(availability);
+            this.availability = Codegen.ofNullable(availability);
             return this;
         }
         public Builder latency(@Nullable Output<SloBasicSliLatencyGetArgs> latency) {
@@ -151,7 +152,7 @@ public final class SloBasicSliGetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder latency(@Nullable SloBasicSliLatencyGetArgs latency) {
-            this.latency = Output.ofNullable(latency);
+            this.latency = Codegen.ofNullable(latency);
             return this;
         }
         public Builder locations(@Nullable Output<List<String>> locations) {
@@ -159,7 +160,7 @@ public final class SloBasicSliGetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder locations(@Nullable List<String> locations) {
-            this.locations = Output.ofNullable(locations);
+            this.locations = Codegen.ofNullable(locations);
             return this;
         }
         public Builder locations(String... locations) {
@@ -170,7 +171,7 @@ public final class SloBasicSliGetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder methods(@Nullable List<String> methods) {
-            this.methods = Output.ofNullable(methods);
+            this.methods = Codegen.ofNullable(methods);
             return this;
         }
         public Builder methods(String... methods) {
@@ -181,7 +182,7 @@ public final class SloBasicSliGetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder versions(@Nullable List<String> versions) {
-            this.versions = Output.ofNullable(versions);
+            this.versions = Codegen.ofNullable(versions);
             return this;
         }
         public Builder versions(String... versions) {

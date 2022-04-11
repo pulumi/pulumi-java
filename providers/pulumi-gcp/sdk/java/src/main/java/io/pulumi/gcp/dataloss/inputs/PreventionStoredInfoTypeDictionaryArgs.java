@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeDictionaryCloudStoragePathArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeDictionaryWordListArgs;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class PreventionStoredInfoTypeDictionaryArgs extends io.pulumi.reso
       private final @Nullable Output<PreventionStoredInfoTypeDictionaryCloudStoragePathArgs> cloudStoragePath;
 
     public Output<PreventionStoredInfoTypeDictionaryCloudStoragePathArgs> getCloudStoragePath() {
-        return this.cloudStoragePath == null ? Output.empty() : this.cloudStoragePath;
+        return this.cloudStoragePath == null ? Codegen.empty() : this.cloudStoragePath;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class PreventionStoredInfoTypeDictionaryArgs extends io.pulumi.reso
       private final @Nullable Output<PreventionStoredInfoTypeDictionaryWordListArgs> wordList;
 
     public Output<PreventionStoredInfoTypeDictionaryWordListArgs> getWordList() {
-        return this.wordList == null ? Output.empty() : this.wordList;
+        return this.wordList == null ? Codegen.empty() : this.wordList;
     }
 
     public PreventionStoredInfoTypeDictionaryArgs(
@@ -47,8 +48,8 @@ public final class PreventionStoredInfoTypeDictionaryArgs extends io.pulumi.reso
     }
 
     private PreventionStoredInfoTypeDictionaryArgs() {
-        this.cloudStoragePath = Output.empty();
-        this.wordList = Output.empty();
+        this.cloudStoragePath = Codegen.empty();
+        this.wordList = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -78,7 +79,7 @@ public final class PreventionStoredInfoTypeDictionaryArgs extends io.pulumi.reso
             return this;
         }
         public Builder cloudStoragePath(@Nullable PreventionStoredInfoTypeDictionaryCloudStoragePathArgs cloudStoragePath) {
-            this.cloudStoragePath = Output.ofNullable(cloudStoragePath);
+            this.cloudStoragePath = Codegen.ofNullable(cloudStoragePath);
             return this;
         }
         public Builder wordList(@Nullable Output<PreventionStoredInfoTypeDictionaryWordListArgs> wordList) {
@@ -86,7 +87,7 @@ public final class PreventionStoredInfoTypeDictionaryArgs extends io.pulumi.reso
             return this;
         }
         public Builder wordList(@Nullable PreventionStoredInfoTypeDictionaryWordListArgs wordList) {
-            this.wordList = Output.ofNullable(wordList);
+            this.wordList = Codegen.ofNullable(wordList);
             return this;
         }        public PreventionStoredInfoTypeDictionaryArgs build() {
             return new PreventionStoredInfoTypeDictionaryArgs(cloudStoragePath, wordList);

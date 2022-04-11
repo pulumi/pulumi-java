@@ -5,6 +5,7 @@ package io.pulumi.azurenative.testbase.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class SubscriptionReceiverValueArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class SubscriptionReceiverValueArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> subscriptionId;
 
     public Output<String> getSubscriptionId() {
-        return this.subscriptionId == null ? Output.empty() : this.subscriptionId;
+        return this.subscriptionId == null ? Codegen.empty() : this.subscriptionId;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class SubscriptionReceiverValueArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> subscriptionName;
 
     public Output<String> getSubscriptionName() {
-        return this.subscriptionName == null ? Output.empty() : this.subscriptionName;
+        return this.subscriptionName == null ? Codegen.empty() : this.subscriptionName;
     }
 
     public SubscriptionReceiverValueArgs(
@@ -61,9 +62,9 @@ public final class SubscriptionReceiverValueArgs extends io.pulumi.resources.Res
     }
 
     private SubscriptionReceiverValueArgs() {
-        this.role = Output.empty();
-        this.subscriptionId = Output.empty();
-        this.subscriptionName = Output.empty();
+        this.role = Codegen.empty();
+        this.subscriptionId = Codegen.empty();
+        this.subscriptionName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class SubscriptionReceiverValueArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
@@ -103,7 +104,7 @@ public final class SubscriptionReceiverValueArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Output.ofNullable(subscriptionId);
+            this.subscriptionId = Codegen.ofNullable(subscriptionId);
             return this;
         }
         public Builder subscriptionName(@Nullable Output<String> subscriptionName) {
@@ -111,7 +112,7 @@ public final class SubscriptionReceiverValueArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder subscriptionName(@Nullable String subscriptionName) {
-            this.subscriptionName = Output.ofNullable(subscriptionName);
+            this.subscriptionName = Codegen.ofNullable(subscriptionName);
             return this;
         }        public SubscriptionReceiverValueArgs build() {
             return new SubscriptionReceiverValueArgs(role, subscriptionId, subscriptionName);

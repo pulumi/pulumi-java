@@ -8,6 +8,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.GenericContainerExtendedInf
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
     public Output<Either<String,BackupManagementType>> getBackupManagementType() {
-        return this.backupManagementType == null ? Output.empty() : this.backupManagementType;
+        return this.backupManagementType == null ? Codegen.empty() : this.backupManagementType;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<GenericContainerExtendedInfoArgs> extendedInformation;
 
     public Output<GenericContainerExtendedInfoArgs> getExtendedInformation() {
-        return this.extendedInformation == null ? Output.empty() : this.extendedInformation;
+        return this.extendedInformation == null ? Codegen.empty() : this.extendedInformation;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> fabricName;
 
     public Output<String> getFabricName() {
-        return this.fabricName == null ? Output.empty() : this.fabricName;
+        return this.fabricName == null ? Codegen.empty() : this.fabricName;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
-        return this.friendlyName == null ? Output.empty() : this.friendlyName;
+        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> healthStatus;
 
     public Output<String> getHealthStatus() {
-        return this.healthStatus == null ? Output.empty() : this.healthStatus;
+        return this.healthStatus == null ? Codegen.empty() : this.healthStatus;
     }
 
     /**
@@ -99,7 +100,7 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> registrationStatus;
 
     public Output<String> getRegistrationStatus() {
-        return this.registrationStatus == null ? Output.empty() : this.registrationStatus;
+        return this.registrationStatus == null ? Codegen.empty() : this.registrationStatus;
     }
 
     public GenericContainerArgs(
@@ -120,13 +121,13 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private GenericContainerArgs() {
-        this.backupManagementType = Output.empty();
-        this.containerType = Output.empty();
-        this.extendedInformation = Output.empty();
-        this.fabricName = Output.empty();
-        this.friendlyName = Output.empty();
-        this.healthStatus = Output.empty();
-        this.registrationStatus = Output.empty();
+        this.backupManagementType = Codegen.empty();
+        this.containerType = Codegen.empty();
+        this.extendedInformation = Codegen.empty();
+        this.fabricName = Codegen.empty();
+        this.friendlyName = Codegen.empty();
+        this.healthStatus = Codegen.empty();
+        this.registrationStatus = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -166,7 +167,7 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
-            this.backupManagementType = Output.ofNullable(backupManagementType);
+            this.backupManagementType = Codegen.ofNullable(backupManagementType);
             return this;
         }
         public Builder containerType(Output<String> containerType) {
@@ -182,7 +183,7 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder extendedInformation(@Nullable GenericContainerExtendedInfoArgs extendedInformation) {
-            this.extendedInformation = Output.ofNullable(extendedInformation);
+            this.extendedInformation = Codegen.ofNullable(extendedInformation);
             return this;
         }
         public Builder fabricName(@Nullable Output<String> fabricName) {
@@ -190,7 +191,7 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder fabricName(@Nullable String fabricName) {
-            this.fabricName = Output.ofNullable(fabricName);
+            this.fabricName = Codegen.ofNullable(fabricName);
             return this;
         }
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
@@ -198,7 +199,7 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Output.ofNullable(friendlyName);
+            this.friendlyName = Codegen.ofNullable(friendlyName);
             return this;
         }
         public Builder healthStatus(@Nullable Output<String> healthStatus) {
@@ -206,7 +207,7 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder healthStatus(@Nullable String healthStatus) {
-            this.healthStatus = Output.ofNullable(healthStatus);
+            this.healthStatus = Codegen.ofNullable(healthStatus);
             return this;
         }
         public Builder registrationStatus(@Nullable Output<String> registrationStatus) {
@@ -214,7 +215,7 @@ public final class GenericContainerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder registrationStatus(@Nullable String registrationStatus) {
-            this.registrationStatus = Output.ofNullable(registrationStatus);
+            this.registrationStatus = Codegen.ofNullable(registrationStatus);
             return this;
         }        public GenericContainerArgs build() {
             return new GenericContainerArgs(backupManagementType, containerType, extendedInformation, fabricName, friendlyName, healthStatus, registrationStatus);

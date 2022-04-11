@@ -6,6 +6,7 @@ package io.pulumi.gcp.billing;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.billing.AccountIamMemberArgs;
 import io.pulumi.gcp.billing.inputs.AccountIamMemberState;
@@ -68,7 +69,7 @@ public class AccountIamMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AccountIamMember(String name, AccountIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:billing/accountIamMember:AccountIamMember", name, args == null ? AccountIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:billing/accountIamMember:AccountIamMember", name, args == null ? AccountIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AccountIamMember(String name, Output<String> id, @Nullable AccountIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> customGpuDriverPath;
 
     public Output<String> getCustomGpuDriverPath() {
-        return this.customGpuDriverPath == null ? Output.empty() : this.customGpuDriverPath;
+        return this.customGpuDriverPath == null ? Codegen.empty() : this.customGpuDriverPath;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Boolean> enableHealthMonitoring;
 
     public Output<Boolean> getEnableHealthMonitoring() {
-        return this.enableHealthMonitoring == null ? Output.empty() : this.enableHealthMonitoring;
+        return this.enableHealthMonitoring == null ? Codegen.empty() : this.enableHealthMonitoring;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Boolean> idleShutdown;
 
     public Output<Boolean> getIdleShutdown() {
-        return this.idleShutdown == null ? Output.empty() : this.idleShutdown;
+        return this.idleShutdown == null ? Codegen.empty() : this.idleShutdown;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Integer> idleShutdownTimeout;
 
     public Output<Integer> getIdleShutdownTimeout() {
-        return this.idleShutdownTimeout == null ? Output.empty() : this.idleShutdownTimeout;
+        return this.idleShutdownTimeout == null ? Codegen.empty() : this.idleShutdownTimeout;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Boolean> installGpuDriver;
 
     public Output<Boolean> getInstallGpuDriver() {
-        return this.installGpuDriver == null ? Output.empty() : this.installGpuDriver;
+        return this.installGpuDriver == null ? Codegen.empty() : this.installGpuDriver;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> notebookUpgradeSchedule;
 
     public Output<String> getNotebookUpgradeSchedule() {
-        return this.notebookUpgradeSchedule == null ? Output.empty() : this.notebookUpgradeSchedule;
+        return this.notebookUpgradeSchedule == null ? Codegen.empty() : this.notebookUpgradeSchedule;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> postStartupScript;
 
     public Output<String> getPostStartupScript() {
-        return this.postStartupScript == null ? Output.empty() : this.postStartupScript;
+        return this.postStartupScript == null ? Codegen.empty() : this.postStartupScript;
     }
 
     public RuntimeSoftwareConfigArgs(
@@ -117,13 +118,13 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
     }
 
     private RuntimeSoftwareConfigArgs() {
-        this.customGpuDriverPath = Output.empty();
-        this.enableHealthMonitoring = Output.empty();
-        this.idleShutdown = Output.empty();
-        this.idleShutdownTimeout = Output.empty();
-        this.installGpuDriver = Output.empty();
-        this.notebookUpgradeSchedule = Output.empty();
-        this.postStartupScript = Output.empty();
+        this.customGpuDriverPath = Codegen.empty();
+        this.enableHealthMonitoring = Codegen.empty();
+        this.idleShutdown = Codegen.empty();
+        this.idleShutdownTimeout = Codegen.empty();
+        this.installGpuDriver = Codegen.empty();
+        this.notebookUpgradeSchedule = Codegen.empty();
+        this.postStartupScript = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -163,7 +164,7 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder customGpuDriverPath(@Nullable String customGpuDriverPath) {
-            this.customGpuDriverPath = Output.ofNullable(customGpuDriverPath);
+            this.customGpuDriverPath = Codegen.ofNullable(customGpuDriverPath);
             return this;
         }
         public Builder enableHealthMonitoring(@Nullable Output<Boolean> enableHealthMonitoring) {
@@ -171,7 +172,7 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder enableHealthMonitoring(@Nullable Boolean enableHealthMonitoring) {
-            this.enableHealthMonitoring = Output.ofNullable(enableHealthMonitoring);
+            this.enableHealthMonitoring = Codegen.ofNullable(enableHealthMonitoring);
             return this;
         }
         public Builder idleShutdown(@Nullable Output<Boolean> idleShutdown) {
@@ -179,7 +180,7 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder idleShutdown(@Nullable Boolean idleShutdown) {
-            this.idleShutdown = Output.ofNullable(idleShutdown);
+            this.idleShutdown = Codegen.ofNullable(idleShutdown);
             return this;
         }
         public Builder idleShutdownTimeout(@Nullable Output<Integer> idleShutdownTimeout) {
@@ -187,7 +188,7 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder idleShutdownTimeout(@Nullable Integer idleShutdownTimeout) {
-            this.idleShutdownTimeout = Output.ofNullable(idleShutdownTimeout);
+            this.idleShutdownTimeout = Codegen.ofNullable(idleShutdownTimeout);
             return this;
         }
         public Builder installGpuDriver(@Nullable Output<Boolean> installGpuDriver) {
@@ -195,7 +196,7 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder installGpuDriver(@Nullable Boolean installGpuDriver) {
-            this.installGpuDriver = Output.ofNullable(installGpuDriver);
+            this.installGpuDriver = Codegen.ofNullable(installGpuDriver);
             return this;
         }
         public Builder notebookUpgradeSchedule(@Nullable Output<String> notebookUpgradeSchedule) {
@@ -203,7 +204,7 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder notebookUpgradeSchedule(@Nullable String notebookUpgradeSchedule) {
-            this.notebookUpgradeSchedule = Output.ofNullable(notebookUpgradeSchedule);
+            this.notebookUpgradeSchedule = Codegen.ofNullable(notebookUpgradeSchedule);
             return this;
         }
         public Builder postStartupScript(@Nullable Output<String> postStartupScript) {
@@ -211,7 +212,7 @@ public final class RuntimeSoftwareConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder postStartupScript(@Nullable String postStartupScript) {
-            this.postStartupScript = Output.ofNullable(postStartupScript);
+            this.postStartupScript = Codegen.ofNullable(postStartupScript);
             return this;
         }        public RuntimeSoftwareConfigArgs build() {
             return new RuntimeSoftwareConfigArgs(customGpuDriverPath, enableHealthMonitoring, idleShutdown, idleShutdownTimeout, installGpuDriver, notebookUpgradeSchedule, postStartupScript);

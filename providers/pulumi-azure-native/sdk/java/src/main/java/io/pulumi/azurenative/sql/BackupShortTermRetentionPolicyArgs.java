@@ -5,6 +5,7 @@ package io.pulumi.azurenative.sql;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resource
       private final @Nullable Output<String> policyName;
 
     public Output<String> getPolicyName() {
-        return this.policyName == null ? Output.empty() : this.policyName;
+        return this.policyName == null ? Codegen.empty() : this.policyName;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resource
       private final @Nullable Output<Integer> retentionDays;
 
     public Output<Integer> getRetentionDays() {
-        return this.retentionDays == null ? Output.empty() : this.retentionDays;
+        return this.retentionDays == null ? Codegen.empty() : this.retentionDays;
     }
 
     /**
@@ -84,11 +85,11 @@ public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resource
     }
 
     private BackupShortTermRetentionPolicyArgs() {
-        this.databaseName = Output.empty();
-        this.policyName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.retentionDays = Output.empty();
-        this.serverName = Output.empty();
+        this.databaseName = Codegen.empty();
+        this.policyName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.retentionDays = Codegen.empty();
+        this.serverName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resource
             return this;
         }
         public Builder policyName(@Nullable String policyName) {
-            this.policyName = Output.ofNullable(policyName);
+            this.policyName = Codegen.ofNullable(policyName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -148,7 +149,7 @@ public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resource
             return this;
         }
         public Builder retentionDays(@Nullable Integer retentionDays) {
-            this.retentionDays = Output.ofNullable(retentionDays);
+            this.retentionDays = Codegen.ofNullable(retentionDays);
             return this;
         }
         public Builder serverName(Output<String> serverName) {

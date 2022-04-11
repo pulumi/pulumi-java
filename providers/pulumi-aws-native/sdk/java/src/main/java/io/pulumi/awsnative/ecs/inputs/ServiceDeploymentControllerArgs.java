@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ecs.inputs;
 import io.pulumi.awsnative.ecs.enums.ServiceDeploymentControllerType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +19,7 @@ public final class ServiceDeploymentControllerArgs extends io.pulumi.resources.R
       private final @Nullable Output<ServiceDeploymentControllerType> type;
 
     public Output<ServiceDeploymentControllerType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ServiceDeploymentControllerArgs(@Nullable Output<ServiceDeploymentControllerType> type) {
@@ -26,7 +27,7 @@ public final class ServiceDeploymentControllerArgs extends io.pulumi.resources.R
     }
 
     private ServiceDeploymentControllerArgs() {
-        this.type = Output.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class ServiceDeploymentControllerArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder type(@Nullable ServiceDeploymentControllerType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ServiceDeploymentControllerArgs build() {
             return new ServiceDeploymentControllerArgs(type);

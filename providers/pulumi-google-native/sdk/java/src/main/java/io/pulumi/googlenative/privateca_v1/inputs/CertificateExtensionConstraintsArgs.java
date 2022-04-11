@@ -5,6 +5,7 @@ package io.pulumi.googlenative.privateca_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.privateca_v1.enums.CertificateExtensionConstraintsKnownExtensionsItem;
 import io.pulumi.googlenative.privateca_v1.inputs.ObjectIdArgs;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class CertificateExtensionConstraintsArgs extends io.pulumi.resourc
       private final @Nullable Output<List<ObjectIdArgs>> additionalExtensions;
 
     public Output<List<ObjectIdArgs>> getAdditionalExtensions() {
-        return this.additionalExtensions == null ? Output.empty() : this.additionalExtensions;
+        return this.additionalExtensions == null ? Codegen.empty() : this.additionalExtensions;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class CertificateExtensionConstraintsArgs extends io.pulumi.resourc
       private final @Nullable Output<List<CertificateExtensionConstraintsKnownExtensionsItem>> knownExtensions;
 
     public Output<List<CertificateExtensionConstraintsKnownExtensionsItem>> getKnownExtensions() {
-        return this.knownExtensions == null ? Output.empty() : this.knownExtensions;
+        return this.knownExtensions == null ? Codegen.empty() : this.knownExtensions;
     }
 
     public CertificateExtensionConstraintsArgs(
@@ -50,8 +51,8 @@ public final class CertificateExtensionConstraintsArgs extends io.pulumi.resourc
     }
 
     private CertificateExtensionConstraintsArgs() {
-        this.additionalExtensions = Output.empty();
-        this.knownExtensions = Output.empty();
+        this.additionalExtensions = Codegen.empty();
+        this.knownExtensions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class CertificateExtensionConstraintsArgs extends io.pulumi.resourc
             return this;
         }
         public Builder additionalExtensions(@Nullable List<ObjectIdArgs> additionalExtensions) {
-            this.additionalExtensions = Output.ofNullable(additionalExtensions);
+            this.additionalExtensions = Codegen.ofNullable(additionalExtensions);
             return this;
         }
         public Builder additionalExtensions(ObjectIdArgs... additionalExtensions) {
@@ -92,7 +93,7 @@ public final class CertificateExtensionConstraintsArgs extends io.pulumi.resourc
             return this;
         }
         public Builder knownExtensions(@Nullable List<CertificateExtensionConstraintsKnownExtensionsItem> knownExtensions) {
-            this.knownExtensions = Output.ofNullable(knownExtensions);
+            this.knownExtensions = Codegen.ofNullable(knownExtensions);
             return this;
         }
         public Builder knownExtensions(CertificateExtensionConstraintsKnownExtensionsItem... knownExtensions) {

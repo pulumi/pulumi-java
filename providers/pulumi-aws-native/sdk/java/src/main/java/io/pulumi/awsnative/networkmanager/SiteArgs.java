@@ -7,6 +7,7 @@ import io.pulumi.awsnative.networkmanager.inputs.SiteLocationArgs;
 import io.pulumi.awsnative.networkmanager.inputs.SiteTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SiteLocationArgs> location;
 
     public Output<SiteLocationArgs> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<SiteTagArgs>> tags;
 
     public Output<List<SiteTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public SiteArgs(
@@ -73,10 +74,10 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SiteArgs() {
-        this.description = Output.empty();
-        this.globalNetworkId = Output.empty();
-        this.location = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.globalNetworkId = Codegen.empty();
+        this.location = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder globalNetworkId(Output<String> globalNetworkId) {
@@ -126,7 +127,7 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable SiteLocationArgs location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder tags(@Nullable Output<List<SiteTagArgs>> tags) {
@@ -134,7 +135,7 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<SiteTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(SiteTagArgs... tags) {

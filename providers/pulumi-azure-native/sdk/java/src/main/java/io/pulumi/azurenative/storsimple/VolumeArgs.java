@@ -9,6 +9,7 @@ import io.pulumi.azurenative.storsimple.enums.VolumeStatus;
 import io.pulumi.azurenative.storsimple.enums.VolumeType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -50,7 +51,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Kind> kind;
 
     public Output<Kind> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> volumeName;
 
     public Output<String> getVolumeName() {
-        return this.volumeName == null ? Output.empty() : this.volumeName;
+        return this.volumeName == null ? Codegen.empty() : this.volumeName;
     }
 
     /**
@@ -167,17 +168,17 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VolumeArgs() {
-        this.accessControlRecordIds = Output.empty();
-        this.deviceName = Output.empty();
-        this.kind = Output.empty();
-        this.managerName = Output.empty();
-        this.monitoringStatus = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sizeInBytes = Output.empty();
-        this.volumeContainerName = Output.empty();
-        this.volumeName = Output.empty();
-        this.volumeStatus = Output.empty();
-        this.volumeType = Output.empty();
+        this.accessControlRecordIds = Codegen.empty();
+        this.deviceName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.managerName = Codegen.empty();
+        this.monitoringStatus = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sizeInBytes = Codegen.empty();
+        this.volumeContainerName = Codegen.empty();
+        this.volumeName = Codegen.empty();
+        this.volumeStatus = Codegen.empty();
+        this.volumeType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -244,7 +245,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable Kind kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder managerName(Output<String> managerName) {
@@ -292,7 +293,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder volumeName(@Nullable String volumeName) {
-            this.volumeName = Output.ofNullable(volumeName);
+            this.volumeName = Codegen.ofNullable(volumeName);
             return this;
         }
         public Builder volumeStatus(Output<VolumeStatus> volumeStatus) {

@@ -8,6 +8,7 @@ import io.pulumi.aws.organizations.inputs.OrganizationNonMasterAccountGetArgs;
 import io.pulumi.aws.organizations.inputs.OrganizationRootGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<OrganizationAccountGetArgs>> accounts;
 
     public Output<List<OrganizationAccountGetArgs>> getAccounts() {
-        return this.accounts == null ? Output.empty() : this.accounts;
+        return this.accounts == null ? Codegen.empty() : this.accounts;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> awsServiceAccessPrincipals;
 
     public Output<List<String>> getAwsServiceAccessPrincipals() {
-        return this.awsServiceAccessPrincipals == null ? Output.empty() : this.awsServiceAccessPrincipals;
+        return this.awsServiceAccessPrincipals == null ? Codegen.empty() : this.awsServiceAccessPrincipals;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> enabledPolicyTypes;
 
     public Output<List<String>> getEnabledPolicyTypes() {
-        return this.enabledPolicyTypes == null ? Output.empty() : this.enabledPolicyTypes;
+        return this.enabledPolicyTypes == null ? Codegen.empty() : this.enabledPolicyTypes;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> featureSet;
 
     public Output<String> getFeatureSet() {
-        return this.featureSet == null ? Output.empty() : this.featureSet;
+        return this.featureSet == null ? Codegen.empty() : this.featureSet;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> masterAccountArn;
 
     public Output<String> getMasterAccountArn() {
-        return this.masterAccountArn == null ? Output.empty() : this.masterAccountArn;
+        return this.masterAccountArn == null ? Codegen.empty() : this.masterAccountArn;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> masterAccountEmail;
 
     public Output<String> getMasterAccountEmail() {
-        return this.masterAccountEmail == null ? Output.empty() : this.masterAccountEmail;
+        return this.masterAccountEmail == null ? Codegen.empty() : this.masterAccountEmail;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> masterAccountId;
 
     public Output<String> getMasterAccountId() {
-        return this.masterAccountId == null ? Output.empty() : this.masterAccountId;
+        return this.masterAccountId == null ? Codegen.empty() : this.masterAccountId;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<OrganizationNonMasterAccountGetArgs>> nonMasterAccounts;
 
     public Output<List<OrganizationNonMasterAccountGetArgs>> getNonMasterAccounts() {
-        return this.nonMasterAccounts == null ? Output.empty() : this.nonMasterAccounts;
+        return this.nonMasterAccounts == null ? Codegen.empty() : this.nonMasterAccounts;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<OrganizationRootGetArgs>> roots;
 
     public Output<List<OrganizationRootGetArgs>> getRoots() {
-        return this.roots == null ? Output.empty() : this.roots;
+        return this.roots == null ? Codegen.empty() : this.roots;
     }
 
     public OrganizationState(
@@ -152,16 +153,16 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
     }
 
     private OrganizationState() {
-        this.accounts = Output.empty();
-        this.arn = Output.empty();
-        this.awsServiceAccessPrincipals = Output.empty();
-        this.enabledPolicyTypes = Output.empty();
-        this.featureSet = Output.empty();
-        this.masterAccountArn = Output.empty();
-        this.masterAccountEmail = Output.empty();
-        this.masterAccountId = Output.empty();
-        this.nonMasterAccounts = Output.empty();
-        this.roots = Output.empty();
+        this.accounts = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.awsServiceAccessPrincipals = Codegen.empty();
+        this.enabledPolicyTypes = Codegen.empty();
+        this.featureSet = Codegen.empty();
+        this.masterAccountArn = Codegen.empty();
+        this.masterAccountEmail = Codegen.empty();
+        this.masterAccountId = Codegen.empty();
+        this.nonMasterAccounts = Codegen.empty();
+        this.roots = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -207,7 +208,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accounts(@Nullable List<OrganizationAccountGetArgs> accounts) {
-            this.accounts = Output.ofNullable(accounts);
+            this.accounts = Codegen.ofNullable(accounts);
             return this;
         }
         public Builder accounts(OrganizationAccountGetArgs... accounts) {
@@ -218,7 +219,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder awsServiceAccessPrincipals(@Nullable Output<List<String>> awsServiceAccessPrincipals) {
@@ -226,7 +227,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder awsServiceAccessPrincipals(@Nullable List<String> awsServiceAccessPrincipals) {
-            this.awsServiceAccessPrincipals = Output.ofNullable(awsServiceAccessPrincipals);
+            this.awsServiceAccessPrincipals = Codegen.ofNullable(awsServiceAccessPrincipals);
             return this;
         }
         public Builder awsServiceAccessPrincipals(String... awsServiceAccessPrincipals) {
@@ -237,7 +238,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabledPolicyTypes(@Nullable List<String> enabledPolicyTypes) {
-            this.enabledPolicyTypes = Output.ofNullable(enabledPolicyTypes);
+            this.enabledPolicyTypes = Codegen.ofNullable(enabledPolicyTypes);
             return this;
         }
         public Builder enabledPolicyTypes(String... enabledPolicyTypes) {
@@ -248,7 +249,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder featureSet(@Nullable String featureSet) {
-            this.featureSet = Output.ofNullable(featureSet);
+            this.featureSet = Codegen.ofNullable(featureSet);
             return this;
         }
         public Builder masterAccountArn(@Nullable Output<String> masterAccountArn) {
@@ -256,7 +257,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder masterAccountArn(@Nullable String masterAccountArn) {
-            this.masterAccountArn = Output.ofNullable(masterAccountArn);
+            this.masterAccountArn = Codegen.ofNullable(masterAccountArn);
             return this;
         }
         public Builder masterAccountEmail(@Nullable Output<String> masterAccountEmail) {
@@ -264,7 +265,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder masterAccountEmail(@Nullable String masterAccountEmail) {
-            this.masterAccountEmail = Output.ofNullable(masterAccountEmail);
+            this.masterAccountEmail = Codegen.ofNullable(masterAccountEmail);
             return this;
         }
         public Builder masterAccountId(@Nullable Output<String> masterAccountId) {
@@ -272,7 +273,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder masterAccountId(@Nullable String masterAccountId) {
-            this.masterAccountId = Output.ofNullable(masterAccountId);
+            this.masterAccountId = Codegen.ofNullable(masterAccountId);
             return this;
         }
         public Builder nonMasterAccounts(@Nullable Output<List<OrganizationNonMasterAccountGetArgs>> nonMasterAccounts) {
@@ -280,7 +281,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nonMasterAccounts(@Nullable List<OrganizationNonMasterAccountGetArgs> nonMasterAccounts) {
-            this.nonMasterAccounts = Output.ofNullable(nonMasterAccounts);
+            this.nonMasterAccounts = Codegen.ofNullable(nonMasterAccounts);
             return this;
         }
         public Builder nonMasterAccounts(OrganizationNonMasterAccountGetArgs... nonMasterAccounts) {
@@ -291,7 +292,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roots(@Nullable List<OrganizationRootGetArgs> roots) {
-            this.roots = Output.ofNullable(roots);
+            this.roots = Codegen.ofNullable(roots);
             return this;
         }
         public Builder roots(OrganizationRootGetArgs... roots) {

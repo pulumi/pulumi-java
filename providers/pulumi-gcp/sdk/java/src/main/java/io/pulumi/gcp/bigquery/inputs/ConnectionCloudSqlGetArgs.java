@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.bigquery.inputs.ConnectionCloudSqlCredentialGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -72,10 +73,10 @@ public final class ConnectionCloudSqlGetArgs extends io.pulumi.resources.Resourc
     }
 
     private ConnectionCloudSqlGetArgs() {
-        this.credential = Output.empty();
-        this.database = Output.empty();
-        this.instanceId = Output.empty();
-        this.type = Output.empty();
+        this.credential = Codegen.empty();
+        this.database = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

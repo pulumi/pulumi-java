@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class TopicRuleDestinationHttpUrlDestinationSummaryArgs extends io.
       private final @Nullable Output<String> confirmationUrl;
 
     public Output<String> getConfirmationUrl() {
-        return this.confirmationUrl == null ? Output.empty() : this.confirmationUrl;
+        return this.confirmationUrl == null ? Codegen.empty() : this.confirmationUrl;
     }
 
     public TopicRuleDestinationHttpUrlDestinationSummaryArgs(@Nullable Output<String> confirmationUrl) {
@@ -26,7 +27,7 @@ public final class TopicRuleDestinationHttpUrlDestinationSummaryArgs extends io.
     }
 
     private TopicRuleDestinationHttpUrlDestinationSummaryArgs() {
-        this.confirmationUrl = Output.empty();
+        this.confirmationUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class TopicRuleDestinationHttpUrlDestinationSummaryArgs extends io.
             return this;
         }
         public Builder confirmationUrl(@Nullable String confirmationUrl) {
-            this.confirmationUrl = Output.ofNullable(confirmationUrl);
+            this.confirmationUrl = Codegen.ofNullable(confirmationUrl);
             return this;
         }        public TopicRuleDestinationHttpUrlDestinationSummaryArgs build() {
             return new TopicRuleDestinationHttpUrlDestinationSummaryArgs(confirmationUrl);

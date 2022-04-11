@@ -11,6 +11,7 @@ import io.pulumi.azurenative.customerinsights.inputs.KpiExtractArgs;
 import io.pulumi.azurenative.customerinsights.inputs.KpiThresholdsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -30,7 +31,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<KpiAliasArgs>> aliases;
 
     public Output<List<KpiAliasArgs>> getAliases() {
-        return this.aliases == null ? Output.empty() : this.aliases;
+        return this.aliases == null ? Codegen.empty() : this.aliases;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> calculationWindowFieldName;
 
     public Output<String> getCalculationWindowFieldName() {
-        return this.calculationWindowFieldName == null ? Output.empty() : this.calculationWindowFieldName;
+        return this.calculationWindowFieldName == null ? Codegen.empty() : this.calculationWindowFieldName;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> description;
 
     public Output<Map<String,String>> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> displayName;
 
     public Output<Map<String,String>> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -118,7 +119,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<KpiExtractArgs>> extracts;
 
     public Output<List<KpiExtractArgs>> getExtracts() {
-        return this.extracts == null ? Output.empty() : this.extracts;
+        return this.extracts == null ? Codegen.empty() : this.extracts;
     }
 
     /**
@@ -129,7 +130,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> filter;
 
     public Output<String> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     /**
@@ -151,7 +152,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> groupBy;
 
     public Output<List<String>> getGroupBy() {
-        return this.groupBy == null ? Output.empty() : this.groupBy;
+        return this.groupBy == null ? Codegen.empty() : this.groupBy;
     }
 
     /**
@@ -173,7 +174,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kpiName;
 
     public Output<String> getKpiName() {
-        return this.kpiName == null ? Output.empty() : this.kpiName;
+        return this.kpiName == null ? Codegen.empty() : this.kpiName;
     }
 
     /**
@@ -195,7 +196,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<KpiThresholdsArgs> thresHolds;
 
     public Output<KpiThresholdsArgs> getThresHolds() {
-        return this.thresHolds == null ? Output.empty() : this.thresHolds;
+        return this.thresHolds == null ? Codegen.empty() : this.thresHolds;
     }
 
     /**
@@ -206,7 +207,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> unit;
 
     public Output<String> getUnit() {
-        return this.unit == null ? Output.empty() : this.unit;
+        return this.unit == null ? Codegen.empty() : this.unit;
     }
 
     public KpiArgs(
@@ -247,23 +248,23 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KpiArgs() {
-        this.aliases = Output.empty();
-        this.calculationWindow = Output.empty();
-        this.calculationWindowFieldName = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.entityType = Output.empty();
-        this.entityTypeName = Output.empty();
-        this.expression = Output.empty();
-        this.extracts = Output.empty();
-        this.filter = Output.empty();
-        this.function = Output.empty();
-        this.groupBy = Output.empty();
-        this.hubName = Output.empty();
-        this.kpiName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.thresHolds = Output.empty();
-        this.unit = Output.empty();
+        this.aliases = Codegen.empty();
+        this.calculationWindow = Codegen.empty();
+        this.calculationWindowFieldName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.entityType = Codegen.empty();
+        this.entityTypeName = Codegen.empty();
+        this.expression = Codegen.empty();
+        this.extracts = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.function = Codegen.empty();
+        this.groupBy = Codegen.empty();
+        this.hubName = Codegen.empty();
+        this.kpiName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.thresHolds = Codegen.empty();
+        this.unit = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -323,7 +324,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder aliases(@Nullable List<KpiAliasArgs> aliases) {
-            this.aliases = Output.ofNullable(aliases);
+            this.aliases = Codegen.ofNullable(aliases);
             return this;
         }
         public Builder aliases(KpiAliasArgs... aliases) {
@@ -342,7 +343,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder calculationWindowFieldName(@Nullable String calculationWindowFieldName) {
-            this.calculationWindowFieldName = Output.ofNullable(calculationWindowFieldName);
+            this.calculationWindowFieldName = Codegen.ofNullable(calculationWindowFieldName);
             return this;
         }
         public Builder description(@Nullable Output<Map<String,String>> description) {
@@ -350,7 +351,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable Map<String,String> description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
@@ -358,7 +359,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable Map<String,String> displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder entityType(Output<EntityTypes> entityType) {
@@ -390,7 +391,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder extracts(@Nullable List<KpiExtractArgs> extracts) {
-            this.extracts = Output.ofNullable(extracts);
+            this.extracts = Codegen.ofNullable(extracts);
             return this;
         }
         public Builder extracts(KpiExtractArgs... extracts) {
@@ -401,7 +402,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filter(@Nullable String filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder function(Output<KpiFunctions> function) {
@@ -417,7 +418,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder groupBy(@Nullable List<String> groupBy) {
-            this.groupBy = Output.ofNullable(groupBy);
+            this.groupBy = Codegen.ofNullable(groupBy);
             return this;
         }
         public Builder groupBy(String... groupBy) {
@@ -436,7 +437,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kpiName(@Nullable String kpiName) {
-            this.kpiName = Output.ofNullable(kpiName);
+            this.kpiName = Codegen.ofNullable(kpiName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -452,7 +453,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder thresHolds(@Nullable KpiThresholdsArgs thresHolds) {
-            this.thresHolds = Output.ofNullable(thresHolds);
+            this.thresHolds = Codegen.ofNullable(thresHolds);
             return this;
         }
         public Builder unit(@Nullable Output<String> unit) {
@@ -460,7 +461,7 @@ public final class KpiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder unit(@Nullable String unit) {
-            this.unit = Output.ofNullable(unit);
+            this.unit = Codegen.ofNullable(unit);
             return this;
         }        public KpiArgs build() {
             return new KpiArgs(aliases, calculationWindow, calculationWindowFieldName, description, displayName, entityType, entityTypeName, expression, extracts, filter, function, groupBy, hubName, kpiName, resourceGroupName, thresHolds, unit);

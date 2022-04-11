@@ -5,6 +5,7 @@ package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ResolverPipelineConfigArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<String>> functions;
 
     public Output<List<String>> getFunctions() {
-        return this.functions == null ? Output.empty() : this.functions;
+        return this.functions == null ? Codegen.empty() : this.functions;
     }
 
     public ResolverPipelineConfigArgs(@Nullable Output<List<String>> functions) {
@@ -31,7 +32,7 @@ public final class ResolverPipelineConfigArgs extends io.pulumi.resources.Resour
     }
 
     private ResolverPipelineConfigArgs() {
-        this.functions = Output.empty();
+        this.functions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class ResolverPipelineConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder functions(@Nullable List<String> functions) {
-            this.functions = Output.ofNullable(functions);
+            this.functions = Codegen.ofNullable(functions);
             return this;
         }
         public Builder functions(String... functions) {

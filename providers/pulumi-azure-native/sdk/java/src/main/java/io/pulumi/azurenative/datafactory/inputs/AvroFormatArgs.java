@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class AvroFormatArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> deserializer;
 
     public Output<Object> getDeserializer() {
-        return this.deserializer == null ? Output.empty() : this.deserializer;
+        return this.deserializer == null ? Codegen.empty() : this.deserializer;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class AvroFormatArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> serializer;
 
     public Output<Object> getSerializer() {
-        return this.serializer == null ? Output.empty() : this.serializer;
+        return this.serializer == null ? Codegen.empty() : this.serializer;
     }
 
     /**
@@ -63,9 +64,9 @@ public final class AvroFormatArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AvroFormatArgs() {
-        this.deserializer = Output.empty();
-        this.serializer = Output.empty();
-        this.type = Output.empty();
+        this.deserializer = Codegen.empty();
+        this.serializer = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class AvroFormatArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deserializer(@Nullable Object deserializer) {
-            this.deserializer = Output.ofNullable(deserializer);
+            this.deserializer = Codegen.ofNullable(deserializer);
             return this;
         }
         public Builder serializer(@Nullable Output<Object> serializer) {
@@ -105,7 +106,7 @@ public final class AvroFormatArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serializer(@Nullable Object serializer) {
-            this.serializer = Output.ofNullable(serializer);
+            this.serializer = Codegen.ofNullable(serializer);
             return this;
         }
         public Builder type(Output<String> type) {

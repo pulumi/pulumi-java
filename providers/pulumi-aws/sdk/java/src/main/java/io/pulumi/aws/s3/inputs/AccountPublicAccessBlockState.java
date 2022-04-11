@@ -5,6 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class AccountPublicAccessBlockState extends io.pulumi.resources.Res
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
-        return this.accountId == null ? Output.empty() : this.accountId;
+        return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class AccountPublicAccessBlockState extends io.pulumi.resources.Res
       private final @Nullable Output<Boolean> blockPublicAcls;
 
     public Output<Boolean> getBlockPublicAcls() {
-        return this.blockPublicAcls == null ? Output.empty() : this.blockPublicAcls;
+        return this.blockPublicAcls == null ? Codegen.empty() : this.blockPublicAcls;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class AccountPublicAccessBlockState extends io.pulumi.resources.Res
       private final @Nullable Output<Boolean> blockPublicPolicy;
 
     public Output<Boolean> getBlockPublicPolicy() {
-        return this.blockPublicPolicy == null ? Output.empty() : this.blockPublicPolicy;
+        return this.blockPublicPolicy == null ? Codegen.empty() : this.blockPublicPolicy;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class AccountPublicAccessBlockState extends io.pulumi.resources.Res
       private final @Nullable Output<Boolean> ignorePublicAcls;
 
     public Output<Boolean> getIgnorePublicAcls() {
-        return this.ignorePublicAcls == null ? Output.empty() : this.ignorePublicAcls;
+        return this.ignorePublicAcls == null ? Codegen.empty() : this.ignorePublicAcls;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class AccountPublicAccessBlockState extends io.pulumi.resources.Res
       private final @Nullable Output<Boolean> restrictPublicBuckets;
 
     public Output<Boolean> getRestrictPublicBuckets() {
-        return this.restrictPublicBuckets == null ? Output.empty() : this.restrictPublicBuckets;
+        return this.restrictPublicBuckets == null ? Codegen.empty() : this.restrictPublicBuckets;
     }
 
     public AccountPublicAccessBlockState(
@@ -89,11 +90,11 @@ public final class AccountPublicAccessBlockState extends io.pulumi.resources.Res
     }
 
     private AccountPublicAccessBlockState() {
-        this.accountId = Output.empty();
-        this.blockPublicAcls = Output.empty();
-        this.blockPublicPolicy = Output.empty();
-        this.ignorePublicAcls = Output.empty();
-        this.restrictPublicBuckets = Output.empty();
+        this.accountId = Codegen.empty();
+        this.blockPublicAcls = Codegen.empty();
+        this.blockPublicPolicy = Codegen.empty();
+        this.ignorePublicAcls = Codegen.empty();
+        this.restrictPublicBuckets = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class AccountPublicAccessBlockState extends io.pulumi.resources.Res
             return this;
         }
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Output.ofNullable(accountId);
+            this.accountId = Codegen.ofNullable(accountId);
             return this;
         }
         public Builder blockPublicAcls(@Nullable Output<Boolean> blockPublicAcls) {
@@ -137,7 +138,7 @@ public final class AccountPublicAccessBlockState extends io.pulumi.resources.Res
             return this;
         }
         public Builder blockPublicAcls(@Nullable Boolean blockPublicAcls) {
-            this.blockPublicAcls = Output.ofNullable(blockPublicAcls);
+            this.blockPublicAcls = Codegen.ofNullable(blockPublicAcls);
             return this;
         }
         public Builder blockPublicPolicy(@Nullable Output<Boolean> blockPublicPolicy) {
@@ -145,7 +146,7 @@ public final class AccountPublicAccessBlockState extends io.pulumi.resources.Res
             return this;
         }
         public Builder blockPublicPolicy(@Nullable Boolean blockPublicPolicy) {
-            this.blockPublicPolicy = Output.ofNullable(blockPublicPolicy);
+            this.blockPublicPolicy = Codegen.ofNullable(blockPublicPolicy);
             return this;
         }
         public Builder ignorePublicAcls(@Nullable Output<Boolean> ignorePublicAcls) {
@@ -153,7 +154,7 @@ public final class AccountPublicAccessBlockState extends io.pulumi.resources.Res
             return this;
         }
         public Builder ignorePublicAcls(@Nullable Boolean ignorePublicAcls) {
-            this.ignorePublicAcls = Output.ofNullable(ignorePublicAcls);
+            this.ignorePublicAcls = Codegen.ofNullable(ignorePublicAcls);
             return this;
         }
         public Builder restrictPublicBuckets(@Nullable Output<Boolean> restrictPublicBuckets) {
@@ -161,7 +162,7 @@ public final class AccountPublicAccessBlockState extends io.pulumi.resources.Res
             return this;
         }
         public Builder restrictPublicBuckets(@Nullable Boolean restrictPublicBuckets) {
-            this.restrictPublicBuckets = Output.ofNullable(restrictPublicBuckets);
+            this.restrictPublicBuckets = Codegen.ofNullable(restrictPublicBuckets);
             return this;
         }        public AccountPublicAccessBlockState build() {
             return new AccountPublicAccessBlockState(accountId, blockPublicAcls, blockPublicPolicy, ignorePublicAcls, restrictPublicBuckets);

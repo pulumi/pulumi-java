@@ -5,6 +5,7 @@ package io.pulumi.aws.fsx;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> fileSystemId;
 
     public Output<String> getFileSystemId() {
-        return this.fileSystemId == null ? Output.empty() : this.fileSystemId;
+        return this.fileSystemId == null ? Codegen.empty() : this.fileSystemId;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> volumeId;
 
     public Output<String> getVolumeId() {
-        return this.volumeId == null ? Output.empty() : this.volumeId;
+        return this.volumeId == null ? Codegen.empty() : this.volumeId;
     }
 
     public BackupArgs(
@@ -58,9 +59,9 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackupArgs() {
-        this.fileSystemId = Output.empty();
-        this.tags = Output.empty();
-        this.volumeId = Output.empty();
+        this.fileSystemId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.volumeId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fileSystemId(@Nullable String fileSystemId) {
-            this.fileSystemId = Output.ofNullable(fileSystemId);
+            this.fileSystemId = Codegen.ofNullable(fileSystemId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -100,7 +101,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder volumeId(@Nullable Output<String> volumeId) {
@@ -108,7 +109,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder volumeId(@Nullable String volumeId) {
-            this.volumeId = Output.ofNullable(volumeId);
+            this.volumeId = Codegen.ofNullable(volumeId);
             return this;
         }        public BackupArgs build() {
             return new BackupArgs(fileSystemId, tags, volumeId);

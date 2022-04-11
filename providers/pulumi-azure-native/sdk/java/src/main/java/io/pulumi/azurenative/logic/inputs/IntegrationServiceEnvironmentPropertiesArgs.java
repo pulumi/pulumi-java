@@ -11,6 +11,7 @@ import io.pulumi.azurenative.logic.inputs.NetworkConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -32,7 +33,7 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
       private final @Nullable Output<IntegrationServiceEnvironmenEncryptionConfigurationArgs> encryptionConfiguration;
 
     public Output<IntegrationServiceEnvironmenEncryptionConfigurationArgs> getEncryptionConfiguration() {
-        return this.encryptionConfiguration == null ? Output.empty() : this.encryptionConfiguration;
+        return this.encryptionConfiguration == null ? Codegen.empty() : this.encryptionConfiguration;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
       private final @Nullable Output<FlowEndpointsConfigurationArgs> endpointsConfiguration;
 
     public Output<FlowEndpointsConfigurationArgs> getEndpointsConfiguration() {
-        return this.endpointsConfiguration == null ? Output.empty() : this.endpointsConfiguration;
+        return this.endpointsConfiguration == null ? Codegen.empty() : this.endpointsConfiguration;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
       private final @Nullable Output<String> integrationServiceEnvironmentId;
 
     public Output<String> getIntegrationServiceEnvironmentId() {
-        return this.integrationServiceEnvironmentId == null ? Output.empty() : this.integrationServiceEnvironmentId;
+        return this.integrationServiceEnvironmentId == null ? Codegen.empty() : this.integrationServiceEnvironmentId;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
       private final @Nullable Output<NetworkConfigurationArgs> networkConfiguration;
 
     public Output<NetworkConfigurationArgs> getNetworkConfiguration() {
-        return this.networkConfiguration == null ? Output.empty() : this.networkConfiguration;
+        return this.networkConfiguration == null ? Codegen.empty() : this.networkConfiguration;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
       private final @Nullable Output<Either<String,WorkflowProvisioningState>> provisioningState;
 
     public Output<Either<String,WorkflowProvisioningState>> getProvisioningState() {
-        return this.provisioningState == null ? Output.empty() : this.provisioningState;
+        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
       private final @Nullable Output<Either<String,WorkflowState>> state;
 
     public Output<Either<String,WorkflowState>> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public IntegrationServiceEnvironmentPropertiesArgs(
@@ -106,12 +107,12 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
     }
 
     private IntegrationServiceEnvironmentPropertiesArgs() {
-        this.encryptionConfiguration = Output.empty();
-        this.endpointsConfiguration = Output.empty();
-        this.integrationServiceEnvironmentId = Output.empty();
-        this.networkConfiguration = Output.empty();
-        this.provisioningState = Output.empty();
-        this.state = Output.empty();
+        this.encryptionConfiguration = Codegen.empty();
+        this.endpointsConfiguration = Codegen.empty();
+        this.integrationServiceEnvironmentId = Codegen.empty();
+        this.networkConfiguration = Codegen.empty();
+        this.provisioningState = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -149,7 +150,7 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
             return this;
         }
         public Builder encryptionConfiguration(@Nullable IntegrationServiceEnvironmenEncryptionConfigurationArgs encryptionConfiguration) {
-            this.encryptionConfiguration = Output.ofNullable(encryptionConfiguration);
+            this.encryptionConfiguration = Codegen.ofNullable(encryptionConfiguration);
             return this;
         }
         public Builder endpointsConfiguration(@Nullable Output<FlowEndpointsConfigurationArgs> endpointsConfiguration) {
@@ -157,7 +158,7 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
             return this;
         }
         public Builder endpointsConfiguration(@Nullable FlowEndpointsConfigurationArgs endpointsConfiguration) {
-            this.endpointsConfiguration = Output.ofNullable(endpointsConfiguration);
+            this.endpointsConfiguration = Codegen.ofNullable(endpointsConfiguration);
             return this;
         }
         public Builder integrationServiceEnvironmentId(@Nullable Output<String> integrationServiceEnvironmentId) {
@@ -165,7 +166,7 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
             return this;
         }
         public Builder integrationServiceEnvironmentId(@Nullable String integrationServiceEnvironmentId) {
-            this.integrationServiceEnvironmentId = Output.ofNullable(integrationServiceEnvironmentId);
+            this.integrationServiceEnvironmentId = Codegen.ofNullable(integrationServiceEnvironmentId);
             return this;
         }
         public Builder networkConfiguration(@Nullable Output<NetworkConfigurationArgs> networkConfiguration) {
@@ -173,7 +174,7 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
             return this;
         }
         public Builder networkConfiguration(@Nullable NetworkConfigurationArgs networkConfiguration) {
-            this.networkConfiguration = Output.ofNullable(networkConfiguration);
+            this.networkConfiguration = Codegen.ofNullable(networkConfiguration);
             return this;
         }
         public Builder provisioningState(@Nullable Output<Either<String,WorkflowProvisioningState>> provisioningState) {
@@ -181,7 +182,7 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
             return this;
         }
         public Builder provisioningState(@Nullable Either<String,WorkflowProvisioningState> provisioningState) {
-            this.provisioningState = Output.ofNullable(provisioningState);
+            this.provisioningState = Codegen.ofNullable(provisioningState);
             return this;
         }
         public Builder state(@Nullable Output<Either<String,WorkflowState>> state) {
@@ -189,7 +190,7 @@ public final class IntegrationServiceEnvironmentPropertiesArgs extends io.pulumi
             return this;
         }
         public Builder state(@Nullable Either<String,WorkflowState> state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public IntegrationServiceEnvironmentPropertiesArgs build() {
             return new IntegrationServiceEnvironmentPropertiesArgs(encryptionConfiguration, endpointsConfiguration, integrationServiceEnvironmentId, networkConfiguration, provisioningState, state);

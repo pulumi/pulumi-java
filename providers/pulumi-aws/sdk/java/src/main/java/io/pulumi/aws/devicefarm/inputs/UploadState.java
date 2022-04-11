@@ -5,6 +5,7 @@ package io.pulumi.aws.devicefarm.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> category;
 
     public Output<String> getCategory() {
-        return this.category == null ? Output.empty() : this.category;
+        return this.category == null ? Codegen.empty() : this.category;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
-        return this.contentType == null ? Output.empty() : this.contentType;
+        return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> metadata;
 
     public Output<String> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> projectArn;
 
     public Output<String> getProjectArn() {
-        return this.projectArn == null ? Output.empty() : this.projectArn;
+        return this.projectArn == null ? Codegen.empty() : this.projectArn;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -99,7 +100,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {
-        return this.url == null ? Output.empty() : this.url;
+        return this.url == null ? Codegen.empty() : this.url;
     }
 
     public UploadState(
@@ -122,14 +123,14 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
     }
 
     private UploadState() {
-        this.arn = Output.empty();
-        this.category = Output.empty();
-        this.contentType = Output.empty();
-        this.metadata = Output.empty();
-        this.name = Output.empty();
-        this.projectArn = Output.empty();
-        this.type = Output.empty();
-        this.url = Output.empty();
+        this.arn = Codegen.empty();
+        this.category = Codegen.empty();
+        this.contentType = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.name = Codegen.empty();
+        this.projectArn = Codegen.empty();
+        this.type = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -171,7 +172,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder category(@Nullable Output<String> category) {
@@ -179,7 +180,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder category(@Nullable String category) {
-            this.category = Output.ofNullable(category);
+            this.category = Codegen.ofNullable(category);
             return this;
         }
         public Builder contentType(@Nullable Output<String> contentType) {
@@ -187,7 +188,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Output.ofNullable(contentType);
+            this.contentType = Codegen.ofNullable(contentType);
             return this;
         }
         public Builder metadata(@Nullable Output<String> metadata) {
@@ -195,7 +196,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable String metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -203,7 +204,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder projectArn(@Nullable Output<String> projectArn) {
@@ -211,7 +212,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder projectArn(@Nullable String projectArn) {
-            this.projectArn = Output.ofNullable(projectArn);
+            this.projectArn = Codegen.ofNullable(projectArn);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -219,7 +220,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder url(@Nullable Output<String> url) {
@@ -227,7 +228,7 @@ public final class UploadState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder url(@Nullable String url) {
-            this.url = Output.ofNullable(url);
+            this.url = Codegen.ofNullable(url);
             return this;
         }        public UploadState build() {
             return new UploadState(arn, category, contentType, metadata, name, projectArn, type, url);

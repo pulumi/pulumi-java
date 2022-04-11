@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class OAuth2AuthenticationSettingsContractArgs extends io.pulumi.re
       private final @Nullable Output<String> authorizationServerId;
 
     public Output<String> getAuthorizationServerId() {
-        return this.authorizationServerId == null ? Output.empty() : this.authorizationServerId;
+        return this.authorizationServerId == null ? Codegen.empty() : this.authorizationServerId;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class OAuth2AuthenticationSettingsContractArgs extends io.pulumi.re
       private final @Nullable Output<String> scope;
 
     public Output<String> getScope() {
-        return this.scope == null ? Output.empty() : this.scope;
+        return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     public OAuth2AuthenticationSettingsContractArgs(
@@ -48,8 +49,8 @@ public final class OAuth2AuthenticationSettingsContractArgs extends io.pulumi.re
     }
 
     private OAuth2AuthenticationSettingsContractArgs() {
-        this.authorizationServerId = Output.empty();
-        this.scope = Output.empty();
+        this.authorizationServerId = Codegen.empty();
+        this.scope = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class OAuth2AuthenticationSettingsContractArgs extends io.pulumi.re
             return this;
         }
         public Builder authorizationServerId(@Nullable String authorizationServerId) {
-            this.authorizationServerId = Output.ofNullable(authorizationServerId);
+            this.authorizationServerId = Codegen.ofNullable(authorizationServerId);
             return this;
         }
         public Builder scope(@Nullable Output<String> scope) {
@@ -87,7 +88,7 @@ public final class OAuth2AuthenticationSettingsContractArgs extends io.pulumi.re
             return this;
         }
         public Builder scope(@Nullable String scope) {
-            this.scope = Output.ofNullable(scope);
+            this.scope = Codegen.ofNullable(scope);
             return this;
         }        public OAuth2AuthenticationSettingsContractArgs build() {
             return new OAuth2AuthenticationSettingsContractArgs(authorizationServerId, scope);

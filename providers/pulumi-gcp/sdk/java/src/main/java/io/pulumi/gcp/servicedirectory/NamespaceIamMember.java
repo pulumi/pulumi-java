@@ -6,6 +6,7 @@ package io.pulumi.gcp.servicedirectory;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.servicedirectory.NamespaceIamMemberArgs;
 import io.pulumi.gcp.servicedirectory.inputs.NamespaceIamMemberState;
@@ -138,7 +139,7 @@ public class NamespaceIamMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NamespaceIamMember(String name, NamespaceIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:servicedirectory/namespaceIamMember:NamespaceIamMember", name, args == null ? NamespaceIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:servicedirectory/namespaceIamMember:NamespaceIamMember", name, args == null ? NamespaceIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NamespaceIamMember(String name, Output<String> id, @Nullable NamespaceIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

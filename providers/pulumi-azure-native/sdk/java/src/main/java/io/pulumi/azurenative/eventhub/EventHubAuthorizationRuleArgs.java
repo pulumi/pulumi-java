@@ -7,6 +7,7 @@ import io.pulumi.azurenative.eventhub.enums.AccessRights;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class EventHubAuthorizationRuleArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> authorizationRuleName;
 
     public Output<String> getAuthorizationRuleName() {
-        return this.authorizationRuleName == null ? Output.empty() : this.authorizationRuleName;
+        return this.authorizationRuleName == null ? Codegen.empty() : this.authorizationRuleName;
     }
 
     /**
@@ -86,11 +87,11 @@ public final class EventHubAuthorizationRuleArgs extends io.pulumi.resources.Res
     }
 
     private EventHubAuthorizationRuleArgs() {
-        this.authorizationRuleName = Output.empty();
-        this.eventHubName = Output.empty();
-        this.namespaceName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.rights = Output.empty();
+        this.authorizationRuleName = Codegen.empty();
+        this.eventHubName = Codegen.empty();
+        this.namespaceName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.rights = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class EventHubAuthorizationRuleArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder authorizationRuleName(@Nullable String authorizationRuleName) {
-            this.authorizationRuleName = Output.ofNullable(authorizationRuleName);
+            this.authorizationRuleName = Codegen.ofNullable(authorizationRuleName);
             return this;
         }
         public Builder eventHubName(Output<String> eventHubName) {

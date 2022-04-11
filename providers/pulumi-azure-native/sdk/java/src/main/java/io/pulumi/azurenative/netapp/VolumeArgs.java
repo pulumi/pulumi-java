@@ -10,6 +10,7 @@ import io.pulumi.azurenative.netapp.inputs.VolumePropertiesExportPolicyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -42,7 +43,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> backupId;
 
     public Output<String> getBackupId() {
-        return this.backupId == null ? Output.empty() : this.backupId;
+        return this.backupId == null ? Codegen.empty() : this.backupId;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<VolumePropertiesDataProtectionArgs> dataProtection;
 
     public Output<VolumePropertiesDataProtectionArgs> getDataProtection() {
-        return this.dataProtection == null ? Output.empty() : this.dataProtection;
+        return this.dataProtection == null ? Codegen.empty() : this.dataProtection;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> encryptionKeySource;
 
     public Output<String> getEncryptionKeySource() {
-        return this.encryptionKeySource == null ? Output.empty() : this.encryptionKeySource;
+        return this.encryptionKeySource == null ? Codegen.empty() : this.encryptionKeySource;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<VolumePropertiesExportPolicyArgs> exportPolicy;
 
     public Output<VolumePropertiesExportPolicyArgs> getExportPolicy() {
-        return this.exportPolicy == null ? Output.empty() : this.exportPolicy;
+        return this.exportPolicy == null ? Codegen.empty() : this.exportPolicy;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> isRestoring;
 
     public Output<Boolean> getIsRestoring() {
-        return this.isRestoring == null ? Output.empty() : this.isRestoring;
+        return this.isRestoring == null ? Codegen.empty() : this.isRestoring;
     }
 
     /**
@@ -108,7 +109,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> kerberosEnabled;
 
     public Output<Boolean> getKerberosEnabled() {
-        return this.kerberosEnabled == null ? Output.empty() : this.kerberosEnabled;
+        return this.kerberosEnabled == null ? Codegen.empty() : this.kerberosEnabled;
     }
 
     /**
@@ -119,7 +120,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> ldapEnabled;
 
     public Output<Boolean> getLdapEnabled() {
-        return this.ldapEnabled == null ? Output.empty() : this.ldapEnabled;
+        return this.ldapEnabled == null ? Codegen.empty() : this.ldapEnabled;
     }
 
     /**
@@ -130,7 +131,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -152,7 +153,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> protocolTypes;
 
     public Output<List<String>> getProtocolTypes() {
-        return this.protocolTypes == null ? Output.empty() : this.protocolTypes;
+        return this.protocolTypes == null ? Codegen.empty() : this.protocolTypes;
     }
 
     /**
@@ -174,7 +175,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,SecurityStyle>> securityStyle;
 
     public Output<Either<String,SecurityStyle>> getSecurityStyle() {
-        return this.securityStyle == null ? Output.empty() : this.securityStyle;
+        return this.securityStyle == null ? Codegen.empty() : this.securityStyle;
     }
 
     /**
@@ -185,7 +186,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,ServiceLevel>> serviceLevel;
 
     public Output<Either<String,ServiceLevel>> getServiceLevel() {
-        return this.serviceLevel == null ? Output.empty() : this.serviceLevel;
+        return this.serviceLevel == null ? Codegen.empty() : this.serviceLevel;
     }
 
     /**
@@ -196,7 +197,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> smbContinuouslyAvailable;
 
     public Output<Boolean> getSmbContinuouslyAvailable() {
-        return this.smbContinuouslyAvailable == null ? Output.empty() : this.smbContinuouslyAvailable;
+        return this.smbContinuouslyAvailable == null ? Codegen.empty() : this.smbContinuouslyAvailable;
     }
 
     /**
@@ -207,7 +208,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> smbEncryption;
 
     public Output<Boolean> getSmbEncryption() {
-        return this.smbEncryption == null ? Output.empty() : this.smbEncryption;
+        return this.smbEncryption == null ? Codegen.empty() : this.smbEncryption;
     }
 
     /**
@@ -218,7 +219,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> snapshotDirectoryVisible;
 
     public Output<Boolean> getSnapshotDirectoryVisible() {
-        return this.snapshotDirectoryVisible == null ? Output.empty() : this.snapshotDirectoryVisible;
+        return this.snapshotDirectoryVisible == null ? Codegen.empty() : this.snapshotDirectoryVisible;
     }
 
     /**
@@ -229,7 +230,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> snapshotId;
 
     public Output<String> getSnapshotId() {
-        return this.snapshotId == null ? Output.empty() : this.snapshotId;
+        return this.snapshotId == null ? Codegen.empty() : this.snapshotId;
     }
 
     /**
@@ -251,14 +252,14 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="throughputMibps")
       private final @Nullable Output<Double> throughputMibps;
 
     public Output<Double> getThroughputMibps() {
-        return this.throughputMibps == null ? Output.empty() : this.throughputMibps;
+        return this.throughputMibps == null ? Codegen.empty() : this.throughputMibps;
     }
 
     /**
@@ -280,7 +281,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> volumeName;
 
     public Output<String> getVolumeName() {
-        return this.volumeName == null ? Output.empty() : this.volumeName;
+        return this.volumeName == null ? Codegen.empty() : this.volumeName;
     }
 
     /**
@@ -291,7 +292,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> volumeType;
 
     public Output<String> getVolumeType() {
-        return this.volumeType == null ? Output.empty() : this.volumeType;
+        return this.volumeType == null ? Codegen.empty() : this.volumeType;
     }
 
     public VolumeArgs(
@@ -327,52 +328,52 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
         this.encryptionKeySource = encryptionKeySource;
         this.exportPolicy = exportPolicy;
         this.isRestoring = isRestoring;
-        this.kerberosEnabled = kerberosEnabled == null ? Output.ofNullable(false) : kerberosEnabled;
-        this.ldapEnabled = ldapEnabled == null ? Output.ofNullable(false) : ldapEnabled;
+        this.kerberosEnabled = kerberosEnabled == null ? Codegen.ofNullable(false) : kerberosEnabled;
+        this.ldapEnabled = ldapEnabled == null ? Codegen.ofNullable(false) : ldapEnabled;
         this.location = location;
         this.poolName = Objects.requireNonNull(poolName, "expected parameter 'poolName' to be non-null");
         this.protocolTypes = protocolTypes;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.securityStyle = securityStyle == null ? Output.ofLeft("unix") : securityStyle;
         this.serviceLevel = serviceLevel == null ? Output.ofLeft("Premium") : serviceLevel;
-        this.smbContinuouslyAvailable = smbContinuouslyAvailable == null ? Output.ofNullable(false) : smbContinuouslyAvailable;
-        this.smbEncryption = smbEncryption == null ? Output.ofNullable(false) : smbEncryption;
-        this.snapshotDirectoryVisible = snapshotDirectoryVisible == null ? Output.ofNullable(true) : snapshotDirectoryVisible;
+        this.smbContinuouslyAvailable = smbContinuouslyAvailable == null ? Codegen.ofNullable(false) : smbContinuouslyAvailable;
+        this.smbEncryption = smbEncryption == null ? Codegen.ofNullable(false) : smbEncryption;
+        this.snapshotDirectoryVisible = snapshotDirectoryVisible == null ? Codegen.ofNullable(true) : snapshotDirectoryVisible;
         this.snapshotId = snapshotId;
         this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
         this.tags = tags;
-        this.throughputMibps = throughputMibps == null ? Output.ofNullable(0e+00) : throughputMibps;
-        this.usageThreshold = usageThreshold == null ? Output.ofNullable(1.073741824e+11) : Objects.requireNonNull(usageThreshold, "expected parameter 'usageThreshold' to be non-null");
+        this.throughputMibps = throughputMibps == null ? Codegen.ofNullable(0e+00) : throughputMibps;
+        this.usageThreshold = usageThreshold == null ? Codegen.ofNullable(1.073741824e+11) : Objects.requireNonNull(usageThreshold, "expected parameter 'usageThreshold' to be non-null");
         this.volumeName = volumeName;
         this.volumeType = volumeType;
     }
 
     private VolumeArgs() {
-        this.accountName = Output.empty();
-        this.backupId = Output.empty();
-        this.creationToken = Output.empty();
-        this.dataProtection = Output.empty();
-        this.encryptionKeySource = Output.empty();
-        this.exportPolicy = Output.empty();
-        this.isRestoring = Output.empty();
-        this.kerberosEnabled = Output.empty();
-        this.ldapEnabled = Output.empty();
-        this.location = Output.empty();
-        this.poolName = Output.empty();
-        this.protocolTypes = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.securityStyle = Output.empty();
-        this.serviceLevel = Output.empty();
-        this.smbContinuouslyAvailable = Output.empty();
-        this.smbEncryption = Output.empty();
-        this.snapshotDirectoryVisible = Output.empty();
-        this.snapshotId = Output.empty();
-        this.subnetId = Output.empty();
-        this.tags = Output.empty();
-        this.throughputMibps = Output.empty();
-        this.usageThreshold = Output.empty();
-        this.volumeName = Output.empty();
-        this.volumeType = Output.empty();
+        this.accountName = Codegen.empty();
+        this.backupId = Codegen.empty();
+        this.creationToken = Codegen.empty();
+        this.dataProtection = Codegen.empty();
+        this.encryptionKeySource = Codegen.empty();
+        this.exportPolicy = Codegen.empty();
+        this.isRestoring = Codegen.empty();
+        this.kerberosEnabled = Codegen.empty();
+        this.ldapEnabled = Codegen.empty();
+        this.location = Codegen.empty();
+        this.poolName = Codegen.empty();
+        this.protocolTypes = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.securityStyle = Codegen.empty();
+        this.serviceLevel = Codegen.empty();
+        this.smbContinuouslyAvailable = Codegen.empty();
+        this.smbEncryption = Codegen.empty();
+        this.snapshotDirectoryVisible = Codegen.empty();
+        this.snapshotId = Codegen.empty();
+        this.subnetId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.throughputMibps = Codegen.empty();
+        this.usageThreshold = Codegen.empty();
+        this.volumeName = Codegen.empty();
+        this.volumeType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -456,7 +457,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backupId(@Nullable String backupId) {
-            this.backupId = Output.ofNullable(backupId);
+            this.backupId = Codegen.ofNullable(backupId);
             return this;
         }
         public Builder creationToken(Output<String> creationToken) {
@@ -472,7 +473,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataProtection(@Nullable VolumePropertiesDataProtectionArgs dataProtection) {
-            this.dataProtection = Output.ofNullable(dataProtection);
+            this.dataProtection = Codegen.ofNullable(dataProtection);
             return this;
         }
         public Builder encryptionKeySource(@Nullable Output<String> encryptionKeySource) {
@@ -480,7 +481,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptionKeySource(@Nullable String encryptionKeySource) {
-            this.encryptionKeySource = Output.ofNullable(encryptionKeySource);
+            this.encryptionKeySource = Codegen.ofNullable(encryptionKeySource);
             return this;
         }
         public Builder exportPolicy(@Nullable Output<VolumePropertiesExportPolicyArgs> exportPolicy) {
@@ -488,7 +489,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder exportPolicy(@Nullable VolumePropertiesExportPolicyArgs exportPolicy) {
-            this.exportPolicy = Output.ofNullable(exportPolicy);
+            this.exportPolicy = Codegen.ofNullable(exportPolicy);
             return this;
         }
         public Builder isRestoring(@Nullable Output<Boolean> isRestoring) {
@@ -496,7 +497,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isRestoring(@Nullable Boolean isRestoring) {
-            this.isRestoring = Output.ofNullable(isRestoring);
+            this.isRestoring = Codegen.ofNullable(isRestoring);
             return this;
         }
         public Builder kerberosEnabled(@Nullable Output<Boolean> kerberosEnabled) {
@@ -504,7 +505,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kerberosEnabled(@Nullable Boolean kerberosEnabled) {
-            this.kerberosEnabled = Output.ofNullable(kerberosEnabled);
+            this.kerberosEnabled = Codegen.ofNullable(kerberosEnabled);
             return this;
         }
         public Builder ldapEnabled(@Nullable Output<Boolean> ldapEnabled) {
@@ -512,7 +513,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ldapEnabled(@Nullable Boolean ldapEnabled) {
-            this.ldapEnabled = Output.ofNullable(ldapEnabled);
+            this.ldapEnabled = Codegen.ofNullable(ldapEnabled);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -520,7 +521,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder poolName(Output<String> poolName) {
@@ -536,7 +537,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder protocolTypes(@Nullable List<String> protocolTypes) {
-            this.protocolTypes = Output.ofNullable(protocolTypes);
+            this.protocolTypes = Codegen.ofNullable(protocolTypes);
             return this;
         }
         public Builder protocolTypes(String... protocolTypes) {
@@ -555,7 +556,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder securityStyle(@Nullable Either<String,SecurityStyle> securityStyle) {
-            this.securityStyle = Output.ofNullable(securityStyle);
+            this.securityStyle = Codegen.ofNullable(securityStyle);
             return this;
         }
         public Builder serviceLevel(@Nullable Output<Either<String,ServiceLevel>> serviceLevel) {
@@ -563,7 +564,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceLevel(@Nullable Either<String,ServiceLevel> serviceLevel) {
-            this.serviceLevel = Output.ofNullable(serviceLevel);
+            this.serviceLevel = Codegen.ofNullable(serviceLevel);
             return this;
         }
         public Builder smbContinuouslyAvailable(@Nullable Output<Boolean> smbContinuouslyAvailable) {
@@ -571,7 +572,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder smbContinuouslyAvailable(@Nullable Boolean smbContinuouslyAvailable) {
-            this.smbContinuouslyAvailable = Output.ofNullable(smbContinuouslyAvailable);
+            this.smbContinuouslyAvailable = Codegen.ofNullable(smbContinuouslyAvailable);
             return this;
         }
         public Builder smbEncryption(@Nullable Output<Boolean> smbEncryption) {
@@ -579,7 +580,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder smbEncryption(@Nullable Boolean smbEncryption) {
-            this.smbEncryption = Output.ofNullable(smbEncryption);
+            this.smbEncryption = Codegen.ofNullable(smbEncryption);
             return this;
         }
         public Builder snapshotDirectoryVisible(@Nullable Output<Boolean> snapshotDirectoryVisible) {
@@ -587,7 +588,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder snapshotDirectoryVisible(@Nullable Boolean snapshotDirectoryVisible) {
-            this.snapshotDirectoryVisible = Output.ofNullable(snapshotDirectoryVisible);
+            this.snapshotDirectoryVisible = Codegen.ofNullable(snapshotDirectoryVisible);
             return this;
         }
         public Builder snapshotId(@Nullable Output<String> snapshotId) {
@@ -595,7 +596,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder snapshotId(@Nullable String snapshotId) {
-            this.snapshotId = Output.ofNullable(snapshotId);
+            this.snapshotId = Codegen.ofNullable(snapshotId);
             return this;
         }
         public Builder subnetId(Output<String> subnetId) {
@@ -611,7 +612,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder throughputMibps(@Nullable Output<Double> throughputMibps) {
@@ -619,7 +620,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder throughputMibps(@Nullable Double throughputMibps) {
-            this.throughputMibps = Output.ofNullable(throughputMibps);
+            this.throughputMibps = Codegen.ofNullable(throughputMibps);
             return this;
         }
         public Builder usageThreshold(Output<Double> usageThreshold) {
@@ -635,7 +636,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder volumeName(@Nullable String volumeName) {
-            this.volumeName = Output.ofNullable(volumeName);
+            this.volumeName = Codegen.ofNullable(volumeName);
             return this;
         }
         public Builder volumeType(@Nullable Output<String> volumeType) {
@@ -643,7 +644,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder volumeType(@Nullable String volumeType) {
-            this.volumeType = Output.ofNullable(volumeType);
+            this.volumeType = Codegen.ofNullable(volumeType);
             return this;
         }        public VolumeArgs build() {
             return new VolumeArgs(accountName, backupId, creationToken, dataProtection, encryptionKeySource, exportPolicy, isRestoring, kerberosEnabled, ldapEnabled, location, poolName, protocolTypes, resourceGroupName, securityStyle, serviceLevel, smbContinuouslyAvailable, smbEncryption, snapshotDirectoryVisible, snapshotId, subnetId, tags, throughputMibps, usageThreshold, volumeName, volumeType);

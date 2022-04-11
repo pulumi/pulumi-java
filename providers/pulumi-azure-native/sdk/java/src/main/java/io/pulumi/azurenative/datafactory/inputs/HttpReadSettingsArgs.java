@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Object> additionalHeaders;
 
     public Output<Object> getAdditionalHeaders() {
-        return this.additionalHeaders == null ? Output.empty() : this.additionalHeaders;
+        return this.additionalHeaders == null ? Codegen.empty() : this.additionalHeaders;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Object> disableMetricsCollection;
 
     public Output<Object> getDisableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Output.empty() : this.disableMetricsCollection;
+        return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Boolean> enablePartitionDiscovery;
 
     public Output<Boolean> getEnablePartitionDiscovery() {
-        return this.enablePartitionDiscovery == null ? Output.empty() : this.enablePartitionDiscovery;
+        return this.enablePartitionDiscovery == null ? Codegen.empty() : this.enablePartitionDiscovery;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Object> maxConcurrentConnections;
 
     public Output<Object> getMaxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Output.empty() : this.maxConcurrentConnections;
+        return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Object> partitionRootPath;
 
     public Output<Object> getPartitionRootPath() {
-        return this.partitionRootPath == null ? Output.empty() : this.partitionRootPath;
+        return this.partitionRootPath == null ? Codegen.empty() : this.partitionRootPath;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Object> requestBody;
 
     public Output<Object> getRequestBody() {
-        return this.requestBody == null ? Output.empty() : this.requestBody;
+        return this.requestBody == null ? Codegen.empty() : this.requestBody;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Object> requestMethod;
 
     public Output<Object> getRequestMethod() {
-        return this.requestMethod == null ? Output.empty() : this.requestMethod;
+        return this.requestMethod == null ? Codegen.empty() : this.requestMethod;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Object> requestTimeout;
 
     public Output<Object> getRequestTimeout() {
-        return this.requestTimeout == null ? Output.empty() : this.requestTimeout;
+        return this.requestTimeout == null ? Codegen.empty() : this.requestTimeout;
     }
 
     /**
@@ -142,15 +143,15 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private HttpReadSettingsArgs() {
-        this.additionalHeaders = Output.empty();
-        this.disableMetricsCollection = Output.empty();
-        this.enablePartitionDiscovery = Output.empty();
-        this.maxConcurrentConnections = Output.empty();
-        this.partitionRootPath = Output.empty();
-        this.requestBody = Output.empty();
-        this.requestMethod = Output.empty();
-        this.requestTimeout = Output.empty();
-        this.type = Output.empty();
+        this.additionalHeaders = Codegen.empty();
+        this.disableMetricsCollection = Codegen.empty();
+        this.enablePartitionDiscovery = Codegen.empty();
+        this.maxConcurrentConnections = Codegen.empty();
+        this.partitionRootPath = Codegen.empty();
+        this.requestBody = Codegen.empty();
+        this.requestMethod = Codegen.empty();
+        this.requestTimeout = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -194,7 +195,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder additionalHeaders(@Nullable Object additionalHeaders) {
-            this.additionalHeaders = Output.ofNullable(additionalHeaders);
+            this.additionalHeaders = Codegen.ofNullable(additionalHeaders);
             return this;
         }
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
@@ -202,7 +203,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
+            this.disableMetricsCollection = Codegen.ofNullable(disableMetricsCollection);
             return this;
         }
         public Builder enablePartitionDiscovery(@Nullable Output<Boolean> enablePartitionDiscovery) {
@@ -210,7 +211,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder enablePartitionDiscovery(@Nullable Boolean enablePartitionDiscovery) {
-            this.enablePartitionDiscovery = Output.ofNullable(enablePartitionDiscovery);
+            this.enablePartitionDiscovery = Codegen.ofNullable(enablePartitionDiscovery);
             return this;
         }
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
@@ -218,7 +219,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
+            this.maxConcurrentConnections = Codegen.ofNullable(maxConcurrentConnections);
             return this;
         }
         public Builder partitionRootPath(@Nullable Output<Object> partitionRootPath) {
@@ -226,7 +227,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder partitionRootPath(@Nullable Object partitionRootPath) {
-            this.partitionRootPath = Output.ofNullable(partitionRootPath);
+            this.partitionRootPath = Codegen.ofNullable(partitionRootPath);
             return this;
         }
         public Builder requestBody(@Nullable Output<Object> requestBody) {
@@ -234,7 +235,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder requestBody(@Nullable Object requestBody) {
-            this.requestBody = Output.ofNullable(requestBody);
+            this.requestBody = Codegen.ofNullable(requestBody);
             return this;
         }
         public Builder requestMethod(@Nullable Output<Object> requestMethod) {
@@ -242,7 +243,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder requestMethod(@Nullable Object requestMethod) {
-            this.requestMethod = Output.ofNullable(requestMethod);
+            this.requestMethod = Codegen.ofNullable(requestMethod);
             return this;
         }
         public Builder requestTimeout(@Nullable Output<Object> requestTimeout) {
@@ -250,7 +251,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder requestTimeout(@Nullable Object requestTimeout) {
-            this.requestTimeout = Output.ofNullable(requestTimeout);
+            this.requestTimeout = Codegen.ofNullable(requestTimeout);
             return this;
         }
         public Builder type(Output<String> type) {

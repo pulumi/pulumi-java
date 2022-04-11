@@ -6,6 +6,7 @@ package io.pulumi.googlenative.vision_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.vision_v1.ReferenceImageArgs;
 import io.pulumi.googlenative.vision_v1.outputs.BoundingPolyResponse;
@@ -84,7 +85,7 @@ public class ReferenceImage extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ReferenceImage(String name, ReferenceImageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:vision/v1:ReferenceImage", name, args == null ? ReferenceImageArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:vision/v1:ReferenceImage", name, args == null ? ReferenceImageArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ReferenceImage(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

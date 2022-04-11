@@ -6,6 +6,7 @@ package io.pulumi.azurenative.cdn.inputs;
 import io.pulumi.azurenative.cdn.enums.GeoFilterActions;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -62,9 +63,9 @@ public final class GeoFilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GeoFilterArgs() {
-        this.action = Output.empty();
-        this.countryCodes = Output.empty();
-        this.relativePath = Output.empty();
+        this.action = Codegen.empty();
+        this.countryCodes = Codegen.empty();
+        this.relativePath = Codegen.empty();
     }
 
     public static Builder builder() {

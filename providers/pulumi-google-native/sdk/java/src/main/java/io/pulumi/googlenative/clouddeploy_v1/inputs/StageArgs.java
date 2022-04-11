@@ -5,6 +5,7 @@ package io.pulumi.googlenative.clouddeploy_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> profiles;
 
     public Output<List<String>> getProfiles() {
-        return this.profiles == null ? Output.empty() : this.profiles;
+        return this.profiles == null ? Codegen.empty() : this.profiles;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> targetId;
 
     public Output<String> getTargetId() {
-        return this.targetId == null ? Output.empty() : this.targetId;
+        return this.targetId == null ? Codegen.empty() : this.targetId;
     }
 
     public StageArgs(
@@ -49,8 +50,8 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StageArgs() {
-        this.profiles = Output.empty();
-        this.targetId = Output.empty();
+        this.profiles = Codegen.empty();
+        this.targetId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder profiles(@Nullable List<String> profiles) {
-            this.profiles = Output.ofNullable(profiles);
+            this.profiles = Codegen.ofNullable(profiles);
             return this;
         }
         public Builder profiles(String... profiles) {
@@ -91,7 +92,7 @@ public final class StageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetId(@Nullable String targetId) {
-            this.targetId = Output.ofNullable(targetId);
+            this.targetId = Codegen.ofNullable(targetId);
             return this;
         }        public StageArgs build() {
             return new StageArgs(profiles, targetId);

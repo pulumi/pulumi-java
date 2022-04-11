@@ -5,6 +5,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -37,7 +38,7 @@ public final class ExportPipelineTargetPropertiesArgs extends io.pulumi.resource
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ExportPipelineTargetPropertiesArgs extends io.pulumi.resource
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {
-        return this.uri == null ? Output.empty() : this.uri;
+        return this.uri == null ? Codegen.empty() : this.uri;
     }
 
     public ExportPipelineTargetPropertiesArgs(
@@ -63,9 +64,9 @@ public final class ExportPipelineTargetPropertiesArgs extends io.pulumi.resource
     }
 
     private ExportPipelineTargetPropertiesArgs() {
-        this.keyVaultUri = Output.empty();
-        this.type = Output.empty();
-        this.uri = Output.empty();
+        this.keyVaultUri = Codegen.empty();
+        this.type = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class ExportPipelineTargetPropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder uri(@Nullable Output<String> uri) {
@@ -113,7 +114,7 @@ public final class ExportPipelineTargetPropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder uri(@Nullable String uri) {
-            this.uri = Output.ofNullable(uri);
+            this.uri = Codegen.ofNullable(uri);
             return this;
         }        public ExportPipelineTargetPropertiesArgs build() {
             return new ExportPipelineTargetPropertiesArgs(keyVaultUri, type, uri);

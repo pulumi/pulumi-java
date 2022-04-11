@@ -5,6 +5,7 @@ package io.pulumi.azurenative.netapp;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> backupName;
 
     public Output<String> getBackupName() {
-        return this.backupName == null ? Output.empty() : this.backupName;
+        return this.backupName == null ? Codegen.empty() : this.backupName;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> label;
 
     public Output<String> getLabel() {
-        return this.label == null ? Output.empty() : this.label;
+        return this.label == null ? Codegen.empty() : this.label;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -109,13 +110,13 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackupArgs() {
-        this.accountName = Output.empty();
-        this.backupName = Output.empty();
-        this.label = Output.empty();
-        this.location = Output.empty();
-        this.poolName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.volumeName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.backupName = Codegen.empty();
+        this.label = Codegen.empty();
+        this.location = Codegen.empty();
+        this.poolName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.volumeName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -163,7 +164,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backupName(@Nullable String backupName) {
-            this.backupName = Output.ofNullable(backupName);
+            this.backupName = Codegen.ofNullable(backupName);
             return this;
         }
         public Builder label(@Nullable Output<String> label) {
@@ -171,7 +172,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder label(@Nullable String label) {
-            this.label = Output.ofNullable(label);
+            this.label = Codegen.ofNullable(label);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -179,7 +180,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder poolName(Output<String> poolName) {

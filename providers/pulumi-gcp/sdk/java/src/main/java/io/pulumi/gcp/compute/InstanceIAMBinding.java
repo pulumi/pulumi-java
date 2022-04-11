@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.InstanceIAMBindingArgs;
 import io.pulumi.gcp.compute.inputs.InstanceIAMBindingState;
@@ -187,7 +188,7 @@ public class InstanceIAMBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public InstanceIAMBinding(String name, InstanceIAMBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/instanceIAMBinding:InstanceIAMBinding", name, args == null ? InstanceIAMBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/instanceIAMBinding:InstanceIAMBinding", name, args == null ? InstanceIAMBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private InstanceIAMBinding(String name, Output<String> id, @Nullable InstanceIAMBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

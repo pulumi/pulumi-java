@@ -8,6 +8,7 @@ import io.pulumi.azurenative.storagepool.inputs.DiskArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -27,7 +28,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> additionalCapabilities;
 
     public Output<List<String>> getAdditionalCapabilities() {
-        return this.additionalCapabilities == null ? Output.empty() : this.additionalCapabilities;
+        return this.additionalCapabilities == null ? Codegen.empty() : this.additionalCapabilities;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> diskPoolName;
 
     public Output<String> getDiskPoolName() {
-        return this.diskPoolName == null ? Output.empty() : this.diskPoolName;
+        return this.diskPoolName == null ? Codegen.empty() : this.diskPoolName;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DiskArgs>> disks;
 
     public Output<List<DiskArgs>> getDisks() {
-        return this.disks == null ? Output.empty() : this.disks;
+        return this.disks == null ? Codegen.empty() : this.disks;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -140,15 +141,15 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DiskPoolArgs() {
-        this.additionalCapabilities = Output.empty();
-        this.availabilityZones = Output.empty();
-        this.diskPoolName = Output.empty();
-        this.disks = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.subnetId = Output.empty();
-        this.tags = Output.empty();
-        this.tier = Output.empty();
+        this.additionalCapabilities = Codegen.empty();
+        this.availabilityZones = Codegen.empty();
+        this.diskPoolName = Codegen.empty();
+        this.disks = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.subnetId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -192,7 +193,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder additionalCapabilities(@Nullable List<String> additionalCapabilities) {
-            this.additionalCapabilities = Output.ofNullable(additionalCapabilities);
+            this.additionalCapabilities = Codegen.ofNullable(additionalCapabilities);
             return this;
         }
         public Builder additionalCapabilities(String... additionalCapabilities) {
@@ -214,7 +215,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskPoolName(@Nullable String diskPoolName) {
-            this.diskPoolName = Output.ofNullable(diskPoolName);
+            this.diskPoolName = Codegen.ofNullable(diskPoolName);
             return this;
         }
         public Builder disks(@Nullable Output<List<DiskArgs>> disks) {
@@ -222,7 +223,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disks(@Nullable List<DiskArgs> disks) {
-            this.disks = Output.ofNullable(disks);
+            this.disks = Codegen.ofNullable(disks);
             return this;
         }
         public Builder disks(DiskArgs... disks) {
@@ -233,7 +234,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -257,7 +258,7 @@ public final class DiskPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tier(Output<Either<String,DiskPoolTier>> tier) {

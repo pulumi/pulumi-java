@@ -149,6 +149,7 @@ import io.pulumi.azurenative.datafactory.inputs.XmlSourceArgs;
 import io.pulumi.azurenative.datafactory.inputs.ZohoSourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -172,7 +173,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> dataIntegrationUnits;
 
     public Output<Object> getDataIntegrationUnits() {
-        return this.dataIntegrationUnits == null ? Output.empty() : this.dataIntegrationUnits;
+        return this.dataIntegrationUnits == null ? Codegen.empty() : this.dataIntegrationUnits;
     }
 
     /**
@@ -183,7 +184,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
     public Output<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Output.empty() : this.dependsOn;
+        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
     /**
@@ -194,7 +195,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -205,7 +206,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> enableSkipIncompatibleRow;
 
     public Output<Object> getEnableSkipIncompatibleRow() {
-        return this.enableSkipIncompatibleRow == null ? Output.empty() : this.enableSkipIncompatibleRow;
+        return this.enableSkipIncompatibleRow == null ? Codegen.empty() : this.enableSkipIncompatibleRow;
     }
 
     /**
@@ -216,7 +217,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> enableStaging;
 
     public Output<Object> getEnableStaging() {
-        return this.enableStaging == null ? Output.empty() : this.enableStaging;
+        return this.enableStaging == null ? Codegen.empty() : this.enableStaging;
     }
 
     /**
@@ -227,7 +228,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DatasetReferenceArgs>> inputs;
 
     public Output<List<DatasetReferenceArgs>> getInputs() {
-        return this.inputs == null ? Output.empty() : this.inputs;
+        return this.inputs == null ? Codegen.empty() : this.inputs;
     }
 
     /**
@@ -238,7 +239,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
-        return this.linkedServiceName == null ? Output.empty() : this.linkedServiceName;
+        return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
     }
 
     /**
@@ -249,7 +250,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<LogSettingsArgs> logSettings;
 
     public Output<LogSettingsArgs> getLogSettings() {
-        return this.logSettings == null ? Output.empty() : this.logSettings;
+        return this.logSettings == null ? Codegen.empty() : this.logSettings;
     }
 
     /**
@@ -260,7 +261,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<LogStorageSettingsArgs> logStorageSettings;
 
     public Output<LogStorageSettingsArgs> getLogStorageSettings() {
-        return this.logStorageSettings == null ? Output.empty() : this.logStorageSettings;
+        return this.logStorageSettings == null ? Codegen.empty() : this.logStorageSettings;
     }
 
     /**
@@ -282,7 +283,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DatasetReferenceArgs>> outputs;
 
     public Output<List<DatasetReferenceArgs>> getOutputs() {
-        return this.outputs == null ? Output.empty() : this.outputs;
+        return this.outputs == null ? Codegen.empty() : this.outputs;
     }
 
     /**
@@ -293,7 +294,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> parallelCopies;
 
     public Output<Object> getParallelCopies() {
-        return this.parallelCopies == null ? Output.empty() : this.parallelCopies;
+        return this.parallelCopies == null ? Codegen.empty() : this.parallelCopies;
     }
 
     /**
@@ -304,7 +305,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
     public Output<ActivityPolicyArgs> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     /**
@@ -315,7 +316,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<Object>> preserve;
 
     public Output<List<Object>> getPreserve() {
-        return this.preserve == null ? Output.empty() : this.preserve;
+        return this.preserve == null ? Codegen.empty() : this.preserve;
     }
 
     /**
@@ -326,7 +327,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<Object>> preserveRules;
 
     public Output<List<Object>> getPreserveRules() {
-        return this.preserveRules == null ? Output.empty() : this.preserveRules;
+        return this.preserveRules == null ? Codegen.empty() : this.preserveRules;
     }
 
     /**
@@ -337,7 +338,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RedirectIncompatibleRowSettingsArgs> redirectIncompatibleRowSettings;
 
     public Output<RedirectIncompatibleRowSettingsArgs> getRedirectIncompatibleRowSettings() {
-        return this.redirectIncompatibleRowSettings == null ? Output.empty() : this.redirectIncompatibleRowSettings;
+        return this.redirectIncompatibleRowSettings == null ? Codegen.empty() : this.redirectIncompatibleRowSettings;
     }
 
     /**
@@ -359,7 +360,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SkipErrorFileArgs> skipErrorFile;
 
     public Output<SkipErrorFileArgs> getSkipErrorFile() {
-        return this.skipErrorFile == null ? Output.empty() : this.skipErrorFile;
+        return this.skipErrorFile == null ? Codegen.empty() : this.skipErrorFile;
     }
 
     /**
@@ -381,7 +382,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<StagingSettingsArgs> stagingSettings;
 
     public Output<StagingSettingsArgs> getStagingSettings() {
-        return this.stagingSettings == null ? Output.empty() : this.stagingSettings;
+        return this.stagingSettings == null ? Codegen.empty() : this.stagingSettings;
     }
 
     /**
@@ -392,7 +393,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> translator;
 
     public Output<Object> getTranslator() {
-        return this.translator == null ? Output.empty() : this.translator;
+        return this.translator == null ? Codegen.empty() : this.translator;
     }
 
     /**
@@ -415,7 +416,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
     public Output<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Output.empty() : this.userProperties;
+        return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 
     /**
@@ -426,7 +427,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> validateDataConsistency;
 
     public Output<Object> getValidateDataConsistency() {
-        return this.validateDataConsistency == null ? Output.empty() : this.validateDataConsistency;
+        return this.validateDataConsistency == null ? Codegen.empty() : this.validateDataConsistency;
     }
 
     public CopyActivityArgs(
@@ -481,30 +482,30 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CopyActivityArgs() {
-        this.dataIntegrationUnits = Output.empty();
-        this.dependsOn = Output.empty();
-        this.description = Output.empty();
-        this.enableSkipIncompatibleRow = Output.empty();
-        this.enableStaging = Output.empty();
-        this.inputs = Output.empty();
-        this.linkedServiceName = Output.empty();
-        this.logSettings = Output.empty();
-        this.logStorageSettings = Output.empty();
-        this.name = Output.empty();
-        this.outputs = Output.empty();
-        this.parallelCopies = Output.empty();
-        this.policy = Output.empty();
-        this.preserve = Output.empty();
-        this.preserveRules = Output.empty();
-        this.redirectIncompatibleRowSettings = Output.empty();
-        this.sink = Output.empty();
-        this.skipErrorFile = Output.empty();
-        this.source = Output.empty();
-        this.stagingSettings = Output.empty();
-        this.translator = Output.empty();
-        this.type = Output.empty();
-        this.userProperties = Output.empty();
-        this.validateDataConsistency = Output.empty();
+        this.dataIntegrationUnits = Codegen.empty();
+        this.dependsOn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.enableSkipIncompatibleRow = Codegen.empty();
+        this.enableStaging = Codegen.empty();
+        this.inputs = Codegen.empty();
+        this.linkedServiceName = Codegen.empty();
+        this.logSettings = Codegen.empty();
+        this.logStorageSettings = Codegen.empty();
+        this.name = Codegen.empty();
+        this.outputs = Codegen.empty();
+        this.parallelCopies = Codegen.empty();
+        this.policy = Codegen.empty();
+        this.preserve = Codegen.empty();
+        this.preserveRules = Codegen.empty();
+        this.redirectIncompatibleRowSettings = Codegen.empty();
+        this.sink = Codegen.empty();
+        this.skipErrorFile = Codegen.empty();
+        this.source = Codegen.empty();
+        this.stagingSettings = Codegen.empty();
+        this.translator = Codegen.empty();
+        this.type = Codegen.empty();
+        this.userProperties = Codegen.empty();
+        this.validateDataConsistency = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -578,7 +579,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataIntegrationUnits(@Nullable Object dataIntegrationUnits) {
-            this.dataIntegrationUnits = Output.ofNullable(dataIntegrationUnits);
+            this.dataIntegrationUnits = Codegen.ofNullable(dataIntegrationUnits);
             return this;
         }
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
@@ -586,7 +587,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Output.ofNullable(dependsOn);
+            this.dependsOn = Codegen.ofNullable(dependsOn);
             return this;
         }
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
@@ -597,7 +598,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder enableSkipIncompatibleRow(@Nullable Output<Object> enableSkipIncompatibleRow) {
@@ -605,7 +606,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableSkipIncompatibleRow(@Nullable Object enableSkipIncompatibleRow) {
-            this.enableSkipIncompatibleRow = Output.ofNullable(enableSkipIncompatibleRow);
+            this.enableSkipIncompatibleRow = Codegen.ofNullable(enableSkipIncompatibleRow);
             return this;
         }
         public Builder enableStaging(@Nullable Output<Object> enableStaging) {
@@ -613,7 +614,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableStaging(@Nullable Object enableStaging) {
-            this.enableStaging = Output.ofNullable(enableStaging);
+            this.enableStaging = Codegen.ofNullable(enableStaging);
             return this;
         }
         public Builder inputs(@Nullable Output<List<DatasetReferenceArgs>> inputs) {
@@ -621,7 +622,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inputs(@Nullable List<DatasetReferenceArgs> inputs) {
-            this.inputs = Output.ofNullable(inputs);
+            this.inputs = Codegen.ofNullable(inputs);
             return this;
         }
         public Builder inputs(DatasetReferenceArgs... inputs) {
@@ -632,7 +633,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Output.ofNullable(linkedServiceName);
+            this.linkedServiceName = Codegen.ofNullable(linkedServiceName);
             return this;
         }
         public Builder logSettings(@Nullable Output<LogSettingsArgs> logSettings) {
@@ -640,7 +641,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logSettings(@Nullable LogSettingsArgs logSettings) {
-            this.logSettings = Output.ofNullable(logSettings);
+            this.logSettings = Codegen.ofNullable(logSettings);
             return this;
         }
         public Builder logStorageSettings(@Nullable Output<LogStorageSettingsArgs> logStorageSettings) {
@@ -648,7 +649,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logStorageSettings(@Nullable LogStorageSettingsArgs logStorageSettings) {
-            this.logStorageSettings = Output.ofNullable(logStorageSettings);
+            this.logStorageSettings = Codegen.ofNullable(logStorageSettings);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -664,7 +665,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder outputs(@Nullable List<DatasetReferenceArgs> outputs) {
-            this.outputs = Output.ofNullable(outputs);
+            this.outputs = Codegen.ofNullable(outputs);
             return this;
         }
         public Builder outputs(DatasetReferenceArgs... outputs) {
@@ -675,7 +676,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parallelCopies(@Nullable Object parallelCopies) {
-            this.parallelCopies = Output.ofNullable(parallelCopies);
+            this.parallelCopies = Codegen.ofNullable(parallelCopies);
             return this;
         }
         public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
@@ -683,7 +684,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }
         public Builder preserve(@Nullable Output<List<Object>> preserve) {
@@ -691,7 +692,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder preserve(@Nullable List<Object> preserve) {
-            this.preserve = Output.ofNullable(preserve);
+            this.preserve = Codegen.ofNullable(preserve);
             return this;
         }
         public Builder preserve(Object... preserve) {
@@ -702,7 +703,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder preserveRules(@Nullable List<Object> preserveRules) {
-            this.preserveRules = Output.ofNullable(preserveRules);
+            this.preserveRules = Codegen.ofNullable(preserveRules);
             return this;
         }
         public Builder preserveRules(Object... preserveRules) {
@@ -713,7 +714,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder redirectIncompatibleRowSettings(@Nullable RedirectIncompatibleRowSettingsArgs redirectIncompatibleRowSettings) {
-            this.redirectIncompatibleRowSettings = Output.ofNullable(redirectIncompatibleRowSettings);
+            this.redirectIncompatibleRowSettings = Codegen.ofNullable(redirectIncompatibleRowSettings);
             return this;
         }
         public Builder sink(Output<Object> sink) {
@@ -729,7 +730,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder skipErrorFile(@Nullable SkipErrorFileArgs skipErrorFile) {
-            this.skipErrorFile = Output.ofNullable(skipErrorFile);
+            this.skipErrorFile = Codegen.ofNullable(skipErrorFile);
             return this;
         }
         public Builder source(Output<Object> source) {
@@ -745,7 +746,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stagingSettings(@Nullable StagingSettingsArgs stagingSettings) {
-            this.stagingSettings = Output.ofNullable(stagingSettings);
+            this.stagingSettings = Codegen.ofNullable(stagingSettings);
             return this;
         }
         public Builder translator(@Nullable Output<Object> translator) {
@@ -753,7 +754,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder translator(@Nullable Object translator) {
-            this.translator = Output.ofNullable(translator);
+            this.translator = Codegen.ofNullable(translator);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -769,7 +770,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Output.ofNullable(userProperties);
+            this.userProperties = Codegen.ofNullable(userProperties);
             return this;
         }
         public Builder userProperties(UserPropertyArgs... userProperties) {
@@ -780,7 +781,7 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder validateDataConsistency(@Nullable Object validateDataConsistency) {
-            this.validateDataConsistency = Output.ofNullable(validateDataConsistency);
+            this.validateDataConsistency = Codegen.ofNullable(validateDataConsistency);
             return this;
         }        public CopyActivityArgs build() {
             return new CopyActivityArgs(dataIntegrationUnits, dependsOn, description, enableSkipIncompatibleRow, enableStaging, inputs, linkedServiceName, logSettings, logStorageSettings, name, outputs, parallelCopies, policy, preserve, preserveRules, redirectIncompatibleRowSettings, sink, skipErrorFile, source, stagingSettings, translator, type, userProperties, validateDataConsistency);

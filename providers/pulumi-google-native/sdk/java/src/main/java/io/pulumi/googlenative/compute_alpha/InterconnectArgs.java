@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.enums.InterconnectInterconnectType;
 import io.pulumi.googlenative.compute_alpha.enums.InterconnectLinkType;
 import io.pulumi.googlenative.compute_alpha.inputs.InterconnectMacsecArgs;
@@ -28,7 +29,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> adminEnabled;
 
     public Output<Boolean> getAdminEnabled() {
-        return this.adminEnabled == null ? Output.empty() : this.adminEnabled;
+        return this.adminEnabled == null ? Codegen.empty() : this.adminEnabled;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> customerName;
 
     public Output<String> getCustomerName() {
-        return this.customerName == null ? Output.empty() : this.customerName;
+        return this.customerName == null ? Codegen.empty() : this.customerName;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<InterconnectInterconnectType> interconnectType;
 
     public Output<InterconnectInterconnectType> getInterconnectType() {
-        return this.interconnectType == null ? Output.empty() : this.interconnectType;
+        return this.interconnectType == null ? Codegen.empty() : this.interconnectType;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<InterconnectLinkType> linkType;
 
     public Output<InterconnectLinkType> getLinkType() {
-        return this.linkType == null ? Output.empty() : this.linkType;
+        return this.linkType == null ? Codegen.empty() : this.linkType;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<InterconnectMacsecArgs> macsec;
 
     public Output<InterconnectMacsecArgs> getMacsec() {
-        return this.macsec == null ? Output.empty() : this.macsec;
+        return this.macsec == null ? Codegen.empty() : this.macsec;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> macsecEnabled;
 
     public Output<Boolean> getMacsecEnabled() {
-        return this.macsecEnabled == null ? Output.empty() : this.macsecEnabled;
+        return this.macsecEnabled == null ? Codegen.empty() : this.macsecEnabled;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -138,21 +139,21 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> nocContactEmail;
 
     public Output<String> getNocContactEmail() {
-        return this.nocContactEmail == null ? Output.empty() : this.nocContactEmail;
+        return this.nocContactEmail == null ? Codegen.empty() : this.nocContactEmail;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -163,7 +164,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> requestedLinkCount;
 
     public Output<Integer> getRequestedLinkCount() {
-        return this.requestedLinkCount == null ? Output.empty() : this.requestedLinkCount;
+        return this.requestedLinkCount == null ? Codegen.empty() : this.requestedLinkCount;
     }
 
     public InterconnectArgs(
@@ -198,20 +199,20 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InterconnectArgs() {
-        this.adminEnabled = Output.empty();
-        this.customerName = Output.empty();
-        this.description = Output.empty();
-        this.interconnectType = Output.empty();
-        this.labels = Output.empty();
-        this.linkType = Output.empty();
-        this.location = Output.empty();
-        this.macsec = Output.empty();
-        this.macsecEnabled = Output.empty();
-        this.name = Output.empty();
-        this.nocContactEmail = Output.empty();
-        this.project = Output.empty();
-        this.requestId = Output.empty();
-        this.requestedLinkCount = Output.empty();
+        this.adminEnabled = Codegen.empty();
+        this.customerName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.interconnectType = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.linkType = Codegen.empty();
+        this.location = Codegen.empty();
+        this.macsec = Codegen.empty();
+        this.macsecEnabled = Codegen.empty();
+        this.name = Codegen.empty();
+        this.nocContactEmail = Codegen.empty();
+        this.project = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.requestedLinkCount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -265,7 +266,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder adminEnabled(@Nullable Boolean adminEnabled) {
-            this.adminEnabled = Output.ofNullable(adminEnabled);
+            this.adminEnabled = Codegen.ofNullable(adminEnabled);
             return this;
         }
         public Builder customerName(@Nullable Output<String> customerName) {
@@ -273,7 +274,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customerName(@Nullable String customerName) {
-            this.customerName = Output.ofNullable(customerName);
+            this.customerName = Codegen.ofNullable(customerName);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -281,7 +282,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder interconnectType(@Nullable Output<InterconnectInterconnectType> interconnectType) {
@@ -289,7 +290,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder interconnectType(@Nullable InterconnectInterconnectType interconnectType) {
-            this.interconnectType = Output.ofNullable(interconnectType);
+            this.interconnectType = Codegen.ofNullable(interconnectType);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -297,7 +298,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder linkType(@Nullable Output<InterconnectLinkType> linkType) {
@@ -305,7 +306,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder linkType(@Nullable InterconnectLinkType linkType) {
-            this.linkType = Output.ofNullable(linkType);
+            this.linkType = Codegen.ofNullable(linkType);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -313,7 +314,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder macsec(@Nullable Output<InterconnectMacsecArgs> macsec) {
@@ -321,7 +322,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder macsec(@Nullable InterconnectMacsecArgs macsec) {
-            this.macsec = Output.ofNullable(macsec);
+            this.macsec = Codegen.ofNullable(macsec);
             return this;
         }
         public Builder macsecEnabled(@Nullable Output<Boolean> macsecEnabled) {
@@ -329,7 +330,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder macsecEnabled(@Nullable Boolean macsecEnabled) {
-            this.macsecEnabled = Output.ofNullable(macsecEnabled);
+            this.macsecEnabled = Codegen.ofNullable(macsecEnabled);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -337,7 +338,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder nocContactEmail(@Nullable Output<String> nocContactEmail) {
@@ -345,7 +346,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nocContactEmail(@Nullable String nocContactEmail) {
-            this.nocContactEmail = Output.ofNullable(nocContactEmail);
+            this.nocContactEmail = Codegen.ofNullable(nocContactEmail);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -353,7 +354,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -361,7 +362,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder requestedLinkCount(@Nullable Output<Integer> requestedLinkCount) {
@@ -369,7 +370,7 @@ public final class InterconnectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestedLinkCount(@Nullable Integer requestedLinkCount) {
-            this.requestedLinkCount = Output.ofNullable(requestedLinkCount);
+            this.requestedLinkCount = Codegen.ofNullable(requestedLinkCount);
             return this;
         }        public InterconnectArgs build() {
             return new InterconnectArgs(adminEnabled, customerName, description, interconnectType, labels, linkType, location, macsec, macsecEnabled, name, nocContactEmail, project, requestId, requestedLinkCount);

@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.NodeGroupArgs;
 import io.pulumi.gcp.compute.inputs.NodeGroupState;
@@ -253,7 +254,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NodeGroup(String name, NodeGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/nodeGroup:NodeGroup", name, args == null ? NodeGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/nodeGroup:NodeGroup", name, args == null ? NodeGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NodeGroup(String name, Output<String> id, @Nullable NodeGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -33,7 +34,7 @@ public final class ConnectToTargetSqlDbTaskInputArgs extends io.pulumi.resources
     }
 
     private ConnectToTargetSqlDbTaskInputArgs() {
-        this.targetConnectionInfo = Output.empty();
+        this.targetConnectionInfo = Codegen.empty();
     }
 
     public static Builder builder() {

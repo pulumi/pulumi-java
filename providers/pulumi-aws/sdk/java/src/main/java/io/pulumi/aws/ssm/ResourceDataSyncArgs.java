@@ -6,6 +6,7 @@ package io.pulumi.aws.ssm;
 import io.pulumi.aws.ssm.inputs.ResourceDataSyncS3DestinationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class ResourceDataSyncArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class ResourceDataSyncArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ResourceDataSyncArgs() {
-        this.name = Output.empty();
-        this.s3Destination = Output.empty();
+        this.name = Codegen.empty();
+        this.s3Destination = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class ResourceDataSyncArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder s3Destination(Output<ResourceDataSyncS3DestinationArgs> s3Destination) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.alb;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class ListenerCertificateArgs extends io.pulumi.resources.ResourceA
     }
 
     private ListenerCertificateArgs() {
-        this.certificateArn = Output.empty();
-        this.listenerArn = Output.empty();
+        this.certificateArn = Codegen.empty();
+        this.listenerArn = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.eks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -61,9 +62,9 @@ public final class RoleMappingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RoleMappingArgs() {
-        this.groups = Output.empty();
-        this.roleArn = Output.empty();
-        this.username = Output.empty();
+        this.groups = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {

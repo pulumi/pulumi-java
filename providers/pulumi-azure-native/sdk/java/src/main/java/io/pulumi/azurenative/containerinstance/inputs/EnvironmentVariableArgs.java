@@ -5,6 +5,7 @@ package io.pulumi.azurenative.containerinstance.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -37,7 +38,7 @@ public final class EnvironmentVariableArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> secureValue;
 
     public Output<String> getSecureValue() {
-        return this.secureValue == null ? Output.empty() : this.secureValue;
+        return this.secureValue == null ? Codegen.empty() : this.secureValue;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class EnvironmentVariableArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public EnvironmentVariableArgs(
@@ -61,9 +62,9 @@ public final class EnvironmentVariableArgs extends io.pulumi.resources.ResourceA
     }
 
     private EnvironmentVariableArgs() {
-        this.name = Output.empty();
-        this.secureValue = Output.empty();
-        this.value = Output.empty();
+        this.name = Codegen.empty();
+        this.secureValue = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -103,7 +104,7 @@ public final class EnvironmentVariableArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder secureValue(@Nullable String secureValue) {
-            this.secureValue = Output.ofNullable(secureValue);
+            this.secureValue = Codegen.ofNullable(secureValue);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -111,7 +112,7 @@ public final class EnvironmentVariableArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public EnvironmentVariableArgs build() {
             return new EnvironmentVariableArgs(name, secureValue, value);

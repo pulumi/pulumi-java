@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CryptoKeyArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GooglePrivacyDlpV2CryptoHashConfigArgs extends io.pulumi.reso
       private final @Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey;
 
     public Output<GooglePrivacyDlpV2CryptoKeyArgs> getCryptoKey() {
-        return this.cryptoKey == null ? Output.empty() : this.cryptoKey;
+        return this.cryptoKey == null ? Codegen.empty() : this.cryptoKey;
     }
 
     public GooglePrivacyDlpV2CryptoHashConfigArgs(@Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey) {
@@ -34,7 +35,7 @@ public final class GooglePrivacyDlpV2CryptoHashConfigArgs extends io.pulumi.reso
     }
 
     private GooglePrivacyDlpV2CryptoHashConfigArgs() {
-        this.cryptoKey = Output.empty();
+        this.cryptoKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GooglePrivacyDlpV2CryptoHashConfigArgs extends io.pulumi.reso
             return this;
         }
         public Builder cryptoKey(@Nullable GooglePrivacyDlpV2CryptoKeyArgs cryptoKey) {
-            this.cryptoKey = Output.ofNullable(cryptoKey);
+            this.cryptoKey = Codegen.ofNullable(cryptoKey);
             return this;
         }        public GooglePrivacyDlpV2CryptoHashConfigArgs build() {
             return new GooglePrivacyDlpV2CryptoHashConfigArgs(cryptoKey);

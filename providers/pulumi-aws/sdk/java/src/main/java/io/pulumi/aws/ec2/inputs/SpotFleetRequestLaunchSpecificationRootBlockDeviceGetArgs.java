@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,49 +21,49 @@ public final class SpotFleetRequestLaunchSpecificationRootBlockDeviceGetArgs ext
       private final @Nullable Output<Boolean> deleteOnTermination;
 
     public Output<Boolean> getDeleteOnTermination() {
-        return this.deleteOnTermination == null ? Output.empty() : this.deleteOnTermination;
+        return this.deleteOnTermination == null ? Codegen.empty() : this.deleteOnTermination;
     }
 
     @Import(name="encrypted")
       private final @Nullable Output<Boolean> encrypted;
 
     public Output<Boolean> getEncrypted() {
-        return this.encrypted == null ? Output.empty() : this.encrypted;
+        return this.encrypted == null ? Codegen.empty() : this.encrypted;
     }
 
     @Import(name="iops")
       private final @Nullable Output<Integer> iops;
 
     public Output<Integer> getIops() {
-        return this.iops == null ? Output.empty() : this.iops;
+        return this.iops == null ? Codegen.empty() : this.iops;
     }
 
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     @Import(name="throughput")
       private final @Nullable Output<Integer> throughput;
 
     public Output<Integer> getThroughput() {
-        return this.throughput == null ? Output.empty() : this.throughput;
+        return this.throughput == null ? Codegen.empty() : this.throughput;
     }
 
     @Import(name="volumeSize")
       private final @Nullable Output<Integer> volumeSize;
 
     public Output<Integer> getVolumeSize() {
-        return this.volumeSize == null ? Output.empty() : this.volumeSize;
+        return this.volumeSize == null ? Codegen.empty() : this.volumeSize;
     }
 
     @Import(name="volumeType")
       private final @Nullable Output<String> volumeType;
 
     public Output<String> getVolumeType() {
-        return this.volumeType == null ? Output.empty() : this.volumeType;
+        return this.volumeType == null ? Codegen.empty() : this.volumeType;
     }
 
     public SpotFleetRequestLaunchSpecificationRootBlockDeviceGetArgs(
@@ -83,13 +84,13 @@ public final class SpotFleetRequestLaunchSpecificationRootBlockDeviceGetArgs ext
     }
 
     private SpotFleetRequestLaunchSpecificationRootBlockDeviceGetArgs() {
-        this.deleteOnTermination = Output.empty();
-        this.encrypted = Output.empty();
-        this.iops = Output.empty();
-        this.kmsKeyId = Output.empty();
-        this.throughput = Output.empty();
-        this.volumeSize = Output.empty();
-        this.volumeType = Output.empty();
+        this.deleteOnTermination = Codegen.empty();
+        this.encrypted = Codegen.empty();
+        this.iops = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.throughput = Codegen.empty();
+        this.volumeSize = Codegen.empty();
+        this.volumeType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class SpotFleetRequestLaunchSpecificationRootBlockDeviceGetArgs ext
             return this;
         }
         public Builder deleteOnTermination(@Nullable Boolean deleteOnTermination) {
-            this.deleteOnTermination = Output.ofNullable(deleteOnTermination);
+            this.deleteOnTermination = Codegen.ofNullable(deleteOnTermination);
             return this;
         }
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
@@ -137,7 +138,7 @@ public final class SpotFleetRequestLaunchSpecificationRootBlockDeviceGetArgs ext
             return this;
         }
         public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Output.ofNullable(encrypted);
+            this.encrypted = Codegen.ofNullable(encrypted);
             return this;
         }
         public Builder iops(@Nullable Output<Integer> iops) {
@@ -145,7 +146,7 @@ public final class SpotFleetRequestLaunchSpecificationRootBlockDeviceGetArgs ext
             return this;
         }
         public Builder iops(@Nullable Integer iops) {
-            this.iops = Output.ofNullable(iops);
+            this.iops = Codegen.ofNullable(iops);
             return this;
         }
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
@@ -153,7 +154,7 @@ public final class SpotFleetRequestLaunchSpecificationRootBlockDeviceGetArgs ext
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder throughput(@Nullable Output<Integer> throughput) {
@@ -161,7 +162,7 @@ public final class SpotFleetRequestLaunchSpecificationRootBlockDeviceGetArgs ext
             return this;
         }
         public Builder throughput(@Nullable Integer throughput) {
-            this.throughput = Output.ofNullable(throughput);
+            this.throughput = Codegen.ofNullable(throughput);
             return this;
         }
         public Builder volumeSize(@Nullable Output<Integer> volumeSize) {
@@ -169,7 +170,7 @@ public final class SpotFleetRequestLaunchSpecificationRootBlockDeviceGetArgs ext
             return this;
         }
         public Builder volumeSize(@Nullable Integer volumeSize) {
-            this.volumeSize = Output.ofNullable(volumeSize);
+            this.volumeSize = Codegen.ofNullable(volumeSize);
             return this;
         }
         public Builder volumeType(@Nullable Output<String> volumeType) {
@@ -177,7 +178,7 @@ public final class SpotFleetRequestLaunchSpecificationRootBlockDeviceGetArgs ext
             return this;
         }
         public Builder volumeType(@Nullable String volumeType) {
-            this.volumeType = Output.ofNullable(volumeType);
+            this.volumeType = Codegen.ofNullable(volumeType);
             return this;
         }        public SpotFleetRequestLaunchSpecificationRootBlockDeviceGetArgs build() {
             return new SpotFleetRequestLaunchSpecificationRootBlockDeviceGetArgs(deleteOnTermination, encrypted, iops, kmsKeyId, throughput, volumeSize, volumeType);

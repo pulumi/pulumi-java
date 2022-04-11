@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -36,8 +37,8 @@ public final class NetworkInterfacePrivateIpAddressSpecificationArgs extends io.
     }
 
     private NetworkInterfacePrivateIpAddressSpecificationArgs() {
-        this.primary = Output.empty();
-        this.privateIpAddress = Output.empty();
+        this.primary = Codegen.empty();
+        this.privateIpAddress = Codegen.empty();
     }
 
     public static Builder builder() {

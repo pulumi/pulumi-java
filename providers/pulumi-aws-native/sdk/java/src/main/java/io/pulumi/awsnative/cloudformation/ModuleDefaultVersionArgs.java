@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudformation;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ModuleDefaultVersionArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ModuleDefaultVersionArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> moduleName;
 
     public Output<String> getModuleName() {
-        return this.moduleName == null ? Output.empty() : this.moduleName;
+        return this.moduleName == null ? Codegen.empty() : this.moduleName;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ModuleDefaultVersionArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> versionId;
 
     public Output<String> getVersionId() {
-        return this.versionId == null ? Output.empty() : this.versionId;
+        return this.versionId == null ? Codegen.empty() : this.versionId;
     }
 
     public ModuleDefaultVersionArgs(
@@ -57,9 +58,9 @@ public final class ModuleDefaultVersionArgs extends io.pulumi.resources.Resource
     }
 
     private ModuleDefaultVersionArgs() {
-        this.arn = Output.empty();
-        this.moduleName = Output.empty();
-        this.versionId = Output.empty();
+        this.arn = Codegen.empty();
+        this.moduleName = Codegen.empty();
+        this.versionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class ModuleDefaultVersionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder moduleName(@Nullable Output<String> moduleName) {
@@ -99,7 +100,7 @@ public final class ModuleDefaultVersionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder moduleName(@Nullable String moduleName) {
-            this.moduleName = Output.ofNullable(moduleName);
+            this.moduleName = Codegen.ofNullable(moduleName);
             return this;
         }
         public Builder versionId(@Nullable Output<String> versionId) {
@@ -107,7 +108,7 @@ public final class ModuleDefaultVersionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder versionId(@Nullable String versionId) {
-            this.versionId = Output.ofNullable(versionId);
+            this.versionId = Codegen.ofNullable(versionId);
             return this;
         }        public ModuleDefaultVersionArgs build() {
             return new ModuleDefaultVersionArgs(arn, moduleName, versionId);

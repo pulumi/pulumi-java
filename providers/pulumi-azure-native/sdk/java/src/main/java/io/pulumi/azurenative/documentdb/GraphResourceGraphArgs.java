@@ -8,6 +8,7 @@ import io.pulumi.azurenative.documentdb.inputs.GraphResourceArgs;
 import io.pulumi.azurenative.documentdb.inputs.ManagedServiceIdentityArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -37,7 +38,7 @@ public final class GraphResourceGraphArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> graphName;
 
     public Output<String> getGraphName() {
-        return this.graphName == null ? Output.empty() : this.graphName;
+        return this.graphName == null ? Codegen.empty() : this.graphName;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class GraphResourceGraphArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
     public Output<ManagedServiceIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class GraphResourceGraphArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class GraphResourceGraphArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<CreateUpdateOptionsArgs> options;
 
     public Output<CreateUpdateOptionsArgs> getOptions() {
-        return this.options == null ? Output.empty() : this.options;
+        return this.options == null ? Codegen.empty() : this.options;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class GraphResourceGraphArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public GraphResourceGraphArgs(
@@ -126,14 +127,14 @@ public final class GraphResourceGraphArgs extends io.pulumi.resources.ResourceAr
     }
 
     private GraphResourceGraphArgs() {
-        this.accountName = Output.empty();
-        this.graphName = Output.empty();
-        this.identity = Output.empty();
-        this.location = Output.empty();
-        this.options = Output.empty();
-        this.resource = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.accountName = Codegen.empty();
+        this.graphName = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.location = Codegen.empty();
+        this.options = Codegen.empty();
+        this.resource = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -183,7 +184,7 @@ public final class GraphResourceGraphArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder graphName(@Nullable String graphName) {
-            this.graphName = Output.ofNullable(graphName);
+            this.graphName = Codegen.ofNullable(graphName);
             return this;
         }
         public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
@@ -191,7 +192,7 @@ public final class GraphResourceGraphArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -199,7 +200,7 @@ public final class GraphResourceGraphArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder options(@Nullable Output<CreateUpdateOptionsArgs> options) {
@@ -207,7 +208,7 @@ public final class GraphResourceGraphArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder options(@Nullable CreateUpdateOptionsArgs options) {
-            this.options = Output.ofNullable(options);
+            this.options = Codegen.ofNullable(options);
             return this;
         }
         public Builder resource(Output<GraphResourceArgs> resource) {
@@ -231,7 +232,7 @@ public final class GraphResourceGraphArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public GraphResourceGraphArgs build() {
             return new GraphResourceGraphArgs(accountName, graphName, identity, location, options, resource, resourceGroupName, tags);

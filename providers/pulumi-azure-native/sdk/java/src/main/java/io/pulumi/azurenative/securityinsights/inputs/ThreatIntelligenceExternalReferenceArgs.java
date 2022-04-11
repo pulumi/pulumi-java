@@ -5,6 +5,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
       private final @Nullable Output<String> externalId;
 
     public Output<String> getExternalId() {
-        return this.externalId == null ? Output.empty() : this.externalId;
+        return this.externalId == null ? Codegen.empty() : this.externalId;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
       private final @Nullable Output<Map<String,String>> hashes;
 
     public Output<Map<String,String>> getHashes() {
-        return this.hashes == null ? Output.empty() : this.hashes;
+        return this.hashes == null ? Codegen.empty() : this.hashes;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
       private final @Nullable Output<String> sourceName;
 
     public Output<String> getSourceName() {
-        return this.sourceName == null ? Output.empty() : this.sourceName;
+        return this.sourceName == null ? Codegen.empty() : this.sourceName;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {
-        return this.url == null ? Output.empty() : this.url;
+        return this.url == null ? Codegen.empty() : this.url;
     }
 
     public ThreatIntelligenceExternalReferenceArgs(
@@ -88,11 +89,11 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
     }
 
     private ThreatIntelligenceExternalReferenceArgs() {
-        this.description = Output.empty();
-        this.externalId = Output.empty();
-        this.hashes = Output.empty();
-        this.sourceName = Output.empty();
-        this.url = Output.empty();
+        this.description = Codegen.empty();
+        this.externalId = Codegen.empty();
+        this.hashes = Codegen.empty();
+        this.sourceName = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder externalId(@Nullable Output<String> externalId) {
@@ -136,7 +137,7 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
             return this;
         }
         public Builder externalId(@Nullable String externalId) {
-            this.externalId = Output.ofNullable(externalId);
+            this.externalId = Codegen.ofNullable(externalId);
             return this;
         }
         public Builder hashes(@Nullable Output<Map<String,String>> hashes) {
@@ -144,7 +145,7 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
             return this;
         }
         public Builder hashes(@Nullable Map<String,String> hashes) {
-            this.hashes = Output.ofNullable(hashes);
+            this.hashes = Codegen.ofNullable(hashes);
             return this;
         }
         public Builder sourceName(@Nullable Output<String> sourceName) {
@@ -152,7 +153,7 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
             return this;
         }
         public Builder sourceName(@Nullable String sourceName) {
-            this.sourceName = Output.ofNullable(sourceName);
+            this.sourceName = Codegen.ofNullable(sourceName);
             return this;
         }
         public Builder url(@Nullable Output<String> url) {
@@ -160,7 +161,7 @@ public final class ThreatIntelligenceExternalReferenceArgs extends io.pulumi.res
             return this;
         }
         public Builder url(@Nullable String url) {
-            this.url = Output.ofNullable(url);
+            this.url = Codegen.ofNullable(url);
             return this;
         }        public ThreatIntelligenceExternalReferenceArgs build() {
             return new ThreatIntelligenceExternalReferenceArgs(description, externalId, hashes, sourceName, url);

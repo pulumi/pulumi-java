@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.enums.JobTriggerStatus;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InspectJobConfigArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2TriggerArgs;
@@ -26,7 +27,7 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -48,14 +49,14 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GooglePrivacyDlpV2InspectJobConfigArgs> inspectJob;
 
     public Output<GooglePrivacyDlpV2InspectJobConfigArgs> getInspectJob() {
-        return this.inspectJob == null ? Output.empty() : this.inspectJob;
+        return this.inspectJob == null ? Codegen.empty() : this.inspectJob;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -66,14 +67,14 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> triggerId;
 
     public Output<String> getTriggerId() {
-        return this.triggerId == null ? Output.empty() : this.triggerId;
+        return this.triggerId == null ? Codegen.empty() : this.triggerId;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<GooglePrivacyDlpV2TriggerArgs>> triggers;
 
     public Output<List<GooglePrivacyDlpV2TriggerArgs>> getTriggers() {
-        return this.triggers == null ? Output.empty() : this.triggers;
+        return this.triggers == null ? Codegen.empty() : this.triggers;
     }
 
     public JobTriggerArgs(
@@ -131,15 +132,15 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobTriggerArgs() {
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.inspectJob = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.status = Output.empty();
-        this.triggerId = Output.empty();
-        this.triggers = Output.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.inspectJob = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.status = Codegen.empty();
+        this.triggerId = Codegen.empty();
+        this.triggers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -183,7 +184,7 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -191,7 +192,7 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder inspectJob(@Nullable Output<GooglePrivacyDlpV2InspectJobConfigArgs> inspectJob) {
@@ -199,7 +200,7 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inspectJob(@Nullable GooglePrivacyDlpV2InspectJobConfigArgs inspectJob) {
-            this.inspectJob = Output.ofNullable(inspectJob);
+            this.inspectJob = Codegen.ofNullable(inspectJob);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -207,7 +208,7 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -215,7 +216,7 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -223,7 +224,7 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder status(Output<JobTriggerStatus> status) {
@@ -239,7 +240,7 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder triggerId(@Nullable String triggerId) {
-            this.triggerId = Output.ofNullable(triggerId);
+            this.triggerId = Codegen.ofNullable(triggerId);
             return this;
         }
         public Builder triggers(@Nullable Output<List<GooglePrivacyDlpV2TriggerArgs>> triggers) {
@@ -247,7 +248,7 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder triggers(@Nullable List<GooglePrivacyDlpV2TriggerArgs> triggers) {
-            this.triggers = Output.ofNullable(triggers);
+            this.triggers = Codegen.ofNullable(triggers);
             return this;
         }
         public Builder triggers(GooglePrivacyDlpV2TriggerArgs... triggers) {

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lookoutmetrics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -35,8 +36,8 @@ public final class AnomalyDetectorAppFlowConfigArgs extends io.pulumi.resources.
     }
 
     private AnomalyDetectorAppFlowConfigArgs() {
-        this.flowName = Output.empty();
-        this.roleArn = Output.empty();
+        this.flowName = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.iotsecurity.enums.SensorType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -36,7 +37,7 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sensorName;
 
     public Output<String> getSensorName() {
-        return this.sensorName == null ? Output.empty() : this.sensorName;
+        return this.sensorName == null ? Codegen.empty() : this.sensorName;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,SensorType>> sensorType;
 
     public Output<Either<String,SensorType>> getSensorType() {
-        return this.sensorType == null ? Output.empty() : this.sensorType;
+        return this.sensorType == null ? Codegen.empty() : this.sensorType;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> tiAutomaticUpdates;
 
     public Output<Boolean> getTiAutomaticUpdates() {
-        return this.tiAutomaticUpdates == null ? Output.empty() : this.tiAutomaticUpdates;
+        return this.tiAutomaticUpdates == null ? Codegen.empty() : this.tiAutomaticUpdates;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public SensorArgs(
@@ -86,11 +87,11 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SensorArgs() {
-        this.scope = Output.empty();
-        this.sensorName = Output.empty();
-        this.sensorType = Output.empty();
-        this.tiAutomaticUpdates = Output.empty();
-        this.zone = Output.empty();
+        this.scope = Codegen.empty();
+        this.sensorName = Codegen.empty();
+        this.sensorType = Codegen.empty();
+        this.tiAutomaticUpdates = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -134,7 +135,7 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sensorName(@Nullable String sensorName) {
-            this.sensorName = Output.ofNullable(sensorName);
+            this.sensorName = Codegen.ofNullable(sensorName);
             return this;
         }
         public Builder sensorType(@Nullable Output<Either<String,SensorType>> sensorType) {
@@ -142,7 +143,7 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sensorType(@Nullable Either<String,SensorType> sensorType) {
-            this.sensorType = Output.ofNullable(sensorType);
+            this.sensorType = Codegen.ofNullable(sensorType);
             return this;
         }
         public Builder tiAutomaticUpdates(@Nullable Output<Boolean> tiAutomaticUpdates) {
@@ -150,7 +151,7 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tiAutomaticUpdates(@Nullable Boolean tiAutomaticUpdates) {
-            this.tiAutomaticUpdates = Output.ofNullable(tiAutomaticUpdates);
+            this.tiAutomaticUpdates = Codegen.ofNullable(tiAutomaticUpdates);
             return this;
         }
         public Builder zone(@Nullable Output<String> zone) {
@@ -158,7 +159,7 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public SensorArgs build() {
             return new SensorArgs(scope, sensorName, sensorType, tiAutomaticUpdates, zone);

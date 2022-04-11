@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicedirectory_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.servicedirectory_v1.inputs.BindingArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class NamespaceServiceIamPolicyArgs extends io.pulumi.resources.Res
       private final @Nullable Output<List<BindingArgs>> bindings;
 
     public Output<List<BindingArgs>> getBindings() {
-        return this.bindings == null ? Output.empty() : this.bindings;
+        return this.bindings == null ? Codegen.empty() : this.bindings;
     }
 
     /**
@@ -36,14 +37,14 @@ public final class NamespaceServiceIamPolicyArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="namespaceId", required=true)
@@ -57,7 +58,7 @@ public final class NamespaceServiceIamPolicyArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="serviceId", required=true)
@@ -75,7 +76,7 @@ public final class NamespaceServiceIamPolicyArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Integer> version;
 
     public Output<Integer> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public NamespaceServiceIamPolicyArgs(
@@ -96,13 +97,13 @@ public final class NamespaceServiceIamPolicyArgs extends io.pulumi.resources.Res
     }
 
     private NamespaceServiceIamPolicyArgs() {
-        this.bindings = Output.empty();
-        this.etag = Output.empty();
-        this.location = Output.empty();
-        this.namespaceId = Output.empty();
-        this.project = Output.empty();
-        this.serviceId = Output.empty();
-        this.version = Output.empty();
+        this.bindings = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.location = Codegen.empty();
+        this.namespaceId = Codegen.empty();
+        this.project = Codegen.empty();
+        this.serviceId = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class NamespaceServiceIamPolicyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Output.ofNullable(bindings);
+            this.bindings = Codegen.ofNullable(bindings);
             return this;
         }
         public Builder bindings(BindingArgs... bindings) {
@@ -153,7 +154,7 @@ public final class NamespaceServiceIamPolicyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -161,7 +162,7 @@ public final class NamespaceServiceIamPolicyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder namespaceId(Output<String> namespaceId) {
@@ -177,7 +178,7 @@ public final class NamespaceServiceIamPolicyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder serviceId(Output<String> serviceId) {
@@ -193,7 +194,7 @@ public final class NamespaceServiceIamPolicyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder version(@Nullable Integer version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public NamespaceServiceIamPolicyArgs build() {
             return new NamespaceServiceIamPolicyArgs(bindings, etag, location, namespaceId, project, serviceId, version);

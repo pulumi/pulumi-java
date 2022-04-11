@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dataproc_v1.inputs.IdentityConfigArgs;
 import io.pulumi.googlenative.dataproc_v1.inputs.KerberosConfigArgs;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class SecurityConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<IdentityConfigArgs> identityConfig;
 
     public Output<IdentityConfigArgs> getIdentityConfig() {
-        return this.identityConfig == null ? Output.empty() : this.identityConfig;
+        return this.identityConfig == null ? Codegen.empty() : this.identityConfig;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class SecurityConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<KerberosConfigArgs> kerberosConfig;
 
     public Output<KerberosConfigArgs> getKerberosConfig() {
-        return this.kerberosConfig == null ? Output.empty() : this.kerberosConfig;
+        return this.kerberosConfig == null ? Codegen.empty() : this.kerberosConfig;
     }
 
     public SecurityConfigArgs(
@@ -49,8 +50,8 @@ public final class SecurityConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SecurityConfigArgs() {
-        this.identityConfig = Output.empty();
-        this.kerberosConfig = Output.empty();
+        this.identityConfig = Codegen.empty();
+        this.kerberosConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class SecurityConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identityConfig(@Nullable IdentityConfigArgs identityConfig) {
-            this.identityConfig = Output.ofNullable(identityConfig);
+            this.identityConfig = Codegen.ofNullable(identityConfig);
             return this;
         }
         public Builder kerberosConfig(@Nullable Output<KerberosConfigArgs> kerberosConfig) {
@@ -88,7 +89,7 @@ public final class SecurityConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kerberosConfig(@Nullable KerberosConfigArgs kerberosConfig) {
-            this.kerberosConfig = Output.ofNullable(kerberosConfig);
+            this.kerberosConfig = Codegen.ofNullable(kerberosConfig);
             return this;
         }        public SecurityConfigArgs build() {
             return new SecurityConfigArgs(identityConfig, kerberosConfig);

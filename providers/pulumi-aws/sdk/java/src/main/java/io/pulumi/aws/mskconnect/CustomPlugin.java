@@ -10,6 +10,7 @@ import io.pulumi.aws.mskconnect.outputs.CustomPluginLocation;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -151,7 +152,7 @@ public class CustomPlugin extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CustomPlugin(String name, CustomPluginArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:mskconnect/customPlugin:CustomPlugin", name, args == null ? CustomPluginArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:mskconnect/customPlugin:CustomPlugin", name, args == null ? CustomPluginArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CustomPlugin(String name, Output<String> id, @Nullable CustomPluginState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

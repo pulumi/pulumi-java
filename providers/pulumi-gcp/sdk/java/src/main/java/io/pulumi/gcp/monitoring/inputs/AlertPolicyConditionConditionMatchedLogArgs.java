@@ -5,6 +5,7 @@ package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -40,7 +41,7 @@ public final class AlertPolicyConditionConditionMatchedLogArgs extends io.pulumi
       private final @Nullable Output<Map<String,String>> labelExtractors;
 
     public Output<Map<String,String>> getLabelExtractors() {
-        return this.labelExtractors == null ? Output.empty() : this.labelExtractors;
+        return this.labelExtractors == null ? Codegen.empty() : this.labelExtractors;
     }
 
     public AlertPolicyConditionConditionMatchedLogArgs(
@@ -51,8 +52,8 @@ public final class AlertPolicyConditionConditionMatchedLogArgs extends io.pulumi
     }
 
     private AlertPolicyConditionConditionMatchedLogArgs() {
-        this.filter = Output.empty();
-        this.labelExtractors = Output.empty();
+        this.filter = Codegen.empty();
+        this.labelExtractors = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -90,7 +91,7 @@ public final class AlertPolicyConditionConditionMatchedLogArgs extends io.pulumi
             return this;
         }
         public Builder labelExtractors(@Nullable Map<String,String> labelExtractors) {
-            this.labelExtractors = Output.ofNullable(labelExtractors);
+            this.labelExtractors = Codegen.ofNullable(labelExtractors);
             return this;
         }        public AlertPolicyConditionConditionMatchedLogArgs build() {
             return new AlertPolicyConditionConditionMatchedLogArgs(filter, labelExtractors);

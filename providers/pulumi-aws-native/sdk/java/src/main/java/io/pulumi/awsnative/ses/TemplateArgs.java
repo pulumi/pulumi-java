@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ses;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -17,7 +18,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<io.pulumi.awsnative.ses.inputs.TemplateArgs> template;
 
     public Output<io.pulumi.awsnative.ses.inputs.TemplateArgs> getTemplate() {
-        return this.template == null ? Output.empty() : this.template;
+        return this.template == null ? Codegen.empty() : this.template;
     }
 
     public TemplateArgs(@Nullable Output<io.pulumi.awsnative.ses.inputs.TemplateArgs> template) {
@@ -25,7 +26,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TemplateArgs() {
-        this.template = Output.empty();
+        this.template = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -53,7 +54,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder template(@Nullable io.pulumi.awsnative.ses.inputs.TemplateArgs template) {
-            this.template = Output.ofNullable(template);
+            this.template = Codegen.ofNullable(template);
             return this;
         }        public TemplateArgs build() {
             return new TemplateArgs(template);

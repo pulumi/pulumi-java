@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.policy_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.meta_v1.inputs.ConditionArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -38,7 +39,7 @@ public final class PodDisruptionBudgetStatusArgs extends io.pulumi.resources.Res
       private final @Nullable Output<List<ConditionArgs>> conditions;
 
     public Output<List<ConditionArgs>> getConditions() {
-        return this.conditions == null ? Output.empty() : this.conditions;
+        return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class PodDisruptionBudgetStatusArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Map<String,String>> disruptedPods;
 
     public Output<Map<String,String>> getDisruptedPods() {
-        return this.disruptedPods == null ? Output.empty() : this.disruptedPods;
+        return this.disruptedPods == null ? Codegen.empty() : this.disruptedPods;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class PodDisruptionBudgetStatusArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Integer> observedGeneration;
 
     public Output<Integer> getObservedGeneration() {
-        return this.observedGeneration == null ? Output.empty() : this.observedGeneration;
+        return this.observedGeneration == null ? Codegen.empty() : this.observedGeneration;
     }
 
     public PodDisruptionBudgetStatusArgs(
@@ -125,13 +126,13 @@ public final class PodDisruptionBudgetStatusArgs extends io.pulumi.resources.Res
     }
 
     private PodDisruptionBudgetStatusArgs() {
-        this.conditions = Output.empty();
-        this.currentHealthy = Output.empty();
-        this.desiredHealthy = Output.empty();
-        this.disruptedPods = Output.empty();
-        this.disruptionsAllowed = Output.empty();
-        this.expectedPods = Output.empty();
-        this.observedGeneration = Output.empty();
+        this.conditions = Codegen.empty();
+        this.currentHealthy = Codegen.empty();
+        this.desiredHealthy = Codegen.empty();
+        this.disruptedPods = Codegen.empty();
+        this.disruptionsAllowed = Codegen.empty();
+        this.expectedPods = Codegen.empty();
+        this.observedGeneration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -171,7 +172,7 @@ public final class PodDisruptionBudgetStatusArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder conditions(@Nullable List<ConditionArgs> conditions) {
-            this.conditions = Output.ofNullable(conditions);
+            this.conditions = Codegen.ofNullable(conditions);
             return this;
         }
         public Builder conditions(ConditionArgs... conditions) {
@@ -198,7 +199,7 @@ public final class PodDisruptionBudgetStatusArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder disruptedPods(@Nullable Map<String,String> disruptedPods) {
-            this.disruptedPods = Output.ofNullable(disruptedPods);
+            this.disruptedPods = Codegen.ofNullable(disruptedPods);
             return this;
         }
         public Builder disruptionsAllowed(Output<Integer> disruptionsAllowed) {
@@ -222,7 +223,7 @@ public final class PodDisruptionBudgetStatusArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
-            this.observedGeneration = Output.ofNullable(observedGeneration);
+            this.observedGeneration = Codegen.ofNullable(observedGeneration);
             return this;
         }        public PodDisruptionBudgetStatusArgs build() {
             return new PodDisruptionBudgetStatusArgs(conditions, currentHealthy, desiredHealthy, disruptedPods, disruptionsAllowed, expectedPods, observedGeneration);

@@ -5,6 +5,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +25,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
       private final @Nullable Output<Integer> checkpointInterval;
 
     public Output<Integer> getCheckpointInterval() {
-        return this.checkpointInterval == null ? Output.empty() : this.checkpointInterval;
+        return this.checkpointInterval == null ? Codegen.empty() : this.checkpointInterval;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
       private final @Nullable Output<Boolean> checkpointingEnabled;
 
     public Output<Boolean> getCheckpointingEnabled() {
-        return this.checkpointingEnabled == null ? Output.empty() : this.checkpointingEnabled;
+        return this.checkpointingEnabled == null ? Codegen.empty() : this.checkpointingEnabled;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
       private final @Nullable Output<Integer> minPauseBetweenCheckpoints;
 
     public Output<Integer> getMinPauseBetweenCheckpoints() {
-        return this.minPauseBetweenCheckpoints == null ? Output.empty() : this.minPauseBetweenCheckpoints;
+        return this.minPauseBetweenCheckpoints == null ? Codegen.empty() : this.minPauseBetweenCheckpoints;
     }
 
     public ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationGetArgs(
@@ -75,10 +76,10 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
     }
 
     private ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationGetArgs() {
-        this.checkpointInterval = Output.empty();
-        this.checkpointingEnabled = Output.empty();
-        this.configurationType = Output.empty();
-        this.minPauseBetweenCheckpoints = Output.empty();
+        this.checkpointInterval = Codegen.empty();
+        this.checkpointingEnabled = Codegen.empty();
+        this.configurationType = Codegen.empty();
+        this.minPauseBetweenCheckpoints = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
             return this;
         }
         public Builder checkpointInterval(@Nullable Integer checkpointInterval) {
-            this.checkpointInterval = Output.ofNullable(checkpointInterval);
+            this.checkpointInterval = Codegen.ofNullable(checkpointInterval);
             return this;
         }
         public Builder checkpointingEnabled(@Nullable Output<Boolean> checkpointingEnabled) {
@@ -120,7 +121,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
             return this;
         }
         public Builder checkpointingEnabled(@Nullable Boolean checkpointingEnabled) {
-            this.checkpointingEnabled = Output.ofNullable(checkpointingEnabled);
+            this.checkpointingEnabled = Codegen.ofNullable(checkpointingEnabled);
             return this;
         }
         public Builder configurationType(Output<String> configurationType) {
@@ -136,7 +137,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
             return this;
         }
         public Builder minPauseBetweenCheckpoints(@Nullable Integer minPauseBetweenCheckpoints) {
-            this.minPauseBetweenCheckpoints = Output.ofNullable(minPauseBetweenCheckpoints);
+            this.minPauseBetweenCheckpoints = Codegen.ofNullable(minPauseBetweenCheckpoints);
             return this;
         }        public ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationGetArgs build() {
             return new ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationGetArgs(checkpointInterval, checkpointingEnabled, configurationType, minPauseBetweenCheckpoints);

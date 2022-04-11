@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +26,7 @@ public final class OrganizationSecurityPolicyRuleMatchConfigGetArgs extends io.p
       private final @Nullable Output<List<String>> destIpRanges;
 
     public Output<List<String>> getDestIpRanges() {
-        return this.destIpRanges == null ? Output.empty() : this.destIpRanges;
+        return this.destIpRanges == null ? Codegen.empty() : this.destIpRanges;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class OrganizationSecurityPolicyRuleMatchConfigGetArgs extends io.p
       private final @Nullable Output<List<String>> srcIpRanges;
 
     public Output<List<String>> getSrcIpRanges() {
-        return this.srcIpRanges == null ? Output.empty() : this.srcIpRanges;
+        return this.srcIpRanges == null ? Codegen.empty() : this.srcIpRanges;
     }
 
     public OrganizationSecurityPolicyRuleMatchConfigGetArgs(
@@ -62,9 +63,9 @@ public final class OrganizationSecurityPolicyRuleMatchConfigGetArgs extends io.p
     }
 
     private OrganizationSecurityPolicyRuleMatchConfigGetArgs() {
-        this.destIpRanges = Output.empty();
-        this.layer4Configs = Output.empty();
-        this.srcIpRanges = Output.empty();
+        this.destIpRanges = Codegen.empty();
+        this.layer4Configs = Codegen.empty();
+        this.srcIpRanges = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class OrganizationSecurityPolicyRuleMatchConfigGetArgs extends io.p
             return this;
         }
         public Builder destIpRanges(@Nullable List<String> destIpRanges) {
-            this.destIpRanges = Output.ofNullable(destIpRanges);
+            this.destIpRanges = Codegen.ofNullable(destIpRanges);
             return this;
         }
         public Builder destIpRanges(String... destIpRanges) {
@@ -118,7 +119,7 @@ public final class OrganizationSecurityPolicyRuleMatchConfigGetArgs extends io.p
             return this;
         }
         public Builder srcIpRanges(@Nullable List<String> srcIpRanges) {
-            this.srcIpRanges = Output.ofNullable(srcIpRanges);
+            this.srcIpRanges = Codegen.ofNullable(srcIpRanges);
             return this;
         }
         public Builder srcIpRanges(String... srcIpRanges) {

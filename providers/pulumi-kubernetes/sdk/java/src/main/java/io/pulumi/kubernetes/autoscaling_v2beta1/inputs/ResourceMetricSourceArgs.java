@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.autoscaling_v2beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class ResourceMetricSourceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Integer> targetAverageUtilization;
 
     public Output<Integer> getTargetAverageUtilization() {
-        return this.targetAverageUtilization == null ? Output.empty() : this.targetAverageUtilization;
+        return this.targetAverageUtilization == null ? Codegen.empty() : this.targetAverageUtilization;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ResourceMetricSourceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> targetAverageValue;
 
     public Output<String> getTargetAverageValue() {
-        return this.targetAverageValue == null ? Output.empty() : this.targetAverageValue;
+        return this.targetAverageValue == null ? Codegen.empty() : this.targetAverageValue;
     }
 
     public ResourceMetricSourceArgs(
@@ -62,9 +63,9 @@ public final class ResourceMetricSourceArgs extends io.pulumi.resources.Resource
     }
 
     private ResourceMetricSourceArgs() {
-        this.name = Output.empty();
-        this.targetAverageUtilization = Output.empty();
-        this.targetAverageValue = Output.empty();
+        this.name = Codegen.empty();
+        this.targetAverageUtilization = Codegen.empty();
+        this.targetAverageValue = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class ResourceMetricSourceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder targetAverageUtilization(@Nullable Integer targetAverageUtilization) {
-            this.targetAverageUtilization = Output.ofNullable(targetAverageUtilization);
+            this.targetAverageUtilization = Codegen.ofNullable(targetAverageUtilization);
             return this;
         }
         public Builder targetAverageValue(@Nullable Output<String> targetAverageValue) {
@@ -112,7 +113,7 @@ public final class ResourceMetricSourceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder targetAverageValue(@Nullable String targetAverageValue) {
-            this.targetAverageValue = Output.ofNullable(targetAverageValue);
+            this.targetAverageValue = Codegen.ofNullable(targetAverageValue);
             return this;
         }        public ResourceMetricSourceArgs build() {
             return new ResourceMetricSourceArgs(name, targetAverageUtilization, targetAverageValue);

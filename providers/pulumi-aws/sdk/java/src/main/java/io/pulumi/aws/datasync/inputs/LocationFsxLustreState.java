@@ -5,6 +5,7 @@ package io.pulumi.aws.datasync.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> creationTime;
 
     public Output<String> getCreationTime() {
-        return this.creationTime == null ? Output.empty() : this.creationTime;
+        return this.creationTime == null ? Codegen.empty() : this.creationTime;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> fsxFilesystemArn;
 
     public Output<String> getFsxFilesystemArn() {
-        return this.fsxFilesystemArn == null ? Output.empty() : this.fsxFilesystemArn;
+        return this.fsxFilesystemArn == null ? Codegen.empty() : this.fsxFilesystemArn;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<String>> securityGroupArns;
 
     public Output<List<String>> getSecurityGroupArns() {
-        return this.securityGroupArns == null ? Output.empty() : this.securityGroupArns;
+        return this.securityGroupArns == null ? Codegen.empty() : this.securityGroupArns;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> subdirectory;
 
     public Output<String> getSubdirectory() {
-        return this.subdirectory == null ? Output.empty() : this.subdirectory;
+        return this.subdirectory == null ? Codegen.empty() : this.subdirectory;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {
-        return this.uri == null ? Output.empty() : this.uri;
+        return this.uri == null ? Codegen.empty() : this.uri;
     }
 
     public LocationFsxLustreState(
@@ -124,14 +125,14 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
     }
 
     private LocationFsxLustreState() {
-        this.arn = Output.empty();
-        this.creationTime = Output.empty();
-        this.fsxFilesystemArn = Output.empty();
-        this.securityGroupArns = Output.empty();
-        this.subdirectory = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.uri = Output.empty();
+        this.arn = Codegen.empty();
+        this.creationTime = Codegen.empty();
+        this.fsxFilesystemArn = Codegen.empty();
+        this.securityGroupArns = Codegen.empty();
+        this.subdirectory = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -173,7 +174,7 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder creationTime(@Nullable Output<String> creationTime) {
@@ -181,7 +182,7 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder creationTime(@Nullable String creationTime) {
-            this.creationTime = Output.ofNullable(creationTime);
+            this.creationTime = Codegen.ofNullable(creationTime);
             return this;
         }
         public Builder fsxFilesystemArn(@Nullable Output<String> fsxFilesystemArn) {
@@ -189,7 +190,7 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder fsxFilesystemArn(@Nullable String fsxFilesystemArn) {
-            this.fsxFilesystemArn = Output.ofNullable(fsxFilesystemArn);
+            this.fsxFilesystemArn = Codegen.ofNullable(fsxFilesystemArn);
             return this;
         }
         public Builder securityGroupArns(@Nullable Output<List<String>> securityGroupArns) {
@@ -197,7 +198,7 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder securityGroupArns(@Nullable List<String> securityGroupArns) {
-            this.securityGroupArns = Output.ofNullable(securityGroupArns);
+            this.securityGroupArns = Codegen.ofNullable(securityGroupArns);
             return this;
         }
         public Builder securityGroupArns(String... securityGroupArns) {
@@ -208,7 +209,7 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder subdirectory(@Nullable String subdirectory) {
-            this.subdirectory = Output.ofNullable(subdirectory);
+            this.subdirectory = Codegen.ofNullable(subdirectory);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -216,7 +217,7 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -224,7 +225,7 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder uri(@Nullable Output<String> uri) {
@@ -232,7 +233,7 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder uri(@Nullable String uri) {
-            this.uri = Output.ofNullable(uri);
+            this.uri = Codegen.ofNullable(uri);
             return this;
         }        public LocationFsxLustreState build() {
             return new LocationFsxLustreState(arn, creationTime, fsxFilesystemArn, securityGroupArns, subdirectory, tags, tagsAll, uri);

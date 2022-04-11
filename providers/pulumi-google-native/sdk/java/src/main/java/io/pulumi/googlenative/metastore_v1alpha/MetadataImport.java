@@ -6,6 +6,7 @@ package io.pulumi.googlenative.metastore_v1alpha;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.metastore_v1alpha.MetadataImportArgs;
 import io.pulumi.googlenative.metastore_v1alpha.outputs.DatabaseDumpResponse;
@@ -141,7 +142,7 @@ public class MetadataImport extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MetadataImport(String name, MetadataImportArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:metastore/v1alpha:MetadataImport", name, args == null ? MetadataImportArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:metastore/v1alpha:MetadataImport", name, args == null ? MetadataImportArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private MetadataImport(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

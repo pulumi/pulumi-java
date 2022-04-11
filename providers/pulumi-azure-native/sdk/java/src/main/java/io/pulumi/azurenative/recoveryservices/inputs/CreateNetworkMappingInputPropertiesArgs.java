@@ -8,6 +8,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.VmmToAzureCreateNetworkMapp
 import io.pulumi.azurenative.recoveryservices.inputs.VmmToVmmCreateNetworkMappingInputArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class CreateNetworkMappingInputPropertiesArgs extends io.pulumi.res
       private final @Nullable Output<Object> fabricSpecificDetails;
 
     public Output<Object> getFabricSpecificDetails() {
-        return this.fabricSpecificDetails == null ? Output.empty() : this.fabricSpecificDetails;
+        return this.fabricSpecificDetails == null ? Codegen.empty() : this.fabricSpecificDetails;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class CreateNetworkMappingInputPropertiesArgs extends io.pulumi.res
       private final @Nullable Output<String> recoveryFabricName;
 
     public Output<String> getRecoveryFabricName() {
-        return this.recoveryFabricName == null ? Output.empty() : this.recoveryFabricName;
+        return this.recoveryFabricName == null ? Codegen.empty() : this.recoveryFabricName;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class CreateNetworkMappingInputPropertiesArgs extends io.pulumi.res
       private final @Nullable Output<String> recoveryNetworkId;
 
     public Output<String> getRecoveryNetworkId() {
-        return this.recoveryNetworkId == null ? Output.empty() : this.recoveryNetworkId;
+        return this.recoveryNetworkId == null ? Codegen.empty() : this.recoveryNetworkId;
     }
 
     public CreateNetworkMappingInputPropertiesArgs(
@@ -65,9 +66,9 @@ public final class CreateNetworkMappingInputPropertiesArgs extends io.pulumi.res
     }
 
     private CreateNetworkMappingInputPropertiesArgs() {
-        this.fabricSpecificDetails = Output.empty();
-        this.recoveryFabricName = Output.empty();
-        this.recoveryNetworkId = Output.empty();
+        this.fabricSpecificDetails = Codegen.empty();
+        this.recoveryFabricName = Codegen.empty();
+        this.recoveryNetworkId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class CreateNetworkMappingInputPropertiesArgs extends io.pulumi.res
             return this;
         }
         public Builder fabricSpecificDetails(@Nullable Object fabricSpecificDetails) {
-            this.fabricSpecificDetails = Output.ofNullable(fabricSpecificDetails);
+            this.fabricSpecificDetails = Codegen.ofNullable(fabricSpecificDetails);
             return this;
         }
         public Builder recoveryFabricName(@Nullable Output<String> recoveryFabricName) {
@@ -107,7 +108,7 @@ public final class CreateNetworkMappingInputPropertiesArgs extends io.pulumi.res
             return this;
         }
         public Builder recoveryFabricName(@Nullable String recoveryFabricName) {
-            this.recoveryFabricName = Output.ofNullable(recoveryFabricName);
+            this.recoveryFabricName = Codegen.ofNullable(recoveryFabricName);
             return this;
         }
         public Builder recoveryNetworkId(@Nullable Output<String> recoveryNetworkId) {
@@ -115,7 +116,7 @@ public final class CreateNetworkMappingInputPropertiesArgs extends io.pulumi.res
             return this;
         }
         public Builder recoveryNetworkId(@Nullable String recoveryNetworkId) {
-            this.recoveryNetworkId = Output.ofNullable(recoveryNetworkId);
+            this.recoveryNetworkId = Codegen.ofNullable(recoveryNetworkId);
             return this;
         }        public CreateNetworkMappingInputPropertiesArgs build() {
             return new CreateNetworkMappingInputPropertiesArgs(fabricSpecificDetails, recoveryFabricName, recoveryNetworkId);

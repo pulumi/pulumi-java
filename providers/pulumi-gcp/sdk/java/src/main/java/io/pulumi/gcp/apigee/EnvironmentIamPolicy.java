@@ -6,6 +6,7 @@ package io.pulumi.gcp.apigee;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigee.EnvironmentIamPolicyArgs;
 import io.pulumi.gcp.apigee.inputs.EnvironmentIamPolicyState;
@@ -129,7 +130,7 @@ public class EnvironmentIamPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EnvironmentIamPolicy(String name, EnvironmentIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:apigee/environmentIamPolicy:EnvironmentIamPolicy", name, args == null ? EnvironmentIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:apigee/environmentIamPolicy:EnvironmentIamPolicy", name, args == null ? EnvironmentIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EnvironmentIamPolicy(String name, Output<String> id, @Nullable EnvironmentIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

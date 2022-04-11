@@ -6,6 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.PipelineElapsedTimeMetricPolicyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,7 +27,7 @@ public final class PipelinePolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PipelineElapsedTimeMetricPolicyArgs> elapsedTimeMetric;
 
     public Output<PipelineElapsedTimeMetricPolicyArgs> getElapsedTimeMetric() {
-        return this.elapsedTimeMetric == null ? Output.empty() : this.elapsedTimeMetric;
+        return this.elapsedTimeMetric == null ? Codegen.empty() : this.elapsedTimeMetric;
     }
 
     public PipelinePolicyArgs(@Nullable Output<PipelineElapsedTimeMetricPolicyArgs> elapsedTimeMetric) {
@@ -34,7 +35,7 @@ public final class PipelinePolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PipelinePolicyArgs() {
-        this.elapsedTimeMetric = Output.empty();
+        this.elapsedTimeMetric = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class PipelinePolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder elapsedTimeMetric(@Nullable PipelineElapsedTimeMetricPolicyArgs elapsedTimeMetric) {
-            this.elapsedTimeMetric = Output.ofNullable(elapsedTimeMetric);
+            this.elapsedTimeMetric = Codegen.ofNullable(elapsedTimeMetric);
             return this;
         }        public PipelinePolicyArgs build() {
             return new PipelinePolicyArgs(elapsedTimeMetric);

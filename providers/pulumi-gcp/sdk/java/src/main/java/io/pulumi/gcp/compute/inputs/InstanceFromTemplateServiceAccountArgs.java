@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class InstanceFromTemplateServiceAccountArgs extends io.pulumi.reso
       private final @Nullable Output<String> email;
 
     public Output<String> getEmail() {
-        return this.email == null ? Output.empty() : this.email;
+        return this.email == null ? Codegen.empty() : this.email;
     }
 
     @Import(name="scopes", required=true)
@@ -37,8 +38,8 @@ public final class InstanceFromTemplateServiceAccountArgs extends io.pulumi.reso
     }
 
     private InstanceFromTemplateServiceAccountArgs() {
-        this.email = Output.empty();
-        this.scopes = Output.empty();
+        this.email = Codegen.empty();
+        this.scopes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class InstanceFromTemplateServiceAccountArgs extends io.pulumi.reso
             return this;
         }
         public Builder email(@Nullable String email) {
-            this.email = Output.ofNullable(email);
+            this.email = Codegen.ofNullable(email);
             return this;
         }
         public Builder scopes(Output<List<String>> scopes) {

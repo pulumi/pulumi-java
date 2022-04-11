@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -60,9 +61,9 @@ public final class SmsReceiverArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SmsReceiverArgs() {
-        this.countryCode = Output.empty();
-        this.name = Output.empty();
-        this.phoneNumber = Output.empty();
+        this.countryCode = Codegen.empty();
+        this.name = Codegen.empty();
+        this.phoneNumber = Codegen.empty();
     }
 
     public static Builder builder() {

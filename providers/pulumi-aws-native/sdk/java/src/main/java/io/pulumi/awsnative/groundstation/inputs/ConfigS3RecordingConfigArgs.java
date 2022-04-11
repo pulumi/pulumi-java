@@ -5,6 +5,7 @@ package io.pulumi.awsnative.groundstation.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,21 +19,21 @@ public final class ConfigS3RecordingConfigArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> bucketArn;
 
     public Output<String> getBucketArn() {
-        return this.bucketArn == null ? Output.empty() : this.bucketArn;
+        return this.bucketArn == null ? Codegen.empty() : this.bucketArn;
     }
 
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     public ConfigS3RecordingConfigArgs(
@@ -45,9 +46,9 @@ public final class ConfigS3RecordingConfigArgs extends io.pulumi.resources.Resou
     }
 
     private ConfigS3RecordingConfigArgs() {
-        this.bucketArn = Output.empty();
-        this.prefix = Output.empty();
-        this.roleArn = Output.empty();
+        this.bucketArn = Codegen.empty();
+        this.prefix = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ConfigS3RecordingConfigArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder bucketArn(@Nullable String bucketArn) {
-            this.bucketArn = Output.ofNullable(bucketArn);
+            this.bucketArn = Codegen.ofNullable(bucketArn);
             return this;
         }
         public Builder prefix(@Nullable Output<String> prefix) {
@@ -87,7 +88,7 @@ public final class ConfigS3RecordingConfigArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }
         public Builder roleArn(@Nullable Output<String> roleArn) {
@@ -95,7 +96,7 @@ public final class ConfigS3RecordingConfigArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }        public ConfigS3RecordingConfigArgs build() {
             return new ConfigS3RecordingConfigArgs(bucketArn, prefix, roleArn);

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -40,7 +41,7 @@ public final class PipelineLambdaArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> next;
 
     public Output<String> getNext() {
-        return this.next == null ? Output.empty() : this.next;
+        return this.next == null ? Codegen.empty() : this.next;
     }
 
     public PipelineLambdaArgs(
@@ -55,10 +56,10 @@ public final class PipelineLambdaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PipelineLambdaArgs() {
-        this.batchSize = Output.empty();
-        this.lambdaName = Output.empty();
-        this.name = Output.empty();
-        this.next = Output.empty();
+        this.batchSize = Codegen.empty();
+        this.lambdaName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.next = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class PipelineLambdaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder next(@Nullable String next) {
-            this.next = Output.ofNullable(next);
+            this.next = Codegen.ofNullable(next);
             return this;
         }        public PipelineLambdaArgs build() {
             return new PipelineLambdaArgs(batchSize, lambdaName, name, next);

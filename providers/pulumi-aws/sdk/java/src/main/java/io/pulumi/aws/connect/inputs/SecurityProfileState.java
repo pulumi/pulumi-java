@@ -5,6 +5,7 @@ package io.pulumi.aws.connect.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class SecurityProfileState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class SecurityProfileState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class SecurityProfileState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> instanceId;
 
     public Output<String> getInstanceId() {
-        return this.instanceId == null ? Output.empty() : this.instanceId;
+        return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class SecurityProfileState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class SecurityProfileState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> organizationResourceId;
 
     public Output<String> getOrganizationResourceId() {
-        return this.organizationResourceId == null ? Output.empty() : this.organizationResourceId;
+        return this.organizationResourceId == null ? Codegen.empty() : this.organizationResourceId;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class SecurityProfileState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> permissions;
 
     public Output<List<String>> getPermissions() {
-        return this.permissions == null ? Output.empty() : this.permissions;
+        return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class SecurityProfileState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> securityProfileId;
 
     public Output<String> getSecurityProfileId() {
-        return this.securityProfileId == null ? Output.empty() : this.securityProfileId;
+        return this.securityProfileId == null ? Codegen.empty() : this.securityProfileId;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class SecurityProfileState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class SecurityProfileState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public SecurityProfileState(
@@ -138,15 +139,15 @@ public final class SecurityProfileState extends io.pulumi.resources.ResourceArgs
     }
 
     private SecurityProfileState() {
-        this.arn = Output.empty();
-        this.description = Output.empty();
-        this.instanceId = Output.empty();
-        this.name = Output.empty();
-        this.organizationResourceId = Output.empty();
-        this.permissions = Output.empty();
-        this.securityProfileId = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.organizationResourceId = Codegen.empty();
+        this.permissions = Codegen.empty();
+        this.securityProfileId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -190,7 +191,7 @@ public final class SecurityProfileState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -198,7 +199,7 @@ public final class SecurityProfileState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder instanceId(@Nullable Output<String> instanceId) {
@@ -206,7 +207,7 @@ public final class SecurityProfileState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Output.ofNullable(instanceId);
+            this.instanceId = Codegen.ofNullable(instanceId);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -214,7 +215,7 @@ public final class SecurityProfileState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder organizationResourceId(@Nullable Output<String> organizationResourceId) {
@@ -222,7 +223,7 @@ public final class SecurityProfileState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder organizationResourceId(@Nullable String organizationResourceId) {
-            this.organizationResourceId = Output.ofNullable(organizationResourceId);
+            this.organizationResourceId = Codegen.ofNullable(organizationResourceId);
             return this;
         }
         public Builder permissions(@Nullable Output<List<String>> permissions) {
@@ -230,7 +231,7 @@ public final class SecurityProfileState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder permissions(@Nullable List<String> permissions) {
-            this.permissions = Output.ofNullable(permissions);
+            this.permissions = Codegen.ofNullable(permissions);
             return this;
         }
         public Builder permissions(String... permissions) {
@@ -241,7 +242,7 @@ public final class SecurityProfileState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder securityProfileId(@Nullable String securityProfileId) {
-            this.securityProfileId = Output.ofNullable(securityProfileId);
+            this.securityProfileId = Codegen.ofNullable(securityProfileId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -249,7 +250,7 @@ public final class SecurityProfileState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -257,7 +258,7 @@ public final class SecurityProfileState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public SecurityProfileState build() {
             return new SecurityProfileState(arn, description, instanceId, name, organizationResourceId, permissions, securityProfileId, tags, tagsAll);

@@ -5,6 +5,7 @@ package io.pulumi.aws.ecr.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class RegistryPolicyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     /**
@@ -29,7 +30,7 @@ public final class RegistryPolicyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> registryId;
 
     public Output<String> getRegistryId() {
-        return this.registryId == null ? Output.empty() : this.registryId;
+        return this.registryId == null ? Codegen.empty() : this.registryId;
     }
 
     public RegistryPolicyState(
@@ -40,8 +41,8 @@ public final class RegistryPolicyState extends io.pulumi.resources.ResourceArgs 
     }
 
     private RegistryPolicyState() {
-        this.policy = Output.empty();
-        this.registryId = Output.empty();
+        this.policy = Codegen.empty();
+        this.registryId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -71,7 +72,7 @@ public final class RegistryPolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder policy(@Nullable String policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }
         public Builder registryId(@Nullable Output<String> registryId) {
@@ -79,7 +80,7 @@ public final class RegistryPolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder registryId(@Nullable String registryId) {
-            this.registryId = Output.ofNullable(registryId);
+            this.registryId = Codegen.ofNullable(registryId);
             return this;
         }        public RegistryPolicyState build() {
             return new RegistryPolicyState(policy, registryId);

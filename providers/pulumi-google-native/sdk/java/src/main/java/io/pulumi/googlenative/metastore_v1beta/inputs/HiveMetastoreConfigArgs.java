@@ -5,6 +5,7 @@ package io.pulumi.googlenative.metastore_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.metastore_v1beta.enums.HiveMetastoreConfigEndpointProtocol;
 import io.pulumi.googlenative.metastore_v1beta.inputs.KerberosConfigArgs;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class HiveMetastoreConfigArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Map<String,String>> auxiliaryVersions;
 
     public Output<Map<String,String>> getAuxiliaryVersions() {
-        return this.auxiliaryVersions == null ? Output.empty() : this.auxiliaryVersions;
+        return this.auxiliaryVersions == null ? Codegen.empty() : this.auxiliaryVersions;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class HiveMetastoreConfigArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Map<String,String>> configOverrides;
 
     public Output<Map<String,String>> getConfigOverrides() {
-        return this.configOverrides == null ? Output.empty() : this.configOverrides;
+        return this.configOverrides == null ? Codegen.empty() : this.configOverrides;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class HiveMetastoreConfigArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<HiveMetastoreConfigEndpointProtocol> endpointProtocol;
 
     public Output<HiveMetastoreConfigEndpointProtocol> getEndpointProtocol() {
-        return this.endpointProtocol == null ? Output.empty() : this.endpointProtocol;
+        return this.endpointProtocol == null ? Codegen.empty() : this.endpointProtocol;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class HiveMetastoreConfigArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<KerberosConfigArgs> kerberosConfig;
 
     public Output<KerberosConfigArgs> getKerberosConfig() {
-        return this.kerberosConfig == null ? Output.empty() : this.kerberosConfig;
+        return this.kerberosConfig == null ? Codegen.empty() : this.kerberosConfig;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class HiveMetastoreConfigArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public HiveMetastoreConfigArgs(
@@ -90,11 +91,11 @@ public final class HiveMetastoreConfigArgs extends io.pulumi.resources.ResourceA
     }
 
     private HiveMetastoreConfigArgs() {
-        this.auxiliaryVersions = Output.empty();
-        this.configOverrides = Output.empty();
-        this.endpointProtocol = Output.empty();
-        this.kerberosConfig = Output.empty();
-        this.version = Output.empty();
+        this.auxiliaryVersions = Codegen.empty();
+        this.configOverrides = Codegen.empty();
+        this.endpointProtocol = Codegen.empty();
+        this.kerberosConfig = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class HiveMetastoreConfigArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder auxiliaryVersions(@Nullable Map<String,String> auxiliaryVersions) {
-            this.auxiliaryVersions = Output.ofNullable(auxiliaryVersions);
+            this.auxiliaryVersions = Codegen.ofNullable(auxiliaryVersions);
             return this;
         }
         public Builder configOverrides(@Nullable Output<Map<String,String>> configOverrides) {
@@ -138,7 +139,7 @@ public final class HiveMetastoreConfigArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder configOverrides(@Nullable Map<String,String> configOverrides) {
-            this.configOverrides = Output.ofNullable(configOverrides);
+            this.configOverrides = Codegen.ofNullable(configOverrides);
             return this;
         }
         public Builder endpointProtocol(@Nullable Output<HiveMetastoreConfigEndpointProtocol> endpointProtocol) {
@@ -146,7 +147,7 @@ public final class HiveMetastoreConfigArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder endpointProtocol(@Nullable HiveMetastoreConfigEndpointProtocol endpointProtocol) {
-            this.endpointProtocol = Output.ofNullable(endpointProtocol);
+            this.endpointProtocol = Codegen.ofNullable(endpointProtocol);
             return this;
         }
         public Builder kerberosConfig(@Nullable Output<KerberosConfigArgs> kerberosConfig) {
@@ -154,7 +155,7 @@ public final class HiveMetastoreConfigArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder kerberosConfig(@Nullable KerberosConfigArgs kerberosConfig) {
-            this.kerberosConfig = Output.ofNullable(kerberosConfig);
+            this.kerberosConfig = Codegen.ofNullable(kerberosConfig);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -162,7 +163,7 @@ public final class HiveMetastoreConfigArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public HiveMetastoreConfigArgs build() {
             return new HiveMetastoreConfigArgs(auxiliaryVersions, configOverrides, endpointProtocol, kerberosConfig, version);

@@ -7,6 +7,7 @@ import com.google.gson.JsonElement;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.ExternalDocumentationArgs;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -30,42 +31,42 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> $ref;
 
     public Output<String> get$ref() {
-        return this.$ref == null ? Output.empty() : this.$ref;
+        return this.$ref == null ? Codegen.empty() : this.$ref;
     }
 
     @Import(name="$schema")
       private final @Nullable Output<String> $schema;
 
     public Output<String> get$schema() {
-        return this.$schema == null ? Output.empty() : this.$schema;
+        return this.$schema == null ? Codegen.empty() : this.$schema;
     }
 
     @Import(name="additionalItems")
       private final @Nullable Output<Either<JSONSchemaPropsArgs,Boolean>> additionalItems;
 
     public Output<Either<JSONSchemaPropsArgs,Boolean>> getAdditionalItems() {
-        return this.additionalItems == null ? Output.empty() : this.additionalItems;
+        return this.additionalItems == null ? Codegen.empty() : this.additionalItems;
     }
 
     @Import(name="additionalProperties")
       private final @Nullable Output<Either<JSONSchemaPropsArgs,Boolean>> additionalProperties;
 
     public Output<Either<JSONSchemaPropsArgs,Boolean>> getAdditionalProperties() {
-        return this.additionalProperties == null ? Output.empty() : this.additionalProperties;
+        return this.additionalProperties == null ? Codegen.empty() : this.additionalProperties;
     }
 
     @Import(name="allOf")
       private final @Nullable Output<List<JSONSchemaPropsArgs>> allOf;
 
     public Output<List<JSONSchemaPropsArgs>> getAllOf() {
-        return this.allOf == null ? Output.empty() : this.allOf;
+        return this.allOf == null ? Codegen.empty() : this.allOf;
     }
 
     @Import(name="anyOf")
       private final @Nullable Output<List<JSONSchemaPropsArgs>> anyOf;
 
     public Output<List<JSONSchemaPropsArgs>> getAnyOf() {
-        return this.anyOf == null ? Output.empty() : this.anyOf;
+        return this.anyOf == null ? Codegen.empty() : this.anyOf;
     }
 
     /**
@@ -76,63 +77,63 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<JsonElement> default_;
 
     public Output<JsonElement> getDefault_() {
-        return this.default_ == null ? Output.empty() : this.default_;
+        return this.default_ == null ? Codegen.empty() : this.default_;
     }
 
     @Import(name="definitions")
       private final @Nullable Output<Map<String,JSONSchemaPropsArgs>> definitions;
 
     public Output<Map<String,JSONSchemaPropsArgs>> getDefinitions() {
-        return this.definitions == null ? Output.empty() : this.definitions;
+        return this.definitions == null ? Codegen.empty() : this.definitions;
     }
 
     @Import(name="dependencies")
       private final @Nullable Output<Map<String,Either<JSONSchemaPropsArgs,List<String>>>> dependencies;
 
     public Output<Map<String,Either<JSONSchemaPropsArgs,List<String>>>> getDependencies() {
-        return this.dependencies == null ? Output.empty() : this.dependencies;
+        return this.dependencies == null ? Codegen.empty() : this.dependencies;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="enum")
       private final @Nullable Output<List<JsonElement>> enum_;
 
     public Output<List<JsonElement>> getEnum_() {
-        return this.enum_ == null ? Output.empty() : this.enum_;
+        return this.enum_ == null ? Codegen.empty() : this.enum_;
     }
 
     @Import(name="example")
       private final @Nullable Output<JsonElement> example;
 
     public Output<JsonElement> getExample() {
-        return this.example == null ? Output.empty() : this.example;
+        return this.example == null ? Codegen.empty() : this.example;
     }
 
     @Import(name="exclusiveMaximum")
       private final @Nullable Output<Boolean> exclusiveMaximum;
 
     public Output<Boolean> getExclusiveMaximum() {
-        return this.exclusiveMaximum == null ? Output.empty() : this.exclusiveMaximum;
+        return this.exclusiveMaximum == null ? Codegen.empty() : this.exclusiveMaximum;
     }
 
     @Import(name="exclusiveMinimum")
       private final @Nullable Output<Boolean> exclusiveMinimum;
 
     public Output<Boolean> getExclusiveMinimum() {
-        return this.exclusiveMinimum == null ? Output.empty() : this.exclusiveMinimum;
+        return this.exclusiveMinimum == null ? Codegen.empty() : this.exclusiveMinimum;
     }
 
     @Import(name="externalDocs")
       private final @Nullable Output<ExternalDocumentationArgs> externalDocs;
 
     public Output<ExternalDocumentationArgs> getExternalDocs() {
-        return this.externalDocs == null ? Output.empty() : this.externalDocs;
+        return this.externalDocs == null ? Codegen.empty() : this.externalDocs;
     }
 
     /**
@@ -145,154 +146,154 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> format;
 
     public Output<String> getFormat() {
-        return this.format == null ? Output.empty() : this.format;
+        return this.format == null ? Codegen.empty() : this.format;
     }
 
     @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     @Import(name="items")
       private final @Nullable Output<Either<JSONSchemaPropsArgs,List<JsonElement>>> items;
 
     public Output<Either<JSONSchemaPropsArgs,List<JsonElement>>> getItems() {
-        return this.items == null ? Output.empty() : this.items;
+        return this.items == null ? Codegen.empty() : this.items;
     }
 
     @Import(name="maxItems")
       private final @Nullable Output<Integer> maxItems;
 
     public Output<Integer> getMaxItems() {
-        return this.maxItems == null ? Output.empty() : this.maxItems;
+        return this.maxItems == null ? Codegen.empty() : this.maxItems;
     }
 
     @Import(name="maxLength")
       private final @Nullable Output<Integer> maxLength;
 
     public Output<Integer> getMaxLength() {
-        return this.maxLength == null ? Output.empty() : this.maxLength;
+        return this.maxLength == null ? Codegen.empty() : this.maxLength;
     }
 
     @Import(name="maxProperties")
       private final @Nullable Output<Integer> maxProperties;
 
     public Output<Integer> getMaxProperties() {
-        return this.maxProperties == null ? Output.empty() : this.maxProperties;
+        return this.maxProperties == null ? Codegen.empty() : this.maxProperties;
     }
 
     @Import(name="maximum")
       private final @Nullable Output<Double> maximum;
 
     public Output<Double> getMaximum() {
-        return this.maximum == null ? Output.empty() : this.maximum;
+        return this.maximum == null ? Codegen.empty() : this.maximum;
     }
 
     @Import(name="minItems")
       private final @Nullable Output<Integer> minItems;
 
     public Output<Integer> getMinItems() {
-        return this.minItems == null ? Output.empty() : this.minItems;
+        return this.minItems == null ? Codegen.empty() : this.minItems;
     }
 
     @Import(name="minLength")
       private final @Nullable Output<Integer> minLength;
 
     public Output<Integer> getMinLength() {
-        return this.minLength == null ? Output.empty() : this.minLength;
+        return this.minLength == null ? Codegen.empty() : this.minLength;
     }
 
     @Import(name="minProperties")
       private final @Nullable Output<Integer> minProperties;
 
     public Output<Integer> getMinProperties() {
-        return this.minProperties == null ? Output.empty() : this.minProperties;
+        return this.minProperties == null ? Codegen.empty() : this.minProperties;
     }
 
     @Import(name="minimum")
       private final @Nullable Output<Double> minimum;
 
     public Output<Double> getMinimum() {
-        return this.minimum == null ? Output.empty() : this.minimum;
+        return this.minimum == null ? Codegen.empty() : this.minimum;
     }
 
     @Import(name="multipleOf")
       private final @Nullable Output<Double> multipleOf;
 
     public Output<Double> getMultipleOf() {
-        return this.multipleOf == null ? Output.empty() : this.multipleOf;
+        return this.multipleOf == null ? Codegen.empty() : this.multipleOf;
     }
 
     @Import(name="not")
       private final @Nullable Output<JSONSchemaPropsArgs> not;
 
     public Output<JSONSchemaPropsArgs> getNot() {
-        return this.not == null ? Output.empty() : this.not;
+        return this.not == null ? Codegen.empty() : this.not;
     }
 
     @Import(name="nullable")
       private final @Nullable Output<Boolean> nullable;
 
     public Output<Boolean> getNullable() {
-        return this.nullable == null ? Output.empty() : this.nullable;
+        return this.nullable == null ? Codegen.empty() : this.nullable;
     }
 
     @Import(name="oneOf")
       private final @Nullable Output<List<JSONSchemaPropsArgs>> oneOf;
 
     public Output<List<JSONSchemaPropsArgs>> getOneOf() {
-        return this.oneOf == null ? Output.empty() : this.oneOf;
+        return this.oneOf == null ? Codegen.empty() : this.oneOf;
     }
 
     @Import(name="pattern")
       private final @Nullable Output<String> pattern;
 
     public Output<String> getPattern() {
-        return this.pattern == null ? Output.empty() : this.pattern;
+        return this.pattern == null ? Codegen.empty() : this.pattern;
     }
 
     @Import(name="patternProperties")
       private final @Nullable Output<Map<String,JSONSchemaPropsArgs>> patternProperties;
 
     public Output<Map<String,JSONSchemaPropsArgs>> getPatternProperties() {
-        return this.patternProperties == null ? Output.empty() : this.patternProperties;
+        return this.patternProperties == null ? Codegen.empty() : this.patternProperties;
     }
 
     @Import(name="properties")
       private final @Nullable Output<Map<String,JSONSchemaPropsArgs>> properties;
 
     public Output<Map<String,JSONSchemaPropsArgs>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     @Import(name="required")
       private final @Nullable Output<List<String>> required;
 
     public Output<List<String>> getRequired() {
-        return this.required == null ? Output.empty() : this.required;
+        return this.required == null ? Codegen.empty() : this.required;
     }
 
     @Import(name="title")
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     @Import(name="uniqueItems")
       private final @Nullable Output<Boolean> uniqueItems;
 
     public Output<Boolean> getUniqueItems() {
-        return this.uniqueItems == null ? Output.empty() : this.uniqueItems;
+        return this.uniqueItems == null ? Codegen.empty() : this.uniqueItems;
     }
 
     /**
@@ -303,7 +304,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Boolean> x_kubernetes_embedded_resource;
 
     public Output<Boolean> getX_kubernetes_embedded_resource() {
-        return this.x_kubernetes_embedded_resource == null ? Output.empty() : this.x_kubernetes_embedded_resource;
+        return this.x_kubernetes_embedded_resource == null ? Codegen.empty() : this.x_kubernetes_embedded_resource;
     }
 
     /**
@@ -323,7 +324,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Boolean> x_kubernetes_int_or_string;
 
     public Output<Boolean> getX_kubernetes_int_or_string() {
-        return this.x_kubernetes_int_or_string == null ? Output.empty() : this.x_kubernetes_int_or_string;
+        return this.x_kubernetes_int_or_string == null ? Codegen.empty() : this.x_kubernetes_int_or_string;
     }
 
     /**
@@ -336,7 +337,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<String>> x_kubernetes_list_map_keys;
 
     public Output<List<String>> getX_kubernetes_list_map_keys() {
-        return this.x_kubernetes_list_map_keys == null ? Output.empty() : this.x_kubernetes_list_map_keys;
+        return this.x_kubernetes_list_map_keys == null ? Codegen.empty() : this.x_kubernetes_list_map_keys;
     }
 
     /**
@@ -360,7 +361,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> x_kubernetes_list_type;
 
     public Output<String> getX_kubernetes_list_type() {
-        return this.x_kubernetes_list_type == null ? Output.empty() : this.x_kubernetes_list_type;
+        return this.x_kubernetes_list_type == null ? Codegen.empty() : this.x_kubernetes_list_type;
     }
 
     /**
@@ -378,7 +379,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> x_kubernetes_map_type;
 
     public Output<String> getX_kubernetes_map_type() {
-        return this.x_kubernetes_map_type == null ? Output.empty() : this.x_kubernetes_map_type;
+        return this.x_kubernetes_map_type == null ? Codegen.empty() : this.x_kubernetes_map_type;
     }
 
     /**
@@ -389,7 +390,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Boolean> x_kubernetes_preserve_unknown_fields;
 
     public Output<Boolean> getX_kubernetes_preserve_unknown_fields() {
-        return this.x_kubernetes_preserve_unknown_fields == null ? Output.empty() : this.x_kubernetes_preserve_unknown_fields;
+        return this.x_kubernetes_preserve_unknown_fields == null ? Codegen.empty() : this.x_kubernetes_preserve_unknown_fields;
     }
 
     public JSONSchemaPropsArgs(
@@ -482,49 +483,49 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private JSONSchemaPropsArgs() {
-        this.$ref = Output.empty();
-        this.$schema = Output.empty();
-        this.additionalItems = Output.empty();
-        this.additionalProperties = Output.empty();
-        this.allOf = Output.empty();
-        this.anyOf = Output.empty();
-        this.default_ = Output.empty();
-        this.definitions = Output.empty();
-        this.dependencies = Output.empty();
-        this.description = Output.empty();
-        this.enum_ = Output.empty();
-        this.example = Output.empty();
-        this.exclusiveMaximum = Output.empty();
-        this.exclusiveMinimum = Output.empty();
-        this.externalDocs = Output.empty();
-        this.format = Output.empty();
-        this.id = Output.empty();
-        this.items = Output.empty();
-        this.maxItems = Output.empty();
-        this.maxLength = Output.empty();
-        this.maxProperties = Output.empty();
-        this.maximum = Output.empty();
-        this.minItems = Output.empty();
-        this.minLength = Output.empty();
-        this.minProperties = Output.empty();
-        this.minimum = Output.empty();
-        this.multipleOf = Output.empty();
-        this.not = Output.empty();
-        this.nullable = Output.empty();
-        this.oneOf = Output.empty();
-        this.pattern = Output.empty();
-        this.patternProperties = Output.empty();
-        this.properties = Output.empty();
-        this.required = Output.empty();
-        this.title = Output.empty();
-        this.type = Output.empty();
-        this.uniqueItems = Output.empty();
-        this.x_kubernetes_embedded_resource = Output.empty();
-        this.x_kubernetes_int_or_string = Output.empty();
-        this.x_kubernetes_list_map_keys = Output.empty();
-        this.x_kubernetes_list_type = Output.empty();
-        this.x_kubernetes_map_type = Output.empty();
-        this.x_kubernetes_preserve_unknown_fields = Output.empty();
+        this.$ref = Codegen.empty();
+        this.$schema = Codegen.empty();
+        this.additionalItems = Codegen.empty();
+        this.additionalProperties = Codegen.empty();
+        this.allOf = Codegen.empty();
+        this.anyOf = Codegen.empty();
+        this.default_ = Codegen.empty();
+        this.definitions = Codegen.empty();
+        this.dependencies = Codegen.empty();
+        this.description = Codegen.empty();
+        this.enum_ = Codegen.empty();
+        this.example = Codegen.empty();
+        this.exclusiveMaximum = Codegen.empty();
+        this.exclusiveMinimum = Codegen.empty();
+        this.externalDocs = Codegen.empty();
+        this.format = Codegen.empty();
+        this.id = Codegen.empty();
+        this.items = Codegen.empty();
+        this.maxItems = Codegen.empty();
+        this.maxLength = Codegen.empty();
+        this.maxProperties = Codegen.empty();
+        this.maximum = Codegen.empty();
+        this.minItems = Codegen.empty();
+        this.minLength = Codegen.empty();
+        this.minProperties = Codegen.empty();
+        this.minimum = Codegen.empty();
+        this.multipleOf = Codegen.empty();
+        this.not = Codegen.empty();
+        this.nullable = Codegen.empty();
+        this.oneOf = Codegen.empty();
+        this.pattern = Codegen.empty();
+        this.patternProperties = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.required = Codegen.empty();
+        this.title = Codegen.empty();
+        this.type = Codegen.empty();
+        this.uniqueItems = Codegen.empty();
+        this.x_kubernetes_embedded_resource = Codegen.empty();
+        this.x_kubernetes_int_or_string = Codegen.empty();
+        this.x_kubernetes_list_map_keys = Codegen.empty();
+        this.x_kubernetes_list_type = Codegen.empty();
+        this.x_kubernetes_map_type = Codegen.empty();
+        this.x_kubernetes_preserve_unknown_fields = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -636,7 +637,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder $ref(@Nullable String $ref) {
-            this.$ref = Output.ofNullable($ref);
+            this.$ref = Codegen.ofNullable($ref);
             return this;
         }
         public Builder $schema(@Nullable Output<String> $schema) {
@@ -644,7 +645,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder $schema(@Nullable String $schema) {
-            this.$schema = Output.ofNullable($schema);
+            this.$schema = Codegen.ofNullable($schema);
             return this;
         }
         public Builder additionalItems(@Nullable Output<Either<JSONSchemaPropsArgs,Boolean>> additionalItems) {
@@ -652,7 +653,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder additionalItems(@Nullable Either<JSONSchemaPropsArgs,Boolean> additionalItems) {
-            this.additionalItems = Output.ofNullable(additionalItems);
+            this.additionalItems = Codegen.ofNullable(additionalItems);
             return this;
         }
         public Builder additionalProperties(@Nullable Output<Either<JSONSchemaPropsArgs,Boolean>> additionalProperties) {
@@ -660,7 +661,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder additionalProperties(@Nullable Either<JSONSchemaPropsArgs,Boolean> additionalProperties) {
-            this.additionalProperties = Output.ofNullable(additionalProperties);
+            this.additionalProperties = Codegen.ofNullable(additionalProperties);
             return this;
         }
         public Builder allOf(@Nullable Output<List<JSONSchemaPropsArgs>> allOf) {
@@ -668,7 +669,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder allOf(@Nullable List<JSONSchemaPropsArgs> allOf) {
-            this.allOf = Output.ofNullable(allOf);
+            this.allOf = Codegen.ofNullable(allOf);
             return this;
         }
         public Builder allOf(JSONSchemaPropsArgs... allOf) {
@@ -679,7 +680,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder anyOf(@Nullable List<JSONSchemaPropsArgs> anyOf) {
-            this.anyOf = Output.ofNullable(anyOf);
+            this.anyOf = Codegen.ofNullable(anyOf);
             return this;
         }
         public Builder anyOf(JSONSchemaPropsArgs... anyOf) {
@@ -690,7 +691,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder default_(@Nullable JsonElement default_) {
-            this.default_ = Output.ofNullable(default_);
+            this.default_ = Codegen.ofNullable(default_);
             return this;
         }
         public Builder definitions(@Nullable Output<Map<String,JSONSchemaPropsArgs>> definitions) {
@@ -698,7 +699,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder definitions(@Nullable Map<String,JSONSchemaPropsArgs> definitions) {
-            this.definitions = Output.ofNullable(definitions);
+            this.definitions = Codegen.ofNullable(definitions);
             return this;
         }
         public Builder dependencies(@Nullable Output<Map<String,Either<JSONSchemaPropsArgs,List<String>>>> dependencies) {
@@ -706,7 +707,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder dependencies(@Nullable Map<String,Either<JSONSchemaPropsArgs,List<String>>> dependencies) {
-            this.dependencies = Output.ofNullable(dependencies);
+            this.dependencies = Codegen.ofNullable(dependencies);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -714,7 +715,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder enum_(@Nullable Output<List<JsonElement>> enum_) {
@@ -722,7 +723,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder enum_(@Nullable List<JsonElement> enum_) {
-            this.enum_ = Output.ofNullable(enum_);
+            this.enum_ = Codegen.ofNullable(enum_);
             return this;
         }
         public Builder enum_(JsonElement... enum_) {
@@ -733,7 +734,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder example(@Nullable JsonElement example) {
-            this.example = Output.ofNullable(example);
+            this.example = Codegen.ofNullable(example);
             return this;
         }
         public Builder exclusiveMaximum(@Nullable Output<Boolean> exclusiveMaximum) {
@@ -741,7 +742,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder exclusiveMaximum(@Nullable Boolean exclusiveMaximum) {
-            this.exclusiveMaximum = Output.ofNullable(exclusiveMaximum);
+            this.exclusiveMaximum = Codegen.ofNullable(exclusiveMaximum);
             return this;
         }
         public Builder exclusiveMinimum(@Nullable Output<Boolean> exclusiveMinimum) {
@@ -749,7 +750,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder exclusiveMinimum(@Nullable Boolean exclusiveMinimum) {
-            this.exclusiveMinimum = Output.ofNullable(exclusiveMinimum);
+            this.exclusiveMinimum = Codegen.ofNullable(exclusiveMinimum);
             return this;
         }
         public Builder externalDocs(@Nullable Output<ExternalDocumentationArgs> externalDocs) {
@@ -757,7 +758,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder externalDocs(@Nullable ExternalDocumentationArgs externalDocs) {
-            this.externalDocs = Output.ofNullable(externalDocs);
+            this.externalDocs = Codegen.ofNullable(externalDocs);
             return this;
         }
         public Builder format(@Nullable Output<String> format) {
@@ -765,7 +766,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder format(@Nullable String format) {
-            this.format = Output.ofNullable(format);
+            this.format = Codegen.ofNullable(format);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -773,7 +774,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder items(@Nullable Output<Either<JSONSchemaPropsArgs,List<JsonElement>>> items) {
@@ -781,7 +782,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder items(@Nullable Either<JSONSchemaPropsArgs,List<JsonElement>> items) {
-            this.items = Output.ofNullable(items);
+            this.items = Codegen.ofNullable(items);
             return this;
         }
         public Builder maxItems(@Nullable Output<Integer> maxItems) {
@@ -789,7 +790,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder maxItems(@Nullable Integer maxItems) {
-            this.maxItems = Output.ofNullable(maxItems);
+            this.maxItems = Codegen.ofNullable(maxItems);
             return this;
         }
         public Builder maxLength(@Nullable Output<Integer> maxLength) {
@@ -797,7 +798,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder maxLength(@Nullable Integer maxLength) {
-            this.maxLength = Output.ofNullable(maxLength);
+            this.maxLength = Codegen.ofNullable(maxLength);
             return this;
         }
         public Builder maxProperties(@Nullable Output<Integer> maxProperties) {
@@ -805,7 +806,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder maxProperties(@Nullable Integer maxProperties) {
-            this.maxProperties = Output.ofNullable(maxProperties);
+            this.maxProperties = Codegen.ofNullable(maxProperties);
             return this;
         }
         public Builder maximum(@Nullable Output<Double> maximum) {
@@ -813,7 +814,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder maximum(@Nullable Double maximum) {
-            this.maximum = Output.ofNullable(maximum);
+            this.maximum = Codegen.ofNullable(maximum);
             return this;
         }
         public Builder minItems(@Nullable Output<Integer> minItems) {
@@ -821,7 +822,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder minItems(@Nullable Integer minItems) {
-            this.minItems = Output.ofNullable(minItems);
+            this.minItems = Codegen.ofNullable(minItems);
             return this;
         }
         public Builder minLength(@Nullable Output<Integer> minLength) {
@@ -829,7 +830,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder minLength(@Nullable Integer minLength) {
-            this.minLength = Output.ofNullable(minLength);
+            this.minLength = Codegen.ofNullable(minLength);
             return this;
         }
         public Builder minProperties(@Nullable Output<Integer> minProperties) {
@@ -837,7 +838,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder minProperties(@Nullable Integer minProperties) {
-            this.minProperties = Output.ofNullable(minProperties);
+            this.minProperties = Codegen.ofNullable(minProperties);
             return this;
         }
         public Builder minimum(@Nullable Output<Double> minimum) {
@@ -845,7 +846,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder minimum(@Nullable Double minimum) {
-            this.minimum = Output.ofNullable(minimum);
+            this.minimum = Codegen.ofNullable(minimum);
             return this;
         }
         public Builder multipleOf(@Nullable Output<Double> multipleOf) {
@@ -853,7 +854,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder multipleOf(@Nullable Double multipleOf) {
-            this.multipleOf = Output.ofNullable(multipleOf);
+            this.multipleOf = Codegen.ofNullable(multipleOf);
             return this;
         }
         public Builder not(@Nullable Output<JSONSchemaPropsArgs> not) {
@@ -861,7 +862,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder not(@Nullable JSONSchemaPropsArgs not) {
-            this.not = Output.ofNullable(not);
+            this.not = Codegen.ofNullable(not);
             return this;
         }
         public Builder nullable(@Nullable Output<Boolean> nullable) {
@@ -869,7 +870,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder nullable(@Nullable Boolean nullable) {
-            this.nullable = Output.ofNullable(nullable);
+            this.nullable = Codegen.ofNullable(nullable);
             return this;
         }
         public Builder oneOf(@Nullable Output<List<JSONSchemaPropsArgs>> oneOf) {
@@ -877,7 +878,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder oneOf(@Nullable List<JSONSchemaPropsArgs> oneOf) {
-            this.oneOf = Output.ofNullable(oneOf);
+            this.oneOf = Codegen.ofNullable(oneOf);
             return this;
         }
         public Builder oneOf(JSONSchemaPropsArgs... oneOf) {
@@ -888,7 +889,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder pattern(@Nullable String pattern) {
-            this.pattern = Output.ofNullable(pattern);
+            this.pattern = Codegen.ofNullable(pattern);
             return this;
         }
         public Builder patternProperties(@Nullable Output<Map<String,JSONSchemaPropsArgs>> patternProperties) {
@@ -896,7 +897,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder patternProperties(@Nullable Map<String,JSONSchemaPropsArgs> patternProperties) {
-            this.patternProperties = Output.ofNullable(patternProperties);
+            this.patternProperties = Codegen.ofNullable(patternProperties);
             return this;
         }
         public Builder properties(@Nullable Output<Map<String,JSONSchemaPropsArgs>> properties) {
@@ -904,7 +905,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder properties(@Nullable Map<String,JSONSchemaPropsArgs> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder required(@Nullable Output<List<String>> required) {
@@ -912,7 +913,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder required(@Nullable List<String> required) {
-            this.required = Output.ofNullable(required);
+            this.required = Codegen.ofNullable(required);
             return this;
         }
         public Builder required(String... required) {
@@ -923,7 +924,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -931,7 +932,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder uniqueItems(@Nullable Output<Boolean> uniqueItems) {
@@ -939,7 +940,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder uniqueItems(@Nullable Boolean uniqueItems) {
-            this.uniqueItems = Output.ofNullable(uniqueItems);
+            this.uniqueItems = Codegen.ofNullable(uniqueItems);
             return this;
         }
         public Builder x_kubernetes_embedded_resource(@Nullable Output<Boolean> x_kubernetes_embedded_resource) {
@@ -947,7 +948,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder x_kubernetes_embedded_resource(@Nullable Boolean x_kubernetes_embedded_resource) {
-            this.x_kubernetes_embedded_resource = Output.ofNullable(x_kubernetes_embedded_resource);
+            this.x_kubernetes_embedded_resource = Codegen.ofNullable(x_kubernetes_embedded_resource);
             return this;
         }
         public Builder x_kubernetes_int_or_string(@Nullable Output<Boolean> x_kubernetes_int_or_string) {
@@ -955,7 +956,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder x_kubernetes_int_or_string(@Nullable Boolean x_kubernetes_int_or_string) {
-            this.x_kubernetes_int_or_string = Output.ofNullable(x_kubernetes_int_or_string);
+            this.x_kubernetes_int_or_string = Codegen.ofNullable(x_kubernetes_int_or_string);
             return this;
         }
         public Builder x_kubernetes_list_map_keys(@Nullable Output<List<String>> x_kubernetes_list_map_keys) {
@@ -963,7 +964,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder x_kubernetes_list_map_keys(@Nullable List<String> x_kubernetes_list_map_keys) {
-            this.x_kubernetes_list_map_keys = Output.ofNullable(x_kubernetes_list_map_keys);
+            this.x_kubernetes_list_map_keys = Codegen.ofNullable(x_kubernetes_list_map_keys);
             return this;
         }
         public Builder x_kubernetes_list_map_keys(String... x_kubernetes_list_map_keys) {
@@ -974,7 +975,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder x_kubernetes_list_type(@Nullable String x_kubernetes_list_type) {
-            this.x_kubernetes_list_type = Output.ofNullable(x_kubernetes_list_type);
+            this.x_kubernetes_list_type = Codegen.ofNullable(x_kubernetes_list_type);
             return this;
         }
         public Builder x_kubernetes_map_type(@Nullable Output<String> x_kubernetes_map_type) {
@@ -982,7 +983,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder x_kubernetes_map_type(@Nullable String x_kubernetes_map_type) {
-            this.x_kubernetes_map_type = Output.ofNullable(x_kubernetes_map_type);
+            this.x_kubernetes_map_type = Codegen.ofNullable(x_kubernetes_map_type);
             return this;
         }
         public Builder x_kubernetes_preserve_unknown_fields(@Nullable Output<Boolean> x_kubernetes_preserve_unknown_fields) {
@@ -990,7 +991,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder x_kubernetes_preserve_unknown_fields(@Nullable Boolean x_kubernetes_preserve_unknown_fields) {
-            this.x_kubernetes_preserve_unknown_fields = Output.ofNullable(x_kubernetes_preserve_unknown_fields);
+            this.x_kubernetes_preserve_unknown_fields = Codegen.ofNullable(x_kubernetes_preserve_unknown_fields);
             return this;
         }        public JSONSchemaPropsArgs build() {
             return new JSONSchemaPropsArgs($ref, $schema, additionalItems, additionalProperties, allOf, anyOf, default_, definitions, dependencies, description, enum_, example, exclusiveMaximum, exclusiveMinimum, externalDocs, format, id, items, maxItems, maxLength, maxProperties, maximum, minItems, minLength, minProperties, minimum, multipleOf, not, nullable, oneOf, pattern, patternProperties, properties, required, title, type, uniqueItems, x_kubernetes_embedded_resource, x_kubernetes_int_or_string, x_kubernetes_list_map_keys, x_kubernetes_list_type, x_kubernetes_map_type, x_kubernetes_preserve_unknown_fields);

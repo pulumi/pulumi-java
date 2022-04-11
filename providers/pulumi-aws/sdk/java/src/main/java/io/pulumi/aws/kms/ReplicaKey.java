@@ -9,6 +9,7 @@ import io.pulumi.aws.kms.inputs.ReplicaKeyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -236,7 +237,7 @@ public class ReplicaKey extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ReplicaKey(String name, ReplicaKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:kms/replicaKey:ReplicaKey", name, args == null ? ReplicaKeyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:kms/replicaKey:ReplicaKey", name, args == null ? ReplicaKeyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ReplicaKey(String name, Output<String> id, @Nullable ReplicaKeyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

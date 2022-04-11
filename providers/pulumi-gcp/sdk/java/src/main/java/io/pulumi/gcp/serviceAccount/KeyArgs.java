@@ -5,6 +5,7 @@ package io.pulumi.gcp.serviceAccount;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,Object>> keepers;
 
     public Output<Map<String,Object>> getKeepers() {
-        return this.keepers == null ? Output.empty() : this.keepers;
+        return this.keepers == null ? Codegen.empty() : this.keepers;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> keyAlgorithm;
 
     public Output<String> getKeyAlgorithm() {
-        return this.keyAlgorithm == null ? Output.empty() : this.keyAlgorithm;
+        return this.keyAlgorithm == null ? Codegen.empty() : this.keyAlgorithm;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> privateKeyType;
 
     public Output<String> getPrivateKeyType() {
-        return this.privateKeyType == null ? Output.empty() : this.privateKeyType;
+        return this.privateKeyType == null ? Codegen.empty() : this.privateKeyType;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> publicKeyData;
 
     public Output<String> getPublicKeyData() {
-        return this.publicKeyData == null ? Output.empty() : this.publicKeyData;
+        return this.publicKeyData == null ? Codegen.empty() : this.publicKeyData;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> publicKeyType;
 
     public Output<String> getPublicKeyType() {
-        return this.publicKeyType == null ? Output.empty() : this.publicKeyType;
+        return this.publicKeyType == null ? Codegen.empty() : this.publicKeyType;
     }
 
     /**
@@ -103,12 +104,12 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeyArgs() {
-        this.keepers = Output.empty();
-        this.keyAlgorithm = Output.empty();
-        this.privateKeyType = Output.empty();
-        this.publicKeyData = Output.empty();
-        this.publicKeyType = Output.empty();
-        this.serviceAccountId = Output.empty();
+        this.keepers = Codegen.empty();
+        this.keyAlgorithm = Codegen.empty();
+        this.privateKeyType = Codegen.empty();
+        this.publicKeyData = Codegen.empty();
+        this.publicKeyType = Codegen.empty();
+        this.serviceAccountId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keepers(@Nullable Map<String,Object> keepers) {
-            this.keepers = Output.ofNullable(keepers);
+            this.keepers = Codegen.ofNullable(keepers);
             return this;
         }
         public Builder keyAlgorithm(@Nullable Output<String> keyAlgorithm) {
@@ -154,7 +155,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyAlgorithm(@Nullable String keyAlgorithm) {
-            this.keyAlgorithm = Output.ofNullable(keyAlgorithm);
+            this.keyAlgorithm = Codegen.ofNullable(keyAlgorithm);
             return this;
         }
         public Builder privateKeyType(@Nullable Output<String> privateKeyType) {
@@ -162,7 +163,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder privateKeyType(@Nullable String privateKeyType) {
-            this.privateKeyType = Output.ofNullable(privateKeyType);
+            this.privateKeyType = Codegen.ofNullable(privateKeyType);
             return this;
         }
         public Builder publicKeyData(@Nullable Output<String> publicKeyData) {
@@ -170,7 +171,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicKeyData(@Nullable String publicKeyData) {
-            this.publicKeyData = Output.ofNullable(publicKeyData);
+            this.publicKeyData = Codegen.ofNullable(publicKeyData);
             return this;
         }
         public Builder publicKeyType(@Nullable Output<String> publicKeyType) {
@@ -178,7 +179,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicKeyType(@Nullable String publicKeyType) {
-            this.publicKeyType = Output.ofNullable(publicKeyType);
+            this.publicKeyType = Codegen.ofNullable(publicKeyType);
             return this;
         }
         public Builder serviceAccountId(Output<String> serviceAccountId) {

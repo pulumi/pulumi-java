@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.container.inputs.AzureClusterControlPlaneDatabaseEncryptionGetArgs;
 import io.pulumi.gcp.container.inputs.AzureClusterControlPlaneMainVolumeGetArgs;
 import io.pulumi.gcp.container.inputs.AzureClusterControlPlaneProxyConfigGetArgs;
@@ -30,7 +31,7 @@ public final class AzureClusterControlPlaneGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<AzureClusterControlPlaneDatabaseEncryptionGetArgs> databaseEncryption;
 
     public Output<AzureClusterControlPlaneDatabaseEncryptionGetArgs> getDatabaseEncryption() {
-        return this.databaseEncryption == null ? Output.empty() : this.databaseEncryption;
+        return this.databaseEncryption == null ? Codegen.empty() : this.databaseEncryption;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class AzureClusterControlPlaneGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<AzureClusterControlPlaneMainVolumeGetArgs> mainVolume;
 
     public Output<AzureClusterControlPlaneMainVolumeGetArgs> getMainVolume() {
-        return this.mainVolume == null ? Output.empty() : this.mainVolume;
+        return this.mainVolume == null ? Codegen.empty() : this.mainVolume;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class AzureClusterControlPlaneGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<AzureClusterControlPlaneProxyConfigGetArgs> proxyConfig;
 
     public Output<AzureClusterControlPlaneProxyConfigGetArgs> getProxyConfig() {
-        return this.proxyConfig == null ? Output.empty() : this.proxyConfig;
+        return this.proxyConfig == null ? Codegen.empty() : this.proxyConfig;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class AzureClusterControlPlaneGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<List<AzureClusterControlPlaneReplicaPlacementGetArgs>> replicaPlacements;
 
     public Output<List<AzureClusterControlPlaneReplicaPlacementGetArgs>> getReplicaPlacements() {
-        return this.replicaPlacements == null ? Output.empty() : this.replicaPlacements;
+        return this.replicaPlacements == null ? Codegen.empty() : this.replicaPlacements;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class AzureClusterControlPlaneGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<AzureClusterControlPlaneRootVolumeGetArgs> rootVolume;
 
     public Output<AzureClusterControlPlaneRootVolumeGetArgs> getRootVolume() {
-        return this.rootVolume == null ? Output.empty() : this.rootVolume;
+        return this.rootVolume == null ? Codegen.empty() : this.rootVolume;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class AzureClusterControlPlaneGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -129,7 +130,7 @@ public final class AzureClusterControlPlaneGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> vmSize;
 
     public Output<String> getVmSize() {
-        return this.vmSize == null ? Output.empty() : this.vmSize;
+        return this.vmSize == null ? Codegen.empty() : this.vmSize;
     }
 
     public AzureClusterControlPlaneGetArgs(
@@ -156,16 +157,16 @@ public final class AzureClusterControlPlaneGetArgs extends io.pulumi.resources.R
     }
 
     private AzureClusterControlPlaneGetArgs() {
-        this.databaseEncryption = Output.empty();
-        this.mainVolume = Output.empty();
-        this.proxyConfig = Output.empty();
-        this.replicaPlacements = Output.empty();
-        this.rootVolume = Output.empty();
-        this.sshConfig = Output.empty();
-        this.subnetId = Output.empty();
-        this.tags = Output.empty();
-        this.version = Output.empty();
-        this.vmSize = Output.empty();
+        this.databaseEncryption = Codegen.empty();
+        this.mainVolume = Codegen.empty();
+        this.proxyConfig = Codegen.empty();
+        this.replicaPlacements = Codegen.empty();
+        this.rootVolume = Codegen.empty();
+        this.sshConfig = Codegen.empty();
+        this.subnetId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.version = Codegen.empty();
+        this.vmSize = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -211,7 +212,7 @@ public final class AzureClusterControlPlaneGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder databaseEncryption(@Nullable AzureClusterControlPlaneDatabaseEncryptionGetArgs databaseEncryption) {
-            this.databaseEncryption = Output.ofNullable(databaseEncryption);
+            this.databaseEncryption = Codegen.ofNullable(databaseEncryption);
             return this;
         }
         public Builder mainVolume(@Nullable Output<AzureClusterControlPlaneMainVolumeGetArgs> mainVolume) {
@@ -219,7 +220,7 @@ public final class AzureClusterControlPlaneGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder mainVolume(@Nullable AzureClusterControlPlaneMainVolumeGetArgs mainVolume) {
-            this.mainVolume = Output.ofNullable(mainVolume);
+            this.mainVolume = Codegen.ofNullable(mainVolume);
             return this;
         }
         public Builder proxyConfig(@Nullable Output<AzureClusterControlPlaneProxyConfigGetArgs> proxyConfig) {
@@ -227,7 +228,7 @@ public final class AzureClusterControlPlaneGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder proxyConfig(@Nullable AzureClusterControlPlaneProxyConfigGetArgs proxyConfig) {
-            this.proxyConfig = Output.ofNullable(proxyConfig);
+            this.proxyConfig = Codegen.ofNullable(proxyConfig);
             return this;
         }
         public Builder replicaPlacements(@Nullable Output<List<AzureClusterControlPlaneReplicaPlacementGetArgs>> replicaPlacements) {
@@ -235,7 +236,7 @@ public final class AzureClusterControlPlaneGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder replicaPlacements(@Nullable List<AzureClusterControlPlaneReplicaPlacementGetArgs> replicaPlacements) {
-            this.replicaPlacements = Output.ofNullable(replicaPlacements);
+            this.replicaPlacements = Codegen.ofNullable(replicaPlacements);
             return this;
         }
         public Builder replicaPlacements(AzureClusterControlPlaneReplicaPlacementGetArgs... replicaPlacements) {
@@ -246,7 +247,7 @@ public final class AzureClusterControlPlaneGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder rootVolume(@Nullable AzureClusterControlPlaneRootVolumeGetArgs rootVolume) {
-            this.rootVolume = Output.ofNullable(rootVolume);
+            this.rootVolume = Codegen.ofNullable(rootVolume);
             return this;
         }
         public Builder sshConfig(Output<AzureClusterControlPlaneSshConfigGetArgs> sshConfig) {
@@ -270,7 +271,7 @@ public final class AzureClusterControlPlaneGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder version(Output<String> version) {
@@ -286,7 +287,7 @@ public final class AzureClusterControlPlaneGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = Output.ofNullable(vmSize);
+            this.vmSize = Codegen.ofNullable(vmSize);
             return this;
         }        public AzureClusterControlPlaneGetArgs build() {
             return new AzureClusterControlPlaneGetArgs(databaseEncryption, mainVolume, proxyConfig, replicaPlacements, rootVolume, sshConfig, subnetId, tags, version, vmSize);

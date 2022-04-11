@@ -11,6 +11,7 @@ import io.pulumi.awsnative.datasync.outputs.LocationNFSTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -128,7 +129,7 @@ public class LocationNFS extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LocationNFS(String name, LocationNFSArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:datasync:LocationNFS", name, args == null ? LocationNFSArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:datasync:LocationNFS", name, args == null ? LocationNFSArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private LocationNFS(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

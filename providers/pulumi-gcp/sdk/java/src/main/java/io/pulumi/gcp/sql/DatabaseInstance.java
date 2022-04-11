@@ -6,6 +6,7 @@ package io.pulumi.gcp.sql;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.sql.DatabaseInstanceArgs;
 import io.pulumi.gcp.sql.inputs.DatabaseInstanceState;
@@ -407,7 +408,7 @@ public class DatabaseInstance extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DatabaseInstance(String name, DatabaseInstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:sql/databaseInstance:DatabaseInstance", name, args == null ? DatabaseInstanceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:sql/databaseInstance:DatabaseInstance", name, args == null ? DatabaseInstanceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DatabaseInstance(String name, Output<String> id, @Nullable DatabaseInstanceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

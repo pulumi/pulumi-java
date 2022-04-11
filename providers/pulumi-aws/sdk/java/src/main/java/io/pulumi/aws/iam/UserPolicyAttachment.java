@@ -9,6 +9,7 @@ import io.pulumi.aws.iam.inputs.UserPolicyAttachmentState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -81,7 +82,7 @@ public class UserPolicyAttachment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public UserPolicyAttachment(String name, UserPolicyAttachmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:iam/userPolicyAttachment:UserPolicyAttachment", name, args == null ? UserPolicyAttachmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:iam/userPolicyAttachment:UserPolicyAttachment", name, args == null ? UserPolicyAttachmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private UserPolicyAttachment(String name, Output<String> id, @Nullable UserPolicyAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

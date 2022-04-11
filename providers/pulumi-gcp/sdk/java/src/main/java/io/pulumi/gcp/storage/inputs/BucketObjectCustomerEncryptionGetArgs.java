@@ -5,6 +5,7 @@ package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class BucketObjectCustomerEncryptionGetArgs extends io.pulumi.resou
       private final @Nullable Output<String> encryptionAlgorithm;
 
     public Output<String> getEncryptionAlgorithm() {
-        return this.encryptionAlgorithm == null ? Output.empty() : this.encryptionAlgorithm;
+        return this.encryptionAlgorithm == null ? Codegen.empty() : this.encryptionAlgorithm;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class BucketObjectCustomerEncryptionGetArgs extends io.pulumi.resou
     }
 
     private BucketObjectCustomerEncryptionGetArgs() {
-        this.encryptionAlgorithm = Output.empty();
-        this.encryptionKey = Output.empty();
+        this.encryptionAlgorithm = Codegen.empty();
+        this.encryptionKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class BucketObjectCustomerEncryptionGetArgs extends io.pulumi.resou
             return this;
         }
         public Builder encryptionAlgorithm(@Nullable String encryptionAlgorithm) {
-            this.encryptionAlgorithm = Output.ofNullable(encryptionAlgorithm);
+            this.encryptionAlgorithm = Codegen.ofNullable(encryptionAlgorithm);
             return this;
         }
         public Builder encryptionKey(Output<String> encryptionKey) {

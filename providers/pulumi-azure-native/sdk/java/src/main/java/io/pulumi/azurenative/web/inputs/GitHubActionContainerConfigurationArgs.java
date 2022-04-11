@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GitHubActionContainerConfigurationArgs extends io.pulumi.reso
       private final @Nullable Output<String> imageName;
 
     public Output<String> getImageName() {
-        return this.imageName == null ? Output.empty() : this.imageName;
+        return this.imageName == null ? Codegen.empty() : this.imageName;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class GitHubActionContainerConfigurationArgs extends io.pulumi.reso
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class GitHubActionContainerConfigurationArgs extends io.pulumi.reso
       private final @Nullable Output<String> serverUrl;
 
     public Output<String> getServerUrl() {
-        return this.serverUrl == null ? Output.empty() : this.serverUrl;
+        return this.serverUrl == null ? Codegen.empty() : this.serverUrl;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class GitHubActionContainerConfigurationArgs extends io.pulumi.reso
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     public GitHubActionContainerConfigurationArgs(
@@ -74,10 +75,10 @@ public final class GitHubActionContainerConfigurationArgs extends io.pulumi.reso
     }
 
     private GitHubActionContainerConfigurationArgs() {
-        this.imageName = Output.empty();
-        this.password = Output.empty();
-        this.serverUrl = Output.empty();
-        this.username = Output.empty();
+        this.imageName = Codegen.empty();
+        this.password = Codegen.empty();
+        this.serverUrl = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class GitHubActionContainerConfigurationArgs extends io.pulumi.reso
             return this;
         }
         public Builder imageName(@Nullable String imageName) {
-            this.imageName = Output.ofNullable(imageName);
+            this.imageName = Codegen.ofNullable(imageName);
             return this;
         }
         public Builder password(@Nullable Output<String> password) {
@@ -119,7 +120,7 @@ public final class GitHubActionContainerConfigurationArgs extends io.pulumi.reso
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder serverUrl(@Nullable Output<String> serverUrl) {
@@ -127,7 +128,7 @@ public final class GitHubActionContainerConfigurationArgs extends io.pulumi.reso
             return this;
         }
         public Builder serverUrl(@Nullable String serverUrl) {
-            this.serverUrl = Output.ofNullable(serverUrl);
+            this.serverUrl = Codegen.ofNullable(serverUrl);
             return this;
         }
         public Builder username(@Nullable Output<String> username) {
@@ -135,7 +136,7 @@ public final class GitHubActionContainerConfigurationArgs extends io.pulumi.reso
             return this;
         }
         public Builder username(@Nullable String username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }        public GitHubActionContainerConfigurationArgs build() {
             return new GitHubActionContainerConfigurationArgs(imageName, password, serverUrl, username);

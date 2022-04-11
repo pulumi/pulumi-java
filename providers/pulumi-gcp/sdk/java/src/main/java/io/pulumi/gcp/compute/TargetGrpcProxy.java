@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.TargetGrpcProxyArgs;
 import io.pulumi.gcp.compute.inputs.TargetGrpcProxyState;
@@ -237,7 +238,7 @@ public class TargetGrpcProxy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TargetGrpcProxy(String name, @Nullable TargetGrpcProxyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/targetGrpcProxy:TargetGrpcProxy", name, args == null ? TargetGrpcProxyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/targetGrpcProxy:TargetGrpcProxy", name, args == null ? TargetGrpcProxyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TargetGrpcProxy(String name, Output<String> id, @Nullable TargetGrpcProxyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

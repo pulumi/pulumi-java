@@ -5,6 +5,7 @@ package io.pulumi.awsnative.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class DomainNameEndpointConfigurationArgs extends io.pulumi.resourc
       private final @Nullable Output<List<String>> types;
 
     public Output<List<String>> getTypes() {
-        return this.types == null ? Output.empty() : this.types;
+        return this.types == null ? Codegen.empty() : this.types;
     }
 
     public DomainNameEndpointConfigurationArgs(@Nullable Output<List<String>> types) {
@@ -27,7 +28,7 @@ public final class DomainNameEndpointConfigurationArgs extends io.pulumi.resourc
     }
 
     private DomainNameEndpointConfigurationArgs() {
-        this.types = Output.empty();
+        this.types = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -55,7 +56,7 @@ public final class DomainNameEndpointConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder types(@Nullable List<String> types) {
-            this.types = Output.ofNullable(types);
+            this.types = Codegen.ofNullable(types);
             return this;
         }
         public Builder types(String... types) {

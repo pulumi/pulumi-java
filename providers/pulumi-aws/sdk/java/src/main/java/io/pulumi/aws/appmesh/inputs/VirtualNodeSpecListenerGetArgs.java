@@ -11,6 +11,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTimeoutGetArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTlsGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -27,7 +28,7 @@ public final class VirtualNodeSpecListenerGetArgs extends io.pulumi.resources.Re
       private final @Nullable Output<VirtualNodeSpecListenerConnectionPoolGetArgs> connectionPool;
 
     public Output<VirtualNodeSpecListenerConnectionPoolGetArgs> getConnectionPool() {
-        return this.connectionPool == null ? Output.empty() : this.connectionPool;
+        return this.connectionPool == null ? Codegen.empty() : this.connectionPool;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class VirtualNodeSpecListenerGetArgs extends io.pulumi.resources.Re
       private final @Nullable Output<VirtualNodeSpecListenerHealthCheckGetArgs> healthCheck;
 
     public Output<VirtualNodeSpecListenerHealthCheckGetArgs> getHealthCheck() {
-        return this.healthCheck == null ? Output.empty() : this.healthCheck;
+        return this.healthCheck == null ? Codegen.empty() : this.healthCheck;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class VirtualNodeSpecListenerGetArgs extends io.pulumi.resources.Re
       private final @Nullable Output<VirtualNodeSpecListenerOutlierDetectionGetArgs> outlierDetection;
 
     public Output<VirtualNodeSpecListenerOutlierDetectionGetArgs> getOutlierDetection() {
-        return this.outlierDetection == null ? Output.empty() : this.outlierDetection;
+        return this.outlierDetection == null ? Codegen.empty() : this.outlierDetection;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class VirtualNodeSpecListenerGetArgs extends io.pulumi.resources.Re
       private final @Nullable Output<VirtualNodeSpecListenerTimeoutGetArgs> timeout;
 
     public Output<VirtualNodeSpecListenerTimeoutGetArgs> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class VirtualNodeSpecListenerGetArgs extends io.pulumi.resources.Re
       private final @Nullable Output<VirtualNodeSpecListenerTlsGetArgs> tls;
 
     public Output<VirtualNodeSpecListenerTlsGetArgs> getTls() {
-        return this.tls == null ? Output.empty() : this.tls;
+        return this.tls == null ? Codegen.empty() : this.tls;
     }
 
     public VirtualNodeSpecListenerGetArgs(
@@ -101,12 +102,12 @@ public final class VirtualNodeSpecListenerGetArgs extends io.pulumi.resources.Re
     }
 
     private VirtualNodeSpecListenerGetArgs() {
-        this.connectionPool = Output.empty();
-        this.healthCheck = Output.empty();
-        this.outlierDetection = Output.empty();
-        this.portMapping = Output.empty();
-        this.timeout = Output.empty();
-        this.tls = Output.empty();
+        this.connectionPool = Codegen.empty();
+        this.healthCheck = Codegen.empty();
+        this.outlierDetection = Codegen.empty();
+        this.portMapping = Codegen.empty();
+        this.timeout = Codegen.empty();
+        this.tls = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class VirtualNodeSpecListenerGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder connectionPool(@Nullable VirtualNodeSpecListenerConnectionPoolGetArgs connectionPool) {
-            this.connectionPool = Output.ofNullable(connectionPool);
+            this.connectionPool = Codegen.ofNullable(connectionPool);
             return this;
         }
         public Builder healthCheck(@Nullable Output<VirtualNodeSpecListenerHealthCheckGetArgs> healthCheck) {
@@ -152,7 +153,7 @@ public final class VirtualNodeSpecListenerGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder healthCheck(@Nullable VirtualNodeSpecListenerHealthCheckGetArgs healthCheck) {
-            this.healthCheck = Output.ofNullable(healthCheck);
+            this.healthCheck = Codegen.ofNullable(healthCheck);
             return this;
         }
         public Builder outlierDetection(@Nullable Output<VirtualNodeSpecListenerOutlierDetectionGetArgs> outlierDetection) {
@@ -160,7 +161,7 @@ public final class VirtualNodeSpecListenerGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder outlierDetection(@Nullable VirtualNodeSpecListenerOutlierDetectionGetArgs outlierDetection) {
-            this.outlierDetection = Output.ofNullable(outlierDetection);
+            this.outlierDetection = Codegen.ofNullable(outlierDetection);
             return this;
         }
         public Builder portMapping(Output<VirtualNodeSpecListenerPortMappingGetArgs> portMapping) {
@@ -176,7 +177,7 @@ public final class VirtualNodeSpecListenerGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder timeout(@Nullable VirtualNodeSpecListenerTimeoutGetArgs timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }
         public Builder tls(@Nullable Output<VirtualNodeSpecListenerTlsGetArgs> tls) {
@@ -184,7 +185,7 @@ public final class VirtualNodeSpecListenerGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder tls(@Nullable VirtualNodeSpecListenerTlsGetArgs tls) {
-            this.tls = Output.ofNullable(tls);
+            this.tls = Codegen.ofNullable(tls);
             return this;
         }        public VirtualNodeSpecListenerGetArgs build() {
             return new VirtualNodeSpecListenerGetArgs(connectionPool, healthCheck, outlierDetection, portMapping, timeout, tls);

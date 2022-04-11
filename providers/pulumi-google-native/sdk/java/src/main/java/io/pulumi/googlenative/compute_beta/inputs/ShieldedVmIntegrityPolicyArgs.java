@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ShieldedVmIntegrityPolicyArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Boolean> updateAutoLearnPolicy;
 
     public Output<Boolean> getUpdateAutoLearnPolicy() {
-        return this.updateAutoLearnPolicy == null ? Output.empty() : this.updateAutoLearnPolicy;
+        return this.updateAutoLearnPolicy == null ? Codegen.empty() : this.updateAutoLearnPolicy;
     }
 
     public ShieldedVmIntegrityPolicyArgs(@Nullable Output<Boolean> updateAutoLearnPolicy) {
@@ -34,7 +35,7 @@ public final class ShieldedVmIntegrityPolicyArgs extends io.pulumi.resources.Res
     }
 
     private ShieldedVmIntegrityPolicyArgs() {
-        this.updateAutoLearnPolicy = Output.empty();
+        this.updateAutoLearnPolicy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ShieldedVmIntegrityPolicyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder updateAutoLearnPolicy(@Nullable Boolean updateAutoLearnPolicy) {
-            this.updateAutoLearnPolicy = Output.ofNullable(updateAutoLearnPolicy);
+            this.updateAutoLearnPolicy = Codegen.ofNullable(updateAutoLearnPolicy);
             return this;
         }        public ShieldedVmIntegrityPolicyArgs build() {
             return new ShieldedVmIntegrityPolicyArgs(updateAutoLearnPolicy);

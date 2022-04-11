@@ -5,6 +5,7 @@ package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.notebooks.inputs.RuntimeVirtualMachineVirtualMachineConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class RuntimeVirtualMachineArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> instanceId;
 
     public Output<String> getInstanceId() {
-        return this.instanceId == null ? Output.empty() : this.instanceId;
+        return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class RuntimeVirtualMachineArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> instanceName;
 
     public Output<String> getInstanceName() {
-        return this.instanceName == null ? Output.empty() : this.instanceName;
+        return this.instanceName == null ? Codegen.empty() : this.instanceName;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class RuntimeVirtualMachineArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigArgs> virtualMachineConfig;
 
     public Output<RuntimeVirtualMachineVirtualMachineConfigArgs> getVirtualMachineConfig() {
-        return this.virtualMachineConfig == null ? Output.empty() : this.virtualMachineConfig;
+        return this.virtualMachineConfig == null ? Codegen.empty() : this.virtualMachineConfig;
     }
 
     public RuntimeVirtualMachineArgs(
@@ -61,9 +62,9 @@ public final class RuntimeVirtualMachineArgs extends io.pulumi.resources.Resourc
     }
 
     private RuntimeVirtualMachineArgs() {
-        this.instanceId = Output.empty();
-        this.instanceName = Output.empty();
-        this.virtualMachineConfig = Output.empty();
+        this.instanceId = Codegen.empty();
+        this.instanceName = Codegen.empty();
+        this.virtualMachineConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class RuntimeVirtualMachineArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Output.ofNullable(instanceId);
+            this.instanceId = Codegen.ofNullable(instanceId);
             return this;
         }
         public Builder instanceName(@Nullable Output<String> instanceName) {
@@ -103,7 +104,7 @@ public final class RuntimeVirtualMachineArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder instanceName(@Nullable String instanceName) {
-            this.instanceName = Output.ofNullable(instanceName);
+            this.instanceName = Codegen.ofNullable(instanceName);
             return this;
         }
         public Builder virtualMachineConfig(@Nullable Output<RuntimeVirtualMachineVirtualMachineConfigArgs> virtualMachineConfig) {
@@ -111,7 +112,7 @@ public final class RuntimeVirtualMachineArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder virtualMachineConfig(@Nullable RuntimeVirtualMachineVirtualMachineConfigArgs virtualMachineConfig) {
-            this.virtualMachineConfig = Output.ofNullable(virtualMachineConfig);
+            this.virtualMachineConfig = Codegen.ofNullable(virtualMachineConfig);
             return this;
         }        public RuntimeVirtualMachineArgs build() {
             return new RuntimeVirtualMachineArgs(instanceId, instanceName, virtualMachineConfig);

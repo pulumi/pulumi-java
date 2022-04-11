@@ -6,6 +6,7 @@ package io.pulumi.aws.apigateway.inputs;
 import io.pulumi.aws.apigateway.inputs.AccountThrottleSettingsGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> cloudwatchRoleArn;
 
     public Output<String> getCloudwatchRoleArn() {
-        return this.cloudwatchRoleArn == null ? Output.empty() : this.cloudwatchRoleArn;
+        return this.cloudwatchRoleArn == null ? Codegen.empty() : this.cloudwatchRoleArn;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AccountThrottleSettingsGetArgs> throttleSettings;
 
     public Output<AccountThrottleSettingsGetArgs> getThrottleSettings() {
-        return this.throttleSettings == null ? Output.empty() : this.throttleSettings;
+        return this.throttleSettings == null ? Codegen.empty() : this.throttleSettings;
     }
 
     public AccountState(
@@ -45,8 +46,8 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccountState() {
-        this.cloudwatchRoleArn = Output.empty();
-        this.throttleSettings = Output.empty();
+        this.cloudwatchRoleArn = Codegen.empty();
+        this.throttleSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cloudwatchRoleArn(@Nullable String cloudwatchRoleArn) {
-            this.cloudwatchRoleArn = Output.ofNullable(cloudwatchRoleArn);
+            this.cloudwatchRoleArn = Codegen.ofNullable(cloudwatchRoleArn);
             return this;
         }
         public Builder throttleSettings(@Nullable Output<AccountThrottleSettingsGetArgs> throttleSettings) {
@@ -84,7 +85,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder throttleSettings(@Nullable AccountThrottleSettingsGetArgs throttleSettings) {
-            this.throttleSettings = Output.ofNullable(throttleSettings);
+            this.throttleSettings = Codegen.ofNullable(throttleSettings);
             return this;
         }        public AccountState build() {
             return new AccountState(cloudwatchRoleArn, throttleSettings);

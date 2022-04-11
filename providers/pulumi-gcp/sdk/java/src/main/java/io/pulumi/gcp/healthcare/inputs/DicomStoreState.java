@@ -5,6 +5,7 @@ package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.healthcare.inputs.DicomStoreNotificationConfigGetArgs;
 import io.pulumi.gcp.healthcare.inputs.DicomStoreStreamConfigGetArgs;
 import java.lang.String;
@@ -27,7 +28,7 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> dataset;
 
     public Output<String> getDataset() {
-        return this.dataset == null ? Output.empty() : this.dataset;
+        return this.dataset == null ? Codegen.empty() : this.dataset;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DicomStoreNotificationConfigGetArgs> notificationConfig;
 
     public Output<DicomStoreNotificationConfigGetArgs> getNotificationConfig() {
-        return this.notificationConfig == null ? Output.empty() : this.notificationConfig;
+        return this.notificationConfig == null ? Codegen.empty() : this.notificationConfig;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
-        return this.selfLink == null ? Output.empty() : this.selfLink;
+        return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DicomStoreStreamConfigGetArgs>> streamConfigs;
 
     public Output<List<DicomStoreStreamConfigGetArgs>> getStreamConfigs() {
-        return this.streamConfigs == null ? Output.empty() : this.streamConfigs;
+        return this.streamConfigs == null ? Codegen.empty() : this.streamConfigs;
     }
 
     public DicomStoreState(
@@ -112,12 +113,12 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DicomStoreState() {
-        this.dataset = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.notificationConfig = Output.empty();
-        this.selfLink = Output.empty();
-        this.streamConfigs = Output.empty();
+        this.dataset = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.notificationConfig = Codegen.empty();
+        this.selfLink = Codegen.empty();
+        this.streamConfigs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -155,7 +156,7 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataset(@Nullable String dataset) {
-            this.dataset = Output.ofNullable(dataset);
+            this.dataset = Codegen.ofNullable(dataset);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -163,7 +164,7 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -171,7 +172,7 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder notificationConfig(@Nullable Output<DicomStoreNotificationConfigGetArgs> notificationConfig) {
@@ -179,7 +180,7 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notificationConfig(@Nullable DicomStoreNotificationConfigGetArgs notificationConfig) {
-            this.notificationConfig = Output.ofNullable(notificationConfig);
+            this.notificationConfig = Codegen.ofNullable(notificationConfig);
             return this;
         }
         public Builder selfLink(@Nullable Output<String> selfLink) {
@@ -187,7 +188,7 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Output.ofNullable(selfLink);
+            this.selfLink = Codegen.ofNullable(selfLink);
             return this;
         }
         public Builder streamConfigs(@Nullable Output<List<DicomStoreStreamConfigGetArgs>> streamConfigs) {
@@ -195,7 +196,7 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder streamConfigs(@Nullable List<DicomStoreStreamConfigGetArgs> streamConfigs) {
-            this.streamConfigs = Output.ofNullable(streamConfigs);
+            this.streamConfigs = Codegen.ofNullable(streamConfigs);
             return this;
         }
         public Builder streamConfigs(DicomStoreStreamConfigGetArgs... streamConfigs) {

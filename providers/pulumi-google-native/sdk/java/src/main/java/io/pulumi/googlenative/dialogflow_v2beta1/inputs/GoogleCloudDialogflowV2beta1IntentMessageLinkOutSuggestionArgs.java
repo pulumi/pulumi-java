@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionArg
     }
 
     private GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionArgs() {
-        this.destinationName = Output.empty();
-        this.uri = Output.empty();
+        this.destinationName = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {

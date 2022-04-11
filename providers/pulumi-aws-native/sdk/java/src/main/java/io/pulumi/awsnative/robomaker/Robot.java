@@ -10,6 +10,7 @@ import io.pulumi.awsnative.robomaker.outputs.RobotTags;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -110,7 +111,7 @@ public class Robot extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Robot(String name, RobotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:robomaker:Robot", name, args == null ? RobotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:robomaker:Robot", name, args == null ? RobotArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Robot(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +32,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
       private final @Nullable Output<Boolean> includePath;
 
     public Output<Boolean> getIncludePath() {
-        return this.includePath == null ? Output.empty() : this.includePath;
+        return this.includePath == null ? Codegen.empty() : this.includePath;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
       private final @Nullable Output<Boolean> includeQueryString;
 
     public Output<Boolean> getIncludeQueryString() {
-        return this.includeQueryString == null ? Output.empty() : this.includeQueryString;
+        return this.includeQueryString == null ? Codegen.empty() : this.includeQueryString;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
       private final @Nullable Output<List<SubResourceArgs>> pathRules;
 
     public Output<List<SubResourceArgs>> getPathRules() {
-        return this.pathRules == null ? Output.empty() : this.pathRules;
+        return this.pathRules == null ? Codegen.empty() : this.pathRules;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
       private final @Nullable Output<Either<String,ApplicationGatewayRedirectType>> redirectType;
 
     public Output<Either<String,ApplicationGatewayRedirectType>> getRedirectType() {
-        return this.redirectType == null ? Output.empty() : this.redirectType;
+        return this.redirectType == null ? Codegen.empty() : this.redirectType;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
       private final @Nullable Output<List<SubResourceArgs>> requestRoutingRules;
 
     public Output<List<SubResourceArgs>> getRequestRoutingRules() {
-        return this.requestRoutingRules == null ? Output.empty() : this.requestRoutingRules;
+        return this.requestRoutingRules == null ? Codegen.empty() : this.requestRoutingRules;
     }
 
     /**
@@ -108,7 +109,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
       private final @Nullable Output<SubResourceArgs> targetListener;
 
     public Output<SubResourceArgs> getTargetListener() {
-        return this.targetListener == null ? Output.empty() : this.targetListener;
+        return this.targetListener == null ? Codegen.empty() : this.targetListener;
     }
 
     /**
@@ -119,7 +120,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
       private final @Nullable Output<String> targetUrl;
 
     public Output<String> getTargetUrl() {
-        return this.targetUrl == null ? Output.empty() : this.targetUrl;
+        return this.targetUrl == null ? Codegen.empty() : this.targetUrl;
     }
 
     /**
@@ -130,7 +131,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
       private final @Nullable Output<List<SubResourceArgs>> urlPathMaps;
 
     public Output<List<SubResourceArgs>> getUrlPathMaps() {
-        return this.urlPathMaps == null ? Output.empty() : this.urlPathMaps;
+        return this.urlPathMaps == null ? Codegen.empty() : this.urlPathMaps;
     }
 
     public ApplicationGatewayRedirectConfigurationArgs(
@@ -157,16 +158,16 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
     }
 
     private ApplicationGatewayRedirectConfigurationArgs() {
-        this.id = Output.empty();
-        this.includePath = Output.empty();
-        this.includeQueryString = Output.empty();
-        this.name = Output.empty();
-        this.pathRules = Output.empty();
-        this.redirectType = Output.empty();
-        this.requestRoutingRules = Output.empty();
-        this.targetListener = Output.empty();
-        this.targetUrl = Output.empty();
-        this.urlPathMaps = Output.empty();
+        this.id = Codegen.empty();
+        this.includePath = Codegen.empty();
+        this.includeQueryString = Codegen.empty();
+        this.name = Codegen.empty();
+        this.pathRules = Codegen.empty();
+        this.redirectType = Codegen.empty();
+        this.requestRoutingRules = Codegen.empty();
+        this.targetListener = Codegen.empty();
+        this.targetUrl = Codegen.empty();
+        this.urlPathMaps = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -212,7 +213,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder includePath(@Nullable Output<Boolean> includePath) {
@@ -220,7 +221,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
             return this;
         }
         public Builder includePath(@Nullable Boolean includePath) {
-            this.includePath = Output.ofNullable(includePath);
+            this.includePath = Codegen.ofNullable(includePath);
             return this;
         }
         public Builder includeQueryString(@Nullable Output<Boolean> includeQueryString) {
@@ -228,7 +229,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
             return this;
         }
         public Builder includeQueryString(@Nullable Boolean includeQueryString) {
-            this.includeQueryString = Output.ofNullable(includeQueryString);
+            this.includeQueryString = Codegen.ofNullable(includeQueryString);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -236,7 +237,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder pathRules(@Nullable Output<List<SubResourceArgs>> pathRules) {
@@ -244,7 +245,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
             return this;
         }
         public Builder pathRules(@Nullable List<SubResourceArgs> pathRules) {
-            this.pathRules = Output.ofNullable(pathRules);
+            this.pathRules = Codegen.ofNullable(pathRules);
             return this;
         }
         public Builder pathRules(SubResourceArgs... pathRules) {
@@ -255,7 +256,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
             return this;
         }
         public Builder redirectType(@Nullable Either<String,ApplicationGatewayRedirectType> redirectType) {
-            this.redirectType = Output.ofNullable(redirectType);
+            this.redirectType = Codegen.ofNullable(redirectType);
             return this;
         }
         public Builder requestRoutingRules(@Nullable Output<List<SubResourceArgs>> requestRoutingRules) {
@@ -263,7 +264,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
             return this;
         }
         public Builder requestRoutingRules(@Nullable List<SubResourceArgs> requestRoutingRules) {
-            this.requestRoutingRules = Output.ofNullable(requestRoutingRules);
+            this.requestRoutingRules = Codegen.ofNullable(requestRoutingRules);
             return this;
         }
         public Builder requestRoutingRules(SubResourceArgs... requestRoutingRules) {
@@ -274,7 +275,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
             return this;
         }
         public Builder targetListener(@Nullable SubResourceArgs targetListener) {
-            this.targetListener = Output.ofNullable(targetListener);
+            this.targetListener = Codegen.ofNullable(targetListener);
             return this;
         }
         public Builder targetUrl(@Nullable Output<String> targetUrl) {
@@ -282,7 +283,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
             return this;
         }
         public Builder targetUrl(@Nullable String targetUrl) {
-            this.targetUrl = Output.ofNullable(targetUrl);
+            this.targetUrl = Codegen.ofNullable(targetUrl);
             return this;
         }
         public Builder urlPathMaps(@Nullable Output<List<SubResourceArgs>> urlPathMaps) {
@@ -290,7 +291,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
             return this;
         }
         public Builder urlPathMaps(@Nullable List<SubResourceArgs> urlPathMaps) {
-            this.urlPathMaps = Output.ofNullable(urlPathMaps);
+            this.urlPathMaps = Codegen.ofNullable(urlPathMaps);
             return this;
         }
         public Builder urlPathMaps(SubResourceArgs... urlPathMaps) {

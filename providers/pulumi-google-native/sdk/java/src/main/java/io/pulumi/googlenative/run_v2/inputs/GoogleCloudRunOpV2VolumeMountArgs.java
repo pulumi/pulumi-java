@@ -5,6 +5,7 @@ package io.pulumi.googlenative.run_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class GoogleCloudRunOpV2VolumeMountArgs extends io.pulumi.resources
     }
 
     private GoogleCloudRunOpV2VolumeMountArgs() {
-        this.mountPath = Output.empty();
-        this.name = Output.empty();
+        this.mountPath = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {

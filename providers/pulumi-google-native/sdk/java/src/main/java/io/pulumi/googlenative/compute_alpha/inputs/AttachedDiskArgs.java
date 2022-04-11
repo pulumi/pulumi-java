@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.enums.AttachedDiskInterface;
 import io.pulumi.googlenative.compute_alpha.enums.AttachedDiskMode;
 import io.pulumi.googlenative.compute_alpha.enums.AttachedDiskSavedState;
@@ -35,7 +36,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> autoDelete;
 
     public Output<Boolean> getAutoDelete() {
-        return this.autoDelete == null ? Output.empty() : this.autoDelete;
+        return this.autoDelete == null ? Codegen.empty() : this.autoDelete;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> boot;
 
     public Output<Boolean> getBoot() {
-        return this.boot == null ? Output.empty() : this.boot;
+        return this.boot == null ? Codegen.empty() : this.boot;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> deviceName;
 
     public Output<String> getDeviceName() {
-        return this.deviceName == null ? Output.empty() : this.deviceName;
+        return this.deviceName == null ? Codegen.empty() : this.deviceName;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<CustomerEncryptionKeyArgs> diskEncryptionKey;
 
     public Output<CustomerEncryptionKeyArgs> getDiskEncryptionKey() {
-        return this.diskEncryptionKey == null ? Output.empty() : this.diskEncryptionKey;
+        return this.diskEncryptionKey == null ? Codegen.empty() : this.diskEncryptionKey;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> diskSizeGb;
 
     public Output<String> getDiskSizeGb() {
-        return this.diskSizeGb == null ? Output.empty() : this.diskSizeGb;
+        return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> forceAttach;
 
     public Output<Boolean> getForceAttach() {
-        return this.forceAttach == null ? Output.empty() : this.forceAttach;
+        return this.forceAttach == null ? Codegen.empty() : this.forceAttach;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures;
 
     public Output<List<GuestOsFeatureArgs>> getGuestOsFeatures() {
-        return this.guestOsFeatures == null ? Output.empty() : this.guestOsFeatures;
+        return this.guestOsFeatures == null ? Codegen.empty() : this.guestOsFeatures;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AttachedDiskInitializeParamsArgs> initializeParams;
 
     public Output<AttachedDiskInitializeParamsArgs> getInitializeParams() {
-        return this.initializeParams == null ? Output.empty() : this.initializeParams;
+        return this.initializeParams == null ? Codegen.empty() : this.initializeParams;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AttachedDiskInterface> interface_;
 
     public Output<AttachedDiskInterface> getInterface_() {
-        return this.interface_ == null ? Output.empty() : this.interface_;
+        return this.interface_ == null ? Codegen.empty() : this.interface_;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AttachedDiskMode> mode;
 
     public Output<AttachedDiskMode> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -145,7 +146,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AttachedDiskSavedState> savedState;
 
     public Output<AttachedDiskSavedState> getSavedState() {
-        return this.savedState == null ? Output.empty() : this.savedState;
+        return this.savedState == null ? Codegen.empty() : this.savedState;
     }
 
     /**
@@ -156,7 +157,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> source;
 
     public Output<String> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     /**
@@ -167,7 +168,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AttachedDiskType> type;
 
     public Output<AttachedDiskType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public AttachedDiskArgs(
@@ -200,19 +201,19 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AttachedDiskArgs() {
-        this.autoDelete = Output.empty();
-        this.boot = Output.empty();
-        this.deviceName = Output.empty();
-        this.diskEncryptionKey = Output.empty();
-        this.diskSizeGb = Output.empty();
-        this.forceAttach = Output.empty();
-        this.guestOsFeatures = Output.empty();
-        this.initializeParams = Output.empty();
-        this.interface_ = Output.empty();
-        this.mode = Output.empty();
-        this.savedState = Output.empty();
-        this.source = Output.empty();
-        this.type = Output.empty();
+        this.autoDelete = Codegen.empty();
+        this.boot = Codegen.empty();
+        this.deviceName = Codegen.empty();
+        this.diskEncryptionKey = Codegen.empty();
+        this.diskSizeGb = Codegen.empty();
+        this.forceAttach = Codegen.empty();
+        this.guestOsFeatures = Codegen.empty();
+        this.initializeParams = Codegen.empty();
+        this.interface_ = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.savedState = Codegen.empty();
+        this.source = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -264,7 +265,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoDelete(@Nullable Boolean autoDelete) {
-            this.autoDelete = Output.ofNullable(autoDelete);
+            this.autoDelete = Codegen.ofNullable(autoDelete);
             return this;
         }
         public Builder boot(@Nullable Output<Boolean> boot) {
@@ -272,7 +273,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder boot(@Nullable Boolean boot) {
-            this.boot = Output.ofNullable(boot);
+            this.boot = Codegen.ofNullable(boot);
             return this;
         }
         public Builder deviceName(@Nullable Output<String> deviceName) {
@@ -280,7 +281,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Output.ofNullable(deviceName);
+            this.deviceName = Codegen.ofNullable(deviceName);
             return this;
         }
         public Builder diskEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> diskEncryptionKey) {
@@ -288,7 +289,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskEncryptionKey(@Nullable CustomerEncryptionKeyArgs diskEncryptionKey) {
-            this.diskEncryptionKey = Output.ofNullable(diskEncryptionKey);
+            this.diskEncryptionKey = Codegen.ofNullable(diskEncryptionKey);
             return this;
         }
         public Builder diskSizeGb(@Nullable Output<String> diskSizeGb) {
@@ -296,7 +297,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskSizeGb(@Nullable String diskSizeGb) {
-            this.diskSizeGb = Output.ofNullable(diskSizeGb);
+            this.diskSizeGb = Codegen.ofNullable(diskSizeGb);
             return this;
         }
         public Builder forceAttach(@Nullable Output<Boolean> forceAttach) {
@@ -304,7 +305,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder forceAttach(@Nullable Boolean forceAttach) {
-            this.forceAttach = Output.ofNullable(forceAttach);
+            this.forceAttach = Codegen.ofNullable(forceAttach);
             return this;
         }
         public Builder guestOsFeatures(@Nullable Output<List<GuestOsFeatureArgs>> guestOsFeatures) {
@@ -312,7 +313,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder guestOsFeatures(@Nullable List<GuestOsFeatureArgs> guestOsFeatures) {
-            this.guestOsFeatures = Output.ofNullable(guestOsFeatures);
+            this.guestOsFeatures = Codegen.ofNullable(guestOsFeatures);
             return this;
         }
         public Builder guestOsFeatures(GuestOsFeatureArgs... guestOsFeatures) {
@@ -323,7 +324,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder initializeParams(@Nullable AttachedDiskInitializeParamsArgs initializeParams) {
-            this.initializeParams = Output.ofNullable(initializeParams);
+            this.initializeParams = Codegen.ofNullable(initializeParams);
             return this;
         }
         public Builder interface_(@Nullable Output<AttachedDiskInterface> interface_) {
@@ -331,7 +332,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder interface_(@Nullable AttachedDiskInterface interface_) {
-            this.interface_ = Output.ofNullable(interface_);
+            this.interface_ = Codegen.ofNullable(interface_);
             return this;
         }
         public Builder mode(@Nullable Output<AttachedDiskMode> mode) {
@@ -339,7 +340,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mode(@Nullable AttachedDiskMode mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder savedState(@Nullable Output<AttachedDiskSavedState> savedState) {
@@ -347,7 +348,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder savedState(@Nullable AttachedDiskSavedState savedState) {
-            this.savedState = Output.ofNullable(savedState);
+            this.savedState = Codegen.ofNullable(savedState);
             return this;
         }
         public Builder source(@Nullable Output<String> source) {
@@ -355,7 +356,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder source(@Nullable String source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }
         public Builder type(@Nullable Output<AttachedDiskType> type) {
@@ -363,7 +364,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable AttachedDiskType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public AttachedDiskArgs build() {
             return new AttachedDiskArgs(autoDelete, boot, deviceName, diskEncryptionKey, diskSizeGb, forceAttach, guestOsFeatures, initializeParams, interface_, mode, savedState, source, type);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class VirtualNetworkConfigurationArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> subnetResourceId;
 
     public Output<String> getSubnetResourceId() {
-        return this.subnetResourceId == null ? Output.empty() : this.subnetResourceId;
+        return this.subnetResourceId == null ? Codegen.empty() : this.subnetResourceId;
     }
 
     public VirtualNetworkConfigurationArgs(@Nullable Output<String> subnetResourceId) {
@@ -34,7 +35,7 @@ public final class VirtualNetworkConfigurationArgs extends io.pulumi.resources.R
     }
 
     private VirtualNetworkConfigurationArgs() {
-        this.subnetResourceId = Output.empty();
+        this.subnetResourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class VirtualNetworkConfigurationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder subnetResourceId(@Nullable String subnetResourceId) {
-            this.subnetResourceId = Output.ofNullable(subnetResourceId);
+            this.subnetResourceId = Codegen.ofNullable(subnetResourceId);
             return this;
         }        public VirtualNetworkConfigurationArgs build() {
             return new VirtualNetworkConfigurationArgs(subnetResourceId);

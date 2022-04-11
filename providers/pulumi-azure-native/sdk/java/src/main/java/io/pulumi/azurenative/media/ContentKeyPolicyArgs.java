@@ -6,6 +6,7 @@ package io.pulumi.azurenative.media;
 import io.pulumi.azurenative.media.inputs.ContentKeyPolicyOptionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> contentKeyPolicyName;
 
     public Output<String> getContentKeyPolicyName() {
-        return this.contentKeyPolicyName == null ? Output.empty() : this.contentKeyPolicyName;
+        return this.contentKeyPolicyName == null ? Codegen.empty() : this.contentKeyPolicyName;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -85,11 +86,11 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ContentKeyPolicyArgs() {
-        this.accountName = Output.empty();
-        this.contentKeyPolicyName = Output.empty();
-        this.description = Output.empty();
-        this.options = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.contentKeyPolicyName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.options = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -133,7 +134,7 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder contentKeyPolicyName(@Nullable String contentKeyPolicyName) {
-            this.contentKeyPolicyName = Output.ofNullable(contentKeyPolicyName);
+            this.contentKeyPolicyName = Codegen.ofNullable(contentKeyPolicyName);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -141,7 +142,7 @@ public final class ContentKeyPolicyArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder options(Output<List<ContentKeyPolicyOptionArgs>> options) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.rds;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -45,7 +46,7 @@ public final class ClusterSnapshotArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ClusterSnapshotArgs(
@@ -58,9 +59,9 @@ public final class ClusterSnapshotArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ClusterSnapshotArgs() {
-        this.dbClusterIdentifier = Output.empty();
-        this.dbClusterSnapshotIdentifier = Output.empty();
-        this.tags = Output.empty();
+        this.dbClusterIdentifier = Codegen.empty();
+        this.dbClusterSnapshotIdentifier = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class ClusterSnapshotArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ClusterSnapshotArgs build() {
             return new ClusterSnapshotArgs(dbClusterIdentifier, dbClusterSnapshotIdentifier, tags);

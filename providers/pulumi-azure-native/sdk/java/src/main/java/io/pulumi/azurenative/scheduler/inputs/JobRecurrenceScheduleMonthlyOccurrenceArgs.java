@@ -6,6 +6,7 @@ package io.pulumi.azurenative.scheduler.inputs;
 import io.pulumi.azurenative.scheduler.enums.JobScheduleDay;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceArgs extends io.pulumi.
       private final @Nullable Output<JobScheduleDay> day;
 
     public Output<JobScheduleDay> getDay() {
-        return this.day == null ? Output.empty() : this.day;
+        return this.day == null ? Codegen.empty() : this.day;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceArgs extends io.pulumi.
       private final @Nullable Output<Integer> occurrence;
 
     public Output<Integer> getOccurrence() {
-        return this.occurrence == null ? Output.empty() : this.occurrence;
+        return this.occurrence == null ? Codegen.empty() : this.occurrence;
     }
 
     public JobRecurrenceScheduleMonthlyOccurrenceArgs(
@@ -45,8 +46,8 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceArgs extends io.pulumi.
     }
 
     private JobRecurrenceScheduleMonthlyOccurrenceArgs() {
-        this.day = Output.empty();
-        this.occurrence = Output.empty();
+        this.day = Codegen.empty();
+        this.occurrence = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceArgs extends io.pulumi.
             return this;
         }
         public Builder day(@Nullable JobScheduleDay day) {
-            this.day = Output.ofNullable(day);
+            this.day = Codegen.ofNullable(day);
             return this;
         }
         public Builder occurrence(@Nullable Output<Integer> occurrence) {
@@ -84,7 +85,7 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceArgs extends io.pulumi.
             return this;
         }
         public Builder occurrence(@Nullable Integer occurrence) {
-            this.occurrence = Output.ofNullable(occurrence);
+            this.occurrence = Codegen.ofNullable(occurrence);
             return this;
         }        public JobRecurrenceScheduleMonthlyOccurrenceArgs build() {
             return new JobRecurrenceScheduleMonthlyOccurrenceArgs(day, occurrence);

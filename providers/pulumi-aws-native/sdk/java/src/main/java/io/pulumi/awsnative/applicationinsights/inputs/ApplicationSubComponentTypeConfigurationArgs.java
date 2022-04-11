@@ -7,6 +7,7 @@ import io.pulumi.awsnative.applicationinsights.enums.ApplicationSubComponentType
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationSubComponentConfigurationDetailsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -48,8 +49,8 @@ public final class ApplicationSubComponentTypeConfigurationArgs extends io.pulum
     }
 
     private ApplicationSubComponentTypeConfigurationArgs() {
-        this.subComponentConfigurationDetails = Output.empty();
-        this.subComponentType = Output.empty();
+        this.subComponentConfigurationDetails = Codegen.empty();
+        this.subComponentType = Codegen.empty();
     }
 
     public static Builder builder() {

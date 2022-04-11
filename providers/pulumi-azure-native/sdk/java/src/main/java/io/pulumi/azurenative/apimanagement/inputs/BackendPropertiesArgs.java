@@ -6,6 +6,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 import io.pulumi.azurenative.apimanagement.inputs.BackendServiceFabricClusterPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,7 +27,7 @@ public final class BackendPropertiesArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<BackendServiceFabricClusterPropertiesArgs> serviceFabricCluster;
 
     public Output<BackendServiceFabricClusterPropertiesArgs> getServiceFabricCluster() {
-        return this.serviceFabricCluster == null ? Output.empty() : this.serviceFabricCluster;
+        return this.serviceFabricCluster == null ? Codegen.empty() : this.serviceFabricCluster;
     }
 
     public BackendPropertiesArgs(@Nullable Output<BackendServiceFabricClusterPropertiesArgs> serviceFabricCluster) {
@@ -34,7 +35,7 @@ public final class BackendPropertiesArgs extends io.pulumi.resources.ResourceArg
     }
 
     private BackendPropertiesArgs() {
-        this.serviceFabricCluster = Output.empty();
+        this.serviceFabricCluster = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class BackendPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder serviceFabricCluster(@Nullable BackendServiceFabricClusterPropertiesArgs serviceFabricCluster) {
-            this.serviceFabricCluster = Output.ofNullable(serviceFabricCluster);
+            this.serviceFabricCluster = Codegen.ofNullable(serviceFabricCluster);
             return this;
         }        public BackendPropertiesArgs build() {
             return new BackendPropertiesArgs(serviceFabricCluster);

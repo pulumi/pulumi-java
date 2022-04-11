@@ -7,6 +7,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.certificates.k8s.io_v1.CertificateSigningRequestArgs;
 import io.pulumi.kubernetes.certificates.k8s.io_v1.outputs.CertificateSigningRequestSpec;
@@ -113,7 +114,7 @@ public class CertificateSigningRequest extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public CertificateSigningRequest(String name, CertificateSigningRequestArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:certificates.k8s.io/v1:CertificateSigningRequest", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:certificates.k8s.io/v1:CertificateSigningRequest", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private CertificateSigningRequest(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.contactcenterinsights_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.contactcenterinsights_v1.ConversationArgs;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1AnalysisResponse;
@@ -314,7 +315,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Conversation(String name, @Nullable ConversationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:contactcenterinsights/v1:Conversation", name, args == null ? ConversationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:contactcenterinsights/v1:Conversation", name, args == null ? ConversationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Conversation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.composer_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class WebServerConfigArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> machineType;
 
     public Output<String> getMachineType() {
-        return this.machineType == null ? Output.empty() : this.machineType;
+        return this.machineType == null ? Codegen.empty() : this.machineType;
     }
 
     public WebServerConfigArgs(@Nullable Output<String> machineType) {
@@ -34,7 +35,7 @@ public final class WebServerConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private WebServerConfigArgs() {
-        this.machineType = Output.empty();
+        this.machineType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class WebServerConfigArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder machineType(@Nullable String machineType) {
-            this.machineType = Output.ofNullable(machineType);
+            this.machineType = Codegen.ofNullable(machineType);
             return this;
         }        public WebServerConfigArgs build() {
             return new WebServerConfigArgs(machineType);

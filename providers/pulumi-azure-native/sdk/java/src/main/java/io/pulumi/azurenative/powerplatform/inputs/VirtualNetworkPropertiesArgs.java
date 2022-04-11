@@ -6,6 +6,7 @@ package io.pulumi.azurenative.powerplatform.inputs;
 import io.pulumi.azurenative.powerplatform.inputs.SubnetPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class VirtualNetworkPropertiesArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class VirtualNetworkPropertiesArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<SubnetPropertiesArgs> subnet;
 
     public Output<SubnetPropertiesArgs> getSubnet() {
-        return this.subnet == null ? Output.empty() : this.subnet;
+        return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 
     public VirtualNetworkPropertiesArgs(
@@ -49,8 +50,8 @@ public final class VirtualNetworkPropertiesArgs extends io.pulumi.resources.Reso
     }
 
     private VirtualNetworkPropertiesArgs() {
-        this.id = Output.empty();
-        this.subnet = Output.empty();
+        this.id = Codegen.empty();
+        this.subnet = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class VirtualNetworkPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder subnet(@Nullable Output<SubnetPropertiesArgs> subnet) {
@@ -88,7 +89,7 @@ public final class VirtualNetworkPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder subnet(@Nullable SubnetPropertiesArgs subnet) {
-            this.subnet = Output.ofNullable(subnet);
+            this.subnet = Codegen.ofNullable(subnet);
             return this;
         }        public VirtualNetworkPropertiesArgs build() {
             return new VirtualNetworkPropertiesArgs(id, subnet);

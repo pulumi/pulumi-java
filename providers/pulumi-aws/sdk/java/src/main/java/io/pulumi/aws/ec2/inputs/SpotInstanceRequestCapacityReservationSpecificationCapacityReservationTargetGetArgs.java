@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class SpotInstanceRequestCapacityReservationSpecificationCapacityRe
       private final @Nullable Output<String> capacityReservationId;
 
     public Output<String> getCapacityReservationId() {
-        return this.capacityReservationId == null ? Output.empty() : this.capacityReservationId;
+        return this.capacityReservationId == null ? Codegen.empty() : this.capacityReservationId;
     }
 
     public SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetGetArgs(@Nullable Output<String> capacityReservationId) {
@@ -30,7 +31,7 @@ public final class SpotInstanceRequestCapacityReservationSpecificationCapacityRe
     }
 
     private SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetGetArgs() {
-        this.capacityReservationId = Output.empty();
+        this.capacityReservationId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class SpotInstanceRequestCapacityReservationSpecificationCapacityRe
             return this;
         }
         public Builder capacityReservationId(@Nullable String capacityReservationId) {
-            this.capacityReservationId = Output.ofNullable(capacityReservationId);
+            this.capacityReservationId = Codegen.ofNullable(capacityReservationId);
             return this;
         }        public SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetGetArgs build() {
             return new SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetGetArgs(capacityReservationId);

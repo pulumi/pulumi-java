@@ -5,6 +5,7 @@ package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class SqlServerDatabaseDetailsArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Integer> compatibilityLevel;
 
     public Output<Integer> getCompatibilityLevel() {
-        return this.compatibilityLevel == null ? Output.empty() : this.compatibilityLevel;
+        return this.compatibilityLevel == null ? Codegen.empty() : this.compatibilityLevel;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class SqlServerDatabaseDetailsArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> recoveryModel;
 
     public Output<String> getRecoveryModel() {
-        return this.recoveryModel == null ? Output.empty() : this.recoveryModel;
+        return this.recoveryModel == null ? Codegen.empty() : this.recoveryModel;
     }
 
     public SqlServerDatabaseDetailsArgs(
@@ -49,8 +50,8 @@ public final class SqlServerDatabaseDetailsArgs extends io.pulumi.resources.Reso
     }
 
     private SqlServerDatabaseDetailsArgs() {
-        this.compatibilityLevel = Output.empty();
-        this.recoveryModel = Output.empty();
+        this.compatibilityLevel = Codegen.empty();
+        this.recoveryModel = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class SqlServerDatabaseDetailsArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder compatibilityLevel(@Nullable Integer compatibilityLevel) {
-            this.compatibilityLevel = Output.ofNullable(compatibilityLevel);
+            this.compatibilityLevel = Codegen.ofNullable(compatibilityLevel);
             return this;
         }
         public Builder recoveryModel(@Nullable Output<String> recoveryModel) {
@@ -88,7 +89,7 @@ public final class SqlServerDatabaseDetailsArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder recoveryModel(@Nullable String recoveryModel) {
-            this.recoveryModel = Output.ofNullable(recoveryModel);
+            this.recoveryModel = Codegen.ofNullable(recoveryModel);
             return this;
         }        public SqlServerDatabaseDetailsArgs build() {
             return new SqlServerDatabaseDetailsArgs(compatibilityLevel, recoveryModel);

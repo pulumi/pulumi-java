@@ -5,6 +5,7 @@ package io.pulumi.googlenative.gkehub_v1alpha;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.CommonFeatureSpecArgs;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +21,7 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> featureId;
 
     public Output<String> getFeatureId() {
-        return this.featureId == null ? Output.empty() : this.featureId;
+        return this.featureId == null ? Codegen.empty() : this.featureId;
     }
 
     /**
@@ -31,14 +32,14 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -49,21 +50,21 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> membershipSpecs;
 
     public Output<Map<String,String>> getMembershipSpecs() {
-        return this.membershipSpecs == null ? Output.empty() : this.membershipSpecs;
+        return this.membershipSpecs == null ? Codegen.empty() : this.membershipSpecs;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<CommonFeatureSpecArgs> spec;
 
     public Output<CommonFeatureSpecArgs> getSpec() {
-        return this.spec == null ? Output.empty() : this.spec;
+        return this.spec == null ? Codegen.empty() : this.spec;
     }
 
     public FeatureArgs(
@@ -95,13 +96,13 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FeatureArgs() {
-        this.featureId = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.membershipSpecs = Output.empty();
-        this.project = Output.empty();
-        this.requestId = Output.empty();
-        this.spec = Output.empty();
+        this.featureId = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.membershipSpecs = Codegen.empty();
+        this.project = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.spec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder featureId(@Nullable String featureId) {
-            this.featureId = Output.ofNullable(featureId);
+            this.featureId = Codegen.ofNullable(featureId);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -149,7 +150,7 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -157,7 +158,7 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder membershipSpecs(@Nullable Output<Map<String,String>> membershipSpecs) {
@@ -165,7 +166,7 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder membershipSpecs(@Nullable Map<String,String> membershipSpecs) {
-            this.membershipSpecs = Output.ofNullable(membershipSpecs);
+            this.membershipSpecs = Codegen.ofNullable(membershipSpecs);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -173,7 +174,7 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -181,7 +182,7 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder spec(@Nullable Output<CommonFeatureSpecArgs> spec) {
@@ -189,7 +190,7 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder spec(@Nullable CommonFeatureSpecArgs spec) {
-            this.spec = Output.ofNullable(spec);
+            this.spec = Codegen.ofNullable(spec);
             return this;
         }        public FeatureArgs build() {
             return new FeatureArgs(featureId, labels, location, membershipSpecs, project, requestId, spec);

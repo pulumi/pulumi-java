@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudtasks_v2beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudtasks_v2beta2.enums.AppEngineHttpRequestHttpMethod;
 import io.pulumi.googlenative.cloudtasks_v2beta2.inputs.AppEngineRoutingArgs;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class AppEngineHttpRequestArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<AppEngineRoutingArgs> appEngineRouting;
 
     public Output<AppEngineRoutingArgs> getAppEngineRouting() {
-        return this.appEngineRouting == null ? Output.empty() : this.appEngineRouting;
+        return this.appEngineRouting == null ? Codegen.empty() : this.appEngineRouting;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class AppEngineHttpRequestArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Map<String,String>> headers;
 
     public Output<Map<String,String>> getHeaders() {
-        return this.headers == null ? Output.empty() : this.headers;
+        return this.headers == null ? Codegen.empty() : this.headers;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class AppEngineHttpRequestArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<AppEngineHttpRequestHttpMethod> httpMethod;
 
     public Output<AppEngineHttpRequestHttpMethod> getHttpMethod() {
-        return this.httpMethod == null ? Output.empty() : this.httpMethod;
+        return this.httpMethod == null ? Codegen.empty() : this.httpMethod;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class AppEngineHttpRequestArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> payload;
 
     public Output<String> getPayload() {
-        return this.payload == null ? Output.empty() : this.payload;
+        return this.payload == null ? Codegen.empty() : this.payload;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class AppEngineHttpRequestArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> relativeUrl;
 
     public Output<String> getRelativeUrl() {
-        return this.relativeUrl == null ? Output.empty() : this.relativeUrl;
+        return this.relativeUrl == null ? Codegen.empty() : this.relativeUrl;
     }
 
     public AppEngineHttpRequestArgs(
@@ -90,11 +91,11 @@ public final class AppEngineHttpRequestArgs extends io.pulumi.resources.Resource
     }
 
     private AppEngineHttpRequestArgs() {
-        this.appEngineRouting = Output.empty();
-        this.headers = Output.empty();
-        this.httpMethod = Output.empty();
-        this.payload = Output.empty();
-        this.relativeUrl = Output.empty();
+        this.appEngineRouting = Codegen.empty();
+        this.headers = Codegen.empty();
+        this.httpMethod = Codegen.empty();
+        this.payload = Codegen.empty();
+        this.relativeUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class AppEngineHttpRequestArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder appEngineRouting(@Nullable AppEngineRoutingArgs appEngineRouting) {
-            this.appEngineRouting = Output.ofNullable(appEngineRouting);
+            this.appEngineRouting = Codegen.ofNullable(appEngineRouting);
             return this;
         }
         public Builder headers(@Nullable Output<Map<String,String>> headers) {
@@ -138,7 +139,7 @@ public final class AppEngineHttpRequestArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder headers(@Nullable Map<String,String> headers) {
-            this.headers = Output.ofNullable(headers);
+            this.headers = Codegen.ofNullable(headers);
             return this;
         }
         public Builder httpMethod(@Nullable Output<AppEngineHttpRequestHttpMethod> httpMethod) {
@@ -146,7 +147,7 @@ public final class AppEngineHttpRequestArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder httpMethod(@Nullable AppEngineHttpRequestHttpMethod httpMethod) {
-            this.httpMethod = Output.ofNullable(httpMethod);
+            this.httpMethod = Codegen.ofNullable(httpMethod);
             return this;
         }
         public Builder payload(@Nullable Output<String> payload) {
@@ -154,7 +155,7 @@ public final class AppEngineHttpRequestArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder payload(@Nullable String payload) {
-            this.payload = Output.ofNullable(payload);
+            this.payload = Codegen.ofNullable(payload);
             return this;
         }
         public Builder relativeUrl(@Nullable Output<String> relativeUrl) {
@@ -162,7 +163,7 @@ public final class AppEngineHttpRequestArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder relativeUrl(@Nullable String relativeUrl) {
-            this.relativeUrl = Output.ofNullable(relativeUrl);
+            this.relativeUrl = Codegen.ofNullable(relativeUrl);
             return this;
         }        public AppEngineHttpRequestArgs build() {
             return new AppEngineHttpRequestArgs(appEngineRouting, headers, httpMethod, payload, relativeUrl);

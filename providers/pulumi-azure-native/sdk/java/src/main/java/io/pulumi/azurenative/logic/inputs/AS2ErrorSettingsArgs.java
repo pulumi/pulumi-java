@@ -5,6 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class AS2ErrorSettingsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private AS2ErrorSettingsArgs() {
-        this.resendIfMDNNotReceived = Output.empty();
-        this.suspendDuplicateMessage = Output.empty();
+        this.resendIfMDNNotReceived = Codegen.empty();
+        this.suspendDuplicateMessage = Codegen.empty();
     }
 
     public static Builder builder() {

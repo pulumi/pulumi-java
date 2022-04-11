@@ -23,6 +23,10 @@ class InputTests {
         return Internal.of(io).getDataAsync().join();
     }
 
+    static <T> T waitForValue(Output<T> io) {
+        return waitFor(io).getValueNullable();
+    }
+
     @Test
     void testContainerArgs_nullValues() {
         var args = ContainerArgs.Empty;
@@ -33,10 +37,10 @@ class InputTests {
         assertThat(map).containsKey("material");
         assertThat(map).containsKey("size");
 
-        assertThat(waitFor(map.get("brightness")).getValueNullable()).isNull();
-        assertThat(waitFor(map.get("color")).getValueNullable()).isNull();
-        assertThat(waitFor(map.get("material")).getValueNullable()).isNull();
-        assertThat(waitFor(map.get("size")).getValueNullable()).isNull();
+        assertThat(waitForValue((Output) map.get("brightness"))).isNull();
+        assertThat(waitForValue((Output) map.get("color"))).isNull();
+        assertThat(waitForValue((Output) map.get("material"))).isNull();
+        assertThat(waitForValue((Output) map.get("size"))).isNull();
     }
 
     @Test

@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.bigquery.inputs.TableExternalDataConfigurationCsvOptionsGetArgs;
 import io.pulumi.gcp.bigquery.inputs.TableExternalDataConfigurationGoogleSheetsOptionsGetArgs;
 import io.pulumi.gcp.bigquery.inputs.TableExternalDataConfigurationHivePartitioningOptionsGetArgs;
@@ -41,7 +42,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
       private final @Nullable Output<String> compression;
 
     public Output<String> getCompression() {
-        return this.compression == null ? Output.empty() : this.compression;
+        return this.compression == null ? Codegen.empty() : this.compression;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
       private final @Nullable Output<TableExternalDataConfigurationCsvOptionsGetArgs> csvOptions;
 
     public Output<TableExternalDataConfigurationCsvOptionsGetArgs> getCsvOptions() {
-        return this.csvOptions == null ? Output.empty() : this.csvOptions;
+        return this.csvOptions == null ? Codegen.empty() : this.csvOptions;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
       private final @Nullable Output<TableExternalDataConfigurationGoogleSheetsOptionsGetArgs> googleSheetsOptions;
 
     public Output<TableExternalDataConfigurationGoogleSheetsOptionsGetArgs> getGoogleSheetsOptions() {
-        return this.googleSheetsOptions == null ? Output.empty() : this.googleSheetsOptions;
+        return this.googleSheetsOptions == null ? Codegen.empty() : this.googleSheetsOptions;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
       private final @Nullable Output<TableExternalDataConfigurationHivePartitioningOptionsGetArgs> hivePartitioningOptions;
 
     public Output<TableExternalDataConfigurationHivePartitioningOptionsGetArgs> getHivePartitioningOptions() {
-        return this.hivePartitioningOptions == null ? Output.empty() : this.hivePartitioningOptions;
+        return this.hivePartitioningOptions == null ? Codegen.empty() : this.hivePartitioningOptions;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
       private final @Nullable Output<Boolean> ignoreUnknownValues;
 
     public Output<Boolean> getIgnoreUnknownValues() {
-        return this.ignoreUnknownValues == null ? Output.empty() : this.ignoreUnknownValues;
+        return this.ignoreUnknownValues == null ? Codegen.empty() : this.ignoreUnknownValues;
     }
 
     /**
@@ -108,7 +109,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
       private final @Nullable Output<Integer> maxBadRecords;
 
     public Output<Integer> getMaxBadRecords() {
-        return this.maxBadRecords == null ? Output.empty() : this.maxBadRecords;
+        return this.maxBadRecords == null ? Codegen.empty() : this.maxBadRecords;
     }
 
     /**
@@ -129,7 +130,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
       private final @Nullable Output<String> schema;
 
     public Output<String> getSchema() {
-        return this.schema == null ? Output.empty() : this.schema;
+        return this.schema == null ? Codegen.empty() : this.schema;
     }
 
     /**
@@ -183,16 +184,16 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
     }
 
     private TableExternalDataConfigurationGetArgs() {
-        this.autodetect = Output.empty();
-        this.compression = Output.empty();
-        this.csvOptions = Output.empty();
-        this.googleSheetsOptions = Output.empty();
-        this.hivePartitioningOptions = Output.empty();
-        this.ignoreUnknownValues = Output.empty();
-        this.maxBadRecords = Output.empty();
-        this.schema = Output.empty();
-        this.sourceFormat = Output.empty();
-        this.sourceUris = Output.empty();
+        this.autodetect = Codegen.empty();
+        this.compression = Codegen.empty();
+        this.csvOptions = Codegen.empty();
+        this.googleSheetsOptions = Codegen.empty();
+        this.hivePartitioningOptions = Codegen.empty();
+        this.ignoreUnknownValues = Codegen.empty();
+        this.maxBadRecords = Codegen.empty();
+        this.schema = Codegen.empty();
+        this.sourceFormat = Codegen.empty();
+        this.sourceUris = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -246,7 +247,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
             return this;
         }
         public Builder compression(@Nullable String compression) {
-            this.compression = Output.ofNullable(compression);
+            this.compression = Codegen.ofNullable(compression);
             return this;
         }
         public Builder csvOptions(@Nullable Output<TableExternalDataConfigurationCsvOptionsGetArgs> csvOptions) {
@@ -254,7 +255,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
             return this;
         }
         public Builder csvOptions(@Nullable TableExternalDataConfigurationCsvOptionsGetArgs csvOptions) {
-            this.csvOptions = Output.ofNullable(csvOptions);
+            this.csvOptions = Codegen.ofNullable(csvOptions);
             return this;
         }
         public Builder googleSheetsOptions(@Nullable Output<TableExternalDataConfigurationGoogleSheetsOptionsGetArgs> googleSheetsOptions) {
@@ -262,7 +263,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
             return this;
         }
         public Builder googleSheetsOptions(@Nullable TableExternalDataConfigurationGoogleSheetsOptionsGetArgs googleSheetsOptions) {
-            this.googleSheetsOptions = Output.ofNullable(googleSheetsOptions);
+            this.googleSheetsOptions = Codegen.ofNullable(googleSheetsOptions);
             return this;
         }
         public Builder hivePartitioningOptions(@Nullable Output<TableExternalDataConfigurationHivePartitioningOptionsGetArgs> hivePartitioningOptions) {
@@ -270,7 +271,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
             return this;
         }
         public Builder hivePartitioningOptions(@Nullable TableExternalDataConfigurationHivePartitioningOptionsGetArgs hivePartitioningOptions) {
-            this.hivePartitioningOptions = Output.ofNullable(hivePartitioningOptions);
+            this.hivePartitioningOptions = Codegen.ofNullable(hivePartitioningOptions);
             return this;
         }
         public Builder ignoreUnknownValues(@Nullable Output<Boolean> ignoreUnknownValues) {
@@ -278,7 +279,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
             return this;
         }
         public Builder ignoreUnknownValues(@Nullable Boolean ignoreUnknownValues) {
-            this.ignoreUnknownValues = Output.ofNullable(ignoreUnknownValues);
+            this.ignoreUnknownValues = Codegen.ofNullable(ignoreUnknownValues);
             return this;
         }
         public Builder maxBadRecords(@Nullable Output<Integer> maxBadRecords) {
@@ -286,7 +287,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
             return this;
         }
         public Builder maxBadRecords(@Nullable Integer maxBadRecords) {
-            this.maxBadRecords = Output.ofNullable(maxBadRecords);
+            this.maxBadRecords = Codegen.ofNullable(maxBadRecords);
             return this;
         }
         public Builder schema(@Nullable Output<String> schema) {
@@ -294,7 +295,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
             return this;
         }
         public Builder schema(@Nullable String schema) {
-            this.schema = Output.ofNullable(schema);
+            this.schema = Codegen.ofNullable(schema);
             return this;
         }
         public Builder sourceFormat(Output<String> sourceFormat) {

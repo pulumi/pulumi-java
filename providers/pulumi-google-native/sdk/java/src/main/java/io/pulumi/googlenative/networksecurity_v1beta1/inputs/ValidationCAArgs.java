@@ -5,6 +5,7 @@ package io.pulumi.googlenative.networksecurity_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.networksecurity_v1beta1.inputs.CertificateProviderInstanceArgs;
 import io.pulumi.googlenative.networksecurity_v1beta1.inputs.GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ValidationCAArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<CertificateProviderInstanceArgs> certificateProviderInstance;
 
     public Output<CertificateProviderInstanceArgs> getCertificateProviderInstance() {
-        return this.certificateProviderInstance == null ? Output.empty() : this.certificateProviderInstance;
+        return this.certificateProviderInstance == null ? Codegen.empty() : this.certificateProviderInstance;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ValidationCAArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs> grpcEndpoint;
 
     public Output<GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs> getGrpcEndpoint() {
-        return this.grpcEndpoint == null ? Output.empty() : this.grpcEndpoint;
+        return this.grpcEndpoint == null ? Codegen.empty() : this.grpcEndpoint;
     }
 
     public ValidationCAArgs(
@@ -49,8 +50,8 @@ public final class ValidationCAArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ValidationCAArgs() {
-        this.certificateProviderInstance = Output.empty();
-        this.grpcEndpoint = Output.empty();
+        this.certificateProviderInstance = Codegen.empty();
+        this.grpcEndpoint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ValidationCAArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certificateProviderInstance(@Nullable CertificateProviderInstanceArgs certificateProviderInstance) {
-            this.certificateProviderInstance = Output.ofNullable(certificateProviderInstance);
+            this.certificateProviderInstance = Codegen.ofNullable(certificateProviderInstance);
             return this;
         }
         public Builder grpcEndpoint(@Nullable Output<GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs> grpcEndpoint) {
@@ -88,7 +89,7 @@ public final class ValidationCAArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder grpcEndpoint(@Nullable GoogleCloudNetworksecurityV1beta1GrpcEndpointArgs grpcEndpoint) {
-            this.grpcEndpoint = Output.ofNullable(grpcEndpoint);
+            this.grpcEndpoint = Codegen.ofNullable(grpcEndpoint);
             return this;
         }        public ValidationCAArgs build() {
             return new ValidationCAArgs(certificateProviderInstance, grpcEndpoint);

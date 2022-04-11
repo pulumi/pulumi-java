@@ -5,6 +5,7 @@ package io.pulumi.aws.codeartifact;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class DomainPermissionsArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> domainOwner;
 
     public Output<String> getDomainOwner() {
-        return this.domainOwner == null ? Output.empty() : this.domainOwner;
+        return this.domainOwner == null ? Codegen.empty() : this.domainOwner;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class DomainPermissionsArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> policyRevision;
 
     public Output<String> getPolicyRevision() {
-        return this.policyRevision == null ? Output.empty() : this.policyRevision;
+        return this.policyRevision == null ? Codegen.empty() : this.policyRevision;
     }
 
     public DomainPermissionsArgs(
@@ -70,10 +71,10 @@ public final class DomainPermissionsArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DomainPermissionsArgs() {
-        this.domain = Output.empty();
-        this.domainOwner = Output.empty();
-        this.policyDocument = Output.empty();
-        this.policyRevision = Output.empty();
+        this.domain = Codegen.empty();
+        this.domainOwner = Codegen.empty();
+        this.policyDocument = Codegen.empty();
+        this.policyRevision = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class DomainPermissionsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder domainOwner(@Nullable String domainOwner) {
-            this.domainOwner = Output.ofNullable(domainOwner);
+            this.domainOwner = Codegen.ofNullable(domainOwner);
             return this;
         }
         public Builder policyDocument(Output<String> policyDocument) {
@@ -131,7 +132,7 @@ public final class DomainPermissionsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder policyRevision(@Nullable String policyRevision) {
-            this.policyRevision = Output.ofNullable(policyRevision);
+            this.policyRevision = Codegen.ofNullable(policyRevision);
             return this;
         }        public DomainPermissionsArgs build() {
             return new DomainPermissionsArgs(domain, domainOwner, policyDocument, policyRevision);

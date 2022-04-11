@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.bigquery_v2.inputs.DatasetAccessItemArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.DatasetReferenceArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.DatasetTagsItemArgs;
@@ -29,7 +30,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DatasetAccessItemArgs>> access;
 
     public Output<List<DatasetAccessItemArgs>> getAccess() {
-        return this.access == null ? Output.empty() : this.access;
+        return this.access == null ? Codegen.empty() : this.access;
     }
 
     /**
@@ -40,14 +41,14 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DatasetReferenceArgs> datasetReference;
 
     public Output<DatasetReferenceArgs> getDatasetReference() {
-        return this.datasetReference == null ? Output.empty() : this.datasetReference;
+        return this.datasetReference == null ? Codegen.empty() : this.datasetReference;
     }
 
     @Import(name="defaultEncryptionConfiguration")
       private final @Nullable Output<EncryptionConfigurationArgs> defaultEncryptionConfiguration;
 
     public Output<EncryptionConfigurationArgs> getDefaultEncryptionConfiguration() {
-        return this.defaultEncryptionConfiguration == null ? Output.empty() : this.defaultEncryptionConfiguration;
+        return this.defaultEncryptionConfiguration == null ? Codegen.empty() : this.defaultEncryptionConfiguration;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> defaultPartitionExpirationMs;
 
     public Output<String> getDefaultPartitionExpirationMs() {
-        return this.defaultPartitionExpirationMs == null ? Output.empty() : this.defaultPartitionExpirationMs;
+        return this.defaultPartitionExpirationMs == null ? Codegen.empty() : this.defaultPartitionExpirationMs;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> defaultTableExpirationMs;
 
     public Output<String> getDefaultTableExpirationMs() {
-        return this.defaultTableExpirationMs == null ? Output.empty() : this.defaultTableExpirationMs;
+        return this.defaultTableExpirationMs == null ? Codegen.empty() : this.defaultTableExpirationMs;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
-        return this.friendlyName == null ? Output.empty() : this.friendlyName;
+        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> isCaseInsensitive;
 
     public Output<Boolean> getIsCaseInsensitive() {
-        return this.isCaseInsensitive == null ? Output.empty() : this.isCaseInsensitive;
+        return this.isCaseInsensitive == null ? Codegen.empty() : this.isCaseInsensitive;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -124,14 +125,14 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -142,7 +143,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DatasetTagsItemArgs>> tags;
 
     public Output<List<DatasetTagsItemArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DatasetArgs(
@@ -173,18 +174,18 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatasetArgs() {
-        this.access = Output.empty();
-        this.datasetReference = Output.empty();
-        this.defaultEncryptionConfiguration = Output.empty();
-        this.defaultPartitionExpirationMs = Output.empty();
-        this.defaultTableExpirationMs = Output.empty();
-        this.description = Output.empty();
-        this.friendlyName = Output.empty();
-        this.isCaseInsensitive = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.project = Output.empty();
-        this.tags = Output.empty();
+        this.access = Codegen.empty();
+        this.datasetReference = Codegen.empty();
+        this.defaultEncryptionConfiguration = Codegen.empty();
+        this.defaultPartitionExpirationMs = Codegen.empty();
+        this.defaultTableExpirationMs = Codegen.empty();
+        this.description = Codegen.empty();
+        this.friendlyName = Codegen.empty();
+        this.isCaseInsensitive = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -234,7 +235,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder access(@Nullable List<DatasetAccessItemArgs> access) {
-            this.access = Output.ofNullable(access);
+            this.access = Codegen.ofNullable(access);
             return this;
         }
         public Builder access(DatasetAccessItemArgs... access) {
@@ -245,7 +246,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder datasetReference(@Nullable DatasetReferenceArgs datasetReference) {
-            this.datasetReference = Output.ofNullable(datasetReference);
+            this.datasetReference = Codegen.ofNullable(datasetReference);
             return this;
         }
         public Builder defaultEncryptionConfiguration(@Nullable Output<EncryptionConfigurationArgs> defaultEncryptionConfiguration) {
@@ -253,7 +254,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultEncryptionConfiguration(@Nullable EncryptionConfigurationArgs defaultEncryptionConfiguration) {
-            this.defaultEncryptionConfiguration = Output.ofNullable(defaultEncryptionConfiguration);
+            this.defaultEncryptionConfiguration = Codegen.ofNullable(defaultEncryptionConfiguration);
             return this;
         }
         public Builder defaultPartitionExpirationMs(@Nullable Output<String> defaultPartitionExpirationMs) {
@@ -261,7 +262,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultPartitionExpirationMs(@Nullable String defaultPartitionExpirationMs) {
-            this.defaultPartitionExpirationMs = Output.ofNullable(defaultPartitionExpirationMs);
+            this.defaultPartitionExpirationMs = Codegen.ofNullable(defaultPartitionExpirationMs);
             return this;
         }
         public Builder defaultTableExpirationMs(@Nullable Output<String> defaultTableExpirationMs) {
@@ -269,7 +270,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultTableExpirationMs(@Nullable String defaultTableExpirationMs) {
-            this.defaultTableExpirationMs = Output.ofNullable(defaultTableExpirationMs);
+            this.defaultTableExpirationMs = Codegen.ofNullable(defaultTableExpirationMs);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -277,7 +278,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
@@ -285,7 +286,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Output.ofNullable(friendlyName);
+            this.friendlyName = Codegen.ofNullable(friendlyName);
             return this;
         }
         public Builder isCaseInsensitive(@Nullable Output<Boolean> isCaseInsensitive) {
@@ -293,7 +294,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isCaseInsensitive(@Nullable Boolean isCaseInsensitive) {
-            this.isCaseInsensitive = Output.ofNullable(isCaseInsensitive);
+            this.isCaseInsensitive = Codegen.ofNullable(isCaseInsensitive);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -301,7 +302,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -309,7 +310,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -317,7 +318,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder tags(@Nullable Output<List<DatasetTagsItemArgs>> tags) {
@@ -325,7 +326,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<DatasetTagsItemArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(DatasetTagsItemArgs... tags) {

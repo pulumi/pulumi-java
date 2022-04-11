@@ -6,6 +6,7 @@ package io.pulumi.googlenative.networkmanagement_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.networkmanagement_v1.ConnectivityTestIamPolicyArgs;
 import io.pulumi.googlenative.networkmanagement_v1.outputs.AuditConfigResponse;
@@ -102,7 +103,7 @@ public class ConnectivityTestIamPolicy extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public ConnectivityTestIamPolicy(String name, ConnectivityTestIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:networkmanagement/v1:ConnectivityTestIamPolicy", name, args == null ? ConnectivityTestIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:networkmanagement/v1:ConnectivityTestIamPolicy", name, args == null ? ConnectivityTestIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ConnectivityTestIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

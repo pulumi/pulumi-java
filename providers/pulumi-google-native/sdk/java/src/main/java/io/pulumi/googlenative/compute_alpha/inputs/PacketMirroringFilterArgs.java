@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.enums.PacketMirroringFilterDirection;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class PacketMirroringFilterArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<String>> cidrRanges;
 
     public Output<List<String>> getCidrRanges() {
-        return this.cidrRanges == null ? Output.empty() : this.cidrRanges;
+        return this.cidrRanges == null ? Codegen.empty() : this.cidrRanges;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class PacketMirroringFilterArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<PacketMirroringFilterDirection> direction;
 
     public Output<PacketMirroringFilterDirection> getDirection() {
-        return this.direction == null ? Output.empty() : this.direction;
+        return this.direction == null ? Codegen.empty() : this.direction;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class PacketMirroringFilterArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<String>> ipProtocols;
 
     public Output<List<String>> getIpProtocols() {
-        return this.ipProtocols == null ? Output.empty() : this.ipProtocols;
+        return this.ipProtocols == null ? Codegen.empty() : this.ipProtocols;
     }
 
     public PacketMirroringFilterArgs(
@@ -59,9 +60,9 @@ public final class PacketMirroringFilterArgs extends io.pulumi.resources.Resourc
     }
 
     private PacketMirroringFilterArgs() {
-        this.cidrRanges = Output.empty();
-        this.direction = Output.empty();
-        this.ipProtocols = Output.empty();
+        this.cidrRanges = Codegen.empty();
+        this.direction = Codegen.empty();
+        this.ipProtocols = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class PacketMirroringFilterArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder cidrRanges(@Nullable List<String> cidrRanges) {
-            this.cidrRanges = Output.ofNullable(cidrRanges);
+            this.cidrRanges = Codegen.ofNullable(cidrRanges);
             return this;
         }
         public Builder cidrRanges(String... cidrRanges) {
@@ -104,7 +105,7 @@ public final class PacketMirroringFilterArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder direction(@Nullable PacketMirroringFilterDirection direction) {
-            this.direction = Output.ofNullable(direction);
+            this.direction = Codegen.ofNullable(direction);
             return this;
         }
         public Builder ipProtocols(@Nullable Output<List<String>> ipProtocols) {
@@ -112,7 +113,7 @@ public final class PacketMirroringFilterArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder ipProtocols(@Nullable List<String> ipProtocols) {
-            this.ipProtocols = Output.ofNullable(ipProtocols);
+            this.ipProtocols = Codegen.ofNullable(ipProtocols);
             return this;
         }
         public Builder ipProtocols(String... ipProtocols) {

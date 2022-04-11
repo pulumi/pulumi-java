@@ -7,6 +7,7 @@ import io.pulumi.awsnative.ec2.enums.EC2FleetTargetCapacitySpecificationRequestD
 import io.pulumi.awsnative.ec2.enums.EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,28 +21,28 @@ public final class EC2FleetTargetCapacitySpecificationRequestArgs extends io.pul
       private final @Nullable Output<EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType> defaultTargetCapacityType;
 
     public Output<EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType> getDefaultTargetCapacityType() {
-        return this.defaultTargetCapacityType == null ? Output.empty() : this.defaultTargetCapacityType;
+        return this.defaultTargetCapacityType == null ? Codegen.empty() : this.defaultTargetCapacityType;
     }
 
     @Import(name="onDemandTargetCapacity")
       private final @Nullable Output<Integer> onDemandTargetCapacity;
 
     public Output<Integer> getOnDemandTargetCapacity() {
-        return this.onDemandTargetCapacity == null ? Output.empty() : this.onDemandTargetCapacity;
+        return this.onDemandTargetCapacity == null ? Codegen.empty() : this.onDemandTargetCapacity;
     }
 
     @Import(name="spotTargetCapacity")
       private final @Nullable Output<Integer> spotTargetCapacity;
 
     public Output<Integer> getSpotTargetCapacity() {
-        return this.spotTargetCapacity == null ? Output.empty() : this.spotTargetCapacity;
+        return this.spotTargetCapacity == null ? Codegen.empty() : this.spotTargetCapacity;
     }
 
     @Import(name="targetCapacityUnitType")
       private final @Nullable Output<EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType> targetCapacityUnitType;
 
     public Output<EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType> getTargetCapacityUnitType() {
-        return this.targetCapacityUnitType == null ? Output.empty() : this.targetCapacityUnitType;
+        return this.targetCapacityUnitType == null ? Codegen.empty() : this.targetCapacityUnitType;
     }
 
     @Import(name="totalTargetCapacity", required=true)
@@ -65,11 +66,11 @@ public final class EC2FleetTargetCapacitySpecificationRequestArgs extends io.pul
     }
 
     private EC2FleetTargetCapacitySpecificationRequestArgs() {
-        this.defaultTargetCapacityType = Output.empty();
-        this.onDemandTargetCapacity = Output.empty();
-        this.spotTargetCapacity = Output.empty();
-        this.targetCapacityUnitType = Output.empty();
-        this.totalTargetCapacity = Output.empty();
+        this.defaultTargetCapacityType = Codegen.empty();
+        this.onDemandTargetCapacity = Codegen.empty();
+        this.spotTargetCapacity = Codegen.empty();
+        this.targetCapacityUnitType = Codegen.empty();
+        this.totalTargetCapacity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class EC2FleetTargetCapacitySpecificationRequestArgs extends io.pul
             return this;
         }
         public Builder defaultTargetCapacityType(@Nullable EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType defaultTargetCapacityType) {
-            this.defaultTargetCapacityType = Output.ofNullable(defaultTargetCapacityType);
+            this.defaultTargetCapacityType = Codegen.ofNullable(defaultTargetCapacityType);
             return this;
         }
         public Builder onDemandTargetCapacity(@Nullable Output<Integer> onDemandTargetCapacity) {
@@ -113,7 +114,7 @@ public final class EC2FleetTargetCapacitySpecificationRequestArgs extends io.pul
             return this;
         }
         public Builder onDemandTargetCapacity(@Nullable Integer onDemandTargetCapacity) {
-            this.onDemandTargetCapacity = Output.ofNullable(onDemandTargetCapacity);
+            this.onDemandTargetCapacity = Codegen.ofNullable(onDemandTargetCapacity);
             return this;
         }
         public Builder spotTargetCapacity(@Nullable Output<Integer> spotTargetCapacity) {
@@ -121,7 +122,7 @@ public final class EC2FleetTargetCapacitySpecificationRequestArgs extends io.pul
             return this;
         }
         public Builder spotTargetCapacity(@Nullable Integer spotTargetCapacity) {
-            this.spotTargetCapacity = Output.ofNullable(spotTargetCapacity);
+            this.spotTargetCapacity = Codegen.ofNullable(spotTargetCapacity);
             return this;
         }
         public Builder targetCapacityUnitType(@Nullable Output<EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType> targetCapacityUnitType) {
@@ -129,7 +130,7 @@ public final class EC2FleetTargetCapacitySpecificationRequestArgs extends io.pul
             return this;
         }
         public Builder targetCapacityUnitType(@Nullable EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType targetCapacityUnitType) {
-            this.targetCapacityUnitType = Output.ofNullable(targetCapacityUnitType);
+            this.targetCapacityUnitType = Codegen.ofNullable(targetCapacityUnitType);
             return this;
         }
         public Builder totalTargetCapacity(Output<Integer> totalTargetCapacity) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class OntapVolumeTieringPolicyGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<Integer> coolingPeriod;
 
     public Output<Integer> getCoolingPeriod() {
-        return this.coolingPeriod == null ? Output.empty() : this.coolingPeriod;
+        return this.coolingPeriod == null ? Codegen.empty() : this.coolingPeriod;
     }
 
     /**
@@ -30,7 +31,7 @@ public final class OntapVolumeTieringPolicyGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public OntapVolumeTieringPolicyGetArgs(
@@ -41,8 +42,8 @@ public final class OntapVolumeTieringPolicyGetArgs extends io.pulumi.resources.R
     }
 
     private OntapVolumeTieringPolicyGetArgs() {
-        this.coolingPeriod = Output.empty();
-        this.name = Output.empty();
+        this.coolingPeriod = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class OntapVolumeTieringPolicyGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder coolingPeriod(@Nullable Integer coolingPeriod) {
-            this.coolingPeriod = Output.ofNullable(coolingPeriod);
+            this.coolingPeriod = Codegen.ofNullable(coolingPeriod);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -80,7 +81,7 @@ public final class OntapVolumeTieringPolicyGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public OntapVolumeTieringPolicyGetArgs build() {
             return new OntapVolumeTieringPolicyGetArgs(coolingPeriod, name);

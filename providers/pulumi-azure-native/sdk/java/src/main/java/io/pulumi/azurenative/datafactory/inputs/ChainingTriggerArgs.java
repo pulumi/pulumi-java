@@ -7,6 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.PipelineReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.TriggerPipelineReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +31,7 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -105,12 +106,12 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ChainingTriggerArgs() {
-        this.annotations = Output.empty();
-        this.dependsOn = Output.empty();
-        this.description = Output.empty();
-        this.pipeline = Output.empty();
-        this.runDimension = Output.empty();
-        this.type = Output.empty();
+        this.annotations = Codegen.empty();
+        this.dependsOn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.pipeline = Codegen.empty();
+        this.runDimension = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -170,7 +171,7 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder pipeline(Output<TriggerPipelineReferenceArgs> pipeline) {

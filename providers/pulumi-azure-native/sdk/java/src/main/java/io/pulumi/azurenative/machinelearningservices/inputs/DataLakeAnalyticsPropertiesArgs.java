@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class DataLakeAnalyticsPropertiesArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> dataLakeStoreAccountName;
 
     public Output<String> getDataLakeStoreAccountName() {
-        return this.dataLakeStoreAccountName == null ? Output.empty() : this.dataLakeStoreAccountName;
+        return this.dataLakeStoreAccountName == null ? Codegen.empty() : this.dataLakeStoreAccountName;
     }
 
     public DataLakeAnalyticsPropertiesArgs(@Nullable Output<String> dataLakeStoreAccountName) {
@@ -30,7 +31,7 @@ public final class DataLakeAnalyticsPropertiesArgs extends io.pulumi.resources.R
     }
 
     private DataLakeAnalyticsPropertiesArgs() {
-        this.dataLakeStoreAccountName = Output.empty();
+        this.dataLakeStoreAccountName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class DataLakeAnalyticsPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder dataLakeStoreAccountName(@Nullable String dataLakeStoreAccountName) {
-            this.dataLakeStoreAccountName = Output.ofNullable(dataLakeStoreAccountName);
+            this.dataLakeStoreAccountName = Codegen.ofNullable(dataLakeStoreAccountName);
             return this;
         }        public DataLakeAnalyticsPropertiesArgs build() {
             return new DataLakeAnalyticsPropertiesArgs(dataLakeStoreAccountName);

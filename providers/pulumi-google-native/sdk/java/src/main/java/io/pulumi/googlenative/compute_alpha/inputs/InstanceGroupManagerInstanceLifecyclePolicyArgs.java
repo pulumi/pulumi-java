@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.inputs.InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyArgs extends io.pu
       private final @Nullable Output<InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs> metadataBasedReadinessSignal;
 
     public Output<InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs> getMetadataBasedReadinessSignal() {
-        return this.metadataBasedReadinessSignal == null ? Output.empty() : this.metadataBasedReadinessSignal;
+        return this.metadataBasedReadinessSignal == null ? Codegen.empty() : this.metadataBasedReadinessSignal;
     }
 
     public InstanceGroupManagerInstanceLifecyclePolicyArgs(@Nullable Output<InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs> metadataBasedReadinessSignal) {
@@ -30,7 +31,7 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyArgs extends io.pu
     }
 
     private InstanceGroupManagerInstanceLifecyclePolicyArgs() {
-        this.metadataBasedReadinessSignal = Output.empty();
+        this.metadataBasedReadinessSignal = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyArgs extends io.pu
             return this;
         }
         public Builder metadataBasedReadinessSignal(@Nullable InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs metadataBasedReadinessSignal) {
-            this.metadataBasedReadinessSignal = Output.ofNullable(metadataBasedReadinessSignal);
+            this.metadataBasedReadinessSignal = Codegen.ofNullable(metadataBasedReadinessSignal);
             return this;
         }        public InstanceGroupManagerInstanceLifecyclePolicyArgs build() {
             return new InstanceGroupManagerInstanceLifecyclePolicyArgs(metadataBasedReadinessSignal);

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.kusto.inputs.TableLevelSharingPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
       private final @Nullable Output<String> attachedDatabaseConfigurationName;
 
     public Output<String> getAttachedDatabaseConfigurationName() {
-        return this.attachedDatabaseConfigurationName == null ? Output.empty() : this.attachedDatabaseConfigurationName;
+        return this.attachedDatabaseConfigurationName == null ? Codegen.empty() : this.attachedDatabaseConfigurationName;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
       private final @Nullable Output<TableLevelSharingPropertiesArgs> tableLevelSharingProperties;
 
     public Output<TableLevelSharingPropertiesArgs> getTableLevelSharingProperties() {
-        return this.tableLevelSharingProperties == null ? Output.empty() : this.tableLevelSharingProperties;
+        return this.tableLevelSharingProperties == null ? Codegen.empty() : this.tableLevelSharingProperties;
     }
 
     public AttachedDatabaseConfigurationArgs(
@@ -125,14 +126,14 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
     }
 
     private AttachedDatabaseConfigurationArgs() {
-        this.attachedDatabaseConfigurationName = Output.empty();
-        this.clusterName = Output.empty();
-        this.clusterResourceId = Output.empty();
-        this.databaseName = Output.empty();
-        this.defaultPrincipalsModificationKind = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tableLevelSharingProperties = Output.empty();
+        this.attachedDatabaseConfigurationName = Codegen.empty();
+        this.clusterName = Codegen.empty();
+        this.clusterResourceId = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.defaultPrincipalsModificationKind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tableLevelSharingProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -174,7 +175,7 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
             return this;
         }
         public Builder attachedDatabaseConfigurationName(@Nullable String attachedDatabaseConfigurationName) {
-            this.attachedDatabaseConfigurationName = Output.ofNullable(attachedDatabaseConfigurationName);
+            this.attachedDatabaseConfigurationName = Codegen.ofNullable(attachedDatabaseConfigurationName);
             return this;
         }
         public Builder clusterName(Output<String> clusterName) {
@@ -214,7 +215,7 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -230,7 +231,7 @@ public final class AttachedDatabaseConfigurationArgs extends io.pulumi.resources
             return this;
         }
         public Builder tableLevelSharingProperties(@Nullable TableLevelSharingPropertiesArgs tableLevelSharingProperties) {
-            this.tableLevelSharingProperties = Output.ofNullable(tableLevelSharingProperties);
+            this.tableLevelSharingProperties = Codegen.ofNullable(tableLevelSharingProperties);
             return this;
         }        public AttachedDatabaseConfigurationArgs build() {
             return new AttachedDatabaseConfigurationArgs(attachedDatabaseConfigurationName, clusterName, clusterResourceId, databaseName, defaultPrincipalsModificationKind, location, resourceGroupName, tableLevelSharingProperties);

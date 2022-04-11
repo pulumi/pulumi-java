@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class MaterializedViewDefinitionArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Boolean> enableRefresh;
 
     public Output<Boolean> getEnableRefresh() {
-        return this.enableRefresh == null ? Output.empty() : this.enableRefresh;
+        return this.enableRefresh == null ? Codegen.empty() : this.enableRefresh;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class MaterializedViewDefinitionArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> query;
 
     public Output<String> getQuery() {
-        return this.query == null ? Output.empty() : this.query;
+        return this.query == null ? Codegen.empty() : this.query;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class MaterializedViewDefinitionArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> refreshIntervalMs;
 
     public Output<String> getRefreshIntervalMs() {
-        return this.refreshIntervalMs == null ? Output.empty() : this.refreshIntervalMs;
+        return this.refreshIntervalMs == null ? Codegen.empty() : this.refreshIntervalMs;
     }
 
     public MaterializedViewDefinitionArgs(
@@ -58,9 +59,9 @@ public final class MaterializedViewDefinitionArgs extends io.pulumi.resources.Re
     }
 
     private MaterializedViewDefinitionArgs() {
-        this.enableRefresh = Output.empty();
-        this.query = Output.empty();
-        this.refreshIntervalMs = Output.empty();
+        this.enableRefresh = Codegen.empty();
+        this.query = Codegen.empty();
+        this.refreshIntervalMs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class MaterializedViewDefinitionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder enableRefresh(@Nullable Boolean enableRefresh) {
-            this.enableRefresh = Output.ofNullable(enableRefresh);
+            this.enableRefresh = Codegen.ofNullable(enableRefresh);
             return this;
         }
         public Builder query(@Nullable Output<String> query) {
@@ -100,7 +101,7 @@ public final class MaterializedViewDefinitionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder query(@Nullable String query) {
-            this.query = Output.ofNullable(query);
+            this.query = Codegen.ofNullable(query);
             return this;
         }
         public Builder refreshIntervalMs(@Nullable Output<String> refreshIntervalMs) {
@@ -108,7 +109,7 @@ public final class MaterializedViewDefinitionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder refreshIntervalMs(@Nullable String refreshIntervalMs) {
-            this.refreshIntervalMs = Output.ofNullable(refreshIntervalMs);
+            this.refreshIntervalMs = Codegen.ofNullable(refreshIntervalMs);
             return this;
         }        public MaterializedViewDefinitionArgs build() {
             return new MaterializedViewDefinitionArgs(enableRefresh, query, refreshIntervalMs);

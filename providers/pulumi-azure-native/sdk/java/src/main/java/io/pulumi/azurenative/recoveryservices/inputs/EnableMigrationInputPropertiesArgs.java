@@ -6,6 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.inputs.VMwareCbtEnableMigrationInputArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -48,8 +49,8 @@ public final class EnableMigrationInputPropertiesArgs extends io.pulumi.resource
     }
 
     private EnableMigrationInputPropertiesArgs() {
-        this.policyId = Output.empty();
-        this.providerSpecificDetails = Output.empty();
+        this.policyId = Codegen.empty();
+        this.providerSpecificDetails = Codegen.empty();
     }
 
     public static Builder builder() {

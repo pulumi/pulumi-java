@@ -6,6 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 import io.pulumi.azurenative.machinelearningservices.inputs.CosmosDbSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +23,7 @@ public final class ServiceManagedResourcesSettingsArgs extends io.pulumi.resourc
       private final @Nullable Output<CosmosDbSettingsArgs> cosmosDb;
 
     public Output<CosmosDbSettingsArgs> getCosmosDb() {
-        return this.cosmosDb == null ? Output.empty() : this.cosmosDb;
+        return this.cosmosDb == null ? Codegen.empty() : this.cosmosDb;
     }
 
     public ServiceManagedResourcesSettingsArgs(@Nullable Output<CosmosDbSettingsArgs> cosmosDb) {
@@ -30,7 +31,7 @@ public final class ServiceManagedResourcesSettingsArgs extends io.pulumi.resourc
     }
 
     private ServiceManagedResourcesSettingsArgs() {
-        this.cosmosDb = Output.empty();
+        this.cosmosDb = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class ServiceManagedResourcesSettingsArgs extends io.pulumi.resourc
             return this;
         }
         public Builder cosmosDb(@Nullable CosmosDbSettingsArgs cosmosDb) {
-            this.cosmosDb = Output.ofNullable(cosmosDb);
+            this.cosmosDb = Codegen.ofNullable(cosmosDb);
             return this;
         }        public ServiceManagedResourcesSettingsArgs build() {
             return new ServiceManagedResourcesSettingsArgs(cosmosDb);

@@ -5,6 +5,7 @@ package io.pulumi.aws.shield.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> aggregation;
 
     public Output<String> getAggregation() {
-        return this.aggregation == null ? Output.empty() : this.aggregation;
+        return this.aggregation == null ? Codegen.empty() : this.aggregation;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
-        return this.members == null ? Output.empty() : this.members;
+        return this.members == null ? Codegen.empty() : this.members;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> pattern;
 
     public Output<String> getPattern() {
-        return this.pattern == null ? Output.empty() : this.pattern;
+        return this.pattern == null ? Codegen.empty() : this.pattern;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> protectionGroupArn;
 
     public Output<String> getProtectionGroupArn() {
-        return this.protectionGroupArn == null ? Output.empty() : this.protectionGroupArn;
+        return this.protectionGroupArn == null ? Codegen.empty() : this.protectionGroupArn;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> protectionGroupId;
 
     public Output<String> getProtectionGroupId() {
-        return this.protectionGroupId == null ? Output.empty() : this.protectionGroupId;
+        return this.protectionGroupId == null ? Codegen.empty() : this.protectionGroupId;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> resourceType;
 
     public Output<String> getPropResourceType() {
-        return this.resourceType == null ? Output.empty() : this.resourceType;
+        return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public ProtectionGroupState(
@@ -124,14 +125,14 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
     }
 
     private ProtectionGroupState() {
-        this.aggregation = Output.empty();
-        this.members = Output.empty();
-        this.pattern = Output.empty();
-        this.protectionGroupArn = Output.empty();
-        this.protectionGroupId = Output.empty();
-        this.resourceType = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.aggregation = Codegen.empty();
+        this.members = Codegen.empty();
+        this.pattern = Codegen.empty();
+        this.protectionGroupArn = Codegen.empty();
+        this.protectionGroupId = Codegen.empty();
+        this.resourceType = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -173,7 +174,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder aggregation(@Nullable String aggregation) {
-            this.aggregation = Output.ofNullable(aggregation);
+            this.aggregation = Codegen.ofNullable(aggregation);
             return this;
         }
         public Builder members(@Nullable Output<List<String>> members) {
@@ -181,7 +182,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder members(@Nullable List<String> members) {
-            this.members = Output.ofNullable(members);
+            this.members = Codegen.ofNullable(members);
             return this;
         }
         public Builder members(String... members) {
@@ -192,7 +193,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder pattern(@Nullable String pattern) {
-            this.pattern = Output.ofNullable(pattern);
+            this.pattern = Codegen.ofNullable(pattern);
             return this;
         }
         public Builder protectionGroupArn(@Nullable Output<String> protectionGroupArn) {
@@ -200,7 +201,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder protectionGroupArn(@Nullable String protectionGroupArn) {
-            this.protectionGroupArn = Output.ofNullable(protectionGroupArn);
+            this.protectionGroupArn = Codegen.ofNullable(protectionGroupArn);
             return this;
         }
         public Builder protectionGroupId(@Nullable Output<String> protectionGroupId) {
@@ -208,7 +209,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder protectionGroupId(@Nullable String protectionGroupId) {
-            this.protectionGroupId = Output.ofNullable(protectionGroupId);
+            this.protectionGroupId = Codegen.ofNullable(protectionGroupId);
             return this;
         }
         public Builder resourceType(@Nullable Output<String> resourceType) {
@@ -216,7 +217,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Output.ofNullable(resourceType);
+            this.resourceType = Codegen.ofNullable(resourceType);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -224,7 +225,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -232,7 +233,7 @@ public final class ProtectionGroupState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public ProtectionGroupState build() {
             return new ProtectionGroupState(aggregation, members, pattern, protectionGroupArn, protectionGroupId, resourceType, tags, tagsAll);

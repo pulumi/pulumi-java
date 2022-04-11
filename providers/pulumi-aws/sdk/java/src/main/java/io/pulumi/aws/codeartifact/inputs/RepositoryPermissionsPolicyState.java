@@ -5,6 +5,7 @@ package io.pulumi.aws.codeartifact.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class RepositoryPermissionsPolicyState extends io.pulumi.resources.
       private final @Nullable Output<String> domain;
 
     public Output<String> getDomain() {
-        return this.domain == null ? Output.empty() : this.domain;
+        return this.domain == null ? Codegen.empty() : this.domain;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class RepositoryPermissionsPolicyState extends io.pulumi.resources.
       private final @Nullable Output<String> domainOwner;
 
     public Output<String> getDomainOwner() {
-        return this.domainOwner == null ? Output.empty() : this.domainOwner;
+        return this.domainOwner == null ? Codegen.empty() : this.domainOwner;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class RepositoryPermissionsPolicyState extends io.pulumi.resources.
       private final @Nullable Output<String> policyDocument;
 
     public Output<String> getPolicyDocument() {
-        return this.policyDocument == null ? Output.empty() : this.policyDocument;
+        return this.policyDocument == null ? Codegen.empty() : this.policyDocument;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class RepositoryPermissionsPolicyState extends io.pulumi.resources.
       private final @Nullable Output<String> policyRevision;
 
     public Output<String> getPolicyRevision() {
-        return this.policyRevision == null ? Output.empty() : this.policyRevision;
+        return this.policyRevision == null ? Codegen.empty() : this.policyRevision;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class RepositoryPermissionsPolicyState extends io.pulumi.resources.
       private final @Nullable Output<String> repository;
 
     public Output<String> getRepository() {
-        return this.repository == null ? Output.empty() : this.repository;
+        return this.repository == null ? Codegen.empty() : this.repository;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class RepositoryPermissionsPolicyState extends io.pulumi.resources.
       private final @Nullable Output<String> resourceArn;
 
     public Output<String> getResourceArn() {
-        return this.resourceArn == null ? Output.empty() : this.resourceArn;
+        return this.resourceArn == null ? Codegen.empty() : this.resourceArn;
     }
 
     public RepositoryPermissionsPolicyState(
@@ -96,12 +97,12 @@ public final class RepositoryPermissionsPolicyState extends io.pulumi.resources.
     }
 
     private RepositoryPermissionsPolicyState() {
-        this.domain = Output.empty();
-        this.domainOwner = Output.empty();
-        this.policyDocument = Output.empty();
-        this.policyRevision = Output.empty();
-        this.repository = Output.empty();
-        this.resourceArn = Output.empty();
+        this.domain = Codegen.empty();
+        this.domainOwner = Codegen.empty();
+        this.policyDocument = Codegen.empty();
+        this.policyRevision = Codegen.empty();
+        this.repository = Codegen.empty();
+        this.resourceArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class RepositoryPermissionsPolicyState extends io.pulumi.resources.
             return this;
         }
         public Builder domain(@Nullable String domain) {
-            this.domain = Output.ofNullable(domain);
+            this.domain = Codegen.ofNullable(domain);
             return this;
         }
         public Builder domainOwner(@Nullable Output<String> domainOwner) {
@@ -147,7 +148,7 @@ public final class RepositoryPermissionsPolicyState extends io.pulumi.resources.
             return this;
         }
         public Builder domainOwner(@Nullable String domainOwner) {
-            this.domainOwner = Output.ofNullable(domainOwner);
+            this.domainOwner = Codegen.ofNullable(domainOwner);
             return this;
         }
         public Builder policyDocument(@Nullable Output<String> policyDocument) {
@@ -155,7 +156,7 @@ public final class RepositoryPermissionsPolicyState extends io.pulumi.resources.
             return this;
         }
         public Builder policyDocument(@Nullable String policyDocument) {
-            this.policyDocument = Output.ofNullable(policyDocument);
+            this.policyDocument = Codegen.ofNullable(policyDocument);
             return this;
         }
         public Builder policyRevision(@Nullable Output<String> policyRevision) {
@@ -163,7 +164,7 @@ public final class RepositoryPermissionsPolicyState extends io.pulumi.resources.
             return this;
         }
         public Builder policyRevision(@Nullable String policyRevision) {
-            this.policyRevision = Output.ofNullable(policyRevision);
+            this.policyRevision = Codegen.ofNullable(policyRevision);
             return this;
         }
         public Builder repository(@Nullable Output<String> repository) {
@@ -171,7 +172,7 @@ public final class RepositoryPermissionsPolicyState extends io.pulumi.resources.
             return this;
         }
         public Builder repository(@Nullable String repository) {
-            this.repository = Output.ofNullable(repository);
+            this.repository = Codegen.ofNullable(repository);
             return this;
         }
         public Builder resourceArn(@Nullable Output<String> resourceArn) {
@@ -179,7 +180,7 @@ public final class RepositoryPermissionsPolicyState extends io.pulumi.resources.
             return this;
         }
         public Builder resourceArn(@Nullable String resourceArn) {
-            this.resourceArn = Output.ofNullable(resourceArn);
+            this.resourceArn = Codegen.ofNullable(resourceArn);
             return this;
         }        public RepositoryPermissionsPolicyState build() {
             return new RepositoryPermissionsPolicyState(domain, domainOwner, policyDocument, policyRevision, repository, resourceArn);

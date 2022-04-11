@@ -7,6 +7,7 @@ import io.pulumi.azurenative.subscription.enums.Workload;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> billingScope;
 
     public Output<String> getBillingScope() {
-        return this.billingScope == null ? Output.empty() : this.billingScope;
+        return this.billingScope == null ? Codegen.empty() : this.billingScope;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> resellerId;
 
     public Output<String> getResellerId() {
-        return this.resellerId == null ? Output.empty() : this.resellerId;
+        return this.resellerId == null ? Codegen.empty() : this.resellerId;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> subscriptionId;
 
     public Output<String> getSubscriptionId() {
-        return this.subscriptionId == null ? Output.empty() : this.subscriptionId;
+        return this.subscriptionId == null ? Codegen.empty() : this.subscriptionId;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Either<String,Workload>> workload;
 
     public Output<Either<String,Workload>> getWorkload() {
-        return this.workload == null ? Output.empty() : this.workload;
+        return this.workload == null ? Codegen.empty() : this.workload;
     }
 
     public PutAliasRequestPropertiesArgs(
@@ -89,11 +90,11 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
     }
 
     private PutAliasRequestPropertiesArgs() {
-        this.billingScope = Output.empty();
-        this.displayName = Output.empty();
-        this.resellerId = Output.empty();
-        this.subscriptionId = Output.empty();
-        this.workload = Output.empty();
+        this.billingScope = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.resellerId = Codegen.empty();
+        this.subscriptionId = Codegen.empty();
+        this.workload = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder billingScope(@Nullable String billingScope) {
-            this.billingScope = Output.ofNullable(billingScope);
+            this.billingScope = Codegen.ofNullable(billingScope);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -137,7 +138,7 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder resellerId(@Nullable Output<String> resellerId) {
@@ -145,7 +146,7 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder resellerId(@Nullable String resellerId) {
-            this.resellerId = Output.ofNullable(resellerId);
+            this.resellerId = Codegen.ofNullable(resellerId);
             return this;
         }
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
@@ -153,7 +154,7 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Output.ofNullable(subscriptionId);
+            this.subscriptionId = Codegen.ofNullable(subscriptionId);
             return this;
         }
         public Builder workload(@Nullable Output<Either<String,Workload>> workload) {
@@ -161,7 +162,7 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder workload(@Nullable Either<String,Workload> workload) {
-            this.workload = Output.ofNullable(workload);
+            this.workload = Codegen.ofNullable(workload);
             return this;
         }        public PutAliasRequestPropertiesArgs build() {
             return new PutAliasRequestPropertiesArgs(billingScope, displayName, resellerId, subscriptionId, workload);

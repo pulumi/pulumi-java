@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudidentity.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudidentity.inputs.GroupGroupKeyGetArgs;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GroupGroupKeyGetArgs> groupKey;
 
     public Output<GroupGroupKeyGetArgs> getGroupKey() {
-        return this.groupKey == null ? Output.empty() : this.groupKey;
+        return this.groupKey == null ? Codegen.empty() : this.groupKey;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> initialGroupConfig;
 
     public Output<String> getInitialGroupConfig() {
-        return this.initialGroupConfig == null ? Output.empty() : this.initialGroupConfig;
+        return this.initialGroupConfig == null ? Codegen.empty() : this.initialGroupConfig;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
-        return this.parent == null ? Output.empty() : this.parent;
+        return this.parent == null ? Codegen.empty() : this.parent;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {
-        return this.updateTime == null ? Output.empty() : this.updateTime;
+        return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
     public GroupState(
@@ -150,15 +151,15 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     private GroupState() {
-        this.createTime = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.groupKey = Output.empty();
-        this.initialGroupConfig = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.parent = Output.empty();
-        this.updateTime = Output.empty();
+        this.createTime = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.groupKey = Codegen.empty();
+        this.initialGroupConfig = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parent = Codegen.empty();
+        this.updateTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -202,7 +203,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -210,7 +211,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -218,7 +219,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder groupKey(@Nullable Output<GroupGroupKeyGetArgs> groupKey) {
@@ -226,7 +227,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder groupKey(@Nullable GroupGroupKeyGetArgs groupKey) {
-            this.groupKey = Output.ofNullable(groupKey);
+            this.groupKey = Codegen.ofNullable(groupKey);
             return this;
         }
         public Builder initialGroupConfig(@Nullable Output<String> initialGroupConfig) {
@@ -234,7 +235,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder initialGroupConfig(@Nullable String initialGroupConfig) {
-            this.initialGroupConfig = Output.ofNullable(initialGroupConfig);
+            this.initialGroupConfig = Codegen.ofNullable(initialGroupConfig);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -242,7 +243,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -250,7 +251,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parent(@Nullable Output<String> parent) {
@@ -258,7 +259,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parent(@Nullable String parent) {
-            this.parent = Output.ofNullable(parent);
+            this.parent = Codegen.ofNullable(parent);
             return this;
         }
         public Builder updateTime(@Nullable Output<String> updateTime) {
@@ -266,7 +267,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Output.ofNullable(updateTime);
+            this.updateTime = Codegen.ofNullable(updateTime);
             return this;
         }        public GroupState build() {
             return new GroupState(createTime, description, displayName, groupKey, initialGroupConfig, labels, name, parent, updateTime);

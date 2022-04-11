@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class UrlRewriteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> hostRewrite;
 
     public Output<String> getHostRewrite() {
-        return this.hostRewrite == null ? Output.empty() : this.hostRewrite;
+        return this.hostRewrite == null ? Codegen.empty() : this.hostRewrite;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class UrlRewriteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> pathPrefixRewrite;
 
     public Output<String> getPathPrefixRewrite() {
-        return this.pathPrefixRewrite == null ? Output.empty() : this.pathPrefixRewrite;
+        return this.pathPrefixRewrite == null ? Codegen.empty() : this.pathPrefixRewrite;
     }
 
     public UrlRewriteArgs(
@@ -48,8 +49,8 @@ public final class UrlRewriteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UrlRewriteArgs() {
-        this.hostRewrite = Output.empty();
-        this.pathPrefixRewrite = Output.empty();
+        this.hostRewrite = Codegen.empty();
+        this.pathPrefixRewrite = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class UrlRewriteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostRewrite(@Nullable String hostRewrite) {
-            this.hostRewrite = Output.ofNullable(hostRewrite);
+            this.hostRewrite = Codegen.ofNullable(hostRewrite);
             return this;
         }
         public Builder pathPrefixRewrite(@Nullable Output<String> pathPrefixRewrite) {
@@ -87,7 +88,7 @@ public final class UrlRewriteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pathPrefixRewrite(@Nullable String pathPrefixRewrite) {
-            this.pathPrefixRewrite = Output.ofNullable(pathPrefixRewrite);
+            this.pathPrefixRewrite = Codegen.ofNullable(pathPrefixRewrite);
             return this;
         }        public UrlRewriteArgs build() {
             return new UrlRewriteArgs(hostRewrite, pathPrefixRewrite);

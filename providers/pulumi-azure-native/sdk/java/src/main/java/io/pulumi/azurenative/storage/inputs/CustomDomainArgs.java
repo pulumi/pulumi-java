@@ -5,6 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> useSubDomainName;
 
     public Output<Boolean> getUseSubDomainName() {
-        return this.useSubDomainName == null ? Output.empty() : this.useSubDomainName;
+        return this.useSubDomainName == null ? Codegen.empty() : this.useSubDomainName;
     }
 
     public CustomDomainArgs(
@@ -49,8 +50,8 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CustomDomainArgs() {
-        this.name = Output.empty();
-        this.useSubDomainName = Output.empty();
+        this.name = Codegen.empty();
+        this.useSubDomainName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder useSubDomainName(@Nullable Boolean useSubDomainName) {
-            this.useSubDomainName = Output.ofNullable(useSubDomainName);
+            this.useSubDomainName = Codegen.ofNullable(useSubDomainName);
             return this;
         }        public CustomDomainArgs build() {
             return new CustomDomainArgs(name, useSubDomainName);

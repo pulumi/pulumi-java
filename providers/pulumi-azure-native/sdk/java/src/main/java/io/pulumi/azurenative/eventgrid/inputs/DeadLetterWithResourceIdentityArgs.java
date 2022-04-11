@@ -7,6 +7,7 @@ import io.pulumi.azurenative.eventgrid.inputs.EventSubscriptionIdentityArgs;
 import io.pulumi.azurenative.eventgrid.inputs.StorageBlobDeadLetterDestinationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -28,7 +29,7 @@ public final class DeadLetterWithResourceIdentityArgs extends io.pulumi.resource
       private final @Nullable Output<StorageBlobDeadLetterDestinationArgs> deadLetterDestination;
 
     public Output<StorageBlobDeadLetterDestinationArgs> getDeadLetterDestination() {
-        return this.deadLetterDestination == null ? Output.empty() : this.deadLetterDestination;
+        return this.deadLetterDestination == null ? Codegen.empty() : this.deadLetterDestination;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class DeadLetterWithResourceIdentityArgs extends io.pulumi.resource
       private final @Nullable Output<EventSubscriptionIdentityArgs> identity;
 
     public Output<EventSubscriptionIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     public DeadLetterWithResourceIdentityArgs(
@@ -50,8 +51,8 @@ public final class DeadLetterWithResourceIdentityArgs extends io.pulumi.resource
     }
 
     private DeadLetterWithResourceIdentityArgs() {
-        this.deadLetterDestination = Output.empty();
-        this.identity = Output.empty();
+        this.deadLetterDestination = Codegen.empty();
+        this.identity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class DeadLetterWithResourceIdentityArgs extends io.pulumi.resource
             return this;
         }
         public Builder deadLetterDestination(@Nullable StorageBlobDeadLetterDestinationArgs deadLetterDestination) {
-            this.deadLetterDestination = Output.ofNullable(deadLetterDestination);
+            this.deadLetterDestination = Codegen.ofNullable(deadLetterDestination);
             return this;
         }
         public Builder identity(@Nullable Output<EventSubscriptionIdentityArgs> identity) {
@@ -89,7 +90,7 @@ public final class DeadLetterWithResourceIdentityArgs extends io.pulumi.resource
             return this;
         }
         public Builder identity(@Nullable EventSubscriptionIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }        public DeadLetterWithResourceIdentityArgs build() {
             return new DeadLetterWithResourceIdentityArgs(deadLetterDestination, identity);

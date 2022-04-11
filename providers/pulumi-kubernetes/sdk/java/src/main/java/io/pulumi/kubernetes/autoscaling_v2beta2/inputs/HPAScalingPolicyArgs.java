@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.autoscaling_v2beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -61,9 +62,9 @@ public final class HPAScalingPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private HPAScalingPolicyArgs() {
-        this.periodSeconds = Output.empty();
-        this.type = Output.empty();
-        this.value = Output.empty();
+        this.periodSeconds = Codegen.empty();
+        this.type = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs;
 import java.lang.Integer;
 import java.util.List;
@@ -25,7 +26,7 @@ public final class PreventionInspectTemplateInspectConfigLimitsArgs extends io.p
       private final @Nullable Output<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs>> maxFindingsPerInfoTypes;
 
     public Output<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs>> getMaxFindingsPerInfoTypes() {
-        return this.maxFindingsPerInfoTypes == null ? Output.empty() : this.maxFindingsPerInfoTypes;
+        return this.maxFindingsPerInfoTypes == null ? Codegen.empty() : this.maxFindingsPerInfoTypes;
     }
 
     /**
@@ -60,9 +61,9 @@ public final class PreventionInspectTemplateInspectConfigLimitsArgs extends io.p
     }
 
     private PreventionInspectTemplateInspectConfigLimitsArgs() {
-        this.maxFindingsPerInfoTypes = Output.empty();
-        this.maxFindingsPerItem = Output.empty();
-        this.maxFindingsPerRequest = Output.empty();
+        this.maxFindingsPerInfoTypes = Codegen.empty();
+        this.maxFindingsPerItem = Codegen.empty();
+        this.maxFindingsPerRequest = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class PreventionInspectTemplateInspectConfigLimitsArgs extends io.p
             return this;
         }
         public Builder maxFindingsPerInfoTypes(@Nullable List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs> maxFindingsPerInfoTypes) {
-            this.maxFindingsPerInfoTypes = Output.ofNullable(maxFindingsPerInfoTypes);
+            this.maxFindingsPerInfoTypes = Codegen.ofNullable(maxFindingsPerInfoTypes);
             return this;
         }
         public Builder maxFindingsPerInfoTypes(PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs... maxFindingsPerInfoTypes) {

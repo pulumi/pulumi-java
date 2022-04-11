@@ -6,6 +6,7 @@ package io.pulumi.aws.cfg.inputs;
 import io.pulumi.aws.cfg.inputs.RemediationConfigurationExecutionControlsSsmControlsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +23,7 @@ public final class RemediationConfigurationExecutionControlsArgs extends io.pulu
       private final @Nullable Output<RemediationConfigurationExecutionControlsSsmControlsArgs> ssmControls;
 
     public Output<RemediationConfigurationExecutionControlsSsmControlsArgs> getSsmControls() {
-        return this.ssmControls == null ? Output.empty() : this.ssmControls;
+        return this.ssmControls == null ? Codegen.empty() : this.ssmControls;
     }
 
     public RemediationConfigurationExecutionControlsArgs(@Nullable Output<RemediationConfigurationExecutionControlsSsmControlsArgs> ssmControls) {
@@ -30,7 +31,7 @@ public final class RemediationConfigurationExecutionControlsArgs extends io.pulu
     }
 
     private RemediationConfigurationExecutionControlsArgs() {
-        this.ssmControls = Output.empty();
+        this.ssmControls = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class RemediationConfigurationExecutionControlsArgs extends io.pulu
             return this;
         }
         public Builder ssmControls(@Nullable RemediationConfigurationExecutionControlsSsmControlsArgs ssmControls) {
-            this.ssmControls = Output.ofNullable(ssmControls);
+            this.ssmControls = Codegen.ofNullable(ssmControls);
             return this;
         }        public RemediationConfigurationExecutionControlsArgs build() {
             return new RemediationConfigurationExecutionControlsArgs(ssmControls);

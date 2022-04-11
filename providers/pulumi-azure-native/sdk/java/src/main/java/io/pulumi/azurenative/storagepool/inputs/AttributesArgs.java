@@ -5,6 +5,7 @@ package io.pulumi.azurenative.storagepool.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class AttributesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AttributesArgs() {
-        this.authentication = Output.empty();
-        this.prodModeWriteProtect = Output.empty();
+        this.authentication = Codegen.empty();
+        this.prodModeWriteProtect = Codegen.empty();
     }
 
     public static Builder builder() {

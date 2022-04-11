@@ -10,6 +10,7 @@ import io.pulumi.aws.storagegateway.outputs.FileSystemAssociationCacheAttributes
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -182,7 +183,7 @@ public class FileSystemAssociation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FileSystemAssociation(String name, FileSystemAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:storagegateway/fileSystemAssociation:FileSystemAssociation", name, args == null ? FileSystemAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:storagegateway/fileSystemAssociation:FileSystemAssociation", name, args == null ? FileSystemAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FileSystemAssociation(String name, Output<String> id, @Nullable FileSystemAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

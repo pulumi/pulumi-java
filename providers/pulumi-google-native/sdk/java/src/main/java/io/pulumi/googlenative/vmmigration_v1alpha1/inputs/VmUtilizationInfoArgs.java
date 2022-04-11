@@ -5,6 +5,7 @@ package io.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.vmmigration_v1alpha1.inputs.VmUtilizationMetricsArgs;
 import io.pulumi.googlenative.vmmigration_v1alpha1.inputs.VmwareVmDetailsArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class VmUtilizationInfoArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<VmUtilizationMetricsArgs> utilization;
 
     public Output<VmUtilizationMetricsArgs> getUtilization() {
-        return this.utilization == null ? Output.empty() : this.utilization;
+        return this.utilization == null ? Codegen.empty() : this.utilization;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class VmUtilizationInfoArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> vmId;
 
     public Output<String> getVmId() {
-        return this.vmId == null ? Output.empty() : this.vmId;
+        return this.vmId == null ? Codegen.empty() : this.vmId;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class VmUtilizationInfoArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<VmwareVmDetailsArgs> vmwareVmDetails;
 
     public Output<VmwareVmDetailsArgs> getVmwareVmDetails() {
-        return this.vmwareVmDetails == null ? Output.empty() : this.vmwareVmDetails;
+        return this.vmwareVmDetails == null ? Codegen.empty() : this.vmwareVmDetails;
     }
 
     public VmUtilizationInfoArgs(
@@ -63,9 +64,9 @@ public final class VmUtilizationInfoArgs extends io.pulumi.resources.ResourceArg
     }
 
     private VmUtilizationInfoArgs() {
-        this.utilization = Output.empty();
-        this.vmId = Output.empty();
-        this.vmwareVmDetails = Output.empty();
+        this.utilization = Codegen.empty();
+        this.vmId = Codegen.empty();
+        this.vmwareVmDetails = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class VmUtilizationInfoArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder utilization(@Nullable VmUtilizationMetricsArgs utilization) {
-            this.utilization = Output.ofNullable(utilization);
+            this.utilization = Codegen.ofNullable(utilization);
             return this;
         }
         public Builder vmId(@Nullable Output<String> vmId) {
@@ -105,7 +106,7 @@ public final class VmUtilizationInfoArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder vmId(@Nullable String vmId) {
-            this.vmId = Output.ofNullable(vmId);
+            this.vmId = Codegen.ofNullable(vmId);
             return this;
         }
         public Builder vmwareVmDetails(@Nullable Output<VmwareVmDetailsArgs> vmwareVmDetails) {
@@ -113,7 +114,7 @@ public final class VmUtilizationInfoArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder vmwareVmDetails(@Nullable VmwareVmDetailsArgs vmwareVmDetails) {
-            this.vmwareVmDetails = Output.ofNullable(vmwareVmDetails);
+            this.vmwareVmDetails = Codegen.ofNullable(vmwareVmDetails);
             return this;
         }        public VmUtilizationInfoArgs build() {
             return new VmUtilizationInfoArgs(utilization, vmId, vmwareVmDetails);

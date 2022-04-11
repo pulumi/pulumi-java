@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class CertificateConfigX509ConfigCaOptionsGetArgs extends io.pulumi
       private final @Nullable Output<Boolean> isCa;
 
     public Output<Boolean> getIsCa() {
-        return this.isCa == null ? Output.empty() : this.isCa;
+        return this.isCa == null ? Codegen.empty() : this.isCa;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class CertificateConfigX509ConfigCaOptionsGetArgs extends io.pulumi
       private final @Nullable Output<Integer> maxIssuerPathLength;
 
     public Output<Integer> getMaxIssuerPathLength() {
-        return this.maxIssuerPathLength == null ? Output.empty() : this.maxIssuerPathLength;
+        return this.maxIssuerPathLength == null ? Codegen.empty() : this.maxIssuerPathLength;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class CertificateConfigX509ConfigCaOptionsGetArgs extends io.pulumi
       private final @Nullable Output<Boolean> nonCa;
 
     public Output<Boolean> getNonCa() {
-        return this.nonCa == null ? Output.empty() : this.nonCa;
+        return this.nonCa == null ? Codegen.empty() : this.nonCa;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class CertificateConfigX509ConfigCaOptionsGetArgs extends io.pulumi
       private final @Nullable Output<Boolean> zeroMaxIssuerPathLength;
 
     public Output<Boolean> getZeroMaxIssuerPathLength() {
-        return this.zeroMaxIssuerPathLength == null ? Output.empty() : this.zeroMaxIssuerPathLength;
+        return this.zeroMaxIssuerPathLength == null ? Codegen.empty() : this.zeroMaxIssuerPathLength;
     }
 
     public CertificateConfigX509ConfigCaOptionsGetArgs(
@@ -75,10 +76,10 @@ public final class CertificateConfigX509ConfigCaOptionsGetArgs extends io.pulumi
     }
 
     private CertificateConfigX509ConfigCaOptionsGetArgs() {
-        this.isCa = Output.empty();
-        this.maxIssuerPathLength = Output.empty();
-        this.nonCa = Output.empty();
-        this.zeroMaxIssuerPathLength = Output.empty();
+        this.isCa = Codegen.empty();
+        this.maxIssuerPathLength = Codegen.empty();
+        this.nonCa = Codegen.empty();
+        this.zeroMaxIssuerPathLength = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class CertificateConfigX509ConfigCaOptionsGetArgs extends io.pulumi
             return this;
         }
         public Builder isCa(@Nullable Boolean isCa) {
-            this.isCa = Output.ofNullable(isCa);
+            this.isCa = Codegen.ofNullable(isCa);
             return this;
         }
         public Builder maxIssuerPathLength(@Nullable Output<Integer> maxIssuerPathLength) {
@@ -120,7 +121,7 @@ public final class CertificateConfigX509ConfigCaOptionsGetArgs extends io.pulumi
             return this;
         }
         public Builder maxIssuerPathLength(@Nullable Integer maxIssuerPathLength) {
-            this.maxIssuerPathLength = Output.ofNullable(maxIssuerPathLength);
+            this.maxIssuerPathLength = Codegen.ofNullable(maxIssuerPathLength);
             return this;
         }
         public Builder nonCa(@Nullable Output<Boolean> nonCa) {
@@ -128,7 +129,7 @@ public final class CertificateConfigX509ConfigCaOptionsGetArgs extends io.pulumi
             return this;
         }
         public Builder nonCa(@Nullable Boolean nonCa) {
-            this.nonCa = Output.ofNullable(nonCa);
+            this.nonCa = Codegen.ofNullable(nonCa);
             return this;
         }
         public Builder zeroMaxIssuerPathLength(@Nullable Output<Boolean> zeroMaxIssuerPathLength) {
@@ -136,7 +137,7 @@ public final class CertificateConfigX509ConfigCaOptionsGetArgs extends io.pulumi
             return this;
         }
         public Builder zeroMaxIssuerPathLength(@Nullable Boolean zeroMaxIssuerPathLength) {
-            this.zeroMaxIssuerPathLength = Output.ofNullable(zeroMaxIssuerPathLength);
+            this.zeroMaxIssuerPathLength = Codegen.ofNullable(zeroMaxIssuerPathLength);
             return this;
         }        public CertificateConfigX509ConfigCaOptionsGetArgs build() {
             return new CertificateConfigX509ConfigCaOptionsGetArgs(isCa, maxIssuerPathLength, nonCa, zeroMaxIssuerPathLength);

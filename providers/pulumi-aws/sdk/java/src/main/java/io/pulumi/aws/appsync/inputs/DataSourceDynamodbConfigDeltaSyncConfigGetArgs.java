@@ -5,6 +5,7 @@ package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class DataSourceDynamodbConfigDeltaSyncConfigGetArgs extends io.pul
       private final @Nullable Output<Integer> baseTableTtl;
 
     public Output<Integer> getBaseTableTtl() {
-        return this.baseTableTtl == null ? Output.empty() : this.baseTableTtl;
+        return this.baseTableTtl == null ? Codegen.empty() : this.baseTableTtl;
     }
 
     @Import(name="deltaSyncTableName", required=true)
@@ -33,7 +34,7 @@ public final class DataSourceDynamodbConfigDeltaSyncConfigGetArgs extends io.pul
       private final @Nullable Output<Integer> deltaSyncTableTtl;
 
     public Output<Integer> getDeltaSyncTableTtl() {
-        return this.deltaSyncTableTtl == null ? Output.empty() : this.deltaSyncTableTtl;
+        return this.deltaSyncTableTtl == null ? Codegen.empty() : this.deltaSyncTableTtl;
     }
 
     public DataSourceDynamodbConfigDeltaSyncConfigGetArgs(
@@ -46,9 +47,9 @@ public final class DataSourceDynamodbConfigDeltaSyncConfigGetArgs extends io.pul
     }
 
     private DataSourceDynamodbConfigDeltaSyncConfigGetArgs() {
-        this.baseTableTtl = Output.empty();
-        this.deltaSyncTableName = Output.empty();
-        this.deltaSyncTableTtl = Output.empty();
+        this.baseTableTtl = Codegen.empty();
+        this.deltaSyncTableName = Codegen.empty();
+        this.deltaSyncTableTtl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class DataSourceDynamodbConfigDeltaSyncConfigGetArgs extends io.pul
             return this;
         }
         public Builder baseTableTtl(@Nullable Integer baseTableTtl) {
-            this.baseTableTtl = Output.ofNullable(baseTableTtl);
+            this.baseTableTtl = Codegen.ofNullable(baseTableTtl);
             return this;
         }
         public Builder deltaSyncTableName(Output<String> deltaSyncTableName) {
@@ -96,7 +97,7 @@ public final class DataSourceDynamodbConfigDeltaSyncConfigGetArgs extends io.pul
             return this;
         }
         public Builder deltaSyncTableTtl(@Nullable Integer deltaSyncTableTtl) {
-            this.deltaSyncTableTtl = Output.ofNullable(deltaSyncTableTtl);
+            this.deltaSyncTableTtl = Codegen.ofNullable(deltaSyncTableTtl);
             return this;
         }        public DataSourceDynamodbConfigDeltaSyncConfigGetArgs build() {
             return new DataSourceDynamodbConfigDeltaSyncConfigGetArgs(baseTableTtl, deltaSyncTableName, deltaSyncTableTtl);

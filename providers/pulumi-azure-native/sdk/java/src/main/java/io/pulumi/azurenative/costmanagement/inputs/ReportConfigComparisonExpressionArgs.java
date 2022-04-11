@@ -7,6 +7,7 @@ import io.pulumi.azurenative.costmanagement.enums.OperatorType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -63,9 +64,9 @@ public final class ReportConfigComparisonExpressionArgs extends io.pulumi.resour
     }
 
     private ReportConfigComparisonExpressionArgs() {
-        this.name = Output.empty();
-        this.operator = Output.empty();
-        this.values = Output.empty();
+        this.name = Codegen.empty();
+        this.operator = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {

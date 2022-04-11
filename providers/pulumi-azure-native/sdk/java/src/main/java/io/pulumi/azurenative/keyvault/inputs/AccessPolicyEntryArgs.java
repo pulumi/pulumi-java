@@ -6,6 +6,7 @@ package io.pulumi.azurenative.keyvault.inputs;
 import io.pulumi.azurenative.keyvault.inputs.PermissionsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class AccessPolicyEntryArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> applicationId;
 
     public Output<String> getApplicationId() {
-        return this.applicationId == null ? Output.empty() : this.applicationId;
+        return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
     /**
@@ -75,10 +76,10 @@ public final class AccessPolicyEntryArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AccessPolicyEntryArgs() {
-        this.applicationId = Output.empty();
-        this.objectId = Output.empty();
-        this.permissions = Output.empty();
-        this.tenantId = Output.empty();
+        this.applicationId = Codegen.empty();
+        this.objectId = Codegen.empty();
+        this.permissions = Codegen.empty();
+        this.tenantId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class AccessPolicyEntryArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Output.ofNullable(applicationId);
+            this.applicationId = Codegen.ofNullable(applicationId);
             return this;
         }
         public Builder objectId(Output<String> objectId) {

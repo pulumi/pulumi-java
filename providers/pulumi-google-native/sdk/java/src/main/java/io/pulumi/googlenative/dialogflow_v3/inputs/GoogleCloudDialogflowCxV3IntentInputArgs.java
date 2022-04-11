@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3IntentInputArgs extends io.pulumi.re
     }
 
     private GoogleCloudDialogflowCxV3IntentInputArgs() {
-        this.intent = Output.empty();
+        this.intent = Codegen.empty();
     }
 
     public static Builder builder() {

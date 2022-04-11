@@ -7,6 +7,7 @@ import io.pulumi.awsnative.customerprofiles.enums.IntegrationTriggerType;
 import io.pulumi.awsnative.customerprofiles.inputs.IntegrationTriggerPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +20,7 @@ public final class IntegrationTriggerConfigArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<IntegrationTriggerPropertiesArgs> triggerProperties;
 
     public Output<IntegrationTriggerPropertiesArgs> getTriggerProperties() {
-        return this.triggerProperties == null ? Output.empty() : this.triggerProperties;
+        return this.triggerProperties == null ? Codegen.empty() : this.triggerProperties;
     }
 
     @Import(name="triggerType", required=true)
@@ -37,8 +38,8 @@ public final class IntegrationTriggerConfigArgs extends io.pulumi.resources.Reso
     }
 
     private IntegrationTriggerConfigArgs() {
-        this.triggerProperties = Output.empty();
-        this.triggerType = Output.empty();
+        this.triggerProperties = Codegen.empty();
+        this.triggerType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class IntegrationTriggerConfigArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder triggerProperties(@Nullable IntegrationTriggerPropertiesArgs triggerProperties) {
-            this.triggerProperties = Output.ofNullable(triggerProperties);
+            this.triggerProperties = Codegen.ofNullable(triggerProperties);
             return this;
         }
         public Builder triggerType(Output<IntegrationTriggerType> triggerType) {

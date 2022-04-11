@@ -5,6 +5,7 @@ package io.pulumi.azurenative.authorization.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ManagementLockOwnerArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> applicationId;
 
     public Output<String> getApplicationId() {
-        return this.applicationId == null ? Output.empty() : this.applicationId;
+        return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
     public ManagementLockOwnerArgs(@Nullable Output<String> applicationId) {
@@ -34,7 +35,7 @@ public final class ManagementLockOwnerArgs extends io.pulumi.resources.ResourceA
     }
 
     private ManagementLockOwnerArgs() {
-        this.applicationId = Output.empty();
+        this.applicationId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ManagementLockOwnerArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Output.ofNullable(applicationId);
+            this.applicationId = Codegen.ofNullable(applicationId);
             return this;
         }        public ManagementLockOwnerArgs build() {
             return new ManagementLockOwnerArgs(applicationId);

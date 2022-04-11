@@ -5,6 +5,7 @@ package io.pulumi.aws.organizations.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> email;
 
     public Output<String> getEmail() {
-        return this.email == null ? Output.empty() : this.email;
+        return this.email == null ? Codegen.empty() : this.email;
     }
 
     /**
@@ -45,21 +46,21 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> iamUserAccessToBilling;
 
     public Output<String> getIamUserAccessToBilling() {
-        return this.iamUserAccessToBilling == null ? Output.empty() : this.iamUserAccessToBilling;
+        return this.iamUserAccessToBilling == null ? Codegen.empty() : this.iamUserAccessToBilling;
     }
 
     @Import(name="joinedMethod")
       private final @Nullable Output<String> joinedMethod;
 
     public Output<String> getJoinedMethod() {
-        return this.joinedMethod == null ? Output.empty() : this.joinedMethod;
+        return this.joinedMethod == null ? Codegen.empty() : this.joinedMethod;
     }
 
     @Import(name="joinedTimestamp")
       private final @Nullable Output<String> joinedTimestamp;
 
     public Output<String> getJoinedTimestamp() {
-        return this.joinedTimestamp == null ? Output.empty() : this.joinedTimestamp;
+        return this.joinedTimestamp == null ? Codegen.empty() : this.joinedTimestamp;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> parentId;
 
     public Output<String> getParentId() {
-        return this.parentId == null ? Output.empty() : this.parentId;
+        return this.parentId == null ? Codegen.empty() : this.parentId;
     }
 
     /**
@@ -92,14 +93,14 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> roleName;
 
     public Output<String> getRoleName() {
-        return this.roleName == null ? Output.empty() : this.roleName;
+        return this.roleName == null ? Codegen.empty() : this.roleName;
     }
 
     @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -121,7 +122,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public AccountState(
@@ -150,17 +151,17 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccountState() {
-        this.arn = Output.empty();
-        this.email = Output.empty();
-        this.iamUserAccessToBilling = Output.empty();
-        this.joinedMethod = Output.empty();
-        this.joinedTimestamp = Output.empty();
-        this.name = Output.empty();
-        this.parentId = Output.empty();
-        this.roleName = Output.empty();
-        this.status = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.email = Codegen.empty();
+        this.iamUserAccessToBilling = Codegen.empty();
+        this.joinedMethod = Codegen.empty();
+        this.joinedTimestamp = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parentId = Codegen.empty();
+        this.roleName = Codegen.empty();
+        this.status = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -208,7 +209,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder email(@Nullable Output<String> email) {
@@ -216,7 +217,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder email(@Nullable String email) {
-            this.email = Output.ofNullable(email);
+            this.email = Codegen.ofNullable(email);
             return this;
         }
         public Builder iamUserAccessToBilling(@Nullable Output<String> iamUserAccessToBilling) {
@@ -224,7 +225,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iamUserAccessToBilling(@Nullable String iamUserAccessToBilling) {
-            this.iamUserAccessToBilling = Output.ofNullable(iamUserAccessToBilling);
+            this.iamUserAccessToBilling = Codegen.ofNullable(iamUserAccessToBilling);
             return this;
         }
         public Builder joinedMethod(@Nullable Output<String> joinedMethod) {
@@ -232,7 +233,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder joinedMethod(@Nullable String joinedMethod) {
-            this.joinedMethod = Output.ofNullable(joinedMethod);
+            this.joinedMethod = Codegen.ofNullable(joinedMethod);
             return this;
         }
         public Builder joinedTimestamp(@Nullable Output<String> joinedTimestamp) {
@@ -240,7 +241,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder joinedTimestamp(@Nullable String joinedTimestamp) {
-            this.joinedTimestamp = Output.ofNullable(joinedTimestamp);
+            this.joinedTimestamp = Codegen.ofNullable(joinedTimestamp);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -248,7 +249,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parentId(@Nullable Output<String> parentId) {
@@ -256,7 +257,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parentId(@Nullable String parentId) {
-            this.parentId = Output.ofNullable(parentId);
+            this.parentId = Codegen.ofNullable(parentId);
             return this;
         }
         public Builder roleName(@Nullable Output<String> roleName) {
@@ -264,7 +265,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roleName(@Nullable String roleName) {
-            this.roleName = Output.ofNullable(roleName);
+            this.roleName = Codegen.ofNullable(roleName);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -272,7 +273,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -280,7 +281,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -288,7 +289,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public AccountState build() {
             return new AccountState(arn, email, iamUserAccessToBilling, joinedMethod, joinedTimestamp, name, parentId, roleName, status, tags, tagsAll);

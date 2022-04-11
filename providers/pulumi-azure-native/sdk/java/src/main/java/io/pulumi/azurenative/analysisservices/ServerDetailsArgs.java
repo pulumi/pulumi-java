@@ -10,6 +10,7 @@ import io.pulumi.azurenative.analysisservices.inputs.ResourceSkuArgs;
 import io.pulumi.azurenative.analysisservices.inputs.ServerAdministratorsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -29,7 +30,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ServerAdministratorsArgs> asAdministrators;
 
     public Output<ServerAdministratorsArgs> getAsAdministrators() {
-        return this.asAdministrators == null ? Output.empty() : this.asAdministrators;
+        return this.asAdministrators == null ? Codegen.empty() : this.asAdministrators;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> backupBlobContainerUri;
 
     public Output<String> getBackupBlobContainerUri() {
-        return this.backupBlobContainerUri == null ? Output.empty() : this.backupBlobContainerUri;
+        return this.backupBlobContainerUri == null ? Codegen.empty() : this.backupBlobContainerUri;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GatewayDetailsArgs> gatewayDetails;
 
     public Output<GatewayDetailsArgs> getGatewayDetails() {
-        return this.gatewayDetails == null ? Output.empty() : this.gatewayDetails;
+        return this.gatewayDetails == null ? Codegen.empty() : this.gatewayDetails;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<IPv4FirewallSettingsArgs> ipV4FirewallSettings;
 
     public Output<IPv4FirewallSettingsArgs> getIpV4FirewallSettings() {
-        return this.ipV4FirewallSettings == null ? Output.empty() : this.ipV4FirewallSettings;
+        return this.ipV4FirewallSettings == null ? Codegen.empty() : this.ipV4FirewallSettings;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> managedMode;
 
     public Output<Integer> getManagedMode() {
-        return this.managedMode == null ? Output.empty() : this.managedMode;
+        return this.managedMode == null ? Codegen.empty() : this.managedMode;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ConnectionMode> querypoolConnectionMode;
 
     public Output<ConnectionMode> getQuerypoolConnectionMode() {
-        return this.querypoolConnectionMode == null ? Output.empty() : this.querypoolConnectionMode;
+        return this.querypoolConnectionMode == null ? Codegen.empty() : this.querypoolConnectionMode;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> serverMonitorMode;
 
     public Output<Integer> getServerMonitorMode() {
-        return this.serverMonitorMode == null ? Output.empty() : this.serverMonitorMode;
+        return this.serverMonitorMode == null ? Codegen.empty() : this.serverMonitorMode;
     }
 
     /**
@@ -128,7 +129,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serverName;
 
     public Output<String> getServerName() {
-        return this.serverName == null ? Output.empty() : this.serverName;
+        return this.serverName == null ? Codegen.empty() : this.serverName;
     }
 
     /**
@@ -150,7 +151,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ServerDetailsArgs(
@@ -171,28 +172,28 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
         this.gatewayDetails = gatewayDetails;
         this.ipV4FirewallSettings = ipV4FirewallSettings;
         this.location = location;
-        this.managedMode = managedMode == null ? Output.ofNullable(1) : managedMode;
-        this.querypoolConnectionMode = querypoolConnectionMode == null ? Output.ofNullable(io.pulumi.azurenative.analysisservices.enums.ConnectionMode.All) : querypoolConnectionMode;
+        this.managedMode = managedMode == null ? Codegen.ofNullable(1) : managedMode;
+        this.querypoolConnectionMode = querypoolConnectionMode == null ? Codegen.ofNullable(io.pulumi.azurenative.analysisservices.enums.ConnectionMode.All) : querypoolConnectionMode;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverMonitorMode = serverMonitorMode == null ? Output.ofNullable(1) : serverMonitorMode;
+        this.serverMonitorMode = serverMonitorMode == null ? Codegen.ofNullable(1) : serverMonitorMode;
         this.serverName = serverName;
         this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
         this.tags = tags;
     }
 
     private ServerDetailsArgs() {
-        this.asAdministrators = Output.empty();
-        this.backupBlobContainerUri = Output.empty();
-        this.gatewayDetails = Output.empty();
-        this.ipV4FirewallSettings = Output.empty();
-        this.location = Output.empty();
-        this.managedMode = Output.empty();
-        this.querypoolConnectionMode = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverMonitorMode = Output.empty();
-        this.serverName = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
+        this.asAdministrators = Codegen.empty();
+        this.backupBlobContainerUri = Codegen.empty();
+        this.gatewayDetails = Codegen.empty();
+        this.ipV4FirewallSettings = Codegen.empty();
+        this.location = Codegen.empty();
+        this.managedMode = Codegen.empty();
+        this.querypoolConnectionMode = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverMonitorMode = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -242,7 +243,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder asAdministrators(@Nullable ServerAdministratorsArgs asAdministrators) {
-            this.asAdministrators = Output.ofNullable(asAdministrators);
+            this.asAdministrators = Codegen.ofNullable(asAdministrators);
             return this;
         }
         public Builder backupBlobContainerUri(@Nullable Output<String> backupBlobContainerUri) {
@@ -250,7 +251,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backupBlobContainerUri(@Nullable String backupBlobContainerUri) {
-            this.backupBlobContainerUri = Output.ofNullable(backupBlobContainerUri);
+            this.backupBlobContainerUri = Codegen.ofNullable(backupBlobContainerUri);
             return this;
         }
         public Builder gatewayDetails(@Nullable Output<GatewayDetailsArgs> gatewayDetails) {
@@ -258,7 +259,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gatewayDetails(@Nullable GatewayDetailsArgs gatewayDetails) {
-            this.gatewayDetails = Output.ofNullable(gatewayDetails);
+            this.gatewayDetails = Codegen.ofNullable(gatewayDetails);
             return this;
         }
         public Builder ipV4FirewallSettings(@Nullable Output<IPv4FirewallSettingsArgs> ipV4FirewallSettings) {
@@ -266,7 +267,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipV4FirewallSettings(@Nullable IPv4FirewallSettingsArgs ipV4FirewallSettings) {
-            this.ipV4FirewallSettings = Output.ofNullable(ipV4FirewallSettings);
+            this.ipV4FirewallSettings = Codegen.ofNullable(ipV4FirewallSettings);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -274,7 +275,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder managedMode(@Nullable Output<Integer> managedMode) {
@@ -282,7 +283,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder managedMode(@Nullable Integer managedMode) {
-            this.managedMode = Output.ofNullable(managedMode);
+            this.managedMode = Codegen.ofNullable(managedMode);
             return this;
         }
         public Builder querypoolConnectionMode(@Nullable Output<ConnectionMode> querypoolConnectionMode) {
@@ -290,7 +291,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder querypoolConnectionMode(@Nullable ConnectionMode querypoolConnectionMode) {
-            this.querypoolConnectionMode = Output.ofNullable(querypoolConnectionMode);
+            this.querypoolConnectionMode = Codegen.ofNullable(querypoolConnectionMode);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -306,7 +307,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serverMonitorMode(@Nullable Integer serverMonitorMode) {
-            this.serverMonitorMode = Output.ofNullable(serverMonitorMode);
+            this.serverMonitorMode = Codegen.ofNullable(serverMonitorMode);
             return this;
         }
         public Builder serverName(@Nullable Output<String> serverName) {
@@ -314,7 +315,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serverName(@Nullable String serverName) {
-            this.serverName = Output.ofNullable(serverName);
+            this.serverName = Codegen.ofNullable(serverName);
             return this;
         }
         public Builder sku(Output<ResourceSkuArgs> sku) {
@@ -330,7 +331,7 @@ public final class ServerDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ServerDetailsArgs build() {
             return new ServerDetailsArgs(asAdministrators, backupBlobContainerUri, gatewayDetails, ipV4FirewallSettings, location, managedMode, querypoolConnectionMode, resourceGroupName, serverMonitorMode, serverName, sku, tags);

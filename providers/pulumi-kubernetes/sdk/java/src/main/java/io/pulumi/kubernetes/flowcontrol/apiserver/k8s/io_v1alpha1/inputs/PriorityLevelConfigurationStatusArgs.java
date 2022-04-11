@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs.PriorityLevelConfigurationConditionArgs;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class PriorityLevelConfigurationStatusArgs extends io.pulumi.resour
       private final @Nullable Output<List<PriorityLevelConfigurationConditionArgs>> conditions;
 
     public Output<List<PriorityLevelConfigurationConditionArgs>> getConditions() {
-        return this.conditions == null ? Output.empty() : this.conditions;
+        return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
     public PriorityLevelConfigurationStatusArgs(@Nullable Output<List<PriorityLevelConfigurationConditionArgs>> conditions) {
@@ -35,7 +36,7 @@ public final class PriorityLevelConfigurationStatusArgs extends io.pulumi.resour
     }
 
     private PriorityLevelConfigurationStatusArgs() {
-        this.conditions = Output.empty();
+        this.conditions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class PriorityLevelConfigurationStatusArgs extends io.pulumi.resour
             return this;
         }
         public Builder conditions(@Nullable List<PriorityLevelConfigurationConditionArgs> conditions) {
-            this.conditions = Output.ofNullable(conditions);
+            this.conditions = Codegen.ofNullable(conditions);
             return this;
         }
         public Builder conditions(PriorityLevelConfigurationConditionArgs... conditions) {

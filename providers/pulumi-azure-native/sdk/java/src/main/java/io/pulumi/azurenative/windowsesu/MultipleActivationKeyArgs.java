@@ -8,6 +8,7 @@ import io.pulumi.azurenative.windowsesu.enums.SupportType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> agreementNumber;
 
     public Output<String> getAgreementNumber() {
-        return this.agreementNumber == null ? Output.empty() : this.agreementNumber;
+        return this.agreementNumber == null ? Codegen.empty() : this.agreementNumber;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Integer> installedServerNumber;
 
     public Output<Integer> getInstalledServerNumber() {
-        return this.installedServerNumber == null ? Output.empty() : this.installedServerNumber;
+        return this.installedServerNumber == null ? Codegen.empty() : this.installedServerNumber;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Boolean> isEligible;
 
     public Output<Boolean> getIsEligible() {
-        return this.isEligible == null ? Output.empty() : this.isEligible;
+        return this.isEligible == null ? Codegen.empty() : this.isEligible;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> multipleActivationKeyName;
 
     public Output<String> getMultipleActivationKeyName() {
-        return this.multipleActivationKeyName == null ? Output.empty() : this.multipleActivationKeyName;
+        return this.multipleActivationKeyName == null ? Codegen.empty() : this.multipleActivationKeyName;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Either<String,OsType>> osType;
 
     public Output<Either<String,OsType>> getOsType() {
-        return this.osType == null ? Output.empty() : this.osType;
+        return this.osType == null ? Codegen.empty() : this.osType;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Either<String,SupportType>> supportType;
 
     public Output<Either<String,SupportType>> getSupportType() {
-        return this.supportType == null ? Output.empty() : this.supportType;
+        return this.supportType == null ? Codegen.empty() : this.supportType;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public MultipleActivationKeyArgs(
@@ -141,15 +142,15 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
     }
 
     private MultipleActivationKeyArgs() {
-        this.agreementNumber = Output.empty();
-        this.installedServerNumber = Output.empty();
-        this.isEligible = Output.empty();
-        this.location = Output.empty();
-        this.multipleActivationKeyName = Output.empty();
-        this.osType = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.supportType = Output.empty();
-        this.tags = Output.empty();
+        this.agreementNumber = Codegen.empty();
+        this.installedServerNumber = Codegen.empty();
+        this.isEligible = Codegen.empty();
+        this.location = Codegen.empty();
+        this.multipleActivationKeyName = Codegen.empty();
+        this.osType = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.supportType = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -193,7 +194,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder agreementNumber(@Nullable String agreementNumber) {
-            this.agreementNumber = Output.ofNullable(agreementNumber);
+            this.agreementNumber = Codegen.ofNullable(agreementNumber);
             return this;
         }
         public Builder installedServerNumber(@Nullable Output<Integer> installedServerNumber) {
@@ -201,7 +202,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder installedServerNumber(@Nullable Integer installedServerNumber) {
-            this.installedServerNumber = Output.ofNullable(installedServerNumber);
+            this.installedServerNumber = Codegen.ofNullable(installedServerNumber);
             return this;
         }
         public Builder isEligible(@Nullable Output<Boolean> isEligible) {
@@ -209,7 +210,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder isEligible(@Nullable Boolean isEligible) {
-            this.isEligible = Output.ofNullable(isEligible);
+            this.isEligible = Codegen.ofNullable(isEligible);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -217,7 +218,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder multipleActivationKeyName(@Nullable Output<String> multipleActivationKeyName) {
@@ -225,7 +226,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder multipleActivationKeyName(@Nullable String multipleActivationKeyName) {
-            this.multipleActivationKeyName = Output.ofNullable(multipleActivationKeyName);
+            this.multipleActivationKeyName = Codegen.ofNullable(multipleActivationKeyName);
             return this;
         }
         public Builder osType(@Nullable Output<Either<String,OsType>> osType) {
@@ -233,7 +234,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder osType(@Nullable Either<String,OsType> osType) {
-            this.osType = Output.ofNullable(osType);
+            this.osType = Codegen.ofNullable(osType);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -249,7 +250,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder supportType(@Nullable Either<String,SupportType> supportType) {
-            this.supportType = Output.ofNullable(supportType);
+            this.supportType = Codegen.ofNullable(supportType);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -257,7 +258,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public MultipleActivationKeyArgs build() {
             return new MultipleActivationKeyArgs(agreementNumber, installedServerNumber, isEligible, location, multipleActivationKeyName, osType, resourceGroupName, supportType, tags);

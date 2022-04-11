@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsArgs;
 import java.lang.Boolean;
@@ -26,7 +27,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs> advancedSettings;
 
     public Output<GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs> getAdvancedSettings() {
-        return this.advancedSettings == null ? Output.empty() : this.advancedSettings;
+        return this.advancedSettings == null ? Codegen.empty() : this.advancedSettings;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> avatarUri;
 
     public Output<String> getAvatarUri() {
-        return this.avatarUri == null ? Output.empty() : this.avatarUri;
+        return this.avatarUri == null ? Codegen.empty() : this.avatarUri;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableSpellCorrection;
 
     public Output<Boolean> getEnableSpellCorrection() {
-        return this.enableSpellCorrection == null ? Output.empty() : this.enableSpellCorrection;
+        return this.enableSpellCorrection == null ? Codegen.empty() : this.enableSpellCorrection;
     }
 
     /**
@@ -92,14 +93,14 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableStackdriverLogging;
 
     public Output<Boolean> getEnableStackdriverLogging() {
-        return this.enableStackdriverLogging == null ? Output.empty() : this.enableStackdriverLogging;
+        return this.enableStackdriverLogging == null ? Codegen.empty() : this.enableStackdriverLogging;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -110,14 +111,14 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -128,7 +129,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> securitySettings;
 
     public Output<String> getSecuritySettings() {
-        return this.securitySettings == null ? Output.empty() : this.securitySettings;
+        return this.securitySettings == null ? Codegen.empty() : this.securitySettings;
     }
 
     /**
@@ -139,7 +140,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsArgs> speechToTextSettings;
 
     public Output<GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsArgs> getSpeechToTextSettings() {
-        return this.speechToTextSettings == null ? Output.empty() : this.speechToTextSettings;
+        return this.speechToTextSettings == null ? Codegen.empty() : this.speechToTextSettings;
     }
 
     /**
@@ -150,7 +151,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> startFlow;
 
     public Output<String> getStartFlow() {
-        return this.startFlow == null ? Output.empty() : this.startFlow;
+        return this.startFlow == null ? Codegen.empty() : this.startFlow;
     }
 
     /**
@@ -161,7 +162,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> supportedLanguageCodes;
 
     public Output<List<String>> getSupportedLanguageCodes() {
-        return this.supportedLanguageCodes == null ? Output.empty() : this.supportedLanguageCodes;
+        return this.supportedLanguageCodes == null ? Codegen.empty() : this.supportedLanguageCodes;
     }
 
     /**
@@ -209,21 +210,21 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AgentArgs() {
-        this.advancedSettings = Output.empty();
-        this.avatarUri = Output.empty();
-        this.defaultLanguageCode = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.enableSpellCorrection = Output.empty();
-        this.enableStackdriverLogging = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.securitySettings = Output.empty();
-        this.speechToTextSettings = Output.empty();
-        this.startFlow = Output.empty();
-        this.supportedLanguageCodes = Output.empty();
-        this.timeZone = Output.empty();
+        this.advancedSettings = Codegen.empty();
+        this.avatarUri = Codegen.empty();
+        this.defaultLanguageCode = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.enableSpellCorrection = Codegen.empty();
+        this.enableStackdriverLogging = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.securitySettings = Codegen.empty();
+        this.speechToTextSettings = Codegen.empty();
+        this.startFlow = Codegen.empty();
+        this.supportedLanguageCodes = Codegen.empty();
+        this.timeZone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -279,7 +280,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder advancedSettings(@Nullable GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs advancedSettings) {
-            this.advancedSettings = Output.ofNullable(advancedSettings);
+            this.advancedSettings = Codegen.ofNullable(advancedSettings);
             return this;
         }
         public Builder avatarUri(@Nullable Output<String> avatarUri) {
@@ -287,7 +288,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder avatarUri(@Nullable String avatarUri) {
-            this.avatarUri = Output.ofNullable(avatarUri);
+            this.avatarUri = Codegen.ofNullable(avatarUri);
             return this;
         }
         public Builder defaultLanguageCode(Output<String> defaultLanguageCode) {
@@ -303,7 +304,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -319,7 +320,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableSpellCorrection(@Nullable Boolean enableSpellCorrection) {
-            this.enableSpellCorrection = Output.ofNullable(enableSpellCorrection);
+            this.enableSpellCorrection = Codegen.ofNullable(enableSpellCorrection);
             return this;
         }
         public Builder enableStackdriverLogging(@Nullable Output<Boolean> enableStackdriverLogging) {
@@ -327,7 +328,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableStackdriverLogging(@Nullable Boolean enableStackdriverLogging) {
-            this.enableStackdriverLogging = Output.ofNullable(enableStackdriverLogging);
+            this.enableStackdriverLogging = Codegen.ofNullable(enableStackdriverLogging);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -335,7 +336,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -343,7 +344,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -351,7 +352,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder securitySettings(@Nullable Output<String> securitySettings) {
@@ -359,7 +360,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder securitySettings(@Nullable String securitySettings) {
-            this.securitySettings = Output.ofNullable(securitySettings);
+            this.securitySettings = Codegen.ofNullable(securitySettings);
             return this;
         }
         public Builder speechToTextSettings(@Nullable Output<GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsArgs> speechToTextSettings) {
@@ -367,7 +368,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder speechToTextSettings(@Nullable GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsArgs speechToTextSettings) {
-            this.speechToTextSettings = Output.ofNullable(speechToTextSettings);
+            this.speechToTextSettings = Codegen.ofNullable(speechToTextSettings);
             return this;
         }
         public Builder startFlow(@Nullable Output<String> startFlow) {
@@ -375,7 +376,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder startFlow(@Nullable String startFlow) {
-            this.startFlow = Output.ofNullable(startFlow);
+            this.startFlow = Codegen.ofNullable(startFlow);
             return this;
         }
         public Builder supportedLanguageCodes(@Nullable Output<List<String>> supportedLanguageCodes) {
@@ -383,7 +384,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder supportedLanguageCodes(@Nullable List<String> supportedLanguageCodes) {
-            this.supportedLanguageCodes = Output.ofNullable(supportedLanguageCodes);
+            this.supportedLanguageCodes = Codegen.ofNullable(supportedLanguageCodes);
             return this;
         }
         public Builder supportedLanguageCodes(String... supportedLanguageCodes) {

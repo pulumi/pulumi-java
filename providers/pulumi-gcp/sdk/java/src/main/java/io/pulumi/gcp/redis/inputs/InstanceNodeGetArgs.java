@@ -5,6 +5,7 @@ package io.pulumi.gcp.redis.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,14 +23,14 @@ public final class InstanceNodeGetArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public InstanceNodeGetArgs(
@@ -40,8 +41,8 @@ public final class InstanceNodeGetArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private InstanceNodeGetArgs() {
-        this.id = Output.empty();
-        this.zone = Output.empty();
+        this.id = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -71,7 +72,7 @@ public final class InstanceNodeGetArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder zone(@Nullable Output<String> zone) {
@@ -79,7 +80,7 @@ public final class InstanceNodeGetArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public InstanceNodeGetArgs build() {
             return new InstanceNodeGetArgs(id, zone);

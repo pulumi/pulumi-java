@@ -5,6 +5,7 @@ package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class TransferJobTransferSpecObjectConditionsGetArgs extends io.pul
       private final @Nullable Output<List<String>> excludePrefixes;
 
     public Output<List<String>> getExcludePrefixes() {
-        return this.excludePrefixes == null ? Output.empty() : this.excludePrefixes;
+        return this.excludePrefixes == null ? Codegen.empty() : this.excludePrefixes;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class TransferJobTransferSpecObjectConditionsGetArgs extends io.pul
       private final @Nullable Output<List<String>> includePrefixes;
 
     public Output<List<String>> getIncludePrefixes() {
-        return this.includePrefixes == null ? Output.empty() : this.includePrefixes;
+        return this.includePrefixes == null ? Codegen.empty() : this.includePrefixes;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class TransferJobTransferSpecObjectConditionsGetArgs extends io.pul
       private final @Nullable Output<String> maxTimeElapsedSinceLastModification;
 
     public Output<String> getMaxTimeElapsedSinceLastModification() {
-        return this.maxTimeElapsedSinceLastModification == null ? Output.empty() : this.maxTimeElapsedSinceLastModification;
+        return this.maxTimeElapsedSinceLastModification == null ? Codegen.empty() : this.maxTimeElapsedSinceLastModification;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class TransferJobTransferSpecObjectConditionsGetArgs extends io.pul
       private final @Nullable Output<String> minTimeElapsedSinceLastModification;
 
     public Output<String> getMinTimeElapsedSinceLastModification() {
-        return this.minTimeElapsedSinceLastModification == null ? Output.empty() : this.minTimeElapsedSinceLastModification;
+        return this.minTimeElapsedSinceLastModification == null ? Codegen.empty() : this.minTimeElapsedSinceLastModification;
     }
 
     public TransferJobTransferSpecObjectConditionsGetArgs(
@@ -71,10 +72,10 @@ public final class TransferJobTransferSpecObjectConditionsGetArgs extends io.pul
     }
 
     private TransferJobTransferSpecObjectConditionsGetArgs() {
-        this.excludePrefixes = Output.empty();
-        this.includePrefixes = Output.empty();
-        this.maxTimeElapsedSinceLastModification = Output.empty();
-        this.minTimeElapsedSinceLastModification = Output.empty();
+        this.excludePrefixes = Codegen.empty();
+        this.includePrefixes = Codegen.empty();
+        this.maxTimeElapsedSinceLastModification = Codegen.empty();
+        this.minTimeElapsedSinceLastModification = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class TransferJobTransferSpecObjectConditionsGetArgs extends io.pul
             return this;
         }
         public Builder excludePrefixes(@Nullable List<String> excludePrefixes) {
-            this.excludePrefixes = Output.ofNullable(excludePrefixes);
+            this.excludePrefixes = Codegen.ofNullable(excludePrefixes);
             return this;
         }
         public Builder excludePrefixes(String... excludePrefixes) {
@@ -119,7 +120,7 @@ public final class TransferJobTransferSpecObjectConditionsGetArgs extends io.pul
             return this;
         }
         public Builder includePrefixes(@Nullable List<String> includePrefixes) {
-            this.includePrefixes = Output.ofNullable(includePrefixes);
+            this.includePrefixes = Codegen.ofNullable(includePrefixes);
             return this;
         }
         public Builder includePrefixes(String... includePrefixes) {
@@ -130,7 +131,7 @@ public final class TransferJobTransferSpecObjectConditionsGetArgs extends io.pul
             return this;
         }
         public Builder maxTimeElapsedSinceLastModification(@Nullable String maxTimeElapsedSinceLastModification) {
-            this.maxTimeElapsedSinceLastModification = Output.ofNullable(maxTimeElapsedSinceLastModification);
+            this.maxTimeElapsedSinceLastModification = Codegen.ofNullable(maxTimeElapsedSinceLastModification);
             return this;
         }
         public Builder minTimeElapsedSinceLastModification(@Nullable Output<String> minTimeElapsedSinceLastModification) {
@@ -138,7 +139,7 @@ public final class TransferJobTransferSpecObjectConditionsGetArgs extends io.pul
             return this;
         }
         public Builder minTimeElapsedSinceLastModification(@Nullable String minTimeElapsedSinceLastModification) {
-            this.minTimeElapsedSinceLastModification = Output.ofNullable(minTimeElapsedSinceLastModification);
+            this.minTimeElapsedSinceLastModification = Codegen.ofNullable(minTimeElapsedSinceLastModification);
             return this;
         }        public TransferJobTransferSpecObjectConditionsGetArgs build() {
             return new TransferJobTransferSpecObjectConditionsGetArgs(excludePrefixes, includePrefixes, maxTimeElapsedSinceLastModification, minTimeElapsedSinceLastModification);

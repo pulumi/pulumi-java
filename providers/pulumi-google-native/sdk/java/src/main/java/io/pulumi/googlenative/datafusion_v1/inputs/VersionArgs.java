@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datafusion_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datafusion_v1.enums.VersionType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> availableFeatures;
 
     public Output<List<String>> getAvailableFeatures() {
-        return this.availableFeatures == null ? Output.empty() : this.availableFeatures;
+        return this.availableFeatures == null ? Codegen.empty() : this.availableFeatures;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> defaultVersion;
 
     public Output<Boolean> getDefaultVersion() {
-        return this.defaultVersion == null ? Output.empty() : this.defaultVersion;
+        return this.defaultVersion == null ? Codegen.empty() : this.defaultVersion;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<VersionType> type;
 
     public Output<VersionType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> versionNumber;
 
     public Output<String> getVersionNumber() {
-        return this.versionNumber == null ? Output.empty() : this.versionNumber;
+        return this.versionNumber == null ? Codegen.empty() : this.versionNumber;
     }
 
     public VersionArgs(
@@ -77,10 +78,10 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VersionArgs() {
-        this.availableFeatures = Output.empty();
-        this.defaultVersion = Output.empty();
-        this.type = Output.empty();
-        this.versionNumber = Output.empty();
+        this.availableFeatures = Codegen.empty();
+        this.defaultVersion = Codegen.empty();
+        this.type = Codegen.empty();
+        this.versionNumber = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder availableFeatures(@Nullable List<String> availableFeatures) {
-            this.availableFeatures = Output.ofNullable(availableFeatures);
+            this.availableFeatures = Codegen.ofNullable(availableFeatures);
             return this;
         }
         public Builder availableFeatures(String... availableFeatures) {
@@ -125,7 +126,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultVersion(@Nullable Boolean defaultVersion) {
-            this.defaultVersion = Output.ofNullable(defaultVersion);
+            this.defaultVersion = Codegen.ofNullable(defaultVersion);
             return this;
         }
         public Builder type(@Nullable Output<VersionType> type) {
@@ -133,7 +134,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable VersionType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder versionNumber(@Nullable Output<String> versionNumber) {
@@ -141,7 +142,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder versionNumber(@Nullable String versionNumber) {
-            this.versionNumber = Output.ofNullable(versionNumber);
+            this.versionNumber = Codegen.ofNullable(versionNumber);
             return this;
         }        public VersionArgs build() {
             return new VersionArgs(availableFeatures, defaultVersion, type, versionNumber);

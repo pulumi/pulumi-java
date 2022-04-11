@@ -7,6 +7,7 @@ import io.pulumi.azurenative.deviceupdate.inputs.DiagnosticStoragePropertiesArgs
 import io.pulumi.azurenative.deviceupdate.inputs.IotHubSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +39,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DiagnosticStoragePropertiesArgs> diagnosticStorageProperties;
 
     public Output<DiagnosticStoragePropertiesArgs> getDiagnosticStorageProperties() {
-        return this.diagnosticStorageProperties == null ? Output.empty() : this.diagnosticStorageProperties;
+        return this.diagnosticStorageProperties == null ? Codegen.empty() : this.diagnosticStorageProperties;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableDiagnostics;
 
     public Output<Boolean> getEnableDiagnostics() {
-        return this.enableDiagnostics == null ? Output.empty() : this.enableDiagnostics;
+        return this.enableDiagnostics == null ? Codegen.empty() : this.enableDiagnostics;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> instanceName;
 
     public Output<String> getInstanceName() {
-        return this.instanceName == null ? Output.empty() : this.instanceName;
+        return this.instanceName == null ? Codegen.empty() : this.instanceName;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<IotHubSettingsArgs>> iotHubs;
 
     public Output<List<IotHubSettingsArgs>> getIotHubs() {
-        return this.iotHubs == null ? Output.empty() : this.iotHubs;
+        return this.iotHubs == null ? Codegen.empty() : this.iotHubs;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public InstanceArgs(
@@ -127,14 +128,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceArgs() {
-        this.accountName = Output.empty();
-        this.diagnosticStorageProperties = Output.empty();
-        this.enableDiagnostics = Output.empty();
-        this.instanceName = Output.empty();
-        this.iotHubs = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.accountName = Codegen.empty();
+        this.diagnosticStorageProperties = Codegen.empty();
+        this.enableDiagnostics = Codegen.empty();
+        this.instanceName = Codegen.empty();
+        this.iotHubs = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -184,7 +185,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diagnosticStorageProperties(@Nullable DiagnosticStoragePropertiesArgs diagnosticStorageProperties) {
-            this.diagnosticStorageProperties = Output.ofNullable(diagnosticStorageProperties);
+            this.diagnosticStorageProperties = Codegen.ofNullable(diagnosticStorageProperties);
             return this;
         }
         public Builder enableDiagnostics(@Nullable Output<Boolean> enableDiagnostics) {
@@ -192,7 +193,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableDiagnostics(@Nullable Boolean enableDiagnostics) {
-            this.enableDiagnostics = Output.ofNullable(enableDiagnostics);
+            this.enableDiagnostics = Codegen.ofNullable(enableDiagnostics);
             return this;
         }
         public Builder instanceName(@Nullable Output<String> instanceName) {
@@ -200,7 +201,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceName(@Nullable String instanceName) {
-            this.instanceName = Output.ofNullable(instanceName);
+            this.instanceName = Codegen.ofNullable(instanceName);
             return this;
         }
         public Builder iotHubs(@Nullable Output<List<IotHubSettingsArgs>> iotHubs) {
@@ -208,7 +209,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iotHubs(@Nullable List<IotHubSettingsArgs> iotHubs) {
-            this.iotHubs = Output.ofNullable(iotHubs);
+            this.iotHubs = Codegen.ofNullable(iotHubs);
             return this;
         }
         public Builder iotHubs(IotHubSettingsArgs... iotHubs) {
@@ -219,7 +220,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -235,7 +236,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public InstanceArgs build() {
             return new InstanceArgs(accountName, diagnosticStorageProperties, enableDiagnostics, instanceName, iotHubs, location, resourceGroupName, tags);

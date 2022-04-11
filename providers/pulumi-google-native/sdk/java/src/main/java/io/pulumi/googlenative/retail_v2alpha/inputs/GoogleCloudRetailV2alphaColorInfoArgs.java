@@ -5,6 +5,7 @@ package io.pulumi.googlenative.retail_v2alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GoogleCloudRetailV2alphaColorInfoArgs extends io.pulumi.resou
       private final @Nullable Output<List<String>> colorFamilies;
 
     public Output<List<String>> getColorFamilies() {
-        return this.colorFamilies == null ? Output.empty() : this.colorFamilies;
+        return this.colorFamilies == null ? Codegen.empty() : this.colorFamilies;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GoogleCloudRetailV2alphaColorInfoArgs extends io.pulumi.resou
       private final @Nullable Output<List<String>> colors;
 
     public Output<List<String>> getColors() {
-        return this.colors == null ? Output.empty() : this.colors;
+        return this.colors == null ? Codegen.empty() : this.colors;
     }
 
     public GoogleCloudRetailV2alphaColorInfoArgs(
@@ -49,8 +50,8 @@ public final class GoogleCloudRetailV2alphaColorInfoArgs extends io.pulumi.resou
     }
 
     private GoogleCloudRetailV2alphaColorInfoArgs() {
-        this.colorFamilies = Output.empty();
-        this.colors = Output.empty();
+        this.colorFamilies = Codegen.empty();
+        this.colors = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GoogleCloudRetailV2alphaColorInfoArgs extends io.pulumi.resou
             return this;
         }
         public Builder colorFamilies(@Nullable List<String> colorFamilies) {
-            this.colorFamilies = Output.ofNullable(colorFamilies);
+            this.colorFamilies = Codegen.ofNullable(colorFamilies);
             return this;
         }
         public Builder colorFamilies(String... colorFamilies) {
@@ -91,7 +92,7 @@ public final class GoogleCloudRetailV2alphaColorInfoArgs extends io.pulumi.resou
             return this;
         }
         public Builder colors(@Nullable List<String> colors) {
-            this.colors = Output.ofNullable(colors);
+            this.colors = Codegen.ofNullable(colors);
             return this;
         }
         public Builder colors(String... colors) {

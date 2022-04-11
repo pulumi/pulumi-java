@@ -5,6 +5,7 @@ package io.pulumi.gcp.recaptcha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.recaptcha.inputs.EnterpriseKeyAndroidSettingsGetArgs;
 import io.pulumi.gcp.recaptcha.inputs.EnterpriseKeyIosSettingsGetArgs;
 import io.pulumi.gcp.recaptcha.inputs.EnterpriseKeyTestingOptionsGetArgs;
@@ -27,7 +28,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EnterpriseKeyAndroidSettingsGetArgs> androidSettings;
 
     public Output<EnterpriseKeyAndroidSettingsGetArgs> getAndroidSettings() {
-        return this.androidSettings == null ? Output.empty() : this.androidSettings;
+        return this.androidSettings == null ? Codegen.empty() : this.androidSettings;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EnterpriseKeyIosSettingsGetArgs> iosSettings;
 
     public Output<EnterpriseKeyIosSettingsGetArgs> getIosSettings() {
-        return this.iosSettings == null ? Output.empty() : this.iosSettings;
+        return this.iosSettings == null ? Codegen.empty() : this.iosSettings;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EnterpriseKeyTestingOptionsGetArgs> testingOptions;
 
     public Output<EnterpriseKeyTestingOptionsGetArgs> getTestingOptions() {
-        return this.testingOptions == null ? Output.empty() : this.testingOptions;
+        return this.testingOptions == null ? Codegen.empty() : this.testingOptions;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EnterpriseKeyWebSettingsGetArgs> webSettings;
 
     public Output<EnterpriseKeyWebSettingsGetArgs> getWebSettings() {
-        return this.webSettings == null ? Output.empty() : this.webSettings;
+        return this.webSettings == null ? Codegen.empty() : this.webSettings;
     }
 
     public EnterpriseKeyState(
@@ -140,15 +141,15 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private EnterpriseKeyState() {
-        this.androidSettings = Output.empty();
-        this.createTime = Output.empty();
-        this.displayName = Output.empty();
-        this.iosSettings = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.testingOptions = Output.empty();
-        this.webSettings = Output.empty();
+        this.androidSettings = Codegen.empty();
+        this.createTime = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.iosSettings = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.testingOptions = Codegen.empty();
+        this.webSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -192,7 +193,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder androidSettings(@Nullable EnterpriseKeyAndroidSettingsGetArgs androidSettings) {
-            this.androidSettings = Output.ofNullable(androidSettings);
+            this.androidSettings = Codegen.ofNullable(androidSettings);
             return this;
         }
         public Builder createTime(@Nullable Output<String> createTime) {
@@ -200,7 +201,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -208,7 +209,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder iosSettings(@Nullable Output<EnterpriseKeyIosSettingsGetArgs> iosSettings) {
@@ -216,7 +217,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iosSettings(@Nullable EnterpriseKeyIosSettingsGetArgs iosSettings) {
-            this.iosSettings = Output.ofNullable(iosSettings);
+            this.iosSettings = Codegen.ofNullable(iosSettings);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -224,7 +225,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -232,7 +233,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -240,7 +241,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder testingOptions(@Nullable Output<EnterpriseKeyTestingOptionsGetArgs> testingOptions) {
@@ -248,7 +249,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder testingOptions(@Nullable EnterpriseKeyTestingOptionsGetArgs testingOptions) {
-            this.testingOptions = Output.ofNullable(testingOptions);
+            this.testingOptions = Codegen.ofNullable(testingOptions);
             return this;
         }
         public Builder webSettings(@Nullable Output<EnterpriseKeyWebSettingsGetArgs> webSettings) {
@@ -256,7 +257,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder webSettings(@Nullable EnterpriseKeyWebSettingsGetArgs webSettings) {
-            this.webSettings = Output.ofNullable(webSettings);
+            this.webSettings = Codegen.ofNullable(webSettings);
             return this;
         }        public EnterpriseKeyState build() {
             return new EnterpriseKeyState(androidSettings, createTime, displayName, iosSettings, labels, name, project, testingOptions, webSettings);

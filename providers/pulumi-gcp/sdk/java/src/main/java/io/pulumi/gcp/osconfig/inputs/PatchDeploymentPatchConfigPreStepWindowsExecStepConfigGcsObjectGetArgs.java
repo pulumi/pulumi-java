@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -56,9 +57,9 @@ public final class PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObje
     }
 
     private PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectGetArgs() {
-        this.bucket = Output.empty();
-        this.generationNumber = Output.empty();
-        this.object = Output.empty();
+        this.bucket = Codegen.empty();
+        this.generationNumber = Codegen.empty();
+        this.object = Codegen.empty();
     }
 
     public static Builder builder() {

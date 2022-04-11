@@ -6,6 +6,7 @@ package io.pulumi.azurenative.logic;
 import io.pulumi.azurenative.logic.inputs.AssemblyPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> assemblyArtifactName;
 
     public Output<String> getAssemblyArtifactName() {
-        return this.assemblyArtifactName == null ? Output.empty() : this.assemblyArtifactName;
+        return this.assemblyArtifactName == null ? Codegen.empty() : this.assemblyArtifactName;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public IntegrationAccountAssemblyArgs(
@@ -98,12 +99,12 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
     }
 
     private IntegrationAccountAssemblyArgs() {
-        this.assemblyArtifactName = Output.empty();
-        this.integrationAccountName = Output.empty();
-        this.location = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.assemblyArtifactName = Codegen.empty();
+        this.integrationAccountName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder assemblyArtifactName(@Nullable String assemblyArtifactName) {
-            this.assemblyArtifactName = Output.ofNullable(assemblyArtifactName);
+            this.assemblyArtifactName = Codegen.ofNullable(assemblyArtifactName);
             return this;
         }
         public Builder integrationAccountName(Output<String> integrationAccountName) {
@@ -157,7 +158,7 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder properties(Output<AssemblyPropertiesArgs> properties) {
@@ -181,7 +182,7 @@ public final class IntegrationAccountAssemblyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public IntegrationAccountAssemblyArgs build() {
             return new IntegrationAccountAssemblyArgs(assemblyArtifactName, integrationAccountName, location, properties, resourceGroupName, tags);

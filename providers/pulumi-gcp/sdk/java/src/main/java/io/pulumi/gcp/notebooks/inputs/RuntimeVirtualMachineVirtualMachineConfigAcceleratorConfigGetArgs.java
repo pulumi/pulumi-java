@@ -5,6 +5,7 @@ package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGet
       private final @Nullable Output<Integer> coreCount;
 
     public Output<Integer> getCoreCount() {
-        return this.coreCount == null ? Output.empty() : this.coreCount;
+        return this.coreCount == null ? Codegen.empty() : this.coreCount;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGet
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGetArgs(
@@ -47,8 +48,8 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGet
     }
 
     private RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGetArgs() {
-        this.coreCount = Output.empty();
-        this.type = Output.empty();
+        this.coreCount = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -78,7 +79,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGet
             return this;
         }
         public Builder coreCount(@Nullable Integer coreCount) {
-            this.coreCount = Output.ofNullable(coreCount);
+            this.coreCount = Codegen.ofNullable(coreCount);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -86,7 +87,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGet
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGetArgs build() {
             return new RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGetArgs(coreCount, type);

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.redshift;
 import io.pulumi.awsnative.redshift.inputs.ScheduledActionTypeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Boolean> enable;
 
     public Output<Boolean> getEnable() {
-        return this.enable == null ? Output.empty() : this.enable;
+        return this.enable == null ? Codegen.empty() : this.enable;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> endTime;
 
     public Output<String> getEndTime() {
-        return this.endTime == null ? Output.empty() : this.endTime;
+        return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> iamRole;
 
     public Output<String> getIamRole() {
-        return this.iamRole == null ? Output.empty() : this.iamRole;
+        return this.iamRole == null ? Codegen.empty() : this.iamRole;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> schedule;
 
     public Output<String> getSchedule() {
-        return this.schedule == null ? Output.empty() : this.schedule;
+        return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> scheduledActionDescription;
 
     public Output<String> getScheduledActionDescription() {
-        return this.scheduledActionDescription == null ? Output.empty() : this.scheduledActionDescription;
+        return this.scheduledActionDescription == null ? Codegen.empty() : this.scheduledActionDescription;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> scheduledActionName;
 
     public Output<String> getScheduledActionName() {
-        return this.scheduledActionName == null ? Output.empty() : this.scheduledActionName;
+        return this.scheduledActionName == null ? Codegen.empty() : this.scheduledActionName;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
-        return this.startTime == null ? Output.empty() : this.startTime;
+        return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<ScheduledActionTypeArgs> targetAction;
 
     public Output<ScheduledActionTypeArgs> getTargetAction() {
-        return this.targetAction == null ? Output.empty() : this.targetAction;
+        return this.targetAction == null ? Codegen.empty() : this.targetAction;
     }
 
     public ScheduledActionArgs(
@@ -124,14 +125,14 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ScheduledActionArgs() {
-        this.enable = Output.empty();
-        this.endTime = Output.empty();
-        this.iamRole = Output.empty();
-        this.schedule = Output.empty();
-        this.scheduledActionDescription = Output.empty();
-        this.scheduledActionName = Output.empty();
-        this.startTime = Output.empty();
-        this.targetAction = Output.empty();
+        this.enable = Codegen.empty();
+        this.endTime = Codegen.empty();
+        this.iamRole = Codegen.empty();
+        this.schedule = Codegen.empty();
+        this.scheduledActionDescription = Codegen.empty();
+        this.scheduledActionName = Codegen.empty();
+        this.startTime = Codegen.empty();
+        this.targetAction = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -173,7 +174,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder enable(@Nullable Boolean enable) {
-            this.enable = Output.ofNullable(enable);
+            this.enable = Codegen.ofNullable(enable);
             return this;
         }
         public Builder endTime(@Nullable Output<String> endTime) {
@@ -181,7 +182,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Output.ofNullable(endTime);
+            this.endTime = Codegen.ofNullable(endTime);
             return this;
         }
         public Builder iamRole(@Nullable Output<String> iamRole) {
@@ -189,7 +190,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder iamRole(@Nullable String iamRole) {
-            this.iamRole = Output.ofNullable(iamRole);
+            this.iamRole = Codegen.ofNullable(iamRole);
             return this;
         }
         public Builder schedule(@Nullable Output<String> schedule) {
@@ -197,7 +198,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder schedule(@Nullable String schedule) {
-            this.schedule = Output.ofNullable(schedule);
+            this.schedule = Codegen.ofNullable(schedule);
             return this;
         }
         public Builder scheduledActionDescription(@Nullable Output<String> scheduledActionDescription) {
@@ -205,7 +206,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder scheduledActionDescription(@Nullable String scheduledActionDescription) {
-            this.scheduledActionDescription = Output.ofNullable(scheduledActionDescription);
+            this.scheduledActionDescription = Codegen.ofNullable(scheduledActionDescription);
             return this;
         }
         public Builder scheduledActionName(@Nullable Output<String> scheduledActionName) {
@@ -213,7 +214,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder scheduledActionName(@Nullable String scheduledActionName) {
-            this.scheduledActionName = Output.ofNullable(scheduledActionName);
+            this.scheduledActionName = Codegen.ofNullable(scheduledActionName);
             return this;
         }
         public Builder startTime(@Nullable Output<String> startTime) {
@@ -221,7 +222,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Output.ofNullable(startTime);
+            this.startTime = Codegen.ofNullable(startTime);
             return this;
         }
         public Builder targetAction(@Nullable Output<ScheduledActionTypeArgs> targetAction) {
@@ -229,7 +230,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder targetAction(@Nullable ScheduledActionTypeArgs targetAction) {
-            this.targetAction = Output.ofNullable(targetAction);
+            this.targetAction = Codegen.ofNullable(targetAction);
             return this;
         }        public ScheduledActionArgs build() {
             return new ScheduledActionArgs(enable, endTime, iamRole, schedule, scheduledActionDescription, scheduledActionName, startTime, targetAction);

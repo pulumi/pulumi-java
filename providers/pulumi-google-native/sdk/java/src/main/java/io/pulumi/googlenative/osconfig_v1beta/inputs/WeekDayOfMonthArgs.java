@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.osconfig_v1beta.enums.WeekDayOfMonthDayOfWeek;
 import java.lang.Integer;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class WeekDayOfMonthArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> dayOffset;
 
     public Output<Integer> getDayOffset() {
-        return this.dayOffset == null ? Output.empty() : this.dayOffset;
+        return this.dayOffset == null ? Codegen.empty() : this.dayOffset;
     }
 
     /**
@@ -62,9 +63,9 @@ public final class WeekDayOfMonthArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WeekDayOfMonthArgs() {
-        this.dayOfWeek = Output.empty();
-        this.dayOffset = Output.empty();
-        this.weekOrdinal = Output.empty();
+        this.dayOfWeek = Codegen.empty();
+        this.dayOffset = Codegen.empty();
+        this.weekOrdinal = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class WeekDayOfMonthArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dayOffset(@Nullable Integer dayOffset) {
-            this.dayOffset = Output.ofNullable(dayOffset);
+            this.dayOffset = Codegen.ofNullable(dayOffset);
             return this;
         }
         public Builder weekOrdinal(Output<Integer> weekOrdinal) {

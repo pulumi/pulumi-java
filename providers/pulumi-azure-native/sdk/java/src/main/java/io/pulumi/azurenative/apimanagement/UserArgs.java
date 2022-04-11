@@ -10,6 +10,7 @@ import io.pulumi.azurenative.apimanagement.inputs.UserIdentityContractArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +30,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,AppType>> appType;
 
     public Output<Either<String,AppType>> getAppType() {
-        return this.appType == null ? Output.empty() : this.appType;
+        return this.appType == null ? Codegen.empty() : this.appType;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,Confirmation>> confirmation;
 
     public Output<Either<String,Confirmation>> getConfirmation() {
-        return this.confirmation == null ? Output.empty() : this.confirmation;
+        return this.confirmation == null ? Codegen.empty() : this.confirmation;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<UserIdentityContractArgs>> identities;
 
     public Output<List<UserIdentityContractArgs>> getIdentities() {
-        return this.identities == null ? Output.empty() : this.identities;
+        return this.identities == null ? Codegen.empty() : this.identities;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> note;
 
     public Output<String> getNote() {
-        return this.note == null ? Output.empty() : this.note;
+        return this.note == null ? Codegen.empty() : this.note;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> notify;
 
     public Output<Boolean> getNotify() {
-        return this.notify == null ? Output.empty() : this.notify;
+        return this.notify == null ? Codegen.empty() : this.notify;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -150,7 +151,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,UserState>> state;
 
     public Output<Either<String,UserState>> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -161,7 +162,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> userId;
 
     public Output<String> getUserId() {
-        return this.userId == null ? Output.empty() : this.userId;
+        return this.userId == null ? Codegen.empty() : this.userId;
     }
 
     public UserArgs(
@@ -194,19 +195,19 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserArgs() {
-        this.appType = Output.empty();
-        this.confirmation = Output.empty();
-        this.email = Output.empty();
-        this.firstName = Output.empty();
-        this.identities = Output.empty();
-        this.lastName = Output.empty();
-        this.note = Output.empty();
-        this.notify = Output.empty();
-        this.password = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
-        this.state = Output.empty();
-        this.userId = Output.empty();
+        this.appType = Codegen.empty();
+        this.confirmation = Codegen.empty();
+        this.email = Codegen.empty();
+        this.firstName = Codegen.empty();
+        this.identities = Codegen.empty();
+        this.lastName = Codegen.empty();
+        this.note = Codegen.empty();
+        this.notify = Codegen.empty();
+        this.password = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.state = Codegen.empty();
+        this.userId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -258,7 +259,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appType(@Nullable Either<String,AppType> appType) {
-            this.appType = Output.ofNullable(appType);
+            this.appType = Codegen.ofNullable(appType);
             return this;
         }
         public Builder confirmation(@Nullable Output<Either<String,Confirmation>> confirmation) {
@@ -266,7 +267,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder confirmation(@Nullable Either<String,Confirmation> confirmation) {
-            this.confirmation = Output.ofNullable(confirmation);
+            this.confirmation = Codegen.ofNullable(confirmation);
             return this;
         }
         public Builder email(Output<String> email) {
@@ -290,7 +291,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identities(@Nullable List<UserIdentityContractArgs> identities) {
-            this.identities = Output.ofNullable(identities);
+            this.identities = Codegen.ofNullable(identities);
             return this;
         }
         public Builder identities(UserIdentityContractArgs... identities) {
@@ -309,7 +310,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder note(@Nullable String note) {
-            this.note = Output.ofNullable(note);
+            this.note = Codegen.ofNullable(note);
             return this;
         }
         public Builder notify(@Nullable Output<Boolean> notify) {
@@ -317,7 +318,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notify(@Nullable Boolean notify) {
-            this.notify = Output.ofNullable(notify);
+            this.notify = Codegen.ofNullable(notify);
             return this;
         }
         public Builder password(@Nullable Output<String> password) {
@@ -325,7 +326,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -349,7 +350,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable Either<String,UserState> state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder userId(@Nullable Output<String> userId) {
@@ -357,7 +358,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userId(@Nullable String userId) {
-            this.userId = Output.ofNullable(userId);
+            this.userId = Codegen.ofNullable(userId);
             return this;
         }        public UserArgs build() {
             return new UserArgs(appType, confirmation, email, firstName, identities, lastName, note, notify, password, resourceGroupName, serviceName, state, userId);

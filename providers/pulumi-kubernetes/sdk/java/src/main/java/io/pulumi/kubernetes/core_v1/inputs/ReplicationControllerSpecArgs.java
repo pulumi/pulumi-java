@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class ReplicationControllerSpecArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Integer> minReadySeconds;
 
     public Output<Integer> getMinReadySeconds() {
-        return this.minReadySeconds == null ? Output.empty() : this.minReadySeconds;
+        return this.minReadySeconds == null ? Codegen.empty() : this.minReadySeconds;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class ReplicationControllerSpecArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Integer> replicas;
 
     public Output<Integer> getReplicas() {
-        return this.replicas == null ? Output.empty() : this.replicas;
+        return this.replicas == null ? Codegen.empty() : this.replicas;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class ReplicationControllerSpecArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Map<String,String>> selector;
 
     public Output<Map<String,String>> getSelector() {
-        return this.selector == null ? Output.empty() : this.selector;
+        return this.selector == null ? Codegen.empty() : this.selector;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class ReplicationControllerSpecArgs extends io.pulumi.resources.Res
       private final @Nullable Output<PodTemplateSpecArgs> template;
 
     public Output<PodTemplateSpecArgs> getTemplate() {
-        return this.template == null ? Output.empty() : this.template;
+        return this.template == null ? Codegen.empty() : this.template;
     }
 
     public ReplicationControllerSpecArgs(
@@ -77,10 +78,10 @@ public final class ReplicationControllerSpecArgs extends io.pulumi.resources.Res
     }
 
     private ReplicationControllerSpecArgs() {
-        this.minReadySeconds = Output.empty();
-        this.replicas = Output.empty();
-        this.selector = Output.empty();
-        this.template = Output.empty();
+        this.minReadySeconds = Codegen.empty();
+        this.replicas = Codegen.empty();
+        this.selector = Codegen.empty();
+        this.template = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class ReplicationControllerSpecArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder minReadySeconds(@Nullable Integer minReadySeconds) {
-            this.minReadySeconds = Output.ofNullable(minReadySeconds);
+            this.minReadySeconds = Codegen.ofNullable(minReadySeconds);
             return this;
         }
         public Builder replicas(@Nullable Output<Integer> replicas) {
@@ -122,7 +123,7 @@ public final class ReplicationControllerSpecArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder replicas(@Nullable Integer replicas) {
-            this.replicas = Output.ofNullable(replicas);
+            this.replicas = Codegen.ofNullable(replicas);
             return this;
         }
         public Builder selector(@Nullable Output<Map<String,String>> selector) {
@@ -130,7 +131,7 @@ public final class ReplicationControllerSpecArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder selector(@Nullable Map<String,String> selector) {
-            this.selector = Output.ofNullable(selector);
+            this.selector = Codegen.ofNullable(selector);
             return this;
         }
         public Builder template(@Nullable Output<PodTemplateSpecArgs> template) {
@@ -138,7 +139,7 @@ public final class ReplicationControllerSpecArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder template(@Nullable PodTemplateSpecArgs template) {
-            this.template = Output.ofNullable(template);
+            this.template = Codegen.ofNullable(template);
             return this;
         }        public ReplicationControllerSpecArgs build() {
             return new ReplicationControllerSpecArgs(minReadySeconds, replicas, selector, template);

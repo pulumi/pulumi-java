@@ -5,6 +5,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class DayDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> time;
 
     public Output<String> getTime() {
-        return this.time == null ? Output.empty() : this.time;
+        return this.time == null ? Codegen.empty() : this.time;
     }
 
     public DayDetailsArgs(@Nullable Output<String> time) {
@@ -34,7 +35,7 @@ public final class DayDetailsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DayDetailsArgs() {
-        this.time = Output.empty();
+        this.time = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class DayDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder time(@Nullable String time) {
-            this.time = Output.ofNullable(time);
+            this.time = Codegen.ofNullable(time);
             return this;
         }        public DayDetailsArgs build() {
             return new DayDetailsArgs(time);

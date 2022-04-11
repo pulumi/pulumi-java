@@ -7,6 +7,7 @@ import io.pulumi.aws.ec2.inputs.SecurityGroupEgressGetArgs;
 import io.pulumi.aws.ec2.inputs.SecurityGroupIngressGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<SecurityGroupEgressGetArgs>> egress;
 
     public Output<List<SecurityGroupEgressGetArgs>> getEgress() {
-        return this.egress == null ? Output.empty() : this.egress;
+        return this.egress == null ? Codegen.empty() : this.egress;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<SecurityGroupIngressGetArgs>> ingress;
 
     public Output<List<SecurityGroupIngressGetArgs>> getIngress() {
-        return this.ingress == null ? Output.empty() : this.ingress;
+        return this.ingress == null ? Codegen.empty() : this.ingress;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
-        return this.namePrefix == null ? Output.empty() : this.namePrefix;
+        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
-        return this.ownerId == null ? Output.empty() : this.ownerId;
+        return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> revokeRulesOnDelete;
 
     public Output<Boolean> getRevokeRulesOnDelete() {
-        return this.revokeRulesOnDelete == null ? Output.empty() : this.revokeRulesOnDelete;
+        return this.revokeRulesOnDelete == null ? Codegen.empty() : this.revokeRulesOnDelete;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -126,7 +127,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -137,7 +138,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     public SecurityGroupState(
@@ -153,7 +154,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<Map<String,String>> tagsAll,
         @Nullable Output<String> vpcId) {
         this.arn = arn;
-        this.description = description == null ? Output.ofNullable("Managed by Pulumi") : description;
+        this.description = description == null ? Codegen.ofNullable("Managed by Pulumi") : description;
         this.egress = egress;
         this.ingress = ingress;
         this.name = name;
@@ -166,17 +167,17 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     private SecurityGroupState() {
-        this.arn = Output.empty();
-        this.description = Output.empty();
-        this.egress = Output.empty();
-        this.ingress = Output.empty();
-        this.name = Output.empty();
-        this.namePrefix = Output.empty();
-        this.ownerId = Output.empty();
-        this.revokeRulesOnDelete = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.vpcId = Output.empty();
+        this.arn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.egress = Codegen.empty();
+        this.ingress = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namePrefix = Codegen.empty();
+        this.ownerId = Codegen.empty();
+        this.revokeRulesOnDelete = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -224,7 +225,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -232,7 +233,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder egress(@Nullable Output<List<SecurityGroupEgressGetArgs>> egress) {
@@ -240,7 +241,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder egress(@Nullable List<SecurityGroupEgressGetArgs> egress) {
-            this.egress = Output.ofNullable(egress);
+            this.egress = Codegen.ofNullable(egress);
             return this;
         }
         public Builder egress(SecurityGroupEgressGetArgs... egress) {
@@ -251,7 +252,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ingress(@Nullable List<SecurityGroupIngressGetArgs> ingress) {
-            this.ingress = Output.ofNullable(ingress);
+            this.ingress = Codegen.ofNullable(ingress);
             return this;
         }
         public Builder ingress(SecurityGroupIngressGetArgs... ingress) {
@@ -262,7 +263,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
@@ -270,7 +271,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Output.ofNullable(namePrefix);
+            this.namePrefix = Codegen.ofNullable(namePrefix);
             return this;
         }
         public Builder ownerId(@Nullable Output<String> ownerId) {
@@ -278,7 +279,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Output.ofNullable(ownerId);
+            this.ownerId = Codegen.ofNullable(ownerId);
             return this;
         }
         public Builder revokeRulesOnDelete(@Nullable Output<Boolean> revokeRulesOnDelete) {
@@ -286,7 +287,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder revokeRulesOnDelete(@Nullable Boolean revokeRulesOnDelete) {
-            this.revokeRulesOnDelete = Output.ofNullable(revokeRulesOnDelete);
+            this.revokeRulesOnDelete = Codegen.ofNullable(revokeRulesOnDelete);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -294,7 +295,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -302,7 +303,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder vpcId(@Nullable Output<String> vpcId) {
@@ -310,7 +311,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }        public SecurityGroupState build() {
             return new SecurityGroupState(arn, description, egress, ingress, name, namePrefix, ownerId, revokeRulesOnDelete, tags, tagsAll, vpcId);

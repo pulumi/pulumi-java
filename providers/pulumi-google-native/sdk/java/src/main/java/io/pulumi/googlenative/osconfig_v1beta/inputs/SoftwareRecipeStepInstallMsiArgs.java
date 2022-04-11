@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class SoftwareRecipeStepInstallMsiArgs extends io.pulumi.resources.
       private final @Nullable Output<List<Integer>> allowedExitCodes;
 
     public Output<List<Integer>> getAllowedExitCodes() {
-        return this.allowedExitCodes == null ? Output.empty() : this.allowedExitCodes;
+        return this.allowedExitCodes == null ? Codegen.empty() : this.allowedExitCodes;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class SoftwareRecipeStepInstallMsiArgs extends io.pulumi.resources.
       private final @Nullable Output<List<String>> flags;
 
     public Output<List<String>> getFlags() {
-        return this.flags == null ? Output.empty() : this.flags;
+        return this.flags == null ? Codegen.empty() : this.flags;
     }
 
     public SoftwareRecipeStepInstallMsiArgs(
@@ -63,9 +64,9 @@ public final class SoftwareRecipeStepInstallMsiArgs extends io.pulumi.resources.
     }
 
     private SoftwareRecipeStepInstallMsiArgs() {
-        this.allowedExitCodes = Output.empty();
-        this.artifactId = Output.empty();
-        this.flags = Output.empty();
+        this.allowedExitCodes = Codegen.empty();
+        this.artifactId = Codegen.empty();
+        this.flags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class SoftwareRecipeStepInstallMsiArgs extends io.pulumi.resources.
             return this;
         }
         public Builder allowedExitCodes(@Nullable List<Integer> allowedExitCodes) {
-            this.allowedExitCodes = Output.ofNullable(allowedExitCodes);
+            this.allowedExitCodes = Codegen.ofNullable(allowedExitCodes);
             return this;
         }
         public Builder allowedExitCodes(Integer... allowedExitCodes) {
@@ -116,7 +117,7 @@ public final class SoftwareRecipeStepInstallMsiArgs extends io.pulumi.resources.
             return this;
         }
         public Builder flags(@Nullable List<String> flags) {
-            this.flags = Output.ofNullable(flags);
+            this.flags = Codegen.ofNullable(flags);
             return this;
         }
         public Builder flags(String... flags) {

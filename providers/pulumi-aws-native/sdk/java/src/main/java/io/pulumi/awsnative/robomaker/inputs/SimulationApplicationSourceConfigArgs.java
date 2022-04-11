@@ -6,6 +6,7 @@ package io.pulumi.awsnative.robomaker.inputs;
 import io.pulumi.awsnative.robomaker.enums.SimulationApplicationSourceConfigArchitecture;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -61,9 +62,9 @@ public final class SimulationApplicationSourceConfigArgs extends io.pulumi.resou
     }
 
     private SimulationApplicationSourceConfigArgs() {
-        this.architecture = Output.empty();
-        this.s3Bucket = Output.empty();
-        this.s3Key = Output.empty();
+        this.architecture = Codegen.empty();
+        this.s3Bucket = Codegen.empty();
+        this.s3Key = Codegen.empty();
     }
 
     public static Builder builder() {

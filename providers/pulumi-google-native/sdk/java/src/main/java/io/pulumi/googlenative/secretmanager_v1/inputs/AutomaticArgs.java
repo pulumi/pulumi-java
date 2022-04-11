@@ -5,6 +5,7 @@ package io.pulumi.googlenative.secretmanager_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.secretmanager_v1.inputs.CustomerManagedEncryptionArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class AutomaticArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<CustomerManagedEncryptionArgs> customerManagedEncryption;
 
     public Output<CustomerManagedEncryptionArgs> getCustomerManagedEncryption() {
-        return this.customerManagedEncryption == null ? Output.empty() : this.customerManagedEncryption;
+        return this.customerManagedEncryption == null ? Codegen.empty() : this.customerManagedEncryption;
     }
 
     public AutomaticArgs(@Nullable Output<CustomerManagedEncryptionArgs> customerManagedEncryption) {
@@ -34,7 +35,7 @@ public final class AutomaticArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AutomaticArgs() {
-        this.customerManagedEncryption = Output.empty();
+        this.customerManagedEncryption = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class AutomaticArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customerManagedEncryption(@Nullable CustomerManagedEncryptionArgs customerManagedEncryption) {
-            this.customerManagedEncryption = Output.ofNullable(customerManagedEncryption);
+            this.customerManagedEncryption = Codegen.ofNullable(customerManagedEncryption);
             return this;
         }        public AutomaticArgs build() {
             return new AutomaticArgs(customerManagedEncryption);

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.containerservice.enums.ManagedClusterSKUTier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class ManagedClusterSKUArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Either<String,ManagedClusterSKUName>> name;
 
     public Output<Either<String,ManagedClusterSKUName>> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class ManagedClusterSKUArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Either<String,ManagedClusterSKUTier>> tier;
 
     public Output<Either<String,ManagedClusterSKUTier>> getTier() {
-        return this.tier == null ? Output.empty() : this.tier;
+        return this.tier == null ? Codegen.empty() : this.tier;
     }
 
     public ManagedClusterSKUArgs(
@@ -47,8 +48,8 @@ public final class ManagedClusterSKUArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ManagedClusterSKUArgs() {
-        this.name = Output.empty();
-        this.tier = Output.empty();
+        this.name = Codegen.empty();
+        this.tier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -78,7 +79,7 @@ public final class ManagedClusterSKUArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable Either<String,ManagedClusterSKUName> name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tier(@Nullable Output<Either<String,ManagedClusterSKUTier>> tier) {
@@ -86,7 +87,7 @@ public final class ManagedClusterSKUArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tier(@Nullable Either<String,ManagedClusterSKUTier> tier) {
-            this.tier = Output.ofNullable(tier);
+            this.tier = Codegen.ofNullable(tier);
             return this;
         }        public ManagedClusterSKUArgs build() {
             return new ManagedClusterSKUArgs(name, tier);

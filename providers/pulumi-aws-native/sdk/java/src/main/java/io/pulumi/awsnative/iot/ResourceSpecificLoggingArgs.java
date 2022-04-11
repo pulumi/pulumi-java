@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iot.enums.ResourceSpecificLoggingLogLevel;
 import io.pulumi.awsnative.iot.enums.ResourceSpecificLoggingTargetType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -58,9 +59,9 @@ public final class ResourceSpecificLoggingArgs extends io.pulumi.resources.Resou
     }
 
     private ResourceSpecificLoggingArgs() {
-        this.logLevel = Output.empty();
-        this.targetName = Output.empty();
-        this.targetType = Output.empty();
+        this.logLevel = Codegen.empty();
+        this.targetName = Codegen.empty();
+        this.targetType = Codegen.empty();
     }
 
     public static Builder builder() {

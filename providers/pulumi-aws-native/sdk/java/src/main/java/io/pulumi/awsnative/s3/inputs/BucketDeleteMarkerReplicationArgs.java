@@ -6,6 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.enums.BucketDeleteMarkerReplicationStatus;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +19,7 @@ public final class BucketDeleteMarkerReplicationArgs extends io.pulumi.resources
       private final @Nullable Output<BucketDeleteMarkerReplicationStatus> status;
 
     public Output<BucketDeleteMarkerReplicationStatus> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public BucketDeleteMarkerReplicationArgs(@Nullable Output<BucketDeleteMarkerReplicationStatus> status) {
@@ -26,7 +27,7 @@ public final class BucketDeleteMarkerReplicationArgs extends io.pulumi.resources
     }
 
     private BucketDeleteMarkerReplicationArgs() {
-        this.status = Output.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class BucketDeleteMarkerReplicationArgs extends io.pulumi.resources
             return this;
         }
         public Builder status(@Nullable BucketDeleteMarkerReplicationStatus status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public BucketDeleteMarkerReplicationArgs build() {
             return new BucketDeleteMarkerReplicationArgs(status);

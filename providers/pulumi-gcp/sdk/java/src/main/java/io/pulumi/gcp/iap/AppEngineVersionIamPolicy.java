@@ -6,6 +6,7 @@ package io.pulumi.gcp.iap;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.AppEngineVersionIamPolicyArgs;
 import io.pulumi.gcp.iap.inputs.AppEngineVersionIamPolicyState;
@@ -171,7 +172,7 @@ public class AppEngineVersionIamPolicy extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public AppEngineVersionIamPolicy(String name, AppEngineVersionIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:iap/appEngineVersionIamPolicy:AppEngineVersionIamPolicy", name, args == null ? AppEngineVersionIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:iap/appEngineVersionIamPolicy:AppEngineVersionIamPolicy", name, args == null ? AppEngineVersionIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AppEngineVersionIamPolicy(String name, Output<String> id, @Nullable AppEngineVersionIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

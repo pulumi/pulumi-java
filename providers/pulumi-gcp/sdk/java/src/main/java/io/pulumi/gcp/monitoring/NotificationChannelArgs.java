@@ -5,6 +5,7 @@ package io.pulumi.gcp.monitoring;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.monitoring.inputs.NotificationChannelSensitiveLabelsArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<NotificationChannelSensitiveLabelsArgs> sensitiveLabels;
 
     public Output<NotificationChannelSensitiveLabelsArgs> getSensitiveLabels() {
-        return this.sensitiveLabels == null ? Output.empty() : this.sensitiveLabels;
+        return this.sensitiveLabels == null ? Codegen.empty() : this.sensitiveLabels;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Map<String,String>> userLabels;
 
     public Output<Map<String,String>> getUserLabels() {
-        return this.userLabels == null ? Output.empty() : this.userLabels;
+        return this.userLabels == null ? Codegen.empty() : this.userLabels;
     }
 
     public NotificationChannelArgs(
@@ -137,14 +138,14 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
     }
 
     private NotificationChannelArgs() {
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.enabled = Output.empty();
-        this.labels = Output.empty();
-        this.project = Output.empty();
-        this.sensitiveLabels = Output.empty();
-        this.type = Output.empty();
-        this.userLabels = Output.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.project = Codegen.empty();
+        this.sensitiveLabels = Codegen.empty();
+        this.type = Codegen.empty();
+        this.userLabels = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -186,7 +187,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -194,7 +195,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -202,7 +203,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -210,7 +211,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -218,7 +219,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder sensitiveLabels(@Nullable Output<NotificationChannelSensitiveLabelsArgs> sensitiveLabels) {
@@ -226,7 +227,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder sensitiveLabels(@Nullable NotificationChannelSensitiveLabelsArgs sensitiveLabels) {
-            this.sensitiveLabels = Output.ofNullable(sensitiveLabels);
+            this.sensitiveLabels = Codegen.ofNullable(sensitiveLabels);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -242,7 +243,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder userLabels(@Nullable Map<String,String> userLabels) {
-            this.userLabels = Output.ofNullable(userLabels);
+            this.userLabels = Codegen.ofNullable(userLabels);
             return this;
         }        public NotificationChannelArgs build() {
             return new NotificationChannelArgs(description, displayName, enabled, labels, project, sensitiveLabels, type, userLabels);

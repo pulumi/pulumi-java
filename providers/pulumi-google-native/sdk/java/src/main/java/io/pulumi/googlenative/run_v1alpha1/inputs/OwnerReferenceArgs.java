@@ -5,6 +5,7 @@ package io.pulumi.googlenative.run_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> apiVersion;
 
     public Output<String> getApiVersion() {
-        return this.apiVersion == null ? Output.empty() : this.apiVersion;
+        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> blockOwnerDeletion;
 
     public Output<Boolean> getBlockOwnerDeletion() {
-        return this.blockOwnerDeletion == null ? Output.empty() : this.blockOwnerDeletion;
+        return this.blockOwnerDeletion == null ? Codegen.empty() : this.blockOwnerDeletion;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> controller;
 
     public Output<Boolean> getController() {
-        return this.controller == null ? Output.empty() : this.controller;
+        return this.controller == null ? Codegen.empty() : this.controller;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> uid;
 
     public Output<String> getUid() {
-        return this.uid == null ? Output.empty() : this.uid;
+        return this.uid == null ? Codegen.empty() : this.uid;
     }
 
     public OwnerReferenceArgs(
@@ -101,12 +102,12 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OwnerReferenceArgs() {
-        this.apiVersion = Output.empty();
-        this.blockOwnerDeletion = Output.empty();
-        this.controller = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.uid = Output.empty();
+        this.apiVersion = Codegen.empty();
+        this.blockOwnerDeletion = Codegen.empty();
+        this.controller = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.uid = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Output.ofNullable(apiVersion);
+            this.apiVersion = Codegen.ofNullable(apiVersion);
             return this;
         }
         public Builder blockOwnerDeletion(@Nullable Output<Boolean> blockOwnerDeletion) {
@@ -152,7 +153,7 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder blockOwnerDeletion(@Nullable Boolean blockOwnerDeletion) {
-            this.blockOwnerDeletion = Output.ofNullable(blockOwnerDeletion);
+            this.blockOwnerDeletion = Codegen.ofNullable(blockOwnerDeletion);
             return this;
         }
         public Builder controller(@Nullable Output<Boolean> controller) {
@@ -160,7 +161,7 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder controller(@Nullable Boolean controller) {
-            this.controller = Output.ofNullable(controller);
+            this.controller = Codegen.ofNullable(controller);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -168,7 +169,7 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -176,7 +177,7 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder uid(@Nullable Output<String> uid) {
@@ -184,7 +185,7 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uid(@Nullable String uid) {
-            this.uid = Output.ofNullable(uid);
+            this.uid = Codegen.ofNullable(uid);
             return this;
         }        public OwnerReferenceArgs build() {
             return new OwnerReferenceArgs(apiVersion, blockOwnerDeletion, controller, kind, name, uid);

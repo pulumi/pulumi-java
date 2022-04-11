@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.container.inputs.ClusterMasterAuthClientCertificateConfigGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class ClusterMasterAuthGetArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> clientCertificate;
 
     public Output<String> getClientCertificate() {
-        return this.clientCertificate == null ? Output.empty() : this.clientCertificate;
+        return this.clientCertificate == null ? Codegen.empty() : this.clientCertificate;
     }
 
     /**
@@ -37,14 +38,14 @@ public final class ClusterMasterAuthGetArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> clientKey;
 
     public Output<String> getClientKey() {
-        return this.clientKey == null ? Output.empty() : this.clientKey;
+        return this.clientKey == null ? Codegen.empty() : this.clientKey;
     }
 
     @Import(name="clusterCaCertificate")
       private final @Nullable Output<String> clusterCaCertificate;
 
     public Output<String> getClusterCaCertificate() {
-        return this.clusterCaCertificate == null ? Output.empty() : this.clusterCaCertificate;
+        return this.clusterCaCertificate == null ? Codegen.empty() : this.clusterCaCertificate;
     }
 
     public ClusterMasterAuthGetArgs(
@@ -59,10 +60,10 @@ public final class ClusterMasterAuthGetArgs extends io.pulumi.resources.Resource
     }
 
     private ClusterMasterAuthGetArgs() {
-        this.clientCertificate = Output.empty();
-        this.clientCertificateConfig = Output.empty();
-        this.clientKey = Output.empty();
-        this.clusterCaCertificate = Output.empty();
+        this.clientCertificate = Codegen.empty();
+        this.clientCertificateConfig = Codegen.empty();
+        this.clientKey = Codegen.empty();
+        this.clusterCaCertificate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ClusterMasterAuthGetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder clientCertificate(@Nullable String clientCertificate) {
-            this.clientCertificate = Output.ofNullable(clientCertificate);
+            this.clientCertificate = Codegen.ofNullable(clientCertificate);
             return this;
         }
         public Builder clientCertificateConfig(Output<ClusterMasterAuthClientCertificateConfigGetArgs> clientCertificateConfig) {
@@ -112,7 +113,7 @@ public final class ClusterMasterAuthGetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder clientKey(@Nullable String clientKey) {
-            this.clientKey = Output.ofNullable(clientKey);
+            this.clientKey = Codegen.ofNullable(clientKey);
             return this;
         }
         public Builder clusterCaCertificate(@Nullable Output<String> clusterCaCertificate) {
@@ -120,7 +121,7 @@ public final class ClusterMasterAuthGetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder clusterCaCertificate(@Nullable String clusterCaCertificate) {
-            this.clusterCaCertificate = Output.ofNullable(clusterCaCertificate);
+            this.clusterCaCertificate = Codegen.ofNullable(clusterCaCertificate);
             return this;
         }        public ClusterMasterAuthGetArgs build() {
             return new ClusterMasterAuthGetArgs(clientCertificate, clientCertificateConfig, clientKey, clusterCaCertificate);

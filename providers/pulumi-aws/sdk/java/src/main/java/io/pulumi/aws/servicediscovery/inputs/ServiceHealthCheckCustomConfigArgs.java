@@ -5,6 +5,7 @@ package io.pulumi.aws.servicediscovery.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ServiceHealthCheckCustomConfigArgs extends io.pulumi.resource
       private final @Nullable Output<Integer> failureThreshold;
 
     public Output<Integer> getFailureThreshold() {
-        return this.failureThreshold == null ? Output.empty() : this.failureThreshold;
+        return this.failureThreshold == null ? Codegen.empty() : this.failureThreshold;
     }
 
     public ServiceHealthCheckCustomConfigArgs(@Nullable Output<Integer> failureThreshold) {
@@ -30,7 +31,7 @@ public final class ServiceHealthCheckCustomConfigArgs extends io.pulumi.resource
     }
 
     private ServiceHealthCheckCustomConfigArgs() {
-        this.failureThreshold = Output.empty();
+        this.failureThreshold = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class ServiceHealthCheckCustomConfigArgs extends io.pulumi.resource
             return this;
         }
         public Builder failureThreshold(@Nullable Integer failureThreshold) {
-            this.failureThreshold = Output.ofNullable(failureThreshold);
+            this.failureThreshold = Codegen.ofNullable(failureThreshold);
             return this;
         }        public ServiceHealthCheckCustomConfigArgs build() {
             return new ServiceHealthCheckCustomConfigArgs(failureThreshold);

@@ -6,6 +6,7 @@ package io.pulumi.aws.elb;
 import io.pulumi.aws.elb.inputs.SslNegotiationPolicyAttributeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +26,7 @@ public final class SslNegotiationPolicyArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<SslNegotiationPolicyAttributeArgs>> attributes;
 
     public Output<List<SslNegotiationPolicyAttributeArgs>> getAttributes() {
-        return this.attributes == null ? Output.empty() : this.attributes;
+        return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class SslNegotiationPolicyArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public SslNegotiationPolicyArgs(
@@ -76,10 +77,10 @@ public final class SslNegotiationPolicyArgs extends io.pulumi.resources.Resource
     }
 
     private SslNegotiationPolicyArgs() {
-        this.attributes = Output.empty();
-        this.lbPort = Output.empty();
-        this.loadBalancer = Output.empty();
-        this.name = Output.empty();
+        this.attributes = Codegen.empty();
+        this.lbPort = Codegen.empty();
+        this.loadBalancer = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class SslNegotiationPolicyArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder attributes(@Nullable List<SslNegotiationPolicyAttributeArgs> attributes) {
-            this.attributes = Output.ofNullable(attributes);
+            this.attributes = Codegen.ofNullable(attributes);
             return this;
         }
         public Builder attributes(SslNegotiationPolicyAttributeArgs... attributes) {
@@ -140,7 +141,7 @@ public final class SslNegotiationPolicyArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public SslNegotiationPolicyArgs build() {
             return new SslNegotiationPolicyArgs(attributes, lbPort, loadBalancer, name);

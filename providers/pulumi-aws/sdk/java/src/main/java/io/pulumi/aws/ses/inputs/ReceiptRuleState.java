@@ -12,6 +12,7 @@ import io.pulumi.aws.ses.inputs.ReceiptRuleStopActionGetArgs;
 import io.pulumi.aws.ses.inputs.ReceiptRuleWorkmailActionGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +32,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ReceiptRuleAddHeaderActionGetArgs>> addHeaderActions;
 
     public Output<List<ReceiptRuleAddHeaderActionGetArgs>> getAddHeaderActions() {
-        return this.addHeaderActions == null ? Output.empty() : this.addHeaderActions;
+        return this.addHeaderActions == null ? Codegen.empty() : this.addHeaderActions;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> after;
 
     public Output<String> getAfter() {
-        return this.after == null ? Output.empty() : this.after;
+        return this.after == null ? Codegen.empty() : this.after;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ReceiptRuleBounceActionGetArgs>> bounceActions;
 
     public Output<List<ReceiptRuleBounceActionGetArgs>> getBounceActions() {
-        return this.bounceActions == null ? Output.empty() : this.bounceActions;
+        return this.bounceActions == null ? Codegen.empty() : this.bounceActions;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ReceiptRuleLambdaActionGetArgs>> lambdaActions;
 
     public Output<List<ReceiptRuleLambdaActionGetArgs>> getLambdaActions() {
-        return this.lambdaActions == null ? Output.empty() : this.lambdaActions;
+        return this.lambdaActions == null ? Codegen.empty() : this.lambdaActions;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -108,7 +109,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> recipients;
 
     public Output<List<String>> getRecipients() {
-        return this.recipients == null ? Output.empty() : this.recipients;
+        return this.recipients == null ? Codegen.empty() : this.recipients;
     }
 
     /**
@@ -119,7 +120,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ruleSetName;
 
     public Output<String> getRuleSetName() {
-        return this.ruleSetName == null ? Output.empty() : this.ruleSetName;
+        return this.ruleSetName == null ? Codegen.empty() : this.ruleSetName;
     }
 
     /**
@@ -130,7 +131,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ReceiptRuleS3ActionGetArgs>> s3Actions;
 
     public Output<List<ReceiptRuleS3ActionGetArgs>> getS3Actions() {
-        return this.s3Actions == null ? Output.empty() : this.s3Actions;
+        return this.s3Actions == null ? Codegen.empty() : this.s3Actions;
     }
 
     /**
@@ -141,7 +142,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> scanEnabled;
 
     public Output<Boolean> getScanEnabled() {
-        return this.scanEnabled == null ? Output.empty() : this.scanEnabled;
+        return this.scanEnabled == null ? Codegen.empty() : this.scanEnabled;
     }
 
     /**
@@ -152,7 +153,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ReceiptRuleSnsActionGetArgs>> snsActions;
 
     public Output<List<ReceiptRuleSnsActionGetArgs>> getSnsActions() {
-        return this.snsActions == null ? Output.empty() : this.snsActions;
+        return this.snsActions == null ? Codegen.empty() : this.snsActions;
     }
 
     /**
@@ -163,7 +164,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ReceiptRuleStopActionGetArgs>> stopActions;
 
     public Output<List<ReceiptRuleStopActionGetArgs>> getStopActions() {
-        return this.stopActions == null ? Output.empty() : this.stopActions;
+        return this.stopActions == null ? Codegen.empty() : this.stopActions;
     }
 
     /**
@@ -174,7 +175,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> tlsPolicy;
 
     public Output<String> getTlsPolicy() {
-        return this.tlsPolicy == null ? Output.empty() : this.tlsPolicy;
+        return this.tlsPolicy == null ? Codegen.empty() : this.tlsPolicy;
     }
 
     /**
@@ -185,7 +186,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ReceiptRuleWorkmailActionGetArgs>> workmailActions;
 
     public Output<List<ReceiptRuleWorkmailActionGetArgs>> getWorkmailActions() {
-        return this.workmailActions == null ? Output.empty() : this.workmailActions;
+        return this.workmailActions == null ? Codegen.empty() : this.workmailActions;
     }
 
     public ReceiptRuleState(
@@ -222,21 +223,21 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReceiptRuleState() {
-        this.addHeaderActions = Output.empty();
-        this.after = Output.empty();
-        this.arn = Output.empty();
-        this.bounceActions = Output.empty();
-        this.enabled = Output.empty();
-        this.lambdaActions = Output.empty();
-        this.name = Output.empty();
-        this.recipients = Output.empty();
-        this.ruleSetName = Output.empty();
-        this.s3Actions = Output.empty();
-        this.scanEnabled = Output.empty();
-        this.snsActions = Output.empty();
-        this.stopActions = Output.empty();
-        this.tlsPolicy = Output.empty();
-        this.workmailActions = Output.empty();
+        this.addHeaderActions = Codegen.empty();
+        this.after = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.bounceActions = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.lambdaActions = Codegen.empty();
+        this.name = Codegen.empty();
+        this.recipients = Codegen.empty();
+        this.ruleSetName = Codegen.empty();
+        this.s3Actions = Codegen.empty();
+        this.scanEnabled = Codegen.empty();
+        this.snsActions = Codegen.empty();
+        this.stopActions = Codegen.empty();
+        this.tlsPolicy = Codegen.empty();
+        this.workmailActions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -292,7 +293,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder addHeaderActions(@Nullable List<ReceiptRuleAddHeaderActionGetArgs> addHeaderActions) {
-            this.addHeaderActions = Output.ofNullable(addHeaderActions);
+            this.addHeaderActions = Codegen.ofNullable(addHeaderActions);
             return this;
         }
         public Builder addHeaderActions(ReceiptRuleAddHeaderActionGetArgs... addHeaderActions) {
@@ -303,7 +304,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder after(@Nullable String after) {
-            this.after = Output.ofNullable(after);
+            this.after = Codegen.ofNullable(after);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -311,7 +312,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder bounceActions(@Nullable Output<List<ReceiptRuleBounceActionGetArgs>> bounceActions) {
@@ -319,7 +320,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bounceActions(@Nullable List<ReceiptRuleBounceActionGetArgs> bounceActions) {
-            this.bounceActions = Output.ofNullable(bounceActions);
+            this.bounceActions = Codegen.ofNullable(bounceActions);
             return this;
         }
         public Builder bounceActions(ReceiptRuleBounceActionGetArgs... bounceActions) {
@@ -330,7 +331,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder lambdaActions(@Nullable Output<List<ReceiptRuleLambdaActionGetArgs>> lambdaActions) {
@@ -338,7 +339,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lambdaActions(@Nullable List<ReceiptRuleLambdaActionGetArgs> lambdaActions) {
-            this.lambdaActions = Output.ofNullable(lambdaActions);
+            this.lambdaActions = Codegen.ofNullable(lambdaActions);
             return this;
         }
         public Builder lambdaActions(ReceiptRuleLambdaActionGetArgs... lambdaActions) {
@@ -349,7 +350,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder recipients(@Nullable Output<List<String>> recipients) {
@@ -357,7 +358,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder recipients(@Nullable List<String> recipients) {
-            this.recipients = Output.ofNullable(recipients);
+            this.recipients = Codegen.ofNullable(recipients);
             return this;
         }
         public Builder recipients(String... recipients) {
@@ -368,7 +369,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ruleSetName(@Nullable String ruleSetName) {
-            this.ruleSetName = Output.ofNullable(ruleSetName);
+            this.ruleSetName = Codegen.ofNullable(ruleSetName);
             return this;
         }
         public Builder s3Actions(@Nullable Output<List<ReceiptRuleS3ActionGetArgs>> s3Actions) {
@@ -376,7 +377,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder s3Actions(@Nullable List<ReceiptRuleS3ActionGetArgs> s3Actions) {
-            this.s3Actions = Output.ofNullable(s3Actions);
+            this.s3Actions = Codegen.ofNullable(s3Actions);
             return this;
         }
         public Builder s3Actions(ReceiptRuleS3ActionGetArgs... s3Actions) {
@@ -387,7 +388,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scanEnabled(@Nullable Boolean scanEnabled) {
-            this.scanEnabled = Output.ofNullable(scanEnabled);
+            this.scanEnabled = Codegen.ofNullable(scanEnabled);
             return this;
         }
         public Builder snsActions(@Nullable Output<List<ReceiptRuleSnsActionGetArgs>> snsActions) {
@@ -395,7 +396,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder snsActions(@Nullable List<ReceiptRuleSnsActionGetArgs> snsActions) {
-            this.snsActions = Output.ofNullable(snsActions);
+            this.snsActions = Codegen.ofNullable(snsActions);
             return this;
         }
         public Builder snsActions(ReceiptRuleSnsActionGetArgs... snsActions) {
@@ -406,7 +407,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stopActions(@Nullable List<ReceiptRuleStopActionGetArgs> stopActions) {
-            this.stopActions = Output.ofNullable(stopActions);
+            this.stopActions = Codegen.ofNullable(stopActions);
             return this;
         }
         public Builder stopActions(ReceiptRuleStopActionGetArgs... stopActions) {
@@ -417,7 +418,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tlsPolicy(@Nullable String tlsPolicy) {
-            this.tlsPolicy = Output.ofNullable(tlsPolicy);
+            this.tlsPolicy = Codegen.ofNullable(tlsPolicy);
             return this;
         }
         public Builder workmailActions(@Nullable Output<List<ReceiptRuleWorkmailActionGetArgs>> workmailActions) {
@@ -425,7 +426,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workmailActions(@Nullable List<ReceiptRuleWorkmailActionGetArgs> workmailActions) {
-            this.workmailActions = Output.ofNullable(workmailActions);
+            this.workmailActions = Codegen.ofNullable(workmailActions);
             return this;
         }
         public Builder workmailActions(ReceiptRuleWorkmailActionGetArgs... workmailActions) {

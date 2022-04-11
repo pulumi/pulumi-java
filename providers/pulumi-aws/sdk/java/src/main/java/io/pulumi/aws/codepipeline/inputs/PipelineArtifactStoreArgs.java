@@ -6,6 +6,7 @@ package io.pulumi.aws.codepipeline.inputs;
 import io.pulumi.aws.codepipeline.inputs.PipelineArtifactStoreEncryptionKeyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class PipelineArtifactStoreArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<PipelineArtifactStoreEncryptionKeyArgs> encryptionKey;
 
     public Output<PipelineArtifactStoreEncryptionKeyArgs> getEncryptionKey() {
-        return this.encryptionKey == null ? Output.empty() : this.encryptionKey;
+        return this.encryptionKey == null ? Codegen.empty() : this.encryptionKey;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class PipelineArtifactStoreArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -71,10 +72,10 @@ public final class PipelineArtifactStoreArgs extends io.pulumi.resources.Resourc
     }
 
     private PipelineArtifactStoreArgs() {
-        this.encryptionKey = Output.empty();
-        this.location = Output.empty();
-        this.region = Output.empty();
-        this.type = Output.empty();
+        this.encryptionKey = Codegen.empty();
+        this.location = Codegen.empty();
+        this.region = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class PipelineArtifactStoreArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder encryptionKey(@Nullable PipelineArtifactStoreEncryptionKeyArgs encryptionKey) {
-            this.encryptionKey = Output.ofNullable(encryptionKey);
+            this.encryptionKey = Codegen.ofNullable(encryptionKey);
             return this;
         }
         public Builder location(Output<String> location) {
@@ -124,7 +125,7 @@ public final class PipelineArtifactStoreArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder type(Output<String> type) {

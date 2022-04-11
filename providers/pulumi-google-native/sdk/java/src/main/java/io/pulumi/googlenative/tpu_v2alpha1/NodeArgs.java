@@ -5,6 +5,7 @@ package io.pulumi.googlenative.tpu_v2alpha1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.tpu_v2alpha1.enums.NodeHealth;
 import io.pulumi.googlenative.tpu_v2alpha1.inputs.AttachedDiskArgs;
 import io.pulumi.googlenative.tpu_v2alpha1.inputs.NetworkConfigArgs;
@@ -40,7 +41,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> cidrBlock;
 
     public Output<String> getCidrBlock() {
-        return this.cidrBlock == null ? Output.empty() : this.cidrBlock;
+        return this.cidrBlock == null ? Codegen.empty() : this.cidrBlock;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<AttachedDiskArgs>> dataDisks;
 
     public Output<List<AttachedDiskArgs>> getDataDisks() {
-        return this.dataDisks == null ? Output.empty() : this.dataDisks;
+        return this.dataDisks == null ? Codegen.empty() : this.dataDisks;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<NodeHealth> health;
 
     public Output<NodeHealth> getHealth() {
-        return this.health == null ? Output.empty() : this.health;
+        return this.health == null ? Codegen.empty() : this.health;
     }
 
     /**
@@ -84,14 +85,14 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -113,21 +114,21 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<NetworkConfigArgs> networkConfig;
 
     public Output<NetworkConfigArgs> getNetworkConfig() {
-        return this.networkConfig == null ? Output.empty() : this.networkConfig;
+        return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
     }
 
     @Import(name="nodeId")
       private final @Nullable Output<String> nodeId;
 
     public Output<String> getNodeId() {
-        return this.nodeId == null ? Output.empty() : this.nodeId;
+        return this.nodeId == null ? Codegen.empty() : this.nodeId;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -149,7 +150,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SchedulingConfigArgs> schedulingConfig;
 
     public Output<SchedulingConfigArgs> getSchedulingConfig() {
-        return this.schedulingConfig == null ? Output.empty() : this.schedulingConfig;
+        return this.schedulingConfig == null ? Codegen.empty() : this.schedulingConfig;
     }
 
     /**
@@ -160,7 +161,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ServiceAccountArgs> serviceAccount;
 
     public Output<ServiceAccountArgs> getServiceAccount() {
-        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
+        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
     /**
@@ -171,7 +172,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public NodeArgs(
@@ -208,21 +209,21 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NodeArgs() {
-        this.acceleratorType = Output.empty();
-        this.cidrBlock = Output.empty();
-        this.dataDisks = Output.empty();
-        this.description = Output.empty();
-        this.health = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.metadata = Output.empty();
-        this.networkConfig = Output.empty();
-        this.nodeId = Output.empty();
-        this.project = Output.empty();
-        this.runtimeVersion = Output.empty();
-        this.schedulingConfig = Output.empty();
-        this.serviceAccount = Output.empty();
-        this.tags = Output.empty();
+        this.acceleratorType = Codegen.empty();
+        this.cidrBlock = Codegen.empty();
+        this.dataDisks = Codegen.empty();
+        this.description = Codegen.empty();
+        this.health = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.networkConfig = Codegen.empty();
+        this.nodeId = Codegen.empty();
+        this.project = Codegen.empty();
+        this.runtimeVersion = Codegen.empty();
+        this.schedulingConfig = Codegen.empty();
+        this.serviceAccount = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -286,7 +287,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cidrBlock(@Nullable String cidrBlock) {
-            this.cidrBlock = Output.ofNullable(cidrBlock);
+            this.cidrBlock = Codegen.ofNullable(cidrBlock);
             return this;
         }
         public Builder dataDisks(@Nullable Output<List<AttachedDiskArgs>> dataDisks) {
@@ -294,7 +295,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataDisks(@Nullable List<AttachedDiskArgs> dataDisks) {
-            this.dataDisks = Output.ofNullable(dataDisks);
+            this.dataDisks = Codegen.ofNullable(dataDisks);
             return this;
         }
         public Builder dataDisks(AttachedDiskArgs... dataDisks) {
@@ -305,7 +306,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder health(@Nullable Output<NodeHealth> health) {
@@ -313,7 +314,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder health(@Nullable NodeHealth health) {
-            this.health = Output.ofNullable(health);
+            this.health = Codegen.ofNullable(health);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -321,7 +322,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -329,7 +330,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
@@ -337,7 +338,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder networkConfig(@Nullable Output<NetworkConfigArgs> networkConfig) {
@@ -345,7 +346,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkConfig(@Nullable NetworkConfigArgs networkConfig) {
-            this.networkConfig = Output.ofNullable(networkConfig);
+            this.networkConfig = Codegen.ofNullable(networkConfig);
             return this;
         }
         public Builder nodeId(@Nullable Output<String> nodeId) {
@@ -353,7 +354,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nodeId(@Nullable String nodeId) {
-            this.nodeId = Output.ofNullable(nodeId);
+            this.nodeId = Codegen.ofNullable(nodeId);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -361,7 +362,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder runtimeVersion(Output<String> runtimeVersion) {
@@ -377,7 +378,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schedulingConfig(@Nullable SchedulingConfigArgs schedulingConfig) {
-            this.schedulingConfig = Output.ofNullable(schedulingConfig);
+            this.schedulingConfig = Codegen.ofNullable(schedulingConfig);
             return this;
         }
         public Builder serviceAccount(@Nullable Output<ServiceAccountArgs> serviceAccount) {
@@ -385,7 +386,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceAccount(@Nullable ServiceAccountArgs serviceAccount) {
-            this.serviceAccount = Output.ofNullable(serviceAccount);
+            this.serviceAccount = Codegen.ofNullable(serviceAccount);
             return this;
         }
         public Builder tags(@Nullable Output<List<String>> tags) {
@@ -393,7 +394,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(String... tags) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.netapp.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> day;
 
     public Output<String> getDay() {
-        return this.day == null ? Output.empty() : this.day;
+        return this.day == null ? Codegen.empty() : this.day;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> hour;
 
     public Output<Integer> getHour() {
-        return this.hour == null ? Output.empty() : this.hour;
+        return this.hour == null ? Codegen.empty() : this.hour;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> minute;
 
     public Output<Integer> getMinute() {
-        return this.minute == null ? Output.empty() : this.minute;
+        return this.minute == null ? Codegen.empty() : this.minute;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> snapshotsToKeep;
 
     public Output<Integer> getSnapshotsToKeep() {
-        return this.snapshotsToKeep == null ? Output.empty() : this.snapshotsToKeep;
+        return this.snapshotsToKeep == null ? Codegen.empty() : this.snapshotsToKeep;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> usedBytes;
 
     public Output<Double> getUsedBytes() {
-        return this.usedBytes == null ? Output.empty() : this.usedBytes;
+        return this.usedBytes == null ? Codegen.empty() : this.usedBytes;
     }
 
     public WeeklyScheduleArgs(
@@ -89,11 +90,11 @@ public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WeeklyScheduleArgs() {
-        this.day = Output.empty();
-        this.hour = Output.empty();
-        this.minute = Output.empty();
-        this.snapshotsToKeep = Output.empty();
-        this.usedBytes = Output.empty();
+        this.day = Codegen.empty();
+        this.hour = Codegen.empty();
+        this.minute = Codegen.empty();
+        this.snapshotsToKeep = Codegen.empty();
+        this.usedBytes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder day(@Nullable String day) {
-            this.day = Output.ofNullable(day);
+            this.day = Codegen.ofNullable(day);
             return this;
         }
         public Builder hour(@Nullable Output<Integer> hour) {
@@ -137,7 +138,7 @@ public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hour(@Nullable Integer hour) {
-            this.hour = Output.ofNullable(hour);
+            this.hour = Codegen.ofNullable(hour);
             return this;
         }
         public Builder minute(@Nullable Output<Integer> minute) {
@@ -145,7 +146,7 @@ public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minute(@Nullable Integer minute) {
-            this.minute = Output.ofNullable(minute);
+            this.minute = Codegen.ofNullable(minute);
             return this;
         }
         public Builder snapshotsToKeep(@Nullable Output<Integer> snapshotsToKeep) {
@@ -153,7 +154,7 @@ public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder snapshotsToKeep(@Nullable Integer snapshotsToKeep) {
-            this.snapshotsToKeep = Output.ofNullable(snapshotsToKeep);
+            this.snapshotsToKeep = Codegen.ofNullable(snapshotsToKeep);
             return this;
         }
         public Builder usedBytes(@Nullable Output<Double> usedBytes) {
@@ -161,7 +162,7 @@ public final class WeeklyScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder usedBytes(@Nullable Double usedBytes) {
-            this.usedBytes = Output.ofNullable(usedBytes);
+            this.usedBytes = Codegen.ofNullable(usedBytes);
             return this;
         }        public WeeklyScheduleArgs build() {
             return new WeeklyScheduleArgs(day, hour, minute, snapshotsToKeep, usedBytes);

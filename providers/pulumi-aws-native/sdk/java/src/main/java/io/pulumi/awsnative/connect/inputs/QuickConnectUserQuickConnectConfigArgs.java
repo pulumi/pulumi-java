@@ -5,6 +5,7 @@ package io.pulumi.awsnative.connect.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -39,8 +40,8 @@ public final class QuickConnectUserQuickConnectConfigArgs extends io.pulumi.reso
     }
 
     private QuickConnectUserQuickConnectConfigArgs() {
-        this.contactFlowArn = Output.empty();
-        this.userArn = Output.empty();
+        this.contactFlowArn = Codegen.empty();
+        this.userArn = Codegen.empty();
     }
 
     public static Builder builder() {

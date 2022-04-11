@@ -7,6 +7,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementByteMatchStatementFieldToMa
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementByteMatchStatementTextTransformationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class WebAclRuleStatementByteMatchStatementArgs extends io.pulumi.r
       private final @Nullable Output<WebAclRuleStatementByteMatchStatementFieldToMatchArgs> fieldToMatch;
 
     public Output<WebAclRuleStatementByteMatchStatementFieldToMatchArgs> getFieldToMatch() {
-        return this.fieldToMatch == null ? Output.empty() : this.fieldToMatch;
+        return this.fieldToMatch == null ? Codegen.empty() : this.fieldToMatch;
     }
 
     /**
@@ -73,10 +74,10 @@ public final class WebAclRuleStatementByteMatchStatementArgs extends io.pulumi.r
     }
 
     private WebAclRuleStatementByteMatchStatementArgs() {
-        this.fieldToMatch = Output.empty();
-        this.positionalConstraint = Output.empty();
-        this.searchString = Output.empty();
-        this.textTransformations = Output.empty();
+        this.fieldToMatch = Codegen.empty();
+        this.positionalConstraint = Codegen.empty();
+        this.searchString = Codegen.empty();
+        this.textTransformations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class WebAclRuleStatementByteMatchStatementArgs extends io.pulumi.r
             return this;
         }
         public Builder fieldToMatch(@Nullable WebAclRuleStatementByteMatchStatementFieldToMatchArgs fieldToMatch) {
-            this.fieldToMatch = Output.ofNullable(fieldToMatch);
+            this.fieldToMatch = Codegen.ofNullable(fieldToMatch);
             return this;
         }
         public Builder positionalConstraint(Output<String> positionalConstraint) {

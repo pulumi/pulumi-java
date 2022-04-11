@@ -6,6 +6,7 @@ package io.pulumi.awsnative.mwaa.inputs;
 import io.pulumi.awsnative.mwaa.enums.EnvironmentLoggingLevel;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,21 +25,21 @@ public final class EnvironmentModuleLoggingConfigurationArgs extends io.pulumi.r
       private final @Nullable Output<String> cloudWatchLogGroupArn;
 
     public Output<String> getCloudWatchLogGroupArn() {
-        return this.cloudWatchLogGroupArn == null ? Output.empty() : this.cloudWatchLogGroupArn;
+        return this.cloudWatchLogGroupArn == null ? Codegen.empty() : this.cloudWatchLogGroupArn;
     }
 
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     @Import(name="logLevel")
       private final @Nullable Output<EnvironmentLoggingLevel> logLevel;
 
     public Output<EnvironmentLoggingLevel> getLogLevel() {
-        return this.logLevel == null ? Output.empty() : this.logLevel;
+        return this.logLevel == null ? Codegen.empty() : this.logLevel;
     }
 
     public EnvironmentModuleLoggingConfigurationArgs(
@@ -51,9 +52,9 @@ public final class EnvironmentModuleLoggingConfigurationArgs extends io.pulumi.r
     }
 
     private EnvironmentModuleLoggingConfigurationArgs() {
-        this.cloudWatchLogGroupArn = Output.empty();
-        this.enabled = Output.empty();
-        this.logLevel = Output.empty();
+        this.cloudWatchLogGroupArn = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.logLevel = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -85,7 +86,7 @@ public final class EnvironmentModuleLoggingConfigurationArgs extends io.pulumi.r
             return this;
         }
         public Builder cloudWatchLogGroupArn(@Nullable String cloudWatchLogGroupArn) {
-            this.cloudWatchLogGroupArn = Output.ofNullable(cloudWatchLogGroupArn);
+            this.cloudWatchLogGroupArn = Codegen.ofNullable(cloudWatchLogGroupArn);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -93,7 +94,7 @@ public final class EnvironmentModuleLoggingConfigurationArgs extends io.pulumi.r
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder logLevel(@Nullable Output<EnvironmentLoggingLevel> logLevel) {
@@ -101,7 +102,7 @@ public final class EnvironmentModuleLoggingConfigurationArgs extends io.pulumi.r
             return this;
         }
         public Builder logLevel(@Nullable EnvironmentLoggingLevel logLevel) {
-            this.logLevel = Output.ofNullable(logLevel);
+            this.logLevel = Codegen.ofNullable(logLevel);
             return this;
         }        public EnvironmentModuleLoggingConfigurationArgs build() {
             return new EnvironmentModuleLoggingConfigurationArgs(cloudWatchLogGroupArn, enabled, logLevel);

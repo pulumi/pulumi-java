@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -59,7 +60,7 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> resourceVersion;
 
     public Output<String> getResourceVersion() {
-        return this.resourceVersion == null ? Output.empty() : this.resourceVersion;
+        return this.resourceVersion == null ? Codegen.empty() : this.resourceVersion;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> uid;
 
     public Output<String> getUid() {
-        return this.uid == null ? Output.empty() : this.uid;
+        return this.uid == null ? Codegen.empty() : this.uid;
     }
 
     public ConfigMapNodeConfigSourceArgs(
@@ -87,11 +88,11 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
     }
 
     private ConfigMapNodeConfigSourceArgs() {
-        this.kubeletConfigKey = Output.empty();
-        this.name = Output.empty();
-        this.namespace = Output.empty();
-        this.resourceVersion = Output.empty();
-        this.uid = Output.empty();
+        this.kubeletConfigKey = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namespace = Codegen.empty();
+        this.resourceVersion = Codegen.empty();
+        this.uid = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -151,7 +152,7 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder resourceVersion(@Nullable String resourceVersion) {
-            this.resourceVersion = Output.ofNullable(resourceVersion);
+            this.resourceVersion = Codegen.ofNullable(resourceVersion);
             return this;
         }
         public Builder uid(@Nullable Output<String> uid) {
@@ -159,7 +160,7 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder uid(@Nullable String uid) {
-            this.uid = Output.ofNullable(uid);
+            this.uid = Codegen.ofNullable(uid);
             return this;
         }        public ConfigMapNodeConfigSourceArgs build() {
             return new ConfigMapNodeConfigSourceArgs(kubeletConfigKey, name, namespace, resourceVersion, uid);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.OrganizationSecurityPolicyRuleMatchConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class OrganizationSecurityPolicyRuleMatchArgs extends io.pulumi.res
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class OrganizationSecurityPolicyRuleMatchArgs extends io.pulumi.res
       private final @Nullable Output<String> versionedExpr;
 
     public Output<String> getVersionedExpr() {
-        return this.versionedExpr == null ? Output.empty() : this.versionedExpr;
+        return this.versionedExpr == null ? Codegen.empty() : this.versionedExpr;
     }
 
     public OrganizationSecurityPolicyRuleMatchArgs(
@@ -62,9 +63,9 @@ public final class OrganizationSecurityPolicyRuleMatchArgs extends io.pulumi.res
     }
 
     private OrganizationSecurityPolicyRuleMatchArgs() {
-        this.config = Output.empty();
-        this.description = Output.empty();
-        this.versionedExpr = Output.empty();
+        this.config = Codegen.empty();
+        this.description = Codegen.empty();
+        this.versionedExpr = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class OrganizationSecurityPolicyRuleMatchArgs extends io.pulumi.res
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder versionedExpr(@Nullable Output<String> versionedExpr) {
@@ -112,7 +113,7 @@ public final class OrganizationSecurityPolicyRuleMatchArgs extends io.pulumi.res
             return this;
         }
         public Builder versionedExpr(@Nullable String versionedExpr) {
-            this.versionedExpr = Output.ofNullable(versionedExpr);
+            this.versionedExpr = Codegen.ofNullable(versionedExpr);
             return this;
         }        public OrganizationSecurityPolicyRuleMatchArgs build() {
             return new OrganizationSecurityPolicyRuleMatchArgs(config, description, versionedExpr);

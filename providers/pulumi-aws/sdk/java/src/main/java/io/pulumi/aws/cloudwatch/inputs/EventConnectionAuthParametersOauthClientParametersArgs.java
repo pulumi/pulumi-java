@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class EventConnectionAuthParametersOauthClientParametersArgs extend
     }
 
     private EventConnectionAuthParametersOauthClientParametersArgs() {
-        this.clientId = Output.empty();
-        this.clientSecret = Output.empty();
+        this.clientId = Codegen.empty();
+        this.clientSecret = Codegen.empty();
     }
 
     public static Builder builder() {

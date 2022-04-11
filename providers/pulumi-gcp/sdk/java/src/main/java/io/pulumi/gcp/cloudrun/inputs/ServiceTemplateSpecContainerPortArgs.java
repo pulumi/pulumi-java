@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class ServiceTemplateSpecContainerPortArgs extends io.pulumi.resour
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ServiceTemplateSpecContainerPortArgs extends io.pulumi.resour
       private final @Nullable Output<String> protocol;
 
     public Output<String> getProtocol() {
-        return this.protocol == null ? Output.empty() : this.protocol;
+        return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     public ServiceTemplateSpecContainerPortArgs(
@@ -58,9 +59,9 @@ public final class ServiceTemplateSpecContainerPortArgs extends io.pulumi.resour
     }
 
     private ServiceTemplateSpecContainerPortArgs() {
-        this.containerPort = Output.empty();
-        this.name = Output.empty();
-        this.protocol = Output.empty();
+        this.containerPort = Codegen.empty();
+        this.name = Codegen.empty();
+        this.protocol = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class ServiceTemplateSpecContainerPortArgs extends io.pulumi.resour
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder protocol(@Nullable Output<String> protocol) {
@@ -108,7 +109,7 @@ public final class ServiceTemplateSpecContainerPortArgs extends io.pulumi.resour
             return this;
         }
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Output.ofNullable(protocol);
+            this.protocol = Codegen.ofNullable(protocol);
             return this;
         }        public ServiceTemplateSpecContainerPortArgs build() {
             return new ServiceTemplateSpecContainerPortArgs(containerPort, name, protocol);

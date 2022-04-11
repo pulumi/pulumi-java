@@ -7,6 +7,7 @@ import io.pulumi.awsnative.mediaconnect.inputs.FlowFailoverConfigArgs;
 import io.pulumi.awsnative.mediaconnect.inputs.FlowSourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
+        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FlowFailoverConfigArgs> sourceFailoverConfig;
 
     public Output<FlowFailoverConfigArgs> getSourceFailoverConfig() {
-        return this.sourceFailoverConfig == null ? Output.empty() : this.sourceFailoverConfig;
+        return this.sourceFailoverConfig == null ? Codegen.empty() : this.sourceFailoverConfig;
     }
 
     public FlowArgs(
@@ -72,10 +73,10 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FlowArgs() {
-        this.availabilityZone = Output.empty();
-        this.name = Output.empty();
-        this.source = Output.empty();
-        this.sourceFailoverConfig = Output.empty();
+        this.availabilityZone = Codegen.empty();
+        this.name = Codegen.empty();
+        this.source = Codegen.empty();
+        this.sourceFailoverConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Output.ofNullable(availabilityZone);
+            this.availabilityZone = Codegen.ofNullable(availabilityZone);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -117,7 +118,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder source(Output<FlowSourceArgs> source) {
@@ -133,7 +134,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceFailoverConfig(@Nullable FlowFailoverConfigArgs sourceFailoverConfig) {
-            this.sourceFailoverConfig = Output.ofNullable(sourceFailoverConfig);
+            this.sourceFailoverConfig = Codegen.ofNullable(sourceFailoverConfig);
             return this;
         }        public FlowArgs build() {
             return new FlowArgs(availabilityZone, name, source, sourceFailoverConfig);

@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class LogMetricFilterMetricTransformationArgs extends io.pulumi.res
       private final @Nullable Output<String> defaultValue;
 
     public Output<String> getDefaultValue() {
-        return this.defaultValue == null ? Output.empty() : this.defaultValue;
+        return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class LogMetricFilterMetricTransformationArgs extends io.pulumi.res
       private final @Nullable Output<Map<String,String>> dimensions;
 
     public Output<Map<String,String>> getDimensions() {
-        return this.dimensions == null ? Output.empty() : this.dimensions;
+        return this.dimensions == null ? Codegen.empty() : this.dimensions;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class LogMetricFilterMetricTransformationArgs extends io.pulumi.res
       private final @Nullable Output<String> unit;
 
     public Output<String> getUnit() {
-        return this.unit == null ? Output.empty() : this.unit;
+        return this.unit == null ? Codegen.empty() : this.unit;
     }
 
     /**
@@ -97,12 +98,12 @@ public final class LogMetricFilterMetricTransformationArgs extends io.pulumi.res
     }
 
     private LogMetricFilterMetricTransformationArgs() {
-        this.defaultValue = Output.empty();
-        this.dimensions = Output.empty();
-        this.name = Output.empty();
-        this.namespace = Output.empty();
-        this.unit = Output.empty();
-        this.value = Output.empty();
+        this.defaultValue = Codegen.empty();
+        this.dimensions = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namespace = Codegen.empty();
+        this.unit = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class LogMetricFilterMetricTransformationArgs extends io.pulumi.res
             return this;
         }
         public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = Output.ofNullable(defaultValue);
+            this.defaultValue = Codegen.ofNullable(defaultValue);
             return this;
         }
         public Builder dimensions(@Nullable Output<Map<String,String>> dimensions) {
@@ -148,7 +149,7 @@ public final class LogMetricFilterMetricTransformationArgs extends io.pulumi.res
             return this;
         }
         public Builder dimensions(@Nullable Map<String,String> dimensions) {
-            this.dimensions = Output.ofNullable(dimensions);
+            this.dimensions = Codegen.ofNullable(dimensions);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -172,7 +173,7 @@ public final class LogMetricFilterMetricTransformationArgs extends io.pulumi.res
             return this;
         }
         public Builder unit(@Nullable String unit) {
-            this.unit = Output.ofNullable(unit);
+            this.unit = Codegen.ofNullable(unit);
             return this;
         }
         public Builder value(Output<String> value) {

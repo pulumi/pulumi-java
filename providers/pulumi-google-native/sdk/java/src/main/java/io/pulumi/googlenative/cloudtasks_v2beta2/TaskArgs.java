@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudtasks_v2beta2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudtasks_v2beta2.enums.TaskResponseView;
 import io.pulumi.googlenative.cloudtasks_v2beta2.inputs.AppEngineHttpRequestArgs;
 import io.pulumi.googlenative.cloudtasks_v2beta2.inputs.PullMessageArgs;
@@ -25,14 +26,14 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AppEngineHttpRequestArgs> appEngineHttpRequest;
 
     public Output<AppEngineHttpRequestArgs> getAppEngineHttpRequest() {
-        return this.appEngineHttpRequest == null ? Output.empty() : this.appEngineHttpRequest;
+        return this.appEngineHttpRequest == null ? Codegen.empty() : this.appEngineHttpRequest;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -43,14 +44,14 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PullMessageArgs> pullMessage;
 
     public Output<PullMessageArgs> getPullMessage() {
-        return this.pullMessage == null ? Output.empty() : this.pullMessage;
+        return this.pullMessage == null ? Codegen.empty() : this.pullMessage;
     }
 
     @Import(name="queueId", required=true)
@@ -79,7 +80,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TaskResponseView> responseView;
 
     public Output<TaskResponseView> getResponseView() {
-        return this.responseView == null ? Output.empty() : this.responseView;
+        return this.responseView == null ? Codegen.empty() : this.responseView;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> scheduleTime;
 
     public Output<String> getScheduleTime() {
-        return this.scheduleTime == null ? Output.empty() : this.scheduleTime;
+        return this.scheduleTime == null ? Codegen.empty() : this.scheduleTime;
     }
 
     public TaskArgs(
@@ -113,14 +114,14 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TaskArgs() {
-        this.appEngineHttpRequest = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.pullMessage = Output.empty();
-        this.queueId = Output.empty();
-        this.responseView = Output.empty();
-        this.scheduleTime = Output.empty();
+        this.appEngineHttpRequest = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.pullMessage = Codegen.empty();
+        this.queueId = Codegen.empty();
+        this.responseView = Codegen.empty();
+        this.scheduleTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -162,7 +163,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appEngineHttpRequest(@Nullable AppEngineHttpRequestArgs appEngineHttpRequest) {
-            this.appEngineHttpRequest = Output.ofNullable(appEngineHttpRequest);
+            this.appEngineHttpRequest = Codegen.ofNullable(appEngineHttpRequest);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -170,7 +171,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -178,7 +179,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -186,7 +187,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder pullMessage(@Nullable Output<PullMessageArgs> pullMessage) {
@@ -194,7 +195,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pullMessage(@Nullable PullMessageArgs pullMessage) {
-            this.pullMessage = Output.ofNullable(pullMessage);
+            this.pullMessage = Codegen.ofNullable(pullMessage);
             return this;
         }
         public Builder queueId(Output<String> queueId) {
@@ -210,7 +211,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder responseView(@Nullable TaskResponseView responseView) {
-            this.responseView = Output.ofNullable(responseView);
+            this.responseView = Codegen.ofNullable(responseView);
             return this;
         }
         public Builder scheduleTime(@Nullable Output<String> scheduleTime) {
@@ -218,7 +219,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scheduleTime(@Nullable String scheduleTime) {
-            this.scheduleTime = Output.ofNullable(scheduleTime);
+            this.scheduleTime = Codegen.ofNullable(scheduleTime);
             return this;
         }        public TaskArgs build() {
             return new TaskArgs(appEngineHttpRequest, location, name, project, pullMessage, queueId, responseView, scheduleTime);

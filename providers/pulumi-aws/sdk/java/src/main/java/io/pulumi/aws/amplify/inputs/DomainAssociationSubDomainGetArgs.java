@@ -5,6 +5,7 @@ package io.pulumi.aws.amplify.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class DomainAssociationSubDomainGetArgs extends io.pulumi.resources
       private final @Nullable Output<String> dnsRecord;
 
     public Output<String> getDnsRecord() {
-        return this.dnsRecord == null ? Output.empty() : this.dnsRecord;
+        return this.dnsRecord == null ? Codegen.empty() : this.dnsRecord;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class DomainAssociationSubDomainGetArgs extends io.pulumi.resources
       private final @Nullable Output<Boolean> verified;
 
     public Output<Boolean> getVerified() {
-        return this.verified == null ? Output.empty() : this.verified;
+        return this.verified == null ? Codegen.empty() : this.verified;
     }
 
     public DomainAssociationSubDomainGetArgs(
@@ -71,10 +72,10 @@ public final class DomainAssociationSubDomainGetArgs extends io.pulumi.resources
     }
 
     private DomainAssociationSubDomainGetArgs() {
-        this.branchName = Output.empty();
-        this.dnsRecord = Output.empty();
-        this.prefix = Output.empty();
-        this.verified = Output.empty();
+        this.branchName = Codegen.empty();
+        this.dnsRecord = Codegen.empty();
+        this.prefix = Codegen.empty();
+        this.verified = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class DomainAssociationSubDomainGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder dnsRecord(@Nullable String dnsRecord) {
-            this.dnsRecord = Output.ofNullable(dnsRecord);
+            this.dnsRecord = Codegen.ofNullable(dnsRecord);
             return this;
         }
         public Builder prefix(Output<String> prefix) {
@@ -132,7 +133,7 @@ public final class DomainAssociationSubDomainGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder verified(@Nullable Boolean verified) {
-            this.verified = Output.ofNullable(verified);
+            this.verified = Codegen.ofNullable(verified);
             return this;
         }        public DomainAssociationSubDomainGetArgs build() {
             return new DomainAssociationSubDomainGetArgs(branchName, dnsRecord, prefix, verified);

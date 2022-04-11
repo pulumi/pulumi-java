@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_beta.enums.AutoscalingPolicyCustomMetricUtilizationUtilizationTargetType;
 import java.lang.Double;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationArgs extends io.pulum
       private final @Nullable Output<String> filter;
 
     public Output<String> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationArgs extends io.pulum
       private final @Nullable Output<String> metric;
 
     public Output<String> getMetric() {
-        return this.metric == null ? Output.empty() : this.metric;
+        return this.metric == null ? Codegen.empty() : this.metric;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationArgs extends io.pulum
       private final @Nullable Output<Double> singleInstanceAssignment;
 
     public Output<Double> getSingleInstanceAssignment() {
-        return this.singleInstanceAssignment == null ? Output.empty() : this.singleInstanceAssignment;
+        return this.singleInstanceAssignment == null ? Codegen.empty() : this.singleInstanceAssignment;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationArgs extends io.pulum
       private final @Nullable Output<Double> utilizationTarget;
 
     public Output<Double> getUtilizationTarget() {
-        return this.utilizationTarget == null ? Output.empty() : this.utilizationTarget;
+        return this.utilizationTarget == null ? Codegen.empty() : this.utilizationTarget;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationArgs extends io.pulum
       private final @Nullable Output<AutoscalingPolicyCustomMetricUtilizationUtilizationTargetType> utilizationTargetType;
 
     public Output<AutoscalingPolicyCustomMetricUtilizationUtilizationTargetType> getUtilizationTargetType() {
-        return this.utilizationTargetType == null ? Output.empty() : this.utilizationTargetType;
+        return this.utilizationTargetType == null ? Codegen.empty() : this.utilizationTargetType;
     }
 
     public AutoscalingPolicyCustomMetricUtilizationArgs(
@@ -89,11 +90,11 @@ public final class AutoscalingPolicyCustomMetricUtilizationArgs extends io.pulum
     }
 
     private AutoscalingPolicyCustomMetricUtilizationArgs() {
-        this.filter = Output.empty();
-        this.metric = Output.empty();
-        this.singleInstanceAssignment = Output.empty();
-        this.utilizationTarget = Output.empty();
-        this.utilizationTargetType = Output.empty();
+        this.filter = Codegen.empty();
+        this.metric = Codegen.empty();
+        this.singleInstanceAssignment = Codegen.empty();
+        this.utilizationTarget = Codegen.empty();
+        this.utilizationTargetType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationArgs extends io.pulum
             return this;
         }
         public Builder filter(@Nullable String filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder metric(@Nullable Output<String> metric) {
@@ -137,7 +138,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationArgs extends io.pulum
             return this;
         }
         public Builder metric(@Nullable String metric) {
-            this.metric = Output.ofNullable(metric);
+            this.metric = Codegen.ofNullable(metric);
             return this;
         }
         public Builder singleInstanceAssignment(@Nullable Output<Double> singleInstanceAssignment) {
@@ -145,7 +146,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationArgs extends io.pulum
             return this;
         }
         public Builder singleInstanceAssignment(@Nullable Double singleInstanceAssignment) {
-            this.singleInstanceAssignment = Output.ofNullable(singleInstanceAssignment);
+            this.singleInstanceAssignment = Codegen.ofNullable(singleInstanceAssignment);
             return this;
         }
         public Builder utilizationTarget(@Nullable Output<Double> utilizationTarget) {
@@ -153,7 +154,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationArgs extends io.pulum
             return this;
         }
         public Builder utilizationTarget(@Nullable Double utilizationTarget) {
-            this.utilizationTarget = Output.ofNullable(utilizationTarget);
+            this.utilizationTarget = Codegen.ofNullable(utilizationTarget);
             return this;
         }
         public Builder utilizationTargetType(@Nullable Output<AutoscalingPolicyCustomMetricUtilizationUtilizationTargetType> utilizationTargetType) {
@@ -161,7 +162,7 @@ public final class AutoscalingPolicyCustomMetricUtilizationArgs extends io.pulum
             return this;
         }
         public Builder utilizationTargetType(@Nullable AutoscalingPolicyCustomMetricUtilizationUtilizationTargetType utilizationTargetType) {
-            this.utilizationTargetType = Output.ofNullable(utilizationTargetType);
+            this.utilizationTargetType = Codegen.ofNullable(utilizationTargetType);
             return this;
         }        public AutoscalingPolicyCustomMetricUtilizationArgs build() {
             return new AutoscalingPolicyCustomMetricUtilizationArgs(filter, metric, singleInstanceAssignment, utilizationTarget, utilizationTargetType);

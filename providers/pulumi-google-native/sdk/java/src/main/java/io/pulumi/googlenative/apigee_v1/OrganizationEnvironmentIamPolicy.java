@@ -6,6 +6,7 @@ package io.pulumi.googlenative.apigee_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.OrganizationEnvironmentIamPolicyArgs;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleIamV1AuditConfigResponse;
@@ -102,7 +103,7 @@ public class OrganizationEnvironmentIamPolicy extends io.pulumi.resources.Custom
      * @param options A bag of options that control this resource's behavior.
      */
     public OrganizationEnvironmentIamPolicy(String name, OrganizationEnvironmentIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:apigee/v1:OrganizationEnvironmentIamPolicy", name, args == null ? OrganizationEnvironmentIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:apigee/v1:OrganizationEnvironmentIamPolicy", name, args == null ? OrganizationEnvironmentIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private OrganizationEnvironmentIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

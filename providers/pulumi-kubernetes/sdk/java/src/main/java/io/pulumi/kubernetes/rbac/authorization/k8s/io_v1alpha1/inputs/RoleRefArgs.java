@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.rbac.authorization.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -60,9 +61,9 @@ public final class RoleRefArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RoleRefArgs() {
-        this.apiGroup = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
+        this.apiGroup = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {

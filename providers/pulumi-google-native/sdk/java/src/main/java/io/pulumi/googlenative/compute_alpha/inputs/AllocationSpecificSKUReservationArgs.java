@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.inputs.AllocationSpecificSKUAllocationReservedInstancePropertiesArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class AllocationSpecificSKUReservationArgs extends io.pulumi.resour
       private final @Nullable Output<String> count;
 
     public Output<String> getCount() {
-        return this.count == null ? Output.empty() : this.count;
+        return this.count == null ? Codegen.empty() : this.count;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class AllocationSpecificSKUReservationArgs extends io.pulumi.resour
       private final @Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties;
 
     public Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> getInstanceProperties() {
-        return this.instanceProperties == null ? Output.empty() : this.instanceProperties;
+        return this.instanceProperties == null ? Codegen.empty() : this.instanceProperties;
     }
 
     public AllocationSpecificSKUReservationArgs(
@@ -49,8 +50,8 @@ public final class AllocationSpecificSKUReservationArgs extends io.pulumi.resour
     }
 
     private AllocationSpecificSKUReservationArgs() {
-        this.count = Output.empty();
-        this.instanceProperties = Output.empty();
+        this.count = Codegen.empty();
+        this.instanceProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class AllocationSpecificSKUReservationArgs extends io.pulumi.resour
             return this;
         }
         public Builder count(@Nullable String count) {
-            this.count = Output.ofNullable(count);
+            this.count = Codegen.ofNullable(count);
             return this;
         }
         public Builder instanceProperties(@Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties) {
@@ -88,7 +89,7 @@ public final class AllocationSpecificSKUReservationArgs extends io.pulumi.resour
             return this;
         }
         public Builder instanceProperties(@Nullable AllocationSpecificSKUAllocationReservedInstancePropertiesArgs instanceProperties) {
-            this.instanceProperties = Output.ofNullable(instanceProperties);
+            this.instanceProperties = Codegen.ofNullable(instanceProperties);
             return this;
         }        public AllocationSpecificSKUReservationArgs build() {
             return new AllocationSpecificSKUReservationArgs(count, instanceProperties);

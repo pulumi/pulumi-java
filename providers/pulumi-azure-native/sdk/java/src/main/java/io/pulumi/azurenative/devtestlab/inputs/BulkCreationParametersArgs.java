@@ -5,6 +5,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class BulkCreationParametersArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Integer> instanceCount;
 
     public Output<Integer> getInstanceCount() {
-        return this.instanceCount == null ? Output.empty() : this.instanceCount;
+        return this.instanceCount == null ? Codegen.empty() : this.instanceCount;
     }
 
     public BulkCreationParametersArgs(@Nullable Output<Integer> instanceCount) {
@@ -34,7 +35,7 @@ public final class BulkCreationParametersArgs extends io.pulumi.resources.Resour
     }
 
     private BulkCreationParametersArgs() {
-        this.instanceCount = Output.empty();
+        this.instanceCount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class BulkCreationParametersArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder instanceCount(@Nullable Integer instanceCount) {
-            this.instanceCount = Output.ofNullable(instanceCount);
+            this.instanceCount = Codegen.ofNullable(instanceCount);
             return this;
         }        public BulkCreationParametersArgs build() {
             return new BulkCreationParametersArgs(instanceCount);

@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.autoscaling_v2beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class MetricIdentifierArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<LabelSelectorArgs> selector;
 
     public Output<LabelSelectorArgs> getSelector() {
-        return this.selector == null ? Output.empty() : this.selector;
+        return this.selector == null ? Codegen.empty() : this.selector;
     }
 
     public MetricIdentifierArgs(
@@ -49,8 +50,8 @@ public final class MetricIdentifierArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private MetricIdentifierArgs() {
-        this.name = Output.empty();
-        this.selector = Output.empty();
+        this.name = Codegen.empty();
+        this.selector = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class MetricIdentifierArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder selector(@Nullable LabelSelectorArgs selector) {
-            this.selector = Output.ofNullable(selector);
+            this.selector = Codegen.ofNullable(selector);
             return this;
         }        public MetricIdentifierArgs build() {
             return new MetricIdentifierArgs(name, selector);

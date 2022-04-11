@@ -5,6 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,14 +20,14 @@ public final class SwaggerSpecificationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<String>> apiVersions;
 
     public Output<List<String>> getApiVersions() {
-        return this.apiVersions == null ? Output.empty() : this.apiVersions;
+        return this.apiVersions == null ? Codegen.empty() : this.apiVersions;
     }
 
     @Import(name="swaggerSpecFolderUri")
       private final @Nullable Output<String> swaggerSpecFolderUri;
 
     public Output<String> getSwaggerSpecFolderUri() {
-        return this.swaggerSpecFolderUri == null ? Output.empty() : this.swaggerSpecFolderUri;
+        return this.swaggerSpecFolderUri == null ? Codegen.empty() : this.swaggerSpecFolderUri;
     }
 
     public SwaggerSpecificationArgs(
@@ -37,8 +38,8 @@ public final class SwaggerSpecificationArgs extends io.pulumi.resources.Resource
     }
 
     private SwaggerSpecificationArgs() {
-        this.apiVersions = Output.empty();
-        this.swaggerSpecFolderUri = Output.empty();
+        this.apiVersions = Codegen.empty();
+        this.swaggerSpecFolderUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class SwaggerSpecificationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder apiVersions(@Nullable List<String> apiVersions) {
-            this.apiVersions = Output.ofNullable(apiVersions);
+            this.apiVersions = Codegen.ofNullable(apiVersions);
             return this;
         }
         public Builder apiVersions(String... apiVersions) {
@@ -79,7 +80,7 @@ public final class SwaggerSpecificationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder swaggerSpecFolderUri(@Nullable String swaggerSpecFolderUri) {
-            this.swaggerSpecFolderUri = Output.ofNullable(swaggerSpecFolderUri);
+            this.swaggerSpecFolderUri = Codegen.ofNullable(swaggerSpecFolderUri);
             return this;
         }        public SwaggerSpecificationArgs build() {
             return new SwaggerSpecificationArgs(apiVersions, swaggerSpecFolderUri);

@@ -5,6 +5,7 @@ package io.pulumi.aws.elasticache.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class ClusterCacheNodeGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> address;
 
     public Output<String> getAddress() {
-        return this.address == null ? Output.empty() : this.address;
+        return this.address == null ? Codegen.empty() : this.address;
     }
 
     /**
@@ -30,14 +31,14 @@ public final class ClusterCacheNodeGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
+        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ClusterCacheNodeGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     public ClusterCacheNodeGetArgs(
@@ -63,10 +64,10 @@ public final class ClusterCacheNodeGetArgs extends io.pulumi.resources.ResourceA
     }
 
     private ClusterCacheNodeGetArgs() {
-        this.address = Output.empty();
-        this.availabilityZone = Output.empty();
-        this.id = Output.empty();
-        this.port = Output.empty();
+        this.address = Codegen.empty();
+        this.availabilityZone = Codegen.empty();
+        this.id = Codegen.empty();
+        this.port = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class ClusterCacheNodeGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder address(@Nullable String address) {
-            this.address = Output.ofNullable(address);
+            this.address = Codegen.ofNullable(address);
             return this;
         }
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
@@ -108,7 +109,7 @@ public final class ClusterCacheNodeGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Output.ofNullable(availabilityZone);
+            this.availabilityZone = Codegen.ofNullable(availabilityZone);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -116,7 +117,7 @@ public final class ClusterCacheNodeGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -124,7 +125,7 @@ public final class ClusterCacheNodeGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }        public ClusterCacheNodeGetArgs build() {
             return new ClusterCacheNodeGetArgs(address, availabilityZone, id, port);

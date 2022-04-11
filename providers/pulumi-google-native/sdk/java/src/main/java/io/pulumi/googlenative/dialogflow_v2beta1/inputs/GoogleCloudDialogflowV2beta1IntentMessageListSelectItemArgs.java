@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageImageArgs;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemArgs e
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemArgs e
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image;
 
     public Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> getImage() {
-        return this.image == null ? Output.empty() : this.image;
+        return this.image == null ? Codegen.empty() : this.image;
     }
 
     /**
@@ -76,10 +77,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemArgs e
     }
 
     private GoogleCloudDialogflowV2beta1IntentMessageListSelectItemArgs() {
-        this.description = Output.empty();
-        this.image = Output.empty();
-        this.info = Output.empty();
-        this.title = Output.empty();
+        this.description = Codegen.empty();
+        this.image = Codegen.empty();
+        this.info = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemArgs e
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder image(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image) {
@@ -121,7 +122,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageListSelectItemArgs e
             return this;
         }
         public Builder image(@Nullable GoogleCloudDialogflowV2beta1IntentMessageImageArgs image) {
-            this.image = Output.ofNullable(image);
+            this.image = Codegen.ofNullable(image);
             return this;
         }
         public Builder info(Output<GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs> info) {

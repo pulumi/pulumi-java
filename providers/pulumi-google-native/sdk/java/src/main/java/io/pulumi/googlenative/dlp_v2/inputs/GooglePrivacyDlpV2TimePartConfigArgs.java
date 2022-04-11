@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2TimePartConfigPartToExtract;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GooglePrivacyDlpV2TimePartConfigArgs extends io.pulumi.resour
       private final @Nullable Output<GooglePrivacyDlpV2TimePartConfigPartToExtract> partToExtract;
 
     public Output<GooglePrivacyDlpV2TimePartConfigPartToExtract> getPartToExtract() {
-        return this.partToExtract == null ? Output.empty() : this.partToExtract;
+        return this.partToExtract == null ? Codegen.empty() : this.partToExtract;
     }
 
     public GooglePrivacyDlpV2TimePartConfigArgs(@Nullable Output<GooglePrivacyDlpV2TimePartConfigPartToExtract> partToExtract) {
@@ -34,7 +35,7 @@ public final class GooglePrivacyDlpV2TimePartConfigArgs extends io.pulumi.resour
     }
 
     private GooglePrivacyDlpV2TimePartConfigArgs() {
-        this.partToExtract = Output.empty();
+        this.partToExtract = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GooglePrivacyDlpV2TimePartConfigArgs extends io.pulumi.resour
             return this;
         }
         public Builder partToExtract(@Nullable GooglePrivacyDlpV2TimePartConfigPartToExtract partToExtract) {
-            this.partToExtract = Output.ofNullable(partToExtract);
+            this.partToExtract = Codegen.ofNullable(partToExtract);
             return this;
         }        public GooglePrivacyDlpV2TimePartConfigArgs build() {
             return new GooglePrivacyDlpV2TimePartConfigArgs(partToExtract);

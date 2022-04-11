@@ -12,6 +12,7 @@ import io.pulumi.aws.appstream.outputs.ImageBuilderVpcConfig;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -295,7 +296,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ImageBuilder(String name, ImageBuilderArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:appstream/imageBuilder:ImageBuilder", name, args == null ? ImageBuilderArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:appstream/imageBuilder:ImageBuilder", name, args == null ? ImageBuilderArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ImageBuilder(String name, Output<String> id, @Nullable ImageBuilderState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

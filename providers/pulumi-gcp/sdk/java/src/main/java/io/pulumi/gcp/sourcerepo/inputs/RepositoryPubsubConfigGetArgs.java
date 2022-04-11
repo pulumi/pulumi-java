@@ -5,6 +5,7 @@ package io.pulumi.gcp.sourcerepo.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -39,7 +40,7 @@ public final class RepositoryPubsubConfigGetArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> serviceAccountEmail;
 
     public Output<String> getServiceAccountEmail() {
-        return this.serviceAccountEmail == null ? Output.empty() : this.serviceAccountEmail;
+        return this.serviceAccountEmail == null ? Codegen.empty() : this.serviceAccountEmail;
     }
 
     /**
@@ -63,9 +64,9 @@ public final class RepositoryPubsubConfigGetArgs extends io.pulumi.resources.Res
     }
 
     private RepositoryPubsubConfigGetArgs() {
-        this.messageFormat = Output.empty();
-        this.serviceAccountEmail = Output.empty();
-        this.topic = Output.empty();
+        this.messageFormat = Codegen.empty();
+        this.serviceAccountEmail = Codegen.empty();
+        this.topic = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class RepositoryPubsubConfigGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
-            this.serviceAccountEmail = Output.ofNullable(serviceAccountEmail);
+            this.serviceAccountEmail = Codegen.ofNullable(serviceAccountEmail);
             return this;
         }
         public Builder topic(Output<String> topic) {

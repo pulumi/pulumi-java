@@ -5,6 +5,7 @@ package io.pulumi.aws.transfer.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class UserHomeDirectoryMappingArgs extends io.pulumi.resources.Reso
     }
 
     private UserHomeDirectoryMappingArgs() {
-        this.entry = Output.empty();
-        this.target = Output.empty();
+        this.entry = Codegen.empty();
+        this.target = Codegen.empty();
     }
 
     public static Builder builder() {

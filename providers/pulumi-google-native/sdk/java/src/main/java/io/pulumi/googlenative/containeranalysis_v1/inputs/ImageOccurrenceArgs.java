@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.FingerprintArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.LayerArgs;
 import java.util.List;
@@ -39,7 +40,7 @@ public final class ImageOccurrenceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<LayerArgs>> layerInfo;
 
     public Output<List<LayerArgs>> getLayerInfo() {
-        return this.layerInfo == null ? Output.empty() : this.layerInfo;
+        return this.layerInfo == null ? Codegen.empty() : this.layerInfo;
     }
 
     public ImageOccurrenceArgs(
@@ -50,8 +51,8 @@ public final class ImageOccurrenceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ImageOccurrenceArgs() {
-        this.fingerprint = Output.empty();
-        this.layerInfo = Output.empty();
+        this.fingerprint = Codegen.empty();
+        this.layerInfo = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -89,7 +90,7 @@ public final class ImageOccurrenceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder layerInfo(@Nullable List<LayerArgs> layerInfo) {
-            this.layerInfo = Output.ofNullable(layerInfo);
+            this.layerInfo = Codegen.ofNullable(layerInfo);
             return this;
         }
         public Builder layerInfo(LayerArgs... layerInfo) {

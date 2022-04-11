@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageListSelectItemArgs;
 import java.lang.String;
 import java.util.List;
@@ -39,7 +40,7 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectArgs extends io
       private final @Nullable Output<String> subtitle;
 
     public Output<String> getSubtitle() {
-        return this.subtitle == null ? Output.empty() : this.subtitle;
+        return this.subtitle == null ? Codegen.empty() : this.subtitle;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectArgs extends io
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     public GoogleCloudDialogflowV2IntentMessageListSelectArgs(
@@ -63,9 +64,9 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectArgs extends io
     }
 
     private GoogleCloudDialogflowV2IntentMessageListSelectArgs() {
-        this.items = Output.empty();
-        this.subtitle = Output.empty();
-        this.title = Output.empty();
+        this.items = Codegen.empty();
+        this.subtitle = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectArgs extends io
             return this;
         }
         public Builder subtitle(@Nullable String subtitle) {
-            this.subtitle = Output.ofNullable(subtitle);
+            this.subtitle = Codegen.ofNullable(subtitle);
             return this;
         }
         public Builder title(@Nullable Output<String> title) {
@@ -116,7 +117,7 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectArgs extends io
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }        public GoogleCloudDialogflowV2IntentMessageListSelectArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageListSelectArgs(items, subtitle, title);

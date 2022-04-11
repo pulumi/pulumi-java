@@ -7,6 +7,7 @@ import io.pulumi.awsnative.databrew.inputs.RecipeParametersInputPropertiesArgs;
 import io.pulumi.awsnative.databrew.inputs.RecipeSecondaryInputArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,203 +24,203 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> aggregateFunction;
 
     public Output<String> getAggregateFunction() {
-        return this.aggregateFunction == null ? Output.empty() : this.aggregateFunction;
+        return this.aggregateFunction == null ? Codegen.empty() : this.aggregateFunction;
     }
 
     @Import(name="base")
       private final @Nullable Output<String> base;
 
     public Output<String> getBase() {
-        return this.base == null ? Output.empty() : this.base;
+        return this.base == null ? Codegen.empty() : this.base;
     }
 
     @Import(name="caseStatement")
       private final @Nullable Output<String> caseStatement;
 
     public Output<String> getCaseStatement() {
-        return this.caseStatement == null ? Output.empty() : this.caseStatement;
+        return this.caseStatement == null ? Codegen.empty() : this.caseStatement;
     }
 
     @Import(name="categoryMap")
       private final @Nullable Output<String> categoryMap;
 
     public Output<String> getCategoryMap() {
-        return this.categoryMap == null ? Output.empty() : this.categoryMap;
+        return this.categoryMap == null ? Codegen.empty() : this.categoryMap;
     }
 
     @Import(name="charsToRemove")
       private final @Nullable Output<String> charsToRemove;
 
     public Output<String> getCharsToRemove() {
-        return this.charsToRemove == null ? Output.empty() : this.charsToRemove;
+        return this.charsToRemove == null ? Codegen.empty() : this.charsToRemove;
     }
 
     @Import(name="collapseConsecutiveWhitespace")
       private final @Nullable Output<String> collapseConsecutiveWhitespace;
 
     public Output<String> getCollapseConsecutiveWhitespace() {
-        return this.collapseConsecutiveWhitespace == null ? Output.empty() : this.collapseConsecutiveWhitespace;
+        return this.collapseConsecutiveWhitespace == null ? Codegen.empty() : this.collapseConsecutiveWhitespace;
     }
 
     @Import(name="columnDataType")
       private final @Nullable Output<String> columnDataType;
 
     public Output<String> getColumnDataType() {
-        return this.columnDataType == null ? Output.empty() : this.columnDataType;
+        return this.columnDataType == null ? Codegen.empty() : this.columnDataType;
     }
 
     @Import(name="columnRange")
       private final @Nullable Output<String> columnRange;
 
     public Output<String> getColumnRange() {
-        return this.columnRange == null ? Output.empty() : this.columnRange;
+        return this.columnRange == null ? Codegen.empty() : this.columnRange;
     }
 
     @Import(name="count")
       private final @Nullable Output<String> count;
 
     public Output<String> getCount() {
-        return this.count == null ? Output.empty() : this.count;
+        return this.count == null ? Codegen.empty() : this.count;
     }
 
     @Import(name="customCharacters")
       private final @Nullable Output<String> customCharacters;
 
     public Output<String> getCustomCharacters() {
-        return this.customCharacters == null ? Output.empty() : this.customCharacters;
+        return this.customCharacters == null ? Codegen.empty() : this.customCharacters;
     }
 
     @Import(name="customStopWords")
       private final @Nullable Output<String> customStopWords;
 
     public Output<String> getCustomStopWords() {
-        return this.customStopWords == null ? Output.empty() : this.customStopWords;
+        return this.customStopWords == null ? Codegen.empty() : this.customStopWords;
     }
 
     @Import(name="customValue")
       private final @Nullable Output<String> customValue;
 
     public Output<String> getCustomValue() {
-        return this.customValue == null ? Output.empty() : this.customValue;
+        return this.customValue == null ? Codegen.empty() : this.customValue;
     }
 
     @Import(name="datasetsColumns")
       private final @Nullable Output<String> datasetsColumns;
 
     public Output<String> getDatasetsColumns() {
-        return this.datasetsColumns == null ? Output.empty() : this.datasetsColumns;
+        return this.datasetsColumns == null ? Codegen.empty() : this.datasetsColumns;
     }
 
     @Import(name="dateAddValue")
       private final @Nullable Output<String> dateAddValue;
 
     public Output<String> getDateAddValue() {
-        return this.dateAddValue == null ? Output.empty() : this.dateAddValue;
+        return this.dateAddValue == null ? Codegen.empty() : this.dateAddValue;
     }
 
     @Import(name="dateTimeFormat")
       private final @Nullable Output<String> dateTimeFormat;
 
     public Output<String> getDateTimeFormat() {
-        return this.dateTimeFormat == null ? Output.empty() : this.dateTimeFormat;
+        return this.dateTimeFormat == null ? Codegen.empty() : this.dateTimeFormat;
     }
 
     @Import(name="dateTimeParameters")
       private final @Nullable Output<String> dateTimeParameters;
 
     public Output<String> getDateTimeParameters() {
-        return this.dateTimeParameters == null ? Output.empty() : this.dateTimeParameters;
+        return this.dateTimeParameters == null ? Codegen.empty() : this.dateTimeParameters;
     }
 
     @Import(name="deleteOtherRows")
       private final @Nullable Output<String> deleteOtherRows;
 
     public Output<String> getDeleteOtherRows() {
-        return this.deleteOtherRows == null ? Output.empty() : this.deleteOtherRows;
+        return this.deleteOtherRows == null ? Codegen.empty() : this.deleteOtherRows;
     }
 
     @Import(name="delimiter")
       private final @Nullable Output<String> delimiter;
 
     public Output<String> getDelimiter() {
-        return this.delimiter == null ? Output.empty() : this.delimiter;
+        return this.delimiter == null ? Codegen.empty() : this.delimiter;
     }
 
     @Import(name="endPattern")
       private final @Nullable Output<String> endPattern;
 
     public Output<String> getEndPattern() {
-        return this.endPattern == null ? Output.empty() : this.endPattern;
+        return this.endPattern == null ? Codegen.empty() : this.endPattern;
     }
 
     @Import(name="endPosition")
       private final @Nullable Output<String> endPosition;
 
     public Output<String> getEndPosition() {
-        return this.endPosition == null ? Output.empty() : this.endPosition;
+        return this.endPosition == null ? Codegen.empty() : this.endPosition;
     }
 
     @Import(name="endValue")
       private final @Nullable Output<String> endValue;
 
     public Output<String> getEndValue() {
-        return this.endValue == null ? Output.empty() : this.endValue;
+        return this.endValue == null ? Codegen.empty() : this.endValue;
     }
 
     @Import(name="expandContractions")
       private final @Nullable Output<String> expandContractions;
 
     public Output<String> getExpandContractions() {
-        return this.expandContractions == null ? Output.empty() : this.expandContractions;
+        return this.expandContractions == null ? Codegen.empty() : this.expandContractions;
     }
 
     @Import(name="exponent")
       private final @Nullable Output<String> exponent;
 
     public Output<String> getExponent() {
-        return this.exponent == null ? Output.empty() : this.exponent;
+        return this.exponent == null ? Codegen.empty() : this.exponent;
     }
 
     @Import(name="falseString")
       private final @Nullable Output<String> falseString;
 
     public Output<String> getFalseString() {
-        return this.falseString == null ? Output.empty() : this.falseString;
+        return this.falseString == null ? Codegen.empty() : this.falseString;
     }
 
     @Import(name="groupByAggFunctionOptions")
       private final @Nullable Output<String> groupByAggFunctionOptions;
 
     public Output<String> getGroupByAggFunctionOptions() {
-        return this.groupByAggFunctionOptions == null ? Output.empty() : this.groupByAggFunctionOptions;
+        return this.groupByAggFunctionOptions == null ? Codegen.empty() : this.groupByAggFunctionOptions;
     }
 
     @Import(name="groupByColumns")
       private final @Nullable Output<String> groupByColumns;
 
     public Output<String> getGroupByColumns() {
-        return this.groupByColumns == null ? Output.empty() : this.groupByColumns;
+        return this.groupByColumns == null ? Codegen.empty() : this.groupByColumns;
     }
 
     @Import(name="hiddenColumns")
       private final @Nullable Output<String> hiddenColumns;
 
     public Output<String> getHiddenColumns() {
-        return this.hiddenColumns == null ? Output.empty() : this.hiddenColumns;
+        return this.hiddenColumns == null ? Codegen.empty() : this.hiddenColumns;
     }
 
     @Import(name="ignoreCase")
       private final @Nullable Output<String> ignoreCase;
 
     public Output<String> getIgnoreCase() {
-        return this.ignoreCase == null ? Output.empty() : this.ignoreCase;
+        return this.ignoreCase == null ? Codegen.empty() : this.ignoreCase;
     }
 
     @Import(name="includeInSplit")
       private final @Nullable Output<String> includeInSplit;
 
     public Output<String> getIncludeInSplit() {
-        return this.includeInSplit == null ? Output.empty() : this.includeInSplit;
+        return this.includeInSplit == null ? Codegen.empty() : this.includeInSplit;
     }
 
     /**
@@ -230,504 +231,504 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<RecipeParametersInputPropertiesArgs> input;
 
     public Output<RecipeParametersInputPropertiesArgs> getInput() {
-        return this.input == null ? Output.empty() : this.input;
+        return this.input == null ? Codegen.empty() : this.input;
     }
 
     @Import(name="interval")
       private final @Nullable Output<String> interval;
 
     public Output<String> getInterval() {
-        return this.interval == null ? Output.empty() : this.interval;
+        return this.interval == null ? Codegen.empty() : this.interval;
     }
 
     @Import(name="isText")
       private final @Nullable Output<String> isText;
 
     public Output<String> getIsText() {
-        return this.isText == null ? Output.empty() : this.isText;
+        return this.isText == null ? Codegen.empty() : this.isText;
     }
 
     @Import(name="joinKeys")
       private final @Nullable Output<String> joinKeys;
 
     public Output<String> getJoinKeys() {
-        return this.joinKeys == null ? Output.empty() : this.joinKeys;
+        return this.joinKeys == null ? Codegen.empty() : this.joinKeys;
     }
 
     @Import(name="joinType")
       private final @Nullable Output<String> joinType;
 
     public Output<String> getJoinType() {
-        return this.joinType == null ? Output.empty() : this.joinType;
+        return this.joinType == null ? Codegen.empty() : this.joinType;
     }
 
     @Import(name="leftColumns")
       private final @Nullable Output<String> leftColumns;
 
     public Output<String> getLeftColumns() {
-        return this.leftColumns == null ? Output.empty() : this.leftColumns;
+        return this.leftColumns == null ? Codegen.empty() : this.leftColumns;
     }
 
     @Import(name="limit")
       private final @Nullable Output<String> limit;
 
     public Output<String> getLimit() {
-        return this.limit == null ? Output.empty() : this.limit;
+        return this.limit == null ? Codegen.empty() : this.limit;
     }
 
     @Import(name="lowerBound")
       private final @Nullable Output<String> lowerBound;
 
     public Output<String> getLowerBound() {
-        return this.lowerBound == null ? Output.empty() : this.lowerBound;
+        return this.lowerBound == null ? Codegen.empty() : this.lowerBound;
     }
 
     @Import(name="mapType")
       private final @Nullable Output<String> mapType;
 
     public Output<String> getMapType() {
-        return this.mapType == null ? Output.empty() : this.mapType;
+        return this.mapType == null ? Codegen.empty() : this.mapType;
     }
 
     @Import(name="modeType")
       private final @Nullable Output<String> modeType;
 
     public Output<String> getModeType() {
-        return this.modeType == null ? Output.empty() : this.modeType;
+        return this.modeType == null ? Codegen.empty() : this.modeType;
     }
 
     @Import(name="multiLine")
       private final @Nullable Output<Boolean> multiLine;
 
     public Output<Boolean> getMultiLine() {
-        return this.multiLine == null ? Output.empty() : this.multiLine;
+        return this.multiLine == null ? Codegen.empty() : this.multiLine;
     }
 
     @Import(name="numRows")
       private final @Nullable Output<String> numRows;
 
     public Output<String> getNumRows() {
-        return this.numRows == null ? Output.empty() : this.numRows;
+        return this.numRows == null ? Codegen.empty() : this.numRows;
     }
 
     @Import(name="numRowsAfter")
       private final @Nullable Output<String> numRowsAfter;
 
     public Output<String> getNumRowsAfter() {
-        return this.numRowsAfter == null ? Output.empty() : this.numRowsAfter;
+        return this.numRowsAfter == null ? Codegen.empty() : this.numRowsAfter;
     }
 
     @Import(name="numRowsBefore")
       private final @Nullable Output<String> numRowsBefore;
 
     public Output<String> getNumRowsBefore() {
-        return this.numRowsBefore == null ? Output.empty() : this.numRowsBefore;
+        return this.numRowsBefore == null ? Codegen.empty() : this.numRowsBefore;
     }
 
     @Import(name="orderByColumn")
       private final @Nullable Output<String> orderByColumn;
 
     public Output<String> getOrderByColumn() {
-        return this.orderByColumn == null ? Output.empty() : this.orderByColumn;
+        return this.orderByColumn == null ? Codegen.empty() : this.orderByColumn;
     }
 
     @Import(name="orderByColumns")
       private final @Nullable Output<String> orderByColumns;
 
     public Output<String> getOrderByColumns() {
-        return this.orderByColumns == null ? Output.empty() : this.orderByColumns;
+        return this.orderByColumns == null ? Codegen.empty() : this.orderByColumns;
     }
 
     @Import(name="other")
       private final @Nullable Output<String> other;
 
     public Output<String> getOther() {
-        return this.other == null ? Output.empty() : this.other;
+        return this.other == null ? Codegen.empty() : this.other;
     }
 
     @Import(name="pattern")
       private final @Nullable Output<String> pattern;
 
     public Output<String> getPattern() {
-        return this.pattern == null ? Output.empty() : this.pattern;
+        return this.pattern == null ? Codegen.empty() : this.pattern;
     }
 
     @Import(name="patternOption1")
       private final @Nullable Output<String> patternOption1;
 
     public Output<String> getPatternOption1() {
-        return this.patternOption1 == null ? Output.empty() : this.patternOption1;
+        return this.patternOption1 == null ? Codegen.empty() : this.patternOption1;
     }
 
     @Import(name="patternOption2")
       private final @Nullable Output<String> patternOption2;
 
     public Output<String> getPatternOption2() {
-        return this.patternOption2 == null ? Output.empty() : this.patternOption2;
+        return this.patternOption2 == null ? Codegen.empty() : this.patternOption2;
     }
 
     @Import(name="patternOptions")
       private final @Nullable Output<String> patternOptions;
 
     public Output<String> getPatternOptions() {
-        return this.patternOptions == null ? Output.empty() : this.patternOptions;
+        return this.patternOptions == null ? Codegen.empty() : this.patternOptions;
     }
 
     @Import(name="period")
       private final @Nullable Output<String> period;
 
     public Output<String> getPeriod() {
-        return this.period == null ? Output.empty() : this.period;
+        return this.period == null ? Codegen.empty() : this.period;
     }
 
     @Import(name="position")
       private final @Nullable Output<String> position;
 
     public Output<String> getPosition() {
-        return this.position == null ? Output.empty() : this.position;
+        return this.position == null ? Codegen.empty() : this.position;
     }
 
     @Import(name="removeAllPunctuation")
       private final @Nullable Output<String> removeAllPunctuation;
 
     public Output<String> getRemoveAllPunctuation() {
-        return this.removeAllPunctuation == null ? Output.empty() : this.removeAllPunctuation;
+        return this.removeAllPunctuation == null ? Codegen.empty() : this.removeAllPunctuation;
     }
 
     @Import(name="removeAllQuotes")
       private final @Nullable Output<String> removeAllQuotes;
 
     public Output<String> getRemoveAllQuotes() {
-        return this.removeAllQuotes == null ? Output.empty() : this.removeAllQuotes;
+        return this.removeAllQuotes == null ? Codegen.empty() : this.removeAllQuotes;
     }
 
     @Import(name="removeAllWhitespace")
       private final @Nullable Output<String> removeAllWhitespace;
 
     public Output<String> getRemoveAllWhitespace() {
-        return this.removeAllWhitespace == null ? Output.empty() : this.removeAllWhitespace;
+        return this.removeAllWhitespace == null ? Codegen.empty() : this.removeAllWhitespace;
     }
 
     @Import(name="removeCustomCharacters")
       private final @Nullable Output<String> removeCustomCharacters;
 
     public Output<String> getRemoveCustomCharacters() {
-        return this.removeCustomCharacters == null ? Output.empty() : this.removeCustomCharacters;
+        return this.removeCustomCharacters == null ? Codegen.empty() : this.removeCustomCharacters;
     }
 
     @Import(name="removeCustomValue")
       private final @Nullable Output<String> removeCustomValue;
 
     public Output<String> getRemoveCustomValue() {
-        return this.removeCustomValue == null ? Output.empty() : this.removeCustomValue;
+        return this.removeCustomValue == null ? Codegen.empty() : this.removeCustomValue;
     }
 
     @Import(name="removeLeadingAndTrailingPunctuation")
       private final @Nullable Output<String> removeLeadingAndTrailingPunctuation;
 
     public Output<String> getRemoveLeadingAndTrailingPunctuation() {
-        return this.removeLeadingAndTrailingPunctuation == null ? Output.empty() : this.removeLeadingAndTrailingPunctuation;
+        return this.removeLeadingAndTrailingPunctuation == null ? Codegen.empty() : this.removeLeadingAndTrailingPunctuation;
     }
 
     @Import(name="removeLeadingAndTrailingQuotes")
       private final @Nullable Output<String> removeLeadingAndTrailingQuotes;
 
     public Output<String> getRemoveLeadingAndTrailingQuotes() {
-        return this.removeLeadingAndTrailingQuotes == null ? Output.empty() : this.removeLeadingAndTrailingQuotes;
+        return this.removeLeadingAndTrailingQuotes == null ? Codegen.empty() : this.removeLeadingAndTrailingQuotes;
     }
 
     @Import(name="removeLeadingAndTrailingWhitespace")
       private final @Nullable Output<String> removeLeadingAndTrailingWhitespace;
 
     public Output<String> getRemoveLeadingAndTrailingWhitespace() {
-        return this.removeLeadingAndTrailingWhitespace == null ? Output.empty() : this.removeLeadingAndTrailingWhitespace;
+        return this.removeLeadingAndTrailingWhitespace == null ? Codegen.empty() : this.removeLeadingAndTrailingWhitespace;
     }
 
     @Import(name="removeLetters")
       private final @Nullable Output<String> removeLetters;
 
     public Output<String> getRemoveLetters() {
-        return this.removeLetters == null ? Output.empty() : this.removeLetters;
+        return this.removeLetters == null ? Codegen.empty() : this.removeLetters;
     }
 
     @Import(name="removeNumbers")
       private final @Nullable Output<String> removeNumbers;
 
     public Output<String> getRemoveNumbers() {
-        return this.removeNumbers == null ? Output.empty() : this.removeNumbers;
+        return this.removeNumbers == null ? Codegen.empty() : this.removeNumbers;
     }
 
     @Import(name="removeSourceColumn")
       private final @Nullable Output<String> removeSourceColumn;
 
     public Output<String> getRemoveSourceColumn() {
-        return this.removeSourceColumn == null ? Output.empty() : this.removeSourceColumn;
+        return this.removeSourceColumn == null ? Codegen.empty() : this.removeSourceColumn;
     }
 
     @Import(name="removeSpecialCharacters")
       private final @Nullable Output<String> removeSpecialCharacters;
 
     public Output<String> getRemoveSpecialCharacters() {
-        return this.removeSpecialCharacters == null ? Output.empty() : this.removeSpecialCharacters;
+        return this.removeSpecialCharacters == null ? Codegen.empty() : this.removeSpecialCharacters;
     }
 
     @Import(name="rightColumns")
       private final @Nullable Output<String> rightColumns;
 
     public Output<String> getRightColumns() {
-        return this.rightColumns == null ? Output.empty() : this.rightColumns;
+        return this.rightColumns == null ? Codegen.empty() : this.rightColumns;
     }
 
     @Import(name="sampleSize")
       private final @Nullable Output<String> sampleSize;
 
     public Output<String> getSampleSize() {
-        return this.sampleSize == null ? Output.empty() : this.sampleSize;
+        return this.sampleSize == null ? Codegen.empty() : this.sampleSize;
     }
 
     @Import(name="sampleType")
       private final @Nullable Output<String> sampleType;
 
     public Output<String> getSampleType() {
-        return this.sampleType == null ? Output.empty() : this.sampleType;
+        return this.sampleType == null ? Codegen.empty() : this.sampleType;
     }
 
     @Import(name="secondInput")
       private final @Nullable Output<String> secondInput;
 
     public Output<String> getSecondInput() {
-        return this.secondInput == null ? Output.empty() : this.secondInput;
+        return this.secondInput == null ? Codegen.empty() : this.secondInput;
     }
 
     @Import(name="secondaryInputs")
       private final @Nullable Output<List<RecipeSecondaryInputArgs>> secondaryInputs;
 
     public Output<List<RecipeSecondaryInputArgs>> getSecondaryInputs() {
-        return this.secondaryInputs == null ? Output.empty() : this.secondaryInputs;
+        return this.secondaryInputs == null ? Codegen.empty() : this.secondaryInputs;
     }
 
     @Import(name="sheetIndexes")
       private final @Nullable Output<List<Integer>> sheetIndexes;
 
     public Output<List<Integer>> getSheetIndexes() {
-        return this.sheetIndexes == null ? Output.empty() : this.sheetIndexes;
+        return this.sheetIndexes == null ? Codegen.empty() : this.sheetIndexes;
     }
 
     @Import(name="sheetNames")
       private final @Nullable Output<List<String>> sheetNames;
 
     public Output<List<String>> getSheetNames() {
-        return this.sheetNames == null ? Output.empty() : this.sheetNames;
+        return this.sheetNames == null ? Codegen.empty() : this.sheetNames;
     }
 
     @Import(name="sourceColumn")
       private final @Nullable Output<String> sourceColumn;
 
     public Output<String> getSourceColumn() {
-        return this.sourceColumn == null ? Output.empty() : this.sourceColumn;
+        return this.sourceColumn == null ? Codegen.empty() : this.sourceColumn;
     }
 
     @Import(name="sourceColumn1")
       private final @Nullable Output<String> sourceColumn1;
 
     public Output<String> getSourceColumn1() {
-        return this.sourceColumn1 == null ? Output.empty() : this.sourceColumn1;
+        return this.sourceColumn1 == null ? Codegen.empty() : this.sourceColumn1;
     }
 
     @Import(name="sourceColumn2")
       private final @Nullable Output<String> sourceColumn2;
 
     public Output<String> getSourceColumn2() {
-        return this.sourceColumn2 == null ? Output.empty() : this.sourceColumn2;
+        return this.sourceColumn2 == null ? Codegen.empty() : this.sourceColumn2;
     }
 
     @Import(name="sourceColumns")
       private final @Nullable Output<String> sourceColumns;
 
     public Output<String> getSourceColumns() {
-        return this.sourceColumns == null ? Output.empty() : this.sourceColumns;
+        return this.sourceColumns == null ? Codegen.empty() : this.sourceColumns;
     }
 
     @Import(name="startColumnIndex")
       private final @Nullable Output<String> startColumnIndex;
 
     public Output<String> getStartColumnIndex() {
-        return this.startColumnIndex == null ? Output.empty() : this.startColumnIndex;
+        return this.startColumnIndex == null ? Codegen.empty() : this.startColumnIndex;
     }
 
     @Import(name="startPattern")
       private final @Nullable Output<String> startPattern;
 
     public Output<String> getStartPattern() {
-        return this.startPattern == null ? Output.empty() : this.startPattern;
+        return this.startPattern == null ? Codegen.empty() : this.startPattern;
     }
 
     @Import(name="startPosition")
       private final @Nullable Output<String> startPosition;
 
     public Output<String> getStartPosition() {
-        return this.startPosition == null ? Output.empty() : this.startPosition;
+        return this.startPosition == null ? Codegen.empty() : this.startPosition;
     }
 
     @Import(name="startValue")
       private final @Nullable Output<String> startValue;
 
     public Output<String> getStartValue() {
-        return this.startValue == null ? Output.empty() : this.startValue;
+        return this.startValue == null ? Codegen.empty() : this.startValue;
     }
 
     @Import(name="stemmingMode")
       private final @Nullable Output<String> stemmingMode;
 
     public Output<String> getStemmingMode() {
-        return this.stemmingMode == null ? Output.empty() : this.stemmingMode;
+        return this.stemmingMode == null ? Codegen.empty() : this.stemmingMode;
     }
 
     @Import(name="stepCount")
       private final @Nullable Output<String> stepCount;
 
     public Output<String> getStepCount() {
-        return this.stepCount == null ? Output.empty() : this.stepCount;
+        return this.stepCount == null ? Codegen.empty() : this.stepCount;
     }
 
     @Import(name="stepIndex")
       private final @Nullable Output<String> stepIndex;
 
     public Output<String> getStepIndex() {
-        return this.stepIndex == null ? Output.empty() : this.stepIndex;
+        return this.stepIndex == null ? Codegen.empty() : this.stepIndex;
     }
 
     @Import(name="stopWordsMode")
       private final @Nullable Output<String> stopWordsMode;
 
     public Output<String> getStopWordsMode() {
-        return this.stopWordsMode == null ? Output.empty() : this.stopWordsMode;
+        return this.stopWordsMode == null ? Codegen.empty() : this.stopWordsMode;
     }
 
     @Import(name="strategy")
       private final @Nullable Output<String> strategy;
 
     public Output<String> getStrategy() {
-        return this.strategy == null ? Output.empty() : this.strategy;
+        return this.strategy == null ? Codegen.empty() : this.strategy;
     }
 
     @Import(name="targetColumn")
       private final @Nullable Output<String> targetColumn;
 
     public Output<String> getTargetColumn() {
-        return this.targetColumn == null ? Output.empty() : this.targetColumn;
+        return this.targetColumn == null ? Codegen.empty() : this.targetColumn;
     }
 
     @Import(name="targetColumnNames")
       private final @Nullable Output<String> targetColumnNames;
 
     public Output<String> getTargetColumnNames() {
-        return this.targetColumnNames == null ? Output.empty() : this.targetColumnNames;
+        return this.targetColumnNames == null ? Codegen.empty() : this.targetColumnNames;
     }
 
     @Import(name="targetDateFormat")
       private final @Nullable Output<String> targetDateFormat;
 
     public Output<String> getTargetDateFormat() {
-        return this.targetDateFormat == null ? Output.empty() : this.targetDateFormat;
+        return this.targetDateFormat == null ? Codegen.empty() : this.targetDateFormat;
     }
 
     @Import(name="targetIndex")
       private final @Nullable Output<String> targetIndex;
 
     public Output<String> getTargetIndex() {
-        return this.targetIndex == null ? Output.empty() : this.targetIndex;
+        return this.targetIndex == null ? Codegen.empty() : this.targetIndex;
     }
 
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
     public Output<String> getTimeZone() {
-        return this.timeZone == null ? Output.empty() : this.timeZone;
+        return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 
     @Import(name="tokenizerPattern")
       private final @Nullable Output<String> tokenizerPattern;
 
     public Output<String> getTokenizerPattern() {
-        return this.tokenizerPattern == null ? Output.empty() : this.tokenizerPattern;
+        return this.tokenizerPattern == null ? Codegen.empty() : this.tokenizerPattern;
     }
 
     @Import(name="trueString")
       private final @Nullable Output<String> trueString;
 
     public Output<String> getTrueString() {
-        return this.trueString == null ? Output.empty() : this.trueString;
+        return this.trueString == null ? Codegen.empty() : this.trueString;
     }
 
     @Import(name="udfLang")
       private final @Nullable Output<String> udfLang;
 
     public Output<String> getUdfLang() {
-        return this.udfLang == null ? Output.empty() : this.udfLang;
+        return this.udfLang == null ? Codegen.empty() : this.udfLang;
     }
 
     @Import(name="units")
       private final @Nullable Output<String> units;
 
     public Output<String> getUnits() {
-        return this.units == null ? Output.empty() : this.units;
+        return this.units == null ? Codegen.empty() : this.units;
     }
 
     @Import(name="unpivotColumn")
       private final @Nullable Output<String> unpivotColumn;
 
     public Output<String> getUnpivotColumn() {
-        return this.unpivotColumn == null ? Output.empty() : this.unpivotColumn;
+        return this.unpivotColumn == null ? Codegen.empty() : this.unpivotColumn;
     }
 
     @Import(name="upperBound")
       private final @Nullable Output<String> upperBound;
 
     public Output<String> getUpperBound() {
-        return this.upperBound == null ? Output.empty() : this.upperBound;
+        return this.upperBound == null ? Codegen.empty() : this.upperBound;
     }
 
     @Import(name="useNewDataFrame")
       private final @Nullable Output<String> useNewDataFrame;
 
     public Output<String> getUseNewDataFrame() {
-        return this.useNewDataFrame == null ? Output.empty() : this.useNewDataFrame;
+        return this.useNewDataFrame == null ? Codegen.empty() : this.useNewDataFrame;
     }
 
     @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     @Import(name="value1")
       private final @Nullable Output<String> value1;
 
     public Output<String> getValue1() {
-        return this.value1 == null ? Output.empty() : this.value1;
+        return this.value1 == null ? Codegen.empty() : this.value1;
     }
 
     @Import(name="value2")
       private final @Nullable Output<String> value2;
 
     public Output<String> getValue2() {
-        return this.value2 == null ? Output.empty() : this.value2;
+        return this.value2 == null ? Codegen.empty() : this.value2;
     }
 
     @Import(name="valueColumn")
       private final @Nullable Output<String> valueColumn;
 
     public Output<String> getValueColumn() {
-        return this.valueColumn == null ? Output.empty() : this.valueColumn;
+        return this.valueColumn == null ? Codegen.empty() : this.valueColumn;
     }
 
     @Import(name="viewFrame")
       private final @Nullable Output<String> viewFrame;
 
     public Output<String> getViewFrame() {
-        return this.viewFrame == null ? Output.empty() : this.viewFrame;
+        return this.viewFrame == null ? Codegen.empty() : this.viewFrame;
     }
 
     public RecipeParametersArgs(
@@ -936,107 +937,107 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private RecipeParametersArgs() {
-        this.aggregateFunction = Output.empty();
-        this.base = Output.empty();
-        this.caseStatement = Output.empty();
-        this.categoryMap = Output.empty();
-        this.charsToRemove = Output.empty();
-        this.collapseConsecutiveWhitespace = Output.empty();
-        this.columnDataType = Output.empty();
-        this.columnRange = Output.empty();
-        this.count = Output.empty();
-        this.customCharacters = Output.empty();
-        this.customStopWords = Output.empty();
-        this.customValue = Output.empty();
-        this.datasetsColumns = Output.empty();
-        this.dateAddValue = Output.empty();
-        this.dateTimeFormat = Output.empty();
-        this.dateTimeParameters = Output.empty();
-        this.deleteOtherRows = Output.empty();
-        this.delimiter = Output.empty();
-        this.endPattern = Output.empty();
-        this.endPosition = Output.empty();
-        this.endValue = Output.empty();
-        this.expandContractions = Output.empty();
-        this.exponent = Output.empty();
-        this.falseString = Output.empty();
-        this.groupByAggFunctionOptions = Output.empty();
-        this.groupByColumns = Output.empty();
-        this.hiddenColumns = Output.empty();
-        this.ignoreCase = Output.empty();
-        this.includeInSplit = Output.empty();
-        this.input = Output.empty();
-        this.interval = Output.empty();
-        this.isText = Output.empty();
-        this.joinKeys = Output.empty();
-        this.joinType = Output.empty();
-        this.leftColumns = Output.empty();
-        this.limit = Output.empty();
-        this.lowerBound = Output.empty();
-        this.mapType = Output.empty();
-        this.modeType = Output.empty();
-        this.multiLine = Output.empty();
-        this.numRows = Output.empty();
-        this.numRowsAfter = Output.empty();
-        this.numRowsBefore = Output.empty();
-        this.orderByColumn = Output.empty();
-        this.orderByColumns = Output.empty();
-        this.other = Output.empty();
-        this.pattern = Output.empty();
-        this.patternOption1 = Output.empty();
-        this.patternOption2 = Output.empty();
-        this.patternOptions = Output.empty();
-        this.period = Output.empty();
-        this.position = Output.empty();
-        this.removeAllPunctuation = Output.empty();
-        this.removeAllQuotes = Output.empty();
-        this.removeAllWhitespace = Output.empty();
-        this.removeCustomCharacters = Output.empty();
-        this.removeCustomValue = Output.empty();
-        this.removeLeadingAndTrailingPunctuation = Output.empty();
-        this.removeLeadingAndTrailingQuotes = Output.empty();
-        this.removeLeadingAndTrailingWhitespace = Output.empty();
-        this.removeLetters = Output.empty();
-        this.removeNumbers = Output.empty();
-        this.removeSourceColumn = Output.empty();
-        this.removeSpecialCharacters = Output.empty();
-        this.rightColumns = Output.empty();
-        this.sampleSize = Output.empty();
-        this.sampleType = Output.empty();
-        this.secondInput = Output.empty();
-        this.secondaryInputs = Output.empty();
-        this.sheetIndexes = Output.empty();
-        this.sheetNames = Output.empty();
-        this.sourceColumn = Output.empty();
-        this.sourceColumn1 = Output.empty();
-        this.sourceColumn2 = Output.empty();
-        this.sourceColumns = Output.empty();
-        this.startColumnIndex = Output.empty();
-        this.startPattern = Output.empty();
-        this.startPosition = Output.empty();
-        this.startValue = Output.empty();
-        this.stemmingMode = Output.empty();
-        this.stepCount = Output.empty();
-        this.stepIndex = Output.empty();
-        this.stopWordsMode = Output.empty();
-        this.strategy = Output.empty();
-        this.targetColumn = Output.empty();
-        this.targetColumnNames = Output.empty();
-        this.targetDateFormat = Output.empty();
-        this.targetIndex = Output.empty();
-        this.timeZone = Output.empty();
-        this.tokenizerPattern = Output.empty();
-        this.trueString = Output.empty();
-        this.udfLang = Output.empty();
-        this.units = Output.empty();
-        this.unpivotColumn = Output.empty();
-        this.upperBound = Output.empty();
-        this.useNewDataFrame = Output.empty();
-        this.value = Output.empty();
-        this.value1 = Output.empty();
-        this.value2 = Output.empty();
-        this.valueColumn = Output.empty();
-        this.viewFrame = Output.empty();
+        this.aggregateFunction = Codegen.empty();
+        this.base = Codegen.empty();
+        this.caseStatement = Codegen.empty();
+        this.categoryMap = Codegen.empty();
+        this.charsToRemove = Codegen.empty();
+        this.collapseConsecutiveWhitespace = Codegen.empty();
+        this.columnDataType = Codegen.empty();
+        this.columnRange = Codegen.empty();
+        this.count = Codegen.empty();
+        this.customCharacters = Codegen.empty();
+        this.customStopWords = Codegen.empty();
+        this.customValue = Codegen.empty();
+        this.datasetsColumns = Codegen.empty();
+        this.dateAddValue = Codegen.empty();
+        this.dateTimeFormat = Codegen.empty();
+        this.dateTimeParameters = Codegen.empty();
+        this.deleteOtherRows = Codegen.empty();
+        this.delimiter = Codegen.empty();
+        this.endPattern = Codegen.empty();
+        this.endPosition = Codegen.empty();
+        this.endValue = Codegen.empty();
+        this.expandContractions = Codegen.empty();
+        this.exponent = Codegen.empty();
+        this.falseString = Codegen.empty();
+        this.groupByAggFunctionOptions = Codegen.empty();
+        this.groupByColumns = Codegen.empty();
+        this.hiddenColumns = Codegen.empty();
+        this.ignoreCase = Codegen.empty();
+        this.includeInSplit = Codegen.empty();
+        this.input = Codegen.empty();
+        this.interval = Codegen.empty();
+        this.isText = Codegen.empty();
+        this.joinKeys = Codegen.empty();
+        this.joinType = Codegen.empty();
+        this.leftColumns = Codegen.empty();
+        this.limit = Codegen.empty();
+        this.lowerBound = Codegen.empty();
+        this.mapType = Codegen.empty();
+        this.modeType = Codegen.empty();
+        this.multiLine = Codegen.empty();
+        this.numRows = Codegen.empty();
+        this.numRowsAfter = Codegen.empty();
+        this.numRowsBefore = Codegen.empty();
+        this.orderByColumn = Codegen.empty();
+        this.orderByColumns = Codegen.empty();
+        this.other = Codegen.empty();
+        this.pattern = Codegen.empty();
+        this.patternOption1 = Codegen.empty();
+        this.patternOption2 = Codegen.empty();
+        this.patternOptions = Codegen.empty();
+        this.period = Codegen.empty();
+        this.position = Codegen.empty();
+        this.removeAllPunctuation = Codegen.empty();
+        this.removeAllQuotes = Codegen.empty();
+        this.removeAllWhitespace = Codegen.empty();
+        this.removeCustomCharacters = Codegen.empty();
+        this.removeCustomValue = Codegen.empty();
+        this.removeLeadingAndTrailingPunctuation = Codegen.empty();
+        this.removeLeadingAndTrailingQuotes = Codegen.empty();
+        this.removeLeadingAndTrailingWhitespace = Codegen.empty();
+        this.removeLetters = Codegen.empty();
+        this.removeNumbers = Codegen.empty();
+        this.removeSourceColumn = Codegen.empty();
+        this.removeSpecialCharacters = Codegen.empty();
+        this.rightColumns = Codegen.empty();
+        this.sampleSize = Codegen.empty();
+        this.sampleType = Codegen.empty();
+        this.secondInput = Codegen.empty();
+        this.secondaryInputs = Codegen.empty();
+        this.sheetIndexes = Codegen.empty();
+        this.sheetNames = Codegen.empty();
+        this.sourceColumn = Codegen.empty();
+        this.sourceColumn1 = Codegen.empty();
+        this.sourceColumn2 = Codegen.empty();
+        this.sourceColumns = Codegen.empty();
+        this.startColumnIndex = Codegen.empty();
+        this.startPattern = Codegen.empty();
+        this.startPosition = Codegen.empty();
+        this.startValue = Codegen.empty();
+        this.stemmingMode = Codegen.empty();
+        this.stepCount = Codegen.empty();
+        this.stepIndex = Codegen.empty();
+        this.stopWordsMode = Codegen.empty();
+        this.strategy = Codegen.empty();
+        this.targetColumn = Codegen.empty();
+        this.targetColumnNames = Codegen.empty();
+        this.targetDateFormat = Codegen.empty();
+        this.targetIndex = Codegen.empty();
+        this.timeZone = Codegen.empty();
+        this.tokenizerPattern = Codegen.empty();
+        this.trueString = Codegen.empty();
+        this.udfLang = Codegen.empty();
+        this.units = Codegen.empty();
+        this.unpivotColumn = Codegen.empty();
+        this.upperBound = Codegen.empty();
+        this.useNewDataFrame = Codegen.empty();
+        this.value = Codegen.empty();
+        this.value1 = Codegen.empty();
+        this.value2 = Codegen.empty();
+        this.valueColumn = Codegen.empty();
+        this.viewFrame = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -1264,7 +1265,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder aggregateFunction(@Nullable String aggregateFunction) {
-            this.aggregateFunction = Output.ofNullable(aggregateFunction);
+            this.aggregateFunction = Codegen.ofNullable(aggregateFunction);
             return this;
         }
         public Builder base(@Nullable Output<String> base) {
@@ -1272,7 +1273,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder base(@Nullable String base) {
-            this.base = Output.ofNullable(base);
+            this.base = Codegen.ofNullable(base);
             return this;
         }
         public Builder caseStatement(@Nullable Output<String> caseStatement) {
@@ -1280,7 +1281,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder caseStatement(@Nullable String caseStatement) {
-            this.caseStatement = Output.ofNullable(caseStatement);
+            this.caseStatement = Codegen.ofNullable(caseStatement);
             return this;
         }
         public Builder categoryMap(@Nullable Output<String> categoryMap) {
@@ -1288,7 +1289,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder categoryMap(@Nullable String categoryMap) {
-            this.categoryMap = Output.ofNullable(categoryMap);
+            this.categoryMap = Codegen.ofNullable(categoryMap);
             return this;
         }
         public Builder charsToRemove(@Nullable Output<String> charsToRemove) {
@@ -1296,7 +1297,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder charsToRemove(@Nullable String charsToRemove) {
-            this.charsToRemove = Output.ofNullable(charsToRemove);
+            this.charsToRemove = Codegen.ofNullable(charsToRemove);
             return this;
         }
         public Builder collapseConsecutiveWhitespace(@Nullable Output<String> collapseConsecutiveWhitespace) {
@@ -1304,7 +1305,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder collapseConsecutiveWhitespace(@Nullable String collapseConsecutiveWhitespace) {
-            this.collapseConsecutiveWhitespace = Output.ofNullable(collapseConsecutiveWhitespace);
+            this.collapseConsecutiveWhitespace = Codegen.ofNullable(collapseConsecutiveWhitespace);
             return this;
         }
         public Builder columnDataType(@Nullable Output<String> columnDataType) {
@@ -1312,7 +1313,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder columnDataType(@Nullable String columnDataType) {
-            this.columnDataType = Output.ofNullable(columnDataType);
+            this.columnDataType = Codegen.ofNullable(columnDataType);
             return this;
         }
         public Builder columnRange(@Nullable Output<String> columnRange) {
@@ -1320,7 +1321,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder columnRange(@Nullable String columnRange) {
-            this.columnRange = Output.ofNullable(columnRange);
+            this.columnRange = Codegen.ofNullable(columnRange);
             return this;
         }
         public Builder count(@Nullable Output<String> count) {
@@ -1328,7 +1329,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder count(@Nullable String count) {
-            this.count = Output.ofNullable(count);
+            this.count = Codegen.ofNullable(count);
             return this;
         }
         public Builder customCharacters(@Nullable Output<String> customCharacters) {
@@ -1336,7 +1337,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder customCharacters(@Nullable String customCharacters) {
-            this.customCharacters = Output.ofNullable(customCharacters);
+            this.customCharacters = Codegen.ofNullable(customCharacters);
             return this;
         }
         public Builder customStopWords(@Nullable Output<String> customStopWords) {
@@ -1344,7 +1345,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder customStopWords(@Nullable String customStopWords) {
-            this.customStopWords = Output.ofNullable(customStopWords);
+            this.customStopWords = Codegen.ofNullable(customStopWords);
             return this;
         }
         public Builder customValue(@Nullable Output<String> customValue) {
@@ -1352,7 +1353,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder customValue(@Nullable String customValue) {
-            this.customValue = Output.ofNullable(customValue);
+            this.customValue = Codegen.ofNullable(customValue);
             return this;
         }
         public Builder datasetsColumns(@Nullable Output<String> datasetsColumns) {
@@ -1360,7 +1361,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder datasetsColumns(@Nullable String datasetsColumns) {
-            this.datasetsColumns = Output.ofNullable(datasetsColumns);
+            this.datasetsColumns = Codegen.ofNullable(datasetsColumns);
             return this;
         }
         public Builder dateAddValue(@Nullable Output<String> dateAddValue) {
@@ -1368,7 +1369,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder dateAddValue(@Nullable String dateAddValue) {
-            this.dateAddValue = Output.ofNullable(dateAddValue);
+            this.dateAddValue = Codegen.ofNullable(dateAddValue);
             return this;
         }
         public Builder dateTimeFormat(@Nullable Output<String> dateTimeFormat) {
@@ -1376,7 +1377,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder dateTimeFormat(@Nullable String dateTimeFormat) {
-            this.dateTimeFormat = Output.ofNullable(dateTimeFormat);
+            this.dateTimeFormat = Codegen.ofNullable(dateTimeFormat);
             return this;
         }
         public Builder dateTimeParameters(@Nullable Output<String> dateTimeParameters) {
@@ -1384,7 +1385,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder dateTimeParameters(@Nullable String dateTimeParameters) {
-            this.dateTimeParameters = Output.ofNullable(dateTimeParameters);
+            this.dateTimeParameters = Codegen.ofNullable(dateTimeParameters);
             return this;
         }
         public Builder deleteOtherRows(@Nullable Output<String> deleteOtherRows) {
@@ -1392,7 +1393,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder deleteOtherRows(@Nullable String deleteOtherRows) {
-            this.deleteOtherRows = Output.ofNullable(deleteOtherRows);
+            this.deleteOtherRows = Codegen.ofNullable(deleteOtherRows);
             return this;
         }
         public Builder delimiter(@Nullable Output<String> delimiter) {
@@ -1400,7 +1401,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder delimiter(@Nullable String delimiter) {
-            this.delimiter = Output.ofNullable(delimiter);
+            this.delimiter = Codegen.ofNullable(delimiter);
             return this;
         }
         public Builder endPattern(@Nullable Output<String> endPattern) {
@@ -1408,7 +1409,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder endPattern(@Nullable String endPattern) {
-            this.endPattern = Output.ofNullable(endPattern);
+            this.endPattern = Codegen.ofNullable(endPattern);
             return this;
         }
         public Builder endPosition(@Nullable Output<String> endPosition) {
@@ -1416,7 +1417,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder endPosition(@Nullable String endPosition) {
-            this.endPosition = Output.ofNullable(endPosition);
+            this.endPosition = Codegen.ofNullable(endPosition);
             return this;
         }
         public Builder endValue(@Nullable Output<String> endValue) {
@@ -1424,7 +1425,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder endValue(@Nullable String endValue) {
-            this.endValue = Output.ofNullable(endValue);
+            this.endValue = Codegen.ofNullable(endValue);
             return this;
         }
         public Builder expandContractions(@Nullable Output<String> expandContractions) {
@@ -1432,7 +1433,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder expandContractions(@Nullable String expandContractions) {
-            this.expandContractions = Output.ofNullable(expandContractions);
+            this.expandContractions = Codegen.ofNullable(expandContractions);
             return this;
         }
         public Builder exponent(@Nullable Output<String> exponent) {
@@ -1440,7 +1441,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder exponent(@Nullable String exponent) {
-            this.exponent = Output.ofNullable(exponent);
+            this.exponent = Codegen.ofNullable(exponent);
             return this;
         }
         public Builder falseString(@Nullable Output<String> falseString) {
@@ -1448,7 +1449,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder falseString(@Nullable String falseString) {
-            this.falseString = Output.ofNullable(falseString);
+            this.falseString = Codegen.ofNullable(falseString);
             return this;
         }
         public Builder groupByAggFunctionOptions(@Nullable Output<String> groupByAggFunctionOptions) {
@@ -1456,7 +1457,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder groupByAggFunctionOptions(@Nullable String groupByAggFunctionOptions) {
-            this.groupByAggFunctionOptions = Output.ofNullable(groupByAggFunctionOptions);
+            this.groupByAggFunctionOptions = Codegen.ofNullable(groupByAggFunctionOptions);
             return this;
         }
         public Builder groupByColumns(@Nullable Output<String> groupByColumns) {
@@ -1464,7 +1465,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder groupByColumns(@Nullable String groupByColumns) {
-            this.groupByColumns = Output.ofNullable(groupByColumns);
+            this.groupByColumns = Codegen.ofNullable(groupByColumns);
             return this;
         }
         public Builder hiddenColumns(@Nullable Output<String> hiddenColumns) {
@@ -1472,7 +1473,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder hiddenColumns(@Nullable String hiddenColumns) {
-            this.hiddenColumns = Output.ofNullable(hiddenColumns);
+            this.hiddenColumns = Codegen.ofNullable(hiddenColumns);
             return this;
         }
         public Builder ignoreCase(@Nullable Output<String> ignoreCase) {
@@ -1480,7 +1481,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ignoreCase(@Nullable String ignoreCase) {
-            this.ignoreCase = Output.ofNullable(ignoreCase);
+            this.ignoreCase = Codegen.ofNullable(ignoreCase);
             return this;
         }
         public Builder includeInSplit(@Nullable Output<String> includeInSplit) {
@@ -1488,7 +1489,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder includeInSplit(@Nullable String includeInSplit) {
-            this.includeInSplit = Output.ofNullable(includeInSplit);
+            this.includeInSplit = Codegen.ofNullable(includeInSplit);
             return this;
         }
         public Builder input(@Nullable Output<RecipeParametersInputPropertiesArgs> input) {
@@ -1496,7 +1497,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder input(@Nullable RecipeParametersInputPropertiesArgs input) {
-            this.input = Output.ofNullable(input);
+            this.input = Codegen.ofNullable(input);
             return this;
         }
         public Builder interval(@Nullable Output<String> interval) {
@@ -1504,7 +1505,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder interval(@Nullable String interval) {
-            this.interval = Output.ofNullable(interval);
+            this.interval = Codegen.ofNullable(interval);
             return this;
         }
         public Builder isText(@Nullable Output<String> isText) {
@@ -1512,7 +1513,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder isText(@Nullable String isText) {
-            this.isText = Output.ofNullable(isText);
+            this.isText = Codegen.ofNullable(isText);
             return this;
         }
         public Builder joinKeys(@Nullable Output<String> joinKeys) {
@@ -1520,7 +1521,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder joinKeys(@Nullable String joinKeys) {
-            this.joinKeys = Output.ofNullable(joinKeys);
+            this.joinKeys = Codegen.ofNullable(joinKeys);
             return this;
         }
         public Builder joinType(@Nullable Output<String> joinType) {
@@ -1528,7 +1529,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder joinType(@Nullable String joinType) {
-            this.joinType = Output.ofNullable(joinType);
+            this.joinType = Codegen.ofNullable(joinType);
             return this;
         }
         public Builder leftColumns(@Nullable Output<String> leftColumns) {
@@ -1536,7 +1537,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder leftColumns(@Nullable String leftColumns) {
-            this.leftColumns = Output.ofNullable(leftColumns);
+            this.leftColumns = Codegen.ofNullable(leftColumns);
             return this;
         }
         public Builder limit(@Nullable Output<String> limit) {
@@ -1544,7 +1545,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder limit(@Nullable String limit) {
-            this.limit = Output.ofNullable(limit);
+            this.limit = Codegen.ofNullable(limit);
             return this;
         }
         public Builder lowerBound(@Nullable Output<String> lowerBound) {
@@ -1552,7 +1553,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder lowerBound(@Nullable String lowerBound) {
-            this.lowerBound = Output.ofNullable(lowerBound);
+            this.lowerBound = Codegen.ofNullable(lowerBound);
             return this;
         }
         public Builder mapType(@Nullable Output<String> mapType) {
@@ -1560,7 +1561,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder mapType(@Nullable String mapType) {
-            this.mapType = Output.ofNullable(mapType);
+            this.mapType = Codegen.ofNullable(mapType);
             return this;
         }
         public Builder modeType(@Nullable Output<String> modeType) {
@@ -1568,7 +1569,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder modeType(@Nullable String modeType) {
-            this.modeType = Output.ofNullable(modeType);
+            this.modeType = Codegen.ofNullable(modeType);
             return this;
         }
         public Builder multiLine(@Nullable Output<Boolean> multiLine) {
@@ -1576,7 +1577,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder multiLine(@Nullable Boolean multiLine) {
-            this.multiLine = Output.ofNullable(multiLine);
+            this.multiLine = Codegen.ofNullable(multiLine);
             return this;
         }
         public Builder numRows(@Nullable Output<String> numRows) {
@@ -1584,7 +1585,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder numRows(@Nullable String numRows) {
-            this.numRows = Output.ofNullable(numRows);
+            this.numRows = Codegen.ofNullable(numRows);
             return this;
         }
         public Builder numRowsAfter(@Nullable Output<String> numRowsAfter) {
@@ -1592,7 +1593,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder numRowsAfter(@Nullable String numRowsAfter) {
-            this.numRowsAfter = Output.ofNullable(numRowsAfter);
+            this.numRowsAfter = Codegen.ofNullable(numRowsAfter);
             return this;
         }
         public Builder numRowsBefore(@Nullable Output<String> numRowsBefore) {
@@ -1600,7 +1601,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder numRowsBefore(@Nullable String numRowsBefore) {
-            this.numRowsBefore = Output.ofNullable(numRowsBefore);
+            this.numRowsBefore = Codegen.ofNullable(numRowsBefore);
             return this;
         }
         public Builder orderByColumn(@Nullable Output<String> orderByColumn) {
@@ -1608,7 +1609,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder orderByColumn(@Nullable String orderByColumn) {
-            this.orderByColumn = Output.ofNullable(orderByColumn);
+            this.orderByColumn = Codegen.ofNullable(orderByColumn);
             return this;
         }
         public Builder orderByColumns(@Nullable Output<String> orderByColumns) {
@@ -1616,7 +1617,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder orderByColumns(@Nullable String orderByColumns) {
-            this.orderByColumns = Output.ofNullable(orderByColumns);
+            this.orderByColumns = Codegen.ofNullable(orderByColumns);
             return this;
         }
         public Builder other(@Nullable Output<String> other) {
@@ -1624,7 +1625,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder other(@Nullable String other) {
-            this.other = Output.ofNullable(other);
+            this.other = Codegen.ofNullable(other);
             return this;
         }
         public Builder pattern(@Nullable Output<String> pattern) {
@@ -1632,7 +1633,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder pattern(@Nullable String pattern) {
-            this.pattern = Output.ofNullable(pattern);
+            this.pattern = Codegen.ofNullable(pattern);
             return this;
         }
         public Builder patternOption1(@Nullable Output<String> patternOption1) {
@@ -1640,7 +1641,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder patternOption1(@Nullable String patternOption1) {
-            this.patternOption1 = Output.ofNullable(patternOption1);
+            this.patternOption1 = Codegen.ofNullable(patternOption1);
             return this;
         }
         public Builder patternOption2(@Nullable Output<String> patternOption2) {
@@ -1648,7 +1649,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder patternOption2(@Nullable String patternOption2) {
-            this.patternOption2 = Output.ofNullable(patternOption2);
+            this.patternOption2 = Codegen.ofNullable(patternOption2);
             return this;
         }
         public Builder patternOptions(@Nullable Output<String> patternOptions) {
@@ -1656,7 +1657,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder patternOptions(@Nullable String patternOptions) {
-            this.patternOptions = Output.ofNullable(patternOptions);
+            this.patternOptions = Codegen.ofNullable(patternOptions);
             return this;
         }
         public Builder period(@Nullable Output<String> period) {
@@ -1664,7 +1665,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder period(@Nullable String period) {
-            this.period = Output.ofNullable(period);
+            this.period = Codegen.ofNullable(period);
             return this;
         }
         public Builder position(@Nullable Output<String> position) {
@@ -1672,7 +1673,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder position(@Nullable String position) {
-            this.position = Output.ofNullable(position);
+            this.position = Codegen.ofNullable(position);
             return this;
         }
         public Builder removeAllPunctuation(@Nullable Output<String> removeAllPunctuation) {
@@ -1680,7 +1681,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder removeAllPunctuation(@Nullable String removeAllPunctuation) {
-            this.removeAllPunctuation = Output.ofNullable(removeAllPunctuation);
+            this.removeAllPunctuation = Codegen.ofNullable(removeAllPunctuation);
             return this;
         }
         public Builder removeAllQuotes(@Nullable Output<String> removeAllQuotes) {
@@ -1688,7 +1689,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder removeAllQuotes(@Nullable String removeAllQuotes) {
-            this.removeAllQuotes = Output.ofNullable(removeAllQuotes);
+            this.removeAllQuotes = Codegen.ofNullable(removeAllQuotes);
             return this;
         }
         public Builder removeAllWhitespace(@Nullable Output<String> removeAllWhitespace) {
@@ -1696,7 +1697,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder removeAllWhitespace(@Nullable String removeAllWhitespace) {
-            this.removeAllWhitespace = Output.ofNullable(removeAllWhitespace);
+            this.removeAllWhitespace = Codegen.ofNullable(removeAllWhitespace);
             return this;
         }
         public Builder removeCustomCharacters(@Nullable Output<String> removeCustomCharacters) {
@@ -1704,7 +1705,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder removeCustomCharacters(@Nullable String removeCustomCharacters) {
-            this.removeCustomCharacters = Output.ofNullable(removeCustomCharacters);
+            this.removeCustomCharacters = Codegen.ofNullable(removeCustomCharacters);
             return this;
         }
         public Builder removeCustomValue(@Nullable Output<String> removeCustomValue) {
@@ -1712,7 +1713,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder removeCustomValue(@Nullable String removeCustomValue) {
-            this.removeCustomValue = Output.ofNullable(removeCustomValue);
+            this.removeCustomValue = Codegen.ofNullable(removeCustomValue);
             return this;
         }
         public Builder removeLeadingAndTrailingPunctuation(@Nullable Output<String> removeLeadingAndTrailingPunctuation) {
@@ -1720,7 +1721,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder removeLeadingAndTrailingPunctuation(@Nullable String removeLeadingAndTrailingPunctuation) {
-            this.removeLeadingAndTrailingPunctuation = Output.ofNullable(removeLeadingAndTrailingPunctuation);
+            this.removeLeadingAndTrailingPunctuation = Codegen.ofNullable(removeLeadingAndTrailingPunctuation);
             return this;
         }
         public Builder removeLeadingAndTrailingQuotes(@Nullable Output<String> removeLeadingAndTrailingQuotes) {
@@ -1728,7 +1729,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder removeLeadingAndTrailingQuotes(@Nullable String removeLeadingAndTrailingQuotes) {
-            this.removeLeadingAndTrailingQuotes = Output.ofNullable(removeLeadingAndTrailingQuotes);
+            this.removeLeadingAndTrailingQuotes = Codegen.ofNullable(removeLeadingAndTrailingQuotes);
             return this;
         }
         public Builder removeLeadingAndTrailingWhitespace(@Nullable Output<String> removeLeadingAndTrailingWhitespace) {
@@ -1736,7 +1737,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder removeLeadingAndTrailingWhitespace(@Nullable String removeLeadingAndTrailingWhitespace) {
-            this.removeLeadingAndTrailingWhitespace = Output.ofNullable(removeLeadingAndTrailingWhitespace);
+            this.removeLeadingAndTrailingWhitespace = Codegen.ofNullable(removeLeadingAndTrailingWhitespace);
             return this;
         }
         public Builder removeLetters(@Nullable Output<String> removeLetters) {
@@ -1744,7 +1745,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder removeLetters(@Nullable String removeLetters) {
-            this.removeLetters = Output.ofNullable(removeLetters);
+            this.removeLetters = Codegen.ofNullable(removeLetters);
             return this;
         }
         public Builder removeNumbers(@Nullable Output<String> removeNumbers) {
@@ -1752,7 +1753,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder removeNumbers(@Nullable String removeNumbers) {
-            this.removeNumbers = Output.ofNullable(removeNumbers);
+            this.removeNumbers = Codegen.ofNullable(removeNumbers);
             return this;
         }
         public Builder removeSourceColumn(@Nullable Output<String> removeSourceColumn) {
@@ -1760,7 +1761,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder removeSourceColumn(@Nullable String removeSourceColumn) {
-            this.removeSourceColumn = Output.ofNullable(removeSourceColumn);
+            this.removeSourceColumn = Codegen.ofNullable(removeSourceColumn);
             return this;
         }
         public Builder removeSpecialCharacters(@Nullable Output<String> removeSpecialCharacters) {
@@ -1768,7 +1769,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder removeSpecialCharacters(@Nullable String removeSpecialCharacters) {
-            this.removeSpecialCharacters = Output.ofNullable(removeSpecialCharacters);
+            this.removeSpecialCharacters = Codegen.ofNullable(removeSpecialCharacters);
             return this;
         }
         public Builder rightColumns(@Nullable Output<String> rightColumns) {
@@ -1776,7 +1777,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder rightColumns(@Nullable String rightColumns) {
-            this.rightColumns = Output.ofNullable(rightColumns);
+            this.rightColumns = Codegen.ofNullable(rightColumns);
             return this;
         }
         public Builder sampleSize(@Nullable Output<String> sampleSize) {
@@ -1784,7 +1785,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder sampleSize(@Nullable String sampleSize) {
-            this.sampleSize = Output.ofNullable(sampleSize);
+            this.sampleSize = Codegen.ofNullable(sampleSize);
             return this;
         }
         public Builder sampleType(@Nullable Output<String> sampleType) {
@@ -1792,7 +1793,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder sampleType(@Nullable String sampleType) {
-            this.sampleType = Output.ofNullable(sampleType);
+            this.sampleType = Codegen.ofNullable(sampleType);
             return this;
         }
         public Builder secondInput(@Nullable Output<String> secondInput) {
@@ -1800,7 +1801,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder secondInput(@Nullable String secondInput) {
-            this.secondInput = Output.ofNullable(secondInput);
+            this.secondInput = Codegen.ofNullable(secondInput);
             return this;
         }
         public Builder secondaryInputs(@Nullable Output<List<RecipeSecondaryInputArgs>> secondaryInputs) {
@@ -1808,7 +1809,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder secondaryInputs(@Nullable List<RecipeSecondaryInputArgs> secondaryInputs) {
-            this.secondaryInputs = Output.ofNullable(secondaryInputs);
+            this.secondaryInputs = Codegen.ofNullable(secondaryInputs);
             return this;
         }
         public Builder secondaryInputs(RecipeSecondaryInputArgs... secondaryInputs) {
@@ -1819,7 +1820,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder sheetIndexes(@Nullable List<Integer> sheetIndexes) {
-            this.sheetIndexes = Output.ofNullable(sheetIndexes);
+            this.sheetIndexes = Codegen.ofNullable(sheetIndexes);
             return this;
         }
         public Builder sheetIndexes(Integer... sheetIndexes) {
@@ -1830,7 +1831,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder sheetNames(@Nullable List<String> sheetNames) {
-            this.sheetNames = Output.ofNullable(sheetNames);
+            this.sheetNames = Codegen.ofNullable(sheetNames);
             return this;
         }
         public Builder sheetNames(String... sheetNames) {
@@ -1841,7 +1842,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder sourceColumn(@Nullable String sourceColumn) {
-            this.sourceColumn = Output.ofNullable(sourceColumn);
+            this.sourceColumn = Codegen.ofNullable(sourceColumn);
             return this;
         }
         public Builder sourceColumn1(@Nullable Output<String> sourceColumn1) {
@@ -1849,7 +1850,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder sourceColumn1(@Nullable String sourceColumn1) {
-            this.sourceColumn1 = Output.ofNullable(sourceColumn1);
+            this.sourceColumn1 = Codegen.ofNullable(sourceColumn1);
             return this;
         }
         public Builder sourceColumn2(@Nullable Output<String> sourceColumn2) {
@@ -1857,7 +1858,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder sourceColumn2(@Nullable String sourceColumn2) {
-            this.sourceColumn2 = Output.ofNullable(sourceColumn2);
+            this.sourceColumn2 = Codegen.ofNullable(sourceColumn2);
             return this;
         }
         public Builder sourceColumns(@Nullable Output<String> sourceColumns) {
@@ -1865,7 +1866,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder sourceColumns(@Nullable String sourceColumns) {
-            this.sourceColumns = Output.ofNullable(sourceColumns);
+            this.sourceColumns = Codegen.ofNullable(sourceColumns);
             return this;
         }
         public Builder startColumnIndex(@Nullable Output<String> startColumnIndex) {
@@ -1873,7 +1874,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder startColumnIndex(@Nullable String startColumnIndex) {
-            this.startColumnIndex = Output.ofNullable(startColumnIndex);
+            this.startColumnIndex = Codegen.ofNullable(startColumnIndex);
             return this;
         }
         public Builder startPattern(@Nullable Output<String> startPattern) {
@@ -1881,7 +1882,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder startPattern(@Nullable String startPattern) {
-            this.startPattern = Output.ofNullable(startPattern);
+            this.startPattern = Codegen.ofNullable(startPattern);
             return this;
         }
         public Builder startPosition(@Nullable Output<String> startPosition) {
@@ -1889,7 +1890,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder startPosition(@Nullable String startPosition) {
-            this.startPosition = Output.ofNullable(startPosition);
+            this.startPosition = Codegen.ofNullable(startPosition);
             return this;
         }
         public Builder startValue(@Nullable Output<String> startValue) {
@@ -1897,7 +1898,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder startValue(@Nullable String startValue) {
-            this.startValue = Output.ofNullable(startValue);
+            this.startValue = Codegen.ofNullable(startValue);
             return this;
         }
         public Builder stemmingMode(@Nullable Output<String> stemmingMode) {
@@ -1905,7 +1906,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder stemmingMode(@Nullable String stemmingMode) {
-            this.stemmingMode = Output.ofNullable(stemmingMode);
+            this.stemmingMode = Codegen.ofNullable(stemmingMode);
             return this;
         }
         public Builder stepCount(@Nullable Output<String> stepCount) {
@@ -1913,7 +1914,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder stepCount(@Nullable String stepCount) {
-            this.stepCount = Output.ofNullable(stepCount);
+            this.stepCount = Codegen.ofNullable(stepCount);
             return this;
         }
         public Builder stepIndex(@Nullable Output<String> stepIndex) {
@@ -1921,7 +1922,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder stepIndex(@Nullable String stepIndex) {
-            this.stepIndex = Output.ofNullable(stepIndex);
+            this.stepIndex = Codegen.ofNullable(stepIndex);
             return this;
         }
         public Builder stopWordsMode(@Nullable Output<String> stopWordsMode) {
@@ -1929,7 +1930,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder stopWordsMode(@Nullable String stopWordsMode) {
-            this.stopWordsMode = Output.ofNullable(stopWordsMode);
+            this.stopWordsMode = Codegen.ofNullable(stopWordsMode);
             return this;
         }
         public Builder strategy(@Nullable Output<String> strategy) {
@@ -1937,7 +1938,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder strategy(@Nullable String strategy) {
-            this.strategy = Output.ofNullable(strategy);
+            this.strategy = Codegen.ofNullable(strategy);
             return this;
         }
         public Builder targetColumn(@Nullable Output<String> targetColumn) {
@@ -1945,7 +1946,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder targetColumn(@Nullable String targetColumn) {
-            this.targetColumn = Output.ofNullable(targetColumn);
+            this.targetColumn = Codegen.ofNullable(targetColumn);
             return this;
         }
         public Builder targetColumnNames(@Nullable Output<String> targetColumnNames) {
@@ -1953,7 +1954,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder targetColumnNames(@Nullable String targetColumnNames) {
-            this.targetColumnNames = Output.ofNullable(targetColumnNames);
+            this.targetColumnNames = Codegen.ofNullable(targetColumnNames);
             return this;
         }
         public Builder targetDateFormat(@Nullable Output<String> targetDateFormat) {
@@ -1961,7 +1962,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder targetDateFormat(@Nullable String targetDateFormat) {
-            this.targetDateFormat = Output.ofNullable(targetDateFormat);
+            this.targetDateFormat = Codegen.ofNullable(targetDateFormat);
             return this;
         }
         public Builder targetIndex(@Nullable Output<String> targetIndex) {
@@ -1969,7 +1970,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder targetIndex(@Nullable String targetIndex) {
-            this.targetIndex = Output.ofNullable(targetIndex);
+            this.targetIndex = Codegen.ofNullable(targetIndex);
             return this;
         }
         public Builder timeZone(@Nullable Output<String> timeZone) {
@@ -1977,7 +1978,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Output.ofNullable(timeZone);
+            this.timeZone = Codegen.ofNullable(timeZone);
             return this;
         }
         public Builder tokenizerPattern(@Nullable Output<String> tokenizerPattern) {
@@ -1985,7 +1986,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tokenizerPattern(@Nullable String tokenizerPattern) {
-            this.tokenizerPattern = Output.ofNullable(tokenizerPattern);
+            this.tokenizerPattern = Codegen.ofNullable(tokenizerPattern);
             return this;
         }
         public Builder trueString(@Nullable Output<String> trueString) {
@@ -1993,7 +1994,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder trueString(@Nullable String trueString) {
-            this.trueString = Output.ofNullable(trueString);
+            this.trueString = Codegen.ofNullable(trueString);
             return this;
         }
         public Builder udfLang(@Nullable Output<String> udfLang) {
@@ -2001,7 +2002,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder udfLang(@Nullable String udfLang) {
-            this.udfLang = Output.ofNullable(udfLang);
+            this.udfLang = Codegen.ofNullable(udfLang);
             return this;
         }
         public Builder units(@Nullable Output<String> units) {
@@ -2009,7 +2010,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder units(@Nullable String units) {
-            this.units = Output.ofNullable(units);
+            this.units = Codegen.ofNullable(units);
             return this;
         }
         public Builder unpivotColumn(@Nullable Output<String> unpivotColumn) {
@@ -2017,7 +2018,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder unpivotColumn(@Nullable String unpivotColumn) {
-            this.unpivotColumn = Output.ofNullable(unpivotColumn);
+            this.unpivotColumn = Codegen.ofNullable(unpivotColumn);
             return this;
         }
         public Builder upperBound(@Nullable Output<String> upperBound) {
@@ -2025,7 +2026,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder upperBound(@Nullable String upperBound) {
-            this.upperBound = Output.ofNullable(upperBound);
+            this.upperBound = Codegen.ofNullable(upperBound);
             return this;
         }
         public Builder useNewDataFrame(@Nullable Output<String> useNewDataFrame) {
@@ -2033,7 +2034,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder useNewDataFrame(@Nullable String useNewDataFrame) {
-            this.useNewDataFrame = Output.ofNullable(useNewDataFrame);
+            this.useNewDataFrame = Codegen.ofNullable(useNewDataFrame);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -2041,7 +2042,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }
         public Builder value1(@Nullable Output<String> value1) {
@@ -2049,7 +2050,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder value1(@Nullable String value1) {
-            this.value1 = Output.ofNullable(value1);
+            this.value1 = Codegen.ofNullable(value1);
             return this;
         }
         public Builder value2(@Nullable Output<String> value2) {
@@ -2057,7 +2058,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder value2(@Nullable String value2) {
-            this.value2 = Output.ofNullable(value2);
+            this.value2 = Codegen.ofNullable(value2);
             return this;
         }
         public Builder valueColumn(@Nullable Output<String> valueColumn) {
@@ -2065,7 +2066,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder valueColumn(@Nullable String valueColumn) {
-            this.valueColumn = Output.ofNullable(valueColumn);
+            this.valueColumn = Codegen.ofNullable(valueColumn);
             return this;
         }
         public Builder viewFrame(@Nullable Output<String> viewFrame) {
@@ -2073,7 +2074,7 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder viewFrame(@Nullable String viewFrame) {
-            this.viewFrame = Output.ofNullable(viewFrame);
+            this.viewFrame = Codegen.ofNullable(viewFrame);
             return this;
         }        public RecipeParametersArgs build() {
             return new RecipeParametersArgs(aggregateFunction, base, caseStatement, categoryMap, charsToRemove, collapseConsecutiveWhitespace, columnDataType, columnRange, count, customCharacters, customStopWords, customValue, datasetsColumns, dateAddValue, dateTimeFormat, dateTimeParameters, deleteOtherRows, delimiter, endPattern, endPosition, endValue, expandContractions, exponent, falseString, groupByAggFunctionOptions, groupByColumns, hiddenColumns, ignoreCase, includeInSplit, input, interval, isText, joinKeys, joinType, leftColumns, limit, lowerBound, mapType, modeType, multiLine, numRows, numRowsAfter, numRowsBefore, orderByColumn, orderByColumns, other, pattern, patternOption1, patternOption2, patternOptions, period, position, removeAllPunctuation, removeAllQuotes, removeAllWhitespace, removeCustomCharacters, removeCustomValue, removeLeadingAndTrailingPunctuation, removeLeadingAndTrailingQuotes, removeLeadingAndTrailingWhitespace, removeLetters, removeNumbers, removeSourceColumn, removeSpecialCharacters, rightColumns, sampleSize, sampleType, secondInput, secondaryInputs, sheetIndexes, sheetNames, sourceColumn, sourceColumn1, sourceColumn2, sourceColumns, startColumnIndex, startPattern, startPosition, startValue, stemmingMode, stepCount, stepIndex, stopWordsMode, strategy, targetColumn, targetColumnNames, targetDateFormat, targetIndex, timeZone, tokenizerPattern, trueString, udfLang, units, unpivotColumn, upperBound, useNewDataFrame, value, value1, value2, valueColumn, viewFrame);

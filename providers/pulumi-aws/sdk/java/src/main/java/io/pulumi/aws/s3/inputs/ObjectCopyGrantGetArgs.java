@@ -5,6 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ObjectCopyGrantGetArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> email;
 
     public Output<String> getEmail() {
-        return this.email == null ? Output.empty() : this.email;
+        return this.email == null ? Codegen.empty() : this.email;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ObjectCopyGrantGetArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ObjectCopyGrantGetArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {
-        return this.uri == null ? Output.empty() : this.uri;
+        return this.uri == null ? Codegen.empty() : this.uri;
     }
 
     public ObjectCopyGrantGetArgs(
@@ -84,11 +85,11 @@ public final class ObjectCopyGrantGetArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ObjectCopyGrantGetArgs() {
-        this.email = Output.empty();
-        this.id = Output.empty();
-        this.permissions = Output.empty();
-        this.type = Output.empty();
-        this.uri = Output.empty();
+        this.email = Codegen.empty();
+        this.id = Codegen.empty();
+        this.permissions = Codegen.empty();
+        this.type = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class ObjectCopyGrantGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder email(@Nullable String email) {
-            this.email = Output.ofNullable(email);
+            this.email = Codegen.ofNullable(email);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -132,7 +133,7 @@ public final class ObjectCopyGrantGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder permissions(Output<List<String>> permissions) {
@@ -159,7 +160,7 @@ public final class ObjectCopyGrantGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder uri(@Nullable String uri) {
-            this.uri = Output.ofNullable(uri);
+            this.uri = Codegen.ofNullable(uri);
             return this;
         }        public ObjectCopyGrantGetArgs build() {
             return new ObjectCopyGrantGetArgs(email, id, permissions, type, uri);

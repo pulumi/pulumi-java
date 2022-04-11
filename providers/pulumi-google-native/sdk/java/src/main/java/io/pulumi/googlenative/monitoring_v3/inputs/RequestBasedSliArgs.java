@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.monitoring_v3.inputs.DistributionCutArgs;
 import io.pulumi.googlenative.monitoring_v3.inputs.TimeSeriesRatioArgs;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class RequestBasedSliArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<DistributionCutArgs> distributionCut;
 
     public Output<DistributionCutArgs> getDistributionCut() {
-        return this.distributionCut == null ? Output.empty() : this.distributionCut;
+        return this.distributionCut == null ? Codegen.empty() : this.distributionCut;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class RequestBasedSliArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<TimeSeriesRatioArgs> goodTotalRatio;
 
     public Output<TimeSeriesRatioArgs> getGoodTotalRatio() {
-        return this.goodTotalRatio == null ? Output.empty() : this.goodTotalRatio;
+        return this.goodTotalRatio == null ? Codegen.empty() : this.goodTotalRatio;
     }
 
     public RequestBasedSliArgs(
@@ -49,8 +50,8 @@ public final class RequestBasedSliArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private RequestBasedSliArgs() {
-        this.distributionCut = Output.empty();
-        this.goodTotalRatio = Output.empty();
+        this.distributionCut = Codegen.empty();
+        this.goodTotalRatio = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class RequestBasedSliArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder distributionCut(@Nullable DistributionCutArgs distributionCut) {
-            this.distributionCut = Output.ofNullable(distributionCut);
+            this.distributionCut = Codegen.ofNullable(distributionCut);
             return this;
         }
         public Builder goodTotalRatio(@Nullable Output<TimeSeriesRatioArgs> goodTotalRatio) {
@@ -88,7 +89,7 @@ public final class RequestBasedSliArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder goodTotalRatio(@Nullable TimeSeriesRatioArgs goodTotalRatio) {
-            this.goodTotalRatio = Output.ofNullable(goodTotalRatio);
+            this.goodTotalRatio = Codegen.ofNullable(goodTotalRatio);
             return this;
         }        public RequestBasedSliArgs build() {
             return new RequestBasedSliArgs(distributionCut, goodTotalRatio);

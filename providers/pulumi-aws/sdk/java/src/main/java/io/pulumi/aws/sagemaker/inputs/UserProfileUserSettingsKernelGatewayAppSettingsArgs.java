@@ -7,6 +7,7 @@ import io.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsKernelGatewayAppSet
 import io.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsArgs extends i
       private final @Nullable Output<List<UserProfileUserSettingsKernelGatewayAppSettingsCustomImageArgs>> customImages;
 
     public Output<List<UserProfileUserSettingsKernelGatewayAppSettingsCustomImageArgs>> getCustomImages() {
-        return this.customImages == null ? Output.empty() : this.customImages;
+        return this.customImages == null ? Codegen.empty() : this.customImages;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsArgs extends i
       private final @Nullable Output<List<String>> lifecycleConfigArns;
 
     public Output<List<String>> getLifecycleConfigArns() {
-        return this.lifecycleConfigArns == null ? Output.empty() : this.lifecycleConfigArns;
+        return this.lifecycleConfigArns == null ? Codegen.empty() : this.lifecycleConfigArns;
     }
 
     public UserProfileUserSettingsKernelGatewayAppSettingsArgs(
@@ -60,9 +61,9 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsArgs extends i
     }
 
     private UserProfileUserSettingsKernelGatewayAppSettingsArgs() {
-        this.customImages = Output.empty();
-        this.defaultResourceSpec = Output.empty();
-        this.lifecycleConfigArns = Output.empty();
+        this.customImages = Codegen.empty();
+        this.defaultResourceSpec = Codegen.empty();
+        this.lifecycleConfigArns = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsArgs extends i
             return this;
         }
         public Builder customImages(@Nullable List<UserProfileUserSettingsKernelGatewayAppSettingsCustomImageArgs> customImages) {
-            this.customImages = Output.ofNullable(customImages);
+            this.customImages = Codegen.ofNullable(customImages);
             return this;
         }
         public Builder customImages(UserProfileUserSettingsKernelGatewayAppSettingsCustomImageArgs... customImages) {
@@ -113,7 +114,7 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsArgs extends i
             return this;
         }
         public Builder lifecycleConfigArns(@Nullable List<String> lifecycleConfigArns) {
-            this.lifecycleConfigArns = Output.ofNullable(lifecycleConfigArns);
+            this.lifecycleConfigArns = Codegen.ofNullable(lifecycleConfigArns);
             return this;
         }
         public Builder lifecycleConfigArns(String... lifecycleConfigArns) {

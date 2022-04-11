@@ -6,6 +6,7 @@ package io.pulumi.googlenative.iap_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.iap_v1.IdentityAwareProxyClientArgs;
 import java.lang.String;
@@ -83,7 +84,7 @@ public class IdentityAwareProxyClient extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public IdentityAwareProxyClient(String name, IdentityAwareProxyClientArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:iap/v1:IdentityAwareProxyClient", name, args == null ? IdentityAwareProxyClientArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:iap/v1:IdentityAwareProxyClient", name, args == null ? IdentityAwareProxyClientArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IdentityAwareProxyClient(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

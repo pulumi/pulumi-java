@@ -6,6 +6,7 @@ package io.pulumi.azurenative.scheduler;
 import io.pulumi.azurenative.scheduler.inputs.JobCollectionPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> jobCollectionName;
 
     public Output<String> getJobCollectionName() {
-        return this.jobCollectionName == null ? Output.empty() : this.jobCollectionName;
+        return this.jobCollectionName == null ? Codegen.empty() : this.jobCollectionName;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<JobCollectionPropertiesArgs> properties;
 
     public Output<JobCollectionPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public JobCollectionArgs(
@@ -98,12 +99,12 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobCollectionArgs() {
-        this.jobCollectionName = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.jobCollectionName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jobCollectionName(@Nullable String jobCollectionName) {
-            this.jobCollectionName = Output.ofNullable(jobCollectionName);
+            this.jobCollectionName = Codegen.ofNullable(jobCollectionName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -149,7 +150,7 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -157,7 +158,7 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder properties(@Nullable Output<JobCollectionPropertiesArgs> properties) {
@@ -165,7 +166,7 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable JobCollectionPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -181,7 +182,7 @@ public final class JobCollectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public JobCollectionArgs build() {
             return new JobCollectionArgs(jobCollectionName, location, name, properties, resourceGroupName, tags);

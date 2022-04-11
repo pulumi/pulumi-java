@@ -19,6 +19,7 @@ import io.pulumi.azurenative.migrate.inputs.VirtualMachineResourceSettingsArgs;
 import io.pulumi.azurenative.migrate.inputs.VirtualNetworkResourceSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public final class MoveResourcePropertiesArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<MoveResourceDependencyOverrideArgs>> dependsOnOverrides;
 
     public Output<List<MoveResourceDependencyOverrideArgs>> getDependsOnOverrides() {
-        return this.dependsOnOverrides == null ? Output.empty() : this.dependsOnOverrides;
+        return this.dependsOnOverrides == null ? Codegen.empty() : this.dependsOnOverrides;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class MoveResourcePropertiesArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> existingTargetId;
 
     public Output<String> getExistingTargetId() {
-        return this.existingTargetId == null ? Output.empty() : this.existingTargetId;
+        return this.existingTargetId == null ? Codegen.empty() : this.existingTargetId;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class MoveResourcePropertiesArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Object> resourceSettings;
 
     public Output<Object> getResourceSettings() {
-        return this.resourceSettings == null ? Output.empty() : this.resourceSettings;
+        return this.resourceSettings == null ? Codegen.empty() : this.resourceSettings;
     }
 
     /**
@@ -90,10 +91,10 @@ public final class MoveResourcePropertiesArgs extends io.pulumi.resources.Resour
     }
 
     private MoveResourcePropertiesArgs() {
-        this.dependsOnOverrides = Output.empty();
-        this.existingTargetId = Output.empty();
-        this.resourceSettings = Output.empty();
-        this.sourceId = Output.empty();
+        this.dependsOnOverrides = Codegen.empty();
+        this.existingTargetId = Codegen.empty();
+        this.resourceSettings = Codegen.empty();
+        this.sourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class MoveResourcePropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder dependsOnOverrides(@Nullable List<MoveResourceDependencyOverrideArgs> dependsOnOverrides) {
-            this.dependsOnOverrides = Output.ofNullable(dependsOnOverrides);
+            this.dependsOnOverrides = Codegen.ofNullable(dependsOnOverrides);
             return this;
         }
         public Builder dependsOnOverrides(MoveResourceDependencyOverrideArgs... dependsOnOverrides) {
@@ -138,7 +139,7 @@ public final class MoveResourcePropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder existingTargetId(@Nullable String existingTargetId) {
-            this.existingTargetId = Output.ofNullable(existingTargetId);
+            this.existingTargetId = Codegen.ofNullable(existingTargetId);
             return this;
         }
         public Builder resourceSettings(@Nullable Output<Object> resourceSettings) {
@@ -146,7 +147,7 @@ public final class MoveResourcePropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder resourceSettings(@Nullable Object resourceSettings) {
-            this.resourceSettings = Output.ofNullable(resourceSettings);
+            this.resourceSettings = Codegen.ofNullable(resourceSettings);
             return this;
         }
         public Builder sourceId(Output<String> sourceId) {

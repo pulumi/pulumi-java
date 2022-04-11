@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesRecipeArtifactGcsArgs;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesRecipeArtifactRemoteArgs;
 import java.lang.Boolean;
@@ -27,7 +28,7 @@ public final class GuestPoliciesRecipeArtifactArgs extends io.pulumi.resources.R
       private final @Nullable Output<Boolean> allowInsecure;
 
     public Output<Boolean> getAllowInsecure() {
-        return this.allowInsecure == null ? Output.empty() : this.allowInsecure;
+        return this.allowInsecure == null ? Codegen.empty() : this.allowInsecure;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class GuestPoliciesRecipeArtifactArgs extends io.pulumi.resources.R
       private final @Nullable Output<GuestPoliciesRecipeArtifactGcsArgs> gcs;
 
     public Output<GuestPoliciesRecipeArtifactGcsArgs> getGcs() {
-        return this.gcs == null ? Output.empty() : this.gcs;
+        return this.gcs == null ? Codegen.empty() : this.gcs;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class GuestPoliciesRecipeArtifactArgs extends io.pulumi.resources.R
       private final @Nullable Output<GuestPoliciesRecipeArtifactRemoteArgs> remote;
 
     public Output<GuestPoliciesRecipeArtifactRemoteArgs> getRemote() {
-        return this.remote == null ? Output.empty() : this.remote;
+        return this.remote == null ? Codegen.empty() : this.remote;
     }
 
     public GuestPoliciesRecipeArtifactArgs(
@@ -78,10 +79,10 @@ public final class GuestPoliciesRecipeArtifactArgs extends io.pulumi.resources.R
     }
 
     private GuestPoliciesRecipeArtifactArgs() {
-        this.allowInsecure = Output.empty();
-        this.gcs = Output.empty();
-        this.id = Output.empty();
-        this.remote = Output.empty();
+        this.allowInsecure = Codegen.empty();
+        this.gcs = Codegen.empty();
+        this.id = Codegen.empty();
+        this.remote = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class GuestPoliciesRecipeArtifactArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder allowInsecure(@Nullable Boolean allowInsecure) {
-            this.allowInsecure = Output.ofNullable(allowInsecure);
+            this.allowInsecure = Codegen.ofNullable(allowInsecure);
             return this;
         }
         public Builder gcs(@Nullable Output<GuestPoliciesRecipeArtifactGcsArgs> gcs) {
@@ -123,7 +124,7 @@ public final class GuestPoliciesRecipeArtifactArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder gcs(@Nullable GuestPoliciesRecipeArtifactGcsArgs gcs) {
-            this.gcs = Output.ofNullable(gcs);
+            this.gcs = Codegen.ofNullable(gcs);
             return this;
         }
         public Builder id(Output<String> id) {
@@ -139,7 +140,7 @@ public final class GuestPoliciesRecipeArtifactArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder remote(@Nullable GuestPoliciesRecipeArtifactRemoteArgs remote) {
-            this.remote = Output.ofNullable(remote);
+            this.remote = Codegen.ofNullable(remote);
             return this;
         }        public GuestPoliciesRecipeArtifactArgs build() {
             return new GuestPoliciesRecipeArtifactArgs(allowInsecure, gcs, id, remote);

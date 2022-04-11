@@ -6,6 +6,7 @@ package io.pulumi.azurenative.storage.inputs;
 import io.pulumi.azurenative.storage.inputs.ObjectReplicationPolicyFilterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -38,7 +39,7 @@ public final class ObjectReplicationPolicyRuleArgs extends io.pulumi.resources.R
       private final @Nullable Output<ObjectReplicationPolicyFilterArgs> filters;
 
     public Output<ObjectReplicationPolicyFilterArgs> getFilters() {
-        return this.filters == null ? Output.empty() : this.filters;
+        return this.filters == null ? Codegen.empty() : this.filters;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ObjectReplicationPolicyRuleArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> ruleId;
 
     public Output<String> getRuleId() {
-        return this.ruleId == null ? Output.empty() : this.ruleId;
+        return this.ruleId == null ? Codegen.empty() : this.ruleId;
     }
 
     /**
@@ -75,10 +76,10 @@ public final class ObjectReplicationPolicyRuleArgs extends io.pulumi.resources.R
     }
 
     private ObjectReplicationPolicyRuleArgs() {
-        this.destinationContainer = Output.empty();
-        this.filters = Output.empty();
-        this.ruleId = Output.empty();
-        this.sourceContainer = Output.empty();
+        this.destinationContainer = Codegen.empty();
+        this.filters = Codegen.empty();
+        this.ruleId = Codegen.empty();
+        this.sourceContainer = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class ObjectReplicationPolicyRuleArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder filters(@Nullable ObjectReplicationPolicyFilterArgs filters) {
-            this.filters = Output.ofNullable(filters);
+            this.filters = Codegen.ofNullable(filters);
             return this;
         }
         public Builder ruleId(@Nullable Output<String> ruleId) {
@@ -128,7 +129,7 @@ public final class ObjectReplicationPolicyRuleArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder ruleId(@Nullable String ruleId) {
-            this.ruleId = Output.ofNullable(ruleId);
+            this.ruleId = Codegen.ofNullable(ruleId);
             return this;
         }
         public Builder sourceContainer(Output<String> sourceContainer) {

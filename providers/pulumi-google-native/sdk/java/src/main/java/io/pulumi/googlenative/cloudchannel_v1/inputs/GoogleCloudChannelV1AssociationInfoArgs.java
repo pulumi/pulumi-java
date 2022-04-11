@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudchannel_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GoogleCloudChannelV1AssociationInfoArgs extends io.pulumi.res
       private final @Nullable Output<String> baseEntitlement;
 
     public Output<String> getBaseEntitlement() {
-        return this.baseEntitlement == null ? Output.empty() : this.baseEntitlement;
+        return this.baseEntitlement == null ? Codegen.empty() : this.baseEntitlement;
     }
 
     public GoogleCloudChannelV1AssociationInfoArgs(@Nullable Output<String> baseEntitlement) {
@@ -34,7 +35,7 @@ public final class GoogleCloudChannelV1AssociationInfoArgs extends io.pulumi.res
     }
 
     private GoogleCloudChannelV1AssociationInfoArgs() {
-        this.baseEntitlement = Output.empty();
+        this.baseEntitlement = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GoogleCloudChannelV1AssociationInfoArgs extends io.pulumi.res
             return this;
         }
         public Builder baseEntitlement(@Nullable String baseEntitlement) {
-            this.baseEntitlement = Output.ofNullable(baseEntitlement);
+            this.baseEntitlement = Codegen.ofNullable(baseEntitlement);
             return this;
         }        public GoogleCloudChannelV1AssociationInfoArgs build() {
             return new GoogleCloudChannelV1AssociationInfoArgs(baseEntitlement);

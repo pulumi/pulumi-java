@@ -6,6 +6,7 @@ package io.pulumi.aws.wafv2.inputs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class WebAclRuleStatementRuleGroupReferenceStatementGetArgs extends
       private final @Nullable Output<List<WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleGetArgs>> excludedRules;
 
     public Output<List<WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleGetArgs>> getExcludedRules() {
-        return this.excludedRules == null ? Output.empty() : this.excludedRules;
+        return this.excludedRules == null ? Codegen.empty() : this.excludedRules;
     }
 
     public WebAclRuleStatementRuleGroupReferenceStatementGetArgs(
@@ -46,8 +47,8 @@ public final class WebAclRuleStatementRuleGroupReferenceStatementGetArgs extends
     }
 
     private WebAclRuleStatementRuleGroupReferenceStatementGetArgs() {
-        this.arn = Output.empty();
-        this.excludedRules = Output.empty();
+        this.arn = Codegen.empty();
+        this.excludedRules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -85,7 +86,7 @@ public final class WebAclRuleStatementRuleGroupReferenceStatementGetArgs extends
             return this;
         }
         public Builder excludedRules(@Nullable List<WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleGetArgs> excludedRules) {
-            this.excludedRules = Output.ofNullable(excludedRules);
+            this.excludedRules = Codegen.ofNullable(excludedRules);
             return this;
         }
         public Builder excludedRules(WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleGetArgs... excludedRules) {

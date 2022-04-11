@@ -5,6 +5,7 @@ package io.pulumi.azurenative.maintenance;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ConfigurationAssignmentParentArgs extends io.pulumi.resources
       private final @Nullable Output<String> configurationAssignmentName;
 
     public Output<String> getConfigurationAssignmentName() {
-        return this.configurationAssignmentName == null ? Output.empty() : this.configurationAssignmentName;
+        return this.configurationAssignmentName == null ? Codegen.empty() : this.configurationAssignmentName;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ConfigurationAssignmentParentArgs extends io.pulumi.resources
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ConfigurationAssignmentParentArgs extends io.pulumi.resources
       private final @Nullable Output<String> maintenanceConfigurationId;
 
     public Output<String> getMaintenanceConfigurationId() {
-        return this.maintenanceConfigurationId == null ? Output.empty() : this.maintenanceConfigurationId;
+        return this.maintenanceConfigurationId == null ? Codegen.empty() : this.maintenanceConfigurationId;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class ConfigurationAssignmentParentArgs extends io.pulumi.resources
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {
-        return this.resourceId == null ? Output.empty() : this.resourceId;
+        return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     /**
@@ -148,16 +149,16 @@ public final class ConfigurationAssignmentParentArgs extends io.pulumi.resources
     }
 
     private ConfigurationAssignmentParentArgs() {
-        this.configurationAssignmentName = Output.empty();
-        this.location = Output.empty();
-        this.maintenanceConfigurationId = Output.empty();
-        this.providerName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceId = Output.empty();
-        this.resourceName = Output.empty();
-        this.resourceParentName = Output.empty();
-        this.resourceParentType = Output.empty();
-        this.resourceType = Output.empty();
+        this.configurationAssignmentName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.maintenanceConfigurationId = Codegen.empty();
+        this.providerName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceId = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.resourceParentName = Codegen.empty();
+        this.resourceParentType = Codegen.empty();
+        this.resourceType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -203,7 +204,7 @@ public final class ConfigurationAssignmentParentArgs extends io.pulumi.resources
             return this;
         }
         public Builder configurationAssignmentName(@Nullable String configurationAssignmentName) {
-            this.configurationAssignmentName = Output.ofNullable(configurationAssignmentName);
+            this.configurationAssignmentName = Codegen.ofNullable(configurationAssignmentName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -211,7 +212,7 @@ public final class ConfigurationAssignmentParentArgs extends io.pulumi.resources
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder maintenanceConfigurationId(@Nullable Output<String> maintenanceConfigurationId) {
@@ -219,7 +220,7 @@ public final class ConfigurationAssignmentParentArgs extends io.pulumi.resources
             return this;
         }
         public Builder maintenanceConfigurationId(@Nullable String maintenanceConfigurationId) {
-            this.maintenanceConfigurationId = Output.ofNullable(maintenanceConfigurationId);
+            this.maintenanceConfigurationId = Codegen.ofNullable(maintenanceConfigurationId);
             return this;
         }
         public Builder providerName(Output<String> providerName) {
@@ -243,7 +244,7 @@ public final class ConfigurationAssignmentParentArgs extends io.pulumi.resources
             return this;
         }
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Output.ofNullable(resourceId);
+            this.resourceId = Codegen.ofNullable(resourceId);
             return this;
         }
         public Builder resourceName(Output<String> resourceName) {

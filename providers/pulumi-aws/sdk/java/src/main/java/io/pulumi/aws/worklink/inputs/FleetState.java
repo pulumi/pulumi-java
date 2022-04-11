@@ -7,6 +7,7 @@ import io.pulumi.aws.worklink.inputs.FleetIdentityProviderGetArgs;
 import io.pulumi.aws.worklink.inputs.FleetNetworkGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> auditStreamArn;
 
     public Output<String> getAuditStreamArn() {
-        return this.auditStreamArn == null ? Output.empty() : this.auditStreamArn;
+        return this.auditStreamArn == null ? Codegen.empty() : this.auditStreamArn;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> companyCode;
 
     public Output<String> getCompanyCode() {
-        return this.companyCode == null ? Output.empty() : this.companyCode;
+        return this.companyCode == null ? Codegen.empty() : this.companyCode;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> createdTime;
 
     public Output<String> getCreatedTime() {
-        return this.createdTime == null ? Output.empty() : this.createdTime;
+        return this.createdTime == null ? Codegen.empty() : this.createdTime;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> deviceCaCertificate;
 
     public Output<String> getDeviceCaCertificate() {
-        return this.deviceCaCertificate == null ? Output.empty() : this.deviceCaCertificate;
+        return this.deviceCaCertificate == null ? Codegen.empty() : this.deviceCaCertificate;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FleetIdentityProviderGetArgs> identityProvider;
 
     public Output<FleetIdentityProviderGetArgs> getIdentityProvider() {
-        return this.identityProvider == null ? Output.empty() : this.identityProvider;
+        return this.identityProvider == null ? Codegen.empty() : this.identityProvider;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> lastUpdatedTime;
 
     public Output<String> getLastUpdatedTime() {
-        return this.lastUpdatedTime == null ? Output.empty() : this.lastUpdatedTime;
+        return this.lastUpdatedTime == null ? Codegen.empty() : this.lastUpdatedTime;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FleetNetworkGetArgs> network;
 
     public Output<FleetNetworkGetArgs> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     /**
@@ -135,7 +136,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> optimizeForEndUserLocation;
 
     public Output<Boolean> getOptimizeForEndUserLocation() {
-        return this.optimizeForEndUserLocation == null ? Output.empty() : this.optimizeForEndUserLocation;
+        return this.optimizeForEndUserLocation == null ? Codegen.empty() : this.optimizeForEndUserLocation;
     }
 
     public FleetState(
@@ -164,17 +165,17 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
     }
 
     private FleetState() {
-        this.arn = Output.empty();
-        this.auditStreamArn = Output.empty();
-        this.companyCode = Output.empty();
-        this.createdTime = Output.empty();
-        this.deviceCaCertificate = Output.empty();
-        this.displayName = Output.empty();
-        this.identityProvider = Output.empty();
-        this.lastUpdatedTime = Output.empty();
-        this.name = Output.empty();
-        this.network = Output.empty();
-        this.optimizeForEndUserLocation = Output.empty();
+        this.arn = Codegen.empty();
+        this.auditStreamArn = Codegen.empty();
+        this.companyCode = Codegen.empty();
+        this.createdTime = Codegen.empty();
+        this.deviceCaCertificate = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.identityProvider = Codegen.empty();
+        this.lastUpdatedTime = Codegen.empty();
+        this.name = Codegen.empty();
+        this.network = Codegen.empty();
+        this.optimizeForEndUserLocation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -222,7 +223,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder auditStreamArn(@Nullable Output<String> auditStreamArn) {
@@ -230,7 +231,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder auditStreamArn(@Nullable String auditStreamArn) {
-            this.auditStreamArn = Output.ofNullable(auditStreamArn);
+            this.auditStreamArn = Codegen.ofNullable(auditStreamArn);
             return this;
         }
         public Builder companyCode(@Nullable Output<String> companyCode) {
@@ -238,7 +239,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder companyCode(@Nullable String companyCode) {
-            this.companyCode = Output.ofNullable(companyCode);
+            this.companyCode = Codegen.ofNullable(companyCode);
             return this;
         }
         public Builder createdTime(@Nullable Output<String> createdTime) {
@@ -246,7 +247,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Output.ofNullable(createdTime);
+            this.createdTime = Codegen.ofNullable(createdTime);
             return this;
         }
         public Builder deviceCaCertificate(@Nullable Output<String> deviceCaCertificate) {
@@ -254,7 +255,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deviceCaCertificate(@Nullable String deviceCaCertificate) {
-            this.deviceCaCertificate = Output.ofNullable(deviceCaCertificate);
+            this.deviceCaCertificate = Codegen.ofNullable(deviceCaCertificate);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -262,7 +263,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder identityProvider(@Nullable Output<FleetIdentityProviderGetArgs> identityProvider) {
@@ -270,7 +271,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identityProvider(@Nullable FleetIdentityProviderGetArgs identityProvider) {
-            this.identityProvider = Output.ofNullable(identityProvider);
+            this.identityProvider = Codegen.ofNullable(identityProvider);
             return this;
         }
         public Builder lastUpdatedTime(@Nullable Output<String> lastUpdatedTime) {
@@ -278,7 +279,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
-            this.lastUpdatedTime = Output.ofNullable(lastUpdatedTime);
+            this.lastUpdatedTime = Codegen.ofNullable(lastUpdatedTime);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -286,7 +287,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder network(@Nullable Output<FleetNetworkGetArgs> network) {
@@ -294,7 +295,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder network(@Nullable FleetNetworkGetArgs network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }
         public Builder optimizeForEndUserLocation(@Nullable Output<Boolean> optimizeForEndUserLocation) {
@@ -302,7 +303,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder optimizeForEndUserLocation(@Nullable Boolean optimizeForEndUserLocation) {
-            this.optimizeForEndUserLocation = Output.ofNullable(optimizeForEndUserLocation);
+            this.optimizeForEndUserLocation = Codegen.ofNullable(optimizeForEndUserLocation);
             return this;
         }        public FleetState build() {
             return new FleetState(arn, auditStreamArn, companyCode, createdTime, deviceCaCertificate, displayName, identityProvider, lastUpdatedTime, name, network, optimizeForEndUserLocation);

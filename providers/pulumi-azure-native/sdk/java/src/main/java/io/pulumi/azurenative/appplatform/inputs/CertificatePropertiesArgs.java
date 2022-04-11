@@ -5,6 +5,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> certVersion;
 
     public Output<String> getCertVersion() {
-        return this.certVersion == null ? Output.empty() : this.certVersion;
+        return this.certVersion == null ? Codegen.empty() : this.certVersion;
     }
 
     /**
@@ -61,9 +62,9 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
     }
 
     private CertificatePropertiesArgs() {
-        this.certVersion = Output.empty();
-        this.keyVaultCertName = Output.empty();
-        this.vaultUri = Output.empty();
+        this.certVersion = Codegen.empty();
+        this.keyVaultCertName = Codegen.empty();
+        this.vaultUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder certVersion(@Nullable String certVersion) {
-            this.certVersion = Output.ofNullable(certVersion);
+            this.certVersion = Codegen.ofNullable(certVersion);
             return this;
         }
         public Builder keyVaultCertName(Output<String> keyVaultCertName) {

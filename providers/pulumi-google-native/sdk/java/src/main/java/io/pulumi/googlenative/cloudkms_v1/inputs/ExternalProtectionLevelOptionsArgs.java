@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudkms_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ExternalProtectionLevelOptionsArgs extends io.pulumi.resource
       private final @Nullable Output<String> ekmConnectionKeyPath;
 
     public Output<String> getEkmConnectionKeyPath() {
-        return this.ekmConnectionKeyPath == null ? Output.empty() : this.ekmConnectionKeyPath;
+        return this.ekmConnectionKeyPath == null ? Codegen.empty() : this.ekmConnectionKeyPath;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ExternalProtectionLevelOptionsArgs extends io.pulumi.resource
       private final @Nullable Output<String> externalKeyUri;
 
     public Output<String> getExternalKeyUri() {
-        return this.externalKeyUri == null ? Output.empty() : this.externalKeyUri;
+        return this.externalKeyUri == null ? Codegen.empty() : this.externalKeyUri;
     }
 
     public ExternalProtectionLevelOptionsArgs(
@@ -48,8 +49,8 @@ public final class ExternalProtectionLevelOptionsArgs extends io.pulumi.resource
     }
 
     private ExternalProtectionLevelOptionsArgs() {
-        this.ekmConnectionKeyPath = Output.empty();
-        this.externalKeyUri = Output.empty();
+        this.ekmConnectionKeyPath = Codegen.empty();
+        this.externalKeyUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ExternalProtectionLevelOptionsArgs extends io.pulumi.resource
             return this;
         }
         public Builder ekmConnectionKeyPath(@Nullable String ekmConnectionKeyPath) {
-            this.ekmConnectionKeyPath = Output.ofNullable(ekmConnectionKeyPath);
+            this.ekmConnectionKeyPath = Codegen.ofNullable(ekmConnectionKeyPath);
             return this;
         }
         public Builder externalKeyUri(@Nullable Output<String> externalKeyUri) {
@@ -87,7 +88,7 @@ public final class ExternalProtectionLevelOptionsArgs extends io.pulumi.resource
             return this;
         }
         public Builder externalKeyUri(@Nullable String externalKeyUri) {
-            this.externalKeyUri = Output.ofNullable(externalKeyUri);
+            this.externalKeyUri = Codegen.ofNullable(externalKeyUri);
             return this;
         }        public ExternalProtectionLevelOptionsArgs build() {
             return new ExternalProtectionLevelOptionsArgs(ekmConnectionKeyPath, externalKeyUri);

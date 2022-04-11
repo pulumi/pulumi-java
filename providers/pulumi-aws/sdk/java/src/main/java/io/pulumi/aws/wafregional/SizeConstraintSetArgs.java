@@ -6,6 +6,7 @@ package io.pulumi.aws.wafregional;
 import io.pulumi.aws.wafregional.inputs.SizeConstraintSetSizeConstraintArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class SizeConstraintSetArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class SizeConstraintSetArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<SizeConstraintSetSizeConstraintArgs>> sizeConstraints;
 
     public Output<List<SizeConstraintSetSizeConstraintArgs>> getSizeConstraints() {
-        return this.sizeConstraints == null ? Output.empty() : this.sizeConstraints;
+        return this.sizeConstraints == null ? Codegen.empty() : this.sizeConstraints;
     }
 
     public SizeConstraintSetArgs(
@@ -46,8 +47,8 @@ public final class SizeConstraintSetArgs extends io.pulumi.resources.ResourceArg
     }
 
     private SizeConstraintSetArgs() {
-        this.name = Output.empty();
-        this.sizeConstraints = Output.empty();
+        this.name = Codegen.empty();
+        this.sizeConstraints = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class SizeConstraintSetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder sizeConstraints(@Nullable Output<List<SizeConstraintSetSizeConstraintArgs>> sizeConstraints) {
@@ -85,7 +86,7 @@ public final class SizeConstraintSetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder sizeConstraints(@Nullable List<SizeConstraintSetSizeConstraintArgs> sizeConstraints) {
-            this.sizeConstraints = Output.ofNullable(sizeConstraints);
+            this.sizeConstraints = Codegen.ofNullable(sizeConstraints);
             return this;
         }
         public Builder sizeConstraints(SizeConstraintSetSizeConstraintArgs... sizeConstraints) {

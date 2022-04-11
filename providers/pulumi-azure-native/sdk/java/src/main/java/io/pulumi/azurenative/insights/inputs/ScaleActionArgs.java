@@ -7,6 +7,7 @@ import io.pulumi.azurenative.insights.enums.ScaleDirection;
 import io.pulumi.azurenative.insights.enums.ScaleType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -61,7 +62,7 @@ public final class ScaleActionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public ScaleActionArgs(
@@ -72,14 +73,14 @@ public final class ScaleActionArgs extends io.pulumi.resources.ResourceArgs {
         this.cooldown = Objects.requireNonNull(cooldown, "expected parameter 'cooldown' to be non-null");
         this.direction = Objects.requireNonNull(direction, "expected parameter 'direction' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.value = value == null ? Output.ofNullable("1") : value;
+        this.value = value == null ? Codegen.ofNullable("1") : value;
     }
 
     private ScaleActionArgs() {
-        this.cooldown = Output.empty();
-        this.direction = Output.empty();
-        this.type = Output.empty();
-        this.value = Output.empty();
+        this.cooldown = Codegen.empty();
+        this.direction = Codegen.empty();
+        this.type = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -137,7 +138,7 @@ public final class ScaleActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public ScaleActionArgs build() {
             return new ScaleActionArgs(cooldown, direction, type, value);

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.customerinsights.inputs;
 import io.pulumi.azurenative.customerinsights.enums.FormatTypes;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> acceptLanguage;
 
     public Output<String> getAcceptLanguage() {
-        return this.acceptLanguage == null ? Output.empty() : this.acceptLanguage;
+        return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> arraySeparator;
 
     public Output<String> getArraySeparator() {
-        return this.arraySeparator == null ? Output.empty() : this.arraySeparator;
+        return this.arraySeparator == null ? Codegen.empty() : this.arraySeparator;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> columnDelimiter;
 
     public Output<String> getColumnDelimiter() {
-        return this.columnDelimiter == null ? Output.empty() : this.columnDelimiter;
+        return this.columnDelimiter == null ? Codegen.empty() : this.columnDelimiter;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> quoteCharacter;
 
     public Output<String> getQuoteCharacter() {
-        return this.quoteCharacter == null ? Output.empty() : this.quoteCharacter;
+        return this.quoteCharacter == null ? Codegen.empty() : this.quoteCharacter;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> quoteEscapeCharacter;
 
     public Output<String> getQuoteEscapeCharacter() {
-        return this.quoteEscapeCharacter == null ? Output.empty() : this.quoteEscapeCharacter;
+        return this.quoteEscapeCharacter == null ? Codegen.empty() : this.quoteEscapeCharacter;
     }
 
     public ConnectorMappingFormatArgs(
@@ -101,12 +102,12 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
     }
 
     private ConnectorMappingFormatArgs() {
-        this.acceptLanguage = Output.empty();
-        this.arraySeparator = Output.empty();
-        this.columnDelimiter = Output.empty();
-        this.formatType = Output.empty();
-        this.quoteCharacter = Output.empty();
-        this.quoteEscapeCharacter = Output.empty();
+        this.acceptLanguage = Codegen.empty();
+        this.arraySeparator = Codegen.empty();
+        this.columnDelimiter = Codegen.empty();
+        this.formatType = Codegen.empty();
+        this.quoteCharacter = Codegen.empty();
+        this.quoteEscapeCharacter = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Output.ofNullable(acceptLanguage);
+            this.acceptLanguage = Codegen.ofNullable(acceptLanguage);
             return this;
         }
         public Builder arraySeparator(@Nullable Output<String> arraySeparator) {
@@ -152,7 +153,7 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder arraySeparator(@Nullable String arraySeparator) {
-            this.arraySeparator = Output.ofNullable(arraySeparator);
+            this.arraySeparator = Codegen.ofNullable(arraySeparator);
             return this;
         }
         public Builder columnDelimiter(@Nullable Output<String> columnDelimiter) {
@@ -160,7 +161,7 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder columnDelimiter(@Nullable String columnDelimiter) {
-            this.columnDelimiter = Output.ofNullable(columnDelimiter);
+            this.columnDelimiter = Codegen.ofNullable(columnDelimiter);
             return this;
         }
         public Builder formatType(Output<FormatTypes> formatType) {
@@ -176,7 +177,7 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder quoteCharacter(@Nullable String quoteCharacter) {
-            this.quoteCharacter = Output.ofNullable(quoteCharacter);
+            this.quoteCharacter = Codegen.ofNullable(quoteCharacter);
             return this;
         }
         public Builder quoteEscapeCharacter(@Nullable Output<String> quoteEscapeCharacter) {
@@ -184,7 +185,7 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder quoteEscapeCharacter(@Nullable String quoteEscapeCharacter) {
-            this.quoteEscapeCharacter = Output.ofNullable(quoteEscapeCharacter);
+            this.quoteEscapeCharacter = Codegen.ofNullable(quoteEscapeCharacter);
             return this;
         }        public ConnectorMappingFormatArgs build() {
             return new ConnectorMappingFormatArgs(acceptLanguage, arraySeparator, columnDelimiter, formatType, quoteCharacter, quoteEscapeCharacter);

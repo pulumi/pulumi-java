@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicebus.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -28,7 +29,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
-        return this.contentType == null ? Output.empty() : this.contentType;
+        return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> correlationId;
 
     public Output<String> getCorrelationId() {
-        return this.correlationId == null ? Output.empty() : this.correlationId;
+        return this.correlationId == null ? Codegen.empty() : this.correlationId;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> label;
 
     public Output<String> getLabel() {
-        return this.label == null ? Output.empty() : this.label;
+        return this.label == null ? Codegen.empty() : this.label;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> messageId;
 
     public Output<String> getMessageId() {
-        return this.messageId == null ? Output.empty() : this.messageId;
+        return this.messageId == null ? Codegen.empty() : this.messageId;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> replyTo;
 
     public Output<String> getReplyTo() {
-        return this.replyTo == null ? Output.empty() : this.replyTo;
+        return this.replyTo == null ? Codegen.empty() : this.replyTo;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> replyToSessionId;
 
     public Output<String> getReplyToSessionId() {
-        return this.replyToSessionId == null ? Output.empty() : this.replyToSessionId;
+        return this.replyToSessionId == null ? Codegen.empty() : this.replyToSessionId;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Boolean> requiresPreprocessing;
 
     public Output<Boolean> getRequiresPreprocessing() {
-        return this.requiresPreprocessing == null ? Output.empty() : this.requiresPreprocessing;
+        return this.requiresPreprocessing == null ? Codegen.empty() : this.requiresPreprocessing;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> sessionId;
 
     public Output<String> getSessionId() {
-        return this.sessionId == null ? Output.empty() : this.sessionId;
+        return this.sessionId == null ? Codegen.empty() : this.sessionId;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> to;
 
     public Output<String> getTo() {
-        return this.to == null ? Output.empty() : this.to;
+        return this.to == null ? Codegen.empty() : this.to;
     }
 
     public CorrelationFilterArgs(
@@ -148,22 +149,22 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
         this.properties = properties;
         this.replyTo = replyTo;
         this.replyToSessionId = replyToSessionId;
-        this.requiresPreprocessing = requiresPreprocessing == null ? Output.ofNullable(true) : requiresPreprocessing;
+        this.requiresPreprocessing = requiresPreprocessing == null ? Codegen.ofNullable(true) : requiresPreprocessing;
         this.sessionId = sessionId;
         this.to = to;
     }
 
     private CorrelationFilterArgs() {
-        this.contentType = Output.empty();
-        this.correlationId = Output.empty();
-        this.label = Output.empty();
-        this.messageId = Output.empty();
-        this.properties = Output.empty();
-        this.replyTo = Output.empty();
-        this.replyToSessionId = Output.empty();
-        this.requiresPreprocessing = Output.empty();
-        this.sessionId = Output.empty();
-        this.to = Output.empty();
+        this.contentType = Codegen.empty();
+        this.correlationId = Codegen.empty();
+        this.label = Codegen.empty();
+        this.messageId = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.replyTo = Codegen.empty();
+        this.replyToSessionId = Codegen.empty();
+        this.requiresPreprocessing = Codegen.empty();
+        this.sessionId = Codegen.empty();
+        this.to = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -209,7 +210,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Output.ofNullable(contentType);
+            this.contentType = Codegen.ofNullable(contentType);
             return this;
         }
         public Builder correlationId(@Nullable Output<String> correlationId) {
@@ -217,7 +218,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder correlationId(@Nullable String correlationId) {
-            this.correlationId = Output.ofNullable(correlationId);
+            this.correlationId = Codegen.ofNullable(correlationId);
             return this;
         }
         public Builder label(@Nullable Output<String> label) {
@@ -225,7 +226,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder label(@Nullable String label) {
-            this.label = Output.ofNullable(label);
+            this.label = Codegen.ofNullable(label);
             return this;
         }
         public Builder messageId(@Nullable Output<String> messageId) {
@@ -233,7 +234,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder messageId(@Nullable String messageId) {
-            this.messageId = Output.ofNullable(messageId);
+            this.messageId = Codegen.ofNullable(messageId);
             return this;
         }
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
@@ -241,7 +242,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder replyTo(@Nullable Output<String> replyTo) {
@@ -249,7 +250,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder replyTo(@Nullable String replyTo) {
-            this.replyTo = Output.ofNullable(replyTo);
+            this.replyTo = Codegen.ofNullable(replyTo);
             return this;
         }
         public Builder replyToSessionId(@Nullable Output<String> replyToSessionId) {
@@ -257,7 +258,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder replyToSessionId(@Nullable String replyToSessionId) {
-            this.replyToSessionId = Output.ofNullable(replyToSessionId);
+            this.replyToSessionId = Codegen.ofNullable(replyToSessionId);
             return this;
         }
         public Builder requiresPreprocessing(@Nullable Output<Boolean> requiresPreprocessing) {
@@ -265,7 +266,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder requiresPreprocessing(@Nullable Boolean requiresPreprocessing) {
-            this.requiresPreprocessing = Output.ofNullable(requiresPreprocessing);
+            this.requiresPreprocessing = Codegen.ofNullable(requiresPreprocessing);
             return this;
         }
         public Builder sessionId(@Nullable Output<String> sessionId) {
@@ -273,7 +274,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder sessionId(@Nullable String sessionId) {
-            this.sessionId = Output.ofNullable(sessionId);
+            this.sessionId = Codegen.ofNullable(sessionId);
             return this;
         }
         public Builder to(@Nullable Output<String> to) {
@@ -281,7 +282,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder to(@Nullable String to) {
-            this.to = Output.ofNullable(to);
+            this.to = Codegen.ofNullable(to);
             return this;
         }        public CorrelationFilterArgs build() {
             return new CorrelationFilterArgs(contentType, correlationId, label, messageId, properties, replyTo, replyToSessionId, requiresPreprocessing, sessionId, to);

@@ -6,6 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecTcpRouteTimeoutIdleGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +23,7 @@ public final class RouteSpecTcpRouteTimeoutGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<RouteSpecTcpRouteTimeoutIdleGetArgs> idle;
 
     public Output<RouteSpecTcpRouteTimeoutIdleGetArgs> getIdle() {
-        return this.idle == null ? Output.empty() : this.idle;
+        return this.idle == null ? Codegen.empty() : this.idle;
     }
 
     public RouteSpecTcpRouteTimeoutGetArgs(@Nullable Output<RouteSpecTcpRouteTimeoutIdleGetArgs> idle) {
@@ -30,7 +31,7 @@ public final class RouteSpecTcpRouteTimeoutGetArgs extends io.pulumi.resources.R
     }
 
     private RouteSpecTcpRouteTimeoutGetArgs() {
-        this.idle = Output.empty();
+        this.idle = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class RouteSpecTcpRouteTimeoutGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder idle(@Nullable RouteSpecTcpRouteTimeoutIdleGetArgs idle) {
-            this.idle = Output.ofNullable(idle);
+            this.idle = Codegen.ofNullable(idle);
             return this;
         }        public RouteSpecTcpRouteTimeoutGetArgs build() {
             return new RouteSpecTcpRouteTimeoutGetArgs(idle);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__ContainerPortArgs;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__EnvVarArgs;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class GoogleCloudMlV1__ContainerSpecArgs extends io.pulumi.resource
       private final @Nullable Output<List<String>> args;
 
     public Output<List<String>> getArgs() {
-        return this.args == null ? Output.empty() : this.args;
+        return this.args == null ? Codegen.empty() : this.args;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class GoogleCloudMlV1__ContainerSpecArgs extends io.pulumi.resource
       private final @Nullable Output<List<String>> command;
 
     public Output<List<String>> getCommand() {
-        return this.command == null ? Output.empty() : this.command;
+        return this.command == null ? Codegen.empty() : this.command;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class GoogleCloudMlV1__ContainerSpecArgs extends io.pulumi.resource
       private final @Nullable Output<List<GoogleCloudMlV1__EnvVarArgs>> env;
 
     public Output<List<GoogleCloudMlV1__EnvVarArgs>> getEnv() {
-        return this.env == null ? Output.empty() : this.env;
+        return this.env == null ? Codegen.empty() : this.env;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class GoogleCloudMlV1__ContainerSpecArgs extends io.pulumi.resource
       private final @Nullable Output<String> image;
 
     public Output<String> getImage() {
-        return this.image == null ? Output.empty() : this.image;
+        return this.image == null ? Codegen.empty() : this.image;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class GoogleCloudMlV1__ContainerSpecArgs extends io.pulumi.resource
       private final @Nullable Output<List<GoogleCloudMlV1__ContainerPortArgs>> ports;
 
     public Output<List<GoogleCloudMlV1__ContainerPortArgs>> getPorts() {
-        return this.ports == null ? Output.empty() : this.ports;
+        return this.ports == null ? Codegen.empty() : this.ports;
     }
 
     public GoogleCloudMlV1__ContainerSpecArgs(
@@ -90,11 +91,11 @@ public final class GoogleCloudMlV1__ContainerSpecArgs extends io.pulumi.resource
     }
 
     private GoogleCloudMlV1__ContainerSpecArgs() {
-        this.args = Output.empty();
-        this.command = Output.empty();
-        this.env = Output.empty();
-        this.image = Output.empty();
-        this.ports = Output.empty();
+        this.args = Codegen.empty();
+        this.command = Codegen.empty();
+        this.env = Codegen.empty();
+        this.image = Codegen.empty();
+        this.ports = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class GoogleCloudMlV1__ContainerSpecArgs extends io.pulumi.resource
             return this;
         }
         public Builder args(@Nullable List<String> args) {
-            this.args = Output.ofNullable(args);
+            this.args = Codegen.ofNullable(args);
             return this;
         }
         public Builder args(String... args) {
@@ -141,7 +142,7 @@ public final class GoogleCloudMlV1__ContainerSpecArgs extends io.pulumi.resource
             return this;
         }
         public Builder command(@Nullable List<String> command) {
-            this.command = Output.ofNullable(command);
+            this.command = Codegen.ofNullable(command);
             return this;
         }
         public Builder command(String... command) {
@@ -152,7 +153,7 @@ public final class GoogleCloudMlV1__ContainerSpecArgs extends io.pulumi.resource
             return this;
         }
         public Builder env(@Nullable List<GoogleCloudMlV1__EnvVarArgs> env) {
-            this.env = Output.ofNullable(env);
+            this.env = Codegen.ofNullable(env);
             return this;
         }
         public Builder env(GoogleCloudMlV1__EnvVarArgs... env) {
@@ -163,7 +164,7 @@ public final class GoogleCloudMlV1__ContainerSpecArgs extends io.pulumi.resource
             return this;
         }
         public Builder image(@Nullable String image) {
-            this.image = Output.ofNullable(image);
+            this.image = Codegen.ofNullable(image);
             return this;
         }
         public Builder ports(@Nullable Output<List<GoogleCloudMlV1__ContainerPortArgs>> ports) {
@@ -171,7 +172,7 @@ public final class GoogleCloudMlV1__ContainerSpecArgs extends io.pulumi.resource
             return this;
         }
         public Builder ports(@Nullable List<GoogleCloudMlV1__ContainerPortArgs> ports) {
-            this.ports = Output.ofNullable(ports);
+            this.ports = Codegen.ofNullable(ports);
             return this;
         }
         public Builder ports(GoogleCloudMlV1__ContainerPortArgs... ports) {

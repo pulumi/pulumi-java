@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -44,8 +45,8 @@ public final class PartitionStorageDescriptorSortColumnGetArgs extends io.pulumi
     }
 
     private PartitionStorageDescriptorSortColumnGetArgs() {
-        this.column = Output.empty();
-        this.sortOrder = Output.empty();
+        this.column = Codegen.empty();
+        this.sortOrder = Codegen.empty();
     }
 
     public static Builder builder() {

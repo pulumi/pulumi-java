@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudsearch_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.DataSourceRestrictionArgs;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.FacetOptionsArgs;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.QueryInterpretationConfigArgs;
@@ -30,7 +31,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<DataSourceRestrictionArgs>> dataSourceRestrictions;
 
     public Output<List<DataSourceRestrictionArgs>> getDataSourceRestrictions() {
-        return this.dataSourceRestrictions == null ? Output.empty() : this.dataSourceRestrictions;
+        return this.dataSourceRestrictions == null ? Codegen.empty() : this.dataSourceRestrictions;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<FacetOptionsArgs>> defaultFacetOptions;
 
     public Output<List<FacetOptionsArgs>> getDefaultFacetOptions() {
-        return this.defaultFacetOptions == null ? Output.empty() : this.defaultFacetOptions;
+        return this.defaultFacetOptions == null ? Codegen.empty() : this.defaultFacetOptions;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<SortOptionsArgs> defaultSortOptions;
 
     public Output<SortOptionsArgs> getDefaultSortOptions() {
-        return this.defaultSortOptions == null ? Output.empty() : this.defaultSortOptions;
+        return this.defaultSortOptions == null ? Codegen.empty() : this.defaultSortOptions;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Boolean> enableAuditLog;
 
     public Output<Boolean> getEnableAuditLog() {
-        return this.enableAuditLog == null ? Output.empty() : this.enableAuditLog;
+        return this.enableAuditLog == null ? Codegen.empty() : this.enableAuditLog;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<QueryInterpretationConfigArgs> queryInterpretationConfig;
 
     public Output<QueryInterpretationConfigArgs> getQueryInterpretationConfig() {
-        return this.queryInterpretationConfig == null ? Output.empty() : this.queryInterpretationConfig;
+        return this.queryInterpretationConfig == null ? Codegen.empty() : this.queryInterpretationConfig;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Boolean> returnResultThumbnailUrls;
 
     public Output<Boolean> getReturnResultThumbnailUrls() {
-        return this.returnResultThumbnailUrls == null ? Output.empty() : this.returnResultThumbnailUrls;
+        return this.returnResultThumbnailUrls == null ? Codegen.empty() : this.returnResultThumbnailUrls;
     }
 
     /**
@@ -118,7 +119,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<ScoringConfigArgs> scoringConfig;
 
     public Output<ScoringConfigArgs> getScoringConfig() {
-        return this.scoringConfig == null ? Output.empty() : this.scoringConfig;
+        return this.scoringConfig == null ? Codegen.empty() : this.scoringConfig;
     }
 
     /**
@@ -129,7 +130,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<SourceConfigArgs>> sourceConfig;
 
     public Output<List<SourceConfigArgs>> getSourceConfig() {
-        return this.sourceConfig == null ? Output.empty() : this.sourceConfig;
+        return this.sourceConfig == null ? Codegen.empty() : this.sourceConfig;
     }
 
     public SearchApplicationArgs(
@@ -156,16 +157,16 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
     }
 
     private SearchApplicationArgs() {
-        this.dataSourceRestrictions = Output.empty();
-        this.defaultFacetOptions = Output.empty();
-        this.defaultSortOptions = Output.empty();
-        this.displayName = Output.empty();
-        this.enableAuditLog = Output.empty();
-        this.name = Output.empty();
-        this.queryInterpretationConfig = Output.empty();
-        this.returnResultThumbnailUrls = Output.empty();
-        this.scoringConfig = Output.empty();
-        this.sourceConfig = Output.empty();
+        this.dataSourceRestrictions = Codegen.empty();
+        this.defaultFacetOptions = Codegen.empty();
+        this.defaultSortOptions = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.enableAuditLog = Codegen.empty();
+        this.name = Codegen.empty();
+        this.queryInterpretationConfig = Codegen.empty();
+        this.returnResultThumbnailUrls = Codegen.empty();
+        this.scoringConfig = Codegen.empty();
+        this.sourceConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -211,7 +212,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder dataSourceRestrictions(@Nullable List<DataSourceRestrictionArgs> dataSourceRestrictions) {
-            this.dataSourceRestrictions = Output.ofNullable(dataSourceRestrictions);
+            this.dataSourceRestrictions = Codegen.ofNullable(dataSourceRestrictions);
             return this;
         }
         public Builder dataSourceRestrictions(DataSourceRestrictionArgs... dataSourceRestrictions) {
@@ -222,7 +223,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder defaultFacetOptions(@Nullable List<FacetOptionsArgs> defaultFacetOptions) {
-            this.defaultFacetOptions = Output.ofNullable(defaultFacetOptions);
+            this.defaultFacetOptions = Codegen.ofNullable(defaultFacetOptions);
             return this;
         }
         public Builder defaultFacetOptions(FacetOptionsArgs... defaultFacetOptions) {
@@ -233,7 +234,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder defaultSortOptions(@Nullable SortOptionsArgs defaultSortOptions) {
-            this.defaultSortOptions = Output.ofNullable(defaultSortOptions);
+            this.defaultSortOptions = Codegen.ofNullable(defaultSortOptions);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -241,7 +242,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder enableAuditLog(@Nullable Output<Boolean> enableAuditLog) {
@@ -249,7 +250,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder enableAuditLog(@Nullable Boolean enableAuditLog) {
-            this.enableAuditLog = Output.ofNullable(enableAuditLog);
+            this.enableAuditLog = Codegen.ofNullable(enableAuditLog);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -257,7 +258,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder queryInterpretationConfig(@Nullable Output<QueryInterpretationConfigArgs> queryInterpretationConfig) {
@@ -265,7 +266,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder queryInterpretationConfig(@Nullable QueryInterpretationConfigArgs queryInterpretationConfig) {
-            this.queryInterpretationConfig = Output.ofNullable(queryInterpretationConfig);
+            this.queryInterpretationConfig = Codegen.ofNullable(queryInterpretationConfig);
             return this;
         }
         public Builder returnResultThumbnailUrls(@Nullable Output<Boolean> returnResultThumbnailUrls) {
@@ -273,7 +274,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder returnResultThumbnailUrls(@Nullable Boolean returnResultThumbnailUrls) {
-            this.returnResultThumbnailUrls = Output.ofNullable(returnResultThumbnailUrls);
+            this.returnResultThumbnailUrls = Codegen.ofNullable(returnResultThumbnailUrls);
             return this;
         }
         public Builder scoringConfig(@Nullable Output<ScoringConfigArgs> scoringConfig) {
@@ -281,7 +282,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder scoringConfig(@Nullable ScoringConfigArgs scoringConfig) {
-            this.scoringConfig = Output.ofNullable(scoringConfig);
+            this.scoringConfig = Codegen.ofNullable(scoringConfig);
             return this;
         }
         public Builder sourceConfig(@Nullable Output<List<SourceConfigArgs>> sourceConfig) {
@@ -289,7 +290,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder sourceConfig(@Nullable List<SourceConfigArgs> sourceConfig) {
-            this.sourceConfig = Output.ofNullable(sourceConfig);
+            this.sourceConfig = Codegen.ofNullable(sourceConfig);
             return this;
         }
         public Builder sourceConfig(SourceConfigArgs... sourceConfig) {

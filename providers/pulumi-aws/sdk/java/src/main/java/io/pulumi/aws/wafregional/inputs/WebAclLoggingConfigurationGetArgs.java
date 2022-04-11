@@ -6,6 +6,7 @@ package io.pulumi.aws.wafregional.inputs;
 import io.pulumi.aws.wafregional.inputs.WebAclLoggingConfigurationRedactedFieldsGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class WebAclLoggingConfigurationGetArgs extends io.pulumi.resources
       private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldsGetArgs> redactedFields;
 
     public Output<WebAclLoggingConfigurationRedactedFieldsGetArgs> getRedactedFields() {
-        return this.redactedFields == null ? Output.empty() : this.redactedFields;
+        return this.redactedFields == null ? Codegen.empty() : this.redactedFields;
     }
 
     public WebAclLoggingConfigurationGetArgs(
@@ -45,8 +46,8 @@ public final class WebAclLoggingConfigurationGetArgs extends io.pulumi.resources
     }
 
     private WebAclLoggingConfigurationGetArgs() {
-        this.logDestination = Output.empty();
-        this.redactedFields = Output.empty();
+        this.logDestination = Codegen.empty();
+        this.redactedFields = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class WebAclLoggingConfigurationGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder redactedFields(@Nullable WebAclLoggingConfigurationRedactedFieldsGetArgs redactedFields) {
-            this.redactedFields = Output.ofNullable(redactedFields);
+            this.redactedFields = Codegen.ofNullable(redactedFields);
             return this;
         }        public WebAclLoggingConfigurationGetArgs build() {
             return new WebAclLoggingConfigurationGetArgs(logDestination, redactedFields);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.vpcaccess.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class ConnectorSubnetGetArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ConnectorSubnetGetArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> projectId;
 
     public Output<String> getProjectId() {
-        return this.projectId == null ? Output.empty() : this.projectId;
+        return this.projectId == null ? Codegen.empty() : this.projectId;
     }
 
     public ConnectorSubnetGetArgs(
@@ -45,8 +46,8 @@ public final class ConnectorSubnetGetArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ConnectorSubnetGetArgs() {
-        this.name = Output.empty();
-        this.projectId = Output.empty();
+        this.name = Codegen.empty();
+        this.projectId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class ConnectorSubnetGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder projectId(@Nullable Output<String> projectId) {
@@ -84,7 +85,7 @@ public final class ConnectorSubnetGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder projectId(@Nullable String projectId) {
-            this.projectId = Output.ofNullable(projectId);
+            this.projectId = Codegen.ofNullable(projectId);
             return this;
         }        public ConnectorSubnetGetArgs build() {
             return new ConnectorSubnetGetArgs(name, projectId);

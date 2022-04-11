@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -61,9 +62,9 @@ public final class MetricDimensionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private MetricDimensionArgs() {
-        this.name = Output.empty();
-        this.operator = Output.empty();
-        this.values = Output.empty();
+        this.name = Codegen.empty();
+        this.operator = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {

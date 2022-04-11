@@ -6,6 +6,7 @@ package io.pulumi.gcp.iap;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.TunnelIamBindingArgs;
 import io.pulumi.gcp.iap.inputs.TunnelIamBindingState;
@@ -155,7 +156,7 @@ public class TunnelIamBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TunnelIamBinding(String name, TunnelIamBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:iap/tunnelIamBinding:TunnelIamBinding", name, args == null ? TunnelIamBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:iap/tunnelIamBinding:TunnelIamBinding", name, args == null ? TunnelIamBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TunnelIamBinding(String name, Output<String> id, @Nullable TunnelIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

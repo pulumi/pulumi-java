@@ -5,6 +5,7 @@ package io.pulumi.googlenative.storage_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class BucketLifecycleRuleItemActionArgs extends io.pulumi.resources
       private final @Nullable Output<String> storageClass;
 
     public Output<String> getStorageClass() {
-        return this.storageClass == null ? Output.empty() : this.storageClass;
+        return this.storageClass == null ? Codegen.empty() : this.storageClass;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class BucketLifecycleRuleItemActionArgs extends io.pulumi.resources
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public BucketLifecycleRuleItemActionArgs(
@@ -48,8 +49,8 @@ public final class BucketLifecycleRuleItemActionArgs extends io.pulumi.resources
     }
 
     private BucketLifecycleRuleItemActionArgs() {
-        this.storageClass = Output.empty();
-        this.type = Output.empty();
+        this.storageClass = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class BucketLifecycleRuleItemActionArgs extends io.pulumi.resources
             return this;
         }
         public Builder storageClass(@Nullable String storageClass) {
-            this.storageClass = Output.ofNullable(storageClass);
+            this.storageClass = Codegen.ofNullable(storageClass);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -87,7 +88,7 @@ public final class BucketLifecycleRuleItemActionArgs extends io.pulumi.resources
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public BucketLifecycleRuleItemActionArgs build() {
             return new BucketLifecycleRuleItemActionArgs(storageClass, type);

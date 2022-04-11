@@ -5,6 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class CorsPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> allowedHeaders;
 
     public Output<String> getAllowedHeaders() {
-        return this.allowedHeaders == null ? Output.empty() : this.allowedHeaders;
+        return this.allowedHeaders == null ? Codegen.empty() : this.allowedHeaders;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class CorsPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> allowedMethods;
 
     public Output<String> getAllowedMethods() {
-        return this.allowedMethods == null ? Output.empty() : this.allowedMethods;
+        return this.allowedMethods == null ? Codegen.empty() : this.allowedMethods;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class CorsPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> exposedHeaders;
 
     public Output<String> getExposedHeaders() {
-        return this.exposedHeaders == null ? Output.empty() : this.exposedHeaders;
+        return this.exposedHeaders == null ? Codegen.empty() : this.exposedHeaders;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class CorsPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> maxAgeInSeconds;
 
     public Output<Double> getMaxAgeInSeconds() {
-        return this.maxAgeInSeconds == null ? Output.empty() : this.maxAgeInSeconds;
+        return this.maxAgeInSeconds == null ? Codegen.empty() : this.maxAgeInSeconds;
     }
 
     public CorsPolicyArgs(
@@ -88,11 +89,11 @@ public final class CorsPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CorsPolicyArgs() {
-        this.allowedHeaders = Output.empty();
-        this.allowedMethods = Output.empty();
-        this.allowedOrigins = Output.empty();
-        this.exposedHeaders = Output.empty();
-        this.maxAgeInSeconds = Output.empty();
+        this.allowedHeaders = Codegen.empty();
+        this.allowedMethods = Codegen.empty();
+        this.allowedOrigins = Codegen.empty();
+        this.exposedHeaders = Codegen.empty();
+        this.maxAgeInSeconds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class CorsPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowedHeaders(@Nullable String allowedHeaders) {
-            this.allowedHeaders = Output.ofNullable(allowedHeaders);
+            this.allowedHeaders = Codegen.ofNullable(allowedHeaders);
             return this;
         }
         public Builder allowedMethods(@Nullable Output<String> allowedMethods) {
@@ -136,7 +137,7 @@ public final class CorsPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowedMethods(@Nullable String allowedMethods) {
-            this.allowedMethods = Output.ofNullable(allowedMethods);
+            this.allowedMethods = Codegen.ofNullable(allowedMethods);
             return this;
         }
         public Builder allowedOrigins(Output<String> allowedOrigins) {
@@ -152,7 +153,7 @@ public final class CorsPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder exposedHeaders(@Nullable String exposedHeaders) {
-            this.exposedHeaders = Output.ofNullable(exposedHeaders);
+            this.exposedHeaders = Codegen.ofNullable(exposedHeaders);
             return this;
         }
         public Builder maxAgeInSeconds(@Nullable Output<Double> maxAgeInSeconds) {
@@ -160,7 +161,7 @@ public final class CorsPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxAgeInSeconds(@Nullable Double maxAgeInSeconds) {
-            this.maxAgeInSeconds = Output.ofNullable(maxAgeInSeconds);
+            this.maxAgeInSeconds = Codegen.ofNullable(maxAgeInSeconds);
             return this;
         }        public CorsPolicyArgs build() {
             return new CorsPolicyArgs(allowedHeaders, allowedMethods, allowedOrigins, exposedHeaders, maxAgeInSeconds);

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.EntityReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -48,8 +49,8 @@ public final class PackageStoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PackageStoreArgs() {
-        this.name = Output.empty();
-        this.packageStoreLinkedService = Output.empty();
+        this.name = Codegen.empty();
+        this.packageStoreLinkedService = Codegen.empty();
     }
 
     public static Builder builder() {

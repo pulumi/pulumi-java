@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,7 +34,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriAct
     }
 
     private GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs() {
-        this.uri = Output.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {

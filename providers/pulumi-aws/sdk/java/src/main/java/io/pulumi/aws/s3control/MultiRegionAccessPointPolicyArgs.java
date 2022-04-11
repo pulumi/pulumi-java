@@ -6,6 +6,7 @@ package io.pulumi.aws.s3control;
 import io.pulumi.aws.s3control.inputs.MultiRegionAccessPointPolicyDetailsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ public final class MultiRegionAccessPointPolicyArgs extends io.pulumi.resources.
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
-        return this.accountId == null ? Output.empty() : this.accountId;
+        return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class MultiRegionAccessPointPolicyArgs extends io.pulumi.resources.
     }
 
     private MultiRegionAccessPointPolicyArgs() {
-        this.accountId = Output.empty();
-        this.details = Output.empty();
+        this.accountId = Codegen.empty();
+        this.details = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class MultiRegionAccessPointPolicyArgs extends io.pulumi.resources.
             return this;
         }
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Output.ofNullable(accountId);
+            this.accountId = Codegen.ofNullable(accountId);
             return this;
         }
         public Builder details(Output<MultiRegionAccessPointPolicyDetailsArgs> details) {

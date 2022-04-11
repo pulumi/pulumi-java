@@ -5,6 +5,7 @@ package io.pulumi.aws.gamelift.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class AliasRoutingStrategyArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> fleetId;
 
     public Output<String> getFleetId() {
-        return this.fleetId == null ? Output.empty() : this.fleetId;
+        return this.fleetId == null ? Codegen.empty() : this.fleetId;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class AliasRoutingStrategyArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {
-        return this.message == null ? Output.empty() : this.message;
+        return this.message == null ? Codegen.empty() : this.message;
     }
 
     /**
@@ -57,9 +58,9 @@ public final class AliasRoutingStrategyArgs extends io.pulumi.resources.Resource
     }
 
     private AliasRoutingStrategyArgs() {
-        this.fleetId = Output.empty();
-        this.message = Output.empty();
-        this.type = Output.empty();
+        this.fleetId = Codegen.empty();
+        this.message = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class AliasRoutingStrategyArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder fleetId(@Nullable String fleetId) {
-            this.fleetId = Output.ofNullable(fleetId);
+            this.fleetId = Codegen.ofNullable(fleetId);
             return this;
         }
         public Builder message(@Nullable Output<String> message) {
@@ -99,7 +100,7 @@ public final class AliasRoutingStrategyArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder message(@Nullable String message) {
-            this.message = Output.ofNullable(message);
+            this.message = Codegen.ofNullable(message);
             return this;
         }
         public Builder type(Output<String> type) {

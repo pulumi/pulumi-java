@@ -5,6 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -49,8 +50,8 @@ public final class DashboardIntegerParameterArgs extends io.pulumi.resources.Res
     }
 
     private DashboardIntegerParameterArgs() {
-        this.name = Output.empty();
-        this.values = Output.empty();
+        this.name = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.domains_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.domains_v1beta1.inputs.DsRecordArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class CustomDnsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DsRecordArgs>> dsRecords;
 
     public Output<List<DsRecordArgs>> getDsRecords() {
-        return this.dsRecords == null ? Output.empty() : this.dsRecords;
+        return this.dsRecords == null ? Codegen.empty() : this.dsRecords;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class CustomDnsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CustomDnsArgs() {
-        this.dsRecords = Output.empty();
-        this.nameServers = Output.empty();
+        this.dsRecords = Codegen.empty();
+        this.nameServers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class CustomDnsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dsRecords(@Nullable List<DsRecordArgs> dsRecords) {
-            this.dsRecords = Output.ofNullable(dsRecords);
+            this.dsRecords = Codegen.ofNullable(dsRecords);
             return this;
         }
         public Builder dsRecords(DsRecordArgs... dsRecords) {

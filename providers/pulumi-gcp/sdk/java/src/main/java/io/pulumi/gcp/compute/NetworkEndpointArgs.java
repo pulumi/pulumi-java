@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -72,7 +73,7 @@ public final class NetworkEndpointArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class NetworkEndpointArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public NetworkEndpointArgs(
@@ -102,12 +103,12 @@ public final class NetworkEndpointArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private NetworkEndpointArgs() {
-        this.instance = Output.empty();
-        this.ipAddress = Output.empty();
-        this.networkEndpointGroup = Output.empty();
-        this.port = Output.empty();
-        this.project = Output.empty();
-        this.zone = Output.empty();
+        this.instance = Codegen.empty();
+        this.ipAddress = Codegen.empty();
+        this.networkEndpointGroup = Codegen.empty();
+        this.port = Codegen.empty();
+        this.project = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -177,7 +178,7 @@ public final class NetworkEndpointArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder zone(@Nullable Output<String> zone) {
@@ -185,7 +186,7 @@ public final class NetworkEndpointArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public NetworkEndpointArgs build() {
             return new NetworkEndpointArgs(instance, ipAddress, networkEndpointGroup, port, project, zone);

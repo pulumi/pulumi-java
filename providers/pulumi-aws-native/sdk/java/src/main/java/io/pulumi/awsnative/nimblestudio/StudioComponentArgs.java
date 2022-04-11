@@ -11,6 +11,7 @@ import io.pulumi.awsnative.nimblestudio.inputs.StudioComponentScriptParameterKey
 import io.pulumi.awsnative.nimblestudio.inputs.StudioComponentTagsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<StudioComponentConfigurationArgs> configuration;
 
     public Output<StudioComponentConfigurationArgs> getConfiguration() {
-        return this.configuration == null ? Output.empty() : this.configuration;
+        return this.configuration == null ? Codegen.empty() : this.configuration;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<String>> ec2SecurityGroupIds;
 
     public Output<List<String>> getEc2SecurityGroupIds() {
-        return this.ec2SecurityGroupIds == null ? Output.empty() : this.ec2SecurityGroupIds;
+        return this.ec2SecurityGroupIds == null ? Codegen.empty() : this.ec2SecurityGroupIds;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<StudioComponentInitializationScriptArgs>> initializationScripts;
 
     public Output<List<StudioComponentInitializationScriptArgs>> getInitializationScripts() {
-        return this.initializationScripts == null ? Output.empty() : this.initializationScripts;
+        return this.initializationScripts == null ? Codegen.empty() : this.initializationScripts;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<StudioComponentScriptParameterKeyValueArgs>> scriptParameters;
 
     public Output<List<StudioComponentScriptParameterKeyValueArgs>> getScriptParameters() {
-        return this.scriptParameters == null ? Output.empty() : this.scriptParameters;
+        return this.scriptParameters == null ? Codegen.empty() : this.scriptParameters;
     }
 
     /**
@@ -98,14 +99,14 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<StudioComponentSubtype> subtype;
 
     public Output<StudioComponentSubtype> getSubtype() {
-        return this.subtype == null ? Output.empty() : this.subtype;
+        return this.subtype == null ? Codegen.empty() : this.subtype;
     }
 
     @Import(name="tags")
       private final @Nullable Output<StudioComponentTagsArgs> tags;
 
     public Output<StudioComponentTagsArgs> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="type", required=true)
@@ -139,16 +140,16 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private StudioComponentArgs() {
-        this.configuration = Output.empty();
-        this.description = Output.empty();
-        this.ec2SecurityGroupIds = Output.empty();
-        this.initializationScripts = Output.empty();
-        this.name = Output.empty();
-        this.scriptParameters = Output.empty();
-        this.studioId = Output.empty();
-        this.subtype = Output.empty();
-        this.tags = Output.empty();
-        this.type = Output.empty();
+        this.configuration = Codegen.empty();
+        this.description = Codegen.empty();
+        this.ec2SecurityGroupIds = Codegen.empty();
+        this.initializationScripts = Codegen.empty();
+        this.name = Codegen.empty();
+        this.scriptParameters = Codegen.empty();
+        this.studioId = Codegen.empty();
+        this.subtype = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -194,7 +195,7 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder configuration(@Nullable StudioComponentConfigurationArgs configuration) {
-            this.configuration = Output.ofNullable(configuration);
+            this.configuration = Codegen.ofNullable(configuration);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -202,7 +203,7 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder ec2SecurityGroupIds(@Nullable Output<List<String>> ec2SecurityGroupIds) {
@@ -210,7 +211,7 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder ec2SecurityGroupIds(@Nullable List<String> ec2SecurityGroupIds) {
-            this.ec2SecurityGroupIds = Output.ofNullable(ec2SecurityGroupIds);
+            this.ec2SecurityGroupIds = Codegen.ofNullable(ec2SecurityGroupIds);
             return this;
         }
         public Builder ec2SecurityGroupIds(String... ec2SecurityGroupIds) {
@@ -221,7 +222,7 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder initializationScripts(@Nullable List<StudioComponentInitializationScriptArgs> initializationScripts) {
-            this.initializationScripts = Output.ofNullable(initializationScripts);
+            this.initializationScripts = Codegen.ofNullable(initializationScripts);
             return this;
         }
         public Builder initializationScripts(StudioComponentInitializationScriptArgs... initializationScripts) {
@@ -232,7 +233,7 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder scriptParameters(@Nullable Output<List<StudioComponentScriptParameterKeyValueArgs>> scriptParameters) {
@@ -240,7 +241,7 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder scriptParameters(@Nullable List<StudioComponentScriptParameterKeyValueArgs> scriptParameters) {
-            this.scriptParameters = Output.ofNullable(scriptParameters);
+            this.scriptParameters = Codegen.ofNullable(scriptParameters);
             return this;
         }
         public Builder scriptParameters(StudioComponentScriptParameterKeyValueArgs... scriptParameters) {
@@ -259,7 +260,7 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder subtype(@Nullable StudioComponentSubtype subtype) {
-            this.subtype = Output.ofNullable(subtype);
+            this.subtype = Codegen.ofNullable(subtype);
             return this;
         }
         public Builder tags(@Nullable Output<StudioComponentTagsArgs> tags) {
@@ -267,7 +268,7 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable StudioComponentTagsArgs tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder type(Output<StudioComponentType> type) {

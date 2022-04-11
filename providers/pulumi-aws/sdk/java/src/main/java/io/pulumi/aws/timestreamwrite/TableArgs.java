@@ -7,6 +7,7 @@ import io.pulumi.aws.timestreamwrite.inputs.TableMagneticStoreWritePropertiesArg
 import io.pulumi.aws.timestreamwrite.inputs.TableRetentionPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -36,7 +37,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TableMagneticStoreWritePropertiesArgs> magneticStoreWriteProperties;
 
     public Output<TableMagneticStoreWritePropertiesArgs> getMagneticStoreWriteProperties() {
-        return this.magneticStoreWriteProperties == null ? Output.empty() : this.magneticStoreWriteProperties;
+        return this.magneticStoreWriteProperties == null ? Codegen.empty() : this.magneticStoreWriteProperties;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TableRetentionPropertiesArgs> retentionProperties;
 
     public Output<TableRetentionPropertiesArgs> getRetentionProperties() {
-        return this.retentionProperties == null ? Output.empty() : this.retentionProperties;
+        return this.retentionProperties == null ? Codegen.empty() : this.retentionProperties;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public TableArgs(
@@ -86,11 +87,11 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TableArgs() {
-        this.databaseName = Output.empty();
-        this.magneticStoreWriteProperties = Output.empty();
-        this.retentionProperties = Output.empty();
-        this.tableName = Output.empty();
-        this.tags = Output.empty();
+        this.databaseName = Codegen.empty();
+        this.magneticStoreWriteProperties = Codegen.empty();
+        this.retentionProperties = Codegen.empty();
+        this.tableName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -134,7 +135,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder magneticStoreWriteProperties(@Nullable TableMagneticStoreWritePropertiesArgs magneticStoreWriteProperties) {
-            this.magneticStoreWriteProperties = Output.ofNullable(magneticStoreWriteProperties);
+            this.magneticStoreWriteProperties = Codegen.ofNullable(magneticStoreWriteProperties);
             return this;
         }
         public Builder retentionProperties(@Nullable Output<TableRetentionPropertiesArgs> retentionProperties) {
@@ -142,7 +143,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retentionProperties(@Nullable TableRetentionPropertiesArgs retentionProperties) {
-            this.retentionProperties = Output.ofNullable(retentionProperties);
+            this.retentionProperties = Codegen.ofNullable(retentionProperties);
             return this;
         }
         public Builder tableName(Output<String> tableName) {
@@ -158,7 +159,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public TableArgs build() {
             return new TableArgs(databaseName, magneticStoreWriteProperties, retentionProperties, tableName, tags);

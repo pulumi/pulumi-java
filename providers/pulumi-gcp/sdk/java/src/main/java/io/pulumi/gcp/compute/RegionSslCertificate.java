@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.RegionSslCertificateArgs;
 import io.pulumi.gcp.compute.inputs.RegionSslCertificateState;
@@ -241,7 +242,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RegionSslCertificate(String name, RegionSslCertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/regionSslCertificate:RegionSslCertificate", name, args == null ? RegionSslCertificateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/regionSslCertificate:RegionSslCertificate", name, args == null ? RegionSslCertificateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegionSslCertificate(String name, Output<String> id, @Nullable RegionSslCertificateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

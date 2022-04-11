@@ -5,6 +5,7 @@ package io.pulumi.gcp.memcache;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.memcache.inputs.InstanceMemcacheParametersArgs;
 import io.pulumi.gcp.memcache.inputs.InstanceNodeConfigArgs;
 import java.lang.Integer;
@@ -28,7 +29,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> authorizedNetwork;
 
     public Output<String> getAuthorizedNetwork() {
-        return this.authorizedNetwork == null ? Output.empty() : this.authorizedNetwork;
+        return this.authorizedNetwork == null ? Codegen.empty() : this.authorizedNetwork;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<InstanceMemcacheParametersArgs> memcacheParameters;
 
     public Output<InstanceMemcacheParametersArgs> getMemcacheParameters() {
-        return this.memcacheParameters == null ? Output.empty() : this.memcacheParameters;
+        return this.memcacheParameters == null ? Codegen.empty() : this.memcacheParameters;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> memcacheVersion;
 
     public Output<String> getMemcacheVersion() {
-        return this.memcacheVersion == null ? Output.empty() : this.memcacheVersion;
+        return this.memcacheVersion == null ? Codegen.empty() : this.memcacheVersion;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -146,7 +147,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> zones;
 
     public Output<List<String>> getZones() {
-        return this.zones == null ? Output.empty() : this.zones;
+        return this.zones == null ? Codegen.empty() : this.zones;
     }
 
     public InstanceArgs(
@@ -175,17 +176,17 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceArgs() {
-        this.authorizedNetwork = Output.empty();
-        this.displayName = Output.empty();
-        this.labels = Output.empty();
-        this.memcacheParameters = Output.empty();
-        this.memcacheVersion = Output.empty();
-        this.name = Output.empty();
-        this.nodeConfig = Output.empty();
-        this.nodeCount = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.zones = Output.empty();
+        this.authorizedNetwork = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.memcacheParameters = Codegen.empty();
+        this.memcacheVersion = Codegen.empty();
+        this.name = Codegen.empty();
+        this.nodeConfig = Codegen.empty();
+        this.nodeCount = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.zones = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -233,7 +234,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authorizedNetwork(@Nullable String authorizedNetwork) {
-            this.authorizedNetwork = Output.ofNullable(authorizedNetwork);
+            this.authorizedNetwork = Codegen.ofNullable(authorizedNetwork);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -241,7 +242,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -249,7 +250,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder memcacheParameters(@Nullable Output<InstanceMemcacheParametersArgs> memcacheParameters) {
@@ -257,7 +258,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder memcacheParameters(@Nullable InstanceMemcacheParametersArgs memcacheParameters) {
-            this.memcacheParameters = Output.ofNullable(memcacheParameters);
+            this.memcacheParameters = Codegen.ofNullable(memcacheParameters);
             return this;
         }
         public Builder memcacheVersion(@Nullable Output<String> memcacheVersion) {
@@ -265,7 +266,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder memcacheVersion(@Nullable String memcacheVersion) {
-            this.memcacheVersion = Output.ofNullable(memcacheVersion);
+            this.memcacheVersion = Codegen.ofNullable(memcacheVersion);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -273,7 +274,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder nodeConfig(Output<InstanceNodeConfigArgs> nodeConfig) {
@@ -297,7 +298,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -305,7 +306,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder zones(@Nullable Output<List<String>> zones) {
@@ -313,7 +314,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = Output.ofNullable(zones);
+            this.zones = Codegen.ofNullable(zones);
             return this;
         }
         public Builder zones(String... zones) {

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.configuration;
 import io.pulumi.awsnative.configuration.inputs.StoredQueryTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ public final class StoredQueryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> queryDescription;
 
     public Output<String> getQueryDescription() {
-        return this.queryDescription == null ? Output.empty() : this.queryDescription;
+        return this.queryDescription == null ? Codegen.empty() : this.queryDescription;
     }
 
     @Import(name="queryExpression", required=true)
@@ -45,7 +46,7 @@ public final class StoredQueryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<StoredQueryTagArgs>> tags;
 
     public Output<List<StoredQueryTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public StoredQueryArgs(
@@ -60,10 +61,10 @@ public final class StoredQueryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StoredQueryArgs() {
-        this.queryDescription = Output.empty();
-        this.queryExpression = Output.empty();
-        this.queryName = Output.empty();
-        this.tags = Output.empty();
+        this.queryDescription = Codegen.empty();
+        this.queryExpression = Codegen.empty();
+        this.queryName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class StoredQueryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder queryDescription(@Nullable String queryDescription) {
-            this.queryDescription = Output.ofNullable(queryDescription);
+            this.queryDescription = Codegen.ofNullable(queryDescription);
             return this;
         }
         public Builder queryExpression(Output<String> queryExpression) {
@@ -121,7 +122,7 @@ public final class StoredQueryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<StoredQueryTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(StoredQueryTagArgs... tags) {

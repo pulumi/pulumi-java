@@ -7,6 +7,7 @@ import io.pulumi.azurenative.confluent.inputs.OrganizationResourcePropertiesOffe
 import io.pulumi.azurenative.confluent.inputs.OrganizationResourcePropertiesUserDetailArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<OrganizationResourcePropertiesOfferDetailArgs> offerDetail;
 
     public Output<OrganizationResourcePropertiesOfferDetailArgs> getOfferDetail() {
-        return this.offerDetail == null ? Output.empty() : this.offerDetail;
+        return this.offerDetail == null ? Codegen.empty() : this.offerDetail;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> organizationName;
 
     public Output<String> getOrganizationName() {
-        return this.organizationName == null ? Output.empty() : this.organizationName;
+        return this.organizationName == null ? Codegen.empty() : this.organizationName;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<OrganizationResourcePropertiesUserDetailArgs> userDetail;
 
     public Output<OrganizationResourcePropertiesUserDetailArgs> getUserDetail() {
-        return this.userDetail == null ? Output.empty() : this.userDetail;
+        return this.userDetail == null ? Codegen.empty() : this.userDetail;
     }
 
     public OrganizationArgs(
@@ -99,12 +100,12 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OrganizationArgs() {
-        this.location = Output.empty();
-        this.offerDetail = Output.empty();
-        this.organizationName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.userDetail = Output.empty();
+        this.location = Codegen.empty();
+        this.offerDetail = Codegen.empty();
+        this.organizationName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.userDetail = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder offerDetail(@Nullable Output<OrganizationResourcePropertiesOfferDetailArgs> offerDetail) {
@@ -150,7 +151,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder offerDetail(@Nullable OrganizationResourcePropertiesOfferDetailArgs offerDetail) {
-            this.offerDetail = Output.ofNullable(offerDetail);
+            this.offerDetail = Codegen.ofNullable(offerDetail);
             return this;
         }
         public Builder organizationName(@Nullable Output<String> organizationName) {
@@ -158,7 +159,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder organizationName(@Nullable String organizationName) {
-            this.organizationName = Output.ofNullable(organizationName);
+            this.organizationName = Codegen.ofNullable(organizationName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -174,7 +175,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder userDetail(@Nullable Output<OrganizationResourcePropertiesUserDetailArgs> userDetail) {
@@ -182,7 +183,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userDetail(@Nullable OrganizationResourcePropertiesUserDetailArgs userDetail) {
-            this.userDetail = Output.ofNullable(userDetail);
+            this.userDetail = Codegen.ofNullable(userDetail);
             return this;
         }        public OrganizationArgs build() {
             return new OrganizationArgs(location, offerDetail, organizationName, resourceGroupName, tags, userDetail);

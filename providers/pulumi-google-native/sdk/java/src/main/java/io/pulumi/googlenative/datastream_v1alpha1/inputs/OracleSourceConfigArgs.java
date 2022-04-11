@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.OracleRdbmsArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class OracleSourceConfigArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<OracleRdbmsArgs> allowlist;
 
     public Output<OracleRdbmsArgs> getAllowlist() {
-        return this.allowlist == null ? Output.empty() : this.allowlist;
+        return this.allowlist == null ? Codegen.empty() : this.allowlist;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class OracleSourceConfigArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<OracleRdbmsArgs> rejectlist;
 
     public Output<OracleRdbmsArgs> getRejectlist() {
-        return this.rejectlist == null ? Output.empty() : this.rejectlist;
+        return this.rejectlist == null ? Codegen.empty() : this.rejectlist;
     }
 
     public OracleSourceConfigArgs(
@@ -48,8 +49,8 @@ public final class OracleSourceConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     private OracleSourceConfigArgs() {
-        this.allowlist = Output.empty();
-        this.rejectlist = Output.empty();
+        this.allowlist = Codegen.empty();
+        this.rejectlist = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class OracleSourceConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder allowlist(@Nullable OracleRdbmsArgs allowlist) {
-            this.allowlist = Output.ofNullable(allowlist);
+            this.allowlist = Codegen.ofNullable(allowlist);
             return this;
         }
         public Builder rejectlist(@Nullable Output<OracleRdbmsArgs> rejectlist) {
@@ -87,7 +88,7 @@ public final class OracleSourceConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder rejectlist(@Nullable OracleRdbmsArgs rejectlist) {
-            this.rejectlist = Output.ofNullable(rejectlist);
+            this.rejectlist = Codegen.ofNullable(rejectlist);
             return this;
         }        public OracleSourceConfigArgs build() {
             return new OracleSourceConfigArgs(allowlist, rejectlist);

@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -35,8 +36,8 @@ public final class ServiceTaskSpecPlacementPlatformArgs extends io.pulumi.resour
     }
 
     private ServiceTaskSpecPlacementPlatformArgs() {
-        this.architecture = Output.empty();
-        this.os = Output.empty();
+        this.architecture = Codegen.empty();
+        this.os = Codegen.empty();
     }
 
     public static Builder builder() {

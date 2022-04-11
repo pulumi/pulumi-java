@@ -7,6 +7,7 @@ import io.pulumi.awsnative.mediapackage.enums.PackagingConfigurationHlsEncryptio
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationSpekeKeyProviderArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class PackagingConfigurationHlsEncryptionArgs extends io.pulumi.res
       private final @Nullable Output<String> constantInitializationVector;
 
     public Output<String> getConstantInitializationVector() {
-        return this.constantInitializationVector == null ? Output.empty() : this.constantInitializationVector;
+        return this.constantInitializationVector == null ? Codegen.empty() : this.constantInitializationVector;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class PackagingConfigurationHlsEncryptionArgs extends io.pulumi.res
       private final @Nullable Output<PackagingConfigurationHlsEncryptionEncryptionMethod> encryptionMethod;
 
     public Output<PackagingConfigurationHlsEncryptionEncryptionMethod> getEncryptionMethod() {
-        return this.encryptionMethod == null ? Output.empty() : this.encryptionMethod;
+        return this.encryptionMethod == null ? Codegen.empty() : this.encryptionMethod;
     }
 
     @Import(name="spekeKeyProvider", required=true)
@@ -59,9 +60,9 @@ public final class PackagingConfigurationHlsEncryptionArgs extends io.pulumi.res
     }
 
     private PackagingConfigurationHlsEncryptionArgs() {
-        this.constantInitializationVector = Output.empty();
-        this.encryptionMethod = Output.empty();
-        this.spekeKeyProvider = Output.empty();
+        this.constantInitializationVector = Codegen.empty();
+        this.encryptionMethod = Codegen.empty();
+        this.spekeKeyProvider = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class PackagingConfigurationHlsEncryptionArgs extends io.pulumi.res
             return this;
         }
         public Builder constantInitializationVector(@Nullable String constantInitializationVector) {
-            this.constantInitializationVector = Output.ofNullable(constantInitializationVector);
+            this.constantInitializationVector = Codegen.ofNullable(constantInitializationVector);
             return this;
         }
         public Builder encryptionMethod(@Nullable Output<PackagingConfigurationHlsEncryptionEncryptionMethod> encryptionMethod) {
@@ -101,7 +102,7 @@ public final class PackagingConfigurationHlsEncryptionArgs extends io.pulumi.res
             return this;
         }
         public Builder encryptionMethod(@Nullable PackagingConfigurationHlsEncryptionEncryptionMethod encryptionMethod) {
-            this.encryptionMethod = Output.ofNullable(encryptionMethod);
+            this.encryptionMethod = Codegen.ofNullable(encryptionMethod);
             return this;
         }
         public Builder spekeKeyProvider(Output<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider) {

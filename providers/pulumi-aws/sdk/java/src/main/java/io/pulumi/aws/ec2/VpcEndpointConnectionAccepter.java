@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.inputs.VpcEndpointConnectionAccepterState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -93,7 +94,7 @@ public class VpcEndpointConnectionAccepter extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public VpcEndpointConnectionAccepter(String name, VpcEndpointConnectionAccepterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/vpcEndpointConnectionAccepter:VpcEndpointConnectionAccepter", name, args == null ? VpcEndpointConnectionAccepterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/vpcEndpointConnectionAccepter:VpcEndpointConnectionAccepter", name, args == null ? VpcEndpointConnectionAccepterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VpcEndpointConnectionAccepter(String name, Output<String> id, @Nullable VpcEndpointConnectionAccepterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

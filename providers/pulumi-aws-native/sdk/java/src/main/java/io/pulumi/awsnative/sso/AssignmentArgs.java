@@ -7,6 +7,7 @@ import io.pulumi.awsnative.sso.enums.AssignmentPrincipalType;
 import io.pulumi.awsnative.sso.enums.AssignmentTargetType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -97,12 +98,12 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AssignmentArgs() {
-        this.instanceArn = Output.empty();
-        this.permissionSetArn = Output.empty();
-        this.principalId = Output.empty();
-        this.principalType = Output.empty();
-        this.targetId = Output.empty();
-        this.targetType = Output.empty();
+        this.instanceArn = Codegen.empty();
+        this.permissionSetArn = Codegen.empty();
+        this.principalId = Codegen.empty();
+        this.principalType = Codegen.empty();
+        this.targetId = Codegen.empty();
+        this.targetType = Codegen.empty();
     }
 
     public static Builder builder() {

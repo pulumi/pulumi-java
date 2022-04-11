@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class VpcEndpointConnectionAccepterArgs extends io.pulumi.resources
     }
 
     private VpcEndpointConnectionAccepterArgs() {
-        this.vpcEndpointId = Output.empty();
-        this.vpcEndpointServiceId = Output.empty();
+        this.vpcEndpointId = Codegen.empty();
+        this.vpcEndpointServiceId = Codegen.empty();
     }
 
     public static Builder builder() {

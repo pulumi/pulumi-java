@@ -6,6 +6,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 import io.pulumi.awsnative.sagemaker.inputs.ModelExplainabilityJobDefinitionEndpointInputArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -29,7 +30,7 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityJobInputAr
     }
 
     private ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs() {
-        this.endpointInput = Output.empty();
+        this.endpointInput = Codegen.empty();
     }
 
     public static Builder builder() {

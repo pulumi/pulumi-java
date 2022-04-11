@@ -8,6 +8,7 @@ import io.pulumi.azurenative.security.enums.StatusReason;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> allowedSourceAddressPrefix;
 
     public Output<String> getAllowedSourceAddressPrefix() {
-        return this.allowedSourceAddressPrefix == null ? Output.empty() : this.allowedSourceAddressPrefix;
+        return this.allowedSourceAddressPrefix == null ? Codegen.empty() : this.allowedSourceAddressPrefix;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
       private final @Nullable Output<List<String>> allowedSourceAddressPrefixes;
 
     public Output<List<String>> getAllowedSourceAddressPrefixes() {
-        return this.allowedSourceAddressPrefixes == null ? Output.empty() : this.allowedSourceAddressPrefixes;
+        return this.allowedSourceAddressPrefixes == null ? Codegen.empty() : this.allowedSourceAddressPrefixes;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
       private final @Nullable Output<Integer> mappedPort;
 
     public Output<Integer> getMappedPort() {
-        return this.mappedPort == null ? Output.empty() : this.mappedPort;
+        return this.mappedPort == null ? Codegen.empty() : this.mappedPort;
     }
 
     @Import(name="number", required=true)
@@ -110,13 +111,13 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
     }
 
     private JitNetworkAccessRequestPortArgs() {
-        this.allowedSourceAddressPrefix = Output.empty();
-        this.allowedSourceAddressPrefixes = Output.empty();
-        this.endTimeUtc = Output.empty();
-        this.mappedPort = Output.empty();
-        this.number = Output.empty();
-        this.status = Output.empty();
-        this.statusReason = Output.empty();
+        this.allowedSourceAddressPrefix = Codegen.empty();
+        this.allowedSourceAddressPrefixes = Codegen.empty();
+        this.endTimeUtc = Codegen.empty();
+        this.mappedPort = Codegen.empty();
+        this.number = Codegen.empty();
+        this.status = Codegen.empty();
+        this.statusReason = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder allowedSourceAddressPrefix(@Nullable String allowedSourceAddressPrefix) {
-            this.allowedSourceAddressPrefix = Output.ofNullable(allowedSourceAddressPrefix);
+            this.allowedSourceAddressPrefix = Codegen.ofNullable(allowedSourceAddressPrefix);
             return this;
         }
         public Builder allowedSourceAddressPrefixes(@Nullable Output<List<String>> allowedSourceAddressPrefixes) {
@@ -164,7 +165,7 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder allowedSourceAddressPrefixes(@Nullable List<String> allowedSourceAddressPrefixes) {
-            this.allowedSourceAddressPrefixes = Output.ofNullable(allowedSourceAddressPrefixes);
+            this.allowedSourceAddressPrefixes = Codegen.ofNullable(allowedSourceAddressPrefixes);
             return this;
         }
         public Builder allowedSourceAddressPrefixes(String... allowedSourceAddressPrefixes) {
@@ -183,7 +184,7 @@ public final class JitNetworkAccessRequestPortArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder mappedPort(@Nullable Integer mappedPort) {
-            this.mappedPort = Output.ofNullable(mappedPort);
+            this.mappedPort = Codegen.ofNullable(mappedPort);
             return this;
         }
         public Builder number(Output<Integer> number) {

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iot.inputs;
 import io.pulumi.awsnative.iot.inputs.JobTemplateRateIncreaseCriteriaArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -62,9 +63,9 @@ public final class JobTemplateExponentialRolloutRateArgs extends io.pulumi.resou
     }
 
     private JobTemplateExponentialRolloutRateArgs() {
-        this.baseRatePerMinute = Output.empty();
-        this.incrementFactor = Output.empty();
-        this.rateIncreaseCriteria = Output.empty();
+        this.baseRatePerMinute = Codegen.empty();
+        this.incrementFactor = Codegen.empty();
+        this.rateIncreaseCriteria = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +19,14 @@ public final class InstantRPAdditionalDetailsArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> azureBackupRGNamePrefix;
 
     public Output<String> getAzureBackupRGNamePrefix() {
-        return this.azureBackupRGNamePrefix == null ? Output.empty() : this.azureBackupRGNamePrefix;
+        return this.azureBackupRGNamePrefix == null ? Codegen.empty() : this.azureBackupRGNamePrefix;
     }
 
     @Import(name="azureBackupRGNameSuffix")
       private final @Nullable Output<String> azureBackupRGNameSuffix;
 
     public Output<String> getAzureBackupRGNameSuffix() {
-        return this.azureBackupRGNameSuffix == null ? Output.empty() : this.azureBackupRGNameSuffix;
+        return this.azureBackupRGNameSuffix == null ? Codegen.empty() : this.azureBackupRGNameSuffix;
     }
 
     public InstantRPAdditionalDetailsArgs(
@@ -36,8 +37,8 @@ public final class InstantRPAdditionalDetailsArgs extends io.pulumi.resources.Re
     }
 
     private InstantRPAdditionalDetailsArgs() {
-        this.azureBackupRGNamePrefix = Output.empty();
-        this.azureBackupRGNameSuffix = Output.empty();
+        this.azureBackupRGNamePrefix = Codegen.empty();
+        this.azureBackupRGNameSuffix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class InstantRPAdditionalDetailsArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder azureBackupRGNamePrefix(@Nullable String azureBackupRGNamePrefix) {
-            this.azureBackupRGNamePrefix = Output.ofNullable(azureBackupRGNamePrefix);
+            this.azureBackupRGNamePrefix = Codegen.ofNullable(azureBackupRGNamePrefix);
             return this;
         }
         public Builder azureBackupRGNameSuffix(@Nullable Output<String> azureBackupRGNameSuffix) {
@@ -75,7 +76,7 @@ public final class InstantRPAdditionalDetailsArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder azureBackupRGNameSuffix(@Nullable String azureBackupRGNameSuffix) {
-            this.azureBackupRGNameSuffix = Output.ofNullable(azureBackupRGNameSuffix);
+            this.azureBackupRGNameSuffix = Codegen.ofNullable(azureBackupRGNameSuffix);
             return this;
         }        public InstantRPAdditionalDetailsArgs build() {
             return new InstantRPAdditionalDetailsArgs(azureBackupRGNamePrefix, azureBackupRGNameSuffix);

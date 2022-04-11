@@ -5,6 +5,7 @@ package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
       private final @Nullable Output<String> applicationId;
 
     public Output<String> getApplicationId() {
-        return this.applicationId == null ? Output.empty() : this.applicationId;
+        return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
       private final @Nullable Output<String> audience;
 
     public Output<String> getAudience() {
-        return this.audience == null ? Output.empty() : this.audience;
+        return this.audience == null ? Codegen.empty() : this.audience;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
       private final @Nullable Output<String> authority;
 
     public Output<String> getAuthority() {
-        return this.authority == null ? Output.empty() : this.authority;
+        return this.authority == null ? Codegen.empty() : this.authority;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
       private final @Nullable Output<String> objectId;
 
     public Output<String> getObjectId() {
-        return this.objectId == null ? Output.empty() : this.objectId;
+        return this.objectId == null ? Codegen.empty() : this.objectId;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {
-        return this.tenantId == null ? Output.empty() : this.tenantId;
+        return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
     public CollectorBodyAgentSpnPropertiesArgs(
@@ -83,11 +84,11 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
     }
 
     private CollectorBodyAgentSpnPropertiesArgs() {
-        this.applicationId = Output.empty();
-        this.audience = Output.empty();
-        this.authority = Output.empty();
-        this.objectId = Output.empty();
-        this.tenantId = Output.empty();
+        this.applicationId = Codegen.empty();
+        this.audience = Codegen.empty();
+        this.authority = Codegen.empty();
+        this.objectId = Codegen.empty();
+        this.tenantId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
             return this;
         }
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Output.ofNullable(applicationId);
+            this.applicationId = Codegen.ofNullable(applicationId);
             return this;
         }
         public Builder audience(@Nullable Output<String> audience) {
@@ -131,7 +132,7 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
             return this;
         }
         public Builder audience(@Nullable String audience) {
-            this.audience = Output.ofNullable(audience);
+            this.audience = Codegen.ofNullable(audience);
             return this;
         }
         public Builder authority(@Nullable Output<String> authority) {
@@ -139,7 +140,7 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
             return this;
         }
         public Builder authority(@Nullable String authority) {
-            this.authority = Output.ofNullable(authority);
+            this.authority = Codegen.ofNullable(authority);
             return this;
         }
         public Builder objectId(@Nullable Output<String> objectId) {
@@ -147,7 +148,7 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
             return this;
         }
         public Builder objectId(@Nullable String objectId) {
-            this.objectId = Output.ofNullable(objectId);
+            this.objectId = Codegen.ofNullable(objectId);
             return this;
         }
         public Builder tenantId(@Nullable Output<String> tenantId) {
@@ -155,7 +156,7 @@ public final class CollectorBodyAgentSpnPropertiesArgs extends io.pulumi.resourc
             return this;
         }
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Output.ofNullable(tenantId);
+            this.tenantId = Codegen.ofNullable(tenantId);
             return this;
         }        public CollectorBodyAgentSpnPropertiesArgs build() {
             return new CollectorBodyAgentSpnPropertiesArgs(applicationId, audience, authority, objectId, tenantId);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.RegexValidationArgs;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.ValueValidationArgs;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ParameterValidationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<RegexValidationArgs> regex;
 
     public Output<RegexValidationArgs> getRegex() {
-        return this.regex == null ? Output.empty() : this.regex;
+        return this.regex == null ? Codegen.empty() : this.regex;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ParameterValidationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<ValueValidationArgs> values;
 
     public Output<ValueValidationArgs> getValues() {
-        return this.values == null ? Output.empty() : this.values;
+        return this.values == null ? Codegen.empty() : this.values;
     }
 
     public ParameterValidationArgs(
@@ -49,8 +50,8 @@ public final class ParameterValidationArgs extends io.pulumi.resources.ResourceA
     }
 
     private ParameterValidationArgs() {
-        this.regex = Output.empty();
-        this.values = Output.empty();
+        this.regex = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ParameterValidationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder regex(@Nullable RegexValidationArgs regex) {
-            this.regex = Output.ofNullable(regex);
+            this.regex = Codegen.ofNullable(regex);
             return this;
         }
         public Builder values(@Nullable Output<ValueValidationArgs> values) {
@@ -88,7 +89,7 @@ public final class ParameterValidationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder values(@Nullable ValueValidationArgs values) {
-            this.values = Output.ofNullable(values);
+            this.values = Codegen.ofNullable(values);
             return this;
         }        public ParameterValidationArgs build() {
             return new ParameterValidationArgs(regex, values);

@@ -5,6 +5,7 @@ package io.pulumi.aws.route53recoverycontrol.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -58,9 +59,9 @@ public final class SafetyRuleRuleConfigArgs extends io.pulumi.resources.Resource
     }
 
     private SafetyRuleRuleConfigArgs() {
-        this.inverted = Output.empty();
-        this.threshold = Output.empty();
-        this.type = Output.empty();
+        this.inverted = Codegen.empty();
+        this.threshold = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

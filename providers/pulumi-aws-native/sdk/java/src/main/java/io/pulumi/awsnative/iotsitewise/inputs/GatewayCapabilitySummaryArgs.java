@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iotsitewise.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class GatewayCapabilitySummaryArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> capabilityConfiguration;
 
     public Output<String> getCapabilityConfiguration() {
-        return this.capabilityConfiguration == null ? Output.empty() : this.capabilityConfiguration;
+        return this.capabilityConfiguration == null ? Codegen.empty() : this.capabilityConfiguration;
     }
 
     @Import(name="capabilityNamespace", required=true)
@@ -40,8 +41,8 @@ public final class GatewayCapabilitySummaryArgs extends io.pulumi.resources.Reso
     }
 
     private GatewayCapabilitySummaryArgs() {
-        this.capabilityConfiguration = Output.empty();
-        this.capabilityNamespace = Output.empty();
+        this.capabilityConfiguration = Codegen.empty();
+        this.capabilityNamespace = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -71,7 +72,7 @@ public final class GatewayCapabilitySummaryArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder capabilityConfiguration(@Nullable String capabilityConfiguration) {
-            this.capabilityConfiguration = Output.ofNullable(capabilityConfiguration);
+            this.capabilityConfiguration = Codegen.ofNullable(capabilityConfiguration);
             return this;
         }
         public Builder capabilityNamespace(Output<String> capabilityNamespace) {

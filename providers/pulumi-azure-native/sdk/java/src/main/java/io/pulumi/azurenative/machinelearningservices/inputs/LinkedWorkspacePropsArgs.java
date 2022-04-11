@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class LinkedWorkspacePropsArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> linkedWorkspaceResourceId;
 
     public Output<String> getLinkedWorkspaceResourceId() {
-        return this.linkedWorkspaceResourceId == null ? Output.empty() : this.linkedWorkspaceResourceId;
+        return this.linkedWorkspaceResourceId == null ? Codegen.empty() : this.linkedWorkspaceResourceId;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class LinkedWorkspacePropsArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> userAssignedIdentityResourceId;
 
     public Output<String> getUserAssignedIdentityResourceId() {
-        return this.userAssignedIdentityResourceId == null ? Output.empty() : this.userAssignedIdentityResourceId;
+        return this.userAssignedIdentityResourceId == null ? Codegen.empty() : this.userAssignedIdentityResourceId;
     }
 
     public LinkedWorkspacePropsArgs(
@@ -48,8 +49,8 @@ public final class LinkedWorkspacePropsArgs extends io.pulumi.resources.Resource
     }
 
     private LinkedWorkspacePropsArgs() {
-        this.linkedWorkspaceResourceId = Output.empty();
-        this.userAssignedIdentityResourceId = Output.empty();
+        this.linkedWorkspaceResourceId = Codegen.empty();
+        this.userAssignedIdentityResourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class LinkedWorkspacePropsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder linkedWorkspaceResourceId(@Nullable String linkedWorkspaceResourceId) {
-            this.linkedWorkspaceResourceId = Output.ofNullable(linkedWorkspaceResourceId);
+            this.linkedWorkspaceResourceId = Codegen.ofNullable(linkedWorkspaceResourceId);
             return this;
         }
         public Builder userAssignedIdentityResourceId(@Nullable Output<String> userAssignedIdentityResourceId) {
@@ -87,7 +88,7 @@ public final class LinkedWorkspacePropsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder userAssignedIdentityResourceId(@Nullable String userAssignedIdentityResourceId) {
-            this.userAssignedIdentityResourceId = Output.ofNullable(userAssignedIdentityResourceId);
+            this.userAssignedIdentityResourceId = Codegen.ofNullable(userAssignedIdentityResourceId);
             return this;
         }        public LinkedWorkspacePropsArgs build() {
             return new LinkedWorkspacePropsArgs(linkedWorkspaceResourceId, userAssignedIdentityResourceId);

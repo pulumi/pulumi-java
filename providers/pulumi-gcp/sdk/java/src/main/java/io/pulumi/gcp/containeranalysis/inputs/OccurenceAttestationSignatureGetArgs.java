@@ -5,6 +5,7 @@ package io.pulumi.gcp.containeranalysis.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -48,7 +49,7 @@ public final class OccurenceAttestationSignatureGetArgs extends io.pulumi.resour
       private final @Nullable Output<String> signature;
 
     public Output<String> getSignature() {
-        return this.signature == null ? Output.empty() : this.signature;
+        return this.signature == null ? Codegen.empty() : this.signature;
     }
 
     public OccurenceAttestationSignatureGetArgs(
@@ -59,8 +60,8 @@ public final class OccurenceAttestationSignatureGetArgs extends io.pulumi.resour
     }
 
     private OccurenceAttestationSignatureGetArgs() {
-        this.publicKeyId = Output.empty();
-        this.signature = Output.empty();
+        this.publicKeyId = Codegen.empty();
+        this.signature = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class OccurenceAttestationSignatureGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder signature(@Nullable String signature) {
-            this.signature = Output.ofNullable(signature);
+            this.signature = Codegen.ofNullable(signature);
             return this;
         }        public OccurenceAttestationSignatureGetArgs build() {
             return new OccurenceAttestationSignatureGetArgs(publicKeyId, signature);

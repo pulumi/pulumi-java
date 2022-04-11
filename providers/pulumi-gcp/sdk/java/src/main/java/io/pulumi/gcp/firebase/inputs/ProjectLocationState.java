@@ -5,6 +5,7 @@ package io.pulumi.gcp.firebase.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class ProjectLocationState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> locationId;
 
     public Output<String> getLocationId() {
-        return this.locationId == null ? Output.empty() : this.locationId;
+        return this.locationId == null ? Codegen.empty() : this.locationId;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ProjectLocationState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public ProjectLocationState(
@@ -46,8 +47,8 @@ public final class ProjectLocationState extends io.pulumi.resources.ResourceArgs
     }
 
     private ProjectLocationState() {
-        this.locationId = Output.empty();
-        this.project = Output.empty();
+        this.locationId = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class ProjectLocationState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder locationId(@Nullable String locationId) {
-            this.locationId = Output.ofNullable(locationId);
+            this.locationId = Codegen.ofNullable(locationId);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -85,7 +86,7 @@ public final class ProjectLocationState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public ProjectLocationState build() {
             return new ProjectLocationState(locationId, project);

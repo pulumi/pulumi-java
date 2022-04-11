@@ -5,6 +5,7 @@ package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.diagflow.inputs.EntityTypeEntityGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableFuzzyExtraction;
 
     public Output<Boolean> getEnableFuzzyExtraction() {
-        return this.enableFuzzyExtraction == null ? Output.empty() : this.enableFuzzyExtraction;
+        return this.enableFuzzyExtraction == null ? Codegen.empty() : this.enableFuzzyExtraction;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<EntityTypeEntityGetArgs>> entities;
 
     public Output<List<EntityTypeEntityGetArgs>> getEntities() {
-        return this.entities == null ? Output.empty() : this.entities;
+        return this.entities == null ? Codegen.empty() : this.entities;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public EntityTypeState(
@@ -106,12 +107,12 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
     }
 
     private EntityTypeState() {
-        this.displayName = Output.empty();
-        this.enableFuzzyExtraction = Output.empty();
-        this.entities = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
+        this.displayName = Codegen.empty();
+        this.enableFuzzyExtraction = Codegen.empty();
+        this.entities = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -149,7 +150,7 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder enableFuzzyExtraction(@Nullable Output<Boolean> enableFuzzyExtraction) {
@@ -157,7 +158,7 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableFuzzyExtraction(@Nullable Boolean enableFuzzyExtraction) {
-            this.enableFuzzyExtraction = Output.ofNullable(enableFuzzyExtraction);
+            this.enableFuzzyExtraction = Codegen.ofNullable(enableFuzzyExtraction);
             return this;
         }
         public Builder entities(@Nullable Output<List<EntityTypeEntityGetArgs>> entities) {
@@ -165,7 +166,7 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder entities(@Nullable List<EntityTypeEntityGetArgs> entities) {
-            this.entities = Output.ofNullable(entities);
+            this.entities = Codegen.ofNullable(entities);
             return this;
         }
         public Builder entities(EntityTypeEntityGetArgs... entities) {
@@ -176,7 +177,7 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -184,7 +185,7 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -192,7 +193,7 @@ public final class EntityTypeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public EntityTypeState build() {
             return new EntityTypeState(displayName, enableFuzzyExtraction, entities, kind, name, project);

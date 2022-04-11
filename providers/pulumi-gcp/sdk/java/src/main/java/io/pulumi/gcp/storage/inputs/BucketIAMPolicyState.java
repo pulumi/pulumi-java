@@ -5,6 +5,7 @@ package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class BucketIAMPolicyState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> bucket;
 
     public Output<String> getBucket() {
-        return this.bucket == null ? Output.empty() : this.bucket;
+        return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class BucketIAMPolicyState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class BucketIAMPolicyState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> policyData;
 
     public Output<String> getPolicyData() {
-        return this.policyData == null ? Output.empty() : this.policyData;
+        return this.policyData == null ? Codegen.empty() : this.policyData;
     }
 
     public BucketIAMPolicyState(
@@ -58,9 +59,9 @@ public final class BucketIAMPolicyState extends io.pulumi.resources.ResourceArgs
     }
 
     private BucketIAMPolicyState() {
-        this.bucket = Output.empty();
-        this.etag = Output.empty();
-        this.policyData = Output.empty();
+        this.bucket = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.policyData = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class BucketIAMPolicyState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Output.ofNullable(bucket);
+            this.bucket = Codegen.ofNullable(bucket);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -100,7 +101,7 @@ public final class BucketIAMPolicyState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder policyData(@Nullable Output<String> policyData) {
@@ -108,7 +109,7 @@ public final class BucketIAMPolicyState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder policyData(@Nullable String policyData) {
-            this.policyData = Output.ofNullable(policyData);
+            this.policyData = Codegen.ofNullable(policyData);
             return this;
         }        public BucketIAMPolicyState build() {
             return new BucketIAMPolicyState(bucket, etag, policyData);

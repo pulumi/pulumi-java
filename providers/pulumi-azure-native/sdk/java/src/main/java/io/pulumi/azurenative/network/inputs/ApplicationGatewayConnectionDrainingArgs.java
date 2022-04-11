@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -48,8 +49,8 @@ public final class ApplicationGatewayConnectionDrainingArgs extends io.pulumi.re
     }
 
     private ApplicationGatewayConnectionDrainingArgs() {
-        this.drainTimeoutInSec = Output.empty();
-        this.enabled = Output.empty();
+        this.drainTimeoutInSec = Codegen.empty();
+        this.enabled = Codegen.empty();
     }
 
     public static Builder builder() {

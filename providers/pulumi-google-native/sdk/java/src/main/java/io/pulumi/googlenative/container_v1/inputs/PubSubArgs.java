@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.container_v1.inputs.FilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class PubSubArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class PubSubArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FilterArgs> filter;
 
     public Output<FilterArgs> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class PubSubArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> topic;
 
     public Output<String> getTopic() {
-        return this.topic == null ? Output.empty() : this.topic;
+        return this.topic == null ? Codegen.empty() : this.topic;
     }
 
     public PubSubArgs(
@@ -63,9 +64,9 @@ public final class PubSubArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PubSubArgs() {
-        this.enabled = Output.empty();
-        this.filter = Output.empty();
-        this.topic = Output.empty();
+        this.enabled = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.topic = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class PubSubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder filter(@Nullable Output<FilterArgs> filter) {
@@ -105,7 +106,7 @@ public final class PubSubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filter(@Nullable FilterArgs filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder topic(@Nullable Output<String> topic) {
@@ -113,7 +114,7 @@ public final class PubSubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder topic(@Nullable String topic) {
-            this.topic = Output.ofNullable(topic);
+            this.topic = Codegen.ofNullable(topic);
             return this;
         }        public PubSubArgs build() {
             return new PubSubArgs(enabled, filter, topic);

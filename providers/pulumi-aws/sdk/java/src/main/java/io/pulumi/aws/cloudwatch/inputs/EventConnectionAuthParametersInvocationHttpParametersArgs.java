@@ -8,6 +8,7 @@ import io.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersInvocationHt
 import io.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersInvocationHttpParametersQueryStringArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class EventConnectionAuthParametersInvocationHttpParametersArgs ext
       private final @Nullable Output<List<EventConnectionAuthParametersInvocationHttpParametersBodyArgs>> bodies;
 
     public Output<List<EventConnectionAuthParametersInvocationHttpParametersBodyArgs>> getBodies() {
-        return this.bodies == null ? Output.empty() : this.bodies;
+        return this.bodies == null ? Codegen.empty() : this.bodies;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class EventConnectionAuthParametersInvocationHttpParametersArgs ext
       private final @Nullable Output<List<EventConnectionAuthParametersInvocationHttpParametersHeaderArgs>> headers;
 
     public Output<List<EventConnectionAuthParametersInvocationHttpParametersHeaderArgs>> getHeaders() {
-        return this.headers == null ? Output.empty() : this.headers;
+        return this.headers == null ? Codegen.empty() : this.headers;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class EventConnectionAuthParametersInvocationHttpParametersArgs ext
       private final @Nullable Output<List<EventConnectionAuthParametersInvocationHttpParametersQueryStringArgs>> queryStrings;
 
     public Output<List<EventConnectionAuthParametersInvocationHttpParametersQueryStringArgs>> getQueryStrings() {
-        return this.queryStrings == null ? Output.empty() : this.queryStrings;
+        return this.queryStrings == null ? Codegen.empty() : this.queryStrings;
     }
 
     public EventConnectionAuthParametersInvocationHttpParametersArgs(
@@ -60,9 +61,9 @@ public final class EventConnectionAuthParametersInvocationHttpParametersArgs ext
     }
 
     private EventConnectionAuthParametersInvocationHttpParametersArgs() {
-        this.bodies = Output.empty();
-        this.headers = Output.empty();
-        this.queryStrings = Output.empty();
+        this.bodies = Codegen.empty();
+        this.headers = Codegen.empty();
+        this.queryStrings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class EventConnectionAuthParametersInvocationHttpParametersArgs ext
             return this;
         }
         public Builder bodies(@Nullable List<EventConnectionAuthParametersInvocationHttpParametersBodyArgs> bodies) {
-            this.bodies = Output.ofNullable(bodies);
+            this.bodies = Codegen.ofNullable(bodies);
             return this;
         }
         public Builder bodies(EventConnectionAuthParametersInvocationHttpParametersBodyArgs... bodies) {
@@ -105,7 +106,7 @@ public final class EventConnectionAuthParametersInvocationHttpParametersArgs ext
             return this;
         }
         public Builder headers(@Nullable List<EventConnectionAuthParametersInvocationHttpParametersHeaderArgs> headers) {
-            this.headers = Output.ofNullable(headers);
+            this.headers = Codegen.ofNullable(headers);
             return this;
         }
         public Builder headers(EventConnectionAuthParametersInvocationHttpParametersHeaderArgs... headers) {
@@ -116,7 +117,7 @@ public final class EventConnectionAuthParametersInvocationHttpParametersArgs ext
             return this;
         }
         public Builder queryStrings(@Nullable List<EventConnectionAuthParametersInvocationHttpParametersQueryStringArgs> queryStrings) {
-            this.queryStrings = Output.ofNullable(queryStrings);
+            this.queryStrings = Codegen.ofNullable(queryStrings);
             return this;
         }
         public Builder queryStrings(EventConnectionAuthParametersInvocationHttpParametersQueryStringArgs... queryStrings) {

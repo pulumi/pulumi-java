@@ -5,6 +5,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends io.pulumi.
       private final @Nullable Output<String> language;
 
     public Output<String> getLanguage() {
-        return this.language == null ? Output.empty() : this.language;
+        return this.language == null ? Codegen.empty() : this.language;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends io.pulumi.
       private final @Nullable Output<Integer> markingRef;
 
     public Output<Integer> getMarkingRef() {
-        return this.markingRef == null ? Output.empty() : this.markingRef;
+        return this.markingRef == null ? Codegen.empty() : this.markingRef;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends io.pulumi.
       private final @Nullable Output<List<String>> selectors;
 
     public Output<List<String>> getSelectors() {
-        return this.selectors == null ? Output.empty() : this.selectors;
+        return this.selectors == null ? Codegen.empty() : this.selectors;
     }
 
     public ThreatIntelligenceGranularMarkingModelArgs(
@@ -63,9 +64,9 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends io.pulumi.
     }
 
     private ThreatIntelligenceGranularMarkingModelArgs() {
-        this.language = Output.empty();
-        this.markingRef = Output.empty();
-        this.selectors = Output.empty();
+        this.language = Codegen.empty();
+        this.markingRef = Codegen.empty();
+        this.selectors = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends io.pulumi.
             return this;
         }
         public Builder language(@Nullable String language) {
-            this.language = Output.ofNullable(language);
+            this.language = Codegen.ofNullable(language);
             return this;
         }
         public Builder markingRef(@Nullable Output<Integer> markingRef) {
@@ -105,7 +106,7 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends io.pulumi.
             return this;
         }
         public Builder markingRef(@Nullable Integer markingRef) {
-            this.markingRef = Output.ofNullable(markingRef);
+            this.markingRef = Codegen.ofNullable(markingRef);
             return this;
         }
         public Builder selectors(@Nullable Output<List<String>> selectors) {
@@ -113,7 +114,7 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends io.pulumi.
             return this;
         }
         public Builder selectors(@Nullable List<String> selectors) {
-            this.selectors = Output.ofNullable(selectors);
+            this.selectors = Codegen.ofNullable(selectors);
             return this;
         }
         public Builder selectors(String... selectors) {

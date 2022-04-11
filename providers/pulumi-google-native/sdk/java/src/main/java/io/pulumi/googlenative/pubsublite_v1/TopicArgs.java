@@ -5,6 +5,7 @@ package io.pulumi.googlenative.pubsublite_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.pubsublite_v1.inputs.PartitionConfigArgs;
 import io.pulumi.googlenative.pubsublite_v1.inputs.ReservationConfigArgs;
 import io.pulumi.googlenative.pubsublite_v1.inputs.RetentionConfigArgs;
@@ -21,7 +22,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -43,14 +44,14 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PartitionConfigArgs> partitionConfig;
 
     public Output<PartitionConfigArgs> getPartitionConfig() {
-        return this.partitionConfig == null ? Output.empty() : this.partitionConfig;
+        return this.partitionConfig == null ? Codegen.empty() : this.partitionConfig;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ReservationConfigArgs> reservationConfig;
 
     public Output<ReservationConfigArgs> getReservationConfig() {
-        return this.reservationConfig == null ? Output.empty() : this.reservationConfig;
+        return this.reservationConfig == null ? Codegen.empty() : this.reservationConfig;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RetentionConfigArgs> retentionConfig;
 
     public Output<RetentionConfigArgs> getRetentionConfig() {
-        return this.retentionConfig == null ? Output.empty() : this.retentionConfig;
+        return this.retentionConfig == null ? Codegen.empty() : this.retentionConfig;
     }
 
     @Import(name="topicId", required=true)
@@ -100,13 +101,13 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TopicArgs() {
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.partitionConfig = Output.empty();
-        this.project = Output.empty();
-        this.reservationConfig = Output.empty();
-        this.retentionConfig = Output.empty();
-        this.topicId = Output.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.partitionConfig = Codegen.empty();
+        this.project = Codegen.empty();
+        this.reservationConfig = Codegen.empty();
+        this.retentionConfig = Codegen.empty();
+        this.topicId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -154,7 +155,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder partitionConfig(@Nullable Output<PartitionConfigArgs> partitionConfig) {
@@ -162,7 +163,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder partitionConfig(@Nullable PartitionConfigArgs partitionConfig) {
-            this.partitionConfig = Output.ofNullable(partitionConfig);
+            this.partitionConfig = Codegen.ofNullable(partitionConfig);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -170,7 +171,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder reservationConfig(@Nullable Output<ReservationConfigArgs> reservationConfig) {
@@ -178,7 +179,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reservationConfig(@Nullable ReservationConfigArgs reservationConfig) {
-            this.reservationConfig = Output.ofNullable(reservationConfig);
+            this.reservationConfig = Codegen.ofNullable(reservationConfig);
             return this;
         }
         public Builder retentionConfig(@Nullable Output<RetentionConfigArgs> retentionConfig) {
@@ -186,7 +187,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retentionConfig(@Nullable RetentionConfigArgs retentionConfig) {
-            this.retentionConfig = Output.ofNullable(retentionConfig);
+            this.retentionConfig = Codegen.ofNullable(retentionConfig);
             return this;
         }
         public Builder topicId(Output<String> topicId) {

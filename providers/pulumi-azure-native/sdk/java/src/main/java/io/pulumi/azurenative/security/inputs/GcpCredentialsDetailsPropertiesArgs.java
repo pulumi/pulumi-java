@@ -5,6 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -178,18 +179,18 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
     }
 
     private GcpCredentialsDetailsPropertiesArgs() {
-        this.authProviderX509CertUrl = Output.empty();
-        this.authUri = Output.empty();
-        this.authenticationType = Output.empty();
-        this.clientEmail = Output.empty();
-        this.clientId = Output.empty();
-        this.clientX509CertUrl = Output.empty();
-        this.organizationId = Output.empty();
-        this.privateKey = Output.empty();
-        this.privateKeyId = Output.empty();
-        this.projectId = Output.empty();
-        this.tokenUri = Output.empty();
-        this.type = Output.empty();
+        this.authProviderX509CertUrl = Codegen.empty();
+        this.authUri = Codegen.empty();
+        this.authenticationType = Codegen.empty();
+        this.clientEmail = Codegen.empty();
+        this.clientId = Codegen.empty();
+        this.clientX509CertUrl = Codegen.empty();
+        this.organizationId = Codegen.empty();
+        this.privateKey = Codegen.empty();
+        this.privateKeyId = Codegen.empty();
+        this.projectId = Codegen.empty();
+        this.tokenUri = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

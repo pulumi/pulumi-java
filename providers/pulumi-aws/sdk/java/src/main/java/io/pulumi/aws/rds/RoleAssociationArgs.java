@@ -5,6 +5,7 @@ package io.pulumi.aws.rds;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -56,9 +57,9 @@ public final class RoleAssociationArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private RoleAssociationArgs() {
-        this.dbInstanceIdentifier = Output.empty();
-        this.featureName = Output.empty();
-        this.roleArn = Output.empty();
+        this.dbInstanceIdentifier = Codegen.empty();
+        this.featureName = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {

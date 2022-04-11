@@ -7,6 +7,7 @@ import io.pulumi.azurenative.insights.inputs.WorkbookTemplateGalleryArgs;
 import io.pulumi.azurenative.insights.inputs.WorkbookTemplateLocalizedGalleryArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> author;
 
     public Output<String> getAuthor() {
-        return this.author == null ? Output.empty() : this.author;
+        return this.author == null ? Codegen.empty() : this.author;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,List<WorkbookTemplateLocalizedGalleryArgs>>> localized;
 
     public Output<Map<String,List<WorkbookTemplateLocalizedGalleryArgs>>> getLocalized() {
-        return this.localized == null ? Output.empty() : this.localized;
+        return this.localized == null ? Codegen.empty() : this.localized;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
-        return this.resourceName == null ? Output.empty() : this.resourceName;
+        return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -141,15 +142,15 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private WorkbookTemplateArgs() {
-        this.author = Output.empty();
-        this.galleries = Output.empty();
-        this.localized = Output.empty();
-        this.location = Output.empty();
-        this.priority = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
-        this.tags = Output.empty();
-        this.templateData = Output.empty();
+        this.author = Codegen.empty();
+        this.galleries = Codegen.empty();
+        this.localized = Codegen.empty();
+        this.location = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.templateData = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -193,7 +194,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder author(@Nullable String author) {
-            this.author = Output.ofNullable(author);
+            this.author = Codegen.ofNullable(author);
             return this;
         }
         public Builder galleries(Output<List<WorkbookTemplateGalleryArgs>> galleries) {
@@ -212,7 +213,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder localized(@Nullable Map<String,List<WorkbookTemplateLocalizedGalleryArgs>> localized) {
-            this.localized = Output.ofNullable(localized);
+            this.localized = Codegen.ofNullable(localized);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -220,7 +221,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder priority(@Nullable Output<Integer> priority) {
@@ -228,7 +229,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -244,7 +245,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Output.ofNullable(resourceName);
+            this.resourceName = Codegen.ofNullable(resourceName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -252,7 +253,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder templateData(Output<Object> templateData) {

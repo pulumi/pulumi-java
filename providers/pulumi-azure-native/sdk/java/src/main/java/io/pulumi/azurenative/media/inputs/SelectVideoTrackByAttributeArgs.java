@@ -8,6 +8,7 @@ import io.pulumi.azurenative.media.enums.TrackAttribute;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -51,7 +52,7 @@ public final class SelectVideoTrackByAttributeArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> filterValue;
 
     public Output<String> getFilterValue() {
-        return this.filterValue == null ? Output.empty() : this.filterValue;
+        return this.filterValue == null ? Codegen.empty() : this.filterValue;
     }
 
     /**
@@ -78,10 +79,10 @@ public final class SelectVideoTrackByAttributeArgs extends io.pulumi.resources.R
     }
 
     private SelectVideoTrackByAttributeArgs() {
-        this.attribute = Output.empty();
-        this.filter = Output.empty();
-        this.filterValue = Output.empty();
-        this.odataType = Output.empty();
+        this.attribute = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.filterValue = Codegen.empty();
+        this.odataType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class SelectVideoTrackByAttributeArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder filterValue(@Nullable String filterValue) {
-            this.filterValue = Output.ofNullable(filterValue);
+            this.filterValue = Codegen.ofNullable(filterValue);
             return this;
         }
         public Builder odataType(Output<String> odataType) {

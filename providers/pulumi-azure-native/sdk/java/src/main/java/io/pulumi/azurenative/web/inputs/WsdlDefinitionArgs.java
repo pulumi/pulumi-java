@@ -8,6 +8,7 @@ import io.pulumi.azurenative.web.inputs.WsdlServiceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
-        return this.content == null ? Output.empty() : this.content;
+        return this.content == null ? Codegen.empty() : this.content;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,WsdlImportMethod>> importMethod;
 
     public Output<Either<String,WsdlImportMethod>> getImportMethod() {
-        return this.importMethod == null ? Output.empty() : this.importMethod;
+        return this.importMethod == null ? Codegen.empty() : this.importMethod;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<WsdlServiceArgs> service;
 
     public Output<WsdlServiceArgs> getService() {
-        return this.service == null ? Output.empty() : this.service;
+        return this.service == null ? Codegen.empty() : this.service;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {
-        return this.url == null ? Output.empty() : this.url;
+        return this.url == null ? Codegen.empty() : this.url;
     }
 
     public WsdlDefinitionArgs(
@@ -77,10 +78,10 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WsdlDefinitionArgs() {
-        this.content = Output.empty();
-        this.importMethod = Output.empty();
-        this.service = Output.empty();
-        this.url = Output.empty();
+        this.content = Codegen.empty();
+        this.importMethod = Codegen.empty();
+        this.service = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder content(@Nullable String content) {
-            this.content = Output.ofNullable(content);
+            this.content = Codegen.ofNullable(content);
             return this;
         }
         public Builder importMethod(@Nullable Output<Either<String,WsdlImportMethod>> importMethod) {
@@ -122,7 +123,7 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder importMethod(@Nullable Either<String,WsdlImportMethod> importMethod) {
-            this.importMethod = Output.ofNullable(importMethod);
+            this.importMethod = Codegen.ofNullable(importMethod);
             return this;
         }
         public Builder service(@Nullable Output<WsdlServiceArgs> service) {
@@ -130,7 +131,7 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder service(@Nullable WsdlServiceArgs service) {
-            this.service = Output.ofNullable(service);
+            this.service = Codegen.ofNullable(service);
             return this;
         }
         public Builder url(@Nullable Output<String> url) {
@@ -138,7 +139,7 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder url(@Nullable String url) {
-            this.url = Output.ofNullable(url);
+            this.url = Codegen.ofNullable(url);
             return this;
         }        public WsdlDefinitionArgs build() {
             return new WsdlDefinitionArgs(content, importMethod, service, url);

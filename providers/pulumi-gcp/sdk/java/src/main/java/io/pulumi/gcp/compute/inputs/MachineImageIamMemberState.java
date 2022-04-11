@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.MachineImageIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class MachineImageIamMemberState extends io.pulumi.resources.Resour
       private final @Nullable Output<MachineImageIamMemberConditionGetArgs> condition;
 
     public Output<MachineImageIamMemberConditionGetArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class MachineImageIamMemberState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -46,14 +47,14 @@ public final class MachineImageIamMemberState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> machineImage;
 
     public Output<String> getMachineImage() {
-        return this.machineImage == null ? Output.empty() : this.machineImage;
+        return this.machineImage == null ? Codegen.empty() : this.machineImage;
     }
 
     @Import(name="member")
       private final @Nullable Output<String> member;
 
     public Output<String> getMember() {
-        return this.member == null ? Output.empty() : this.member;
+        return this.member == null ? Codegen.empty() : this.member;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class MachineImageIamMemberState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class MachineImageIamMemberState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     public MachineImageIamMemberState(
@@ -97,12 +98,12 @@ public final class MachineImageIamMemberState extends io.pulumi.resources.Resour
     }
 
     private MachineImageIamMemberState() {
-        this.condition = Output.empty();
-        this.etag = Output.empty();
-        this.machineImage = Output.empty();
-        this.member = Output.empty();
-        this.project = Output.empty();
-        this.role = Output.empty();
+        this.condition = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.machineImage = Codegen.empty();
+        this.member = Codegen.empty();
+        this.project = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class MachineImageIamMemberState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder condition(@Nullable MachineImageIamMemberConditionGetArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -148,7 +149,7 @@ public final class MachineImageIamMemberState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder machineImage(@Nullable Output<String> machineImage) {
@@ -156,7 +157,7 @@ public final class MachineImageIamMemberState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder machineImage(@Nullable String machineImage) {
-            this.machineImage = Output.ofNullable(machineImage);
+            this.machineImage = Codegen.ofNullable(machineImage);
             return this;
         }
         public Builder member(@Nullable Output<String> member) {
@@ -164,7 +165,7 @@ public final class MachineImageIamMemberState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder member(@Nullable String member) {
-            this.member = Output.ofNullable(member);
+            this.member = Codegen.ofNullable(member);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -172,7 +173,7 @@ public final class MachineImageIamMemberState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder role(@Nullable Output<String> role) {
@@ -180,7 +181,7 @@ public final class MachineImageIamMemberState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }        public MachineImageIamMemberState build() {
             return new MachineImageIamMemberState(condition, etag, machineImage, member, project, role);

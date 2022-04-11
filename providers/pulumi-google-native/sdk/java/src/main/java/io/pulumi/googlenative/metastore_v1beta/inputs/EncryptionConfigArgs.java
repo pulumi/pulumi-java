@@ -5,6 +5,7 @@ package io.pulumi.googlenative.metastore_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> kmsKey;
 
     public Output<String> getKmsKey() {
-        return this.kmsKey == null ? Output.empty() : this.kmsKey;
+        return this.kmsKey == null ? Codegen.empty() : this.kmsKey;
     }
 
     public EncryptionConfigArgs(@Nullable Output<String> kmsKey) {
@@ -34,7 +35,7 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private EncryptionConfigArgs() {
-        this.kmsKey = Output.empty();
+        this.kmsKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder kmsKey(@Nullable String kmsKey) {
-            this.kmsKey = Output.ofNullable(kmsKey);
+            this.kmsKey = Codegen.ofNullable(kmsKey);
             return this;
         }        public EncryptionConfigArgs build() {
             return new EncryptionConfigArgs(kmsKey);

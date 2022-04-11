@@ -5,6 +5,7 @@ package io.pulumi.aws.budgets.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class BudgetActionSubscriberGetArgs extends io.pulumi.resources.Res
     }
 
     private BudgetActionSubscriberGetArgs() {
-        this.address = Output.empty();
-        this.subscriptionType = Output.empty();
+        this.address = Codegen.empty();
+        this.subscriptionType = Codegen.empty();
     }
 
     public static Builder builder() {

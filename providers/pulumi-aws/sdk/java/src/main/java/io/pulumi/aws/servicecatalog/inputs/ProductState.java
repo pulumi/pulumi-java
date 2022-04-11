@@ -6,6 +6,7 @@ package io.pulumi.aws.servicecatalog.inputs;
 import io.pulumi.aws.servicecatalog.inputs.ProductProvisioningArtifactParametersGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> acceptLanguage;
 
     public Output<String> getAcceptLanguage() {
-        return this.acceptLanguage == null ? Output.empty() : this.acceptLanguage;
+        return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> createdTime;
 
     public Output<String> getCreatedTime() {
-        return this.createdTime == null ? Output.empty() : this.createdTime;
+        return this.createdTime == null ? Codegen.empty() : this.createdTime;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> distributor;
 
     public Output<String> getDistributor() {
-        return this.distributor == null ? Output.empty() : this.distributor;
+        return this.distributor == null ? Codegen.empty() : this.distributor;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> hasDefaultPath;
 
     public Output<Boolean> getHasDefaultPath() {
-        return this.hasDefaultPath == null ? Output.empty() : this.hasDefaultPath;
+        return this.hasDefaultPath == null ? Codegen.empty() : this.hasDefaultPath;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> owner;
 
     public Output<String> getOwner() {
-        return this.owner == null ? Output.empty() : this.owner;
+        return this.owner == null ? Codegen.empty() : this.owner;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ProductProvisioningArtifactParametersGetArgs> provisioningArtifactParameters;
 
     public Output<ProductProvisioningArtifactParametersGetArgs> getProvisioningArtifactParameters() {
-        return this.provisioningArtifactParameters == null ? Output.empty() : this.provisioningArtifactParameters;
+        return this.provisioningArtifactParameters == null ? Codegen.empty() : this.provisioningArtifactParameters;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -135,7 +136,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> supportDescription;
 
     public Output<String> getSupportDescription() {
-        return this.supportDescription == null ? Output.empty() : this.supportDescription;
+        return this.supportDescription == null ? Codegen.empty() : this.supportDescription;
     }
 
     /**
@@ -146,7 +147,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> supportEmail;
 
     public Output<String> getSupportEmail() {
-        return this.supportEmail == null ? Output.empty() : this.supportEmail;
+        return this.supportEmail == null ? Codegen.empty() : this.supportEmail;
     }
 
     /**
@@ -157,7 +158,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> supportUrl;
 
     public Output<String> getSupportUrl() {
-        return this.supportUrl == null ? Output.empty() : this.supportUrl;
+        return this.supportUrl == null ? Codegen.empty() : this.supportUrl;
     }
 
     /**
@@ -168,7 +169,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -179,7 +180,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -190,7 +191,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ProductState(
@@ -229,22 +230,22 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProductState() {
-        this.acceptLanguage = Output.empty();
-        this.arn = Output.empty();
-        this.createdTime = Output.empty();
-        this.description = Output.empty();
-        this.distributor = Output.empty();
-        this.hasDefaultPath = Output.empty();
-        this.name = Output.empty();
-        this.owner = Output.empty();
-        this.provisioningArtifactParameters = Output.empty();
-        this.status = Output.empty();
-        this.supportDescription = Output.empty();
-        this.supportEmail = Output.empty();
-        this.supportUrl = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.type = Output.empty();
+        this.acceptLanguage = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.createdTime = Codegen.empty();
+        this.description = Codegen.empty();
+        this.distributor = Codegen.empty();
+        this.hasDefaultPath = Codegen.empty();
+        this.name = Codegen.empty();
+        this.owner = Codegen.empty();
+        this.provisioningArtifactParameters = Codegen.empty();
+        this.status = Codegen.empty();
+        this.supportDescription = Codegen.empty();
+        this.supportEmail = Codegen.empty();
+        this.supportUrl = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -302,7 +303,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Output.ofNullable(acceptLanguage);
+            this.acceptLanguage = Codegen.ofNullable(acceptLanguage);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -310,7 +311,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder createdTime(@Nullable Output<String> createdTime) {
@@ -318,7 +319,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Output.ofNullable(createdTime);
+            this.createdTime = Codegen.ofNullable(createdTime);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -326,7 +327,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder distributor(@Nullable Output<String> distributor) {
@@ -334,7 +335,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder distributor(@Nullable String distributor) {
-            this.distributor = Output.ofNullable(distributor);
+            this.distributor = Codegen.ofNullable(distributor);
             return this;
         }
         public Builder hasDefaultPath(@Nullable Output<Boolean> hasDefaultPath) {
@@ -342,7 +343,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hasDefaultPath(@Nullable Boolean hasDefaultPath) {
-            this.hasDefaultPath = Output.ofNullable(hasDefaultPath);
+            this.hasDefaultPath = Codegen.ofNullable(hasDefaultPath);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -350,7 +351,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder owner(@Nullable Output<String> owner) {
@@ -358,7 +359,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder owner(@Nullable String owner) {
-            this.owner = Output.ofNullable(owner);
+            this.owner = Codegen.ofNullable(owner);
             return this;
         }
         public Builder provisioningArtifactParameters(@Nullable Output<ProductProvisioningArtifactParametersGetArgs> provisioningArtifactParameters) {
@@ -366,7 +367,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder provisioningArtifactParameters(@Nullable ProductProvisioningArtifactParametersGetArgs provisioningArtifactParameters) {
-            this.provisioningArtifactParameters = Output.ofNullable(provisioningArtifactParameters);
+            this.provisioningArtifactParameters = Codegen.ofNullable(provisioningArtifactParameters);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -374,7 +375,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder supportDescription(@Nullable Output<String> supportDescription) {
@@ -382,7 +383,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder supportDescription(@Nullable String supportDescription) {
-            this.supportDescription = Output.ofNullable(supportDescription);
+            this.supportDescription = Codegen.ofNullable(supportDescription);
             return this;
         }
         public Builder supportEmail(@Nullable Output<String> supportEmail) {
@@ -390,7 +391,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder supportEmail(@Nullable String supportEmail) {
-            this.supportEmail = Output.ofNullable(supportEmail);
+            this.supportEmail = Codegen.ofNullable(supportEmail);
             return this;
         }
         public Builder supportUrl(@Nullable Output<String> supportUrl) {
@@ -398,7 +399,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder supportUrl(@Nullable String supportUrl) {
-            this.supportUrl = Output.ofNullable(supportUrl);
+            this.supportUrl = Codegen.ofNullable(supportUrl);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -406,7 +407,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -414,7 +415,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -422,7 +423,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ProductState build() {
             return new ProductState(acceptLanguage, arn, createdTime, description, distributor, hasDefaultPath, name, owner, provisioningArtifactParameters, status, supportDescription, supportEmail, supportUrl, tags, tagsAll, type);

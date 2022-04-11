@@ -5,6 +5,7 @@ package io.pulumi.aws.mq.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> authenticationStrategy;
 
     public Output<String> getAuthenticationStrategy() {
-        return this.authenticationStrategy == null ? Output.empty() : this.authenticationStrategy;
+        return this.authenticationStrategy == null ? Codegen.empty() : this.authenticationStrategy;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> data;
 
     public Output<String> getData() {
-        return this.data == null ? Output.empty() : this.data;
+        return this.data == null ? Codegen.empty() : this.data;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> engineType;
 
     public Output<String> getEngineType() {
-        return this.engineType == null ? Output.empty() : this.engineType;
+        return this.engineType == null ? Codegen.empty() : this.engineType;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> engineVersion;
 
     public Output<String> getEngineVersion() {
-        return this.engineVersion == null ? Output.empty() : this.engineVersion;
+        return this.engineVersion == null ? Codegen.empty() : this.engineVersion;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> latestRevision;
 
     public Output<Integer> getLatestRevision() {
-        return this.latestRevision == null ? Output.empty() : this.latestRevision;
+        return this.latestRevision == null ? Codegen.empty() : this.latestRevision;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public ConfigurationState(
@@ -150,16 +151,16 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConfigurationState() {
-        this.arn = Output.empty();
-        this.authenticationStrategy = Output.empty();
-        this.data = Output.empty();
-        this.description = Output.empty();
-        this.engineType = Output.empty();
-        this.engineVersion = Output.empty();
-        this.latestRevision = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.authenticationStrategy = Codegen.empty();
+        this.data = Codegen.empty();
+        this.description = Codegen.empty();
+        this.engineType = Codegen.empty();
+        this.engineVersion = Codegen.empty();
+        this.latestRevision = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -205,7 +206,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder authenticationStrategy(@Nullable Output<String> authenticationStrategy) {
@@ -213,7 +214,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authenticationStrategy(@Nullable String authenticationStrategy) {
-            this.authenticationStrategy = Output.ofNullable(authenticationStrategy);
+            this.authenticationStrategy = Codegen.ofNullable(authenticationStrategy);
             return this;
         }
         public Builder data(@Nullable Output<String> data) {
@@ -221,7 +222,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder data(@Nullable String data) {
-            this.data = Output.ofNullable(data);
+            this.data = Codegen.ofNullable(data);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -229,7 +230,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder engineType(@Nullable Output<String> engineType) {
@@ -237,7 +238,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder engineType(@Nullable String engineType) {
-            this.engineType = Output.ofNullable(engineType);
+            this.engineType = Codegen.ofNullable(engineType);
             return this;
         }
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
@@ -245,7 +246,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder engineVersion(@Nullable String engineVersion) {
-            this.engineVersion = Output.ofNullable(engineVersion);
+            this.engineVersion = Codegen.ofNullable(engineVersion);
             return this;
         }
         public Builder latestRevision(@Nullable Output<Integer> latestRevision) {
@@ -253,7 +254,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder latestRevision(@Nullable Integer latestRevision) {
-            this.latestRevision = Output.ofNullable(latestRevision);
+            this.latestRevision = Codegen.ofNullable(latestRevision);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -261,7 +262,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -269,7 +270,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -277,7 +278,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public ConfigurationState build() {
             return new ConfigurationState(arn, authenticationStrategy, data, description, engineType, engineVersion, latestRevision, name, tags, tagsAll);

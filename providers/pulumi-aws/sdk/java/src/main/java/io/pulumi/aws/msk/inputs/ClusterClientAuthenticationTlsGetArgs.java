@@ -5,6 +5,7 @@ package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ClusterClientAuthenticationTlsGetArgs extends io.pulumi.resou
       private final @Nullable Output<List<String>> certificateAuthorityArns;
 
     public Output<List<String>> getCertificateAuthorityArns() {
-        return this.certificateAuthorityArns == null ? Output.empty() : this.certificateAuthorityArns;
+        return this.certificateAuthorityArns == null ? Codegen.empty() : this.certificateAuthorityArns;
     }
 
     public ClusterClientAuthenticationTlsGetArgs(@Nullable Output<List<String>> certificateAuthorityArns) {
@@ -31,7 +32,7 @@ public final class ClusterClientAuthenticationTlsGetArgs extends io.pulumi.resou
     }
 
     private ClusterClientAuthenticationTlsGetArgs() {
-        this.certificateAuthorityArns = Output.empty();
+        this.certificateAuthorityArns = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class ClusterClientAuthenticationTlsGetArgs extends io.pulumi.resou
             return this;
         }
         public Builder certificateAuthorityArns(@Nullable List<String> certificateAuthorityArns) {
-            this.certificateAuthorityArns = Output.ofNullable(certificateAuthorityArns);
+            this.certificateAuthorityArns = Codegen.ofNullable(certificateAuthorityArns);
             return this;
         }
         public Builder certificateAuthorityArns(String... certificateAuthorityArns) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.logz.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class LogzOrganizationPropertiesArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> companyName;
 
     public Output<String> getCompanyName() {
-        return this.companyName == null ? Output.empty() : this.companyName;
+        return this.companyName == null ? Codegen.empty() : this.companyName;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class LogzOrganizationPropertiesArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> enterpriseAppId;
 
     public Output<String> getEnterpriseAppId() {
-        return this.enterpriseAppId == null ? Output.empty() : this.enterpriseAppId;
+        return this.enterpriseAppId == null ? Codegen.empty() : this.enterpriseAppId;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class LogzOrganizationPropertiesArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> singleSignOnUrl;
 
     public Output<String> getSingleSignOnUrl() {
-        return this.singleSignOnUrl == null ? Output.empty() : this.singleSignOnUrl;
+        return this.singleSignOnUrl == null ? Codegen.empty() : this.singleSignOnUrl;
     }
 
     public LogzOrganizationPropertiesArgs(
@@ -57,9 +58,9 @@ public final class LogzOrganizationPropertiesArgs extends io.pulumi.resources.Re
     }
 
     private LogzOrganizationPropertiesArgs() {
-        this.companyName = Output.empty();
-        this.enterpriseAppId = Output.empty();
-        this.singleSignOnUrl = Output.empty();
+        this.companyName = Codegen.empty();
+        this.enterpriseAppId = Codegen.empty();
+        this.singleSignOnUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class LogzOrganizationPropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder companyName(@Nullable String companyName) {
-            this.companyName = Output.ofNullable(companyName);
+            this.companyName = Codegen.ofNullable(companyName);
             return this;
         }
         public Builder enterpriseAppId(@Nullable Output<String> enterpriseAppId) {
@@ -99,7 +100,7 @@ public final class LogzOrganizationPropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder enterpriseAppId(@Nullable String enterpriseAppId) {
-            this.enterpriseAppId = Output.ofNullable(enterpriseAppId);
+            this.enterpriseAppId = Codegen.ofNullable(enterpriseAppId);
             return this;
         }
         public Builder singleSignOnUrl(@Nullable Output<String> singleSignOnUrl) {
@@ -107,7 +108,7 @@ public final class LogzOrganizationPropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder singleSignOnUrl(@Nullable String singleSignOnUrl) {
-            this.singleSignOnUrl = Output.ofNullable(singleSignOnUrl);
+            this.singleSignOnUrl = Codegen.ofNullable(singleSignOnUrl);
             return this;
         }        public LogzOrganizationPropertiesArgs build() {
             return new LogzOrganizationPropertiesArgs(companyName, enterpriseAppId, singleSignOnUrl);

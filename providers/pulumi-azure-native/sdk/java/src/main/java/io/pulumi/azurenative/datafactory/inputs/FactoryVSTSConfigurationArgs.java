@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -48,7 +49,7 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> lastCommitId;
 
     public Output<String> getLastCommitId() {
-        return this.lastCommitId == null ? Output.empty() : this.lastCommitId;
+        return this.lastCommitId == null ? Codegen.empty() : this.lastCommitId;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {
-        return this.tenantId == null ? Output.empty() : this.tenantId;
+        return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
     /**
@@ -127,14 +128,14 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     private FactoryVSTSConfigurationArgs() {
-        this.accountName = Output.empty();
-        this.collaborationBranch = Output.empty();
-        this.lastCommitId = Output.empty();
-        this.projectName = Output.empty();
-        this.repositoryName = Output.empty();
-        this.rootFolder = Output.empty();
-        this.tenantId = Output.empty();
-        this.type = Output.empty();
+        this.accountName = Codegen.empty();
+        this.collaborationBranch = Codegen.empty();
+        this.lastCommitId = Codegen.empty();
+        this.projectName = Codegen.empty();
+        this.repositoryName = Codegen.empty();
+        this.rootFolder = Codegen.empty();
+        this.tenantId = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -192,7 +193,7 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder lastCommitId(@Nullable String lastCommitId) {
-            this.lastCommitId = Output.ofNullable(lastCommitId);
+            this.lastCommitId = Codegen.ofNullable(lastCommitId);
             return this;
         }
         public Builder projectName(Output<String> projectName) {
@@ -224,7 +225,7 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Output.ofNullable(tenantId);
+            this.tenantId = Codegen.ofNullable(tenantId);
             return this;
         }
         public Builder type(Output<String> type) {

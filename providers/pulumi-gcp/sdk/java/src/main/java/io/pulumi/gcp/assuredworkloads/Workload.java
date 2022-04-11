@@ -6,6 +6,7 @@ package io.pulumi.gcp.assuredworkloads;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.assuredworkloads.WorkloadArgs;
 import io.pulumi.gcp.assuredworkloads.inputs.WorkloadState;
@@ -230,7 +231,7 @@ public class Workload extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Workload(String name, WorkloadArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:assuredworkloads/workload:Workload", name, args == null ? WorkloadArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:assuredworkloads/workload:Workload", name, args == null ? WorkloadArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Workload(String name, Output<String> id, @Nullable WorkloadState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

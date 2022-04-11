@@ -5,6 +5,7 @@ package io.pulumi.awsnative.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ApiKeyStageKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> restApiId;
 
     public Output<String> getRestApiId() {
-        return this.restApiId == null ? Output.empty() : this.restApiId;
+        return this.restApiId == null ? Codegen.empty() : this.restApiId;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ApiKeyStageKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> stageName;
 
     public Output<String> getStageName() {
-        return this.stageName == null ? Output.empty() : this.stageName;
+        return this.stageName == null ? Codegen.empty() : this.stageName;
     }
 
     public ApiKeyStageKeyArgs(
@@ -44,8 +45,8 @@ public final class ApiKeyStageKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApiKeyStageKeyArgs() {
-        this.restApiId = Output.empty();
-        this.stageName = Output.empty();
+        this.restApiId = Codegen.empty();
+        this.stageName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class ApiKeyStageKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder restApiId(@Nullable String restApiId) {
-            this.restApiId = Output.ofNullable(restApiId);
+            this.restApiId = Codegen.ofNullable(restApiId);
             return this;
         }
         public Builder stageName(@Nullable Output<String> stageName) {
@@ -83,7 +84,7 @@ public final class ApiKeyStageKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stageName(@Nullable String stageName) {
-            this.stageName = Output.ofNullable(stageName);
+            this.stageName = Codegen.ofNullable(stageName);
             return this;
         }        public ApiKeyStageKeyArgs build() {
             return new ApiKeyStageKeyArgs(restApiId, stageName);

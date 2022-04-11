@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudsearch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class DomainEndpointOptionsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Boolean> enforceHttps;
 
     public Output<Boolean> getEnforceHttps() {
-        return this.enforceHttps == null ? Output.empty() : this.enforceHttps;
+        return this.enforceHttps == null ? Codegen.empty() : this.enforceHttps;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class DomainEndpointOptionsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> tlsSecurityPolicy;
 
     public Output<String> getTlsSecurityPolicy() {
-        return this.tlsSecurityPolicy == null ? Output.empty() : this.tlsSecurityPolicy;
+        return this.tlsSecurityPolicy == null ? Codegen.empty() : this.tlsSecurityPolicy;
     }
 
     public DomainEndpointOptionsArgs(
@@ -45,8 +46,8 @@ public final class DomainEndpointOptionsArgs extends io.pulumi.resources.Resourc
     }
 
     private DomainEndpointOptionsArgs() {
-        this.enforceHttps = Output.empty();
-        this.tlsSecurityPolicy = Output.empty();
+        this.enforceHttps = Codegen.empty();
+        this.tlsSecurityPolicy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class DomainEndpointOptionsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder enforceHttps(@Nullable Boolean enforceHttps) {
-            this.enforceHttps = Output.ofNullable(enforceHttps);
+            this.enforceHttps = Codegen.ofNullable(enforceHttps);
             return this;
         }
         public Builder tlsSecurityPolicy(@Nullable Output<String> tlsSecurityPolicy) {
@@ -84,7 +85,7 @@ public final class DomainEndpointOptionsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tlsSecurityPolicy(@Nullable String tlsSecurityPolicy) {
-            this.tlsSecurityPolicy = Output.ofNullable(tlsSecurityPolicy);
+            this.tlsSecurityPolicy = Codegen.ofNullable(tlsSecurityPolicy);
             return this;
         }        public DomainEndpointOptionsArgs build() {
             return new DomainEndpointOptionsArgs(enforceHttps, tlsSecurityPolicy);

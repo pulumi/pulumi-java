@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class KeyToPathArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> mode;
 
     public Output<Integer> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -62,9 +63,9 @@ public final class KeyToPathArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeyToPathArgs() {
-        this.key = Output.empty();
-        this.mode = Output.empty();
-        this.path = Output.empty();
+        this.key = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.path = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class KeyToPathArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mode(@Nullable Integer mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder path(Output<String> path) {

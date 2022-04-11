@@ -5,6 +5,7 @@ package io.pulumi.googlenative.notebooks_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.notebooks_v1.inputs.ExecutionTemplateArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="executionId", required=true)
@@ -41,14 +42,14 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ExecutionTemplateArgs> executionTemplate;
 
     public Output<ExecutionTemplateArgs> getExecutionTemplate() {
-        return this.executionTemplate == null ? Output.empty() : this.executionTemplate;
+        return this.executionTemplate == null ? Codegen.empty() : this.executionTemplate;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -59,14 +60,14 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> outputNotebookFile;
 
     public Output<String> getOutputNotebookFile() {
-        return this.outputNotebookFile == null ? Output.empty() : this.outputNotebookFile;
+        return this.outputNotebookFile == null ? Codegen.empty() : this.outputNotebookFile;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public ExecutionArgs(
@@ -85,12 +86,12 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExecutionArgs() {
-        this.description = Output.empty();
-        this.executionId = Output.empty();
-        this.executionTemplate = Output.empty();
-        this.location = Output.empty();
-        this.outputNotebookFile = Output.empty();
-        this.project = Output.empty();
+        this.description = Codegen.empty();
+        this.executionId = Codegen.empty();
+        this.executionTemplate = Codegen.empty();
+        this.location = Codegen.empty();
+        this.outputNotebookFile = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder executionId(Output<String> executionId) {
@@ -144,7 +145,7 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder executionTemplate(@Nullable ExecutionTemplateArgs executionTemplate) {
-            this.executionTemplate = Output.ofNullable(executionTemplate);
+            this.executionTemplate = Codegen.ofNullable(executionTemplate);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -152,7 +153,7 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder outputNotebookFile(@Nullable Output<String> outputNotebookFile) {
@@ -160,7 +161,7 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder outputNotebookFile(@Nullable String outputNotebookFile) {
-            this.outputNotebookFile = Output.ofNullable(outputNotebookFile);
+            this.outputNotebookFile = Codegen.ofNullable(outputNotebookFile);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -168,7 +169,7 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public ExecutionArgs build() {
             return new ExecutionArgs(description, executionId, executionTemplate, location, outputNotebookFile, project);

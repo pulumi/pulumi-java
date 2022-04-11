@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.InstallationArgs;
 import java.util.Objects;
 
@@ -33,7 +34,7 @@ public final class GrafeasV1beta1PackageDetailsArgs extends io.pulumi.resources.
     }
 
     private GrafeasV1beta1PackageDetailsArgs() {
-        this.installation = Output.empty();
+        this.installation = Codegen.empty();
     }
 
     public static Builder builder() {

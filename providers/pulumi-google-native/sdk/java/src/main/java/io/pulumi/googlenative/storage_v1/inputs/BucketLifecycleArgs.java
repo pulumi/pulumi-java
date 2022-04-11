@@ -5,6 +5,7 @@ package io.pulumi.googlenative.storage_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.storage_v1.inputs.BucketLifecycleRuleItemArgs;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class BucketLifecycleArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<BucketLifecycleRuleItemArgs>> rule;
 
     public Output<List<BucketLifecycleRuleItemArgs>> getRule() {
-        return this.rule == null ? Output.empty() : this.rule;
+        return this.rule == null ? Codegen.empty() : this.rule;
     }
 
     public BucketLifecycleArgs(@Nullable Output<List<BucketLifecycleRuleItemArgs>> rule) {
@@ -35,7 +36,7 @@ public final class BucketLifecycleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private BucketLifecycleArgs() {
-        this.rule = Output.empty();
+        this.rule = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class BucketLifecycleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder rule(@Nullable List<BucketLifecycleRuleItemArgs> rule) {
-            this.rule = Output.ofNullable(rule);
+            this.rule = Codegen.ofNullable(rule);
             return this;
         }
         public Builder rule(BucketLifecycleRuleItemArgs... rule) {

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.orgpolicy_v2;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.orgpolicy_v2.FolderPolicyArgs;
 import io.pulumi.googlenative.orgpolicy_v2.outputs.GoogleCloudOrgpolicyV2PolicySpecResponse;
@@ -70,7 +71,7 @@ public class FolderPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FolderPolicy(String name, FolderPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:orgpolicy/v2:FolderPolicy", name, args == null ? FolderPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:orgpolicy/v2:FolderPolicy", name, args == null ? FolderPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FolderPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

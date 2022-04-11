@@ -10,6 +10,7 @@ import io.pulumi.azurenative.operationalinsights.inputs.KeyVaultPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -29,7 +30,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,BillingType>> billingType;
 
     public Output<Either<String,BillingType>> getBillingType() {
-        return this.billingType == null ? Output.empty() : this.billingType;
+        return this.billingType == null ? Codegen.empty() : this.billingType;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> clusterName;
 
     public Output<String> getClusterName() {
-        return this.clusterName == null ? Output.empty() : this.clusterName;
+        return this.clusterName == null ? Codegen.empty() : this.clusterName;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<IdentityArgs> identity;
 
     public Output<IdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> isAvailabilityZonesEnabled;
 
     public Output<Boolean> getIsAvailabilityZonesEnabled() {
-        return this.isAvailabilityZonesEnabled == null ? Output.empty() : this.isAvailabilityZonesEnabled;
+        return this.isAvailabilityZonesEnabled == null ? Codegen.empty() : this.isAvailabilityZonesEnabled;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> isDoubleEncryptionEnabled;
 
     public Output<Boolean> getIsDoubleEncryptionEnabled() {
-        return this.isDoubleEncryptionEnabled == null ? Output.empty() : this.isDoubleEncryptionEnabled;
+        return this.isDoubleEncryptionEnabled == null ? Codegen.empty() : this.isDoubleEncryptionEnabled;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
     public Output<KeyVaultPropertiesArgs> getKeyVaultProperties() {
-        return this.keyVaultProperties == null ? Output.empty() : this.keyVaultProperties;
+        return this.keyVaultProperties == null ? Codegen.empty() : this.keyVaultProperties;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ClusterSkuArgs> sku;
 
     public Output<ClusterSkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -128,7 +129,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ClusterArgs(
@@ -155,16 +156,16 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterArgs() {
-        this.billingType = Output.empty();
-        this.clusterName = Output.empty();
-        this.identity = Output.empty();
-        this.isAvailabilityZonesEnabled = Output.empty();
-        this.isDoubleEncryptionEnabled = Output.empty();
-        this.keyVaultProperties = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
+        this.billingType = Codegen.empty();
+        this.clusterName = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.isAvailabilityZonesEnabled = Codegen.empty();
+        this.isDoubleEncryptionEnabled = Codegen.empty();
+        this.keyVaultProperties = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -210,7 +211,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder billingType(@Nullable Either<String,BillingType> billingType) {
-            this.billingType = Output.ofNullable(billingType);
+            this.billingType = Codegen.ofNullable(billingType);
             return this;
         }
         public Builder clusterName(@Nullable Output<String> clusterName) {
@@ -218,7 +219,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Output.ofNullable(clusterName);
+            this.clusterName = Codegen.ofNullable(clusterName);
             return this;
         }
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
@@ -226,7 +227,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable IdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder isAvailabilityZonesEnabled(@Nullable Output<Boolean> isAvailabilityZonesEnabled) {
@@ -234,7 +235,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isAvailabilityZonesEnabled(@Nullable Boolean isAvailabilityZonesEnabled) {
-            this.isAvailabilityZonesEnabled = Output.ofNullable(isAvailabilityZonesEnabled);
+            this.isAvailabilityZonesEnabled = Codegen.ofNullable(isAvailabilityZonesEnabled);
             return this;
         }
         public Builder isDoubleEncryptionEnabled(@Nullable Output<Boolean> isDoubleEncryptionEnabled) {
@@ -242,7 +243,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isDoubleEncryptionEnabled(@Nullable Boolean isDoubleEncryptionEnabled) {
-            this.isDoubleEncryptionEnabled = Output.ofNullable(isDoubleEncryptionEnabled);
+            this.isDoubleEncryptionEnabled = Codegen.ofNullable(isDoubleEncryptionEnabled);
             return this;
         }
         public Builder keyVaultProperties(@Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties) {
@@ -250,7 +251,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyVaultProperties(@Nullable KeyVaultPropertiesArgs keyVaultProperties) {
-            this.keyVaultProperties = Output.ofNullable(keyVaultProperties);
+            this.keyVaultProperties = Codegen.ofNullable(keyVaultProperties);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -258,7 +259,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -274,7 +275,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sku(@Nullable ClusterSkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -282,7 +283,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ClusterArgs build() {
             return new ClusterArgs(billingType, clusterName, identity, isAvailabilityZonesEnabled, isDoubleEncryptionEnabled, keyVaultProperties, location, resourceGroupName, sku, tags);

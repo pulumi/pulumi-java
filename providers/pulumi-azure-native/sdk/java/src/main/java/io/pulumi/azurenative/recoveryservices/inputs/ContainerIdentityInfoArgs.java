@@ -5,6 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ContainerIdentityInfoArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> aadTenantId;
 
     public Output<String> getAadTenantId() {
-        return this.aadTenantId == null ? Output.empty() : this.aadTenantId;
+        return this.aadTenantId == null ? Codegen.empty() : this.aadTenantId;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ContainerIdentityInfoArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> audience;
 
     public Output<String> getAudience() {
-        return this.audience == null ? Output.empty() : this.audience;
+        return this.audience == null ? Codegen.empty() : this.audience;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ContainerIdentityInfoArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> servicePrincipalClientId;
 
     public Output<String> getServicePrincipalClientId() {
-        return this.servicePrincipalClientId == null ? Output.empty() : this.servicePrincipalClientId;
+        return this.servicePrincipalClientId == null ? Codegen.empty() : this.servicePrincipalClientId;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ContainerIdentityInfoArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> uniqueName;
 
     public Output<String> getUniqueName() {
-        return this.uniqueName == null ? Output.empty() : this.uniqueName;
+        return this.uniqueName == null ? Codegen.empty() : this.uniqueName;
     }
 
     public ContainerIdentityInfoArgs(
@@ -74,10 +75,10 @@ public final class ContainerIdentityInfoArgs extends io.pulumi.resources.Resourc
     }
 
     private ContainerIdentityInfoArgs() {
-        this.aadTenantId = Output.empty();
-        this.audience = Output.empty();
-        this.servicePrincipalClientId = Output.empty();
-        this.uniqueName = Output.empty();
+        this.aadTenantId = Codegen.empty();
+        this.audience = Codegen.empty();
+        this.servicePrincipalClientId = Codegen.empty();
+        this.uniqueName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class ContainerIdentityInfoArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder aadTenantId(@Nullable String aadTenantId) {
-            this.aadTenantId = Output.ofNullable(aadTenantId);
+            this.aadTenantId = Codegen.ofNullable(aadTenantId);
             return this;
         }
         public Builder audience(@Nullable Output<String> audience) {
@@ -119,7 +120,7 @@ public final class ContainerIdentityInfoArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder audience(@Nullable String audience) {
-            this.audience = Output.ofNullable(audience);
+            this.audience = Codegen.ofNullable(audience);
             return this;
         }
         public Builder servicePrincipalClientId(@Nullable Output<String> servicePrincipalClientId) {
@@ -127,7 +128,7 @@ public final class ContainerIdentityInfoArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder servicePrincipalClientId(@Nullable String servicePrincipalClientId) {
-            this.servicePrincipalClientId = Output.ofNullable(servicePrincipalClientId);
+            this.servicePrincipalClientId = Codegen.ofNullable(servicePrincipalClientId);
             return this;
         }
         public Builder uniqueName(@Nullable Output<String> uniqueName) {
@@ -135,7 +136,7 @@ public final class ContainerIdentityInfoArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder uniqueName(@Nullable String uniqueName) {
-            this.uniqueName = Output.ofNullable(uniqueName);
+            this.uniqueName = Codegen.ofNullable(uniqueName);
             return this;
         }        public ContainerIdentityInfoArgs build() {
             return new ContainerIdentityInfoArgs(aadTenantId, audience, servicePrincipalClientId, uniqueName);

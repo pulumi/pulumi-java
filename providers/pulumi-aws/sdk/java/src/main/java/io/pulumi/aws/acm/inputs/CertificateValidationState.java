@@ -5,6 +5,7 @@ package io.pulumi.aws.acm.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class CertificateValidationState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> certificateArn;
 
     public Output<String> getCertificateArn() {
-        return this.certificateArn == null ? Output.empty() : this.certificateArn;
+        return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class CertificateValidationState extends io.pulumi.resources.Resour
       private final @Nullable Output<List<String>> validationRecordFqdns;
 
     public Output<List<String>> getValidationRecordFqdns() {
-        return this.validationRecordFqdns == null ? Output.empty() : this.validationRecordFqdns;
+        return this.validationRecordFqdns == null ? Codegen.empty() : this.validationRecordFqdns;
     }
 
     public CertificateValidationState(
@@ -45,8 +46,8 @@ public final class CertificateValidationState extends io.pulumi.resources.Resour
     }
 
     private CertificateValidationState() {
-        this.certificateArn = Output.empty();
-        this.validationRecordFqdns = Output.empty();
+        this.certificateArn = Codegen.empty();
+        this.validationRecordFqdns = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class CertificateValidationState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Output.ofNullable(certificateArn);
+            this.certificateArn = Codegen.ofNullable(certificateArn);
             return this;
         }
         public Builder validationRecordFqdns(@Nullable Output<List<String>> validationRecordFqdns) {
@@ -84,7 +85,7 @@ public final class CertificateValidationState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder validationRecordFqdns(@Nullable List<String> validationRecordFqdns) {
-            this.validationRecordFqdns = Output.ofNullable(validationRecordFqdns);
+            this.validationRecordFqdns = Codegen.ofNullable(validationRecordFqdns);
             return this;
         }
         public Builder validationRecordFqdns(String... validationRecordFqdns) {

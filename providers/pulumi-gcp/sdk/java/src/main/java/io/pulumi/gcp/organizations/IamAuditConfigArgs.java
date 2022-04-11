@@ -5,6 +5,7 @@ package io.pulumi.gcp.organizations;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.organizations.inputs.IamAuditConfigAuditLogConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -58,9 +59,9 @@ public final class IamAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IamAuditConfigArgs() {
-        this.auditLogConfigs = Output.empty();
-        this.orgId = Output.empty();
-        this.service = Output.empty();
+        this.auditLogConfigs = Codegen.empty();
+        this.orgId = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.hybridcompute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class MachineIdentityArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public MachineIdentityArgs(@Nullable Output<String> type) {
@@ -30,7 +31,7 @@ public final class MachineIdentityArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private MachineIdentityArgs() {
-        this.type = Output.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class MachineIdentityArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public MachineIdentityArgs build() {
             return new MachineIdentityArgs(type);

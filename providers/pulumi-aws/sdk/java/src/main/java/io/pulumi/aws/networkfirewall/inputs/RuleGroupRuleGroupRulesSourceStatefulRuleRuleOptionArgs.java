@@ -5,6 +5,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs exten
       private final @Nullable Output<List<String>> settings;
 
     public Output<List<String>> getSettings() {
-        return this.settings == null ? Output.empty() : this.settings;
+        return this.settings == null ? Codegen.empty() : this.settings;
     }
 
     public RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs(
@@ -46,8 +47,8 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs exten
     }
 
     private RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs() {
-        this.keyword = Output.empty();
-        this.settings = Output.empty();
+        this.keyword = Codegen.empty();
+        this.settings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -85,7 +86,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs exten
             return this;
         }
         public Builder settings(@Nullable List<String> settings) {
-            this.settings = Output.ofNullable(settings);
+            this.settings = Codegen.ofNullable(settings);
             return this;
         }
         public Builder settings(String... settings) {

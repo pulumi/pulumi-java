@@ -5,6 +5,7 @@ package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterSpecIngressPolicyIngressFromArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterSpecIngressPolicyIngressToArgs;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class ServicePerimeterSpecIngressPolicyArgs extends io.pulumi.resou
       private final @Nullable Output<ServicePerimeterSpecIngressPolicyIngressFromArgs> ingressFrom;
 
     public Output<ServicePerimeterSpecIngressPolicyIngressFromArgs> getIngressFrom() {
-        return this.ingressFrom == null ? Output.empty() : this.ingressFrom;
+        return this.ingressFrom == null ? Codegen.empty() : this.ingressFrom;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ServicePerimeterSpecIngressPolicyArgs extends io.pulumi.resou
       private final @Nullable Output<ServicePerimeterSpecIngressPolicyIngressToArgs> ingressTo;
 
     public Output<ServicePerimeterSpecIngressPolicyIngressToArgs> getIngressTo() {
-        return this.ingressTo == null ? Output.empty() : this.ingressTo;
+        return this.ingressTo == null ? Codegen.empty() : this.ingressTo;
     }
 
     public ServicePerimeterSpecIngressPolicyArgs(
@@ -49,8 +50,8 @@ public final class ServicePerimeterSpecIngressPolicyArgs extends io.pulumi.resou
     }
 
     private ServicePerimeterSpecIngressPolicyArgs() {
-        this.ingressFrom = Output.empty();
-        this.ingressTo = Output.empty();
+        this.ingressFrom = Codegen.empty();
+        this.ingressTo = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ServicePerimeterSpecIngressPolicyArgs extends io.pulumi.resou
             return this;
         }
         public Builder ingressFrom(@Nullable ServicePerimeterSpecIngressPolicyIngressFromArgs ingressFrom) {
-            this.ingressFrom = Output.ofNullable(ingressFrom);
+            this.ingressFrom = Codegen.ofNullable(ingressFrom);
             return this;
         }
         public Builder ingressTo(@Nullable Output<ServicePerimeterSpecIngressPolicyIngressToArgs> ingressTo) {
@@ -88,7 +89,7 @@ public final class ServicePerimeterSpecIngressPolicyArgs extends io.pulumi.resou
             return this;
         }
         public Builder ingressTo(@Nullable ServicePerimeterSpecIngressPolicyIngressToArgs ingressTo) {
-            this.ingressTo = Output.ofNullable(ingressTo);
+            this.ingressTo = Codegen.ofNullable(ingressTo);
             return this;
         }        public ServicePerimeterSpecIngressPolicyArgs build() {
             return new ServicePerimeterSpecIngressPolicyArgs(ingressFrom, ingressTo);

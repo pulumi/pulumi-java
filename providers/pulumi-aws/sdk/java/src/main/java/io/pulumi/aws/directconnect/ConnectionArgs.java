@@ -5,6 +5,7 @@ package io.pulumi.aws.directconnect;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -45,7 +46,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> providerName;
 
     public Output<String> getProviderName() {
-        return this.providerName == null ? Output.empty() : this.providerName;
+        return this.providerName == null ? Codegen.empty() : this.providerName;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ConnectionArgs(
@@ -84,11 +85,11 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConnectionArgs() {
-        this.bandwidth = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.providerName = Output.empty();
-        this.tags = Output.empty();
+        this.bandwidth = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.providerName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder providerName(@Nullable Output<String> providerName) {
@@ -148,7 +149,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder providerName(@Nullable String providerName) {
-            this.providerName = Output.ofNullable(providerName);
+            this.providerName = Codegen.ofNullable(providerName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -156,7 +157,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ConnectionArgs build() {
             return new ConnectionArgs(bandwidth, location, name, providerName, tags);

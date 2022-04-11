@@ -5,6 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -60,9 +61,9 @@ public final class TagFilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TagFilterArgs() {
-        this.name = Output.empty();
-        this.op = Output.empty();
-        this.value = Output.empty();
+        this.name = Codegen.empty();
+        this.op = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

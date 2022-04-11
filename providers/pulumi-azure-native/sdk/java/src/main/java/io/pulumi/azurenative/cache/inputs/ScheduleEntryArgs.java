@@ -6,6 +6,7 @@ package io.pulumi.azurenative.cache.inputs;
 import io.pulumi.azurenative.cache.enums.DayOfWeek;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -39,7 +40,7 @@ public final class ScheduleEntryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> maintenanceWindow;
 
     public Output<String> getMaintenanceWindow() {
-        return this.maintenanceWindow == null ? Output.empty() : this.maintenanceWindow;
+        return this.maintenanceWindow == null ? Codegen.empty() : this.maintenanceWindow;
     }
 
     /**
@@ -63,9 +64,9 @@ public final class ScheduleEntryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScheduleEntryArgs() {
-        this.dayOfWeek = Output.empty();
-        this.maintenanceWindow = Output.empty();
-        this.startHourUtc = Output.empty();
+        this.dayOfWeek = Codegen.empty();
+        this.maintenanceWindow = Codegen.empty();
+        this.startHourUtc = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class ScheduleEntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maintenanceWindow(@Nullable String maintenanceWindow) {
-            this.maintenanceWindow = Output.ofNullable(maintenanceWindow);
+            this.maintenanceWindow = Codegen.ofNullable(maintenanceWindow);
             return this;
         }
         public Builder startHourUtc(Output<Integer> startHourUtc) {

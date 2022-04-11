@@ -5,6 +5,7 @@ package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -73,10 +74,10 @@ public final class IosDeviceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IosDeviceArgs() {
-        this.iosModelId = Output.empty();
-        this.iosVersionId = Output.empty();
-        this.locale = Output.empty();
-        this.orientation = Output.empty();
+        this.iosModelId = Codegen.empty();
+        this.iosVersionId = Codegen.empty();
+        this.locale = Codegen.empty();
+        this.orientation = Codegen.empty();
     }
 
     public static Builder builder() {

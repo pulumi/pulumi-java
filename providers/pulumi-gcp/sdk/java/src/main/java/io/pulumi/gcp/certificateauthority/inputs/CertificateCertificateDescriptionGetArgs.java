@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionAuthorityKeyIdGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionCertFingerprintGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionConfigValueGetArgs;
@@ -25,35 +26,35 @@ public final class CertificateCertificateDescriptionGetArgs extends io.pulumi.re
       private final @Nullable Output<List<String>> aiaIssuingCertificateUrls;
 
     public Output<List<String>> getAiaIssuingCertificateUrls() {
-        return this.aiaIssuingCertificateUrls == null ? Output.empty() : this.aiaIssuingCertificateUrls;
+        return this.aiaIssuingCertificateUrls == null ? Codegen.empty() : this.aiaIssuingCertificateUrls;
     }
 
     @Import(name="authorityKeyIds")
       private final @Nullable Output<List<CertificateCertificateDescriptionAuthorityKeyIdGetArgs>> authorityKeyIds;
 
     public Output<List<CertificateCertificateDescriptionAuthorityKeyIdGetArgs>> getAuthorityKeyIds() {
-        return this.authorityKeyIds == null ? Output.empty() : this.authorityKeyIds;
+        return this.authorityKeyIds == null ? Codegen.empty() : this.authorityKeyIds;
     }
 
     @Import(name="certFingerprints")
       private final @Nullable Output<List<CertificateCertificateDescriptionCertFingerprintGetArgs>> certFingerprints;
 
     public Output<List<CertificateCertificateDescriptionCertFingerprintGetArgs>> getCertFingerprints() {
-        return this.certFingerprints == null ? Output.empty() : this.certFingerprints;
+        return this.certFingerprints == null ? Codegen.empty() : this.certFingerprints;
     }
 
     @Import(name="configValues")
       private final @Nullable Output<List<CertificateCertificateDescriptionConfigValueGetArgs>> configValues;
 
     public Output<List<CertificateCertificateDescriptionConfigValueGetArgs>> getConfigValues() {
-        return this.configValues == null ? Output.empty() : this.configValues;
+        return this.configValues == null ? Codegen.empty() : this.configValues;
     }
 
     @Import(name="crlDistributionPoints")
       private final @Nullable Output<List<String>> crlDistributionPoints;
 
     public Output<List<String>> getCrlDistributionPoints() {
-        return this.crlDistributionPoints == null ? Output.empty() : this.crlDistributionPoints;
+        return this.crlDistributionPoints == null ? Codegen.empty() : this.crlDistributionPoints;
     }
 
     /**
@@ -65,21 +66,21 @@ public final class CertificateCertificateDescriptionGetArgs extends io.pulumi.re
       private final @Nullable Output<List<CertificateCertificateDescriptionPublicKeyGetArgs>> publicKeys;
 
     public Output<List<CertificateCertificateDescriptionPublicKeyGetArgs>> getPublicKeys() {
-        return this.publicKeys == null ? Output.empty() : this.publicKeys;
+        return this.publicKeys == null ? Codegen.empty() : this.publicKeys;
     }
 
     @Import(name="subjectDescriptions")
       private final @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionGetArgs>> subjectDescriptions;
 
     public Output<List<CertificateCertificateDescriptionSubjectDescriptionGetArgs>> getSubjectDescriptions() {
-        return this.subjectDescriptions == null ? Output.empty() : this.subjectDescriptions;
+        return this.subjectDescriptions == null ? Codegen.empty() : this.subjectDescriptions;
     }
 
     @Import(name="subjectKeyIds")
       private final @Nullable Output<List<CertificateCertificateDescriptionSubjectKeyIdGetArgs>> subjectKeyIds;
 
     public Output<List<CertificateCertificateDescriptionSubjectKeyIdGetArgs>> getSubjectKeyIds() {
-        return this.subjectKeyIds == null ? Output.empty() : this.subjectKeyIds;
+        return this.subjectKeyIds == null ? Codegen.empty() : this.subjectKeyIds;
     }
 
     public CertificateCertificateDescriptionGetArgs(
@@ -102,14 +103,14 @@ public final class CertificateCertificateDescriptionGetArgs extends io.pulumi.re
     }
 
     private CertificateCertificateDescriptionGetArgs() {
-        this.aiaIssuingCertificateUrls = Output.empty();
-        this.authorityKeyIds = Output.empty();
-        this.certFingerprints = Output.empty();
-        this.configValues = Output.empty();
-        this.crlDistributionPoints = Output.empty();
-        this.publicKeys = Output.empty();
-        this.subjectDescriptions = Output.empty();
-        this.subjectKeyIds = Output.empty();
+        this.aiaIssuingCertificateUrls = Codegen.empty();
+        this.authorityKeyIds = Codegen.empty();
+        this.certFingerprints = Codegen.empty();
+        this.configValues = Codegen.empty();
+        this.crlDistributionPoints = Codegen.empty();
+        this.publicKeys = Codegen.empty();
+        this.subjectDescriptions = Codegen.empty();
+        this.subjectKeyIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -151,7 +152,7 @@ public final class CertificateCertificateDescriptionGetArgs extends io.pulumi.re
             return this;
         }
         public Builder aiaIssuingCertificateUrls(@Nullable List<String> aiaIssuingCertificateUrls) {
-            this.aiaIssuingCertificateUrls = Output.ofNullable(aiaIssuingCertificateUrls);
+            this.aiaIssuingCertificateUrls = Codegen.ofNullable(aiaIssuingCertificateUrls);
             return this;
         }
         public Builder aiaIssuingCertificateUrls(String... aiaIssuingCertificateUrls) {
@@ -162,7 +163,7 @@ public final class CertificateCertificateDescriptionGetArgs extends io.pulumi.re
             return this;
         }
         public Builder authorityKeyIds(@Nullable List<CertificateCertificateDescriptionAuthorityKeyIdGetArgs> authorityKeyIds) {
-            this.authorityKeyIds = Output.ofNullable(authorityKeyIds);
+            this.authorityKeyIds = Codegen.ofNullable(authorityKeyIds);
             return this;
         }
         public Builder authorityKeyIds(CertificateCertificateDescriptionAuthorityKeyIdGetArgs... authorityKeyIds) {
@@ -173,7 +174,7 @@ public final class CertificateCertificateDescriptionGetArgs extends io.pulumi.re
             return this;
         }
         public Builder certFingerprints(@Nullable List<CertificateCertificateDescriptionCertFingerprintGetArgs> certFingerprints) {
-            this.certFingerprints = Output.ofNullable(certFingerprints);
+            this.certFingerprints = Codegen.ofNullable(certFingerprints);
             return this;
         }
         public Builder certFingerprints(CertificateCertificateDescriptionCertFingerprintGetArgs... certFingerprints) {
@@ -184,7 +185,7 @@ public final class CertificateCertificateDescriptionGetArgs extends io.pulumi.re
             return this;
         }
         public Builder configValues(@Nullable List<CertificateCertificateDescriptionConfigValueGetArgs> configValues) {
-            this.configValues = Output.ofNullable(configValues);
+            this.configValues = Codegen.ofNullable(configValues);
             return this;
         }
         public Builder configValues(CertificateCertificateDescriptionConfigValueGetArgs... configValues) {
@@ -195,7 +196,7 @@ public final class CertificateCertificateDescriptionGetArgs extends io.pulumi.re
             return this;
         }
         public Builder crlDistributionPoints(@Nullable List<String> crlDistributionPoints) {
-            this.crlDistributionPoints = Output.ofNullable(crlDistributionPoints);
+            this.crlDistributionPoints = Codegen.ofNullable(crlDistributionPoints);
             return this;
         }
         public Builder crlDistributionPoints(String... crlDistributionPoints) {
@@ -206,7 +207,7 @@ public final class CertificateCertificateDescriptionGetArgs extends io.pulumi.re
             return this;
         }
         public Builder publicKeys(@Nullable List<CertificateCertificateDescriptionPublicKeyGetArgs> publicKeys) {
-            this.publicKeys = Output.ofNullable(publicKeys);
+            this.publicKeys = Codegen.ofNullable(publicKeys);
             return this;
         }
         public Builder publicKeys(CertificateCertificateDescriptionPublicKeyGetArgs... publicKeys) {
@@ -217,7 +218,7 @@ public final class CertificateCertificateDescriptionGetArgs extends io.pulumi.re
             return this;
         }
         public Builder subjectDescriptions(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionGetArgs> subjectDescriptions) {
-            this.subjectDescriptions = Output.ofNullable(subjectDescriptions);
+            this.subjectDescriptions = Codegen.ofNullable(subjectDescriptions);
             return this;
         }
         public Builder subjectDescriptions(CertificateCertificateDescriptionSubjectDescriptionGetArgs... subjectDescriptions) {
@@ -228,7 +229,7 @@ public final class CertificateCertificateDescriptionGetArgs extends io.pulumi.re
             return this;
         }
         public Builder subjectKeyIds(@Nullable List<CertificateCertificateDescriptionSubjectKeyIdGetArgs> subjectKeyIds) {
-            this.subjectKeyIds = Output.ofNullable(subjectKeyIds);
+            this.subjectKeyIds = Codegen.ofNullable(subjectKeyIds);
             return this;
         }
         public Builder subjectKeyIds(CertificateCertificateDescriptionSubjectKeyIdGetArgs... subjectKeyIds) {

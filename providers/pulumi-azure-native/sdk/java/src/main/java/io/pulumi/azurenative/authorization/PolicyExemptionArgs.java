@@ -7,6 +7,7 @@ import io.pulumi.azurenative.authorization.enums.ExemptionCategory;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> expiresOn;
 
     public Output<String> getExpiresOn() {
-        return this.expiresOn == null ? Output.empty() : this.expiresOn;
+        return this.expiresOn == null ? Codegen.empty() : this.expiresOn;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Object> metadata;
 
     public Output<Object> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<String>> policyDefinitionReferenceIds;
 
     public Output<List<String>> getPolicyDefinitionReferenceIds() {
-        return this.policyDefinitionReferenceIds == null ? Output.empty() : this.policyDefinitionReferenceIds;
+        return this.policyDefinitionReferenceIds == null ? Codegen.empty() : this.policyDefinitionReferenceIds;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> policyExemptionName;
 
     public Output<String> getPolicyExemptionName() {
-        return this.policyExemptionName == null ? Output.empty() : this.policyExemptionName;
+        return this.policyExemptionName == null ? Codegen.empty() : this.policyExemptionName;
     }
 
     /**
@@ -139,15 +140,15 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private PolicyExemptionArgs() {
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.exemptionCategory = Output.empty();
-        this.expiresOn = Output.empty();
-        this.metadata = Output.empty();
-        this.policyAssignmentId = Output.empty();
-        this.policyDefinitionReferenceIds = Output.empty();
-        this.policyExemptionName = Output.empty();
-        this.scope = Output.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.exemptionCategory = Codegen.empty();
+        this.expiresOn = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.policyAssignmentId = Codegen.empty();
+        this.policyDefinitionReferenceIds = Codegen.empty();
+        this.policyExemptionName = Codegen.empty();
+        this.scope = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -191,7 +192,7 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -199,7 +200,7 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder exemptionCategory(Output<Either<String,ExemptionCategory>> exemptionCategory) {
@@ -215,7 +216,7 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder expiresOn(@Nullable String expiresOn) {
-            this.expiresOn = Output.ofNullable(expiresOn);
+            this.expiresOn = Codegen.ofNullable(expiresOn);
             return this;
         }
         public Builder metadata(@Nullable Output<Object> metadata) {
@@ -223,7 +224,7 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder policyAssignmentId(Output<String> policyAssignmentId) {
@@ -239,7 +240,7 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder policyDefinitionReferenceIds(@Nullable List<String> policyDefinitionReferenceIds) {
-            this.policyDefinitionReferenceIds = Output.ofNullable(policyDefinitionReferenceIds);
+            this.policyDefinitionReferenceIds = Codegen.ofNullable(policyDefinitionReferenceIds);
             return this;
         }
         public Builder policyDefinitionReferenceIds(String... policyDefinitionReferenceIds) {
@@ -250,7 +251,7 @@ public final class PolicyExemptionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder policyExemptionName(@Nullable String policyExemptionName) {
-            this.policyExemptionName = Output.ofNullable(policyExemptionName);
+            this.policyExemptionName = Codegen.ofNullable(policyExemptionName);
             return this;
         }
         public Builder scope(Output<String> scope) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.relay;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> hybridConnectionName;
 
     public Output<String> getHybridConnectionName() {
-        return this.hybridConnectionName == null ? Output.empty() : this.hybridConnectionName;
+        return this.hybridConnectionName == null ? Codegen.empty() : this.hybridConnectionName;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Boolean> requiresClientAuthorization;
 
     public Output<Boolean> getRequiresClientAuthorization() {
-        return this.requiresClientAuthorization == null ? Output.empty() : this.requiresClientAuthorization;
+        return this.requiresClientAuthorization == null ? Codegen.empty() : this.requiresClientAuthorization;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> userMetadata;
 
     public Output<String> getUserMetadata() {
-        return this.userMetadata == null ? Output.empty() : this.userMetadata;
+        return this.userMetadata == null ? Codegen.empty() : this.userMetadata;
     }
 
     public HybridConnectionArgs(
@@ -84,11 +85,11 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private HybridConnectionArgs() {
-        this.hybridConnectionName = Output.empty();
-        this.namespaceName = Output.empty();
-        this.requiresClientAuthorization = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.userMetadata = Output.empty();
+        this.hybridConnectionName = Codegen.empty();
+        this.namespaceName = Codegen.empty();
+        this.requiresClientAuthorization = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.userMetadata = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder hybridConnectionName(@Nullable String hybridConnectionName) {
-            this.hybridConnectionName = Output.ofNullable(hybridConnectionName);
+            this.hybridConnectionName = Codegen.ofNullable(hybridConnectionName);
             return this;
         }
         public Builder namespaceName(Output<String> namespaceName) {
@@ -140,7 +141,7 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder requiresClientAuthorization(@Nullable Boolean requiresClientAuthorization) {
-            this.requiresClientAuthorization = Output.ofNullable(requiresClientAuthorization);
+            this.requiresClientAuthorization = Codegen.ofNullable(requiresClientAuthorization);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -156,7 +157,7 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder userMetadata(@Nullable String userMetadata) {
-            this.userMetadata = Output.ofNullable(userMetadata);
+            this.userMetadata = Codegen.ofNullable(userMetadata);
             return this;
         }        public HybridConnectionArgs build() {
             return new HybridConnectionArgs(hybridConnectionName, namespaceName, requiresClientAuthorization, resourceGroupName, userMetadata);

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +19,14 @@ public final class TaskDefinitionContainerDependencyArgs extends io.pulumi.resou
       private final @Nullable Output<String> condition;
 
     public Output<String> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="containerName")
       private final @Nullable Output<String> containerName;
 
     public Output<String> getContainerName() {
-        return this.containerName == null ? Output.empty() : this.containerName;
+        return this.containerName == null ? Codegen.empty() : this.containerName;
     }
 
     public TaskDefinitionContainerDependencyArgs(
@@ -36,8 +37,8 @@ public final class TaskDefinitionContainerDependencyArgs extends io.pulumi.resou
     }
 
     private TaskDefinitionContainerDependencyArgs() {
-        this.condition = Output.empty();
-        this.containerName = Output.empty();
+        this.condition = Codegen.empty();
+        this.containerName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class TaskDefinitionContainerDependencyArgs extends io.pulumi.resou
             return this;
         }
         public Builder condition(@Nullable String condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder containerName(@Nullable Output<String> containerName) {
@@ -75,7 +76,7 @@ public final class TaskDefinitionContainerDependencyArgs extends io.pulumi.resou
             return this;
         }
         public Builder containerName(@Nullable String containerName) {
-            this.containerName = Output.ofNullable(containerName);
+            this.containerName = Codegen.ofNullable(containerName);
             return this;
         }        public TaskDefinitionContainerDependencyArgs build() {
             return new TaskDefinitionContainerDependencyArgs(condition, containerName);

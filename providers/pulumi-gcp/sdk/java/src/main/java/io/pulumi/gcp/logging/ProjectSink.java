@@ -6,6 +6,7 @@ package io.pulumi.gcp.logging;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.logging.ProjectSinkArgs;
 import io.pulumi.gcp.logging.inputs.ProjectSinkState;
@@ -209,7 +210,7 @@ public class ProjectSink extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ProjectSink(String name, ProjectSinkArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:logging/projectSink:ProjectSink", name, args == null ? ProjectSinkArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:logging/projectSink:ProjectSink", name, args == null ? ProjectSinkArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ProjectSink(String name, Output<String> id, @Nullable ProjectSinkState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

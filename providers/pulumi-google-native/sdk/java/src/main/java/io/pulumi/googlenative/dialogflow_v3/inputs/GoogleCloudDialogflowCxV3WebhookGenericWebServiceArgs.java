@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -28,7 +29,7 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs extends
       private final @Nullable Output<List<String>> allowedCaCerts;
 
     public Output<List<String>> getAllowedCaCerts() {
-        return this.allowedCaCerts == null ? Output.empty() : this.allowedCaCerts;
+        return this.allowedCaCerts == null ? Codegen.empty() : this.allowedCaCerts;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs extends
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs extends
       private final @Nullable Output<Map<String,String>> requestHeaders;
 
     public Output<Map<String,String>> getRequestHeaders() {
-        return this.requestHeaders == null ? Output.empty() : this.requestHeaders;
+        return this.requestHeaders == null ? Codegen.empty() : this.requestHeaders;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs extends
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     public GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs(
@@ -89,11 +90,11 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs extends
     }
 
     private GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs() {
-        this.allowedCaCerts = Output.empty();
-        this.password = Output.empty();
-        this.requestHeaders = Output.empty();
-        this.uri = Output.empty();
-        this.username = Output.empty();
+        this.allowedCaCerts = Codegen.empty();
+        this.password = Codegen.empty();
+        this.requestHeaders = Codegen.empty();
+        this.uri = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs extends
             return this;
         }
         public Builder allowedCaCerts(@Nullable List<String> allowedCaCerts) {
-            this.allowedCaCerts = Output.ofNullable(allowedCaCerts);
+            this.allowedCaCerts = Codegen.ofNullable(allowedCaCerts);
             return this;
         }
         public Builder allowedCaCerts(String... allowedCaCerts) {
@@ -140,7 +141,7 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs extends
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder requestHeaders(@Nullable Output<Map<String,String>> requestHeaders) {
@@ -148,7 +149,7 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs extends
             return this;
         }
         public Builder requestHeaders(@Nullable Map<String,String> requestHeaders) {
-            this.requestHeaders = Output.ofNullable(requestHeaders);
+            this.requestHeaders = Codegen.ofNullable(requestHeaders);
             return this;
         }
         public Builder uri(Output<String> uri) {
@@ -164,7 +165,7 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs extends
             return this;
         }
         public Builder username(@Nullable String username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }        public GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs build() {
             return new GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs(allowedCaCerts, password, requestHeaders, uri, username);

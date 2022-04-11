@@ -6,6 +6,7 @@ package io.pulumi.aws.fsx;
 import io.pulumi.aws.fsx.inputs.OntapVolumeTieringPolicyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -37,7 +38,7 @@ public final class OntapVolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class OntapVolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> securityStyle;
 
     public Output<String> getSecurityStyle() {
-        return this.securityStyle == null ? Output.empty() : this.securityStyle;
+        return this.securityStyle == null ? Codegen.empty() : this.securityStyle;
     }
 
     /**
@@ -92,14 +93,14 @@ public final class OntapVolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="tieringPolicy")
       private final @Nullable Output<OntapVolumeTieringPolicyArgs> tieringPolicy;
 
     public Output<OntapVolumeTieringPolicyArgs> getTieringPolicy() {
-        return this.tieringPolicy == null ? Output.empty() : this.tieringPolicy;
+        return this.tieringPolicy == null ? Codegen.empty() : this.tieringPolicy;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class OntapVolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> volumeType;
 
     public Output<String> getVolumeType() {
-        return this.volumeType == null ? Output.empty() : this.volumeType;
+        return this.volumeType == null ? Codegen.empty() : this.volumeType;
     }
 
     public OntapVolumeArgs(
@@ -135,15 +136,15 @@ public final class OntapVolumeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OntapVolumeArgs() {
-        this.junctionPath = Output.empty();
-        this.name = Output.empty();
-        this.securityStyle = Output.empty();
-        this.sizeInMegabytes = Output.empty();
-        this.storageEfficiencyEnabled = Output.empty();
-        this.storageVirtualMachineId = Output.empty();
-        this.tags = Output.empty();
-        this.tieringPolicy = Output.empty();
-        this.volumeType = Output.empty();
+        this.junctionPath = Codegen.empty();
+        this.name = Codegen.empty();
+        this.securityStyle = Codegen.empty();
+        this.sizeInMegabytes = Codegen.empty();
+        this.storageEfficiencyEnabled = Codegen.empty();
+        this.storageVirtualMachineId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tieringPolicy = Codegen.empty();
+        this.volumeType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -195,7 +196,7 @@ public final class OntapVolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder securityStyle(@Nullable Output<String> securityStyle) {
@@ -203,7 +204,7 @@ public final class OntapVolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder securityStyle(@Nullable String securityStyle) {
-            this.securityStyle = Output.ofNullable(securityStyle);
+            this.securityStyle = Codegen.ofNullable(securityStyle);
             return this;
         }
         public Builder sizeInMegabytes(Output<Integer> sizeInMegabytes) {
@@ -235,7 +236,7 @@ public final class OntapVolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tieringPolicy(@Nullable Output<OntapVolumeTieringPolicyArgs> tieringPolicy) {
@@ -243,7 +244,7 @@ public final class OntapVolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tieringPolicy(@Nullable OntapVolumeTieringPolicyArgs tieringPolicy) {
-            this.tieringPolicy = Output.ofNullable(tieringPolicy);
+            this.tieringPolicy = Codegen.ofNullable(tieringPolicy);
             return this;
         }
         public Builder volumeType(@Nullable Output<String> volumeType) {
@@ -251,7 +252,7 @@ public final class OntapVolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder volumeType(@Nullable String volumeType) {
-            this.volumeType = Output.ofNullable(volumeType);
+            this.volumeType = Codegen.ofNullable(volumeType);
             return this;
         }        public OntapVolumeArgs build() {
             return new OntapVolumeArgs(junctionPath, name, securityStyle, sizeInMegabytes, storageEfficiencyEnabled, storageVirtualMachineId, tags, tieringPolicy, volumeType);

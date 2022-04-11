@@ -8,6 +8,7 @@ import io.pulumi.awsnative.networkmanager.TransitGatewayRegistrationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -68,7 +69,7 @@ public class TransitGatewayRegistration extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public TransitGatewayRegistration(String name, TransitGatewayRegistrationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:networkmanager:TransitGatewayRegistration", name, args == null ? TransitGatewayRegistrationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:networkmanager:TransitGatewayRegistration", name, args == null ? TransitGatewayRegistrationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TransitGatewayRegistration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

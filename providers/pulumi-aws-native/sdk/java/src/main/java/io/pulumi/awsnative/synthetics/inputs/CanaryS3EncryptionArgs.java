@@ -5,6 +5,7 @@ package io.pulumi.awsnative.synthetics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class CanaryS3EncryptionArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> encryptionMode;
 
     public Output<String> getEncryptionMode() {
-        return this.encryptionMode == null ? Output.empty() : this.encryptionMode;
+        return this.encryptionMode == null ? Codegen.empty() : this.encryptionMode;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class CanaryS3EncryptionArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
+        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
     public CanaryS3EncryptionArgs(
@@ -44,8 +45,8 @@ public final class CanaryS3EncryptionArgs extends io.pulumi.resources.ResourceAr
     }
 
     private CanaryS3EncryptionArgs() {
-        this.encryptionMode = Output.empty();
-        this.kmsKeyArn = Output.empty();
+        this.encryptionMode = Codegen.empty();
+        this.kmsKeyArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class CanaryS3EncryptionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder encryptionMode(@Nullable String encryptionMode) {
-            this.encryptionMode = Output.ofNullable(encryptionMode);
+            this.encryptionMode = Codegen.ofNullable(encryptionMode);
             return this;
         }
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
@@ -83,7 +84,7 @@ public final class CanaryS3EncryptionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
             return this;
         }        public CanaryS3EncryptionArgs build() {
             return new CanaryS3EncryptionArgs(encryptionMode, kmsKeyArn);

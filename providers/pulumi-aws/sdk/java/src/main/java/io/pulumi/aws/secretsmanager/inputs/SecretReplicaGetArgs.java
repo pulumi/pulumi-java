@@ -5,6 +5,7 @@ package io.pulumi.aws.secretsmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class SecretReplicaGetArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class SecretReplicaGetArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> lastAccessedDate;
 
     public Output<String> getLastAccessedDate() {
-        return this.lastAccessedDate == null ? Output.empty() : this.lastAccessedDate;
+        return this.lastAccessedDate == null ? Codegen.empty() : this.lastAccessedDate;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class SecretReplicaGetArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class SecretReplicaGetArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> statusMessage;
 
     public Output<String> getStatusMessage() {
-        return this.statusMessage == null ? Output.empty() : this.statusMessage;
+        return this.statusMessage == null ? Codegen.empty() : this.statusMessage;
     }
 
     public SecretReplicaGetArgs(
@@ -83,11 +84,11 @@ public final class SecretReplicaGetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private SecretReplicaGetArgs() {
-        this.kmsKeyId = Output.empty();
-        this.lastAccessedDate = Output.empty();
-        this.region = Output.empty();
-        this.status = Output.empty();
-        this.statusMessage = Output.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.lastAccessedDate = Codegen.empty();
+        this.region = Codegen.empty();
+        this.status = Codegen.empty();
+        this.statusMessage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class SecretReplicaGetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder lastAccessedDate(@Nullable Output<String> lastAccessedDate) {
@@ -131,7 +132,7 @@ public final class SecretReplicaGetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder lastAccessedDate(@Nullable String lastAccessedDate) {
-            this.lastAccessedDate = Output.ofNullable(lastAccessedDate);
+            this.lastAccessedDate = Codegen.ofNullable(lastAccessedDate);
             return this;
         }
         public Builder region(Output<String> region) {
@@ -147,7 +148,7 @@ public final class SecretReplicaGetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder statusMessage(@Nullable Output<String> statusMessage) {
@@ -155,7 +156,7 @@ public final class SecretReplicaGetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder statusMessage(@Nullable String statusMessage) {
-            this.statusMessage = Output.ofNullable(statusMessage);
+            this.statusMessage = Codegen.ofNullable(statusMessage);
             return this;
         }        public SecretReplicaGetArgs build() {
             return new SecretReplicaGetArgs(kmsKeyId, lastAccessedDate, region, status, statusMessage);

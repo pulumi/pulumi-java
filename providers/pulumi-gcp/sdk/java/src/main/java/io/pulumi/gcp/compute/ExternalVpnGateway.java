@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.ExternalVpnGatewayArgs;
 import io.pulumi.gcp.compute.inputs.ExternalVpnGatewayState;
@@ -167,7 +168,7 @@ public class ExternalVpnGateway extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ExternalVpnGateway(String name, @Nullable ExternalVpnGatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/externalVpnGateway:ExternalVpnGateway", name, args == null ? ExternalVpnGatewayArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/externalVpnGateway:ExternalVpnGateway", name, args == null ? ExternalVpnGatewayArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ExternalVpnGateway(String name, Output<String> id, @Nullable ExternalVpnGatewayState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.transcoder_v1.inputs.AudioMappingArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -40,7 +41,7 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> channelCount;
 
     public Output<Integer> getChannelCount() {
-        return this.channelCount == null ? Output.empty() : this.channelCount;
+        return this.channelCount == null ? Codegen.empty() : this.channelCount;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> channelLayout;
 
     public Output<List<String>> getChannelLayout() {
-        return this.channelLayout == null ? Output.empty() : this.channelLayout;
+        return this.channelLayout == null ? Codegen.empty() : this.channelLayout;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> codec;
 
     public Output<String> getCodec() {
-        return this.codec == null ? Output.empty() : this.codec;
+        return this.codec == null ? Codegen.empty() : this.codec;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<AudioMappingArgs>> mapping;
 
     public Output<List<AudioMappingArgs>> getMapping() {
-        return this.mapping == null ? Output.empty() : this.mapping;
+        return this.mapping == null ? Codegen.empty() : this.mapping;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> sampleRateHertz;
 
     public Output<Integer> getSampleRateHertz() {
-        return this.sampleRateHertz == null ? Output.empty() : this.sampleRateHertz;
+        return this.sampleRateHertz == null ? Codegen.empty() : this.sampleRateHertz;
     }
 
     public AudioStreamArgs(
@@ -103,12 +104,12 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AudioStreamArgs() {
-        this.bitrateBps = Output.empty();
-        this.channelCount = Output.empty();
-        this.channelLayout = Output.empty();
-        this.codec = Output.empty();
-        this.mapping = Output.empty();
-        this.sampleRateHertz = Output.empty();
+        this.bitrateBps = Codegen.empty();
+        this.channelCount = Codegen.empty();
+        this.channelLayout = Codegen.empty();
+        this.codec = Codegen.empty();
+        this.mapping = Codegen.empty();
+        this.sampleRateHertz = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -154,7 +155,7 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder channelCount(@Nullable Integer channelCount) {
-            this.channelCount = Output.ofNullable(channelCount);
+            this.channelCount = Codegen.ofNullable(channelCount);
             return this;
         }
         public Builder channelLayout(@Nullable Output<List<String>> channelLayout) {
@@ -162,7 +163,7 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder channelLayout(@Nullable List<String> channelLayout) {
-            this.channelLayout = Output.ofNullable(channelLayout);
+            this.channelLayout = Codegen.ofNullable(channelLayout);
             return this;
         }
         public Builder channelLayout(String... channelLayout) {
@@ -173,7 +174,7 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder codec(@Nullable String codec) {
-            this.codec = Output.ofNullable(codec);
+            this.codec = Codegen.ofNullable(codec);
             return this;
         }
         public Builder mapping(@Nullable Output<List<AudioMappingArgs>> mapping) {
@@ -181,7 +182,7 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mapping(@Nullable List<AudioMappingArgs> mapping) {
-            this.mapping = Output.ofNullable(mapping);
+            this.mapping = Codegen.ofNullable(mapping);
             return this;
         }
         public Builder mapping(AudioMappingArgs... mapping) {
@@ -192,7 +193,7 @@ public final class AudioStreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sampleRateHertz(@Nullable Integer sampleRateHertz) {
-            this.sampleRateHertz = Output.ofNullable(sampleRateHertz);
+            this.sampleRateHertz = Codegen.ofNullable(sampleRateHertz);
             return this;
         }        public AudioStreamArgs build() {
             return new AudioStreamArgs(bitrateBps, channelCount, channelLayout, codec, mapping, sampleRateHertz);

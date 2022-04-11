@@ -5,6 +5,7 @@ package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class IntentFollowupIntentInfoArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> followupIntentName;
 
     public Output<String> getFollowupIntentName() {
-        return this.followupIntentName == null ? Output.empty() : this.followupIntentName;
+        return this.followupIntentName == null ? Codegen.empty() : this.followupIntentName;
     }
 
     /**
@@ -30,7 +31,7 @@ public final class IntentFollowupIntentInfoArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> parentFollowupIntentName;
 
     public Output<String> getParentFollowupIntentName() {
-        return this.parentFollowupIntentName == null ? Output.empty() : this.parentFollowupIntentName;
+        return this.parentFollowupIntentName == null ? Codegen.empty() : this.parentFollowupIntentName;
     }
 
     public IntentFollowupIntentInfoArgs(
@@ -41,8 +42,8 @@ public final class IntentFollowupIntentInfoArgs extends io.pulumi.resources.Reso
     }
 
     private IntentFollowupIntentInfoArgs() {
-        this.followupIntentName = Output.empty();
-        this.parentFollowupIntentName = Output.empty();
+        this.followupIntentName = Codegen.empty();
+        this.parentFollowupIntentName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class IntentFollowupIntentInfoArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder followupIntentName(@Nullable String followupIntentName) {
-            this.followupIntentName = Output.ofNullable(followupIntentName);
+            this.followupIntentName = Codegen.ofNullable(followupIntentName);
             return this;
         }
         public Builder parentFollowupIntentName(@Nullable Output<String> parentFollowupIntentName) {
@@ -80,7 +81,7 @@ public final class IntentFollowupIntentInfoArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder parentFollowupIntentName(@Nullable String parentFollowupIntentName) {
-            this.parentFollowupIntentName = Output.ofNullable(parentFollowupIntentName);
+            this.parentFollowupIntentName = Codegen.ofNullable(parentFollowupIntentName);
             return this;
         }        public IntentFollowupIntentInfoArgs build() {
             return new IntentFollowupIntentInfoArgs(followupIntentName, parentFollowupIntentName);

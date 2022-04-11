@@ -6,6 +6,7 @@ package io.pulumi.aws.apigateway;
 import io.pulumi.aws.apigateway.inputs.MethodSettingsSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -70,10 +71,10 @@ public final class MethodSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MethodSettingsArgs() {
-        this.methodPath = Output.empty();
-        this.restApi = Output.empty();
-        this.settings = Output.empty();
-        this.stageName = Output.empty();
+        this.methodPath = Codegen.empty();
+        this.restApi = Codegen.empty();
+        this.settings = Codegen.empty();
+        this.stageName = Codegen.empty();
     }
 
     public static Builder builder() {

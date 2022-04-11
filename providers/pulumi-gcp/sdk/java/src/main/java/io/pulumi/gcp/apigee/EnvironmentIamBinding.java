@@ -6,6 +6,7 @@ package io.pulumi.gcp.apigee;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigee.EnvironmentIamBindingArgs;
 import io.pulumi.gcp.apigee.inputs.EnvironmentIamBindingState;
@@ -145,7 +146,7 @@ public class EnvironmentIamBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EnvironmentIamBinding(String name, EnvironmentIamBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:apigee/environmentIamBinding:EnvironmentIamBinding", name, args == null ? EnvironmentIamBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:apigee/environmentIamBinding:EnvironmentIamBinding", name, args == null ? EnvironmentIamBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EnvironmentIamBinding(String name, Output<String> id, @Nullable EnvironmentIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

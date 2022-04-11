@@ -5,6 +5,7 @@ package io.pulumi.googlenative.composer_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.composer_v1beta1.inputs.SchedulerResourceArgs;
 import io.pulumi.googlenative.composer_v1beta1.inputs.WebServerResourceArgs;
 import io.pulumi.googlenative.composer_v1beta1.inputs.WorkerResourceArgs;
@@ -28,7 +29,7 @@ public final class WorkloadsConfigArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<SchedulerResourceArgs> scheduler;
 
     public Output<SchedulerResourceArgs> getScheduler() {
-        return this.scheduler == null ? Output.empty() : this.scheduler;
+        return this.scheduler == null ? Codegen.empty() : this.scheduler;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class WorkloadsConfigArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<WebServerResourceArgs> webServer;
 
     public Output<WebServerResourceArgs> getWebServer() {
-        return this.webServer == null ? Output.empty() : this.webServer;
+        return this.webServer == null ? Codegen.empty() : this.webServer;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class WorkloadsConfigArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<WorkerResourceArgs> worker;
 
     public Output<WorkerResourceArgs> getWorker() {
-        return this.worker == null ? Output.empty() : this.worker;
+        return this.worker == null ? Codegen.empty() : this.worker;
     }
 
     public WorkloadsConfigArgs(
@@ -63,9 +64,9 @@ public final class WorkloadsConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private WorkloadsConfigArgs() {
-        this.scheduler = Output.empty();
-        this.webServer = Output.empty();
-        this.worker = Output.empty();
+        this.scheduler = Codegen.empty();
+        this.webServer = Codegen.empty();
+        this.worker = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class WorkloadsConfigArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder scheduler(@Nullable SchedulerResourceArgs scheduler) {
-            this.scheduler = Output.ofNullable(scheduler);
+            this.scheduler = Codegen.ofNullable(scheduler);
             return this;
         }
         public Builder webServer(@Nullable Output<WebServerResourceArgs> webServer) {
@@ -105,7 +106,7 @@ public final class WorkloadsConfigArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder webServer(@Nullable WebServerResourceArgs webServer) {
-            this.webServer = Output.ofNullable(webServer);
+            this.webServer = Codegen.ofNullable(webServer);
             return this;
         }
         public Builder worker(@Nullable Output<WorkerResourceArgs> worker) {
@@ -113,7 +114,7 @@ public final class WorkloadsConfigArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder worker(@Nullable WorkerResourceArgs worker) {
-            this.worker = Output.ofNullable(worker);
+            this.worker = Codegen.ofNullable(worker);
             return this;
         }        public WorkloadsConfigArgs build() {
             return new WorkloadsConfigArgs(scheduler, webServer, worker);

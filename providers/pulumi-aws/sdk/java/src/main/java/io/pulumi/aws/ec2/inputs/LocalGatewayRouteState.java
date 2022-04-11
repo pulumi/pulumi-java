@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class LocalGatewayRouteState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> destinationCidrBlock;
 
     public Output<String> getDestinationCidrBlock() {
-        return this.destinationCidrBlock == null ? Output.empty() : this.destinationCidrBlock;
+        return this.destinationCidrBlock == null ? Codegen.empty() : this.destinationCidrBlock;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class LocalGatewayRouteState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> localGatewayRouteTableId;
 
     public Output<String> getLocalGatewayRouteTableId() {
-        return this.localGatewayRouteTableId == null ? Output.empty() : this.localGatewayRouteTableId;
+        return this.localGatewayRouteTableId == null ? Codegen.empty() : this.localGatewayRouteTableId;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class LocalGatewayRouteState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> localGatewayVirtualInterfaceGroupId;
 
     public Output<String> getLocalGatewayVirtualInterfaceGroupId() {
-        return this.localGatewayVirtualInterfaceGroupId == null ? Output.empty() : this.localGatewayVirtualInterfaceGroupId;
+        return this.localGatewayVirtualInterfaceGroupId == null ? Codegen.empty() : this.localGatewayVirtualInterfaceGroupId;
     }
 
     public LocalGatewayRouteState(
@@ -57,9 +58,9 @@ public final class LocalGatewayRouteState extends io.pulumi.resources.ResourceAr
     }
 
     private LocalGatewayRouteState() {
-        this.destinationCidrBlock = Output.empty();
-        this.localGatewayRouteTableId = Output.empty();
-        this.localGatewayVirtualInterfaceGroupId = Output.empty();
+        this.destinationCidrBlock = Codegen.empty();
+        this.localGatewayRouteTableId = Codegen.empty();
+        this.localGatewayVirtualInterfaceGroupId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class LocalGatewayRouteState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder destinationCidrBlock(@Nullable String destinationCidrBlock) {
-            this.destinationCidrBlock = Output.ofNullable(destinationCidrBlock);
+            this.destinationCidrBlock = Codegen.ofNullable(destinationCidrBlock);
             return this;
         }
         public Builder localGatewayRouteTableId(@Nullable Output<String> localGatewayRouteTableId) {
@@ -99,7 +100,7 @@ public final class LocalGatewayRouteState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder localGatewayRouteTableId(@Nullable String localGatewayRouteTableId) {
-            this.localGatewayRouteTableId = Output.ofNullable(localGatewayRouteTableId);
+            this.localGatewayRouteTableId = Codegen.ofNullable(localGatewayRouteTableId);
             return this;
         }
         public Builder localGatewayVirtualInterfaceGroupId(@Nullable Output<String> localGatewayVirtualInterfaceGroupId) {
@@ -107,7 +108,7 @@ public final class LocalGatewayRouteState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder localGatewayVirtualInterfaceGroupId(@Nullable String localGatewayVirtualInterfaceGroupId) {
-            this.localGatewayVirtualInterfaceGroupId = Output.ofNullable(localGatewayVirtualInterfaceGroupId);
+            this.localGatewayVirtualInterfaceGroupId = Codegen.ofNullable(localGatewayVirtualInterfaceGroupId);
             return this;
         }        public LocalGatewayRouteState build() {
             return new LocalGatewayRouteState(destinationCidrBlock, localGatewayRouteTableId, localGatewayVirtualInterfaceGroupId);

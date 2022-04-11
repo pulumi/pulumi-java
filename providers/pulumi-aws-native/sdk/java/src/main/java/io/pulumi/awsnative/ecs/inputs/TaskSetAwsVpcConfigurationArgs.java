@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ecs.inputs;
 import io.pulumi.awsnative.ecs.enums.TaskSetAwsVpcConfigurationAssignPublicIp;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class TaskSetAwsVpcConfigurationArgs extends io.pulumi.resources.Re
       private final @Nullable Output<TaskSetAwsVpcConfigurationAssignPublicIp> assignPublicIp;
 
     public Output<TaskSetAwsVpcConfigurationAssignPublicIp> getAssignPublicIp() {
-        return this.assignPublicIp == null ? Output.empty() : this.assignPublicIp;
+        return this.assignPublicIp == null ? Codegen.empty() : this.assignPublicIp;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class TaskSetAwsVpcConfigurationArgs extends io.pulumi.resources.Re
       private final @Nullable Output<List<String>> securityGroups;
 
     public Output<List<String>> getSecurityGroups() {
-        return this.securityGroups == null ? Output.empty() : this.securityGroups;
+        return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
     }
 
     /**
@@ -63,9 +64,9 @@ public final class TaskSetAwsVpcConfigurationArgs extends io.pulumi.resources.Re
     }
 
     private TaskSetAwsVpcConfigurationArgs() {
-        this.assignPublicIp = Output.empty();
-        this.securityGroups = Output.empty();
-        this.subnets = Output.empty();
+        this.assignPublicIp = Codegen.empty();
+        this.securityGroups = Codegen.empty();
+        this.subnets = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class TaskSetAwsVpcConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder assignPublicIp(@Nullable TaskSetAwsVpcConfigurationAssignPublicIp assignPublicIp) {
-            this.assignPublicIp = Output.ofNullable(assignPublicIp);
+            this.assignPublicIp = Codegen.ofNullable(assignPublicIp);
             return this;
         }
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
@@ -105,7 +106,7 @@ public final class TaskSetAwsVpcConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Output.ofNullable(securityGroups);
+            this.securityGroups = Codegen.ofNullable(securityGroups);
             return this;
         }
         public Builder securityGroups(String... securityGroups) {

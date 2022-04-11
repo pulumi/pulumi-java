@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datacatalog_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GoogleCloudDatacatalogV1ContactsPersonArgs extends io.pulumi.
       private final @Nullable Output<String> designation;
 
     public Output<String> getDesignation() {
-        return this.designation == null ? Output.empty() : this.designation;
+        return this.designation == null ? Codegen.empty() : this.designation;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class GoogleCloudDatacatalogV1ContactsPersonArgs extends io.pulumi.
       private final @Nullable Output<String> email;
 
     public Output<String> getEmail() {
-        return this.email == null ? Output.empty() : this.email;
+        return this.email == null ? Codegen.empty() : this.email;
     }
 
     public GoogleCloudDatacatalogV1ContactsPersonArgs(
@@ -48,8 +49,8 @@ public final class GoogleCloudDatacatalogV1ContactsPersonArgs extends io.pulumi.
     }
 
     private GoogleCloudDatacatalogV1ContactsPersonArgs() {
-        this.designation = Output.empty();
-        this.email = Output.empty();
+        this.designation = Codegen.empty();
+        this.email = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class GoogleCloudDatacatalogV1ContactsPersonArgs extends io.pulumi.
             return this;
         }
         public Builder designation(@Nullable String designation) {
-            this.designation = Output.ofNullable(designation);
+            this.designation = Codegen.ofNullable(designation);
             return this;
         }
         public Builder email(@Nullable Output<String> email) {
@@ -87,7 +88,7 @@ public final class GoogleCloudDatacatalogV1ContactsPersonArgs extends io.pulumi.
             return this;
         }
         public Builder email(@Nullable String email) {
-            this.email = Output.ofNullable(email);
+            this.email = Codegen.ofNullable(email);
             return this;
         }        public GoogleCloudDatacatalogV1ContactsPersonArgs build() {
             return new GoogleCloudDatacatalogV1ContactsPersonArgs(designation, email);

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ConnectorProfileConnectorOAuthRequestArgs extends io.pulumi.r
       private final @Nullable Output<String> authCode;
 
     public Output<String> getAuthCode() {
-        return this.authCode == null ? Output.empty() : this.authCode;
+        return this.authCode == null ? Codegen.empty() : this.authCode;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ConnectorProfileConnectorOAuthRequestArgs extends io.pulumi.r
       private final @Nullable Output<String> redirectUri;
 
     public Output<String> getRedirectUri() {
-        return this.redirectUri == null ? Output.empty() : this.redirectUri;
+        return this.redirectUri == null ? Codegen.empty() : this.redirectUri;
     }
 
     public ConnectorProfileConnectorOAuthRequestArgs(
@@ -45,8 +46,8 @@ public final class ConnectorProfileConnectorOAuthRequestArgs extends io.pulumi.r
     }
 
     private ConnectorProfileConnectorOAuthRequestArgs() {
-        this.authCode = Output.empty();
-        this.redirectUri = Output.empty();
+        this.authCode = Codegen.empty();
+        this.redirectUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class ConnectorProfileConnectorOAuthRequestArgs extends io.pulumi.r
             return this;
         }
         public Builder authCode(@Nullable String authCode) {
-            this.authCode = Output.ofNullable(authCode);
+            this.authCode = Codegen.ofNullable(authCode);
             return this;
         }
         public Builder redirectUri(@Nullable Output<String> redirectUri) {
@@ -84,7 +85,7 @@ public final class ConnectorProfileConnectorOAuthRequestArgs extends io.pulumi.r
             return this;
         }
         public Builder redirectUri(@Nullable String redirectUri) {
-            this.redirectUri = Output.ofNullable(redirectUri);
+            this.redirectUri = Codegen.ofNullable(redirectUri);
             return this;
         }        public ConnectorProfileConnectorOAuthRequestArgs build() {
             return new ConnectorProfileConnectorOAuthRequestArgs(authCode, redirectUri);

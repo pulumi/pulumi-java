@@ -7,6 +7,7 @@ import io.pulumi.aws.imagebuilder.inputs.ImageRecipeBlockDeviceMappingArgs;
 import io.pulumi.aws.imagebuilder.inputs.ImageRecipeComponentArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +27,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ImageRecipeBlockDeviceMappingArgs>> blockDeviceMappings;
 
     public Output<List<ImageRecipeBlockDeviceMappingArgs>> getBlockDeviceMappings() {
-        return this.blockDeviceMappings == null ? Output.empty() : this.blockDeviceMappings;
+        return this.blockDeviceMappings == null ? Codegen.empty() : this.blockDeviceMappings;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> userDataBase64;
 
     public Output<String> getUserDataBase64() {
-        return this.userDataBase64 == null ? Output.empty() : this.userDataBase64;
+        return this.userDataBase64 == null ? Codegen.empty() : this.userDataBase64;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> workingDirectory;
 
     public Output<String> getWorkingDirectory() {
-        return this.workingDirectory == null ? Output.empty() : this.workingDirectory;
+        return this.workingDirectory == null ? Codegen.empty() : this.workingDirectory;
     }
 
     public ImageRecipeArgs(
@@ -139,15 +140,15 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ImageRecipeArgs() {
-        this.blockDeviceMappings = Output.empty();
-        this.components = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.parentImage = Output.empty();
-        this.tags = Output.empty();
-        this.userDataBase64 = Output.empty();
-        this.version = Output.empty();
-        this.workingDirectory = Output.empty();
+        this.blockDeviceMappings = Codegen.empty();
+        this.components = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parentImage = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.userDataBase64 = Codegen.empty();
+        this.version = Codegen.empty();
+        this.workingDirectory = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -191,7 +192,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder blockDeviceMappings(@Nullable List<ImageRecipeBlockDeviceMappingArgs> blockDeviceMappings) {
-            this.blockDeviceMappings = Output.ofNullable(blockDeviceMappings);
+            this.blockDeviceMappings = Codegen.ofNullable(blockDeviceMappings);
             return this;
         }
         public Builder blockDeviceMappings(ImageRecipeBlockDeviceMappingArgs... blockDeviceMappings) {
@@ -213,7 +214,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -221,7 +222,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parentImage(Output<String> parentImage) {
@@ -237,7 +238,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder userDataBase64(@Nullable Output<String> userDataBase64) {
@@ -245,7 +246,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userDataBase64(@Nullable String userDataBase64) {
-            this.userDataBase64 = Output.ofNullable(userDataBase64);
+            this.userDataBase64 = Codegen.ofNullable(userDataBase64);
             return this;
         }
         public Builder version(Output<String> version) {
@@ -261,7 +262,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workingDirectory(@Nullable String workingDirectory) {
-            this.workingDirectory = Output.ofNullable(workingDirectory);
+            this.workingDirectory = Codegen.ofNullable(workingDirectory);
             return this;
         }        public ImageRecipeArgs build() {
             return new ImageRecipeArgs(blockDeviceMappings, components, description, name, parentImage, tags, userDataBase64, version, workingDirectory);

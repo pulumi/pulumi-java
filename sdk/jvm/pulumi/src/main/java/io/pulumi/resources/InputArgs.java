@@ -88,13 +88,13 @@ public abstract class InputArgs {
 
                 if (info.getAnnotation().json()) {
                     var valueFuture = value.map(v -> convertToJson.apply(fullName, v))
-                            .orElse(CompletableFuture.completedFuture(Output.empty()));
+                            .orElse(CompletableFuture.completedFuture(Output.ofNullable(null)));
                     builder.accumulate(
                             valueFuture, (b, m) -> b.put(info.getName(), m)
                     );
                 } else {
                     var valueFuture = value.map(CompletableFuture::completedFuture)
-                        .orElse(CompletableFuture.completedFuture(Output.empty()));
+                        .orElse(CompletableFuture.completedFuture(Output.ofNullable(null)));
                     builder.accumulate(
                             valueFuture, (b, m) -> b.put(info.getName(), m)
                     );

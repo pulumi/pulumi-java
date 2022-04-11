@@ -5,6 +5,7 @@ package io.pulumi.aws.iam;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -44,8 +45,8 @@ public final class UserGroupMembershipArgs extends io.pulumi.resources.ResourceA
     }
 
     private UserGroupMembershipArgs() {
-        this.groups = Output.empty();
-        this.user = Output.empty();
+        this.groups = Codegen.empty();
+        this.user = Codegen.empty();
     }
 
     public static Builder builder() {

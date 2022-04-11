@@ -9,6 +9,7 @@ import io.pulumi.azurenative.cdn.inputs.SharedPrivateLinkResourcePropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ResourceReferenceArgs> azureOrigin;
 
     public Output<ResourceReferenceArgs> getAzureOrigin() {
-        return this.azureOrigin == null ? Output.empty() : this.azureOrigin;
+        return this.azureOrigin == null ? Codegen.empty() : this.azureOrigin;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,EnabledState>> enabledState;
 
     public Output<Either<String,EnabledState>> getEnabledState() {
-        return this.enabledState == null ? Output.empty() : this.enabledState;
+        return this.enabledState == null ? Codegen.empty() : this.enabledState;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> httpPort;
 
     public Output<Integer> getHttpPort() {
-        return this.httpPort == null ? Output.empty() : this.httpPort;
+        return this.httpPort == null ? Codegen.empty() : this.httpPort;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> httpsPort;
 
     public Output<Integer> getHttpsPort() {
-        return this.httpsPort == null ? Output.empty() : this.httpsPort;
+        return this.httpsPort == null ? Codegen.empty() : this.httpsPort;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> originHostHeader;
 
     public Output<String> getOriginHostHeader() {
-        return this.originHostHeader == null ? Output.empty() : this.originHostHeader;
+        return this.originHostHeader == null ? Codegen.empty() : this.originHostHeader;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> originName;
 
     public Output<String> getOriginName() {
-        return this.originName == null ? Output.empty() : this.originName;
+        return this.originName == null ? Codegen.empty() : this.originName;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     /**
@@ -148,7 +149,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SharedPrivateLinkResourcePropertiesArgs> sharedPrivateLinkResource;
 
     public Output<SharedPrivateLinkResourcePropertiesArgs> getSharedPrivateLinkResource() {
-        return this.sharedPrivateLinkResource == null ? Output.empty() : this.sharedPrivateLinkResource;
+        return this.sharedPrivateLinkResource == null ? Codegen.empty() : this.sharedPrivateLinkResource;
     }
 
     /**
@@ -159,7 +160,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> weight;
 
     public Output<Integer> getWeight() {
-        return this.weight == null ? Output.empty() : this.weight;
+        return this.weight == null ? Codegen.empty() : this.weight;
     }
 
     public AFDOriginArgs(
@@ -192,19 +193,19 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AFDOriginArgs() {
-        this.azureOrigin = Output.empty();
-        this.enabledState = Output.empty();
-        this.hostName = Output.empty();
-        this.httpPort = Output.empty();
-        this.httpsPort = Output.empty();
-        this.originGroupName = Output.empty();
-        this.originHostHeader = Output.empty();
-        this.originName = Output.empty();
-        this.priority = Output.empty();
-        this.profileName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sharedPrivateLinkResource = Output.empty();
-        this.weight = Output.empty();
+        this.azureOrigin = Codegen.empty();
+        this.enabledState = Codegen.empty();
+        this.hostName = Codegen.empty();
+        this.httpPort = Codegen.empty();
+        this.httpsPort = Codegen.empty();
+        this.originGroupName = Codegen.empty();
+        this.originHostHeader = Codegen.empty();
+        this.originName = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.profileName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sharedPrivateLinkResource = Codegen.empty();
+        this.weight = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -256,7 +257,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder azureOrigin(@Nullable ResourceReferenceArgs azureOrigin) {
-            this.azureOrigin = Output.ofNullable(azureOrigin);
+            this.azureOrigin = Codegen.ofNullable(azureOrigin);
             return this;
         }
         public Builder enabledState(@Nullable Output<Either<String,EnabledState>> enabledState) {
@@ -264,7 +265,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabledState(@Nullable Either<String,EnabledState> enabledState) {
-            this.enabledState = Output.ofNullable(enabledState);
+            this.enabledState = Codegen.ofNullable(enabledState);
             return this;
         }
         public Builder hostName(Output<String> hostName) {
@@ -280,7 +281,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder httpPort(@Nullable Integer httpPort) {
-            this.httpPort = Output.ofNullable(httpPort);
+            this.httpPort = Codegen.ofNullable(httpPort);
             return this;
         }
         public Builder httpsPort(@Nullable Output<Integer> httpsPort) {
@@ -288,7 +289,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder httpsPort(@Nullable Integer httpsPort) {
-            this.httpsPort = Output.ofNullable(httpsPort);
+            this.httpsPort = Codegen.ofNullable(httpsPort);
             return this;
         }
         public Builder originGroupName(Output<String> originGroupName) {
@@ -304,7 +305,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder originHostHeader(@Nullable String originHostHeader) {
-            this.originHostHeader = Output.ofNullable(originHostHeader);
+            this.originHostHeader = Codegen.ofNullable(originHostHeader);
             return this;
         }
         public Builder originName(@Nullable Output<String> originName) {
@@ -312,7 +313,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder originName(@Nullable String originName) {
-            this.originName = Output.ofNullable(originName);
+            this.originName = Codegen.ofNullable(originName);
             return this;
         }
         public Builder priority(@Nullable Output<Integer> priority) {
@@ -320,7 +321,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder profileName(Output<String> profileName) {
@@ -344,7 +345,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sharedPrivateLinkResource(@Nullable SharedPrivateLinkResourcePropertiesArgs sharedPrivateLinkResource) {
-            this.sharedPrivateLinkResource = Output.ofNullable(sharedPrivateLinkResource);
+            this.sharedPrivateLinkResource = Codegen.ofNullable(sharedPrivateLinkResource);
             return this;
         }
         public Builder weight(@Nullable Output<Integer> weight) {
@@ -352,7 +353,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder weight(@Nullable Integer weight) {
-            this.weight = Output.ofNullable(weight);
+            this.weight = Codegen.ofNullable(weight);
             return this;
         }        public AFDOriginArgs build() {
             return new AFDOriginArgs(azureOrigin, enabledState, hostName, httpPort, httpsPort, originGroupName, originHostHeader, originName, priority, profileName, resourceGroupName, sharedPrivateLinkResource, weight);

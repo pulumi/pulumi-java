@@ -6,6 +6,7 @@ package io.pulumi.kubernetes.core_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.core_v1.ReplicationControllerListArgs;
 import io.pulumi.kubernetes.core_v1.outputs.ReplicationController;
@@ -99,7 +100,7 @@ public class ReplicationControllerList extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public ReplicationControllerList(String name, ReplicationControllerListArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:core/v1:ReplicationControllerList", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:core/v1:ReplicationControllerList", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ReplicationControllerList(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

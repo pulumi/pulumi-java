@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.GrafeasV1beta1IntotoSignatureArgs;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.LinkArgs;
 import java.util.List;
@@ -24,14 +25,14 @@ public final class GrafeasV1beta1IntotoDetailsArgs extends io.pulumi.resources.R
       private final @Nullable Output<List<GrafeasV1beta1IntotoSignatureArgs>> signatures;
 
     public Output<List<GrafeasV1beta1IntotoSignatureArgs>> getSignatures() {
-        return this.signatures == null ? Output.empty() : this.signatures;
+        return this.signatures == null ? Codegen.empty() : this.signatures;
     }
 
     @Import(name="signed")
       private final @Nullable Output<LinkArgs> signed;
 
     public Output<LinkArgs> getSigned() {
-        return this.signed == null ? Output.empty() : this.signed;
+        return this.signed == null ? Codegen.empty() : this.signed;
     }
 
     public GrafeasV1beta1IntotoDetailsArgs(
@@ -42,8 +43,8 @@ public final class GrafeasV1beta1IntotoDetailsArgs extends io.pulumi.resources.R
     }
 
     private GrafeasV1beta1IntotoDetailsArgs() {
-        this.signatures = Output.empty();
-        this.signed = Output.empty();
+        this.signatures = Codegen.empty();
+        this.signed = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -73,7 +74,7 @@ public final class GrafeasV1beta1IntotoDetailsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder signatures(@Nullable List<GrafeasV1beta1IntotoSignatureArgs> signatures) {
-            this.signatures = Output.ofNullable(signatures);
+            this.signatures = Codegen.ofNullable(signatures);
             return this;
         }
         public Builder signatures(GrafeasV1beta1IntotoSignatureArgs... signatures) {
@@ -84,7 +85,7 @@ public final class GrafeasV1beta1IntotoDetailsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder signed(@Nullable LinkArgs signed) {
-            this.signed = Output.ofNullable(signed);
+            this.signed = Codegen.ofNullable(signed);
             return this;
         }        public GrafeasV1beta1IntotoDetailsArgs build() {
             return new GrafeasV1beta1IntotoDetailsArgs(signatures, signed);

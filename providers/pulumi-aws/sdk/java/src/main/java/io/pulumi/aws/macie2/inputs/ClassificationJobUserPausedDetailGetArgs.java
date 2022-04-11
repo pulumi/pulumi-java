@@ -5,6 +5,7 @@ package io.pulumi.aws.macie2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,21 +19,21 @@ public final class ClassificationJobUserPausedDetailGetArgs extends io.pulumi.re
       private final @Nullable Output<String> jobExpiresAt;
 
     public Output<String> getJobExpiresAt() {
-        return this.jobExpiresAt == null ? Output.empty() : this.jobExpiresAt;
+        return this.jobExpiresAt == null ? Codegen.empty() : this.jobExpiresAt;
     }
 
     @Import(name="jobImminentExpirationHealthEventArn")
       private final @Nullable Output<String> jobImminentExpirationHealthEventArn;
 
     public Output<String> getJobImminentExpirationHealthEventArn() {
-        return this.jobImminentExpirationHealthEventArn == null ? Output.empty() : this.jobImminentExpirationHealthEventArn;
+        return this.jobImminentExpirationHealthEventArn == null ? Codegen.empty() : this.jobImminentExpirationHealthEventArn;
     }
 
     @Import(name="jobPausedAt")
       private final @Nullable Output<String> jobPausedAt;
 
     public Output<String> getJobPausedAt() {
-        return this.jobPausedAt == null ? Output.empty() : this.jobPausedAt;
+        return this.jobPausedAt == null ? Codegen.empty() : this.jobPausedAt;
     }
 
     public ClassificationJobUserPausedDetailGetArgs(
@@ -45,9 +46,9 @@ public final class ClassificationJobUserPausedDetailGetArgs extends io.pulumi.re
     }
 
     private ClassificationJobUserPausedDetailGetArgs() {
-        this.jobExpiresAt = Output.empty();
-        this.jobImminentExpirationHealthEventArn = Output.empty();
-        this.jobPausedAt = Output.empty();
+        this.jobExpiresAt = Codegen.empty();
+        this.jobImminentExpirationHealthEventArn = Codegen.empty();
+        this.jobPausedAt = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ClassificationJobUserPausedDetailGetArgs extends io.pulumi.re
             return this;
         }
         public Builder jobExpiresAt(@Nullable String jobExpiresAt) {
-            this.jobExpiresAt = Output.ofNullable(jobExpiresAt);
+            this.jobExpiresAt = Codegen.ofNullable(jobExpiresAt);
             return this;
         }
         public Builder jobImminentExpirationHealthEventArn(@Nullable Output<String> jobImminentExpirationHealthEventArn) {
@@ -87,7 +88,7 @@ public final class ClassificationJobUserPausedDetailGetArgs extends io.pulumi.re
             return this;
         }
         public Builder jobImminentExpirationHealthEventArn(@Nullable String jobImminentExpirationHealthEventArn) {
-            this.jobImminentExpirationHealthEventArn = Output.ofNullable(jobImminentExpirationHealthEventArn);
+            this.jobImminentExpirationHealthEventArn = Codegen.ofNullable(jobImminentExpirationHealthEventArn);
             return this;
         }
         public Builder jobPausedAt(@Nullable Output<String> jobPausedAt) {
@@ -95,7 +96,7 @@ public final class ClassificationJobUserPausedDetailGetArgs extends io.pulumi.re
             return this;
         }
         public Builder jobPausedAt(@Nullable String jobPausedAt) {
-            this.jobPausedAt = Output.ofNullable(jobPausedAt);
+            this.jobPausedAt = Codegen.ofNullable(jobPausedAt);
             return this;
         }        public ClassificationJobUserPausedDetailGetArgs build() {
             return new ClassificationJobUserPausedDetailGetArgs(jobExpiresAt, jobImminentExpirationHealthEventArn, jobPausedAt);

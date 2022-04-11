@@ -5,6 +5,7 @@ package io.pulumi.googlenative.notebooks_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.notebooks_v1.enums.ScheduleState;
 import io.pulumi.googlenative.notebooks_v1.inputs.ExecutionTemplateArgs;
 import java.lang.String;
@@ -24,7 +25,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> cronSchedule;
 
     public Output<String> getCronSchedule() {
-        return this.cronSchedule == null ? Output.empty() : this.cronSchedule;
+        return this.cronSchedule == null ? Codegen.empty() : this.cronSchedule;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -46,21 +47,21 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ExecutionTemplateArgs> executionTemplate;
 
     public Output<ExecutionTemplateArgs> getExecutionTemplate() {
-        return this.executionTemplate == null ? Output.empty() : this.executionTemplate;
+        return this.executionTemplate == null ? Codegen.empty() : this.executionTemplate;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="scheduleId", required=true)
@@ -74,7 +75,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ScheduleState> state;
 
     public Output<ScheduleState> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> timeZone;
 
     public Output<String> getTimeZone() {
-        return this.timeZone == null ? Output.empty() : this.timeZone;
+        return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 
     public ScheduleArgs(
@@ -108,14 +109,14 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScheduleArgs() {
-        this.cronSchedule = Output.empty();
-        this.description = Output.empty();
-        this.executionTemplate = Output.empty();
-        this.location = Output.empty();
-        this.project = Output.empty();
-        this.scheduleId = Output.empty();
-        this.state = Output.empty();
-        this.timeZone = Output.empty();
+        this.cronSchedule = Codegen.empty();
+        this.description = Codegen.empty();
+        this.executionTemplate = Codegen.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
+        this.scheduleId = Codegen.empty();
+        this.state = Codegen.empty();
+        this.timeZone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cronSchedule(@Nullable String cronSchedule) {
-            this.cronSchedule = Output.ofNullable(cronSchedule);
+            this.cronSchedule = Codegen.ofNullable(cronSchedule);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -165,7 +166,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder executionTemplate(@Nullable Output<ExecutionTemplateArgs> executionTemplate) {
@@ -173,7 +174,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder executionTemplate(@Nullable ExecutionTemplateArgs executionTemplate) {
-            this.executionTemplate = Output.ofNullable(executionTemplate);
+            this.executionTemplate = Codegen.ofNullable(executionTemplate);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -181,7 +182,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -189,7 +190,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder scheduleId(Output<String> scheduleId) {
@@ -205,7 +206,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable ScheduleState state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder timeZone(@Nullable Output<String> timeZone) {
@@ -213,7 +214,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Output.ofNullable(timeZone);
+            this.timeZone = Codegen.ofNullable(timeZone);
             return this;
         }        public ScheduleArgs build() {
             return new ScheduleArgs(cronSchedule, description, executionTemplate, location, project, scheduleId, state, timeZone);

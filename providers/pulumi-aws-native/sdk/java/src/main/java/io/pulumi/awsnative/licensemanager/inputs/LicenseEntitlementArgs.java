@@ -5,6 +5,7 @@ package io.pulumi.awsnative.licensemanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,14 +21,14 @@ public final class LicenseEntitlementArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Boolean> allowCheckIn;
 
     public Output<Boolean> getAllowCheckIn() {
-        return this.allowCheckIn == null ? Output.empty() : this.allowCheckIn;
+        return this.allowCheckIn == null ? Codegen.empty() : this.allowCheckIn;
     }
 
     @Import(name="maxCount")
       private final @Nullable Output<Integer> maxCount;
 
     public Output<Integer> getMaxCount() {
-        return this.maxCount == null ? Output.empty() : this.maxCount;
+        return this.maxCount == null ? Codegen.empty() : this.maxCount;
     }
 
     @Import(name="name", required=true)
@@ -41,7 +42,7 @@ public final class LicenseEntitlementArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Boolean> overage;
 
     public Output<Boolean> getOverage() {
-        return this.overage == null ? Output.empty() : this.overage;
+        return this.overage == null ? Codegen.empty() : this.overage;
     }
 
     @Import(name="unit", required=true)
@@ -55,7 +56,7 @@ public final class LicenseEntitlementArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public LicenseEntitlementArgs(
@@ -74,12 +75,12 @@ public final class LicenseEntitlementArgs extends io.pulumi.resources.ResourceAr
     }
 
     private LicenseEntitlementArgs() {
-        this.allowCheckIn = Output.empty();
-        this.maxCount = Output.empty();
-        this.name = Output.empty();
-        this.overage = Output.empty();
-        this.unit = Output.empty();
-        this.value = Output.empty();
+        this.allowCheckIn = Codegen.empty();
+        this.maxCount = Codegen.empty();
+        this.name = Codegen.empty();
+        this.overage = Codegen.empty();
+        this.unit = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -117,7 +118,7 @@ public final class LicenseEntitlementArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder allowCheckIn(@Nullable Boolean allowCheckIn) {
-            this.allowCheckIn = Output.ofNullable(allowCheckIn);
+            this.allowCheckIn = Codegen.ofNullable(allowCheckIn);
             return this;
         }
         public Builder maxCount(@Nullable Output<Integer> maxCount) {
@@ -125,7 +126,7 @@ public final class LicenseEntitlementArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder maxCount(@Nullable Integer maxCount) {
-            this.maxCount = Output.ofNullable(maxCount);
+            this.maxCount = Codegen.ofNullable(maxCount);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -141,7 +142,7 @@ public final class LicenseEntitlementArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder overage(@Nullable Boolean overage) {
-            this.overage = Output.ofNullable(overage);
+            this.overage = Codegen.ofNullable(overage);
             return this;
         }
         public Builder unit(Output<String> unit) {
@@ -157,7 +158,7 @@ public final class LicenseEntitlementArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public LicenseEntitlementArgs build() {
             return new LicenseEntitlementArgs(allowCheckIn, maxCount, name, overage, unit, value);

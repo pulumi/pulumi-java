@@ -6,6 +6,7 @@ package io.pulumi.googlenative.bigquerydatatransfer_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.bigquerydatatransfer_v1.TransferConfigArgs;
 import io.pulumi.googlenative.bigquerydatatransfer_v1.outputs.EmailPreferencesResponse;
@@ -270,7 +271,7 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TransferConfig(String name, @Nullable TransferConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:bigquerydatatransfer/v1:TransferConfig", name, args == null ? TransferConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:bigquerydatatransfer/v1:TransferConfig", name, args == null ? TransferConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TransferConfig(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -10,6 +10,7 @@ import io.pulumi.awsnative.ssm.inputs.DocumentRequiresArgs;
 import io.pulumi.awsnative.ssm.inputs.DocumentTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +30,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DocumentAttachmentsSourceArgs>> attachments;
 
     public Output<List<DocumentAttachmentsSourceArgs>> getAttachments() {
-        return this.attachments == null ? Output.empty() : this.attachments;
+        return this.attachments == null ? Codegen.empty() : this.attachments;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DocumentFormat> documentFormat;
 
     public Output<DocumentFormat> getDocumentFormat() {
-        return this.documentFormat == null ? Output.empty() : this.documentFormat;
+        return this.documentFormat == null ? Codegen.empty() : this.documentFormat;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DocumentType> documentType;
 
     public Output<DocumentType> getDocumentType() {
-        return this.documentType == null ? Output.empty() : this.documentType;
+        return this.documentType == null ? Codegen.empty() : this.documentType;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DocumentRequiresArgs>> requires;
 
     public Output<List<DocumentRequiresArgs>> getRequires() {
-        return this.requires == null ? Output.empty() : this.requires;
+        return this.requires == null ? Codegen.empty() : this.requires;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DocumentTagArgs>> tags;
 
     public Output<List<DocumentTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> targetType;
 
     public Output<String> getTargetType() {
-        return this.targetType == null ? Output.empty() : this.targetType;
+        return this.targetType == null ? Codegen.empty() : this.targetType;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> versionName;
 
     public Output<String> getVersionName() {
-        return this.versionName == null ? Output.empty() : this.versionName;
+        return this.versionName == null ? Codegen.empty() : this.versionName;
     }
 
     public DocumentArgs(
@@ -142,15 +143,15 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DocumentArgs() {
-        this.attachments = Output.empty();
-        this.content = Output.empty();
-        this.documentFormat = Output.empty();
-        this.documentType = Output.empty();
-        this.name = Output.empty();
-        this.requires = Output.empty();
-        this.tags = Output.empty();
-        this.targetType = Output.empty();
-        this.versionName = Output.empty();
+        this.attachments = Codegen.empty();
+        this.content = Codegen.empty();
+        this.documentFormat = Codegen.empty();
+        this.documentType = Codegen.empty();
+        this.name = Codegen.empty();
+        this.requires = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.targetType = Codegen.empty();
+        this.versionName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -194,7 +195,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder attachments(@Nullable List<DocumentAttachmentsSourceArgs> attachments) {
-            this.attachments = Output.ofNullable(attachments);
+            this.attachments = Codegen.ofNullable(attachments);
             return this;
         }
         public Builder attachments(DocumentAttachmentsSourceArgs... attachments) {
@@ -213,7 +214,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder documentFormat(@Nullable DocumentFormat documentFormat) {
-            this.documentFormat = Output.ofNullable(documentFormat);
+            this.documentFormat = Codegen.ofNullable(documentFormat);
             return this;
         }
         public Builder documentType(@Nullable Output<DocumentType> documentType) {
@@ -221,7 +222,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder documentType(@Nullable DocumentType documentType) {
-            this.documentType = Output.ofNullable(documentType);
+            this.documentType = Codegen.ofNullable(documentType);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -229,7 +230,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder requires(@Nullable Output<List<DocumentRequiresArgs>> requires) {
@@ -237,7 +238,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requires(@Nullable List<DocumentRequiresArgs> requires) {
-            this.requires = Output.ofNullable(requires);
+            this.requires = Codegen.ofNullable(requires);
             return this;
         }
         public Builder requires(DocumentRequiresArgs... requires) {
@@ -248,7 +249,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<DocumentTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(DocumentTagArgs... tags) {
@@ -259,7 +260,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetType(@Nullable String targetType) {
-            this.targetType = Output.ofNullable(targetType);
+            this.targetType = Codegen.ofNullable(targetType);
             return this;
         }
         public Builder versionName(@Nullable Output<String> versionName) {
@@ -267,7 +268,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder versionName(@Nullable String versionName) {
-            this.versionName = Output.ofNullable(versionName);
+            this.versionName = Codegen.ofNullable(versionName);
             return this;
         }        public DocumentArgs build() {
             return new DocumentArgs(attachments, content, documentFormat, documentType, name, requires, tags, targetType, versionName);

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_alpha;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.RegionInstantSnapshotIamPolicyArgs;
 import io.pulumi.googlenative.compute_alpha.outputs.AuditConfigResponse;
@@ -117,7 +118,7 @@ public class RegionInstantSnapshotIamPolicy extends io.pulumi.resources.CustomRe
      * @param options A bag of options that control this resource's behavior.
      */
     public RegionInstantSnapshotIamPolicy(String name, RegionInstantSnapshotIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/alpha:RegionInstantSnapshotIamPolicy", name, args == null ? RegionInstantSnapshotIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/alpha:RegionInstantSnapshotIamPolicy", name, args == null ? RegionInstantSnapshotIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegionInstantSnapshotIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

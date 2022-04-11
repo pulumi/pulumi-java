@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ApplicationGatewaySslCertificateArgs extends io.pulumi.resour
       private final @Nullable Output<String> data;
 
     public Output<String> getData() {
-        return this.data == null ? Output.empty() : this.data;
+        return this.data == null ? Codegen.empty() : this.data;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ApplicationGatewaySslCertificateArgs extends io.pulumi.resour
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ApplicationGatewaySslCertificateArgs extends io.pulumi.resour
       private final @Nullable Output<String> keyVaultSecretId;
 
     public Output<String> getKeyVaultSecretId() {
-        return this.keyVaultSecretId == null ? Output.empty() : this.keyVaultSecretId;
+        return this.keyVaultSecretId == null ? Codegen.empty() : this.keyVaultSecretId;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ApplicationGatewaySslCertificateArgs extends io.pulumi.resour
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class ApplicationGatewaySslCertificateArgs extends io.pulumi.resour
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     public ApplicationGatewaySslCertificateArgs(
@@ -87,11 +88,11 @@ public final class ApplicationGatewaySslCertificateArgs extends io.pulumi.resour
     }
 
     private ApplicationGatewaySslCertificateArgs() {
-        this.data = Output.empty();
-        this.id = Output.empty();
-        this.keyVaultSecretId = Output.empty();
-        this.name = Output.empty();
-        this.password = Output.empty();
+        this.data = Codegen.empty();
+        this.id = Codegen.empty();
+        this.keyVaultSecretId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.password = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class ApplicationGatewaySslCertificateArgs extends io.pulumi.resour
             return this;
         }
         public Builder data(@Nullable String data) {
-            this.data = Output.ofNullable(data);
+            this.data = Codegen.ofNullable(data);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -135,7 +136,7 @@ public final class ApplicationGatewaySslCertificateArgs extends io.pulumi.resour
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder keyVaultSecretId(@Nullable Output<String> keyVaultSecretId) {
@@ -143,7 +144,7 @@ public final class ApplicationGatewaySslCertificateArgs extends io.pulumi.resour
             return this;
         }
         public Builder keyVaultSecretId(@Nullable String keyVaultSecretId) {
-            this.keyVaultSecretId = Output.ofNullable(keyVaultSecretId);
+            this.keyVaultSecretId = Codegen.ofNullable(keyVaultSecretId);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -151,7 +152,7 @@ public final class ApplicationGatewaySslCertificateArgs extends io.pulumi.resour
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder password(@Nullable Output<String> password) {
@@ -159,7 +160,7 @@ public final class ApplicationGatewaySslCertificateArgs extends io.pulumi.resour
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }        public ApplicationGatewaySslCertificateArgs build() {
             return new ApplicationGatewaySslCertificateArgs(data, id, keyVaultSecretId, name, password);

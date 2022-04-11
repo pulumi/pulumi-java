@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v2.enums.GoogleCloudDialogflowV2IntentMessageColumnPropertiesHorizontalAlignment;
 import java.lang.String;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs exte
       private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageColumnPropertiesHorizontalAlignment> horizontalAlignment;
 
     public Output<GoogleCloudDialogflowV2IntentMessageColumnPropertiesHorizontalAlignment> getHorizontalAlignment() {
-        return this.horizontalAlignment == null ? Output.empty() : this.horizontalAlignment;
+        return this.horizontalAlignment == null ? Codegen.empty() : this.horizontalAlignment;
     }
 
     public GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs(
@@ -49,8 +50,8 @@ public final class GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs exte
     }
 
     private GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs() {
-        this.header = Output.empty();
-        this.horizontalAlignment = Output.empty();
+        this.header = Codegen.empty();
+        this.horizontalAlignment = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs exte
             return this;
         }
         public Builder horizontalAlignment(@Nullable GoogleCloudDialogflowV2IntentMessageColumnPropertiesHorizontalAlignment horizontalAlignment) {
-            this.horizontalAlignment = Output.ofNullable(horizontalAlignment);
+            this.horizontalAlignment = Codegen.ofNullable(horizontalAlignment);
             return this;
         }        public GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs(header, horizontalAlignment);

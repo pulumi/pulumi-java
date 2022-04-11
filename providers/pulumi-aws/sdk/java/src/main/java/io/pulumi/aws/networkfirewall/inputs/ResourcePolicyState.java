@@ -5,6 +5,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class ResourcePolicyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     /**
@@ -29,7 +30,7 @@ public final class ResourcePolicyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> resourceArn;
 
     public Output<String> getResourceArn() {
-        return this.resourceArn == null ? Output.empty() : this.resourceArn;
+        return this.resourceArn == null ? Codegen.empty() : this.resourceArn;
     }
 
     public ResourcePolicyState(
@@ -40,8 +41,8 @@ public final class ResourcePolicyState extends io.pulumi.resources.ResourceArgs 
     }
 
     private ResourcePolicyState() {
-        this.policy = Output.empty();
-        this.resourceArn = Output.empty();
+        this.policy = Codegen.empty();
+        this.resourceArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -71,7 +72,7 @@ public final class ResourcePolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder policy(@Nullable String policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }
         public Builder resourceArn(@Nullable Output<String> resourceArn) {
@@ -79,7 +80,7 @@ public final class ResourcePolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder resourceArn(@Nullable String resourceArn) {
-            this.resourceArn = Output.ofNullable(resourceArn);
+            this.resourceArn = Codegen.ofNullable(resourceArn);
             return this;
         }        public ResourcePolicyState build() {
             return new ResourcePolicyState(policy, resourceArn);

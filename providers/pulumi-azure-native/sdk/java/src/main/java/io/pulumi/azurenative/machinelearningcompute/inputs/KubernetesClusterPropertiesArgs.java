@@ -6,6 +6,7 @@ package io.pulumi.azurenative.machinelearningcompute.inputs;
 import io.pulumi.azurenative.machinelearningcompute.inputs.ServicePrincipalPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,7 +27,7 @@ public final class KubernetesClusterPropertiesArgs extends io.pulumi.resources.R
       private final @Nullable Output<ServicePrincipalPropertiesArgs> servicePrincipal;
 
     public Output<ServicePrincipalPropertiesArgs> getServicePrincipal() {
-        return this.servicePrincipal == null ? Output.empty() : this.servicePrincipal;
+        return this.servicePrincipal == null ? Codegen.empty() : this.servicePrincipal;
     }
 
     public KubernetesClusterPropertiesArgs(@Nullable Output<ServicePrincipalPropertiesArgs> servicePrincipal) {
@@ -34,7 +35,7 @@ public final class KubernetesClusterPropertiesArgs extends io.pulumi.resources.R
     }
 
     private KubernetesClusterPropertiesArgs() {
-        this.servicePrincipal = Output.empty();
+        this.servicePrincipal = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class KubernetesClusterPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder servicePrincipal(@Nullable ServicePrincipalPropertiesArgs servicePrincipal) {
-            this.servicePrincipal = Output.ofNullable(servicePrincipal);
+            this.servicePrincipal = Codegen.ofNullable(servicePrincipal);
             return this;
         }        public KubernetesClusterPropertiesArgs build() {
             return new KubernetesClusterPropertiesArgs(servicePrincipal);

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.route53recoverycontrol.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -49,8 +50,8 @@ public final class SafetyRuleAssertionRuleArgs extends io.pulumi.resources.Resou
     }
 
     private SafetyRuleAssertionRuleArgs() {
-        this.assertedControls = Output.empty();
-        this.waitPeriodMs = Output.empty();
+        this.assertedControls = Codegen.empty();
+        this.waitPeriodMs = Codegen.empty();
     }
 
     public static Builder builder() {

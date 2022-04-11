@@ -11,6 +11,7 @@ import io.pulumi.aws.applicationloadbalancing.outputs.ListenerRuleCondition;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -160,7 +161,7 @@ public class ListenerRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ListenerRule(String name, ListenerRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:applicationloadbalancing/listenerRule:ListenerRule", name, args == null ? ListenerRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:applicationloadbalancing/listenerRule:ListenerRule", name, args == null ? ListenerRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ListenerRule(String name, Output<String> id, @Nullable ListenerRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

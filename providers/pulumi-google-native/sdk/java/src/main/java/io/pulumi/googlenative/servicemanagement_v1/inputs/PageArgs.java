@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
-        return this.content == null ? Output.empty() : this.content;
+        return this.content == null ? Codegen.empty() : this.content;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<PageArgs>> subpages;
 
     public Output<List<PageArgs>> getSubpages() {
-        return this.subpages == null ? Output.empty() : this.subpages;
+        return this.subpages == null ? Codegen.empty() : this.subpages;
     }
 
     public PageArgs(
@@ -62,9 +63,9 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PageArgs() {
-        this.content = Output.empty();
-        this.name = Output.empty();
-        this.subpages = Output.empty();
+        this.content = Codegen.empty();
+        this.name = Codegen.empty();
+        this.subpages = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder content(@Nullable String content) {
-            this.content = Output.ofNullable(content);
+            this.content = Codegen.ofNullable(content);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -104,7 +105,7 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder subpages(@Nullable Output<List<PageArgs>> subpages) {
@@ -112,7 +113,7 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subpages(@Nullable List<PageArgs> subpages) {
-            this.subpages = Output.ofNullable(subpages);
+            this.subpages = Codegen.ofNullable(subpages);
             return this;
         }
         public Builder subpages(PageArgs... subpages) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.FileReferenceArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.ToolExitCodeArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.ToolOutputReferenceArgs;
@@ -30,7 +31,7 @@ public final class ToolExecutionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> commandLineArguments;
 
     public Output<List<String>> getCommandLineArguments() {
-        return this.commandLineArguments == null ? Output.empty() : this.commandLineArguments;
+        return this.commandLineArguments == null ? Codegen.empty() : this.commandLineArguments;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class ToolExecutionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ToolExitCodeArgs> exitCode;
 
     public Output<ToolExitCodeArgs> getExitCode() {
-        return this.exitCode == null ? Output.empty() : this.exitCode;
+        return this.exitCode == null ? Codegen.empty() : this.exitCode;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class ToolExecutionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<FileReferenceArgs>> toolLogs;
 
     public Output<List<FileReferenceArgs>> getToolLogs() {
-        return this.toolLogs == null ? Output.empty() : this.toolLogs;
+        return this.toolLogs == null ? Codegen.empty() : this.toolLogs;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class ToolExecutionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ToolOutputReferenceArgs>> toolOutputs;
 
     public Output<List<ToolOutputReferenceArgs>> getToolOutputs() {
-        return this.toolOutputs == null ? Output.empty() : this.toolOutputs;
+        return this.toolOutputs == null ? Codegen.empty() : this.toolOutputs;
     }
 
     public ToolExecutionArgs(
@@ -78,10 +79,10 @@ public final class ToolExecutionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ToolExecutionArgs() {
-        this.commandLineArguments = Output.empty();
-        this.exitCode = Output.empty();
-        this.toolLogs = Output.empty();
-        this.toolOutputs = Output.empty();
+        this.commandLineArguments = Codegen.empty();
+        this.exitCode = Codegen.empty();
+        this.toolLogs = Codegen.empty();
+        this.toolOutputs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class ToolExecutionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder commandLineArguments(@Nullable List<String> commandLineArguments) {
-            this.commandLineArguments = Output.ofNullable(commandLineArguments);
+            this.commandLineArguments = Codegen.ofNullable(commandLineArguments);
             return this;
         }
         public Builder commandLineArguments(String... commandLineArguments) {
@@ -126,7 +127,7 @@ public final class ToolExecutionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder exitCode(@Nullable ToolExitCodeArgs exitCode) {
-            this.exitCode = Output.ofNullable(exitCode);
+            this.exitCode = Codegen.ofNullable(exitCode);
             return this;
         }
         public Builder toolLogs(@Nullable Output<List<FileReferenceArgs>> toolLogs) {
@@ -134,7 +135,7 @@ public final class ToolExecutionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder toolLogs(@Nullable List<FileReferenceArgs> toolLogs) {
-            this.toolLogs = Output.ofNullable(toolLogs);
+            this.toolLogs = Codegen.ofNullable(toolLogs);
             return this;
         }
         public Builder toolLogs(FileReferenceArgs... toolLogs) {
@@ -145,7 +146,7 @@ public final class ToolExecutionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder toolOutputs(@Nullable List<ToolOutputReferenceArgs> toolOutputs) {
-            this.toolOutputs = Output.ofNullable(toolOutputs);
+            this.toolOutputs = Codegen.ofNullable(toolOutputs);
             return this;
         }
         public Builder toolOutputs(ToolOutputReferenceArgs... toolOutputs) {

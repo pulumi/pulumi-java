@@ -5,6 +5,7 @@ package io.pulumi.aws.datapipeline.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class PipelineDefinitionParameterValueGetArgs extends io.pulumi.res
     }
 
     private PipelineDefinitionParameterValueGetArgs() {
-        this.id = Output.empty();
-        this.stringValue = Output.empty();
+        this.id = Codegen.empty();
+        this.stringValue = Codegen.empty();
     }
 
     public static Builder builder() {

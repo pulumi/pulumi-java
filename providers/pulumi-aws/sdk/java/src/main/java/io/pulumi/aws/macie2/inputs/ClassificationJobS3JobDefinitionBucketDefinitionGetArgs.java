@@ -5,6 +5,7 @@ package io.pulumi.aws.macie2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -44,8 +45,8 @@ public final class ClassificationJobS3JobDefinitionBucketDefinitionGetArgs exten
     }
 
     private ClassificationJobS3JobDefinitionBucketDefinitionGetArgs() {
-        this.accountId = Output.empty();
-        this.buckets = Output.empty();
+        this.accountId = Codegen.empty();
+        this.buckets = Codegen.empty();
     }
 
     public static Builder builder() {

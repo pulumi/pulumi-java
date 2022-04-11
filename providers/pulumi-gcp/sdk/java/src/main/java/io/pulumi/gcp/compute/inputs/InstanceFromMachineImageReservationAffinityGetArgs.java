@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.InstanceFromMachineImageReservationAffinitySpecificReservationGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class InstanceFromMachineImageReservationAffinityGetArgs extends io
       private final @Nullable Output<InstanceFromMachineImageReservationAffinitySpecificReservationGetArgs> specificReservation;
 
     public Output<InstanceFromMachineImageReservationAffinitySpecificReservationGetArgs> getSpecificReservation() {
-        return this.specificReservation == null ? Output.empty() : this.specificReservation;
+        return this.specificReservation == null ? Codegen.empty() : this.specificReservation;
     }
 
     @Import(name="type", required=true)
@@ -37,8 +38,8 @@ public final class InstanceFromMachineImageReservationAffinityGetArgs extends io
     }
 
     private InstanceFromMachineImageReservationAffinityGetArgs() {
-        this.specificReservation = Output.empty();
-        this.type = Output.empty();
+        this.specificReservation = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class InstanceFromMachineImageReservationAffinityGetArgs extends io
             return this;
         }
         public Builder specificReservation(@Nullable InstanceFromMachineImageReservationAffinitySpecificReservationGetArgs specificReservation) {
-            this.specificReservation = Output.ofNullable(specificReservation);
+            this.specificReservation = Codegen.ofNullable(specificReservation);
             return this;
         }
         public Builder type(Output<String> type) {

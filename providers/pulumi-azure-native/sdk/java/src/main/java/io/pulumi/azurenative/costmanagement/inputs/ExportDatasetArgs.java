@@ -8,6 +8,7 @@ import io.pulumi.azurenative.costmanagement.inputs.ExportDatasetConfigurationArg
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public final class ExportDatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ExportDatasetConfigurationArgs> configuration;
 
     public Output<ExportDatasetConfigurationArgs> getConfiguration() {
-        return this.configuration == null ? Output.empty() : this.configuration;
+        return this.configuration == null ? Codegen.empty() : this.configuration;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class ExportDatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,GranularityType>> granularity;
 
     public Output<Either<String,GranularityType>> getGranularity() {
-        return this.granularity == null ? Output.empty() : this.granularity;
+        return this.granularity == null ? Codegen.empty() : this.granularity;
     }
 
     public ExportDatasetArgs(
@@ -51,8 +52,8 @@ public final class ExportDatasetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExportDatasetArgs() {
-        this.configuration = Output.empty();
-        this.granularity = Output.empty();
+        this.configuration = Codegen.empty();
+        this.granularity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class ExportDatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder configuration(@Nullable ExportDatasetConfigurationArgs configuration) {
-            this.configuration = Output.ofNullable(configuration);
+            this.configuration = Codegen.ofNullable(configuration);
             return this;
         }
         public Builder granularity(@Nullable Output<Either<String,GranularityType>> granularity) {
@@ -90,7 +91,7 @@ public final class ExportDatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder granularity(@Nullable Either<String,GranularityType> granularity) {
-            this.granularity = Output.ofNullable(granularity);
+            this.granularity = Codegen.ofNullable(granularity);
             return this;
         }        public ExportDatasetArgs build() {
             return new ExportDatasetArgs(configuration, granularity);

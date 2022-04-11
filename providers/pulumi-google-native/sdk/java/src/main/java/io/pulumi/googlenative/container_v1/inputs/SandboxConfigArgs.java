@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.container_v1.enums.SandboxConfigType;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class SandboxConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SandboxConfigType> type;
 
     public Output<SandboxConfigType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public SandboxConfigArgs(@Nullable Output<SandboxConfigType> type) {
@@ -34,7 +35,7 @@ public final class SandboxConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SandboxConfigArgs() {
-        this.type = Output.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class SandboxConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable SandboxConfigType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public SandboxConfigArgs build() {
             return new SandboxConfigArgs(type);

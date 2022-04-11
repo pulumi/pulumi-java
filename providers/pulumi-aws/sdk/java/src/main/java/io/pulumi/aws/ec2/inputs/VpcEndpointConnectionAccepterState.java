@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class VpcEndpointConnectionAccepterState extends io.pulumi.resource
       private final @Nullable Output<String> vpcEndpointId;
 
     public Output<String> getVpcEndpointId() {
-        return this.vpcEndpointId == null ? Output.empty() : this.vpcEndpointId;
+        return this.vpcEndpointId == null ? Codegen.empty() : this.vpcEndpointId;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class VpcEndpointConnectionAccepterState extends io.pulumi.resource
       private final @Nullable Output<String> vpcEndpointServiceId;
 
     public Output<String> getVpcEndpointServiceId() {
-        return this.vpcEndpointServiceId == null ? Output.empty() : this.vpcEndpointServiceId;
+        return this.vpcEndpointServiceId == null ? Codegen.empty() : this.vpcEndpointServiceId;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class VpcEndpointConnectionAccepterState extends io.pulumi.resource
       private final @Nullable Output<String> vpcEndpointState;
 
     public Output<String> getVpcEndpointState() {
-        return this.vpcEndpointState == null ? Output.empty() : this.vpcEndpointState;
+        return this.vpcEndpointState == null ? Codegen.empty() : this.vpcEndpointState;
     }
 
     public VpcEndpointConnectionAccepterState(
@@ -57,9 +58,9 @@ public final class VpcEndpointConnectionAccepterState extends io.pulumi.resource
     }
 
     private VpcEndpointConnectionAccepterState() {
-        this.vpcEndpointId = Output.empty();
-        this.vpcEndpointServiceId = Output.empty();
-        this.vpcEndpointState = Output.empty();
+        this.vpcEndpointId = Codegen.empty();
+        this.vpcEndpointServiceId = Codegen.empty();
+        this.vpcEndpointState = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class VpcEndpointConnectionAccepterState extends io.pulumi.resource
             return this;
         }
         public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
-            this.vpcEndpointId = Output.ofNullable(vpcEndpointId);
+            this.vpcEndpointId = Codegen.ofNullable(vpcEndpointId);
             return this;
         }
         public Builder vpcEndpointServiceId(@Nullable Output<String> vpcEndpointServiceId) {
@@ -99,7 +100,7 @@ public final class VpcEndpointConnectionAccepterState extends io.pulumi.resource
             return this;
         }
         public Builder vpcEndpointServiceId(@Nullable String vpcEndpointServiceId) {
-            this.vpcEndpointServiceId = Output.ofNullable(vpcEndpointServiceId);
+            this.vpcEndpointServiceId = Codegen.ofNullable(vpcEndpointServiceId);
             return this;
         }
         public Builder vpcEndpointState(@Nullable Output<String> vpcEndpointState) {
@@ -107,7 +108,7 @@ public final class VpcEndpointConnectionAccepterState extends io.pulumi.resource
             return this;
         }
         public Builder vpcEndpointState(@Nullable String vpcEndpointState) {
-            this.vpcEndpointState = Output.ofNullable(vpcEndpointState);
+            this.vpcEndpointState = Codegen.ofNullable(vpcEndpointState);
             return this;
         }        public VpcEndpointConnectionAccepterState build() {
             return new VpcEndpointConnectionAccepterState(vpcEndpointId, vpcEndpointServiceId, vpcEndpointState);

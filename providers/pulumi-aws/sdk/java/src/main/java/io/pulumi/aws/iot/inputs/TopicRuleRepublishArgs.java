@@ -5,6 +5,7 @@ package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class TopicRuleRepublishArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Integer> qos;
 
     public Output<Integer> getQos() {
-        return this.qos == null ? Output.empty() : this.qos;
+        return this.qos == null ? Codegen.empty() : this.qos;
     }
 
     /**
@@ -58,9 +59,9 @@ public final class TopicRuleRepublishArgs extends io.pulumi.resources.ResourceAr
     }
 
     private TopicRuleRepublishArgs() {
-        this.qos = Output.empty();
-        this.roleArn = Output.empty();
-        this.topic = Output.empty();
+        this.qos = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.topic = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class TopicRuleRepublishArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder qos(@Nullable Integer qos) {
-            this.qos = Output.ofNullable(qos);
+            this.qos = Codegen.ofNullable(qos);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -28,7 +29,7 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> retry;
 
     public Output<Object> getRetry() {
-        return this.retry == null ? Output.empty() : this.retry;
+        return this.retry == null ? Codegen.empty() : this.retry;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> retryIntervalInSeconds;
 
     public Output<Integer> getRetryIntervalInSeconds() {
-        return this.retryIntervalInSeconds == null ? Output.empty() : this.retryIntervalInSeconds;
+        return this.retryIntervalInSeconds == null ? Codegen.empty() : this.retryIntervalInSeconds;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> secureInput;
 
     public Output<Boolean> getSecureInput() {
-        return this.secureInput == null ? Output.empty() : this.secureInput;
+        return this.secureInput == null ? Codegen.empty() : this.secureInput;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> secureOutput;
 
     public Output<Boolean> getSecureOutput() {
-        return this.secureOutput == null ? Output.empty() : this.secureOutput;
+        return this.secureOutput == null ? Codegen.empty() : this.secureOutput;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> timeout;
 
     public Output<Object> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     public ActivityPolicyArgs(
@@ -89,11 +90,11 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ActivityPolicyArgs() {
-        this.retry = Output.empty();
-        this.retryIntervalInSeconds = Output.empty();
-        this.secureInput = Output.empty();
-        this.secureOutput = Output.empty();
-        this.timeout = Output.empty();
+        this.retry = Codegen.empty();
+        this.retryIntervalInSeconds = Codegen.empty();
+        this.secureInput = Codegen.empty();
+        this.secureOutput = Codegen.empty();
+        this.timeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retry(@Nullable Object retry) {
-            this.retry = Output.ofNullable(retry);
+            this.retry = Codegen.ofNullable(retry);
             return this;
         }
         public Builder retryIntervalInSeconds(@Nullable Output<Integer> retryIntervalInSeconds) {
@@ -137,7 +138,7 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retryIntervalInSeconds(@Nullable Integer retryIntervalInSeconds) {
-            this.retryIntervalInSeconds = Output.ofNullable(retryIntervalInSeconds);
+            this.retryIntervalInSeconds = Codegen.ofNullable(retryIntervalInSeconds);
             return this;
         }
         public Builder secureInput(@Nullable Output<Boolean> secureInput) {
@@ -145,7 +146,7 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secureInput(@Nullable Boolean secureInput) {
-            this.secureInput = Output.ofNullable(secureInput);
+            this.secureInput = Codegen.ofNullable(secureInput);
             return this;
         }
         public Builder secureOutput(@Nullable Output<Boolean> secureOutput) {
@@ -153,7 +154,7 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secureOutput(@Nullable Boolean secureOutput) {
-            this.secureOutput = Output.ofNullable(secureOutput);
+            this.secureOutput = Codegen.ofNullable(secureOutput);
             return this;
         }
         public Builder timeout(@Nullable Output<Object> timeout) {
@@ -161,7 +162,7 @@ public final class ActivityPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeout(@Nullable Object timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }        public ActivityPolicyArgs build() {
             return new ActivityPolicyArgs(retry, retryIntervalInSeconds, secureInput, secureOutput, timeout);

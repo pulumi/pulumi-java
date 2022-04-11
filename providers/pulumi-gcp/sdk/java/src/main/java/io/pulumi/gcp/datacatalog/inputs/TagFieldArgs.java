@@ -5,6 +5,7 @@ package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -25,7 +26,7 @@ public final class TagFieldArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> boolValue;
 
     public Output<Boolean> getBoolValue() {
-        return this.boolValue == null ? Output.empty() : this.boolValue;
+        return this.boolValue == null ? Codegen.empty() : this.boolValue;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class TagFieldArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class TagFieldArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> doubleValue;
 
     public Output<Double> getDoubleValue() {
-        return this.doubleValue == null ? Output.empty() : this.doubleValue;
+        return this.doubleValue == null ? Codegen.empty() : this.doubleValue;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class TagFieldArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> enumValue;
 
     public Output<String> getEnumValue() {
-        return this.enumValue == null ? Output.empty() : this.enumValue;
+        return this.enumValue == null ? Codegen.empty() : this.enumValue;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class TagFieldArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> order;
 
     public Output<Integer> getOrder() {
-        return this.order == null ? Output.empty() : this.order;
+        return this.order == null ? Codegen.empty() : this.order;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class TagFieldArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> stringValue;
 
     public Output<String> getStringValue() {
-        return this.stringValue == null ? Output.empty() : this.stringValue;
+        return this.stringValue == null ? Codegen.empty() : this.stringValue;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class TagFieldArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> timestampValue;
 
     public Output<String> getTimestampValue() {
-        return this.timestampValue == null ? Output.empty() : this.timestampValue;
+        return this.timestampValue == null ? Codegen.empty() : this.timestampValue;
     }
 
     public TagFieldArgs(
@@ -130,14 +131,14 @@ public final class TagFieldArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TagFieldArgs() {
-        this.boolValue = Output.empty();
-        this.displayName = Output.empty();
-        this.doubleValue = Output.empty();
-        this.enumValue = Output.empty();
-        this.fieldName = Output.empty();
-        this.order = Output.empty();
-        this.stringValue = Output.empty();
-        this.timestampValue = Output.empty();
+        this.boolValue = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.doubleValue = Codegen.empty();
+        this.enumValue = Codegen.empty();
+        this.fieldName = Codegen.empty();
+        this.order = Codegen.empty();
+        this.stringValue = Codegen.empty();
+        this.timestampValue = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -179,7 +180,7 @@ public final class TagFieldArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder boolValue(@Nullable Boolean boolValue) {
-            this.boolValue = Output.ofNullable(boolValue);
+            this.boolValue = Codegen.ofNullable(boolValue);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -187,7 +188,7 @@ public final class TagFieldArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder doubleValue(@Nullable Output<Double> doubleValue) {
@@ -195,7 +196,7 @@ public final class TagFieldArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder doubleValue(@Nullable Double doubleValue) {
-            this.doubleValue = Output.ofNullable(doubleValue);
+            this.doubleValue = Codegen.ofNullable(doubleValue);
             return this;
         }
         public Builder enumValue(@Nullable Output<String> enumValue) {
@@ -203,7 +204,7 @@ public final class TagFieldArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enumValue(@Nullable String enumValue) {
-            this.enumValue = Output.ofNullable(enumValue);
+            this.enumValue = Codegen.ofNullable(enumValue);
             return this;
         }
         public Builder fieldName(Output<String> fieldName) {
@@ -219,7 +220,7 @@ public final class TagFieldArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder order(@Nullable Integer order) {
-            this.order = Output.ofNullable(order);
+            this.order = Codegen.ofNullable(order);
             return this;
         }
         public Builder stringValue(@Nullable Output<String> stringValue) {
@@ -227,7 +228,7 @@ public final class TagFieldArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stringValue(@Nullable String stringValue) {
-            this.stringValue = Output.ofNullable(stringValue);
+            this.stringValue = Codegen.ofNullable(stringValue);
             return this;
         }
         public Builder timestampValue(@Nullable Output<String> timestampValue) {
@@ -235,7 +236,7 @@ public final class TagFieldArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timestampValue(@Nullable String timestampValue) {
-            this.timestampValue = Output.ofNullable(timestampValue);
+            this.timestampValue = Codegen.ofNullable(timestampValue);
             return this;
         }        public TagFieldArgs build() {
             return new TagFieldArgs(boolValue, displayName, doubleValue, enumValue, fieldName, order, stringValue, timestampValue);

@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
       private final @Nullable Output<List<String>> categories;
 
     public Output<List<String>> getCategories() {
-        return this.categories == null ? Output.empty() : this.categories;
+        return this.categories == null ? Codegen.empty() : this.categories;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
       private final @Nullable Output<String> listKind;
 
     public Output<String> getListKind() {
-        return this.listKind == null ? Output.empty() : this.listKind;
+        return this.listKind == null ? Codegen.empty() : this.listKind;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
       private final @Nullable Output<List<String>> shortNames;
 
     public Output<List<String>> getShortNames() {
-        return this.shortNames == null ? Output.empty() : this.shortNames;
+        return this.shortNames == null ? Codegen.empty() : this.shortNames;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
       private final @Nullable Output<String> singular;
 
     public Output<String> getSingular() {
-        return this.singular == null ? Output.empty() : this.singular;
+        return this.singular == null ? Codegen.empty() : this.singular;
     }
 
     public CustomResourceDefinitionNamesArgs(
@@ -101,12 +102,12 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
     }
 
     private CustomResourceDefinitionNamesArgs() {
-        this.categories = Output.empty();
-        this.kind = Output.empty();
-        this.listKind = Output.empty();
-        this.plural = Output.empty();
-        this.shortNames = Output.empty();
-        this.singular = Output.empty();
+        this.categories = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.listKind = Codegen.empty();
+        this.plural = Codegen.empty();
+        this.shortNames = Codegen.empty();
+        this.singular = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
             return this;
         }
         public Builder categories(@Nullable List<String> categories) {
-            this.categories = Output.ofNullable(categories);
+            this.categories = Codegen.ofNullable(categories);
             return this;
         }
         public Builder categories(String... categories) {
@@ -163,7 +164,7 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
             return this;
         }
         public Builder listKind(@Nullable String listKind) {
-            this.listKind = Output.ofNullable(listKind);
+            this.listKind = Codegen.ofNullable(listKind);
             return this;
         }
         public Builder plural(Output<String> plural) {
@@ -179,7 +180,7 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
             return this;
         }
         public Builder shortNames(@Nullable List<String> shortNames) {
-            this.shortNames = Output.ofNullable(shortNames);
+            this.shortNames = Codegen.ofNullable(shortNames);
             return this;
         }
         public Builder shortNames(String... shortNames) {
@@ -190,7 +191,7 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
             return this;
         }
         public Builder singular(@Nullable String singular) {
-            this.singular = Output.ofNullable(singular);
+            this.singular = Codegen.ofNullable(singular);
             return this;
         }        public CustomResourceDefinitionNamesArgs build() {
             return new CustomResourceDefinitionNamesArgs(categories, kind, listKind, plural, shortNames, singular);

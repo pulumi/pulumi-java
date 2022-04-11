@@ -5,6 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class IpAddressOrRangeArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> ipAddressOrRange;
 
     public Output<String> getIpAddressOrRange() {
-        return this.ipAddressOrRange == null ? Output.empty() : this.ipAddressOrRange;
+        return this.ipAddressOrRange == null ? Codegen.empty() : this.ipAddressOrRange;
     }
 
     public IpAddressOrRangeArgs(@Nullable Output<String> ipAddressOrRange) {
@@ -34,7 +35,7 @@ public final class IpAddressOrRangeArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private IpAddressOrRangeArgs() {
-        this.ipAddressOrRange = Output.empty();
+        this.ipAddressOrRange = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class IpAddressOrRangeArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ipAddressOrRange(@Nullable String ipAddressOrRange) {
-            this.ipAddressOrRange = Output.ofNullable(ipAddressOrRange);
+            this.ipAddressOrRange = Codegen.ofNullable(ipAddressOrRange);
             return this;
         }        public IpAddressOrRangeArgs build() {
             return new IpAddressOrRangeArgs(ipAddressOrRange);

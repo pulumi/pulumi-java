@@ -5,6 +5,7 @@ package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> testSpecialEntitlements;
 
     public Output<Boolean> getTestSpecialEntitlements() {
-        return this.testSpecialEntitlements == null ? Output.empty() : this.testSpecialEntitlements;
+        return this.testSpecialEntitlements == null ? Codegen.empty() : this.testSpecialEntitlements;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> xcodeVersion;
 
     public Output<String> getXcodeVersion() {
-        return this.xcodeVersion == null ? Output.empty() : this.xcodeVersion;
+        return this.xcodeVersion == null ? Codegen.empty() : this.xcodeVersion;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FileReferenceArgs> xctestrun;
 
     public Output<FileReferenceArgs> getXctestrun() {
-        return this.xctestrun == null ? Output.empty() : this.xctestrun;
+        return this.xctestrun == null ? Codegen.empty() : this.xctestrun;
     }
 
     public IosXcTestArgs(
@@ -76,10 +77,10 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IosXcTestArgs() {
-        this.testSpecialEntitlements = Output.empty();
-        this.testsZip = Output.empty();
-        this.xcodeVersion = Output.empty();
-        this.xctestrun = Output.empty();
+        this.testSpecialEntitlements = Codegen.empty();
+        this.testsZip = Codegen.empty();
+        this.xcodeVersion = Codegen.empty();
+        this.xctestrun = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder testSpecialEntitlements(@Nullable Boolean testSpecialEntitlements) {
-            this.testSpecialEntitlements = Output.ofNullable(testSpecialEntitlements);
+            this.testSpecialEntitlements = Codegen.ofNullable(testSpecialEntitlements);
             return this;
         }
         public Builder testsZip(Output<FileReferenceArgs> testsZip) {
@@ -129,7 +130,7 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder xcodeVersion(@Nullable String xcodeVersion) {
-            this.xcodeVersion = Output.ofNullable(xcodeVersion);
+            this.xcodeVersion = Codegen.ofNullable(xcodeVersion);
             return this;
         }
         public Builder xctestrun(@Nullable Output<FileReferenceArgs> xctestrun) {
@@ -137,7 +138,7 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder xctestrun(@Nullable FileReferenceArgs xctestrun) {
-            this.xctestrun = Output.ofNullable(xctestrun);
+            this.xctestrun = Codegen.ofNullable(xctestrun);
             return this;
         }        public IosXcTestArgs build() {
             return new IosXcTestArgs(testSpecialEntitlements, testsZip, xcodeVersion, xctestrun);

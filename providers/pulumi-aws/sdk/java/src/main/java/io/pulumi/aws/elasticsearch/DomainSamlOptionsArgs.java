@@ -6,6 +6,7 @@ package io.pulumi.aws.elasticsearch;
 import io.pulumi.aws.elasticsearch.inputs.DomainSamlOptionsSamlOptionsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class DomainSamlOptionsArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<DomainSamlOptionsSamlOptionsArgs> samlOptions;
 
     public Output<DomainSamlOptionsSamlOptionsArgs> getSamlOptions() {
-        return this.samlOptions == null ? Output.empty() : this.samlOptions;
+        return this.samlOptions == null ? Codegen.empty() : this.samlOptions;
     }
 
     public DomainSamlOptionsArgs(
@@ -45,8 +46,8 @@ public final class DomainSamlOptionsArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DomainSamlOptionsArgs() {
-        this.domainName = Output.empty();
-        this.samlOptions = Output.empty();
+        this.domainName = Codegen.empty();
+        this.samlOptions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class DomainSamlOptionsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder samlOptions(@Nullable DomainSamlOptionsSamlOptionsArgs samlOptions) {
-            this.samlOptions = Output.ofNullable(samlOptions);
+            this.samlOptions = Codegen.ofNullable(samlOptions);
             return this;
         }        public DomainSamlOptionsArgs build() {
             return new DomainSamlOptionsArgs(domainName, samlOptions);

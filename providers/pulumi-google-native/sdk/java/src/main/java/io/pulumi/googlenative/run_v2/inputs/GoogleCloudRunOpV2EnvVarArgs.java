@@ -5,6 +5,7 @@ package io.pulumi.googlenative.run_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2EnvVarSourceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class GoogleCloudRunOpV2EnvVarArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class GoogleCloudRunOpV2EnvVarArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<GoogleCloudRunOpV2EnvVarSourceArgs> valueSource;
 
     public Output<GoogleCloudRunOpV2EnvVarSourceArgs> getValueSource() {
-        return this.valueSource == null ? Output.empty() : this.valueSource;
+        return this.valueSource == null ? Codegen.empty() : this.valueSource;
     }
 
     public GoogleCloudRunOpV2EnvVarArgs(
@@ -62,9 +63,9 @@ public final class GoogleCloudRunOpV2EnvVarArgs extends io.pulumi.resources.Reso
     }
 
     private GoogleCloudRunOpV2EnvVarArgs() {
-        this.name = Output.empty();
-        this.value = Output.empty();
-        this.valueSource = Output.empty();
+        this.name = Codegen.empty();
+        this.value = Codegen.empty();
+        this.valueSource = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class GoogleCloudRunOpV2EnvVarArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }
         public Builder valueSource(@Nullable Output<GoogleCloudRunOpV2EnvVarSourceArgs> valueSource) {
@@ -112,7 +113,7 @@ public final class GoogleCloudRunOpV2EnvVarArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder valueSource(@Nullable GoogleCloudRunOpV2EnvVarSourceArgs valueSource) {
-            this.valueSource = Output.ofNullable(valueSource);
+            this.valueSource = Codegen.ofNullable(valueSource);
             return this;
         }        public GoogleCloudRunOpV2EnvVarArgs build() {
             return new GoogleCloudRunOpV2EnvVarArgs(name, value, valueSource);

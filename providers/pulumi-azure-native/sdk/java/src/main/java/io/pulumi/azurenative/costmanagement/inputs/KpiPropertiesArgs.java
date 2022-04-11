@@ -7,6 +7,7 @@ import io.pulumi.azurenative.costmanagement.enums.KpiTypeType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class KpiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class KpiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class KpiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,KpiTypeType>> type;
 
     public Output<Either<String,KpiTypeType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public KpiPropertiesArgs(
@@ -64,9 +65,9 @@ public final class KpiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KpiPropertiesArgs() {
-        this.enabled = Output.empty();
-        this.id = Output.empty();
-        this.type = Output.empty();
+        this.enabled = Codegen.empty();
+        this.id = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class KpiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -106,7 +107,7 @@ public final class KpiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder type(@Nullable Output<Either<String,KpiTypeType>> type) {
@@ -114,7 +115,7 @@ public final class KpiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable Either<String,KpiTypeType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public KpiPropertiesArgs build() {
             return new KpiPropertiesArgs(enabled, id, type);

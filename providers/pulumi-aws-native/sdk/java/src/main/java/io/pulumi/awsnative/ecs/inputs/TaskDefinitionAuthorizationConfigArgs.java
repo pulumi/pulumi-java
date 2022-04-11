@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ecs.inputs;
 import io.pulumi.awsnative.ecs.enums.TaskDefinitionAuthorizationConfigIAM;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +20,14 @@ public final class TaskDefinitionAuthorizationConfigArgs extends io.pulumi.resou
       private final @Nullable Output<String> accessPointId;
 
     public Output<String> getAccessPointId() {
-        return this.accessPointId == null ? Output.empty() : this.accessPointId;
+        return this.accessPointId == null ? Codegen.empty() : this.accessPointId;
     }
 
     @Import(name="iAM")
       private final @Nullable Output<TaskDefinitionAuthorizationConfigIAM> iAM;
 
     public Output<TaskDefinitionAuthorizationConfigIAM> getIAM() {
-        return this.iAM == null ? Output.empty() : this.iAM;
+        return this.iAM == null ? Codegen.empty() : this.iAM;
     }
 
     public TaskDefinitionAuthorizationConfigArgs(
@@ -37,8 +38,8 @@ public final class TaskDefinitionAuthorizationConfigArgs extends io.pulumi.resou
     }
 
     private TaskDefinitionAuthorizationConfigArgs() {
-        this.accessPointId = Output.empty();
-        this.iAM = Output.empty();
+        this.accessPointId = Codegen.empty();
+        this.iAM = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class TaskDefinitionAuthorizationConfigArgs extends io.pulumi.resou
             return this;
         }
         public Builder accessPointId(@Nullable String accessPointId) {
-            this.accessPointId = Output.ofNullable(accessPointId);
+            this.accessPointId = Codegen.ofNullable(accessPointId);
             return this;
         }
         public Builder iAM(@Nullable Output<TaskDefinitionAuthorizationConfigIAM> iAM) {
@@ -76,7 +77,7 @@ public final class TaskDefinitionAuthorizationConfigArgs extends io.pulumi.resou
             return this;
         }
         public Builder iAM(@Nullable TaskDefinitionAuthorizationConfigIAM iAM) {
-            this.iAM = Output.ofNullable(iAM);
+            this.iAM = Codegen.ofNullable(iAM);
             return this;
         }        public TaskDefinitionAuthorizationConfigArgs build() {
             return new TaskDefinitionAuthorizationConfigArgs(accessPointId, iAM);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.storagetransfer_v1.enums.NotificationConfigEventTypesItem;
 import io.pulumi.googlenative.storagetransfer_v1.enums.NotificationConfigPayloadFormat;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<NotificationConfigEventTypesItem>> eventTypes;
 
     public Output<List<NotificationConfigEventTypesItem>> getEventTypes() {
-        return this.eventTypes == null ? Output.empty() : this.eventTypes;
+        return this.eventTypes == null ? Codegen.empty() : this.eventTypes;
     }
 
     /**
@@ -64,9 +65,9 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     private NotificationConfigArgs() {
-        this.eventTypes = Output.empty();
-        this.payloadFormat = Output.empty();
-        this.pubsubTopic = Output.empty();
+        this.eventTypes = Codegen.empty();
+        this.payloadFormat = Codegen.empty();
+        this.pubsubTopic = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder eventTypes(@Nullable List<NotificationConfigEventTypesItem> eventTypes) {
-            this.eventTypes = Output.ofNullable(eventTypes);
+            this.eventTypes = Codegen.ofNullable(eventTypes);
             return this;
         }
         public Builder eventTypes(NotificationConfigEventTypesItem... eventTypes) {

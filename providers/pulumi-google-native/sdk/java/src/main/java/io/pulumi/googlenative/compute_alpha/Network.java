@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_alpha;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.NetworkArgs;
 import io.pulumi.googlenative.compute_alpha.outputs.NetworkPeeringResponse;
@@ -275,7 +276,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Network(String name, @Nullable NetworkArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/alpha:Network", name, args == null ? NetworkArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/alpha:Network", name, args == null ? NetworkArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Network(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

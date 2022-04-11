@@ -7,6 +7,7 @@ import io.pulumi.azurenative.botservice.enums.EnterpriseChannelNodeState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -61,7 +62,7 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Either<String,EnterpriseChannelNodeState>> state;
 
     public Output<Either<String,EnterpriseChannelNodeState>> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public EnterpriseChannelNodeArgs(
@@ -76,10 +77,10 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
     }
 
     private EnterpriseChannelNodeArgs() {
-        this.azureLocation = Output.empty();
-        this.azureSku = Output.empty();
-        this.name = Output.empty();
-        this.state = Output.empty();
+        this.azureLocation = Codegen.empty();
+        this.azureSku = Codegen.empty();
+        this.name = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -137,7 +138,7 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder state(@Nullable Either<String,EnterpriseChannelNodeState> state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public EnterpriseChannelNodeArgs build() {
             return new EnterpriseChannelNodeArgs(azureLocation, azureSku, name, state);

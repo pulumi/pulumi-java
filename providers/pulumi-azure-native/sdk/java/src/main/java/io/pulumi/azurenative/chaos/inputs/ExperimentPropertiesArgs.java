@@ -7,6 +7,7 @@ import io.pulumi.azurenative.chaos.inputs.SelectorArgs;
 import io.pulumi.azurenative.chaos.inputs.StepArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -40,7 +41,7 @@ public final class ExperimentPropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> startOnCreation;
 
     public Output<Boolean> getStartOnCreation() {
-        return this.startOnCreation == null ? Output.empty() : this.startOnCreation;
+        return this.startOnCreation == null ? Codegen.empty() : this.startOnCreation;
     }
 
     /**
@@ -64,9 +65,9 @@ public final class ExperimentPropertiesArgs extends io.pulumi.resources.Resource
     }
 
     private ExperimentPropertiesArgs() {
-        this.selectors = Output.empty();
-        this.startOnCreation = Output.empty();
-        this.steps = Output.empty();
+        this.selectors = Codegen.empty();
+        this.startOnCreation = Codegen.empty();
+        this.steps = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class ExperimentPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder startOnCreation(@Nullable Boolean startOnCreation) {
-            this.startOnCreation = Output.ofNullable(startOnCreation);
+            this.startOnCreation = Codegen.ofNullable(startOnCreation);
             return this;
         }
         public Builder steps(Output<List<StepArgs>> steps) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -77,10 +78,10 @@ public final class UniformInt64RangePartitionSchemeDescriptionArgs extends io.pu
     }
 
     private UniformInt64RangePartitionSchemeDescriptionArgs() {
-        this.count = Output.empty();
-        this.highKey = Output.empty();
-        this.lowKey = Output.empty();
-        this.partitionScheme = Output.empty();
+        this.count = Codegen.empty();
+        this.highKey = Codegen.empty();
+        this.lowKey = Codegen.empty();
+        this.partitionScheme = Codegen.empty();
     }
 
     public static Builder builder() {

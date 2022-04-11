@@ -5,6 +5,7 @@ package io.pulumi.googlenative.notebooks_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.notebooks_v1.inputs.LocalDiskInitializeParamsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<LocalDiskInitializeParamsArgs> initializeParams;
 
     public Output<LocalDiskInitializeParamsArgs> getInitializeParams() {
-        return this.initializeParams == null ? Output.empty() : this.initializeParams;
+        return this.initializeParams == null ? Codegen.empty() : this.initializeParams;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> interface_;
 
     public Output<String> getInterface_() {
-        return this.interface_ == null ? Output.empty() : this.interface_;
+        return this.interface_ == null ? Codegen.empty() : this.interface_;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> mode;
 
     public Output<String> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> source;
 
     public Output<String> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public LocalDiskArgs(
@@ -88,11 +89,11 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LocalDiskArgs() {
-        this.initializeParams = Output.empty();
-        this.interface_ = Output.empty();
-        this.mode = Output.empty();
-        this.source = Output.empty();
-        this.type = Output.empty();
+        this.initializeParams = Codegen.empty();
+        this.interface_ = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.source = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder initializeParams(@Nullable LocalDiskInitializeParamsArgs initializeParams) {
-            this.initializeParams = Output.ofNullable(initializeParams);
+            this.initializeParams = Codegen.ofNullable(initializeParams);
             return this;
         }
         public Builder interface_(@Nullable Output<String> interface_) {
@@ -136,7 +137,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder interface_(@Nullable String interface_) {
-            this.interface_ = Output.ofNullable(interface_);
+            this.interface_ = Codegen.ofNullable(interface_);
             return this;
         }
         public Builder mode(@Nullable Output<String> mode) {
@@ -144,7 +145,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mode(@Nullable String mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder source(@Nullable Output<String> source) {
@@ -152,7 +153,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder source(@Nullable String source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -160,7 +161,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public LocalDiskArgs build() {
             return new LocalDiskArgs(initializeParams, interface_, mode, source, type);

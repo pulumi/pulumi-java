@@ -16,6 +16,7 @@ import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SubResourceArgs> basePolicy;
 
     public Output<SubResourceArgs> getBasePolicy() {
-        return this.basePolicy == null ? Output.empty() : this.basePolicy;
+        return this.basePolicy == null ? Codegen.empty() : this.basePolicy;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DnsSettingsArgs> dnsSettings;
 
     public Output<DnsSettingsArgs> getDnsSettings() {
-        return this.dnsSettings == null ? Output.empty() : this.dnsSettings;
+        return this.dnsSettings == null ? Codegen.empty() : this.dnsSettings;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> firewallPolicyName;
 
     public Output<String> getFirewallPolicyName() {
-        return this.firewallPolicyName == null ? Output.empty() : this.firewallPolicyName;
+        return this.firewallPolicyName == null ? Codegen.empty() : this.firewallPolicyName;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
     public Output<ManagedServiceIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FirewallPolicyInsightsArgs> insights;
 
     public Output<FirewallPolicyInsightsArgs> getInsights() {
-        return this.insights == null ? Output.empty() : this.insights;
+        return this.insights == null ? Codegen.empty() : this.insights;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FirewallPolicyIntrusionDetectionArgs> intrusionDetection;
 
     public Output<FirewallPolicyIntrusionDetectionArgs> getIntrusionDetection() {
-        return this.intrusionDetection == null ? Output.empty() : this.intrusionDetection;
+        return this.intrusionDetection == null ? Codegen.empty() : this.intrusionDetection;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -133,7 +134,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FirewallPolicySkuArgs> sku;
 
     public Output<FirewallPolicySkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -144,7 +145,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FirewallPolicySNATArgs> snat;
 
     public Output<FirewallPolicySNATArgs> getSnat() {
-        return this.snat == null ? Output.empty() : this.snat;
+        return this.snat == null ? Codegen.empty() : this.snat;
     }
 
     /**
@@ -155,7 +156,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -166,7 +167,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode;
 
     public Output<Either<String,AzureFirewallThreatIntelMode>> getThreatIntelMode() {
-        return this.threatIntelMode == null ? Output.empty() : this.threatIntelMode;
+        return this.threatIntelMode == null ? Codegen.empty() : this.threatIntelMode;
     }
 
     /**
@@ -177,7 +178,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FirewallPolicyThreatIntelWhitelistArgs> threatIntelWhitelist;
 
     public Output<FirewallPolicyThreatIntelWhitelistArgs> getThreatIntelWhitelist() {
-        return this.threatIntelWhitelist == null ? Output.empty() : this.threatIntelWhitelist;
+        return this.threatIntelWhitelist == null ? Codegen.empty() : this.threatIntelWhitelist;
     }
 
     /**
@@ -188,7 +189,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FirewallPolicyTransportSecurityArgs> transportSecurity;
 
     public Output<FirewallPolicyTransportSecurityArgs> getTransportSecurity() {
-        return this.transportSecurity == null ? Output.empty() : this.transportSecurity;
+        return this.transportSecurity == null ? Codegen.empty() : this.transportSecurity;
     }
 
     public FirewallPolicyArgs(
@@ -225,21 +226,21 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FirewallPolicyArgs() {
-        this.basePolicy = Output.empty();
-        this.dnsSettings = Output.empty();
-        this.firewallPolicyName = Output.empty();
-        this.id = Output.empty();
-        this.identity = Output.empty();
-        this.insights = Output.empty();
-        this.intrusionDetection = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.snat = Output.empty();
-        this.tags = Output.empty();
-        this.threatIntelMode = Output.empty();
-        this.threatIntelWhitelist = Output.empty();
-        this.transportSecurity = Output.empty();
+        this.basePolicy = Codegen.empty();
+        this.dnsSettings = Codegen.empty();
+        this.firewallPolicyName = Codegen.empty();
+        this.id = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.insights = Codegen.empty();
+        this.intrusionDetection = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.snat = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.threatIntelMode = Codegen.empty();
+        this.threatIntelWhitelist = Codegen.empty();
+        this.transportSecurity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -295,7 +296,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder basePolicy(@Nullable SubResourceArgs basePolicy) {
-            this.basePolicy = Output.ofNullable(basePolicy);
+            this.basePolicy = Codegen.ofNullable(basePolicy);
             return this;
         }
         public Builder dnsSettings(@Nullable Output<DnsSettingsArgs> dnsSettings) {
@@ -303,7 +304,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dnsSettings(@Nullable DnsSettingsArgs dnsSettings) {
-            this.dnsSettings = Output.ofNullable(dnsSettings);
+            this.dnsSettings = Codegen.ofNullable(dnsSettings);
             return this;
         }
         public Builder firewallPolicyName(@Nullable Output<String> firewallPolicyName) {
@@ -311,7 +312,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder firewallPolicyName(@Nullable String firewallPolicyName) {
-            this.firewallPolicyName = Output.ofNullable(firewallPolicyName);
+            this.firewallPolicyName = Codegen.ofNullable(firewallPolicyName);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -319,7 +320,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
@@ -327,7 +328,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder insights(@Nullable Output<FirewallPolicyInsightsArgs> insights) {
@@ -335,7 +336,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder insights(@Nullable FirewallPolicyInsightsArgs insights) {
-            this.insights = Output.ofNullable(insights);
+            this.insights = Codegen.ofNullable(insights);
             return this;
         }
         public Builder intrusionDetection(@Nullable Output<FirewallPolicyIntrusionDetectionArgs> intrusionDetection) {
@@ -343,7 +344,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder intrusionDetection(@Nullable FirewallPolicyIntrusionDetectionArgs intrusionDetection) {
-            this.intrusionDetection = Output.ofNullable(intrusionDetection);
+            this.intrusionDetection = Codegen.ofNullable(intrusionDetection);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -351,7 +352,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -367,7 +368,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sku(@Nullable FirewallPolicySkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder snat(@Nullable Output<FirewallPolicySNATArgs> snat) {
@@ -375,7 +376,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder snat(@Nullable FirewallPolicySNATArgs snat) {
-            this.snat = Output.ofNullable(snat);
+            this.snat = Codegen.ofNullable(snat);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -383,7 +384,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder threatIntelMode(@Nullable Output<Either<String,AzureFirewallThreatIntelMode>> threatIntelMode) {
@@ -391,7 +392,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder threatIntelMode(@Nullable Either<String,AzureFirewallThreatIntelMode> threatIntelMode) {
-            this.threatIntelMode = Output.ofNullable(threatIntelMode);
+            this.threatIntelMode = Codegen.ofNullable(threatIntelMode);
             return this;
         }
         public Builder threatIntelWhitelist(@Nullable Output<FirewallPolicyThreatIntelWhitelistArgs> threatIntelWhitelist) {
@@ -399,7 +400,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder threatIntelWhitelist(@Nullable FirewallPolicyThreatIntelWhitelistArgs threatIntelWhitelist) {
-            this.threatIntelWhitelist = Output.ofNullable(threatIntelWhitelist);
+            this.threatIntelWhitelist = Codegen.ofNullable(threatIntelWhitelist);
             return this;
         }
         public Builder transportSecurity(@Nullable Output<FirewallPolicyTransportSecurityArgs> transportSecurity) {
@@ -407,7 +408,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transportSecurity(@Nullable FirewallPolicyTransportSecurityArgs transportSecurity) {
-            this.transportSecurity = Output.ofNullable(transportSecurity);
+            this.transportSecurity = Codegen.ofNullable(transportSecurity);
             return this;
         }        public FirewallPolicyArgs build() {
             return new FirewallPolicyArgs(basePolicy, dnsSettings, firewallPolicyName, id, identity, insights, intrusionDetection, location, resourceGroupName, sku, snat, tags, threatIntelMode, threatIntelWhitelist, transportSecurity);

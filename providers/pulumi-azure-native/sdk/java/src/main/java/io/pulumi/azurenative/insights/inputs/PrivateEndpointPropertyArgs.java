@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class PrivateEndpointPropertyArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     public PrivateEndpointPropertyArgs(@Nullable Output<String> id) {
@@ -34,7 +35,7 @@ public final class PrivateEndpointPropertyArgs extends io.pulumi.resources.Resou
     }
 
     private PrivateEndpointPropertyArgs() {
-        this.id = Output.empty();
+        this.id = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class PrivateEndpointPropertyArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }        public PrivateEndpointPropertyArgs build() {
             return new PrivateEndpointPropertyArgs(id);

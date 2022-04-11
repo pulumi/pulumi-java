@@ -5,6 +5,7 @@ package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.AwsAccessKeyArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class AwsS3DataArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AwsAccessKeyArgs> awsAccessKey;
 
     public Output<AwsAccessKeyArgs> getAwsAccessKey() {
-        return this.awsAccessKey == null ? Output.empty() : this.awsAccessKey;
+        return this.awsAccessKey == null ? Codegen.empty() : this.awsAccessKey;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class AwsS3DataArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class AwsS3DataArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     public AwsS3DataArgs(
@@ -75,10 +76,10 @@ public final class AwsS3DataArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AwsS3DataArgs() {
-        this.awsAccessKey = Output.empty();
-        this.bucketName = Output.empty();
-        this.path = Output.empty();
-        this.roleArn = Output.empty();
+        this.awsAccessKey = Codegen.empty();
+        this.bucketName = Codegen.empty();
+        this.path = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class AwsS3DataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder awsAccessKey(@Nullable AwsAccessKeyArgs awsAccessKey) {
-            this.awsAccessKey = Output.ofNullable(awsAccessKey);
+            this.awsAccessKey = Codegen.ofNullable(awsAccessKey);
             return this;
         }
         public Builder bucketName(Output<String> bucketName) {
@@ -128,7 +129,7 @@ public final class AwsS3DataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder roleArn(@Nullable Output<String> roleArn) {
@@ -136,7 +137,7 @@ public final class AwsS3DataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }        public AwsS3DataArgs build() {
             return new AwsS3DataArgs(awsAccessKey, bucketName, path, roleArn);

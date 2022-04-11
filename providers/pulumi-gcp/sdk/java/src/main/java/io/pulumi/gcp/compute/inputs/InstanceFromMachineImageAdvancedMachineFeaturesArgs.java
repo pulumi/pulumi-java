@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,14 +20,14 @@ public final class InstanceFromMachineImageAdvancedMachineFeaturesArgs extends i
       private final @Nullable Output<Boolean> enableNestedVirtualization;
 
     public Output<Boolean> getEnableNestedVirtualization() {
-        return this.enableNestedVirtualization == null ? Output.empty() : this.enableNestedVirtualization;
+        return this.enableNestedVirtualization == null ? Codegen.empty() : this.enableNestedVirtualization;
     }
 
     @Import(name="threadsPerCore")
       private final @Nullable Output<Integer> threadsPerCore;
 
     public Output<Integer> getThreadsPerCore() {
-        return this.threadsPerCore == null ? Output.empty() : this.threadsPerCore;
+        return this.threadsPerCore == null ? Codegen.empty() : this.threadsPerCore;
     }
 
     public InstanceFromMachineImageAdvancedMachineFeaturesArgs(
@@ -37,8 +38,8 @@ public final class InstanceFromMachineImageAdvancedMachineFeaturesArgs extends i
     }
 
     private InstanceFromMachineImageAdvancedMachineFeaturesArgs() {
-        this.enableNestedVirtualization = Output.empty();
-        this.threadsPerCore = Output.empty();
+        this.enableNestedVirtualization = Codegen.empty();
+        this.threadsPerCore = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class InstanceFromMachineImageAdvancedMachineFeaturesArgs extends i
             return this;
         }
         public Builder enableNestedVirtualization(@Nullable Boolean enableNestedVirtualization) {
-            this.enableNestedVirtualization = Output.ofNullable(enableNestedVirtualization);
+            this.enableNestedVirtualization = Codegen.ofNullable(enableNestedVirtualization);
             return this;
         }
         public Builder threadsPerCore(@Nullable Output<Integer> threadsPerCore) {
@@ -76,7 +77,7 @@ public final class InstanceFromMachineImageAdvancedMachineFeaturesArgs extends i
             return this;
         }
         public Builder threadsPerCore(@Nullable Integer threadsPerCore) {
-            this.threadsPerCore = Output.ofNullable(threadsPerCore);
+            this.threadsPerCore = Codegen.ofNullable(threadsPerCore);
             return this;
         }        public InstanceFromMachineImageAdvancedMachineFeaturesArgs build() {
             return new InstanceFromMachineImageAdvancedMachineFeaturesArgs(enableNestedVirtualization, threadsPerCore);

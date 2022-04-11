@@ -6,6 +6,7 @@ package io.pulumi.awsnative.cloudfront;
 import io.pulumi.awsnative.cloudfront.inputs.KeyGroupConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -25,7 +26,7 @@ public final class KeyGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeyGroupArgs() {
-        this.keyGroupConfig = Output.empty();
+        this.keyGroupConfig = Codegen.empty();
     }
 
     public static Builder builder() {

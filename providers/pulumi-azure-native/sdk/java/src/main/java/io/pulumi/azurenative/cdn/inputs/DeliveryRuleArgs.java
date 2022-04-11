@@ -27,6 +27,7 @@ import io.pulumi.azurenative.cdn.inputs.UrlRewriteActionArgs;
 import io.pulumi.azurenative.cdn.inputs.UrlSigningActionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -62,7 +63,7 @@ public final class DeliveryRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<Object>> conditions;
 
     public Output<List<Object>> getConditions() {
-        return this.conditions == null ? Output.empty() : this.conditions;
+        return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class DeliveryRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -99,10 +100,10 @@ public final class DeliveryRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeliveryRuleArgs() {
-        this.actions = Output.empty();
-        this.conditions = Output.empty();
-        this.name = Output.empty();
-        this.order = Output.empty();
+        this.actions = Codegen.empty();
+        this.conditions = Codegen.empty();
+        this.name = Codegen.empty();
+        this.order = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class DeliveryRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder conditions(@Nullable List<Object> conditions) {
-            this.conditions = Output.ofNullable(conditions);
+            this.conditions = Codegen.ofNullable(conditions);
             return this;
         }
         public Builder conditions(Object... conditions) {
@@ -158,7 +159,7 @@ public final class DeliveryRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder order(Output<Integer> order) {

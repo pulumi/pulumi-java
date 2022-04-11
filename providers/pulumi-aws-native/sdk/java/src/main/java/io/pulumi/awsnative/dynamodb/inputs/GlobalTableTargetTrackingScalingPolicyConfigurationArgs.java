@@ -5,6 +5,7 @@ package io.pulumi.awsnative.dynamodb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -20,21 +21,21 @@ public final class GlobalTableTargetTrackingScalingPolicyConfigurationArgs exten
       private final @Nullable Output<Boolean> disableScaleIn;
 
     public Output<Boolean> getDisableScaleIn() {
-        return this.disableScaleIn == null ? Output.empty() : this.disableScaleIn;
+        return this.disableScaleIn == null ? Codegen.empty() : this.disableScaleIn;
     }
 
     @Import(name="scaleInCooldown")
       private final @Nullable Output<Integer> scaleInCooldown;
 
     public Output<Integer> getScaleInCooldown() {
-        return this.scaleInCooldown == null ? Output.empty() : this.scaleInCooldown;
+        return this.scaleInCooldown == null ? Codegen.empty() : this.scaleInCooldown;
     }
 
     @Import(name="scaleOutCooldown")
       private final @Nullable Output<Integer> scaleOutCooldown;
 
     public Output<Integer> getScaleOutCooldown() {
-        return this.scaleOutCooldown == null ? Output.empty() : this.scaleOutCooldown;
+        return this.scaleOutCooldown == null ? Codegen.empty() : this.scaleOutCooldown;
     }
 
     @Import(name="targetValue", required=true)
@@ -56,10 +57,10 @@ public final class GlobalTableTargetTrackingScalingPolicyConfigurationArgs exten
     }
 
     private GlobalTableTargetTrackingScalingPolicyConfigurationArgs() {
-        this.disableScaleIn = Output.empty();
-        this.scaleInCooldown = Output.empty();
-        this.scaleOutCooldown = Output.empty();
-        this.targetValue = Output.empty();
+        this.disableScaleIn = Codegen.empty();
+        this.scaleInCooldown = Codegen.empty();
+        this.scaleOutCooldown = Codegen.empty();
+        this.targetValue = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class GlobalTableTargetTrackingScalingPolicyConfigurationArgs exten
             return this;
         }
         public Builder disableScaleIn(@Nullable Boolean disableScaleIn) {
-            this.disableScaleIn = Output.ofNullable(disableScaleIn);
+            this.disableScaleIn = Codegen.ofNullable(disableScaleIn);
             return this;
         }
         public Builder scaleInCooldown(@Nullable Output<Integer> scaleInCooldown) {
@@ -101,7 +102,7 @@ public final class GlobalTableTargetTrackingScalingPolicyConfigurationArgs exten
             return this;
         }
         public Builder scaleInCooldown(@Nullable Integer scaleInCooldown) {
-            this.scaleInCooldown = Output.ofNullable(scaleInCooldown);
+            this.scaleInCooldown = Codegen.ofNullable(scaleInCooldown);
             return this;
         }
         public Builder scaleOutCooldown(@Nullable Output<Integer> scaleOutCooldown) {
@@ -109,7 +110,7 @@ public final class GlobalTableTargetTrackingScalingPolicyConfigurationArgs exten
             return this;
         }
         public Builder scaleOutCooldown(@Nullable Integer scaleOutCooldown) {
-            this.scaleOutCooldown = Output.ofNullable(scaleOutCooldown);
+            this.scaleOutCooldown = Codegen.ofNullable(scaleOutCooldown);
             return this;
         }
         public Builder targetValue(Output<Double> targetValue) {

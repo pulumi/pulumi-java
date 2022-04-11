@@ -7,6 +7,7 @@ import io.pulumi.aws.fsx.inputs.OntapFileSystemDiskIopsConfigurationGetArgs;
 import io.pulumi.aws.fsx.inputs.OntapFileSystemEndpointGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Integer> automaticBackupRetentionDays;
 
     public Output<Integer> getAutomaticBackupRetentionDays() {
-        return this.automaticBackupRetentionDays == null ? Output.empty() : this.automaticBackupRetentionDays;
+        return this.automaticBackupRetentionDays == null ? Codegen.empty() : this.automaticBackupRetentionDays;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> dailyAutomaticBackupStartTime;
 
     public Output<String> getDailyAutomaticBackupStartTime() {
-        return this.dailyAutomaticBackupStartTime == null ? Output.empty() : this.dailyAutomaticBackupStartTime;
+        return this.dailyAutomaticBackupStartTime == null ? Codegen.empty() : this.dailyAutomaticBackupStartTime;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> deploymentType;
 
     public Output<String> getDeploymentType() {
-        return this.deploymentType == null ? Output.empty() : this.deploymentType;
+        return this.deploymentType == null ? Codegen.empty() : this.deploymentType;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<OntapFileSystemDiskIopsConfigurationGetArgs> diskIopsConfiguration;
 
     public Output<OntapFileSystemDiskIopsConfigurationGetArgs> getDiskIopsConfiguration() {
-        return this.diskIopsConfiguration == null ? Output.empty() : this.diskIopsConfiguration;
+        return this.diskIopsConfiguration == null ? Codegen.empty() : this.diskIopsConfiguration;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> dnsName;
 
     public Output<String> getDnsName() {
-        return this.dnsName == null ? Output.empty() : this.dnsName;
+        return this.dnsName == null ? Codegen.empty() : this.dnsName;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> endpointIpAddressRange;
 
     public Output<String> getEndpointIpAddressRange() {
-        return this.endpointIpAddressRange == null ? Output.empty() : this.endpointIpAddressRange;
+        return this.endpointIpAddressRange == null ? Codegen.empty() : this.endpointIpAddressRange;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<OntapFileSystemEndpointGetArgs>> endpoints;
 
     public Output<List<OntapFileSystemEndpointGetArgs>> getEndpoints() {
-        return this.endpoints == null ? Output.empty() : this.endpoints;
+        return this.endpoints == null ? Codegen.empty() : this.endpoints;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> fsxAdminPassword;
 
     public Output<String> getFsxAdminPassword() {
-        return this.fsxAdminPassword == null ? Output.empty() : this.fsxAdminPassword;
+        return this.fsxAdminPassword == null ? Codegen.empty() : this.fsxAdminPassword;
     }
 
     /**
@@ -126,7 +127,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     /**
@@ -137,7 +138,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> networkInterfaceIds;
 
     public Output<List<String>> getNetworkInterfaceIds() {
-        return this.networkInterfaceIds == null ? Output.empty() : this.networkInterfaceIds;
+        return this.networkInterfaceIds == null ? Codegen.empty() : this.networkInterfaceIds;
     }
 
     /**
@@ -148,7 +149,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
-        return this.ownerId == null ? Output.empty() : this.ownerId;
+        return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
     /**
@@ -159,7 +160,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> preferredSubnetId;
 
     public Output<String> getPreferredSubnetId() {
-        return this.preferredSubnetId == null ? Output.empty() : this.preferredSubnetId;
+        return this.preferredSubnetId == null ? Codegen.empty() : this.preferredSubnetId;
     }
 
     /**
@@ -170,7 +171,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> routeTableIds;
 
     public Output<List<String>> getRouteTableIds() {
-        return this.routeTableIds == null ? Output.empty() : this.routeTableIds;
+        return this.routeTableIds == null ? Codegen.empty() : this.routeTableIds;
     }
 
     /**
@@ -181,7 +182,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
-        return this.securityGroupIds == null ? Output.empty() : this.securityGroupIds;
+        return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
     }
 
     /**
@@ -192,7 +193,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Integer> storageCapacity;
 
     public Output<Integer> getStorageCapacity() {
-        return this.storageCapacity == null ? Output.empty() : this.storageCapacity;
+        return this.storageCapacity == null ? Codegen.empty() : this.storageCapacity;
     }
 
     /**
@@ -203,7 +204,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> storageType;
 
     public Output<String> getStorageType() {
-        return this.storageType == null ? Output.empty() : this.storageType;
+        return this.storageType == null ? Codegen.empty() : this.storageType;
     }
 
     /**
@@ -214,7 +215,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Output.empty() : this.subnetIds;
+        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
     /**
@@ -225,7 +226,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -236,14 +237,14 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     @Import(name="throughputCapacity")
       private final @Nullable Output<Integer> throughputCapacity;
 
     public Output<Integer> getThroughputCapacity() {
-        return this.throughputCapacity == null ? Output.empty() : this.throughputCapacity;
+        return this.throughputCapacity == null ? Codegen.empty() : this.throughputCapacity;
     }
 
     /**
@@ -254,7 +255,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     /**
@@ -265,7 +266,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> weeklyMaintenanceStartTime;
 
     public Output<String> getWeeklyMaintenanceStartTime() {
-        return this.weeklyMaintenanceStartTime == null ? Output.empty() : this.weeklyMaintenanceStartTime;
+        return this.weeklyMaintenanceStartTime == null ? Codegen.empty() : this.weeklyMaintenanceStartTime;
     }
 
     public OntapFileSystemState(
@@ -318,29 +319,29 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
     }
 
     private OntapFileSystemState() {
-        this.arn = Output.empty();
-        this.automaticBackupRetentionDays = Output.empty();
-        this.dailyAutomaticBackupStartTime = Output.empty();
-        this.deploymentType = Output.empty();
-        this.diskIopsConfiguration = Output.empty();
-        this.dnsName = Output.empty();
-        this.endpointIpAddressRange = Output.empty();
-        this.endpoints = Output.empty();
-        this.fsxAdminPassword = Output.empty();
-        this.kmsKeyId = Output.empty();
-        this.networkInterfaceIds = Output.empty();
-        this.ownerId = Output.empty();
-        this.preferredSubnetId = Output.empty();
-        this.routeTableIds = Output.empty();
-        this.securityGroupIds = Output.empty();
-        this.storageCapacity = Output.empty();
-        this.storageType = Output.empty();
-        this.subnetIds = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.throughputCapacity = Output.empty();
-        this.vpcId = Output.empty();
-        this.weeklyMaintenanceStartTime = Output.empty();
+        this.arn = Codegen.empty();
+        this.automaticBackupRetentionDays = Codegen.empty();
+        this.dailyAutomaticBackupStartTime = Codegen.empty();
+        this.deploymentType = Codegen.empty();
+        this.diskIopsConfiguration = Codegen.empty();
+        this.dnsName = Codegen.empty();
+        this.endpointIpAddressRange = Codegen.empty();
+        this.endpoints = Codegen.empty();
+        this.fsxAdminPassword = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.networkInterfaceIds = Codegen.empty();
+        this.ownerId = Codegen.empty();
+        this.preferredSubnetId = Codegen.empty();
+        this.routeTableIds = Codegen.empty();
+        this.securityGroupIds = Codegen.empty();
+        this.storageCapacity = Codegen.empty();
+        this.storageType = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.throughputCapacity = Codegen.empty();
+        this.vpcId = Codegen.empty();
+        this.weeklyMaintenanceStartTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -412,7 +413,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder automaticBackupRetentionDays(@Nullable Output<Integer> automaticBackupRetentionDays) {
@@ -420,7 +421,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder automaticBackupRetentionDays(@Nullable Integer automaticBackupRetentionDays) {
-            this.automaticBackupRetentionDays = Output.ofNullable(automaticBackupRetentionDays);
+            this.automaticBackupRetentionDays = Codegen.ofNullable(automaticBackupRetentionDays);
             return this;
         }
         public Builder dailyAutomaticBackupStartTime(@Nullable Output<String> dailyAutomaticBackupStartTime) {
@@ -428,7 +429,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder dailyAutomaticBackupStartTime(@Nullable String dailyAutomaticBackupStartTime) {
-            this.dailyAutomaticBackupStartTime = Output.ofNullable(dailyAutomaticBackupStartTime);
+            this.dailyAutomaticBackupStartTime = Codegen.ofNullable(dailyAutomaticBackupStartTime);
             return this;
         }
         public Builder deploymentType(@Nullable Output<String> deploymentType) {
@@ -436,7 +437,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder deploymentType(@Nullable String deploymentType) {
-            this.deploymentType = Output.ofNullable(deploymentType);
+            this.deploymentType = Codegen.ofNullable(deploymentType);
             return this;
         }
         public Builder diskIopsConfiguration(@Nullable Output<OntapFileSystemDiskIopsConfigurationGetArgs> diskIopsConfiguration) {
@@ -444,7 +445,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder diskIopsConfiguration(@Nullable OntapFileSystemDiskIopsConfigurationGetArgs diskIopsConfiguration) {
-            this.diskIopsConfiguration = Output.ofNullable(diskIopsConfiguration);
+            this.diskIopsConfiguration = Codegen.ofNullable(diskIopsConfiguration);
             return this;
         }
         public Builder dnsName(@Nullable Output<String> dnsName) {
@@ -452,7 +453,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder dnsName(@Nullable String dnsName) {
-            this.dnsName = Output.ofNullable(dnsName);
+            this.dnsName = Codegen.ofNullable(dnsName);
             return this;
         }
         public Builder endpointIpAddressRange(@Nullable Output<String> endpointIpAddressRange) {
@@ -460,7 +461,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder endpointIpAddressRange(@Nullable String endpointIpAddressRange) {
-            this.endpointIpAddressRange = Output.ofNullable(endpointIpAddressRange);
+            this.endpointIpAddressRange = Codegen.ofNullable(endpointIpAddressRange);
             return this;
         }
         public Builder endpoints(@Nullable Output<List<OntapFileSystemEndpointGetArgs>> endpoints) {
@@ -468,7 +469,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder endpoints(@Nullable List<OntapFileSystemEndpointGetArgs> endpoints) {
-            this.endpoints = Output.ofNullable(endpoints);
+            this.endpoints = Codegen.ofNullable(endpoints);
             return this;
         }
         public Builder endpoints(OntapFileSystemEndpointGetArgs... endpoints) {
@@ -479,7 +480,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder fsxAdminPassword(@Nullable String fsxAdminPassword) {
-            this.fsxAdminPassword = Output.ofNullable(fsxAdminPassword);
+            this.fsxAdminPassword = Codegen.ofNullable(fsxAdminPassword);
             return this;
         }
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
@@ -487,7 +488,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder networkInterfaceIds(@Nullable Output<List<String>> networkInterfaceIds) {
@@ -495,7 +496,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder networkInterfaceIds(@Nullable List<String> networkInterfaceIds) {
-            this.networkInterfaceIds = Output.ofNullable(networkInterfaceIds);
+            this.networkInterfaceIds = Codegen.ofNullable(networkInterfaceIds);
             return this;
         }
         public Builder networkInterfaceIds(String... networkInterfaceIds) {
@@ -506,7 +507,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Output.ofNullable(ownerId);
+            this.ownerId = Codegen.ofNullable(ownerId);
             return this;
         }
         public Builder preferredSubnetId(@Nullable Output<String> preferredSubnetId) {
@@ -514,7 +515,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder preferredSubnetId(@Nullable String preferredSubnetId) {
-            this.preferredSubnetId = Output.ofNullable(preferredSubnetId);
+            this.preferredSubnetId = Codegen.ofNullable(preferredSubnetId);
             return this;
         }
         public Builder routeTableIds(@Nullable Output<List<String>> routeTableIds) {
@@ -522,7 +523,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder routeTableIds(@Nullable List<String> routeTableIds) {
-            this.routeTableIds = Output.ofNullable(routeTableIds);
+            this.routeTableIds = Codegen.ofNullable(routeTableIds);
             return this;
         }
         public Builder routeTableIds(String... routeTableIds) {
@@ -533,7 +534,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Output.ofNullable(securityGroupIds);
+            this.securityGroupIds = Codegen.ofNullable(securityGroupIds);
             return this;
         }
         public Builder securityGroupIds(String... securityGroupIds) {
@@ -544,7 +545,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder storageCapacity(@Nullable Integer storageCapacity) {
-            this.storageCapacity = Output.ofNullable(storageCapacity);
+            this.storageCapacity = Codegen.ofNullable(storageCapacity);
             return this;
         }
         public Builder storageType(@Nullable Output<String> storageType) {
@@ -552,7 +553,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder storageType(@Nullable String storageType) {
-            this.storageType = Output.ofNullable(storageType);
+            this.storageType = Codegen.ofNullable(storageType);
             return this;
         }
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
@@ -560,7 +561,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Output.ofNullable(subnetIds);
+            this.subnetIds = Codegen.ofNullable(subnetIds);
             return this;
         }
         public Builder subnetIds(String... subnetIds) {
@@ -571,7 +572,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -579,7 +580,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder throughputCapacity(@Nullable Output<Integer> throughputCapacity) {
@@ -587,7 +588,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder throughputCapacity(@Nullable Integer throughputCapacity) {
-            this.throughputCapacity = Output.ofNullable(throughputCapacity);
+            this.throughputCapacity = Codegen.ofNullable(throughputCapacity);
             return this;
         }
         public Builder vpcId(@Nullable Output<String> vpcId) {
@@ -595,7 +596,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }
         public Builder weeklyMaintenanceStartTime(@Nullable Output<String> weeklyMaintenanceStartTime) {
@@ -603,7 +604,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder weeklyMaintenanceStartTime(@Nullable String weeklyMaintenanceStartTime) {
-            this.weeklyMaintenanceStartTime = Output.ofNullable(weeklyMaintenanceStartTime);
+            this.weeklyMaintenanceStartTime = Codegen.ofNullable(weeklyMaintenanceStartTime);
             return this;
         }        public OntapFileSystemState build() {
             return new OntapFileSystemState(arn, automaticBackupRetentionDays, dailyAutomaticBackupStartTime, deploymentType, diskIopsConfiguration, dnsName, endpointIpAddressRange, endpoints, fsxAdminPassword, kmsKeyId, networkInterfaceIds, ownerId, preferredSubnetId, routeTableIds, securityGroupIds, storageCapacity, storageType, subnetIds, tags, tagsAll, throughputCapacity, vpcId, weeklyMaintenanceStartTime);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.monitoring_v1.inputs.TableDisplayOptionsArgs;
 import io.pulumi.googlenative.monitoring_v1.inputs.TimeSeriesQueryArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class TableDataSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> minAlignmentPeriod;
 
     public Output<String> getMinAlignmentPeriod() {
-        return this.minAlignmentPeriod == null ? Output.empty() : this.minAlignmentPeriod;
+        return this.minAlignmentPeriod == null ? Codegen.empty() : this.minAlignmentPeriod;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class TableDataSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TableDisplayOptionsArgs> tableDisplayOptions;
 
     public Output<TableDisplayOptionsArgs> getTableDisplayOptions() {
-        return this.tableDisplayOptions == null ? Output.empty() : this.tableDisplayOptions;
+        return this.tableDisplayOptions == null ? Codegen.empty() : this.tableDisplayOptions;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class TableDataSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> tableTemplate;
 
     public Output<String> getTableTemplate() {
-        return this.tableTemplate == null ? Output.empty() : this.tableTemplate;
+        return this.tableTemplate == null ? Codegen.empty() : this.tableTemplate;
     }
 
     /**
@@ -76,10 +77,10 @@ public final class TableDataSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TableDataSetArgs() {
-        this.minAlignmentPeriod = Output.empty();
-        this.tableDisplayOptions = Output.empty();
-        this.tableTemplate = Output.empty();
-        this.timeSeriesQuery = Output.empty();
+        this.minAlignmentPeriod = Codegen.empty();
+        this.tableDisplayOptions = Codegen.empty();
+        this.tableTemplate = Codegen.empty();
+        this.timeSeriesQuery = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class TableDataSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minAlignmentPeriod(@Nullable String minAlignmentPeriod) {
-            this.minAlignmentPeriod = Output.ofNullable(minAlignmentPeriod);
+            this.minAlignmentPeriod = Codegen.ofNullable(minAlignmentPeriod);
             return this;
         }
         public Builder tableDisplayOptions(@Nullable Output<TableDisplayOptionsArgs> tableDisplayOptions) {
@@ -121,7 +122,7 @@ public final class TableDataSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tableDisplayOptions(@Nullable TableDisplayOptionsArgs tableDisplayOptions) {
-            this.tableDisplayOptions = Output.ofNullable(tableDisplayOptions);
+            this.tableDisplayOptions = Codegen.ofNullable(tableDisplayOptions);
             return this;
         }
         public Builder tableTemplate(@Nullable Output<String> tableTemplate) {
@@ -129,7 +130,7 @@ public final class TableDataSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tableTemplate(@Nullable String tableTemplate) {
-            this.tableTemplate = Output.ofNullable(tableTemplate);
+            this.tableTemplate = Codegen.ofNullable(tableTemplate);
             return this;
         }
         public Builder timeSeriesQuery(Output<TimeSeriesQueryArgs> timeSeriesQuery) {

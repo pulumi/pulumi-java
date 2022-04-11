@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class HostAliasArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> hostnames;
 
     public Output<List<String>> getHostnames() {
-        return this.hostnames == null ? Output.empty() : this.hostnames;
+        return this.hostnames == null ? Codegen.empty() : this.hostnames;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class HostAliasArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ip;
 
     public Output<String> getIp() {
-        return this.ip == null ? Output.empty() : this.ip;
+        return this.ip == null ? Codegen.empty() : this.ip;
     }
 
     public HostAliasArgs(
@@ -49,8 +50,8 @@ public final class HostAliasArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HostAliasArgs() {
-        this.hostnames = Output.empty();
-        this.ip = Output.empty();
+        this.hostnames = Codegen.empty();
+        this.ip = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class HostAliasArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostnames(@Nullable List<String> hostnames) {
-            this.hostnames = Output.ofNullable(hostnames);
+            this.hostnames = Codegen.ofNullable(hostnames);
             return this;
         }
         public Builder hostnames(String... hostnames) {
@@ -91,7 +92,7 @@ public final class HostAliasArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ip(@Nullable String ip) {
-            this.ip = Output.ofNullable(ip);
+            this.ip = Codegen.ofNullable(ip);
             return this;
         }        public HostAliasArgs build() {
             return new HostAliasArgs(hostnames, ip);

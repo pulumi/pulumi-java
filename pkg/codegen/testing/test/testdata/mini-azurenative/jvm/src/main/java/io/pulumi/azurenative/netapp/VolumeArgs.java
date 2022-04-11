@@ -5,6 +5,7 @@ package io.pulumi.azurenative.netapp;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> throughputMibps;
 
     public Output<Double> getThroughputMibps() {
-        return this.throughputMibps == null ? Output.empty() : this.throughputMibps;
+        return this.throughputMibps == null ? Codegen.empty() : this.throughputMibps;
     }
 
     /**
@@ -35,13 +36,13 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     public VolumeArgs(
         @Nullable Output<Double> throughputMibps,
         Output<Double> usageThreshold) {
-        this.throughputMibps = throughputMibps == null ? Output.ofNullable(0e+00) : throughputMibps;
-        this.usageThreshold = usageThreshold == null ? Output.ofNullable(1.073741824e+11) : Objects.requireNonNull(usageThreshold, "expected parameter 'usageThreshold' to be non-null");
+        this.throughputMibps = throughputMibps == null ? Codegen.ofNullable(0e+00) : throughputMibps;
+        this.usageThreshold = usageThreshold == null ? Codegen.ofNullable(1.073741824e+11) : Objects.requireNonNull(usageThreshold, "expected parameter 'usageThreshold' to be non-null");
     }
 
     private VolumeArgs() {
-        this.throughputMibps = Output.empty();
-        this.usageThreshold = Output.empty();
+        this.throughputMibps = Codegen.empty();
+        this.usageThreshold = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -71,7 +72,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder throughputMibps(@Nullable Double throughputMibps) {
-            this.throughputMibps = Output.ofNullable(throughputMibps);
+            this.throughputMibps = Codegen.ofNullable(throughputMibps);
             return this;
         }
         public Builder usageThreshold(Output<Double> usageThreshold) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.dns.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecArgs extends io.pulumi.r
       private final @Nullable Output<String> algorithm;
 
     public Output<String> getAlgorithm() {
-        return this.algorithm == null ? Output.empty() : this.algorithm;
+        return this.algorithm == null ? Codegen.empty() : this.algorithm;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecArgs extends io.pulumi.r
       private final @Nullable Output<Integer> keyLength;
 
     public Output<Integer> getKeyLength() {
-        return this.keyLength == null ? Output.empty() : this.keyLength;
+        return this.keyLength == null ? Codegen.empty() : this.keyLength;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecArgs extends io.pulumi.r
       private final @Nullable Output<String> keyType;
 
     public Output<String> getKeyType() {
-        return this.keyType == null ? Output.empty() : this.keyType;
+        return this.keyType == null ? Codegen.empty() : this.keyType;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecArgs extends io.pulumi.r
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     public ManagedZoneDnssecConfigDefaultKeySpecArgs(
@@ -78,10 +79,10 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecArgs extends io.pulumi.r
     }
 
     private ManagedZoneDnssecConfigDefaultKeySpecArgs() {
-        this.algorithm = Output.empty();
-        this.keyLength = Output.empty();
-        this.keyType = Output.empty();
-        this.kind = Output.empty();
+        this.algorithm = Codegen.empty();
+        this.keyLength = Codegen.empty();
+        this.keyType = Codegen.empty();
+        this.kind = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecArgs extends io.pulumi.r
             return this;
         }
         public Builder algorithm(@Nullable String algorithm) {
-            this.algorithm = Output.ofNullable(algorithm);
+            this.algorithm = Codegen.ofNullable(algorithm);
             return this;
         }
         public Builder keyLength(@Nullable Output<Integer> keyLength) {
@@ -123,7 +124,7 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecArgs extends io.pulumi.r
             return this;
         }
         public Builder keyLength(@Nullable Integer keyLength) {
-            this.keyLength = Output.ofNullable(keyLength);
+            this.keyLength = Codegen.ofNullable(keyLength);
             return this;
         }
         public Builder keyType(@Nullable Output<String> keyType) {
@@ -131,7 +132,7 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecArgs extends io.pulumi.r
             return this;
         }
         public Builder keyType(@Nullable String keyType) {
-            this.keyType = Output.ofNullable(keyType);
+            this.keyType = Codegen.ofNullable(keyType);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -139,7 +140,7 @@ public final class ManagedZoneDnssecConfigDefaultKeySpecArgs extends io.pulumi.r
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }        public ManagedZoneDnssecConfigDefaultKeySpecArgs build() {
             return new ManagedZoneDnssecConfigDefaultKeySpecArgs(algorithm, keyLength, keyType, kind);

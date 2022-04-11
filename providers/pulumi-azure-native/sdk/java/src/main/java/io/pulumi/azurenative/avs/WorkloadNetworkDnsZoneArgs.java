@@ -5,6 +5,7 @@ package io.pulumi.azurenative.avs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<String>> dnsServerIps;
 
     public Output<List<String>> getDnsServerIps() {
-        return this.dnsServerIps == null ? Output.empty() : this.dnsServerIps;
+        return this.dnsServerIps == null ? Codegen.empty() : this.dnsServerIps;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Double> dnsServices;
 
     public Output<Double> getDnsServices() {
-        return this.dnsServices == null ? Output.empty() : this.dnsServices;
+        return this.dnsServices == null ? Codegen.empty() : this.dnsServices;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> dnsZoneId;
 
     public Output<String> getDnsZoneId() {
-        return this.dnsZoneId == null ? Output.empty() : this.dnsZoneId;
+        return this.dnsZoneId == null ? Codegen.empty() : this.dnsZoneId;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<String>> domain;
 
     public Output<List<String>> getDomain() {
-        return this.domain == null ? Output.empty() : this.domain;
+        return this.domain == null ? Codegen.empty() : this.domain;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Double> revision;
 
     public Output<Double> getRevision() {
-        return this.revision == null ? Output.empty() : this.revision;
+        return this.revision == null ? Codegen.empty() : this.revision;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> sourceIp;
 
     public Output<String> getSourceIp() {
-        return this.sourceIp == null ? Output.empty() : this.sourceIp;
+        return this.sourceIp == null ? Codegen.empty() : this.sourceIp;
     }
 
     public WorkloadNetworkDnsZoneArgs(
@@ -137,15 +138,15 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
     }
 
     private WorkloadNetworkDnsZoneArgs() {
-        this.displayName = Output.empty();
-        this.dnsServerIps = Output.empty();
-        this.dnsServices = Output.empty();
-        this.dnsZoneId = Output.empty();
-        this.domain = Output.empty();
-        this.privateCloudName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.revision = Output.empty();
-        this.sourceIp = Output.empty();
+        this.displayName = Codegen.empty();
+        this.dnsServerIps = Codegen.empty();
+        this.dnsServices = Codegen.empty();
+        this.dnsZoneId = Codegen.empty();
+        this.domain = Codegen.empty();
+        this.privateCloudName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.revision = Codegen.empty();
+        this.sourceIp = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -189,7 +190,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder dnsServerIps(@Nullable Output<List<String>> dnsServerIps) {
@@ -197,7 +198,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder dnsServerIps(@Nullable List<String> dnsServerIps) {
-            this.dnsServerIps = Output.ofNullable(dnsServerIps);
+            this.dnsServerIps = Codegen.ofNullable(dnsServerIps);
             return this;
         }
         public Builder dnsServerIps(String... dnsServerIps) {
@@ -208,7 +209,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder dnsServices(@Nullable Double dnsServices) {
-            this.dnsServices = Output.ofNullable(dnsServices);
+            this.dnsServices = Codegen.ofNullable(dnsServices);
             return this;
         }
         public Builder dnsZoneId(@Nullable Output<String> dnsZoneId) {
@@ -216,7 +217,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder dnsZoneId(@Nullable String dnsZoneId) {
-            this.dnsZoneId = Output.ofNullable(dnsZoneId);
+            this.dnsZoneId = Codegen.ofNullable(dnsZoneId);
             return this;
         }
         public Builder domain(@Nullable Output<List<String>> domain) {
@@ -224,7 +225,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder domain(@Nullable List<String> domain) {
-            this.domain = Output.ofNullable(domain);
+            this.domain = Codegen.ofNullable(domain);
             return this;
         }
         public Builder domain(String... domain) {
@@ -251,7 +252,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder revision(@Nullable Double revision) {
-            this.revision = Output.ofNullable(revision);
+            this.revision = Codegen.ofNullable(revision);
             return this;
         }
         public Builder sourceIp(@Nullable Output<String> sourceIp) {
@@ -259,7 +260,7 @@ public final class WorkloadNetworkDnsZoneArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder sourceIp(@Nullable String sourceIp) {
-            this.sourceIp = Output.ofNullable(sourceIp);
+            this.sourceIp = Codegen.ofNullable(sourceIp);
             return this;
         }        public WorkloadNetworkDnsZoneArgs build() {
             return new WorkloadNetworkDnsZoneArgs(displayName, dnsServerIps, dnsServices, dnsZoneId, domain, privateCloudName, resourceGroupName, revision, sourceIp);

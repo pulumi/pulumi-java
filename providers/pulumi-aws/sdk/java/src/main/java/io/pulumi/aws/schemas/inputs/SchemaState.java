@@ -5,6 +5,7 @@ package io.pulumi.aws.schemas.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
-        return this.content == null ? Output.empty() : this.content;
+        return this.content == null ? Codegen.empty() : this.content;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> lastModified;
 
     public Output<String> getLastModified() {
-        return this.lastModified == null ? Output.empty() : this.lastModified;
+        return this.lastModified == null ? Codegen.empty() : this.lastModified;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> registryName;
 
     public Output<String> getRegistryName() {
-        return this.registryName == null ? Output.empty() : this.registryName;
+        return this.registryName == null ? Codegen.empty() : this.registryName;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -122,7 +123,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     /**
@@ -133,7 +134,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> versionCreatedDate;
 
     public Output<String> getVersionCreatedDate() {
-        return this.versionCreatedDate == null ? Output.empty() : this.versionCreatedDate;
+        return this.versionCreatedDate == null ? Codegen.empty() : this.versionCreatedDate;
     }
 
     public SchemaState(
@@ -162,17 +163,17 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
     }
 
     private SchemaState() {
-        this.arn = Output.empty();
-        this.content = Output.empty();
-        this.description = Output.empty();
-        this.lastModified = Output.empty();
-        this.name = Output.empty();
-        this.registryName = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.type = Output.empty();
-        this.version = Output.empty();
-        this.versionCreatedDate = Output.empty();
+        this.arn = Codegen.empty();
+        this.content = Codegen.empty();
+        this.description = Codegen.empty();
+        this.lastModified = Codegen.empty();
+        this.name = Codegen.empty();
+        this.registryName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.type = Codegen.empty();
+        this.version = Codegen.empty();
+        this.versionCreatedDate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -220,7 +221,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder content(@Nullable Output<String> content) {
@@ -228,7 +229,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder content(@Nullable String content) {
-            this.content = Output.ofNullable(content);
+            this.content = Codegen.ofNullable(content);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -236,7 +237,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder lastModified(@Nullable Output<String> lastModified) {
@@ -244,7 +245,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastModified(@Nullable String lastModified) {
-            this.lastModified = Output.ofNullable(lastModified);
+            this.lastModified = Codegen.ofNullable(lastModified);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -252,7 +253,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder registryName(@Nullable Output<String> registryName) {
@@ -260,7 +261,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder registryName(@Nullable String registryName) {
-            this.registryName = Output.ofNullable(registryName);
+            this.registryName = Codegen.ofNullable(registryName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -268,7 +269,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -276,7 +277,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -284,7 +285,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -292,7 +293,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }
         public Builder versionCreatedDate(@Nullable Output<String> versionCreatedDate) {
@@ -300,7 +301,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder versionCreatedDate(@Nullable String versionCreatedDate) {
-            this.versionCreatedDate = Output.ofNullable(versionCreatedDate);
+            this.versionCreatedDate = Codegen.ofNullable(versionCreatedDate);
             return this;
         }        public SchemaState build() {
             return new SchemaState(arn, content, description, lastModified, name, registryName, tags, tagsAll, type, version, versionCreatedDate);

@@ -5,6 +5,7 @@ package io.pulumi.aws.servicecatalog;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class TagOptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> active;
 
     public Output<Boolean> getActive() {
-        return this.active == null ? Output.empty() : this.active;
+        return this.active == null ? Codegen.empty() : this.active;
     }
 
     /**
@@ -58,9 +59,9 @@ public final class TagOptionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TagOptionArgs() {
-        this.active = Output.empty();
-        this.key = Output.empty();
-        this.value = Output.empty();
+        this.active = Codegen.empty();
+        this.key = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class TagOptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder active(@Nullable Boolean active) {
-            this.active = Output.ofNullable(active);
+            this.active = Codegen.ofNullable(active);
             return this;
         }
         public Builder key(Output<String> key) {

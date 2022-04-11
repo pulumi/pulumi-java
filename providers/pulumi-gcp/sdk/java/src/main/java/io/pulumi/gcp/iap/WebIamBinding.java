@@ -6,6 +6,7 @@ package io.pulumi.gcp.iap;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.WebIamBindingArgs;
 import io.pulumi.gcp.iap.inputs.WebIamBindingState;
@@ -155,7 +156,7 @@ public class WebIamBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WebIamBinding(String name, WebIamBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:iap/webIamBinding:WebIamBinding", name, args == null ? WebIamBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:iap/webIamBinding:WebIamBinding", name, args == null ? WebIamBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebIamBinding(String name, Output<String> id, @Nullable WebIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

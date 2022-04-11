@@ -8,6 +8,7 @@ import io.pulumi.awsnative.s3outposts.BucketPolicyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -69,7 +70,7 @@ public class BucketPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BucketPolicy(String name, BucketPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:s3outposts:BucketPolicy", name, args == null ? BucketPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:s3outposts:BucketPolicy", name, args == null ? BucketPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BucketPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

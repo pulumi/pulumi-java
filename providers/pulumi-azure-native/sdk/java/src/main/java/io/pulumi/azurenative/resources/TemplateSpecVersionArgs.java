@@ -6,6 +6,7 @@ package io.pulumi.azurenative.resources;
 import io.pulumi.azurenative.resources.inputs.LinkedTemplateArtifactArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<LinkedTemplateArtifactArgs>> linkedTemplates;
 
     public Output<List<LinkedTemplateArtifactArgs>> getLinkedTemplates() {
-        return this.linkedTemplates == null ? Output.empty() : this.linkedTemplates;
+        return this.linkedTemplates == null ? Codegen.empty() : this.linkedTemplates;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Object> mainTemplate;
 
     public Output<Object> getMainTemplate() {
-        return this.mainTemplate == null ? Output.empty() : this.mainTemplate;
+        return this.mainTemplate == null ? Codegen.empty() : this.mainTemplate;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Object> metadata;
 
     public Output<Object> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> templateSpecVersion;
 
     public Output<String> getTemplateSpecVersion() {
-        return this.templateSpecVersion == null ? Output.empty() : this.templateSpecVersion;
+        return this.templateSpecVersion == null ? Codegen.empty() : this.templateSpecVersion;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Object> uiFormDefinition;
 
     public Output<Object> getUiFormDefinition() {
-        return this.uiFormDefinition == null ? Output.empty() : this.uiFormDefinition;
+        return this.uiFormDefinition == null ? Codegen.empty() : this.uiFormDefinition;
     }
 
     public TemplateSpecVersionArgs(
@@ -152,16 +153,16 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
     }
 
     private TemplateSpecVersionArgs() {
-        this.description = Output.empty();
-        this.linkedTemplates = Output.empty();
-        this.location = Output.empty();
-        this.mainTemplate = Output.empty();
-        this.metadata = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.templateSpecName = Output.empty();
-        this.templateSpecVersion = Output.empty();
-        this.uiFormDefinition = Output.empty();
+        this.description = Codegen.empty();
+        this.linkedTemplates = Codegen.empty();
+        this.location = Codegen.empty();
+        this.mainTemplate = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.templateSpecName = Codegen.empty();
+        this.templateSpecVersion = Codegen.empty();
+        this.uiFormDefinition = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -207,7 +208,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder linkedTemplates(@Nullable Output<List<LinkedTemplateArtifactArgs>> linkedTemplates) {
@@ -215,7 +216,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder linkedTemplates(@Nullable List<LinkedTemplateArtifactArgs> linkedTemplates) {
-            this.linkedTemplates = Output.ofNullable(linkedTemplates);
+            this.linkedTemplates = Codegen.ofNullable(linkedTemplates);
             return this;
         }
         public Builder linkedTemplates(LinkedTemplateArtifactArgs... linkedTemplates) {
@@ -226,7 +227,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder mainTemplate(@Nullable Output<Object> mainTemplate) {
@@ -234,7 +235,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder mainTemplate(@Nullable Object mainTemplate) {
-            this.mainTemplate = Output.ofNullable(mainTemplate);
+            this.mainTemplate = Codegen.ofNullable(mainTemplate);
             return this;
         }
         public Builder metadata(@Nullable Output<Object> metadata) {
@@ -242,7 +243,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -258,7 +259,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder templateSpecName(Output<String> templateSpecName) {
@@ -274,7 +275,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder templateSpecVersion(@Nullable String templateSpecVersion) {
-            this.templateSpecVersion = Output.ofNullable(templateSpecVersion);
+            this.templateSpecVersion = Codegen.ofNullable(templateSpecVersion);
             return this;
         }
         public Builder uiFormDefinition(@Nullable Output<Object> uiFormDefinition) {
@@ -282,7 +283,7 @@ public final class TemplateSpecVersionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder uiFormDefinition(@Nullable Object uiFormDefinition) {
-            this.uiFormDefinition = Output.ofNullable(uiFormDefinition);
+            this.uiFormDefinition = Codegen.ofNullable(uiFormDefinition);
             return this;
         }        public TemplateSpecVersionArgs build() {
             return new TemplateSpecVersionArgs(description, linkedTemplates, location, mainTemplate, metadata, resourceGroupName, tags, templateSpecName, templateSpecVersion, uiFormDefinition);

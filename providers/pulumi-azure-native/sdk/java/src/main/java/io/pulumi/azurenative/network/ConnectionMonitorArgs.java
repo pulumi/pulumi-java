@@ -11,6 +11,7 @@ import io.pulumi.azurenative.network.inputs.ConnectionMonitorTestConfigurationAr
 import io.pulumi.azurenative.network.inputs.ConnectionMonitorTestGroupArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -32,7 +33,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Boolean> autoStart;
 
     public Output<Boolean> getAutoStart() {
-        return this.autoStart == null ? Output.empty() : this.autoStart;
+        return this.autoStart == null ? Codegen.empty() : this.autoStart;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> connectionMonitorName;
 
     public Output<String> getConnectionMonitorName() {
-        return this.connectionMonitorName == null ? Output.empty() : this.connectionMonitorName;
+        return this.connectionMonitorName == null ? Codegen.empty() : this.connectionMonitorName;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<ConnectionMonitorDestinationArgs> destination;
 
     public Output<ConnectionMonitorDestinationArgs> getDestination() {
-        return this.destination == null ? Output.empty() : this.destination;
+        return this.destination == null ? Codegen.empty() : this.destination;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<ConnectionMonitorEndpointArgs>> endpoints;
 
     public Output<List<ConnectionMonitorEndpointArgs>> getEndpoints() {
-        return this.endpoints == null ? Output.empty() : this.endpoints;
+        return this.endpoints == null ? Codegen.empty() : this.endpoints;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> migrate;
 
     public Output<String> getMigrate() {
-        return this.migrate == null ? Output.empty() : this.migrate;
+        return this.migrate == null ? Codegen.empty() : this.migrate;
     }
 
     /**
@@ -98,7 +99,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> monitoringIntervalInSeconds;
 
     public Output<Integer> getMonitoringIntervalInSeconds() {
-        return this.monitoringIntervalInSeconds == null ? Output.empty() : this.monitoringIntervalInSeconds;
+        return this.monitoringIntervalInSeconds == null ? Codegen.empty() : this.monitoringIntervalInSeconds;
     }
 
     /**
@@ -120,7 +121,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> notes;
 
     public Output<String> getNotes() {
-        return this.notes == null ? Output.empty() : this.notes;
+        return this.notes == null ? Codegen.empty() : this.notes;
     }
 
     /**
@@ -131,7 +132,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<ConnectionMonitorOutputArgs>> outputs;
 
     public Output<List<ConnectionMonitorOutputArgs>> getOutputs() {
-        return this.outputs == null ? Output.empty() : this.outputs;
+        return this.outputs == null ? Codegen.empty() : this.outputs;
     }
 
     /**
@@ -153,7 +154,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<ConnectionMonitorSourceArgs> source;
 
     public Output<ConnectionMonitorSourceArgs> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     /**
@@ -164,7 +165,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -175,7 +176,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<ConnectionMonitorTestConfigurationArgs>> testConfigurations;
 
     public Output<List<ConnectionMonitorTestConfigurationArgs>> getTestConfigurations() {
-        return this.testConfigurations == null ? Output.empty() : this.testConfigurations;
+        return this.testConfigurations == null ? Codegen.empty() : this.testConfigurations;
     }
 
     /**
@@ -186,7 +187,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<ConnectionMonitorTestGroupArgs>> testGroups;
 
     public Output<List<ConnectionMonitorTestGroupArgs>> getTestGroups() {
-        return this.testGroups == null ? Output.empty() : this.testGroups;
+        return this.testGroups == null ? Codegen.empty() : this.testGroups;
     }
 
     public ConnectionMonitorArgs(
@@ -205,13 +206,13 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
         @Nullable Output<Map<String,String>> tags,
         @Nullable Output<List<ConnectionMonitorTestConfigurationArgs>> testConfigurations,
         @Nullable Output<List<ConnectionMonitorTestGroupArgs>> testGroups) {
-        this.autoStart = autoStart == null ? Output.ofNullable(true) : autoStart;
+        this.autoStart = autoStart == null ? Codegen.ofNullable(true) : autoStart;
         this.connectionMonitorName = connectionMonitorName;
         this.destination = destination;
         this.endpoints = endpoints;
         this.location = location;
         this.migrate = migrate;
-        this.monitoringIntervalInSeconds = monitoringIntervalInSeconds == null ? Output.ofNullable(60) : monitoringIntervalInSeconds;
+        this.monitoringIntervalInSeconds = monitoringIntervalInSeconds == null ? Codegen.ofNullable(60) : monitoringIntervalInSeconds;
         this.networkWatcherName = Objects.requireNonNull(networkWatcherName, "expected parameter 'networkWatcherName' to be non-null");
         this.notes = notes;
         this.outputs = outputs;
@@ -223,21 +224,21 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ConnectionMonitorArgs() {
-        this.autoStart = Output.empty();
-        this.connectionMonitorName = Output.empty();
-        this.destination = Output.empty();
-        this.endpoints = Output.empty();
-        this.location = Output.empty();
-        this.migrate = Output.empty();
-        this.monitoringIntervalInSeconds = Output.empty();
-        this.networkWatcherName = Output.empty();
-        this.notes = Output.empty();
-        this.outputs = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.source = Output.empty();
-        this.tags = Output.empty();
-        this.testConfigurations = Output.empty();
-        this.testGroups = Output.empty();
+        this.autoStart = Codegen.empty();
+        this.connectionMonitorName = Codegen.empty();
+        this.destination = Codegen.empty();
+        this.endpoints = Codegen.empty();
+        this.location = Codegen.empty();
+        this.migrate = Codegen.empty();
+        this.monitoringIntervalInSeconds = Codegen.empty();
+        this.networkWatcherName = Codegen.empty();
+        this.notes = Codegen.empty();
+        this.outputs = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.source = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.testConfigurations = Codegen.empty();
+        this.testGroups = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -293,7 +294,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder autoStart(@Nullable Boolean autoStart) {
-            this.autoStart = Output.ofNullable(autoStart);
+            this.autoStart = Codegen.ofNullable(autoStart);
             return this;
         }
         public Builder connectionMonitorName(@Nullable Output<String> connectionMonitorName) {
@@ -301,7 +302,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder connectionMonitorName(@Nullable String connectionMonitorName) {
-            this.connectionMonitorName = Output.ofNullable(connectionMonitorName);
+            this.connectionMonitorName = Codegen.ofNullable(connectionMonitorName);
             return this;
         }
         public Builder destination(@Nullable Output<ConnectionMonitorDestinationArgs> destination) {
@@ -309,7 +310,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder destination(@Nullable ConnectionMonitorDestinationArgs destination) {
-            this.destination = Output.ofNullable(destination);
+            this.destination = Codegen.ofNullable(destination);
             return this;
         }
         public Builder endpoints(@Nullable Output<List<ConnectionMonitorEndpointArgs>> endpoints) {
@@ -317,7 +318,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder endpoints(@Nullable List<ConnectionMonitorEndpointArgs> endpoints) {
-            this.endpoints = Output.ofNullable(endpoints);
+            this.endpoints = Codegen.ofNullable(endpoints);
             return this;
         }
         public Builder endpoints(ConnectionMonitorEndpointArgs... endpoints) {
@@ -328,7 +329,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder migrate(@Nullable Output<String> migrate) {
@@ -336,7 +337,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder migrate(@Nullable String migrate) {
-            this.migrate = Output.ofNullable(migrate);
+            this.migrate = Codegen.ofNullable(migrate);
             return this;
         }
         public Builder monitoringIntervalInSeconds(@Nullable Output<Integer> monitoringIntervalInSeconds) {
@@ -344,7 +345,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder monitoringIntervalInSeconds(@Nullable Integer monitoringIntervalInSeconds) {
-            this.monitoringIntervalInSeconds = Output.ofNullable(monitoringIntervalInSeconds);
+            this.monitoringIntervalInSeconds = Codegen.ofNullable(monitoringIntervalInSeconds);
             return this;
         }
         public Builder networkWatcherName(Output<String> networkWatcherName) {
@@ -360,7 +361,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder notes(@Nullable String notes) {
-            this.notes = Output.ofNullable(notes);
+            this.notes = Codegen.ofNullable(notes);
             return this;
         }
         public Builder outputs(@Nullable Output<List<ConnectionMonitorOutputArgs>> outputs) {
@@ -368,7 +369,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder outputs(@Nullable List<ConnectionMonitorOutputArgs> outputs) {
-            this.outputs = Output.ofNullable(outputs);
+            this.outputs = Codegen.ofNullable(outputs);
             return this;
         }
         public Builder outputs(ConnectionMonitorOutputArgs... outputs) {
@@ -387,7 +388,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder source(@Nullable ConnectionMonitorSourceArgs source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -395,7 +396,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder testConfigurations(@Nullable Output<List<ConnectionMonitorTestConfigurationArgs>> testConfigurations) {
@@ -403,7 +404,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder testConfigurations(@Nullable List<ConnectionMonitorTestConfigurationArgs> testConfigurations) {
-            this.testConfigurations = Output.ofNullable(testConfigurations);
+            this.testConfigurations = Codegen.ofNullable(testConfigurations);
             return this;
         }
         public Builder testConfigurations(ConnectionMonitorTestConfigurationArgs... testConfigurations) {
@@ -414,7 +415,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder testGroups(@Nullable List<ConnectionMonitorTestGroupArgs> testGroups) {
-            this.testGroups = Output.ofNullable(testGroups);
+            this.testGroups = Codegen.ofNullable(testGroups);
             return this;
         }
         public Builder testGroups(ConnectionMonitorTestGroupArgs... testGroups) {

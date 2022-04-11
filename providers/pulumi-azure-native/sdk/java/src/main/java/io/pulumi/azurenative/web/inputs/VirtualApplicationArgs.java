@@ -6,6 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.inputs.VirtualDirectoryArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +30,7 @@ public final class VirtualApplicationArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> physicalPath;
 
     public Output<String> getPhysicalPath() {
-        return this.physicalPath == null ? Output.empty() : this.physicalPath;
+        return this.physicalPath == null ? Codegen.empty() : this.physicalPath;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class VirtualApplicationArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Boolean> preloadEnabled;
 
     public Output<Boolean> getPreloadEnabled() {
-        return this.preloadEnabled == null ? Output.empty() : this.preloadEnabled;
+        return this.preloadEnabled == null ? Codegen.empty() : this.preloadEnabled;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class VirtualApplicationArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<VirtualDirectoryArgs>> virtualDirectories;
 
     public Output<List<VirtualDirectoryArgs>> getVirtualDirectories() {
-        return this.virtualDirectories == null ? Output.empty() : this.virtualDirectories;
+        return this.virtualDirectories == null ? Codegen.empty() : this.virtualDirectories;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class VirtualApplicationArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> virtualPath;
 
     public Output<String> getVirtualPath() {
-        return this.virtualPath == null ? Output.empty() : this.virtualPath;
+        return this.virtualPath == null ? Codegen.empty() : this.virtualPath;
     }
 
     public VirtualApplicationArgs(
@@ -77,10 +78,10 @@ public final class VirtualApplicationArgs extends io.pulumi.resources.ResourceAr
     }
 
     private VirtualApplicationArgs() {
-        this.physicalPath = Output.empty();
-        this.preloadEnabled = Output.empty();
-        this.virtualDirectories = Output.empty();
-        this.virtualPath = Output.empty();
+        this.physicalPath = Codegen.empty();
+        this.preloadEnabled = Codegen.empty();
+        this.virtualDirectories = Codegen.empty();
+        this.virtualPath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class VirtualApplicationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder physicalPath(@Nullable String physicalPath) {
-            this.physicalPath = Output.ofNullable(physicalPath);
+            this.physicalPath = Codegen.ofNullable(physicalPath);
             return this;
         }
         public Builder preloadEnabled(@Nullable Output<Boolean> preloadEnabled) {
@@ -122,7 +123,7 @@ public final class VirtualApplicationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder preloadEnabled(@Nullable Boolean preloadEnabled) {
-            this.preloadEnabled = Output.ofNullable(preloadEnabled);
+            this.preloadEnabled = Codegen.ofNullable(preloadEnabled);
             return this;
         }
         public Builder virtualDirectories(@Nullable Output<List<VirtualDirectoryArgs>> virtualDirectories) {
@@ -130,7 +131,7 @@ public final class VirtualApplicationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder virtualDirectories(@Nullable List<VirtualDirectoryArgs> virtualDirectories) {
-            this.virtualDirectories = Output.ofNullable(virtualDirectories);
+            this.virtualDirectories = Codegen.ofNullable(virtualDirectories);
             return this;
         }
         public Builder virtualDirectories(VirtualDirectoryArgs... virtualDirectories) {
@@ -141,7 +142,7 @@ public final class VirtualApplicationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder virtualPath(@Nullable String virtualPath) {
-            this.virtualPath = Output.ofNullable(virtualPath);
+            this.virtualPath = Codegen.ofNullable(virtualPath);
             return this;
         }        public VirtualApplicationArgs build() {
             return new VirtualApplicationArgs(physicalPath, preloadEnabled, virtualDirectories, virtualPath);

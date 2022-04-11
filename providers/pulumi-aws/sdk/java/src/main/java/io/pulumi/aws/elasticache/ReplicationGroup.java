@@ -10,6 +10,7 @@ import io.pulumi.aws.elasticache.outputs.ReplicationGroupClusterMode;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -619,7 +620,7 @@ public class ReplicationGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ReplicationGroup(String name, ReplicationGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:elasticache/replicationGroup:ReplicationGroup", name, args == null ? ReplicationGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:elasticache/replicationGroup:ReplicationGroup", name, args == null ? ReplicationGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ReplicationGroup(String name, Output<String> id, @Nullable ReplicationGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

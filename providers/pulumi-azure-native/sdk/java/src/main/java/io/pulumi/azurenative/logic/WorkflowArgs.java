@@ -12,6 +12,7 @@ import io.pulumi.azurenative.logic.inputs.WorkflowParameterArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -31,7 +32,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FlowAccessControlConfigurationArgs> accessControl;
 
     public Output<FlowAccessControlConfigurationArgs> getAccessControl() {
-        return this.accessControl == null ? Output.empty() : this.accessControl;
+        return this.accessControl == null ? Codegen.empty() : this.accessControl;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> definition;
 
     public Output<Object> getDefinition() {
-        return this.definition == null ? Output.empty() : this.definition;
+        return this.definition == null ? Codegen.empty() : this.definition;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FlowEndpointsConfigurationArgs> endpointsConfiguration;
 
     public Output<FlowEndpointsConfigurationArgs> getEndpointsConfiguration() {
-        return this.endpointsConfiguration == null ? Output.empty() : this.endpointsConfiguration;
+        return this.endpointsConfiguration == null ? Codegen.empty() : this.endpointsConfiguration;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
     public Output<ManagedServiceIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ResourceReferenceArgs> integrationAccount;
 
     public Output<ResourceReferenceArgs> getIntegrationAccount() {
-        return this.integrationAccount == null ? Output.empty() : this.integrationAccount;
+        return this.integrationAccount == null ? Codegen.empty() : this.integrationAccount;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment;
 
     public Output<ResourceReferenceArgs> getIntegrationServiceEnvironment() {
-        return this.integrationServiceEnvironment == null ? Output.empty() : this.integrationServiceEnvironment;
+        return this.integrationServiceEnvironment == null ? Codegen.empty() : this.integrationServiceEnvironment;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -108,7 +109,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,WorkflowParameterArgs>> parameters;
 
     public Output<Map<String,WorkflowParameterArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -130,7 +131,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,WorkflowState>> state;
 
     public Output<Either<String,WorkflowState>> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -141,7 +142,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -152,7 +153,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> workflowName;
 
     public Output<String> getWorkflowName() {
-        return this.workflowName == null ? Output.empty() : this.workflowName;
+        return this.workflowName == null ? Codegen.empty() : this.workflowName;
     }
 
     public WorkflowArgs(
@@ -183,18 +184,18 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkflowArgs() {
-        this.accessControl = Output.empty();
-        this.definition = Output.empty();
-        this.endpointsConfiguration = Output.empty();
-        this.identity = Output.empty();
-        this.integrationAccount = Output.empty();
-        this.integrationServiceEnvironment = Output.empty();
-        this.location = Output.empty();
-        this.parameters = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.state = Output.empty();
-        this.tags = Output.empty();
-        this.workflowName = Output.empty();
+        this.accessControl = Codegen.empty();
+        this.definition = Codegen.empty();
+        this.endpointsConfiguration = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.integrationAccount = Codegen.empty();
+        this.integrationServiceEnvironment = Codegen.empty();
+        this.location = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.state = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.workflowName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -244,7 +245,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessControl(@Nullable FlowAccessControlConfigurationArgs accessControl) {
-            this.accessControl = Output.ofNullable(accessControl);
+            this.accessControl = Codegen.ofNullable(accessControl);
             return this;
         }
         public Builder definition(@Nullable Output<Object> definition) {
@@ -252,7 +253,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder definition(@Nullable Object definition) {
-            this.definition = Output.ofNullable(definition);
+            this.definition = Codegen.ofNullable(definition);
             return this;
         }
         public Builder endpointsConfiguration(@Nullable Output<FlowEndpointsConfigurationArgs> endpointsConfiguration) {
@@ -260,7 +261,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpointsConfiguration(@Nullable FlowEndpointsConfigurationArgs endpointsConfiguration) {
-            this.endpointsConfiguration = Output.ofNullable(endpointsConfiguration);
+            this.endpointsConfiguration = Codegen.ofNullable(endpointsConfiguration);
             return this;
         }
         public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
@@ -268,7 +269,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder integrationAccount(@Nullable Output<ResourceReferenceArgs> integrationAccount) {
@@ -276,7 +277,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder integrationAccount(@Nullable ResourceReferenceArgs integrationAccount) {
-            this.integrationAccount = Output.ofNullable(integrationAccount);
+            this.integrationAccount = Codegen.ofNullable(integrationAccount);
             return this;
         }
         public Builder integrationServiceEnvironment(@Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment) {
@@ -284,7 +285,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder integrationServiceEnvironment(@Nullable ResourceReferenceArgs integrationServiceEnvironment) {
-            this.integrationServiceEnvironment = Output.ofNullable(integrationServiceEnvironment);
+            this.integrationServiceEnvironment = Codegen.ofNullable(integrationServiceEnvironment);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -292,7 +293,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,WorkflowParameterArgs>> parameters) {
@@ -300,7 +301,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable Map<String,WorkflowParameterArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -316,7 +317,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable Either<String,WorkflowState> state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -324,7 +325,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder workflowName(@Nullable Output<String> workflowName) {
@@ -332,7 +333,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workflowName(@Nullable String workflowName) {
-            this.workflowName = Output.ofNullable(workflowName);
+            this.workflowName = Codegen.ofNullable(workflowName);
             return this;
         }        public WorkflowArgs build() {
             return new WorkflowArgs(accessControl, definition, endpointsConfiguration, identity, integrationAccount, integrationServiceEnvironment, location, parameters, resourceGroupName, state, tags, workflowName);

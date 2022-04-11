@@ -5,6 +5,7 @@ package io.pulumi.azurenative.sql;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ServerAzureADOnlyAuthenticationArgs extends io.pulumi.resourc
       private final @Nullable Output<String> authenticationName;
 
     public Output<String> getAuthenticationName() {
-        return this.authenticationName == null ? Output.empty() : this.authenticationName;
+        return this.authenticationName == null ? Codegen.empty() : this.authenticationName;
     }
 
     /**
@@ -71,10 +72,10 @@ public final class ServerAzureADOnlyAuthenticationArgs extends io.pulumi.resourc
     }
 
     private ServerAzureADOnlyAuthenticationArgs() {
-        this.authenticationName = Output.empty();
-        this.azureADOnlyAuthentication = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverName = Output.empty();
+        this.authenticationName = Codegen.empty();
+        this.azureADOnlyAuthentication = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class ServerAzureADOnlyAuthenticationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder authenticationName(@Nullable String authenticationName) {
-            this.authenticationName = Output.ofNullable(authenticationName);
+            this.authenticationName = Codegen.ofNullable(authenticationName);
             return this;
         }
         public Builder azureADOnlyAuthentication(Output<Boolean> azureADOnlyAuthentication) {

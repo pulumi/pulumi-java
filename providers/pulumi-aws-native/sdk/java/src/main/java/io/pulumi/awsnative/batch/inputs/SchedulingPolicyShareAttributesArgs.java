@@ -5,6 +5,7 @@ package io.pulumi.awsnative.batch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -19,14 +20,14 @@ public final class SchedulingPolicyShareAttributesArgs extends io.pulumi.resourc
       private final @Nullable Output<String> shareIdentifier;
 
     public Output<String> getShareIdentifier() {
-        return this.shareIdentifier == null ? Output.empty() : this.shareIdentifier;
+        return this.shareIdentifier == null ? Codegen.empty() : this.shareIdentifier;
     }
 
     @Import(name="weightFactor")
       private final @Nullable Output<Double> weightFactor;
 
     public Output<Double> getWeightFactor() {
-        return this.weightFactor == null ? Output.empty() : this.weightFactor;
+        return this.weightFactor == null ? Codegen.empty() : this.weightFactor;
     }
 
     public SchedulingPolicyShareAttributesArgs(
@@ -37,8 +38,8 @@ public final class SchedulingPolicyShareAttributesArgs extends io.pulumi.resourc
     }
 
     private SchedulingPolicyShareAttributesArgs() {
-        this.shareIdentifier = Output.empty();
-        this.weightFactor = Output.empty();
+        this.shareIdentifier = Codegen.empty();
+        this.weightFactor = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class SchedulingPolicyShareAttributesArgs extends io.pulumi.resourc
             return this;
         }
         public Builder shareIdentifier(@Nullable String shareIdentifier) {
-            this.shareIdentifier = Output.ofNullable(shareIdentifier);
+            this.shareIdentifier = Codegen.ofNullable(shareIdentifier);
             return this;
         }
         public Builder weightFactor(@Nullable Output<Double> weightFactor) {
@@ -76,7 +77,7 @@ public final class SchedulingPolicyShareAttributesArgs extends io.pulumi.resourc
             return this;
         }
         public Builder weightFactor(@Nullable Double weightFactor) {
-            this.weightFactor = Output.ofNullable(weightFactor);
+            this.weightFactor = Codegen.ofNullable(weightFactor);
             return this;
         }        public SchedulingPolicyShareAttributesArgs build() {
             return new SchedulingPolicyShareAttributesArgs(shareIdentifier, weightFactor);

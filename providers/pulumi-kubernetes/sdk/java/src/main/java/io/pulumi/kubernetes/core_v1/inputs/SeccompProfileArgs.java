@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class SeccompProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> localhostProfile;
 
     public Output<String> getLocalhostProfile() {
-        return this.localhostProfile == null ? Output.empty() : this.localhostProfile;
+        return this.localhostProfile == null ? Codegen.empty() : this.localhostProfile;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class SeccompProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SeccompProfileArgs() {
-        this.localhostProfile = Output.empty();
-        this.type = Output.empty();
+        this.localhostProfile = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -86,7 +87,7 @@ public final class SeccompProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder localhostProfile(@Nullable String localhostProfile) {
-            this.localhostProfile = Output.ofNullable(localhostProfile);
+            this.localhostProfile = Codegen.ofNullable(localhostProfile);
             return this;
         }
         public Builder type(Output<String> type) {

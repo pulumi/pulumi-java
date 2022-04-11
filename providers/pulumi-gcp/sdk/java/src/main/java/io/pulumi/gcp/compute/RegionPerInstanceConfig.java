@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.RegionPerInstanceConfigArgs;
 import io.pulumi.gcp.compute.inputs.RegionPerInstanceConfigState;
@@ -213,7 +214,7 @@ public class RegionPerInstanceConfig extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public RegionPerInstanceConfig(String name, RegionPerInstanceConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/regionPerInstanceConfig:RegionPerInstanceConfig", name, args == null ? RegionPerInstanceConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/regionPerInstanceConfig:RegionPerInstanceConfig", name, args == null ? RegionPerInstanceConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegionPerInstanceConfig(String name, Output<String> id, @Nullable RegionPerInstanceConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

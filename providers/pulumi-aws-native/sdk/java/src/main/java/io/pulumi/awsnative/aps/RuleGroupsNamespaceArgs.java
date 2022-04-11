@@ -6,6 +6,7 @@ package io.pulumi.awsnative.aps;
 import io.pulumi.awsnative.aps.inputs.RuleGroupsNamespaceTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class RuleGroupsNamespaceArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class RuleGroupsNamespaceArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<RuleGroupsNamespaceTagArgs>> tags;
 
     public Output<List<RuleGroupsNamespaceTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -72,10 +73,10 @@ public final class RuleGroupsNamespaceArgs extends io.pulumi.resources.ResourceA
     }
 
     private RuleGroupsNamespaceArgs() {
-        this.data = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
-        this.workspace = Output.empty();
+        this.data = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.workspace = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -117,7 +118,7 @@ public final class RuleGroupsNamespaceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<List<RuleGroupsNamespaceTagArgs>> tags) {
@@ -125,7 +126,7 @@ public final class RuleGroupsNamespaceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder tags(@Nullable List<RuleGroupsNamespaceTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(RuleGroupsNamespaceTagArgs... tags) {

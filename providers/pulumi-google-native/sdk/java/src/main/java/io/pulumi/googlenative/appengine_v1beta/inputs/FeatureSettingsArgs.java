@@ -5,6 +5,7 @@ package io.pulumi.googlenative.appengine_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class FeatureSettingsArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Boolean> splitHealthChecks;
 
     public Output<Boolean> getSplitHealthChecks() {
-        return this.splitHealthChecks == null ? Output.empty() : this.splitHealthChecks;
+        return this.splitHealthChecks == null ? Codegen.empty() : this.splitHealthChecks;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class FeatureSettingsArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Boolean> useContainerOptimizedOs;
 
     public Output<Boolean> getUseContainerOptimizedOs() {
-        return this.useContainerOptimizedOs == null ? Output.empty() : this.useContainerOptimizedOs;
+        return this.useContainerOptimizedOs == null ? Codegen.empty() : this.useContainerOptimizedOs;
     }
 
     public FeatureSettingsArgs(
@@ -48,8 +49,8 @@ public final class FeatureSettingsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private FeatureSettingsArgs() {
-        this.splitHealthChecks = Output.empty();
-        this.useContainerOptimizedOs = Output.empty();
+        this.splitHealthChecks = Codegen.empty();
+        this.useContainerOptimizedOs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class FeatureSettingsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder splitHealthChecks(@Nullable Boolean splitHealthChecks) {
-            this.splitHealthChecks = Output.ofNullable(splitHealthChecks);
+            this.splitHealthChecks = Codegen.ofNullable(splitHealthChecks);
             return this;
         }
         public Builder useContainerOptimizedOs(@Nullable Output<Boolean> useContainerOptimizedOs) {
@@ -87,7 +88,7 @@ public final class FeatureSettingsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder useContainerOptimizedOs(@Nullable Boolean useContainerOptimizedOs) {
-            this.useContainerOptimizedOs = Output.ofNullable(useContainerOptimizedOs);
+            this.useContainerOptimizedOs = Codegen.ofNullable(useContainerOptimizedOs);
             return this;
         }        public FeatureSettingsArgs build() {
             return new FeatureSettingsArgs(splitHealthChecks, useContainerOptimizedOs);

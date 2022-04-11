@@ -6,6 +6,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 import io.pulumi.azurenative.hdinsight.inputs.LinuxOperatingSystemProfileArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,7 +27,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<LinuxOperatingSystemProfileArgs> linuxOperatingSystemProfile;
 
     public Output<LinuxOperatingSystemProfileArgs> getLinuxOperatingSystemProfile() {
-        return this.linuxOperatingSystemProfile == null ? Output.empty() : this.linuxOperatingSystemProfile;
+        return this.linuxOperatingSystemProfile == null ? Codegen.empty() : this.linuxOperatingSystemProfile;
     }
 
     public OsProfileArgs(@Nullable Output<LinuxOperatingSystemProfileArgs> linuxOperatingSystemProfile) {
@@ -34,7 +35,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OsProfileArgs() {
-        this.linuxOperatingSystemProfile = Output.empty();
+        this.linuxOperatingSystemProfile = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder linuxOperatingSystemProfile(@Nullable LinuxOperatingSystemProfileArgs linuxOperatingSystemProfile) {
-            this.linuxOperatingSystemProfile = Output.ofNullable(linuxOperatingSystemProfile);
+            this.linuxOperatingSystemProfile = Codegen.ofNullable(linuxOperatingSystemProfile);
             return this;
         }        public OsProfileArgs build() {
             return new OsProfileArgs(linuxOperatingSystemProfile);

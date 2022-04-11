@@ -7,6 +7,7 @@ import io.pulumi.azurenative.servicebus.enums.IPAction;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Either<String,IPAction>> action;
 
     public Output<Either<String,IPAction>> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> filterName;
 
     public Output<String> getFilterName() {
-        return this.filterName == null ? Output.empty() : this.filterName;
+        return this.filterName == null ? Codegen.empty() : this.filterName;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> ipFilterRuleName;
 
     public Output<String> getIpFilterRuleName() {
-        return this.ipFilterRuleName == null ? Output.empty() : this.ipFilterRuleName;
+        return this.ipFilterRuleName == null ? Codegen.empty() : this.ipFilterRuleName;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> ipMask;
 
     public Output<String> getIpMask() {
-        return this.ipMask == null ? Output.empty() : this.ipMask;
+        return this.ipMask == null ? Codegen.empty() : this.ipMask;
     }
 
     /**
@@ -98,12 +99,12 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
     }
 
     private NamespaceIpFilterRuleArgs() {
-        this.action = Output.empty();
-        this.filterName = Output.empty();
-        this.ipFilterRuleName = Output.empty();
-        this.ipMask = Output.empty();
-        this.namespaceName = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.action = Codegen.empty();
+        this.filterName = Codegen.empty();
+        this.ipFilterRuleName = Codegen.empty();
+        this.ipMask = Codegen.empty();
+        this.namespaceName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder action(@Nullable Either<String,IPAction> action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder filterName(@Nullable Output<String> filterName) {
@@ -149,7 +150,7 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder filterName(@Nullable String filterName) {
-            this.filterName = Output.ofNullable(filterName);
+            this.filterName = Codegen.ofNullable(filterName);
             return this;
         }
         public Builder ipFilterRuleName(@Nullable Output<String> ipFilterRuleName) {
@@ -157,7 +158,7 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder ipFilterRuleName(@Nullable String ipFilterRuleName) {
-            this.ipFilterRuleName = Output.ofNullable(ipFilterRuleName);
+            this.ipFilterRuleName = Codegen.ofNullable(ipFilterRuleName);
             return this;
         }
         public Builder ipMask(@Nullable Output<String> ipMask) {
@@ -165,7 +166,7 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder ipMask(@Nullable String ipMask) {
-            this.ipMask = Output.ofNullable(ipMask);
+            this.ipMask = Codegen.ofNullable(ipMask);
             return this;
         }
         public Builder namespaceName(Output<String> namespaceName) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.billingbudgets_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.billingbudgets_v1beta1.enums.GoogleCloudBillingBudgetsV1beta1ThresholdRuleSpendBasis;
 import java.lang.Double;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs extends io.
       private final @Nullable Output<GoogleCloudBillingBudgetsV1beta1ThresholdRuleSpendBasis> spendBasis;
 
     public Output<GoogleCloudBillingBudgetsV1beta1ThresholdRuleSpendBasis> getSpendBasis() {
-        return this.spendBasis == null ? Output.empty() : this.spendBasis;
+        return this.spendBasis == null ? Codegen.empty() : this.spendBasis;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs extends io.
     }
 
     private GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs() {
-        this.spendBasis = Output.empty();
-        this.thresholdPercent = Output.empty();
+        this.spendBasis = Codegen.empty();
+        this.thresholdPercent = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs extends io.
             return this;
         }
         public Builder spendBasis(@Nullable GoogleCloudBillingBudgetsV1beta1ThresholdRuleSpendBasis spendBasis) {
-            this.spendBasis = Output.ofNullable(spendBasis);
+            this.spendBasis = Codegen.ofNullable(spendBasis);
             return this;
         }
         public Builder thresholdPercent(Output<Double> thresholdPercent) {

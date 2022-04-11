@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataproc.inputs.AutoscalingPolicyBasicAlgorithmYarnConfigGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class AutoscalingPolicyBasicAlgorithmGetArgs extends io.pulumi.reso
       private final @Nullable Output<String> cooldownPeriod;
 
     public Output<String> getCooldownPeriod() {
-        return this.cooldownPeriod == null ? Output.empty() : this.cooldownPeriod;
+        return this.cooldownPeriod == null ? Codegen.empty() : this.cooldownPeriod;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class AutoscalingPolicyBasicAlgorithmGetArgs extends io.pulumi.reso
     }
 
     private AutoscalingPolicyBasicAlgorithmGetArgs() {
-        this.cooldownPeriod = Output.empty();
-        this.yarnConfig = Output.empty();
+        this.cooldownPeriod = Codegen.empty();
+        this.yarnConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class AutoscalingPolicyBasicAlgorithmGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder cooldownPeriod(@Nullable String cooldownPeriod) {
-            this.cooldownPeriod = Output.ofNullable(cooldownPeriod);
+            this.cooldownPeriod = Codegen.ofNullable(cooldownPeriod);
             return this;
         }
         public Builder yarnConfig(Output<AutoscalingPolicyBasicAlgorithmYarnConfigGetArgs> yarnConfig) {

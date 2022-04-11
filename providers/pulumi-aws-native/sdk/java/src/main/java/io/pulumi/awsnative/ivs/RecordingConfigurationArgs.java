@@ -8,6 +8,7 @@ import io.pulumi.awsnative.ivs.inputs.RecordingConfigurationTagArgs;
 import io.pulumi.awsnative.ivs.inputs.RecordingConfigurationThumbnailConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,7 +34,7 @@ public final class RecordingConfigurationArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -44,14 +45,14 @@ public final class RecordingConfigurationArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<RecordingConfigurationTagArgs>> tags;
 
     public Output<List<RecordingConfigurationTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="thumbnailConfiguration")
       private final @Nullable Output<RecordingConfigurationThumbnailConfigurationArgs> thumbnailConfiguration;
 
     public Output<RecordingConfigurationThumbnailConfigurationArgs> getThumbnailConfiguration() {
-        return this.thumbnailConfiguration == null ? Output.empty() : this.thumbnailConfiguration;
+        return this.thumbnailConfiguration == null ? Codegen.empty() : this.thumbnailConfiguration;
     }
 
     public RecordingConfigurationArgs(
@@ -66,10 +67,10 @@ public final class RecordingConfigurationArgs extends io.pulumi.resources.Resour
     }
 
     private RecordingConfigurationArgs() {
-        this.destinationConfiguration = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
-        this.thumbnailConfiguration = Output.empty();
+        this.destinationConfiguration = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.thumbnailConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class RecordingConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<List<RecordingConfigurationTagArgs>> tags) {
@@ -119,7 +120,7 @@ public final class RecordingConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder tags(@Nullable List<RecordingConfigurationTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(RecordingConfigurationTagArgs... tags) {
@@ -130,7 +131,7 @@ public final class RecordingConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder thumbnailConfiguration(@Nullable RecordingConfigurationThumbnailConfigurationArgs thumbnailConfiguration) {
-            this.thumbnailConfiguration = Output.ofNullable(thumbnailConfiguration);
+            this.thumbnailConfiguration = Codegen.ofNullable(thumbnailConfiguration);
             return this;
         }        public RecordingConfigurationArgs build() {
             return new RecordingConfigurationArgs(destinationConfiguration, name, tags, thumbnailConfiguration);

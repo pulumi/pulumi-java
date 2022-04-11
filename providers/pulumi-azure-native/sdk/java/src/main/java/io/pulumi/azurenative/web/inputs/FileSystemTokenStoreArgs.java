@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class FileSystemTokenStoreArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> directory;
 
     public Output<String> getDirectory() {
-        return this.directory == null ? Output.empty() : this.directory;
+        return this.directory == null ? Codegen.empty() : this.directory;
     }
 
     public FileSystemTokenStoreArgs(@Nullable Output<String> directory) {
@@ -34,7 +35,7 @@ public final class FileSystemTokenStoreArgs extends io.pulumi.resources.Resource
     }
 
     private FileSystemTokenStoreArgs() {
-        this.directory = Output.empty();
+        this.directory = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class FileSystemTokenStoreArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder directory(@Nullable String directory) {
-            this.directory = Output.ofNullable(directory);
+            this.directory = Codegen.ofNullable(directory);
             return this;
         }        public FileSystemTokenStoreArgs build() {
             return new FileSystemTokenStoreArgs(directory);

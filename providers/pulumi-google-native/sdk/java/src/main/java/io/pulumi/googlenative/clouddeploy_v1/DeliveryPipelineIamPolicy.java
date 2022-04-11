@@ -6,6 +6,7 @@ package io.pulumi.googlenative.clouddeploy_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.clouddeploy_v1.DeliveryPipelineIamPolicyArgs;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.AuditConfigResponse;
@@ -102,7 +103,7 @@ public class DeliveryPipelineIamPolicy extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public DeliveryPipelineIamPolicy(String name, DeliveryPipelineIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:clouddeploy/v1:DeliveryPipelineIamPolicy", name, args == null ? DeliveryPipelineIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:clouddeploy/v1:DeliveryPipelineIamPolicy", name, args == null ? DeliveryPipelineIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DeliveryPipelineIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

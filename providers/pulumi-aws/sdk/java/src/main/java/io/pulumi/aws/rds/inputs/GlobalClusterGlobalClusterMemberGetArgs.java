@@ -5,6 +5,7 @@ package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class GlobalClusterGlobalClusterMemberGetArgs extends io.pulumi.res
       private final @Nullable Output<String> dbClusterArn;
 
     public Output<String> getDbClusterArn() {
-        return this.dbClusterArn == null ? Output.empty() : this.dbClusterArn;
+        return this.dbClusterArn == null ? Codegen.empty() : this.dbClusterArn;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class GlobalClusterGlobalClusterMemberGetArgs extends io.pulumi.res
       private final @Nullable Output<Boolean> isWriter;
 
     public Output<Boolean> getIsWriter() {
-        return this.isWriter == null ? Output.empty() : this.isWriter;
+        return this.isWriter == null ? Codegen.empty() : this.isWriter;
     }
 
     public GlobalClusterGlobalClusterMemberGetArgs(
@@ -45,8 +46,8 @@ public final class GlobalClusterGlobalClusterMemberGetArgs extends io.pulumi.res
     }
 
     private GlobalClusterGlobalClusterMemberGetArgs() {
-        this.dbClusterArn = Output.empty();
-        this.isWriter = Output.empty();
+        this.dbClusterArn = Codegen.empty();
+        this.isWriter = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class GlobalClusterGlobalClusterMemberGetArgs extends io.pulumi.res
             return this;
         }
         public Builder dbClusterArn(@Nullable String dbClusterArn) {
-            this.dbClusterArn = Output.ofNullable(dbClusterArn);
+            this.dbClusterArn = Codegen.ofNullable(dbClusterArn);
             return this;
         }
         public Builder isWriter(@Nullable Output<Boolean> isWriter) {
@@ -84,7 +85,7 @@ public final class GlobalClusterGlobalClusterMemberGetArgs extends io.pulumi.res
             return this;
         }
         public Builder isWriter(@Nullable Boolean isWriter) {
-            this.isWriter = Output.ofNullable(isWriter);
+            this.isWriter = Codegen.ofNullable(isWriter);
             return this;
         }        public GlobalClusterGlobalClusterMemberGetArgs build() {
             return new GlobalClusterGlobalClusterMemberGetArgs(dbClusterArn, isWriter);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.containeranalysis.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.containeranalysis.inputs.OccurenceAttestationSignatureGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -51,8 +52,8 @@ public final class OccurenceAttestationGetArgs extends io.pulumi.resources.Resou
     }
 
     private OccurenceAttestationGetArgs() {
-        this.serializedPayload = Output.empty();
-        this.signatures = Output.empty();
+        this.serializedPayload = Codegen.empty();
+        this.signatures = Codegen.empty();
     }
 
     public static Builder builder() {

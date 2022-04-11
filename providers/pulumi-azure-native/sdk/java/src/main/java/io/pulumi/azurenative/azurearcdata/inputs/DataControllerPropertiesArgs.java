@@ -10,6 +10,7 @@ import io.pulumi.azurenative.azurearcdata.inputs.UploadServicePrincipalArgs;
 import io.pulumi.azurenative.azurearcdata.inputs.UploadWatermarkArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -32,7 +33,7 @@ public final class DataControllerPropertiesArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<BasicLoginInformationArgs> basicLoginInformation;
 
     public Output<BasicLoginInformationArgs> getBasicLoginInformation() {
-        return this.basicLoginInformation == null ? Output.empty() : this.basicLoginInformation;
+        return this.basicLoginInformation == null ? Codegen.empty() : this.basicLoginInformation;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class DataControllerPropertiesArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Object> k8sRaw;
 
     public Output<Object> getK8sRaw() {
-        return this.k8sRaw == null ? Output.empty() : this.k8sRaw;
+        return this.k8sRaw == null ? Codegen.empty() : this.k8sRaw;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class DataControllerPropertiesArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> lastUploadedDate;
 
     public Output<String> getLastUploadedDate() {
-        return this.lastUploadedDate == null ? Output.empty() : this.lastUploadedDate;
+        return this.lastUploadedDate == null ? Codegen.empty() : this.lastUploadedDate;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class DataControllerPropertiesArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<LogAnalyticsWorkspaceConfigArgs> logAnalyticsWorkspaceConfig;
 
     public Output<LogAnalyticsWorkspaceConfigArgs> getLogAnalyticsWorkspaceConfig() {
-        return this.logAnalyticsWorkspaceConfig == null ? Output.empty() : this.logAnalyticsWorkspaceConfig;
+        return this.logAnalyticsWorkspaceConfig == null ? Codegen.empty() : this.logAnalyticsWorkspaceConfig;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class DataControllerPropertiesArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<OnPremisePropertyArgs> onPremiseProperty;
 
     public Output<OnPremisePropertyArgs> getOnPremiseProperty() {
-        return this.onPremiseProperty == null ? Output.empty() : this.onPremiseProperty;
+        return this.onPremiseProperty == null ? Codegen.empty() : this.onPremiseProperty;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class DataControllerPropertiesArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<UploadServicePrincipalArgs> uploadServicePrincipal;
 
     public Output<UploadServicePrincipalArgs> getUploadServicePrincipal() {
-        return this.uploadServicePrincipal == null ? Output.empty() : this.uploadServicePrincipal;
+        return this.uploadServicePrincipal == null ? Codegen.empty() : this.uploadServicePrincipal;
     }
 
     /**
@@ -98,7 +99,7 @@ public final class DataControllerPropertiesArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<UploadWatermarkArgs> uploadWatermark;
 
     public Output<UploadWatermarkArgs> getUploadWatermark() {
-        return this.uploadWatermark == null ? Output.empty() : this.uploadWatermark;
+        return this.uploadWatermark == null ? Codegen.empty() : this.uploadWatermark;
     }
 
     public DataControllerPropertiesArgs(
@@ -119,13 +120,13 @@ public final class DataControllerPropertiesArgs extends io.pulumi.resources.Reso
     }
 
     private DataControllerPropertiesArgs() {
-        this.basicLoginInformation = Output.empty();
-        this.k8sRaw = Output.empty();
-        this.lastUploadedDate = Output.empty();
-        this.logAnalyticsWorkspaceConfig = Output.empty();
-        this.onPremiseProperty = Output.empty();
-        this.uploadServicePrincipal = Output.empty();
-        this.uploadWatermark = Output.empty();
+        this.basicLoginInformation = Codegen.empty();
+        this.k8sRaw = Codegen.empty();
+        this.lastUploadedDate = Codegen.empty();
+        this.logAnalyticsWorkspaceConfig = Codegen.empty();
+        this.onPremiseProperty = Codegen.empty();
+        this.uploadServicePrincipal = Codegen.empty();
+        this.uploadWatermark = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -165,7 +166,7 @@ public final class DataControllerPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder basicLoginInformation(@Nullable BasicLoginInformationArgs basicLoginInformation) {
-            this.basicLoginInformation = Output.ofNullable(basicLoginInformation);
+            this.basicLoginInformation = Codegen.ofNullable(basicLoginInformation);
             return this;
         }
         public Builder k8sRaw(@Nullable Output<Object> k8sRaw) {
@@ -173,7 +174,7 @@ public final class DataControllerPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder k8sRaw(@Nullable Object k8sRaw) {
-            this.k8sRaw = Output.ofNullable(k8sRaw);
+            this.k8sRaw = Codegen.ofNullable(k8sRaw);
             return this;
         }
         public Builder lastUploadedDate(@Nullable Output<String> lastUploadedDate) {
@@ -181,7 +182,7 @@ public final class DataControllerPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder lastUploadedDate(@Nullable String lastUploadedDate) {
-            this.lastUploadedDate = Output.ofNullable(lastUploadedDate);
+            this.lastUploadedDate = Codegen.ofNullable(lastUploadedDate);
             return this;
         }
         public Builder logAnalyticsWorkspaceConfig(@Nullable Output<LogAnalyticsWorkspaceConfigArgs> logAnalyticsWorkspaceConfig) {
@@ -189,7 +190,7 @@ public final class DataControllerPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder logAnalyticsWorkspaceConfig(@Nullable LogAnalyticsWorkspaceConfigArgs logAnalyticsWorkspaceConfig) {
-            this.logAnalyticsWorkspaceConfig = Output.ofNullable(logAnalyticsWorkspaceConfig);
+            this.logAnalyticsWorkspaceConfig = Codegen.ofNullable(logAnalyticsWorkspaceConfig);
             return this;
         }
         public Builder onPremiseProperty(@Nullable Output<OnPremisePropertyArgs> onPremiseProperty) {
@@ -197,7 +198,7 @@ public final class DataControllerPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder onPremiseProperty(@Nullable OnPremisePropertyArgs onPremiseProperty) {
-            this.onPremiseProperty = Output.ofNullable(onPremiseProperty);
+            this.onPremiseProperty = Codegen.ofNullable(onPremiseProperty);
             return this;
         }
         public Builder uploadServicePrincipal(@Nullable Output<UploadServicePrincipalArgs> uploadServicePrincipal) {
@@ -205,7 +206,7 @@ public final class DataControllerPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder uploadServicePrincipal(@Nullable UploadServicePrincipalArgs uploadServicePrincipal) {
-            this.uploadServicePrincipal = Output.ofNullable(uploadServicePrincipal);
+            this.uploadServicePrincipal = Codegen.ofNullable(uploadServicePrincipal);
             return this;
         }
         public Builder uploadWatermark(@Nullable Output<UploadWatermarkArgs> uploadWatermark) {
@@ -213,7 +214,7 @@ public final class DataControllerPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder uploadWatermark(@Nullable UploadWatermarkArgs uploadWatermark) {
-            this.uploadWatermark = Output.ofNullable(uploadWatermark);
+            this.uploadWatermark = Codegen.ofNullable(uploadWatermark);
             return this;
         }        public DataControllerPropertiesArgs build() {
             return new DataControllerPropertiesArgs(basicLoginInformation, k8sRaw, lastUploadedDate, logAnalyticsWorkspaceConfig, onPremiseProperty, uploadServicePrincipal, uploadWatermark);

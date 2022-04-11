@@ -11,6 +11,7 @@ import io.pulumi.azurenative.media.inputs.UtcClipTimeArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +35,7 @@ public final class JobInputHttpArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> baseUri;
 
     public Output<String> getBaseUri() {
-        return this.baseUri == null ? Output.empty() : this.baseUri;
+        return this.baseUri == null ? Codegen.empty() : this.baseUri;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class JobInputHttpArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> end;
 
     public Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> getEnd() {
-        return this.end == null ? Output.empty() : this.end;
+        return this.end == null ? Codegen.empty() : this.end;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class JobInputHttpArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> files;
 
     public Output<List<String>> getFiles() {
-        return this.files == null ? Output.empty() : this.files;
+        return this.files == null ? Codegen.empty() : this.files;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class JobInputHttpArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<Object>> inputDefinitions;
 
     public Output<List<Object>> getInputDefinitions() {
-        return this.inputDefinitions == null ? Output.empty() : this.inputDefinitions;
+        return this.inputDefinitions == null ? Codegen.empty() : this.inputDefinitions;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class JobInputHttpArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> label;
 
     public Output<String> getLabel() {
-        return this.label == null ? Output.empty() : this.label;
+        return this.label == null ? Codegen.empty() : this.label;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class JobInputHttpArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> start;
 
     public Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> getStart() {
-        return this.start == null ? Output.empty() : this.start;
+        return this.start == null ? Codegen.empty() : this.start;
     }
 
     public JobInputHttpArgs(
@@ -122,13 +123,13 @@ public final class JobInputHttpArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobInputHttpArgs() {
-        this.baseUri = Output.empty();
-        this.end = Output.empty();
-        this.files = Output.empty();
-        this.inputDefinitions = Output.empty();
-        this.label = Output.empty();
-        this.odataType = Output.empty();
-        this.start = Output.empty();
+        this.baseUri = Codegen.empty();
+        this.end = Codegen.empty();
+        this.files = Codegen.empty();
+        this.inputDefinitions = Codegen.empty();
+        this.label = Codegen.empty();
+        this.odataType = Codegen.empty();
+        this.start = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -168,7 +169,7 @@ public final class JobInputHttpArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder baseUri(@Nullable String baseUri) {
-            this.baseUri = Output.ofNullable(baseUri);
+            this.baseUri = Codegen.ofNullable(baseUri);
             return this;
         }
         public Builder end(@Nullable Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> end) {
@@ -176,7 +177,7 @@ public final class JobInputHttpArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder end(@Nullable Either<AbsoluteClipTimeArgs,UtcClipTimeArgs> end) {
-            this.end = Output.ofNullable(end);
+            this.end = Codegen.ofNullable(end);
             return this;
         }
         public Builder files(@Nullable Output<List<String>> files) {
@@ -184,7 +185,7 @@ public final class JobInputHttpArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder files(@Nullable List<String> files) {
-            this.files = Output.ofNullable(files);
+            this.files = Codegen.ofNullable(files);
             return this;
         }
         public Builder files(String... files) {
@@ -195,7 +196,7 @@ public final class JobInputHttpArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inputDefinitions(@Nullable List<Object> inputDefinitions) {
-            this.inputDefinitions = Output.ofNullable(inputDefinitions);
+            this.inputDefinitions = Codegen.ofNullable(inputDefinitions);
             return this;
         }
         public Builder inputDefinitions(Object... inputDefinitions) {
@@ -206,7 +207,7 @@ public final class JobInputHttpArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder label(@Nullable String label) {
-            this.label = Output.ofNullable(label);
+            this.label = Codegen.ofNullable(label);
             return this;
         }
         public Builder odataType(Output<String> odataType) {
@@ -222,7 +223,7 @@ public final class JobInputHttpArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder start(@Nullable Either<AbsoluteClipTimeArgs,UtcClipTimeArgs> start) {
-            this.start = Output.ofNullable(start);
+            this.start = Codegen.ofNullable(start);
             return this;
         }        public JobInputHttpArgs build() {
             return new JobInputHttpArgs(baseUri, end, files, inputDefinitions, label, odataType, start);

@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.certificates.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.certificates.k8s.io_v1beta1.inputs.CertificateSigningRequestConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class CertificateSigningRequestStatusArgs extends io.pulumi.resourc
       private final @Nullable Output<String> certificate;
 
     public Output<String> getCertificate() {
-        return this.certificate == null ? Output.empty() : this.certificate;
+        return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class CertificateSigningRequestStatusArgs extends io.pulumi.resourc
       private final @Nullable Output<List<CertificateSigningRequestConditionArgs>> conditions;
 
     public Output<List<CertificateSigningRequestConditionArgs>> getConditions() {
-        return this.conditions == null ? Output.empty() : this.conditions;
+        return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
     public CertificateSigningRequestStatusArgs(
@@ -46,8 +47,8 @@ public final class CertificateSigningRequestStatusArgs extends io.pulumi.resourc
     }
 
     private CertificateSigningRequestStatusArgs() {
-        this.certificate = Output.empty();
-        this.conditions = Output.empty();
+        this.certificate = Codegen.empty();
+        this.conditions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class CertificateSigningRequestStatusArgs extends io.pulumi.resourc
             return this;
         }
         public Builder certificate(@Nullable String certificate) {
-            this.certificate = Output.ofNullable(certificate);
+            this.certificate = Codegen.ofNullable(certificate);
             return this;
         }
         public Builder conditions(@Nullable Output<List<CertificateSigningRequestConditionArgs>> conditions) {
@@ -85,7 +86,7 @@ public final class CertificateSigningRequestStatusArgs extends io.pulumi.resourc
             return this;
         }
         public Builder conditions(@Nullable List<CertificateSigningRequestConditionArgs> conditions) {
-            this.conditions = Output.ofNullable(conditions);
+            this.conditions = Codegen.ofNullable(conditions);
             return this;
         }
         public Builder conditions(CertificateSigningRequestConditionArgs... conditions) {

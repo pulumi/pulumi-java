@@ -5,6 +5,7 @@ package io.pulumi.gcp.logging.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class OrganizationBucketConfigState extends io.pulumi.resources.Res
       private final @Nullable Output<String> bucketId;
 
     public Output<String> getBucketId() {
-        return this.bucketId == null ? Output.empty() : this.bucketId;
+        return this.bucketId == null ? Codegen.empty() : this.bucketId;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class OrganizationBucketConfigState extends io.pulumi.resources.Res
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class OrganizationBucketConfigState extends io.pulumi.resources.Res
       private final @Nullable Output<String> lifecycleState;
 
     public Output<String> getLifecycleState() {
-        return this.lifecycleState == null ? Output.empty() : this.lifecycleState;
+        return this.lifecycleState == null ? Codegen.empty() : this.lifecycleState;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class OrganizationBucketConfigState extends io.pulumi.resources.Res
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class OrganizationBucketConfigState extends io.pulumi.resources.Res
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class OrganizationBucketConfigState extends io.pulumi.resources.Res
       private final @Nullable Output<String> organization;
 
     public Output<String> getOrganization() {
-        return this.organization == null ? Output.empty() : this.organization;
+        return this.organization == null ? Codegen.empty() : this.organization;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class OrganizationBucketConfigState extends io.pulumi.resources.Res
       private final @Nullable Output<Integer> retentionDays;
 
     public Output<Integer> getRetentionDays() {
-        return this.retentionDays == null ? Output.empty() : this.retentionDays;
+        return this.retentionDays == null ? Codegen.empty() : this.retentionDays;
     }
 
     public OrganizationBucketConfigState(
@@ -110,13 +111,13 @@ public final class OrganizationBucketConfigState extends io.pulumi.resources.Res
     }
 
     private OrganizationBucketConfigState() {
-        this.bucketId = Output.empty();
-        this.description = Output.empty();
-        this.lifecycleState = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.organization = Output.empty();
-        this.retentionDays = Output.empty();
+        this.bucketId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.lifecycleState = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.organization = Codegen.empty();
+        this.retentionDays = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class OrganizationBucketConfigState extends io.pulumi.resources.Res
             return this;
         }
         public Builder bucketId(@Nullable String bucketId) {
-            this.bucketId = Output.ofNullable(bucketId);
+            this.bucketId = Codegen.ofNullable(bucketId);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -164,7 +165,7 @@ public final class OrganizationBucketConfigState extends io.pulumi.resources.Res
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder lifecycleState(@Nullable Output<String> lifecycleState) {
@@ -172,7 +173,7 @@ public final class OrganizationBucketConfigState extends io.pulumi.resources.Res
             return this;
         }
         public Builder lifecycleState(@Nullable String lifecycleState) {
-            this.lifecycleState = Output.ofNullable(lifecycleState);
+            this.lifecycleState = Codegen.ofNullable(lifecycleState);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -180,7 +181,7 @@ public final class OrganizationBucketConfigState extends io.pulumi.resources.Res
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -188,7 +189,7 @@ public final class OrganizationBucketConfigState extends io.pulumi.resources.Res
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder organization(@Nullable Output<String> organization) {
@@ -196,7 +197,7 @@ public final class OrganizationBucketConfigState extends io.pulumi.resources.Res
             return this;
         }
         public Builder organization(@Nullable String organization) {
-            this.organization = Output.ofNullable(organization);
+            this.organization = Codegen.ofNullable(organization);
             return this;
         }
         public Builder retentionDays(@Nullable Output<Integer> retentionDays) {
@@ -204,7 +205,7 @@ public final class OrganizationBucketConfigState extends io.pulumi.resources.Res
             return this;
         }
         public Builder retentionDays(@Nullable Integer retentionDays) {
-            this.retentionDays = Output.ofNullable(retentionDays);
+            this.retentionDays = Codegen.ofNullable(retentionDays);
             return this;
         }        public OrganizationBucketConfigState build() {
             return new OrganizationBucketConfigState(bucketId, description, lifecycleState, location, name, organization, retentionDays);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dataproc_v1.inputs.ClusterConfigArgs;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +21,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> actionOnFailedPrimaryWorkers;
 
     public Output<String> getActionOnFailedPrimaryWorkers() {
-        return this.actionOnFailedPrimaryWorkers == null ? Output.empty() : this.actionOnFailedPrimaryWorkers;
+        return this.actionOnFailedPrimaryWorkers == null ? Codegen.empty() : this.actionOnFailedPrimaryWorkers;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ClusterConfigArgs> config;
 
     public Output<ClusterConfigArgs> getConfig() {
-        return this.config == null ? Output.empty() : this.config;
+        return this.config == null ? Codegen.empty() : this.config;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region", required=true)
@@ -78,7 +79,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     public ClusterArgs(
@@ -99,13 +100,13 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterArgs() {
-        this.actionOnFailedPrimaryWorkers = Output.empty();
-        this.clusterName = Output.empty();
-        this.config = Output.empty();
-        this.labels = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.requestId = Output.empty();
+        this.actionOnFailedPrimaryWorkers = Codegen.empty();
+        this.clusterName = Codegen.empty();
+        this.config = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.requestId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder actionOnFailedPrimaryWorkers(@Nullable String actionOnFailedPrimaryWorkers) {
-            this.actionOnFailedPrimaryWorkers = Output.ofNullable(actionOnFailedPrimaryWorkers);
+            this.actionOnFailedPrimaryWorkers = Codegen.ofNullable(actionOnFailedPrimaryWorkers);
             return this;
         }
         public Builder clusterName(Output<String> clusterName) {
@@ -161,7 +162,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder config(@Nullable ClusterConfigArgs config) {
-            this.config = Output.ofNullable(config);
+            this.config = Codegen.ofNullable(config);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -169,7 +170,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -177,7 +178,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(Output<String> region) {
@@ -193,7 +194,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }        public ClusterArgs build() {
             return new ClusterArgs(actionOnFailedPrimaryWorkers, clusterName, config, labels, project, region, requestId);

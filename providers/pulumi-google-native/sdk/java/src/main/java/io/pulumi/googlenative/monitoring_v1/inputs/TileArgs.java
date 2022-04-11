@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.monitoring_v1.inputs.WidgetArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> height;
 
     public Output<Integer> getHeight() {
-        return this.height == null ? Output.empty() : this.height;
+        return this.height == null ? Codegen.empty() : this.height;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<WidgetArgs> widget;
 
     public Output<WidgetArgs> getWidget() {
-        return this.widget == null ? Output.empty() : this.widget;
+        return this.widget == null ? Codegen.empty() : this.widget;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> width;
 
     public Output<Integer> getWidth() {
-        return this.width == null ? Output.empty() : this.width;
+        return this.width == null ? Codegen.empty() : this.width;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> xPos;
 
     public Output<Integer> getXPos() {
-        return this.xPos == null ? Output.empty() : this.xPos;
+        return this.xPos == null ? Codegen.empty() : this.xPos;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> yPos;
 
     public Output<Integer> getYPos() {
-        return this.yPos == null ? Output.empty() : this.yPos;
+        return this.yPos == null ? Codegen.empty() : this.yPos;
     }
 
     public TileArgs(
@@ -88,11 +89,11 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TileArgs() {
-        this.height = Output.empty();
-        this.widget = Output.empty();
-        this.width = Output.empty();
-        this.xPos = Output.empty();
-        this.yPos = Output.empty();
+        this.height = Codegen.empty();
+        this.widget = Codegen.empty();
+        this.width = Codegen.empty();
+        this.xPos = Codegen.empty();
+        this.yPos = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder height(@Nullable Integer height) {
-            this.height = Output.ofNullable(height);
+            this.height = Codegen.ofNullable(height);
             return this;
         }
         public Builder widget(@Nullable Output<WidgetArgs> widget) {
@@ -136,7 +137,7 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder widget(@Nullable WidgetArgs widget) {
-            this.widget = Output.ofNullable(widget);
+            this.widget = Codegen.ofNullable(widget);
             return this;
         }
         public Builder width(@Nullable Output<Integer> width) {
@@ -144,7 +145,7 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder width(@Nullable Integer width) {
-            this.width = Output.ofNullable(width);
+            this.width = Codegen.ofNullable(width);
             return this;
         }
         public Builder xPos(@Nullable Output<Integer> xPos) {
@@ -152,7 +153,7 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder xPos(@Nullable Integer xPos) {
-            this.xPos = Output.ofNullable(xPos);
+            this.xPos = Codegen.ofNullable(xPos);
             return this;
         }
         public Builder yPos(@Nullable Output<Integer> yPos) {
@@ -160,7 +161,7 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder yPos(@Nullable Integer yPos) {
-            this.yPos = Output.ofNullable(yPos);
+            this.yPos = Codegen.ofNullable(yPos);
             return this;
         }        public TileArgs build() {
             return new TileArgs(height, widget, width, xPos, yPos);

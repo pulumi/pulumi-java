@@ -6,6 +6,7 @@ package io.pulumi.googlenative.vmmigration_v1alpha1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.vmmigration_v1alpha1.CutoverJobArgs;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.ComputeEngineTargetDetailsResponse;
@@ -172,7 +173,7 @@ public class CutoverJob extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CutoverJob(String name, CutoverJobArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:vmmigration/v1alpha1:CutoverJob", name, args == null ? CutoverJobArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:vmmigration/v1alpha1:CutoverJob", name, args == null ? CutoverJobArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CutoverJob(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

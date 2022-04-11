@@ -8,6 +8,7 @@ import io.pulumi.azurenative.network.enums.OwaspCrsExclusionEntrySelectorMatchOp
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -63,9 +64,9 @@ public final class OwaspCrsExclusionEntryArgs extends io.pulumi.resources.Resour
     }
 
     private OwaspCrsExclusionEntryArgs() {
-        this.matchVariable = Output.empty();
-        this.selector = Output.empty();
-        this.selectorMatchOperator = Output.empty();
+        this.matchVariable = Codegen.empty();
+        this.selector = Codegen.empty();
+        this.selectorMatchOperator = Codegen.empty();
     }
 
     public static Builder builder() {

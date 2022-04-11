@@ -5,6 +5,7 @@ package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -58,9 +59,9 @@ public final class GroupTagArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GroupTagArgs() {
-        this.key = Output.empty();
-        this.propagateAtLaunch = Output.empty();
-        this.value = Output.empty();
+        this.key = Codegen.empty();
+        this.propagateAtLaunch = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

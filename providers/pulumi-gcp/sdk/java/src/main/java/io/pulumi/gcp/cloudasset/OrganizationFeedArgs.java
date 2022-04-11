@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudasset;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudasset.inputs.OrganizationFeedConditionArgs;
 import io.pulumi.gcp.cloudasset.inputs.OrganizationFeedFeedOutputConfigArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class OrganizationFeedArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> assetNames;
 
     public Output<List<String>> getAssetNames() {
-        return this.assetNames == null ? Output.empty() : this.assetNames;
+        return this.assetNames == null ? Codegen.empty() : this.assetNames;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class OrganizationFeedArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> assetTypes;
 
     public Output<List<String>> getAssetTypes() {
-        return this.assetTypes == null ? Output.empty() : this.assetTypes;
+        return this.assetTypes == null ? Codegen.empty() : this.assetTypes;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class OrganizationFeedArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<OrganizationFeedConditionArgs> condition;
 
     public Output<OrganizationFeedConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class OrganizationFeedArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
-        return this.contentType == null ? Output.empty() : this.contentType;
+        return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
     /**
@@ -141,14 +142,14 @@ public final class OrganizationFeedArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private OrganizationFeedArgs() {
-        this.assetNames = Output.empty();
-        this.assetTypes = Output.empty();
-        this.billingProject = Output.empty();
-        this.condition = Output.empty();
-        this.contentType = Output.empty();
-        this.feedId = Output.empty();
-        this.feedOutputConfig = Output.empty();
-        this.orgId = Output.empty();
+        this.assetNames = Codegen.empty();
+        this.assetTypes = Codegen.empty();
+        this.billingProject = Codegen.empty();
+        this.condition = Codegen.empty();
+        this.contentType = Codegen.empty();
+        this.feedId = Codegen.empty();
+        this.feedOutputConfig = Codegen.empty();
+        this.orgId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -190,7 +191,7 @@ public final class OrganizationFeedArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder assetNames(@Nullable List<String> assetNames) {
-            this.assetNames = Output.ofNullable(assetNames);
+            this.assetNames = Codegen.ofNullable(assetNames);
             return this;
         }
         public Builder assetNames(String... assetNames) {
@@ -201,7 +202,7 @@ public final class OrganizationFeedArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder assetTypes(@Nullable List<String> assetTypes) {
-            this.assetTypes = Output.ofNullable(assetTypes);
+            this.assetTypes = Codegen.ofNullable(assetTypes);
             return this;
         }
         public Builder assetTypes(String... assetTypes) {
@@ -220,7 +221,7 @@ public final class OrganizationFeedArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder condition(@Nullable OrganizationFeedConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder contentType(@Nullable Output<String> contentType) {
@@ -228,7 +229,7 @@ public final class OrganizationFeedArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Output.ofNullable(contentType);
+            this.contentType = Codegen.ofNullable(contentType);
             return this;
         }
         public Builder feedId(Output<String> feedId) {

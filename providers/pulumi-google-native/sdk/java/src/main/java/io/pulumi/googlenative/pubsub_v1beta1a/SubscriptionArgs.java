@@ -5,6 +5,7 @@ package io.pulumi.googlenative.pubsub_v1beta1a;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.pubsub_v1beta1a.inputs.PushConfigArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +25,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> ackDeadlineSeconds;
 
     public Output<Integer> getAckDeadlineSeconds() {
-        return this.ackDeadlineSeconds == null ? Output.empty() : this.ackDeadlineSeconds;
+        return this.ackDeadlineSeconds == null ? Codegen.empty() : this.ackDeadlineSeconds;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PushConfigArgs> pushConfig;
 
     public Output<PushConfigArgs> getPushConfig() {
-        return this.pushConfig == null ? Output.empty() : this.pushConfig;
+        return this.pushConfig == null ? Codegen.empty() : this.pushConfig;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> topic;
 
     public Output<String> getTopic() {
-        return this.topic == null ? Output.empty() : this.topic;
+        return this.topic == null ? Codegen.empty() : this.topic;
     }
 
     public SubscriptionArgs(
@@ -72,10 +73,10 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubscriptionArgs() {
-        this.ackDeadlineSeconds = Output.empty();
-        this.name = Output.empty();
-        this.pushConfig = Output.empty();
-        this.topic = Output.empty();
+        this.ackDeadlineSeconds = Codegen.empty();
+        this.name = Codegen.empty();
+        this.pushConfig = Codegen.empty();
+        this.topic = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ackDeadlineSeconds(@Nullable Integer ackDeadlineSeconds) {
-            this.ackDeadlineSeconds = Output.ofNullable(ackDeadlineSeconds);
+            this.ackDeadlineSeconds = Codegen.ofNullable(ackDeadlineSeconds);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -117,7 +118,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder pushConfig(@Nullable Output<PushConfigArgs> pushConfig) {
@@ -125,7 +126,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pushConfig(@Nullable PushConfigArgs pushConfig) {
-            this.pushConfig = Output.ofNullable(pushConfig);
+            this.pushConfig = Codegen.ofNullable(pushConfig);
             return this;
         }
         public Builder topic(@Nullable Output<String> topic) {
@@ -133,7 +134,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder topic(@Nullable String topic) {
-            this.topic = Output.ofNullable(topic);
+            this.topic = Codegen.ofNullable(topic);
             return this;
         }        public SubscriptionArgs build() {
             return new SubscriptionArgs(ackDeadlineSeconds, name, pushConfig, topic);

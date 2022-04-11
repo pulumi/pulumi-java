@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datalakestore.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class CreateVirtualNetworkRuleWithAccountParametersArgs extends io.
     }
 
     private CreateVirtualNetworkRuleWithAccountParametersArgs() {
-        this.name = Output.empty();
-        this.subnetId = Output.empty();
+        this.name = Codegen.empty();
+        this.subnetId = Codegen.empty();
     }
 
     public static Builder builder() {

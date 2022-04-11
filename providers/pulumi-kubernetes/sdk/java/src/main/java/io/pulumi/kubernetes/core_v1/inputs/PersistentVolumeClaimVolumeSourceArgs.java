@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class PersistentVolumeClaimVolumeSourceArgs extends io.pulumi.resou
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     public PersistentVolumeClaimVolumeSourceArgs(
@@ -49,8 +50,8 @@ public final class PersistentVolumeClaimVolumeSourceArgs extends io.pulumi.resou
     }
 
     private PersistentVolumeClaimVolumeSourceArgs() {
-        this.claimName = Output.empty();
-        this.readOnly = Output.empty();
+        this.claimName = Codegen.empty();
+        this.readOnly = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class PersistentVolumeClaimVolumeSourceArgs extends io.pulumi.resou
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }        public PersistentVolumeClaimVolumeSourceArgs build() {
             return new PersistentVolumeClaimVolumeSourceArgs(claimName, readOnly);

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.amplify.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class BranchBasicAuthConfigArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Boolean> enableBasicAuth;
 
     public Output<Boolean> getEnableBasicAuth() {
-        return this.enableBasicAuth == null ? Output.empty() : this.enableBasicAuth;
+        return this.enableBasicAuth == null ? Codegen.empty() : this.enableBasicAuth;
     }
 
     @Import(name="password", required=true)
@@ -46,9 +47,9 @@ public final class BranchBasicAuthConfigArgs extends io.pulumi.resources.Resourc
     }
 
     private BranchBasicAuthConfigArgs() {
-        this.enableBasicAuth = Output.empty();
-        this.password = Output.empty();
-        this.username = Output.empty();
+        this.enableBasicAuth = Codegen.empty();
+        this.password = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class BranchBasicAuthConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder enableBasicAuth(@Nullable Boolean enableBasicAuth) {
-            this.enableBasicAuth = Output.ofNullable(enableBasicAuth);
+            this.enableBasicAuth = Codegen.ofNullable(enableBasicAuth);
             return this;
         }
         public Builder password(Output<String> password) {

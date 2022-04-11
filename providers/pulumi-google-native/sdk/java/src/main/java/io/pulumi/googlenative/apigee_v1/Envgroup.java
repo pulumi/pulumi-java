@@ -6,6 +6,7 @@ package io.pulumi.googlenative.apigee_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.EnvgroupArgs;
 import java.lang.String;
@@ -111,7 +112,7 @@ public class Envgroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Envgroup(String name, EnvgroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:apigee/v1:Envgroup", name, args == null ? EnvgroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:apigee/v1:Envgroup", name, args == null ? EnvgroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Envgroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
