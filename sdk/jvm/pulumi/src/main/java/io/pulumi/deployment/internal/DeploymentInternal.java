@@ -31,7 +31,7 @@ public interface DeploymentInternal extends Deployment {
     Runner getRunner();
 
     void readOrRegisterResource(Resource resource, boolean remote, Function<String, Resource> newDependency,
-                                ResourceArgs args, ResourceOptions opts);
+                                ResourceArgs args, ResourceOptions opts, Resource.LazyFields lazy);
 
     void registerResourceOutputs(Resource resource, Output<Map<String, Output<?>>> outputs);
 
