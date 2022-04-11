@@ -9,18 +9,30 @@ import io.pulumi.core.Urn;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.Constants;
 import io.pulumi.core.internal.Internal;
-import io.pulumi.core.internal.Internal.InternalField;
 import io.pulumi.core.internal.Strings;
+import io.pulumi.core.internal.annotations.ExportMetadata;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.internal.DeploymentInternal;
 import io.pulumi.exceptions.ResourceException;
+import io.pulumi.exceptions.RunException;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Optional;
+import java.util.Set;
 import java.util.concurrent.CompletableFuture;
+import java.util.stream.Collectors;
 
+import static com.google.common.collect.ImmutableList.toImmutableList;
+import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static io.pulumi.core.internal.Objects.exceptionSupplier;
 import static io.pulumi.core.internal.Objects.require;
 import static io.pulumi.resources.Resources.copyNullableList;
@@ -61,8 +73,6 @@ public abstract class Resource {
     @Nullable
     private final String version;
 
-    @SuppressWarnings({"unused", "FieldCanBeLocal"})
-    @InternalField
     private final ResourceInternal internal = new ResourceInternal(this);
 
     /**
@@ -92,7 +102,10 @@ public abstract class Resource {
             ResourceArgs args, ResourceOptions options,
             boolean remote, boolean dependency
     ) {
-        this.superInit(this);
+        var lazy = new LazyFields(
+                () -> this.urnFuture,
+                this.idFuture().map(f -> () -> f) // this 'idFuture' call must be on top of this constructor to avoid NPEs
+        );
         this.remote = remote;
 
         if (dependency) {
@@ -240,14 +253,17 @@ public abstract class Resource {
         this.aliases = aliases.build();
 
         // Finish initialisation with reflection asynchronously
-        DeploymentInternal.getInstance().readOrRegisterResource(this, remote, DependencyResource::new, args, options);
+        DeploymentInternal.getInstance().readOrRegisterResource(
+                this, remote, DependencyResource::new, args, options, lazy
+        );
     }
 
     /**
-     * Initialization method called at the beginning of the constructor
+     * Lazy Initialization method called at the beginning of the constructor.
+     * Resources with the id field must override this method.
      */
-    protected void superInit(Resource resource) {
-        // Empty
+    protected Optional<CompletableFuture<Output<String>>> idFuture() {
+        return Optional.empty();
     }
 
     /**
@@ -294,7 +310,7 @@ public abstract class Resource {
         var result = ImmutableMap.<String, ProviderResource>builder();
         if (providers != null) {
             for (var provider : providers) {
-                var pkg = Internal.from(provider, ProviderResource.ProviderResourceInternal.class).getPackage();
+                var pkg = Internal.from(provider).getPackage();
                 result.put(pkg, provider);
             }
         }
@@ -410,6 +426,10 @@ public abstract class Resource {
             this.resource = requireNonNull(resource);
         }
 
+        public static ResourceInternal from(Resource r) {
+            return r.internal;
+        }
+
         /**
          * A list of aliases applied to this resource.
          */
@@ -476,6 +496,102 @@ public abstract class Resource {
             }
 
             return resource.providers.getOrDefault(memComponents[0], null);
+        }
+
+        /**
+         * Finds all {@link Output} fields annotated with {@link Export},
+         * validates the annotation presence and content,
+         * validates non-null-ness of fields,
+         * ensures the field type is {@link Output}
+         * and uses reflection to get the references to them.
+         * Returns a map of export names and output references.
+         * Not to be confused with {@link io.pulumi.core.internal.OutputCompletionSource#from(io.pulumi.resources.Resource)}
+         */
+        @InternalUse
+        public static Map<String, Output<?>> findOutputs(Object object) {
+            var infos = ExportMetadata.of(object.getClass());
+
+            var outputs = infos.entrySet().stream()
+                    .collect(toImmutableMap(
+                            Map.Entry::getKey,
+                            Map.Entry::getValue
+                    ));
+
+            var nulls = outputs.entrySet().stream()
+                    .filter(entry -> entry.getValue().isFieldNull(object))
+                    .map(Map.Entry::getKey)
+                    .collect(Collectors.toList());
+            if (!nulls.isEmpty()) {
+                throw new RunException(String.format(
+                        "Output(s) '%s' have no value assigned, it is 'null'. All '%s' annotated fields must have a value assigned (non-null).",
+                        String.join(", ", nulls), Export.class.getSimpleName()
+                ));
+            }
+
+            // check if annotated fields have the correct type;
+            // it would be easier to validate on construction,
+            // but we aggregate all errors here for user's convenience
+            var wrongFields = infos.entrySet().stream()
+                    // check if the field has type allowed by the annotation
+                    .filter(entry -> !Output.class.isAssignableFrom(entry.getValue().getFieldType()))
+                    .map(Map.Entry::getKey)
+                    .collect(toImmutableList());
+
+            if (!wrongFields.isEmpty()) {
+                throw new RunException(String.format(
+                        "Output(s) '%s' have incorrect type. All '%s' annotated fields must be an instances of Output<T>",
+                        String.join(", ", wrongFields), Export.class.getSimpleName()
+                ));
+            }
+
+            return outputs.entrySet().stream()
+                    .collect(toImmutableMap(
+                            Map.Entry::getKey,
+                            e -> e.getValue().getFieldValueOrThrow(object, () -> new IllegalStateException(
+                                    "Expected only non-null values at this point. This is a bug."
+                            ))
+                    ));
+        }
+    }
+
+    @SuppressWarnings("OptionalUsedAsFieldOrParameterType")
+    @InternalUse
+    @ParametersAreNonnullByDefault
+    public static class LazyFields {
+        private final LazyField<String> urn;
+        private final Optional<LazyField<String>> id;
+
+        protected LazyFields(LazyField<String> urn, Optional<LazyField<String>> id) {
+            this.urn = requireNonNull(urn);
+            this.id = requireNonNull(id);
+        }
+
+        public LazyField<String> urn() {
+            return this.urn;
+        }
+
+        public Optional<LazyField<String>> id() {
+            return this.id;
+        }
+    }
+
+    public interface LazyField<T> {
+        CompletableFuture<Output<T>> future();
+
+        default void completeOrThrow(Output<T> value) {
+            if (!complete(value)) {
+                throw new IllegalStateException("lazy field cannot be set twice, must be 'null' for 'set' to work");
+            }
+        }
+
+        default boolean complete(Output<T> value) {
+            requireNonNull(value);
+            return future().complete(value);
+        }
+
+        default boolean fail(Throwable throwable) {
+            requireNonNull(throwable);
+            return complete(Output.of(CompletableFuture.failedFuture(throwable)));
         }
     }
 }

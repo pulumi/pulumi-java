@@ -15,7 +15,12 @@ import io.pulumi.deployment.MockResourceArgs;
 import io.pulumi.deployment.Mocks;
 import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.deployment.internal.TestOptions;
-import io.pulumi.resources.*;
+import io.pulumi.resources.ComponentResource;
+import io.pulumi.resources.ComponentResourceOptions;
+import io.pulumi.resources.CustomResource;
+import io.pulumi.resources.CustomResourceOptions;
+import io.pulumi.resources.Resource;
+import io.pulumi.resources.ResourceArgs;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -48,7 +53,7 @@ class ResourceRefPropertyTest {
                 .setMocks(new MyMocks(isPreview))
                 .setSpyGlobalInstance();
 
-        var resources = mock.testAsync(MyStack.class).join();
+        var resources = mock.testAsync(MyStack::new).join();
         var res = resources.stream()
                 .filter(r -> r instanceof MyCustomResource)
                 .map(r -> (MyCustomResource) r)
@@ -72,7 +77,7 @@ class ResourceRefPropertyTest {
                 .setMocks(new MyMocks(isPreview))
                 .setSpyGlobalInstance();
 
-        var resources = mock.testAsync(MyStack.class).join();
+        var resources = mock.testAsync(MyStack::new).join();
         var res = resources.stream()
                 .filter(r -> r instanceof MyCustomResource)
                 .map(r -> (MyCustomResource) r)
@@ -94,7 +99,7 @@ class ResourceRefPropertyTest {
                 .setMocks(new MyMocks(isPreview))
                 .setSpyGlobalInstance();
 
-        var resources = mock.testAsync(DeserializeCustomResourceStack.class).join();
+        var resources = mock.testAsync(DeserializeCustomResourceStack::new).join();
         var stack = resources.stream()
                 .filter(r -> r instanceof DeserializeCustomResourceStack)
                 .map(r -> (DeserializeCustomResourceStack) r)
@@ -116,7 +121,7 @@ class ResourceRefPropertyTest {
                 .setMocks(new MyMocks(isPreview))
                 .setSpyGlobalInstance();
 
-        var resources = mock.testAsync(DeserializeMissingCustomResourceStack.class).join();
+        var resources = mock.testAsync(DeserializeMissingCustomResourceStack::new).join();
         var stack = resources.stream()
                 .filter(r -> r instanceof DeserializeMissingCustomResourceStack)
                 .map(r -> (DeserializeMissingCustomResourceStack) r)
@@ -137,7 +142,7 @@ class ResourceRefPropertyTest {
                 .setMocks(new MyMocks(isPreview))
                 .setSpyGlobalInstance();
 
-        var resources = mock.testAsync(MyStack.class).join();
+        var resources = mock.testAsync(MyStack::new).join();
         var res = resources.stream()
                 .filter(r -> r instanceof MyComponentResource)
                 .map(r -> (MyComponentResource) r)
@@ -159,7 +164,7 @@ class ResourceRefPropertyTest {
                 .setMocks(new MyMocks(isPreview))
                 .setSpyGlobalInstance();
 
-        var resources = mock.testAsync(MyStack.class).join();
+        var resources = mock.testAsync(MyStack::new).join();
         var res = resources.stream()
                 .filter(r -> r instanceof MyComponentResource)
                 .map(r -> (MyComponentResource) r)
@@ -181,7 +186,7 @@ class ResourceRefPropertyTest {
                 .setMocks(new MyMocks(isPreview))
                 .setSpyGlobalInstance();
 
-        var resources = mock.testAsync(DeserializeComponentResourceStack.class).join();
+        var resources = mock.testAsync(DeserializeComponentResourceStack::new).join();
         var stack = resources.stream()
                 .filter(r -> r instanceof DeserializeComponentResourceStack)
                 .map(r -> (DeserializeComponentResourceStack) r)
@@ -202,7 +207,7 @@ class ResourceRefPropertyTest {
                 .setMocks(new MyMocks(isPreview))
                 .setSpyGlobalInstance();
 
-        var resources = mock.testAsync(DeserializeMissingComponentResourceStack.class).join();
+        var resources = mock.testAsync(DeserializeMissingComponentResourceStack::new).join();
         var stack = resources.stream()
                 .filter(r -> r instanceof DeserializeMissingComponentResourceStack)
                 .map(r -> (DeserializeMissingComponentResourceStack) r)

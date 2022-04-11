@@ -2,6 +2,7 @@ package appservice;
 
 import io.pulumi.Config;
 import io.pulumi.Stack;
+import io.pulumi.asset.FileArchive;
 import io.pulumi.azurenative.insights.Component;
 import io.pulumi.azurenative.insights.ComponentArgs;
 import io.pulumi.azurenative.insights.enums.ApplicationType;
@@ -35,7 +36,6 @@ import io.pulumi.azurenative.web.inputs.ConnStringInfoArgs;
 import io.pulumi.azurenative.web.inputs.NameValuePairArgs;
 import io.pulumi.azurenative.web.inputs.SiteConfigArgs;
 import io.pulumi.azurenative.web.inputs.SkuDescriptionArgs;
-import io.pulumi.core.Archive;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
@@ -65,7 +65,7 @@ public final class MyStack extends Stack {
                 BlobArgs.builder().resourceGroupName(resourceGroup.getName())
                         .accountName(storageAccount.getName())
                         .containerName(storageContainer.getName())
-                        .source(new Archive.FileArchive("wwwroot"))
+                        .source(new FileArchive("wwwroot"))
                         .build());
 
         var codeBlobUrl = getSASToken(storageAccount.getName(), storageContainer.getName(), blob.getName(), resourceGroup.getName());

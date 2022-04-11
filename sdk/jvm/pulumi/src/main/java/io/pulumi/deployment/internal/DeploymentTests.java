@@ -76,8 +76,8 @@ public class DeploymentTests {
             this.config.setAllConfig(config, secretKeys);
         }
 
-        public <T extends Stack> CompletableFuture<ImmutableList<Resource>> testAsync(Class<T> stackType) {
-            return tryTestAsync(stackType).thenApply(r -> {
+        public <T extends Stack> CompletableFuture<ImmutableList<Resource>> testAsync(Supplier<T> stackFactory) {
+            return tryTestAsync(stackFactory).thenApply(r -> {
                 if (!r.exceptions.isEmpty()) {
                     throw new RunException(String.format("Error count: %d, errors: %s",
                             r.exceptions.size(), r.exceptions.stream()
@@ -89,7 +89,7 @@ public class DeploymentTests {
             });
         }
 
-        public <T extends Stack> CompletableFuture<TestAsyncResult> tryTestAsync(Class<T> stackType) {
+        public <T extends Stack> CompletableFuture<TestAsyncResult> tryTestAsync(Supplier<T> stackFactory) {
             if (!(engine instanceof MockEngine)) {
                 throw new IllegalStateException("Expected engine to be an instanceof MockEngine");
             }
@@ -98,7 +98,7 @@ public class DeploymentTests {
             }
             var mockEngine = (MockEngine) engine;
             var mockMonitor = (MockMonitor) monitor;
-            return this.runner.runAsync(stackType)
+            return this.runner.runAsync(stackFactory)
                     .thenApply(ignore -> new TestAsyncResult(
                             ImmutableList.copyOf(mockMonitor.resources),
                             mockEngine.getErrors().stream()

@@ -15,21 +15,35 @@ import pulumirpc.Provider.CallRequest;
 import pulumirpc.Provider.CallResponse;
 import pulumirpc.Provider.InvokeRequest;
 import pulumirpc.Provider.InvokeResponse;
-import pulumirpc.Resource.*;
+import pulumirpc.Resource.ReadResourceRequest;
+import pulumirpc.Resource.ReadResourceResponse;
+import pulumirpc.Resource.RegisterResourceOutputsRequest;
+import pulumirpc.Resource.RegisterResourceRequest;
+import pulumirpc.Resource.RegisterResourceResponse;
+import pulumirpc.Resource.SupportsFeatureRequest;
+import pulumirpc.Resource.SupportsFeatureResponse;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
 
 public class MockMonitor implements Monitor {
 
     private final Mocks mocks;
     private final Serializer serializer;
+    private final Deserializer deserializer;
+
     private final Map<String, ImmutableMap<String, Object>> registeredResources;
     public final List<Resource> resources;
 
     public MockMonitor(Mocks mocks, Log log) {
         this.mocks = Objects.requireNonNull(mocks);
         this.serializer = new Serializer(log);
+        this.deserializer = new Deserializer();
         this.registeredResources = Collections.synchronizedMap(new HashMap<>());
         this.resources = Collections.synchronizedList(new LinkedList<>());
     }
@@ -153,7 +167,6 @@ public class MockMonitor implements Monitor {
     }
 
     private ImmutableMap<String, Object> deserializeToMap(Struct args) {
-        var deserializer = new Deserializer();
         var builder = ImmutableMap.<String, Object>builder();
         for (var entry : args.getFieldsMap().entrySet()) {
             var key = entry.getKey();

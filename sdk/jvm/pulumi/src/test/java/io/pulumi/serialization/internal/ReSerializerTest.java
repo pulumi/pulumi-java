@@ -4,7 +4,11 @@ import com.google.gson.JsonParser;
 import io.pulumi.core.Output;
 import io.pulumi.core.internal.OutputData;
 import io.pulumi.deployment.MocksTest;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DynamicNode;
+import org.junit.jupiter.api.DynamicTest;
+import org.junit.jupiter.api.TestFactory;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -14,7 +18,9 @@ import java.util.stream.Stream;
 
 import static com.google.common.collect.Lists.newArrayList;
 import static com.google.common.collect.Maps.newHashMap;
-import static io.pulumi.deployment.internal.DeploymentTests.*;
+import static io.pulumi.deployment.internal.DeploymentTests.DeploymentMock;
+import static io.pulumi.deployment.internal.DeploymentTests.DeploymentMockBuilder;
+import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.DynamicContainer.dynamicContainer;
 import static org.junit.jupiter.api.DynamicTest.dynamicTest;
@@ -38,12 +44,13 @@ class ReSerializerTest {
 
     @Nullable
     private Object reSerialize(@Nullable Object o) {
+        var deserializer = new Deserializer();
         var serialized = new Serializer(mock.log)
                 .serializeAsync("ReSerializerTest", o, true);
 
         return serialized
                 .thenApply(Serializer::createValue)
-                .thenApply(new Deserializer()::deserialize)
+                .thenApply(deserializer::deserialize)
                 .thenApply(OutputData::getValueNullable)
                 .join();
     }

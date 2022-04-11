@@ -3,10 +3,10 @@
 
 package io.pulumi.aws.lambda;
 
+import io.pulumi.asset.Archive;
 import io.pulumi.aws.Utilities;
 import io.pulumi.aws.lambda.LayerVersionArgs;
 import io.pulumi.aws.lambda.inputs.LayerVersionState;
-import io.pulumi.core.Archive;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
