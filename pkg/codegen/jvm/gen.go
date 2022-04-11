@@ -1757,8 +1757,14 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 
 type addClassMethod = func(names.FQN, names.Ident, func(*classFileContext) error) error
 
-func (mod *modContext) functionsClassName() names.Ident {
-	return names.Ident(names.Title(mod.mod) + "Functions")
+func (mod *modContext) functionsClassName() (names.Ident, error) {
+	if mod.mod != "" {
+		return names.Ident(names.Title(mod.mod) + "Functions"), nil
+	}
+	if mod.pkg.Name != "" {
+		return names.Ident(names.Title(mod.pkg.Name) + "Functions"), nil
+	}
+	return "", fmt.Errorf("package name empty")
 }
 
 func printCommentFunction(ctx *classFileContext, fun *schema.Function, indent string) {
@@ -1796,7 +1802,11 @@ func (mod *modContext) genFunctions(ctx *classFileContext, addClass addClassMeth
 	w := ctx.writer
 
 	// Open the config class.
-	fprintf(w, "public final class %s {\n", mod.functionsClassName())
+	className, err := mod.functionsClassName()
+	if err != nil {
+		return err
+	}
+	fprintf(w, "public final class %s {\n", className)
 	for _, fun := range mod.functions {
 
 		const indent = "    "
@@ -2351,7 +2361,11 @@ func (mod *modContext) gen(fs fs) error {
 
 	// Functions
 	if len(mod.functions) > 0 {
-		if err := addClass(javaPkg, mod.functionsClassName(), func(ctx *classFileContext) error {
+		className, err := mod.functionsClassName()
+		if err != nil {
+			return err
+		}
+		if err := addClass(javaPkg, className, func(ctx *classFileContext) error {
 			return mod.genFunctions(ctx, addClass)
 		}); err != nil {
 			return err
