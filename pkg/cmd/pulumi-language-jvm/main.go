@@ -131,20 +131,11 @@ func (host *jvmLanguageHost) GetRequiredPlugins(
 
 	logging.V(5).Infof("GetRequiredPlugins: program=%v", req.GetProgram())
 
-	// Make a connection to the real engine that we will log messages to.
-	conn, err := grpc.Dial(
-		host.engineAddress,
-		grpc.WithInsecure(),
-		rpcutil.GrpcChannelOptions(),
-	)
+	engineClient, err := newEngineClient(host.engineAddress)
 	if err != nil {
-		return nil, errors.Wrapf(err, "language host could not make connection to engine")
+		return nil, err
 	}
-
-	// Make a client around that connection.
-	// We can then make our own server that will act as a
-	// monitor for the SDK and forward to the real monitor.
-	engineClient := pulumirpc.NewEngineClient(conn)
+	defer engineClient.Close()
 
 	// now, introspect the user project to see which pulumi resource packages it references.
 	pulumiPackages, err := host.DeterminePulumiPackages(ctx, engineClient)
