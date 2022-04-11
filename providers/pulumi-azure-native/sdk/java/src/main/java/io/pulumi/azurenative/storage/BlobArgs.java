@@ -3,9 +3,9 @@
 
 package io.pulumi.azurenative.storage;
 
+import io.pulumi.asset.AssetOrArchive;
 import io.pulumi.azurenative.storage.enums.BlobAccessTier;
 import io.pulumi.azurenative.storage.enums.BlobType;
-import io.pulumi.core.AssetOrArchive;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
 import java.lang.String;

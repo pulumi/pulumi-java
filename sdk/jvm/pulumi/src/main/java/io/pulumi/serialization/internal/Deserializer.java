@@ -4,9 +4,15 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.google.protobuf.Value;
-import io.pulumi.core.Archive;
-import io.pulumi.core.Asset;
-import io.pulumi.core.AssetOrArchive;
+import io.pulumi.asset.Archive;
+import io.pulumi.asset.Asset;
+import io.pulumi.asset.AssetArchive;
+import io.pulumi.asset.AssetOrArchive;
+import io.pulumi.asset.FileArchive;
+import io.pulumi.asset.FileAsset;
+import io.pulumi.asset.RemoteArchive;
+import io.pulumi.asset.RemoteAsset;
+import io.pulumi.asset.StringAsset;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.Tuples.Tuple2;
 import io.pulumi.core.internal.Constants;
@@ -14,18 +20,34 @@ import io.pulumi.core.internal.OutputData;
 import io.pulumi.resources.DependencyResource;
 import io.pulumi.resources.Resource;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static com.google.protobuf.Value.KindCase.*;
-import static io.pulumi.serialization.internal.Structs.*;
+import static com.google.protobuf.Value.KindCase.BOOL_VALUE;
+import static com.google.protobuf.Value.KindCase.LIST_VALUE;
+import static com.google.protobuf.Value.KindCase.NUMBER_VALUE;
+import static com.google.protobuf.Value.KindCase.STRING_VALUE;
+import static com.google.protobuf.Value.KindCase.STRUCT_VALUE;
+import static io.pulumi.serialization.internal.Structs.tryGetStringValue;
+import static io.pulumi.serialization.internal.Structs.tryGetStructValue;
+import static io.pulumi.serialization.internal.Structs.tryGetValue;
 
 /**
  * Also @see {@link Serializer}
  */
 public class Deserializer {
+
+    public Deserializer() {
+        // Empty
+    }
 
     public OutputData<Object> deserialize(Value value) {
         Objects.requireNonNull(value);
@@ -244,12 +266,12 @@ public class Deserializer {
 
         var path = tryGetStringValue(value.getStructValue(), Constants.AssetOrArchivePathName);
         if (path.isPresent()) {
-            return new Archive.FileArchive(path.get());
+            return new FileArchive(path.get());
         }
 
         var uri = tryGetStringValue(value.getStructValue(), Constants.AssetOrArchiveUriName);
         if (uri.isPresent()) {
-            return new Archive.RemoteArchive(uri.get());
+            return new RemoteArchive(uri.get());
         }
 
         var assets = tryGetStructValue(value.getStructValue(), Constants.ArchiveAssetsName);
@@ -260,7 +282,7 @@ public class Deserializer {
                                 throw new UnsupportedOperationException(
                                         "AssetArchive contained an element that wasn't itself an Asset or Archive.");
                             });
-            return new Archive.AssetArchive(
+            return new AssetArchive(
                     assets.get().getFieldsMap().entrySet().stream()
                             .collect(Collectors.toMap(
                                     Map.Entry::getKey,
@@ -279,23 +301,23 @@ public class Deserializer {
 
         var path = tryGetStringValue(value.getStructValue(), Constants.AssetOrArchivePathName);
         if (path.isPresent()) {
-            return new Asset.FileAsset(path.get());
+            return new FileAsset(path.get());
         }
 
         var uri = tryGetStringValue(value.getStructValue(), Constants.AssetOrArchiveUriName);
         if (uri.isPresent()) {
-            return new Asset.RemoteAsset(uri.get());
+            return new RemoteAsset(uri.get());
         }
 
         var text = tryGetStringValue(value.getStructValue(), Constants.AssetTextName);
         if (text.isPresent()) {
-            return new Asset.StringAsset(text.get());
+            return new StringAsset(text.get());
         }
 
         throw new UnsupportedOperationException("Value was marked as Asset, but did not conform to required shape.");
     }
 
-    private static Optional<Resource> tryDeserializeResource(Value value) {
+    private Optional<Resource> tryDeserializeResource(Value value) {
         var sig = isSpecialStruct(value);
         if (sig.isEmpty() || !Constants.SpecialResourceSig.equals(sig.get())) {
             return Optional.empty();

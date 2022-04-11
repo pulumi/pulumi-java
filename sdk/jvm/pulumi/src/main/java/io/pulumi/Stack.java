@@ -1,13 +1,9 @@
 package io.pulumi;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.Export;
-import io.pulumi.core.internal.Internal.InternalField;
-import io.pulumi.core.internal.annotations.ExportMetadata;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.internal.DeploymentInternal;
-import io.pulumi.exceptions.RunException;
 import io.pulumi.resources.ComponentResource;
 import io.pulumi.resources.ComponentResourceOptions;
 import io.pulumi.resources.StackOptions;
@@ -18,12 +14,10 @@ import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 import java.util.function.Supplier;
-import java.util.stream.Collectors;
 
-import static com.google.common.collect.ImmutableList.toImmutableList;
-import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static java.util.Objects.requireNonNull;
 
+@ParametersAreNonnullByDefault
 public class Stack extends ComponentResource {
 
     /**
@@ -31,8 +25,6 @@ public class Stack extends ComponentResource {
      */
     private Output<Map<String, Output<?>>> outputs = Output.of(Map.of());
 
-    @SuppressWarnings("unused")
-    @InternalField
     private final StackInternal internal = new StackInternal(this);
 
     /**
@@ -112,62 +104,21 @@ public class Stack extends ComponentResource {
             this.stack = requireNonNull(stack);
         }
 
+        public static StackInternal from(Stack r) {
+            return r.internal;
+        }
+
         @InternalUse
         public Output<Map<String, Output<?>>> getOutputs() {
             return this.stack.outputs;
         }
 
         /**
-         * Inspect all public properties of the stack to find outputs.
          * Validate the values and register them as stack outputs.
          */
         @InternalUse
         public void registerPropertyOutputs() {
-            var infos = ExportMetadata.of(this.stack.getClass()); // we need the outer class
-
-            var outputs = infos.entrySet().stream()
-                    .collect(toImmutableMap(
-                            Map.Entry::getKey,
-                            Map.Entry::getValue
-                    ));
-
-            var nulls = outputs.entrySet().stream()
-                    .filter(entry -> entry.getValue().isFieldNull(this.stack))
-                    .map(Map.Entry::getKey)
-                    .collect(Collectors.toList());
-            if (!nulls.isEmpty()) {
-                throw new RunException(String.format(
-                        "Output(s) '%s' have no value assigned. %s annotated fields must be assigned inside Stack constructor.",
-                        String.join(", ", nulls), Export.class.getSimpleName()
-                ));
-            }
-
-            // check if annotated fields have the correct type;
-            // it would be easier to validate on construction,
-            // but we aggregate all errors here for user's convenience
-            var wrongFields = infos.entrySet().stream()
-                    // check if the field has type allowed by the annotation
-                    .filter(entry -> !Output.class.isAssignableFrom(entry.getValue().getFieldType()))
-                    .map(Map.Entry::getKey)
-                    .collect(toImmutableList());
-
-            if (!wrongFields.isEmpty()) {
-                throw new RunException(String.format(
-                        "Output(s) '%s' have incorrect type. %s annotated fields must be instances of Output<T>",
-                        String.join(", ", wrongFields), Export.class.getSimpleName()
-                ));
-            }
-
-
-            this.stack.outputs = Output.of(
-                    outputs.entrySet().stream()
-                            .collect(toImmutableMap(
-                                    Map.Entry::getKey,
-                                    e -> e.getValue().getFieldValueOrThrow(this.stack, () -> new IllegalStateException(
-                                            "Expected only non-null values at this point. This is a bug."
-                                    ))
-                            ))
-            );
+            this.stack.outputs = Output.of(findOutputs(this.stack));
             this.stack.registerOutputs(this.stack.outputs);
         }
 

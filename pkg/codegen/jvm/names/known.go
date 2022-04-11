@@ -10,6 +10,8 @@ var Pulumi = Ident("io").FQN().Dot("pulumi")
 
 var PulumiCore = Pulumi.Dot("core")
 
+var PulumiAsset = Pulumi.Dot("asset")
+
 var PulumiInternal = PulumiCore.Dot("internal")
 
 var PulumiAnnotations = PulumiCore.Dot("annotations")
@@ -36,9 +38,9 @@ var GSON = Ident("com").FQN().Dot("google").Dot("gson")
 
 var JSONElement = GSON.Dot("JsonElement")
 
-var Archive = PulumiCore.Dot("Archive")
+var Archive = PulumiAsset.Dot("Archive")
 
-var AssetOrArchive = PulumiCore.Dot("AssetOrArchive")
+var AssetOrArchive = PulumiAsset.Dot("AssetOrArchive")
 
 var Either = PulumiCore.Dot("Either")
 

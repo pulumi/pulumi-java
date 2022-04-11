@@ -9,10 +9,10 @@ import com.google.gson.JsonNull;
 import com.google.gson.stream.JsonWriter;
 import com.google.protobuf.Value;
 import io.pulumi.Log;
-import io.pulumi.core.Archive;
-import io.pulumi.core.Archive.InvalidArchive;
-import io.pulumi.core.Asset.InvalidAsset;
-import io.pulumi.core.AssetOrArchive;
+import io.pulumi.asset.Archive;
+import io.pulumi.asset.Archive.InvalidArchive;
+import io.pulumi.asset.Asset.InvalidAsset;
+import io.pulumi.asset.AssetOrArchive;
 import io.pulumi.core.Either;
 import io.pulumi.core.TypeShape;
 import io.pulumi.core.annotations.CustomType;
@@ -27,7 +27,13 @@ import java.io.IOException;
 import java.io.StringWriter;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Parameter;
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Optional;
+import java.util.Set;
 import java.util.function.Function;
 
 import static java.util.Objects.requireNonNull;
@@ -41,9 +47,11 @@ import static java.util.stream.Collectors.toSet;
 public class Converter {
 
     private final Log log;
+    private final Deserializer deserializer;
 
-    public Converter(Log log) {
+    public Converter(Log log, Deserializer deserializer) {
         this.log = requireNonNull(log);
+        this.deserializer = requireNonNull(deserializer);
     }
 
     public <T> OutputData<T> convertValue(String context, Value value, Class<T> targetType) {
@@ -64,8 +72,7 @@ public class Converter {
 
         checkTargetType(context, targetType);
 
-        var deserializer = new Deserializer();
-        var data = deserializer.deserialize(value);
+        var data = this.deserializer.deserialize(value);
         // Note: nulls can enter the system as the representation of an 'unknown' value,
         //       but the Deserializer will wrap it in an OutputData, and we get them as a null here
         @Nullable
