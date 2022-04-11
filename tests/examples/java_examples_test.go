@@ -17,7 +17,7 @@ import (
 
 func MakeProvider(providers []string) error {
 	for _, provider := range providers {
-		err := exec.Command(fmt.Sprintf("make provider.%s.install", provider)).Run()
+		err := exec.Command(fmt.Sprintf("rm -rf /providers/pulumi-%s/sdk/java; make provider.%s.install", provider, provider)).Run()
 		if err != nil {
 			return err
 		}
