@@ -427,8 +427,12 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 	case "toBase64":
 		g.Fgenf(w, "Convert.ToBase64String(System.Text.UTF8.GetBytes(%v))", expr.Args[0])
 	case "toJSON":
-		g.Fgen(w, "JsonSerializer.Serialize(\"{}\"")
-		//g.genDictionary(w, expr.Args[0])
+		g.Fgen(w, "ToJson(")
+		g.newline(w)
+		g.Indented(func() {
+			g.makeIndent(w)
+			g.genDictionary(w, expr.Args[0])
+		})
 		g.Fgen(w, ")")
 	case "sha1":
 		// Assuming the existence of the following helper method located earlier in the preamble
@@ -441,6 +445,58 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		g.Fgenf(w, "Directory.GetCurrentDirectory()")
 	default:
 		g.genNYI(w, "call %v", expr.Name)
+	}
+}
+
+func (g *generator) genDictionary(w io.Writer, expr model.Expression) {
+	switch expr := expr.(type) {
+	case *model.ObjectConsExpression:
+		g.Fgen(w, "JObject(")
+		g.newline(w)
+		g.Indented(func() {
+			for index, item := range expr.Items {
+
+				g.makeIndent(w)
+				g.Fgenf(w, "JProperty(%s, ", item.Key)
+				g.genDictionary(w, item.Value)
+				g.Fgen(w, ")")
+				if index < len(expr.Items)-1 {
+					// elements
+					g.Fgen(w, ",")
+					g.newline(w)
+				}
+			}
+		})
+		g.newline(w)
+		g.Fgenf(w, "%s)", g.Indent)
+	case *model.TupleConsExpression:
+		if len(expr.Expressions) == 1 {
+			g.Fgen(w, "JArray(")
+			g.genDictionary(w, expr.Expressions[0])
+			g.Fgen(w, ")")
+			return
+		}
+		g.newline(w)
+		g.makeIndent(w)
+		g.Fgen(w, "JArray(")
+		g.Indented(func() {
+			g.Indented(func() {
+				for index, value := range expr.Expressions {
+					g.makeIndent(w)
+					if index == len(expr.Expressions)-1 {
+						// last element: no trailing comma
+						g.genDictionary(w, value)
+					} else {
+						g.genDictionary(w, value)
+						g.Fgen(w, ", ")
+						g.newline(w)
+					}
+				}
+			})
+			g.Fgenf(w, "%s)", g.Indent)
+		})
+	default:
+		g.Fgenf(w, "%.v", expr)
 	}
 }
 
