@@ -17,7 +17,7 @@ import (
 
 func MakeProvider(providers []string) error {
 	for _, provider := range providers {
-		err := exec.Command(fmt.Sprintf("make provider.%s.install", provider)).Run()
+		err := exec.Command(fmt.Sprintf("make install_sdk provider.%s.install", provider)).Run()
 		if err != nil {
 			return err
 		}
