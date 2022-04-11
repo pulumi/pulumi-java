@@ -1,7 +1,7 @@
 package webserver;
 
 import io.pulumi.Stack;
-import io.pulumi.aws.ec2.GetAmi;
+import io.pulumi.aws.ec2.Ec2Functions;
 import io.pulumi.aws.ec2.Instance;
 import io.pulumi.aws.ec2.InstanceArgs;
 import io.pulumi.aws.ec2.SecurityGroup;
@@ -24,11 +24,10 @@ public final class MyStack extends Stack {
     private final Output<String> publicHostName;
 
     public MyStack() {
-        final var ami = GetAmi.invokeAsync(GetAmiArgs.builder()
+        final var ami = Ec2Functions.getAmi(GetAmiArgs.builder()
                 .filters(new GetAmiFilter("name", List.of("amzn-ami-hvm-*-x86_64-ebs")))
                 .owners("137112412989")
-                .mostRecent(true).build(),
-            null
+                .mostRecent(true).build()
         ).thenApply(GetAmiResult::getId);
 
         final var group = new SecurityGroup("web-secgrp", SecurityGroupArgs.builder()

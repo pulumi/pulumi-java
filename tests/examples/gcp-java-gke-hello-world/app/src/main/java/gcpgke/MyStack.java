@@ -55,10 +55,8 @@ public final class MyStack extends Stack {
 
         final var config = io.pulumi.Config.of();
         final var masterVersion = config.get("masterVersion").orElse(
-            GetEngineVersions.invokeAsync(
-                GetEngineVersionsArgs.Empty,
-                InvokeOptions.Empty
-            ).thenApply(GetEngineVersionsResult::getLatestMasterVersion).join()
+            ContainerFunctions.getEngineVersions()
+            .thenApply(GetEngineVersionsResult::getLatestMasterVersion).join()
         );
 
         this.masterVersion = Output.of(masterVersion);
