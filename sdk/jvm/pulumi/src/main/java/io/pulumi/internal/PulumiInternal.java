@@ -35,7 +35,7 @@ public class PulumiInternal implements Pulumi {
 
     @InternalUse
     public static PulumiInternal fromEnvironment() {
-        var deployment = new DeploymentImpl(DeploymentImpl.DeploymentState.fromEnvironment(), true);
+        var deployment = DeploymentImpl.fromEnvironment();
         var instance = Deployment.getInstance();
         var projectName = deployment.getProjectName();
         var stackName = deployment.getStackName();

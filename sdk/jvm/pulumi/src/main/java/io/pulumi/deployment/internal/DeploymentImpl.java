@@ -131,18 +131,6 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
     public DeploymentImpl(
             DeploymentState state
     ) {
-        this(state, false);
-    }
-
-    @InternalUse
-    @VisibleForTesting
-    public DeploymentImpl(
-            DeploymentState state, boolean autoSet
-    ) {
-        if (autoSet) { // FIXME: temporary quick hack
-            var newInstance = new DeploymentInstanceInternal(this);
-            DeploymentInstanceHolder.setInstance(newInstance);
-        }
         this.state = Objects.requireNonNull(state);
         this.log = new Log(state.logger, DeploymentState.ExcessiveDebugOutput);
         this.featureSupport = new FeatureSupport(state.monitor);
@@ -162,6 +150,15 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         this.registerResourceOutputs = new RegisterResourceOutputs(
                 this.log, state.runner, state.monitor, this.featureSupport, this.serialization
         );
+    }
+
+    @InternalUse
+    @VisibleForTesting
+    public static DeploymentImpl fromEnvironment() {
+        var state = DeploymentState.fromEnvironment();
+        var impl = new DeploymentImpl(state);
+        DeploymentInstanceHolder.setInstance(new DeploymentInstanceInternal(impl));
+        return impl;
     }
 
     @Override
