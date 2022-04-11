@@ -16,15 +16,19 @@ import (
 )
 
 func MakeProvider(providers []string) error {
+	repoRoot, err := filepath.Abs(filepath.Join("..", ".."))
+	if err != nil {
+		return err
+	}
 	cmd := exec.Command("make", "install_sdk")
-	cmd.Dir = "../"
-	err := cmd.Run()
+	cmd.Dir = repoRoot
+	err = cmd.Run()
 	if err != nil {
 		return err
 	}
 	for _, provider := range providers {
 		cmd := exec.Command("make", fmt.Sprintf("provider.%s.install", provider))
-		cmd.Dir = "../"
+		cmd.Dir = repoRoot
 		err := cmd.Run()
 		if err != nil {
 			return err
