@@ -3,7 +3,7 @@
     "README.md",
     "build.gradle",
     "settings.gradle",
-    "src/main/java/io/pulumi/example/ArgFunction.java",
+    "src/main/java/io/pulumi/example/Functions.java",
     "src/main/java/io/pulumi/example/OtherResource.java",
     "src/main/java/io/pulumi/example/OtherResourceArgs.java",
     "src/main/java/io/pulumi/example/Provider.java",
