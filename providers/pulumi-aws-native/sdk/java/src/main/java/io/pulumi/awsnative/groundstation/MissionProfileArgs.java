@@ -7,6 +7,7 @@ import io.pulumi.awsnative.groundstation.inputs.MissionProfileDataflowEdgeArgs;
 import io.pulumi.awsnative.groundstation.inputs.MissionProfileTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class MissionProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> contactPostPassDurationSeconds;
 
     public Output<Integer> getContactPostPassDurationSeconds() {
-        return this.contactPostPassDurationSeconds == null ? Output.empty() : this.contactPostPassDurationSeconds;
+        return this.contactPostPassDurationSeconds == null ? Codegen.empty() : this.contactPostPassDurationSeconds;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class MissionProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> contactPrePassDurationSeconds;
 
     public Output<Integer> getContactPrePassDurationSeconds() {
-        return this.contactPrePassDurationSeconds == null ? Output.empty() : this.contactPrePassDurationSeconds;
+        return this.contactPrePassDurationSeconds == null ? Codegen.empty() : this.contactPrePassDurationSeconds;
     }
 
     @Import(name="dataflowEdges", required=true)
@@ -66,14 +67,14 @@ public final class MissionProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<MissionProfileTagArgs>> tags;
 
     public Output<List<MissionProfileTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="trackingConfigArn", required=true)
@@ -101,13 +102,13 @@ public final class MissionProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MissionProfileArgs() {
-        this.contactPostPassDurationSeconds = Output.empty();
-        this.contactPrePassDurationSeconds = Output.empty();
-        this.dataflowEdges = Output.empty();
-        this.minimumViableContactDurationSeconds = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
-        this.trackingConfigArn = Output.empty();
+        this.contactPostPassDurationSeconds = Codegen.empty();
+        this.contactPrePassDurationSeconds = Codegen.empty();
+        this.dataflowEdges = Codegen.empty();
+        this.minimumViableContactDurationSeconds = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.trackingConfigArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class MissionProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contactPostPassDurationSeconds(@Nullable Integer contactPostPassDurationSeconds) {
-            this.contactPostPassDurationSeconds = Output.ofNullable(contactPostPassDurationSeconds);
+            this.contactPostPassDurationSeconds = Codegen.ofNullable(contactPostPassDurationSeconds);
             return this;
         }
         public Builder contactPrePassDurationSeconds(@Nullable Output<Integer> contactPrePassDurationSeconds) {
@@ -155,7 +156,7 @@ public final class MissionProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contactPrePassDurationSeconds(@Nullable Integer contactPrePassDurationSeconds) {
-            this.contactPrePassDurationSeconds = Output.ofNullable(contactPrePassDurationSeconds);
+            this.contactPrePassDurationSeconds = Codegen.ofNullable(contactPrePassDurationSeconds);
             return this;
         }
         public Builder dataflowEdges(Output<List<MissionProfileDataflowEdgeArgs>> dataflowEdges) {
@@ -182,7 +183,7 @@ public final class MissionProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<List<MissionProfileTagArgs>> tags) {
@@ -190,7 +191,7 @@ public final class MissionProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<MissionProfileTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(MissionProfileTagArgs... tags) {

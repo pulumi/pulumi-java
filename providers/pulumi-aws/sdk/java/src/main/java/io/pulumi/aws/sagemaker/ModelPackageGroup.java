@@ -9,6 +9,7 @@ import io.pulumi.aws.sagemaker.inputs.ModelPackageGroupState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -122,7 +123,7 @@ public class ModelPackageGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ModelPackageGroup(String name, ModelPackageGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:sagemaker/modelPackageGroup:ModelPackageGroup", name, args == null ? ModelPackageGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:sagemaker/modelPackageGroup:ModelPackageGroup", name, args == null ? ModelPackageGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ModelPackageGroup(String name, Output<String> id, @Nullable ModelPackageGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.container.inputs.AzureNodePoolConfigRootVolumeGetArgs;
 import io.pulumi.gcp.container.inputs.AzureNodePoolConfigSshConfigGetArgs;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class AzureNodePoolConfigGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<AzureNodePoolConfigRootVolumeGetArgs> rootVolume;
 
     public Output<AzureNodePoolConfigRootVolumeGetArgs> getRootVolume() {
-        return this.rootVolume == null ? Output.empty() : this.rootVolume;
+        return this.rootVolume == null ? Codegen.empty() : this.rootVolume;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class AzureNodePoolConfigGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class AzureNodePoolConfigGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> vmSize;
 
     public Output<String> getVmSize() {
-        return this.vmSize == null ? Output.empty() : this.vmSize;
+        return this.vmSize == null ? Codegen.empty() : this.vmSize;
     }
 
     public AzureNodePoolConfigGetArgs(
@@ -73,10 +74,10 @@ public final class AzureNodePoolConfigGetArgs extends io.pulumi.resources.Resour
     }
 
     private AzureNodePoolConfigGetArgs() {
-        this.rootVolume = Output.empty();
-        this.sshConfig = Output.empty();
-        this.tags = Output.empty();
-        this.vmSize = Output.empty();
+        this.rootVolume = Codegen.empty();
+        this.sshConfig = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vmSize = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class AzureNodePoolConfigGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder rootVolume(@Nullable AzureNodePoolConfigRootVolumeGetArgs rootVolume) {
-            this.rootVolume = Output.ofNullable(rootVolume);
+            this.rootVolume = Codegen.ofNullable(rootVolume);
             return this;
         }
         public Builder sshConfig(Output<AzureNodePoolConfigSshConfigGetArgs> sshConfig) {
@@ -126,7 +127,7 @@ public final class AzureNodePoolConfigGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder vmSize(@Nullable Output<String> vmSize) {
@@ -134,7 +135,7 @@ public final class AzureNodePoolConfigGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = Output.ofNullable(vmSize);
+            this.vmSize = Codegen.ofNullable(vmSize);
             return this;
         }        public AzureNodePoolConfigGetArgs build() {
             return new AzureNodePoolConfigGetArgs(rootVolume, sshConfig, tags, vmSize);

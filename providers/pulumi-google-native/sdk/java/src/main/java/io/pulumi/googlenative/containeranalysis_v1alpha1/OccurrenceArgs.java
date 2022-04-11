@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.AttestationArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.BuildDetailsArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.ComplianceOccurrenceArgs;
@@ -38,7 +39,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AttestationArgs> attestation;
 
     public Output<AttestationArgs> getAttestation() {
-        return this.attestation == null ? Output.empty() : this.attestation;
+        return this.attestation == null ? Codegen.empty() : this.attestation;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BuildDetailsArgs> buildDetails;
 
     public Output<BuildDetailsArgs> getBuildDetails() {
-        return this.buildDetails == null ? Output.empty() : this.buildDetails;
+        return this.buildDetails == null ? Codegen.empty() : this.buildDetails;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ComplianceOccurrenceArgs> compliance;
 
     public Output<ComplianceOccurrenceArgs> getCompliance() {
-        return this.compliance == null ? Output.empty() : this.compliance;
+        return this.compliance == null ? Codegen.empty() : this.compliance;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DeploymentArgs> deployment;
 
     public Output<DeploymentArgs> getDeployment() {
-        return this.deployment == null ? Output.empty() : this.deployment;
+        return this.deployment == null ? Codegen.empty() : this.deployment;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DerivedArgs> derivedImage;
 
     public Output<DerivedArgs> getDerivedImage() {
-        return this.derivedImage == null ? Output.empty() : this.derivedImage;
+        return this.derivedImage == null ? Codegen.empty() : this.derivedImage;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DiscoveredArgs> discovered;
 
     public Output<DiscoveredArgs> getDiscovered() {
-        return this.discovered == null ? Output.empty() : this.discovered;
+        return this.discovered == null ? Codegen.empty() : this.discovered;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DSSEAttestationOccurrenceArgs> dsseAttestation;
 
     public Output<DSSEAttestationOccurrenceArgs> getDsseAttestation() {
-        return this.dsseAttestation == null ? Output.empty() : this.dsseAttestation;
+        return this.dsseAttestation == null ? Codegen.empty() : this.dsseAttestation;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EnvelopeArgs> envelope;
 
     public Output<EnvelopeArgs> getEnvelope() {
-        return this.envelope == null ? Output.empty() : this.envelope;
+        return this.envelope == null ? Codegen.empty() : this.envelope;
     }
 
     /**
@@ -126,7 +127,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<InstallationArgs> installation;
 
     public Output<InstallationArgs> getInstallation() {
-        return this.installation == null ? Output.empty() : this.installation;
+        return this.installation == null ? Codegen.empty() : this.installation;
     }
 
     /**
@@ -137,14 +138,14 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> noteName;
 
     public Output<String> getNoteName() {
-        return this.noteName == null ? Output.empty() : this.noteName;
+        return this.noteName == null ? Codegen.empty() : this.noteName;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -155,7 +156,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> remediation;
 
     public Output<String> getRemediation() {
-        return this.remediation == null ? Output.empty() : this.remediation;
+        return this.remediation == null ? Codegen.empty() : this.remediation;
     }
 
     /**
@@ -166,7 +167,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ResourceArgs> resource;
 
     public Output<ResourceArgs> getResource() {
-        return this.resource == null ? Output.empty() : this.resource;
+        return this.resource == null ? Codegen.empty() : this.resource;
     }
 
     /**
@@ -177,7 +178,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> resourceUrl;
 
     public Output<String> getResourceUrl() {
-        return this.resourceUrl == null ? Output.empty() : this.resourceUrl;
+        return this.resourceUrl == null ? Codegen.empty() : this.resourceUrl;
     }
 
     /**
@@ -188,7 +189,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DocumentOccurrenceArgs> sbom;
 
     public Output<DocumentOccurrenceArgs> getSbom() {
-        return this.sbom == null ? Output.empty() : this.sbom;
+        return this.sbom == null ? Codegen.empty() : this.sbom;
     }
 
     /**
@@ -199,7 +200,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FileOccurrenceArgs> spdxFile;
 
     public Output<FileOccurrenceArgs> getSpdxFile() {
-        return this.spdxFile == null ? Output.empty() : this.spdxFile;
+        return this.spdxFile == null ? Codegen.empty() : this.spdxFile;
     }
 
     /**
@@ -210,7 +211,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PackageInfoOccurrenceArgs> spdxPackage;
 
     public Output<PackageInfoOccurrenceArgs> getSpdxPackage() {
-        return this.spdxPackage == null ? Output.empty() : this.spdxPackage;
+        return this.spdxPackage == null ? Codegen.empty() : this.spdxPackage;
     }
 
     /**
@@ -221,7 +222,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RelationshipOccurrenceArgs> spdxRelationship;
 
     public Output<RelationshipOccurrenceArgs> getSpdxRelationship() {
-        return this.spdxRelationship == null ? Output.empty() : this.spdxRelationship;
+        return this.spdxRelationship == null ? Codegen.empty() : this.spdxRelationship;
     }
 
     /**
@@ -232,7 +233,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<UpgradeOccurrenceArgs> upgrade;
 
     public Output<UpgradeOccurrenceArgs> getUpgrade() {
-        return this.upgrade == null ? Output.empty() : this.upgrade;
+        return this.upgrade == null ? Codegen.empty() : this.upgrade;
     }
 
     /**
@@ -243,7 +244,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<VulnerabilityDetailsArgs> vulnerabilityDetails;
 
     public Output<VulnerabilityDetailsArgs> getVulnerabilityDetails() {
-        return this.vulnerabilityDetails == null ? Output.empty() : this.vulnerabilityDetails;
+        return this.vulnerabilityDetails == null ? Codegen.empty() : this.vulnerabilityDetails;
     }
 
     public OccurrenceArgs(
@@ -290,26 +291,26 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OccurrenceArgs() {
-        this.attestation = Output.empty();
-        this.buildDetails = Output.empty();
-        this.compliance = Output.empty();
-        this.deployment = Output.empty();
-        this.derivedImage = Output.empty();
-        this.discovered = Output.empty();
-        this.dsseAttestation = Output.empty();
-        this.envelope = Output.empty();
-        this.installation = Output.empty();
-        this.noteName = Output.empty();
-        this.project = Output.empty();
-        this.remediation = Output.empty();
-        this.resource = Output.empty();
-        this.resourceUrl = Output.empty();
-        this.sbom = Output.empty();
-        this.spdxFile = Output.empty();
-        this.spdxPackage = Output.empty();
-        this.spdxRelationship = Output.empty();
-        this.upgrade = Output.empty();
-        this.vulnerabilityDetails = Output.empty();
+        this.attestation = Codegen.empty();
+        this.buildDetails = Codegen.empty();
+        this.compliance = Codegen.empty();
+        this.deployment = Codegen.empty();
+        this.derivedImage = Codegen.empty();
+        this.discovered = Codegen.empty();
+        this.dsseAttestation = Codegen.empty();
+        this.envelope = Codegen.empty();
+        this.installation = Codegen.empty();
+        this.noteName = Codegen.empty();
+        this.project = Codegen.empty();
+        this.remediation = Codegen.empty();
+        this.resource = Codegen.empty();
+        this.resourceUrl = Codegen.empty();
+        this.sbom = Codegen.empty();
+        this.spdxFile = Codegen.empty();
+        this.spdxPackage = Codegen.empty();
+        this.spdxRelationship = Codegen.empty();
+        this.upgrade = Codegen.empty();
+        this.vulnerabilityDetails = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -375,7 +376,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder attestation(@Nullable AttestationArgs attestation) {
-            this.attestation = Output.ofNullable(attestation);
+            this.attestation = Codegen.ofNullable(attestation);
             return this;
         }
         public Builder buildDetails(@Nullable Output<BuildDetailsArgs> buildDetails) {
@@ -383,7 +384,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder buildDetails(@Nullable BuildDetailsArgs buildDetails) {
-            this.buildDetails = Output.ofNullable(buildDetails);
+            this.buildDetails = Codegen.ofNullable(buildDetails);
             return this;
         }
         public Builder compliance(@Nullable Output<ComplianceOccurrenceArgs> compliance) {
@@ -391,7 +392,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder compliance(@Nullable ComplianceOccurrenceArgs compliance) {
-            this.compliance = Output.ofNullable(compliance);
+            this.compliance = Codegen.ofNullable(compliance);
             return this;
         }
         public Builder deployment(@Nullable Output<DeploymentArgs> deployment) {
@@ -399,7 +400,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deployment(@Nullable DeploymentArgs deployment) {
-            this.deployment = Output.ofNullable(deployment);
+            this.deployment = Codegen.ofNullable(deployment);
             return this;
         }
         public Builder derivedImage(@Nullable Output<DerivedArgs> derivedImage) {
@@ -407,7 +408,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder derivedImage(@Nullable DerivedArgs derivedImage) {
-            this.derivedImage = Output.ofNullable(derivedImage);
+            this.derivedImage = Codegen.ofNullable(derivedImage);
             return this;
         }
         public Builder discovered(@Nullable Output<DiscoveredArgs> discovered) {
@@ -415,7 +416,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder discovered(@Nullable DiscoveredArgs discovered) {
-            this.discovered = Output.ofNullable(discovered);
+            this.discovered = Codegen.ofNullable(discovered);
             return this;
         }
         public Builder dsseAttestation(@Nullable Output<DSSEAttestationOccurrenceArgs> dsseAttestation) {
@@ -423,7 +424,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dsseAttestation(@Nullable DSSEAttestationOccurrenceArgs dsseAttestation) {
-            this.dsseAttestation = Output.ofNullable(dsseAttestation);
+            this.dsseAttestation = Codegen.ofNullable(dsseAttestation);
             return this;
         }
         public Builder envelope(@Nullable Output<EnvelopeArgs> envelope) {
@@ -431,7 +432,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder envelope(@Nullable EnvelopeArgs envelope) {
-            this.envelope = Output.ofNullable(envelope);
+            this.envelope = Codegen.ofNullable(envelope);
             return this;
         }
         public Builder installation(@Nullable Output<InstallationArgs> installation) {
@@ -439,7 +440,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder installation(@Nullable InstallationArgs installation) {
-            this.installation = Output.ofNullable(installation);
+            this.installation = Codegen.ofNullable(installation);
             return this;
         }
         public Builder noteName(@Nullable Output<String> noteName) {
@@ -447,7 +448,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder noteName(@Nullable String noteName) {
-            this.noteName = Output.ofNullable(noteName);
+            this.noteName = Codegen.ofNullable(noteName);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -455,7 +456,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder remediation(@Nullable Output<String> remediation) {
@@ -463,7 +464,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder remediation(@Nullable String remediation) {
-            this.remediation = Output.ofNullable(remediation);
+            this.remediation = Codegen.ofNullable(remediation);
             return this;
         }
         public Builder resource(@Nullable Output<ResourceArgs> resource) {
@@ -471,7 +472,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resource(@Nullable ResourceArgs resource) {
-            this.resource = Output.ofNullable(resource);
+            this.resource = Codegen.ofNullable(resource);
             return this;
         }
         public Builder resourceUrl(@Nullable Output<String> resourceUrl) {
@@ -479,7 +480,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceUrl(@Nullable String resourceUrl) {
-            this.resourceUrl = Output.ofNullable(resourceUrl);
+            this.resourceUrl = Codegen.ofNullable(resourceUrl);
             return this;
         }
         public Builder sbom(@Nullable Output<DocumentOccurrenceArgs> sbom) {
@@ -487,7 +488,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sbom(@Nullable DocumentOccurrenceArgs sbom) {
-            this.sbom = Output.ofNullable(sbom);
+            this.sbom = Codegen.ofNullable(sbom);
             return this;
         }
         public Builder spdxFile(@Nullable Output<FileOccurrenceArgs> spdxFile) {
@@ -495,7 +496,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder spdxFile(@Nullable FileOccurrenceArgs spdxFile) {
-            this.spdxFile = Output.ofNullable(spdxFile);
+            this.spdxFile = Codegen.ofNullable(spdxFile);
             return this;
         }
         public Builder spdxPackage(@Nullable Output<PackageInfoOccurrenceArgs> spdxPackage) {
@@ -503,7 +504,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder spdxPackage(@Nullable PackageInfoOccurrenceArgs spdxPackage) {
-            this.spdxPackage = Output.ofNullable(spdxPackage);
+            this.spdxPackage = Codegen.ofNullable(spdxPackage);
             return this;
         }
         public Builder spdxRelationship(@Nullable Output<RelationshipOccurrenceArgs> spdxRelationship) {
@@ -511,7 +512,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder spdxRelationship(@Nullable RelationshipOccurrenceArgs spdxRelationship) {
-            this.spdxRelationship = Output.ofNullable(spdxRelationship);
+            this.spdxRelationship = Codegen.ofNullable(spdxRelationship);
             return this;
         }
         public Builder upgrade(@Nullable Output<UpgradeOccurrenceArgs> upgrade) {
@@ -519,7 +520,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder upgrade(@Nullable UpgradeOccurrenceArgs upgrade) {
-            this.upgrade = Output.ofNullable(upgrade);
+            this.upgrade = Codegen.ofNullable(upgrade);
             return this;
         }
         public Builder vulnerabilityDetails(@Nullable Output<VulnerabilityDetailsArgs> vulnerabilityDetails) {
@@ -527,7 +528,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vulnerabilityDetails(@Nullable VulnerabilityDetailsArgs vulnerabilityDetails) {
-            this.vulnerabilityDetails = Output.ofNullable(vulnerabilityDetails);
+            this.vulnerabilityDetails = Codegen.ofNullable(vulnerabilityDetails);
             return this;
         }        public OccurrenceArgs build() {
             return new OccurrenceArgs(attestation, buildDetails, compliance, deployment, derivedImage, discovered, dsseAttestation, envelope, installation, noteName, project, remediation, resource, resourceUrl, sbom, spdxFile, spdxPackage, spdxRelationship, upgrade, vulnerabilityDetails);

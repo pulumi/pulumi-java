@@ -100,6 +100,7 @@ import io.pulumi.azurenative.datafactory.inputs.XmlDatasetArgs;
 import io.pulumi.azurenative.datafactory.inputs.ZohoObjectDatasetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -118,7 +119,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> datasetName;
 
     public Output<String> getDatasetName() {
-        return this.datasetName == null ? Output.empty() : this.datasetName;
+        return this.datasetName == null ? Codegen.empty() : this.datasetName;
     }
 
     /**
@@ -166,10 +167,10 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatasetArgs() {
-        this.datasetName = Output.empty();
-        this.factoryName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.datasetName = Codegen.empty();
+        this.factoryName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -203,7 +204,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder datasetName(@Nullable String datasetName) {
-            this.datasetName = Output.ofNullable(datasetName);
+            this.datasetName = Codegen.ofNullable(datasetName);
             return this;
         }
         public Builder factoryName(Output<String> factoryName) {

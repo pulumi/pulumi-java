@@ -5,6 +5,7 @@ package io.pulumi.aws.appconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class EnvironmentMonitorGetArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> alarmRoleArn;
 
     public Output<String> getAlarmRoleArn() {
-        return this.alarmRoleArn == null ? Output.empty() : this.alarmRoleArn;
+        return this.alarmRoleArn == null ? Codegen.empty() : this.alarmRoleArn;
     }
 
     public EnvironmentMonitorGetArgs(
@@ -44,8 +45,8 @@ public final class EnvironmentMonitorGetArgs extends io.pulumi.resources.Resourc
     }
 
     private EnvironmentMonitorGetArgs() {
-        this.alarmArn = Output.empty();
-        this.alarmRoleArn = Output.empty();
+        this.alarmArn = Codegen.empty();
+        this.alarmRoleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class EnvironmentMonitorGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder alarmRoleArn(@Nullable String alarmRoleArn) {
-            this.alarmRoleArn = Output.ofNullable(alarmRoleArn);
+            this.alarmRoleArn = Codegen.ofNullable(alarmRoleArn);
             return this;
         }        public EnvironmentMonitorGetArgs build() {
             return new EnvironmentMonitorGetArgs(alarmArn, alarmRoleArn);

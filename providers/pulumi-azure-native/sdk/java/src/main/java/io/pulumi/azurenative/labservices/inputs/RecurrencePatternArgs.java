@@ -7,6 +7,7 @@ import io.pulumi.azurenative.labservices.enums.RecurrenceFrequency;
 import io.pulumi.azurenative.labservices.enums.WeekDay;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -52,7 +53,7 @@ public final class RecurrencePatternArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> interval;
 
     public Output<Integer> getInterval() {
-        return this.interval == null ? Output.empty() : this.interval;
+        return this.interval == null ? Codegen.empty() : this.interval;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class RecurrencePatternArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<WeekDay>> weekDays;
 
     public Output<List<WeekDay>> getWeekDays() {
-        return this.weekDays == null ? Output.empty() : this.weekDays;
+        return this.weekDays == null ? Codegen.empty() : this.weekDays;
     }
 
     public RecurrencePatternArgs(
@@ -78,10 +79,10 @@ public final class RecurrencePatternArgs extends io.pulumi.resources.ResourceArg
     }
 
     private RecurrencePatternArgs() {
-        this.expirationDate = Output.empty();
-        this.frequency = Output.empty();
-        this.interval = Output.empty();
-        this.weekDays = Output.empty();
+        this.expirationDate = Codegen.empty();
+        this.frequency = Codegen.empty();
+        this.interval = Codegen.empty();
+        this.weekDays = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class RecurrencePatternArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder interval(@Nullable Integer interval) {
-            this.interval = Output.ofNullable(interval);
+            this.interval = Codegen.ofNullable(interval);
             return this;
         }
         public Builder weekDays(@Nullable Output<List<WeekDay>> weekDays) {
@@ -139,7 +140,7 @@ public final class RecurrencePatternArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder weekDays(@Nullable List<WeekDay> weekDays) {
-            this.weekDays = Output.ofNullable(weekDays);
+            this.weekDays = Codegen.ofNullable(weekDays);
             return this;
         }
         public Builder weekDays(WeekDay... weekDays) {

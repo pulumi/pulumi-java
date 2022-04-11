@@ -9,6 +9,7 @@ import io.pulumi.azurenative.providerhub.inputs.LoggingRuleHiddenPropertyPathsAr
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public final class LoggingRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<LoggingRuleHiddenPropertyPathsArgs> hiddenPropertyPaths;
 
     public Output<LoggingRuleHiddenPropertyPathsArgs> getHiddenPropertyPaths() {
-        return this.hiddenPropertyPaths == null ? Output.empty() : this.hiddenPropertyPaths;
+        return this.hiddenPropertyPaths == null ? Codegen.empty() : this.hiddenPropertyPaths;
     }
 
     public LoggingRuleArgs(
@@ -58,10 +59,10 @@ public final class LoggingRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LoggingRuleArgs() {
-        this.action = Output.empty();
-        this.detailLevel = Output.empty();
-        this.direction = Output.empty();
-        this.hiddenPropertyPaths = Output.empty();
+        this.action = Codegen.empty();
+        this.detailLevel = Codegen.empty();
+        this.direction = Codegen.empty();
+        this.hiddenPropertyPaths = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -119,7 +120,7 @@ public final class LoggingRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hiddenPropertyPaths(@Nullable LoggingRuleHiddenPropertyPathsArgs hiddenPropertyPaths) {
-            this.hiddenPropertyPaths = Output.ofNullable(hiddenPropertyPaths);
+            this.hiddenPropertyPaths = Codegen.ofNullable(hiddenPropertyPaths);
             return this;
         }        public LoggingRuleArgs build() {
             return new LoggingRuleArgs(action, detailLevel, direction, hiddenPropertyPaths);

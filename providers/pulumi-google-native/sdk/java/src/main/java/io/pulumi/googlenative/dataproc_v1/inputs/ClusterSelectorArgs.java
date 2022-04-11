@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class ClusterSelectorArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public ClusterSelectorArgs(
@@ -49,8 +50,8 @@ public final class ClusterSelectorArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ClusterSelectorArgs() {
-        this.clusterLabels = Output.empty();
-        this.zone = Output.empty();
+        this.clusterLabels = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class ClusterSelectorArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public ClusterSelectorArgs build() {
             return new ClusterSelectorArgs(clusterLabels, zone);

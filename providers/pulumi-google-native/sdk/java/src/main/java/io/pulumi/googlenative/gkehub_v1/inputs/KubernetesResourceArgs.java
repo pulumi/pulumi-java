@@ -5,6 +5,7 @@ package io.pulumi.googlenative.gkehub_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.gkehub_v1.inputs.ResourceOptionsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class KubernetesResourceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> membershipCrManifest;
 
     public Output<String> getMembershipCrManifest() {
-        return this.membershipCrManifest == null ? Output.empty() : this.membershipCrManifest;
+        return this.membershipCrManifest == null ? Codegen.empty() : this.membershipCrManifest;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class KubernetesResourceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<ResourceOptionsArgs> resourceOptions;
 
     public Output<ResourceOptionsArgs> getResourceOptions() {
-        return this.resourceOptions == null ? Output.empty() : this.resourceOptions;
+        return this.resourceOptions == null ? Codegen.empty() : this.resourceOptions;
     }
 
     public KubernetesResourceArgs(
@@ -49,8 +50,8 @@ public final class KubernetesResourceArgs extends io.pulumi.resources.ResourceAr
     }
 
     private KubernetesResourceArgs() {
-        this.membershipCrManifest = Output.empty();
-        this.resourceOptions = Output.empty();
+        this.membershipCrManifest = Codegen.empty();
+        this.resourceOptions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class KubernetesResourceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder membershipCrManifest(@Nullable String membershipCrManifest) {
-            this.membershipCrManifest = Output.ofNullable(membershipCrManifest);
+            this.membershipCrManifest = Codegen.ofNullable(membershipCrManifest);
             return this;
         }
         public Builder resourceOptions(@Nullable Output<ResourceOptionsArgs> resourceOptions) {
@@ -88,7 +89,7 @@ public final class KubernetesResourceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder resourceOptions(@Nullable ResourceOptionsArgs resourceOptions) {
-            this.resourceOptions = Output.ofNullable(resourceOptions);
+            this.resourceOptions = Codegen.ofNullable(resourceOptions);
             return this;
         }        public KubernetesResourceArgs build() {
             return new KubernetesResourceArgs(membershipCrManifest, resourceOptions);

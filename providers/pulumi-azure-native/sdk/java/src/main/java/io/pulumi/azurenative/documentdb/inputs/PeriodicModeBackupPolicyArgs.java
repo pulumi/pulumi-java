@@ -6,6 +6,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 import io.pulumi.azurenative.documentdb.inputs.PeriodicModePropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class PeriodicModeBackupPolicyArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<PeriodicModePropertiesArgs> periodicModeProperties;
 
     public Output<PeriodicModePropertiesArgs> getPeriodicModeProperties() {
-        return this.periodicModeProperties == null ? Output.empty() : this.periodicModeProperties;
+        return this.periodicModeProperties == null ? Codegen.empty() : this.periodicModeProperties;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class PeriodicModeBackupPolicyArgs extends io.pulumi.resources.Reso
     }
 
     private PeriodicModeBackupPolicyArgs() {
-        this.periodicModeProperties = Output.empty();
-        this.type = Output.empty();
+        this.periodicModeProperties = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class PeriodicModeBackupPolicyArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder periodicModeProperties(@Nullable PeriodicModePropertiesArgs periodicModeProperties) {
-            this.periodicModeProperties = Output.ofNullable(periodicModeProperties);
+            this.periodicModeProperties = Codegen.ofNullable(periodicModeProperties);
             return this;
         }
         public Builder type(Output<String> type) {

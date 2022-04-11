@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> actionHostName;
 
     public Output<String> getActionHostName() {
-        return this.actionHostName == null ? Output.empty() : this.actionHostName;
+        return this.actionHostName == null ? Codegen.empty() : this.actionHostName;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> changeDecisionCallbackUrl;
 
     public Output<String> getChangeDecisionCallbackUrl() {
-        return this.changeDecisionCallbackUrl == null ? Output.empty() : this.changeDecisionCallbackUrl;
+        return this.changeDecisionCallbackUrl == null ? Codegen.empty() : this.changeDecisionCallbackUrl;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> changeIntervalInMinutes;
 
     public Output<Integer> getChangeIntervalInMinutes() {
-        return this.changeIntervalInMinutes == null ? Output.empty() : this.changeIntervalInMinutes;
+        return this.changeIntervalInMinutes == null ? Codegen.empty() : this.changeIntervalInMinutes;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> changeStep;
 
     public Output<Double> getChangeStep() {
-        return this.changeStep == null ? Output.empty() : this.changeStep;
+        return this.changeStep == null ? Codegen.empty() : this.changeStep;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> maxReroutePercentage;
 
     public Output<Double> getMaxReroutePercentage() {
-        return this.maxReroutePercentage == null ? Output.empty() : this.maxReroutePercentage;
+        return this.maxReroutePercentage == null ? Codegen.empty() : this.maxReroutePercentage;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> minReroutePercentage;
 
     public Output<Double> getMinReroutePercentage() {
-        return this.minReroutePercentage == null ? Output.empty() : this.minReroutePercentage;
+        return this.minReroutePercentage == null ? Codegen.empty() : this.minReroutePercentage;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -108,7 +109,7 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> reroutePercentage;
 
     public Output<Double> getReroutePercentage() {
-        return this.reroutePercentage == null ? Output.empty() : this.reroutePercentage;
+        return this.reroutePercentage == null ? Codegen.empty() : this.reroutePercentage;
     }
 
     public RampUpRuleArgs(
@@ -131,14 +132,14 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RampUpRuleArgs() {
-        this.actionHostName = Output.empty();
-        this.changeDecisionCallbackUrl = Output.empty();
-        this.changeIntervalInMinutes = Output.empty();
-        this.changeStep = Output.empty();
-        this.maxReroutePercentage = Output.empty();
-        this.minReroutePercentage = Output.empty();
-        this.name = Output.empty();
-        this.reroutePercentage = Output.empty();
+        this.actionHostName = Codegen.empty();
+        this.changeDecisionCallbackUrl = Codegen.empty();
+        this.changeIntervalInMinutes = Codegen.empty();
+        this.changeStep = Codegen.empty();
+        this.maxReroutePercentage = Codegen.empty();
+        this.minReroutePercentage = Codegen.empty();
+        this.name = Codegen.empty();
+        this.reroutePercentage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -180,7 +181,7 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder actionHostName(@Nullable String actionHostName) {
-            this.actionHostName = Output.ofNullable(actionHostName);
+            this.actionHostName = Codegen.ofNullable(actionHostName);
             return this;
         }
         public Builder changeDecisionCallbackUrl(@Nullable Output<String> changeDecisionCallbackUrl) {
@@ -188,7 +189,7 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder changeDecisionCallbackUrl(@Nullable String changeDecisionCallbackUrl) {
-            this.changeDecisionCallbackUrl = Output.ofNullable(changeDecisionCallbackUrl);
+            this.changeDecisionCallbackUrl = Codegen.ofNullable(changeDecisionCallbackUrl);
             return this;
         }
         public Builder changeIntervalInMinutes(@Nullable Output<Integer> changeIntervalInMinutes) {
@@ -196,7 +197,7 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder changeIntervalInMinutes(@Nullable Integer changeIntervalInMinutes) {
-            this.changeIntervalInMinutes = Output.ofNullable(changeIntervalInMinutes);
+            this.changeIntervalInMinutes = Codegen.ofNullable(changeIntervalInMinutes);
             return this;
         }
         public Builder changeStep(@Nullable Output<Double> changeStep) {
@@ -204,7 +205,7 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder changeStep(@Nullable Double changeStep) {
-            this.changeStep = Output.ofNullable(changeStep);
+            this.changeStep = Codegen.ofNullable(changeStep);
             return this;
         }
         public Builder maxReroutePercentage(@Nullable Output<Double> maxReroutePercentage) {
@@ -212,7 +213,7 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxReroutePercentage(@Nullable Double maxReroutePercentage) {
-            this.maxReroutePercentage = Output.ofNullable(maxReroutePercentage);
+            this.maxReroutePercentage = Codegen.ofNullable(maxReroutePercentage);
             return this;
         }
         public Builder minReroutePercentage(@Nullable Output<Double> minReroutePercentage) {
@@ -220,7 +221,7 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minReroutePercentage(@Nullable Double minReroutePercentage) {
-            this.minReroutePercentage = Output.ofNullable(minReroutePercentage);
+            this.minReroutePercentage = Codegen.ofNullable(minReroutePercentage);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -228,7 +229,7 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder reroutePercentage(@Nullable Output<Double> reroutePercentage) {
@@ -236,7 +237,7 @@ public final class RampUpRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reroutePercentage(@Nullable Double reroutePercentage) {
-            this.reroutePercentage = Output.ofNullable(reroutePercentage);
+            this.reroutePercentage = Codegen.ofNullable(reroutePercentage);
             return this;
         }        public RampUpRuleArgs build() {
             return new RampUpRuleArgs(actionHostName, changeDecisionCallbackUrl, changeIntervalInMinutes, changeStep, maxReroutePercentage, minReroutePercentage, name, reroutePercentage);

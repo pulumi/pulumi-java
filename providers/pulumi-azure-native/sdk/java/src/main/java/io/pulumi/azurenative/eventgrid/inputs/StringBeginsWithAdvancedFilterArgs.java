@@ -5,6 +5,7 @@ package io.pulumi.azurenative.eventgrid.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class StringBeginsWithAdvancedFilterArgs extends io.pulumi.resource
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class StringBeginsWithAdvancedFilterArgs extends io.pulumi.resource
       private final @Nullable Output<List<String>> values;
 
     public Output<List<String>> getValues() {
-        return this.values == null ? Output.empty() : this.values;
+        return this.values == null ? Codegen.empty() : this.values;
     }
 
     public StringBeginsWithAdvancedFilterArgs(
@@ -63,9 +64,9 @@ public final class StringBeginsWithAdvancedFilterArgs extends io.pulumi.resource
     }
 
     private StringBeginsWithAdvancedFilterArgs() {
-        this.key = Output.empty();
-        this.operatorType = Output.empty();
-        this.values = Output.empty();
+        this.key = Codegen.empty();
+        this.operatorType = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class StringBeginsWithAdvancedFilterArgs extends io.pulumi.resource
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }
         public Builder operatorType(Output<String> operatorType) {
@@ -113,7 +114,7 @@ public final class StringBeginsWithAdvancedFilterArgs extends io.pulumi.resource
             return this;
         }
         public Builder values(@Nullable List<String> values) {
-            this.values = Output.ofNullable(values);
+            this.values = Codegen.ofNullable(values);
             return this;
         }
         public Builder values(String... values) {

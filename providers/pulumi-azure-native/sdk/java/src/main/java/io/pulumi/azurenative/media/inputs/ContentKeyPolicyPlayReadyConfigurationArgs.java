@@ -6,6 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.inputs.ContentKeyPolicyPlayReadyLicenseArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -51,7 +52,7 @@ public final class ContentKeyPolicyPlayReadyConfigurationArgs extends io.pulumi.
       private final @Nullable Output<String> responseCustomData;
 
     public Output<String> getResponseCustomData() {
-        return this.responseCustomData == null ? Output.empty() : this.responseCustomData;
+        return this.responseCustomData == null ? Codegen.empty() : this.responseCustomData;
     }
 
     public ContentKeyPolicyPlayReadyConfigurationArgs(
@@ -64,9 +65,9 @@ public final class ContentKeyPolicyPlayReadyConfigurationArgs extends io.pulumi.
     }
 
     private ContentKeyPolicyPlayReadyConfigurationArgs() {
-        this.licenses = Output.empty();
-        this.odataType = Output.empty();
-        this.responseCustomData = Output.empty();
+        this.licenses = Codegen.empty();
+        this.odataType = Codegen.empty();
+        this.responseCustomData = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -117,7 +118,7 @@ public final class ContentKeyPolicyPlayReadyConfigurationArgs extends io.pulumi.
             return this;
         }
         public Builder responseCustomData(@Nullable String responseCustomData) {
-            this.responseCustomData = Output.ofNullable(responseCustomData);
+            this.responseCustomData = Codegen.ofNullable(responseCustomData);
             return this;
         }        public ContentKeyPolicyPlayReadyConfigurationArgs build() {
             return new ContentKeyPolicyPlayReadyConfigurationArgs(licenses, odataType, responseCustomData);

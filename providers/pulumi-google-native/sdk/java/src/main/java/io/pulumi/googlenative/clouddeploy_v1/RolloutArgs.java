@@ -5,6 +5,7 @@ package io.pulumi.googlenative.clouddeploy_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> annotations;
 
     public Output<Map<String,String>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     @Import(name="deliveryPipelineId", required=true)
@@ -41,7 +42,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -63,14 +64,14 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -81,14 +82,14 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="releaseId", required=true)
@@ -102,7 +103,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     @Import(name="rolloutId", required=true)
@@ -127,7 +128,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> validateOnly;
 
     public Output<String> getValidateOnly() {
-        return this.validateOnly == null ? Output.empty() : this.validateOnly;
+        return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
     }
 
     public RolloutArgs(
@@ -160,19 +161,19 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RolloutArgs() {
-        this.annotations = Output.empty();
-        this.deliveryPipelineId = Output.empty();
-        this.description = Output.empty();
-        this.etag = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.releaseId = Output.empty();
-        this.requestId = Output.empty();
-        this.rolloutId = Output.empty();
-        this.targetId = Output.empty();
-        this.validateOnly = Output.empty();
+        this.annotations = Codegen.empty();
+        this.deliveryPipelineId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.releaseId = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.rolloutId = Codegen.empty();
+        this.targetId = Codegen.empty();
+        this.validateOnly = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -224,7 +225,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder deliveryPipelineId(Output<String> deliveryPipelineId) {
@@ -240,7 +241,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -248,7 +249,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -256,7 +257,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -264,7 +265,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -272,7 +273,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -280,7 +281,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder releaseId(Output<String> releaseId) {
@@ -296,7 +297,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder rolloutId(Output<String> rolloutId) {
@@ -320,7 +321,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder validateOnly(@Nullable String validateOnly) {
-            this.validateOnly = Output.ofNullable(validateOnly);
+            this.validateOnly = Codegen.ofNullable(validateOnly);
             return this;
         }        public RolloutArgs build() {
             return new RolloutArgs(annotations, deliveryPipelineId, description, etag, labels, location, name, project, releaseId, requestId, rolloutId, targetId, validateOnly);

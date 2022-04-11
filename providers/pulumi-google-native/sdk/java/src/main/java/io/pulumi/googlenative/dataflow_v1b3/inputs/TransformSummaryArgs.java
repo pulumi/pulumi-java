@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dataflow_v1b3.enums.TransformSummaryKind;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.DisplayDataArgs;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<DisplayDataArgs>> displayData;
 
     public Output<List<DisplayDataArgs>> getDisplayData() {
-        return this.displayData == null ? Output.empty() : this.displayData;
+        return this.displayData == null ? Codegen.empty() : this.displayData;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> inputCollectionName;
 
     public Output<List<String>> getInputCollectionName() {
-        return this.inputCollectionName == null ? Output.empty() : this.inputCollectionName;
+        return this.inputCollectionName == null ? Codegen.empty() : this.inputCollectionName;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<TransformSummaryKind> kind;
 
     public Output<TransformSummaryKind> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> outputCollectionName;
 
     public Output<List<String>> getOutputCollectionName() {
-        return this.outputCollectionName == null ? Output.empty() : this.outputCollectionName;
+        return this.outputCollectionName == null ? Codegen.empty() : this.outputCollectionName;
     }
 
     public TransformSummaryArgs(
@@ -103,12 +104,12 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private TransformSummaryArgs() {
-        this.displayData = Output.empty();
-        this.id = Output.empty();
-        this.inputCollectionName = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.outputCollectionName = Output.empty();
+        this.displayData = Codegen.empty();
+        this.id = Codegen.empty();
+        this.inputCollectionName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.outputCollectionName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder displayData(@Nullable List<DisplayDataArgs> displayData) {
-            this.displayData = Output.ofNullable(displayData);
+            this.displayData = Codegen.ofNullable(displayData);
             return this;
         }
         public Builder displayData(DisplayDataArgs... displayData) {
@@ -157,7 +158,7 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder inputCollectionName(@Nullable Output<List<String>> inputCollectionName) {
@@ -165,7 +166,7 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder inputCollectionName(@Nullable List<String> inputCollectionName) {
-            this.inputCollectionName = Output.ofNullable(inputCollectionName);
+            this.inputCollectionName = Codegen.ofNullable(inputCollectionName);
             return this;
         }
         public Builder inputCollectionName(String... inputCollectionName) {
@@ -176,7 +177,7 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder kind(@Nullable TransformSummaryKind kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -184,7 +185,7 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder outputCollectionName(@Nullable Output<List<String>> outputCollectionName) {
@@ -192,7 +193,7 @@ public final class TransformSummaryArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder outputCollectionName(@Nullable List<String> outputCollectionName) {
-            this.outputCollectionName = Output.ofNullable(outputCollectionName);
+            this.outputCollectionName = Codegen.ofNullable(outputCollectionName);
             return this;
         }
         public Builder outputCollectionName(String... outputCollectionName) {

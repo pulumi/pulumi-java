@@ -9,6 +9,7 @@ import io.pulumi.azurenative.media.inputs.LiveEventInputAccessControlArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -31,7 +32,7 @@ public final class LiveEventInputArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<LiveEventInputAccessControlArgs> accessControl;
 
     public Output<LiveEventInputAccessControlArgs> getAccessControl() {
-        return this.accessControl == null ? Output.empty() : this.accessControl;
+        return this.accessControl == null ? Codegen.empty() : this.accessControl;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class LiveEventInputArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> accessToken;
 
     public Output<String> getAccessToken() {
-        return this.accessToken == null ? Output.empty() : this.accessToken;
+        return this.accessToken == null ? Codegen.empty() : this.accessToken;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class LiveEventInputArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<LiveEventEndpointArgs>> endpoints;
 
     public Output<List<LiveEventEndpointArgs>> getEndpoints() {
-        return this.endpoints == null ? Output.empty() : this.endpoints;
+        return this.endpoints == null ? Codegen.empty() : this.endpoints;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class LiveEventInputArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> keyFrameIntervalDuration;
 
     public Output<String> getKeyFrameIntervalDuration() {
-        return this.keyFrameIntervalDuration == null ? Output.empty() : this.keyFrameIntervalDuration;
+        return this.keyFrameIntervalDuration == null ? Codegen.empty() : this.keyFrameIntervalDuration;
     }
 
     /**
@@ -92,11 +93,11 @@ public final class LiveEventInputArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LiveEventInputArgs() {
-        this.accessControl = Output.empty();
-        this.accessToken = Output.empty();
-        this.endpoints = Output.empty();
-        this.keyFrameIntervalDuration = Output.empty();
-        this.streamingProtocol = Output.empty();
+        this.accessControl = Codegen.empty();
+        this.accessToken = Codegen.empty();
+        this.endpoints = Codegen.empty();
+        this.keyFrameIntervalDuration = Codegen.empty();
+        this.streamingProtocol = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class LiveEventInputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessControl(@Nullable LiveEventInputAccessControlArgs accessControl) {
-            this.accessControl = Output.ofNullable(accessControl);
+            this.accessControl = Codegen.ofNullable(accessControl);
             return this;
         }
         public Builder accessToken(@Nullable Output<String> accessToken) {
@@ -140,7 +141,7 @@ public final class LiveEventInputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessToken(@Nullable String accessToken) {
-            this.accessToken = Output.ofNullable(accessToken);
+            this.accessToken = Codegen.ofNullable(accessToken);
             return this;
         }
         public Builder endpoints(@Nullable Output<List<LiveEventEndpointArgs>> endpoints) {
@@ -148,7 +149,7 @@ public final class LiveEventInputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpoints(@Nullable List<LiveEventEndpointArgs> endpoints) {
-            this.endpoints = Output.ofNullable(endpoints);
+            this.endpoints = Codegen.ofNullable(endpoints);
             return this;
         }
         public Builder endpoints(LiveEventEndpointArgs... endpoints) {
@@ -159,7 +160,7 @@ public final class LiveEventInputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyFrameIntervalDuration(@Nullable String keyFrameIntervalDuration) {
-            this.keyFrameIntervalDuration = Output.ofNullable(keyFrameIntervalDuration);
+            this.keyFrameIntervalDuration = Codegen.ofNullable(keyFrameIntervalDuration);
             return this;
         }
         public Builder streamingProtocol(Output<Either<String,LiveEventInputProtocol>> streamingProtocol) {

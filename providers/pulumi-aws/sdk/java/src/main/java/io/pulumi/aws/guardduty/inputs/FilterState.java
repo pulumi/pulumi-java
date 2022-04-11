@@ -6,6 +6,7 @@ package io.pulumi.aws.guardduty.inputs;
 import io.pulumi.aws.guardduty.inputs.FilterFindingCriteriaGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class FilterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> action;
 
     public Output<String> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class FilterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class FilterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class FilterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> detectorId;
 
     public Output<String> getDetectorId() {
-        return this.detectorId == null ? Output.empty() : this.detectorId;
+        return this.detectorId == null ? Codegen.empty() : this.detectorId;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class FilterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FilterFindingCriteriaGetArgs> findingCriteria;
 
     public Output<FilterFindingCriteriaGetArgs> getFindingCriteria() {
-        return this.findingCriteria == null ? Output.empty() : this.findingCriteria;
+        return this.findingCriteria == null ? Codegen.empty() : this.findingCriteria;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class FilterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class FilterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> rank;
 
     public Output<Integer> getRank() {
-        return this.rank == null ? Output.empty() : this.rank;
+        return this.rank == null ? Codegen.empty() : this.rank;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class FilterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class FilterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public FilterState(
@@ -138,15 +139,15 @@ public final class FilterState extends io.pulumi.resources.ResourceArgs {
     }
 
     private FilterState() {
-        this.action = Output.empty();
-        this.arn = Output.empty();
-        this.description = Output.empty();
-        this.detectorId = Output.empty();
-        this.findingCriteria = Output.empty();
-        this.name = Output.empty();
-        this.rank = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.action = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.detectorId = Codegen.empty();
+        this.findingCriteria = Codegen.empty();
+        this.name = Codegen.empty();
+        this.rank = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -190,7 +191,7 @@ public final class FilterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder action(@Nullable String action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -198,7 +199,7 @@ public final class FilterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -206,7 +207,7 @@ public final class FilterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder detectorId(@Nullable Output<String> detectorId) {
@@ -214,7 +215,7 @@ public final class FilterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder detectorId(@Nullable String detectorId) {
-            this.detectorId = Output.ofNullable(detectorId);
+            this.detectorId = Codegen.ofNullable(detectorId);
             return this;
         }
         public Builder findingCriteria(@Nullable Output<FilterFindingCriteriaGetArgs> findingCriteria) {
@@ -222,7 +223,7 @@ public final class FilterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder findingCriteria(@Nullable FilterFindingCriteriaGetArgs findingCriteria) {
-            this.findingCriteria = Output.ofNullable(findingCriteria);
+            this.findingCriteria = Codegen.ofNullable(findingCriteria);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -230,7 +231,7 @@ public final class FilterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder rank(@Nullable Output<Integer> rank) {
@@ -238,7 +239,7 @@ public final class FilterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rank(@Nullable Integer rank) {
-            this.rank = Output.ofNullable(rank);
+            this.rank = Codegen.ofNullable(rank);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -246,7 +247,7 @@ public final class FilterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -254,7 +255,7 @@ public final class FilterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public FilterState build() {
             return new FilterState(action, arn, description, detectorId, findingCriteria, name, rank, tags, tagsAll);

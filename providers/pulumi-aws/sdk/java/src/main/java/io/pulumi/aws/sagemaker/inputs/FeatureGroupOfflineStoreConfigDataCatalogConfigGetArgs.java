@@ -5,6 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class FeatureGroupOfflineStoreConfigDataCatalogConfigGetArgs extend
       private final @Nullable Output<String> catalog;
 
     public Output<String> getCatalog() {
-        return this.catalog == null ? Output.empty() : this.catalog;
+        return this.catalog == null ? Codegen.empty() : this.catalog;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class FeatureGroupOfflineStoreConfigDataCatalogConfigGetArgs extend
       private final @Nullable Output<String> database;
 
     public Output<String> getDatabase() {
-        return this.database == null ? Output.empty() : this.database;
+        return this.database == null ? Codegen.empty() : this.database;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class FeatureGroupOfflineStoreConfigDataCatalogConfigGetArgs extend
       private final @Nullable Output<String> tableName;
 
     public Output<String> getTableName() {
-        return this.tableName == null ? Output.empty() : this.tableName;
+        return this.tableName == null ? Codegen.empty() : this.tableName;
     }
 
     public FeatureGroupOfflineStoreConfigDataCatalogConfigGetArgs(
@@ -57,9 +58,9 @@ public final class FeatureGroupOfflineStoreConfigDataCatalogConfigGetArgs extend
     }
 
     private FeatureGroupOfflineStoreConfigDataCatalogConfigGetArgs() {
-        this.catalog = Output.empty();
-        this.database = Output.empty();
-        this.tableName = Output.empty();
+        this.catalog = Codegen.empty();
+        this.database = Codegen.empty();
+        this.tableName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class FeatureGroupOfflineStoreConfigDataCatalogConfigGetArgs extend
             return this;
         }
         public Builder catalog(@Nullable String catalog) {
-            this.catalog = Output.ofNullable(catalog);
+            this.catalog = Codegen.ofNullable(catalog);
             return this;
         }
         public Builder database(@Nullable Output<String> database) {
@@ -99,7 +100,7 @@ public final class FeatureGroupOfflineStoreConfigDataCatalogConfigGetArgs extend
             return this;
         }
         public Builder database(@Nullable String database) {
-            this.database = Output.ofNullable(database);
+            this.database = Codegen.ofNullable(database);
             return this;
         }
         public Builder tableName(@Nullable Output<String> tableName) {
@@ -107,7 +108,7 @@ public final class FeatureGroupOfflineStoreConfigDataCatalogConfigGetArgs extend
             return this;
         }
         public Builder tableName(@Nullable String tableName) {
-            this.tableName = Output.ofNullable(tableName);
+            this.tableName = Codegen.ofNullable(tableName);
             return this;
         }        public FeatureGroupOfflineStoreConfigDataCatalogConfigGetArgs build() {
             return new FeatureGroupOfflineStoreConfigDataCatalogConfigGetArgs(catalog, database, tableName);

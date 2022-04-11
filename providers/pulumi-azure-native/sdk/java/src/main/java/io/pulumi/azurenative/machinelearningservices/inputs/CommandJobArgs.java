@@ -14,6 +14,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.TensorFlowArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -38,7 +39,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> codeId;
 
     public Output<String> getCodeId() {
-        return this.codeId == null ? Output.empty() : this.codeId;
+        return this.codeId == null ? Codegen.empty() : this.codeId;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> distribution;
 
     public Output<Object> getDistribution() {
-        return this.distribution == null ? Output.empty() : this.distribution;
+        return this.distribution == null ? Codegen.empty() : this.distribution;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> environmentId;
 
     public Output<String> getEnvironmentId() {
-        return this.environmentId == null ? Output.empty() : this.environmentId;
+        return this.environmentId == null ? Codegen.empty() : this.environmentId;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> environmentVariables;
 
     public Output<Map<String,String>> getEnvironmentVariables() {
-        return this.environmentVariables == null ? Output.empty() : this.environmentVariables;
+        return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> experimentName;
 
     public Output<String> getExperimentName() {
-        return this.experimentName == null ? Output.empty() : this.experimentName;
+        return this.experimentName == null ? Codegen.empty() : this.experimentName;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<AmlTokenArgs,ManagedIdentityArgs>> identity;
 
     public Output<Either<AmlTokenArgs,ManagedIdentityArgs>> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,InputDataBindingArgs>> inputDataBindings;
 
     public Output<Map<String,InputDataBindingArgs>> getInputDataBindings() {
-        return this.inputDataBindings == null ? Output.empty() : this.inputDataBindings;
+        return this.inputDataBindings == null ? Codegen.empty() : this.inputDataBindings;
     }
 
     /**
@@ -161,7 +162,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,OutputDataBindingArgs>> outputDataBindings;
 
     public Output<Map<String,OutputDataBindingArgs>> getOutputDataBindings() {
-        return this.outputDataBindings == null ? Output.empty() : this.outputDataBindings;
+        return this.outputDataBindings == null ? Codegen.empty() : this.outputDataBindings;
     }
 
     /**
@@ -173,7 +174,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     /**
@@ -184,7 +185,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -195,7 +196,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -206,7 +207,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> timeout;
 
     public Output<String> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     public CommandJobArgs(
@@ -245,22 +246,22 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CommandJobArgs() {
-        this.codeId = Output.empty();
-        this.command = Output.empty();
-        this.compute = Output.empty();
-        this.description = Output.empty();
-        this.distribution = Output.empty();
-        this.environmentId = Output.empty();
-        this.environmentVariables = Output.empty();
-        this.experimentName = Output.empty();
-        this.identity = Output.empty();
-        this.inputDataBindings = Output.empty();
-        this.jobType = Output.empty();
-        this.outputDataBindings = Output.empty();
-        this.priority = Output.empty();
-        this.properties = Output.empty();
-        this.tags = Output.empty();
-        this.timeout = Output.empty();
+        this.codeId = Codegen.empty();
+        this.command = Codegen.empty();
+        this.compute = Codegen.empty();
+        this.description = Codegen.empty();
+        this.distribution = Codegen.empty();
+        this.environmentId = Codegen.empty();
+        this.environmentVariables = Codegen.empty();
+        this.experimentName = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.inputDataBindings = Codegen.empty();
+        this.jobType = Codegen.empty();
+        this.outputDataBindings = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.timeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -318,7 +319,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder codeId(@Nullable String codeId) {
-            this.codeId = Output.ofNullable(codeId);
+            this.codeId = Codegen.ofNullable(codeId);
             return this;
         }
         public Builder command(Output<String> command) {
@@ -342,7 +343,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder distribution(@Nullable Output<Object> distribution) {
@@ -350,7 +351,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder distribution(@Nullable Object distribution) {
-            this.distribution = Output.ofNullable(distribution);
+            this.distribution = Codegen.ofNullable(distribution);
             return this;
         }
         public Builder environmentId(@Nullable Output<String> environmentId) {
@@ -358,7 +359,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder environmentId(@Nullable String environmentId) {
-            this.environmentId = Output.ofNullable(environmentId);
+            this.environmentId = Codegen.ofNullable(environmentId);
             return this;
         }
         public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
@@ -366,7 +367,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
-            this.environmentVariables = Output.ofNullable(environmentVariables);
+            this.environmentVariables = Codegen.ofNullable(environmentVariables);
             return this;
         }
         public Builder experimentName(@Nullable Output<String> experimentName) {
@@ -374,7 +375,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder experimentName(@Nullable String experimentName) {
-            this.experimentName = Output.ofNullable(experimentName);
+            this.experimentName = Codegen.ofNullable(experimentName);
             return this;
         }
         public Builder identity(@Nullable Output<Either<AmlTokenArgs,ManagedIdentityArgs>> identity) {
@@ -382,7 +383,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable Either<AmlTokenArgs,ManagedIdentityArgs> identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder inputDataBindings(@Nullable Output<Map<String,InputDataBindingArgs>> inputDataBindings) {
@@ -390,7 +391,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inputDataBindings(@Nullable Map<String,InputDataBindingArgs> inputDataBindings) {
-            this.inputDataBindings = Output.ofNullable(inputDataBindings);
+            this.inputDataBindings = Codegen.ofNullable(inputDataBindings);
             return this;
         }
         public Builder jobType(Output<String> jobType) {
@@ -406,7 +407,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder outputDataBindings(@Nullable Map<String,OutputDataBindingArgs> outputDataBindings) {
-            this.outputDataBindings = Output.ofNullable(outputDataBindings);
+            this.outputDataBindings = Codegen.ofNullable(outputDataBindings);
             return this;
         }
         public Builder priority(@Nullable Output<Integer> priority) {
@@ -414,7 +415,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
@@ -422,7 +423,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -430,7 +431,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder timeout(@Nullable Output<String> timeout) {
@@ -438,7 +439,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }        public CommandJobArgs build() {
             return new CommandJobArgs(codeId, command, compute, description, distribution, environmentId, environmentVariables, experimentName, identity, inputDataBindings, jobType, outputDataBindings, priority, properties, tags, timeout);

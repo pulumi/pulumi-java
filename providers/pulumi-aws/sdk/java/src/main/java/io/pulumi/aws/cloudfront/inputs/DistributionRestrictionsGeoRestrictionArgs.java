@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class DistributionRestrictionsGeoRestrictionArgs extends io.pulumi.
       private final @Nullable Output<List<String>> locations;
 
     public Output<List<String>> getLocations() {
-        return this.locations == null ? Output.empty() : this.locations;
+        return this.locations == null ? Codegen.empty() : this.locations;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class DistributionRestrictionsGeoRestrictionArgs extends io.pulumi.
     }
 
     private DistributionRestrictionsGeoRestrictionArgs() {
-        this.locations = Output.empty();
-        this.restrictionType = Output.empty();
+        this.locations = Codegen.empty();
+        this.restrictionType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class DistributionRestrictionsGeoRestrictionArgs extends io.pulumi.
             return this;
         }
         public Builder locations(@Nullable List<String> locations) {
-            this.locations = Output.ofNullable(locations);
+            this.locations = Codegen.ofNullable(locations);
             return this;
         }
         public Builder locations(String... locations) {

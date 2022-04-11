@@ -6,6 +6,7 @@ package io.pulumi.azurenative.operationsmanagement.inputs;
 import io.pulumi.azurenative.operationsmanagement.inputs.ArmTemplateParameterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +30,7 @@ public final class ManagementConfigurationPropertiesArgs extends io.pulumi.resou
       private final @Nullable Output<String> applicationId;
 
     public Output<String> getApplicationId() {
-        return this.applicationId == null ? Output.empty() : this.applicationId;
+        return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
     /**
@@ -77,10 +78,10 @@ public final class ManagementConfigurationPropertiesArgs extends io.pulumi.resou
     }
 
     private ManagementConfigurationPropertiesArgs() {
-        this.applicationId = Output.empty();
-        this.parameters = Output.empty();
-        this.parentResourceType = Output.empty();
-        this.template = Output.empty();
+        this.applicationId = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.parentResourceType = Codegen.empty();
+        this.template = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class ManagementConfigurationPropertiesArgs extends io.pulumi.resou
             return this;
         }
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Output.ofNullable(applicationId);
+            this.applicationId = Codegen.ofNullable(applicationId);
             return this;
         }
         public Builder parameters(Output<List<ArmTemplateParameterArgs>> parameters) {

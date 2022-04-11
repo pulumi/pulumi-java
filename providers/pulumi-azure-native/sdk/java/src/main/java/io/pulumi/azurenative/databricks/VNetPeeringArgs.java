@@ -8,6 +8,7 @@ import io.pulumi.azurenative.databricks.inputs.VirtualNetworkPeeringPropertiesFo
 import io.pulumi.azurenative.databricks.inputs.VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetworkArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> allowForwardedTraffic;
 
     public Output<Boolean> getAllowForwardedTraffic() {
-        return this.allowForwardedTraffic == null ? Output.empty() : this.allowForwardedTraffic;
+        return this.allowForwardedTraffic == null ? Codegen.empty() : this.allowForwardedTraffic;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> allowGatewayTransit;
 
     public Output<Boolean> getAllowGatewayTransit() {
-        return this.allowGatewayTransit == null ? Output.empty() : this.allowGatewayTransit;
+        return this.allowGatewayTransit == null ? Codegen.empty() : this.allowGatewayTransit;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> allowVirtualNetworkAccess;
 
     public Output<Boolean> getAllowVirtualNetworkAccess() {
-        return this.allowVirtualNetworkAccess == null ? Output.empty() : this.allowVirtualNetworkAccess;
+        return this.allowVirtualNetworkAccess == null ? Codegen.empty() : this.allowVirtualNetworkAccess;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AddressSpaceArgs> databricksAddressSpace;
 
     public Output<AddressSpaceArgs> getDatabricksAddressSpace() {
-        return this.databricksAddressSpace == null ? Output.empty() : this.databricksAddressSpace;
+        return this.databricksAddressSpace == null ? Codegen.empty() : this.databricksAddressSpace;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs> databricksVirtualNetwork;
 
     public Output<VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs> getDatabricksVirtualNetwork() {
-        return this.databricksVirtualNetwork == null ? Output.empty() : this.databricksVirtualNetwork;
+        return this.databricksVirtualNetwork == null ? Codegen.empty() : this.databricksVirtualNetwork;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> peeringName;
 
     public Output<String> getPeeringName() {
-        return this.peeringName == null ? Output.empty() : this.peeringName;
+        return this.peeringName == null ? Codegen.empty() : this.peeringName;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AddressSpaceArgs> remoteAddressSpace;
 
     public Output<AddressSpaceArgs> getRemoteAddressSpace() {
-        return this.remoteAddressSpace == null ? Output.empty() : this.remoteAddressSpace;
+        return this.remoteAddressSpace == null ? Codegen.empty() : this.remoteAddressSpace;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> useRemoteGateways;
 
     public Output<Boolean> getUseRemoteGateways() {
-        return this.useRemoteGateways == null ? Output.empty() : this.useRemoteGateways;
+        return this.useRemoteGateways == null ? Codegen.empty() : this.useRemoteGateways;
     }
 
     /**
@@ -165,17 +166,17 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VNetPeeringArgs() {
-        this.allowForwardedTraffic = Output.empty();
-        this.allowGatewayTransit = Output.empty();
-        this.allowVirtualNetworkAccess = Output.empty();
-        this.databricksAddressSpace = Output.empty();
-        this.databricksVirtualNetwork = Output.empty();
-        this.peeringName = Output.empty();
-        this.remoteAddressSpace = Output.empty();
-        this.remoteVirtualNetwork = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.useRemoteGateways = Output.empty();
-        this.workspaceName = Output.empty();
+        this.allowForwardedTraffic = Codegen.empty();
+        this.allowGatewayTransit = Codegen.empty();
+        this.allowVirtualNetworkAccess = Codegen.empty();
+        this.databricksAddressSpace = Codegen.empty();
+        this.databricksVirtualNetwork = Codegen.empty();
+        this.peeringName = Codegen.empty();
+        this.remoteAddressSpace = Codegen.empty();
+        this.remoteVirtualNetwork = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.useRemoteGateways = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -223,7 +224,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowForwardedTraffic(@Nullable Boolean allowForwardedTraffic) {
-            this.allowForwardedTraffic = Output.ofNullable(allowForwardedTraffic);
+            this.allowForwardedTraffic = Codegen.ofNullable(allowForwardedTraffic);
             return this;
         }
         public Builder allowGatewayTransit(@Nullable Output<Boolean> allowGatewayTransit) {
@@ -231,7 +232,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowGatewayTransit(@Nullable Boolean allowGatewayTransit) {
-            this.allowGatewayTransit = Output.ofNullable(allowGatewayTransit);
+            this.allowGatewayTransit = Codegen.ofNullable(allowGatewayTransit);
             return this;
         }
         public Builder allowVirtualNetworkAccess(@Nullable Output<Boolean> allowVirtualNetworkAccess) {
@@ -239,7 +240,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowVirtualNetworkAccess(@Nullable Boolean allowVirtualNetworkAccess) {
-            this.allowVirtualNetworkAccess = Output.ofNullable(allowVirtualNetworkAccess);
+            this.allowVirtualNetworkAccess = Codegen.ofNullable(allowVirtualNetworkAccess);
             return this;
         }
         public Builder databricksAddressSpace(@Nullable Output<AddressSpaceArgs> databricksAddressSpace) {
@@ -247,7 +248,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder databricksAddressSpace(@Nullable AddressSpaceArgs databricksAddressSpace) {
-            this.databricksAddressSpace = Output.ofNullable(databricksAddressSpace);
+            this.databricksAddressSpace = Codegen.ofNullable(databricksAddressSpace);
             return this;
         }
         public Builder databricksVirtualNetwork(@Nullable Output<VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs> databricksVirtualNetwork) {
@@ -255,7 +256,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder databricksVirtualNetwork(@Nullable VirtualNetworkPeeringPropertiesFormatDatabricksVirtualNetworkArgs databricksVirtualNetwork) {
-            this.databricksVirtualNetwork = Output.ofNullable(databricksVirtualNetwork);
+            this.databricksVirtualNetwork = Codegen.ofNullable(databricksVirtualNetwork);
             return this;
         }
         public Builder peeringName(@Nullable Output<String> peeringName) {
@@ -263,7 +264,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder peeringName(@Nullable String peeringName) {
-            this.peeringName = Output.ofNullable(peeringName);
+            this.peeringName = Codegen.ofNullable(peeringName);
             return this;
         }
         public Builder remoteAddressSpace(@Nullable Output<AddressSpaceArgs> remoteAddressSpace) {
@@ -271,7 +272,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder remoteAddressSpace(@Nullable AddressSpaceArgs remoteAddressSpace) {
-            this.remoteAddressSpace = Output.ofNullable(remoteAddressSpace);
+            this.remoteAddressSpace = Codegen.ofNullable(remoteAddressSpace);
             return this;
         }
         public Builder remoteVirtualNetwork(Output<VirtualNetworkPeeringPropertiesFormatRemoteVirtualNetworkArgs> remoteVirtualNetwork) {
@@ -295,7 +296,7 @@ public final class VNetPeeringArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder useRemoteGateways(@Nullable Boolean useRemoteGateways) {
-            this.useRemoteGateways = Output.ofNullable(useRemoteGateways);
+            this.useRemoteGateways = Codegen.ofNullable(useRemoteGateways);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

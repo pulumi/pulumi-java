@@ -8,6 +8,7 @@ import io.pulumi.aws.fsx.inputs.OpenZfsVolumeOriginSnapshotGetArgs;
 import io.pulumi.aws.fsx.inputs.OpenZfsVolumeUserAndGroupQuotaGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> copyTagsToSnapshots;
 
     public Output<Boolean> getCopyTagsToSnapshots() {
-        return this.copyTagsToSnapshots == null ? Output.empty() : this.copyTagsToSnapshots;
+        return this.copyTagsToSnapshots == null ? Codegen.empty() : this.copyTagsToSnapshots;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> dataCompressionType;
 
     public Output<String> getDataCompressionType() {
-        return this.dataCompressionType == null ? Output.empty() : this.dataCompressionType;
+        return this.dataCompressionType == null ? Codegen.empty() : this.dataCompressionType;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<OpenZfsVolumeNfsExportsGetArgs> nfsExports;
 
     public Output<OpenZfsVolumeNfsExportsGetArgs> getNfsExports() {
-        return this.nfsExports == null ? Output.empty() : this.nfsExports;
+        return this.nfsExports == null ? Codegen.empty() : this.nfsExports;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<OpenZfsVolumeOriginSnapshotGetArgs> originSnapshot;
 
     public Output<OpenZfsVolumeOriginSnapshotGetArgs> getOriginSnapshot() {
-        return this.originSnapshot == null ? Output.empty() : this.originSnapshot;
+        return this.originSnapshot == null ? Codegen.empty() : this.originSnapshot;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> parentVolumeId;
 
     public Output<String> getParentVolumeId() {
-        return this.parentVolumeId == null ? Output.empty() : this.parentVolumeId;
+        return this.parentVolumeId == null ? Codegen.empty() : this.parentVolumeId;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> storageCapacityQuotaGib;
 
     public Output<Integer> getStorageCapacityQuotaGib() {
-        return this.storageCapacityQuotaGib == null ? Output.empty() : this.storageCapacityQuotaGib;
+        return this.storageCapacityQuotaGib == null ? Codegen.empty() : this.storageCapacityQuotaGib;
     }
 
     /**
@@ -128,7 +129,7 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> storageCapacityReservationGib;
 
     public Output<Integer> getStorageCapacityReservationGib() {
-        return this.storageCapacityReservationGib == null ? Output.empty() : this.storageCapacityReservationGib;
+        return this.storageCapacityReservationGib == null ? Codegen.empty() : this.storageCapacityReservationGib;
     }
 
     /**
@@ -139,7 +140,7 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -150,7 +151,7 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -161,14 +162,14 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<OpenZfsVolumeUserAndGroupQuotaGetArgs>> userAndGroupQuotas;
 
     public Output<List<OpenZfsVolumeUserAndGroupQuotaGetArgs>> getUserAndGroupQuotas() {
-        return this.userAndGroupQuotas == null ? Output.empty() : this.userAndGroupQuotas;
+        return this.userAndGroupQuotas == null ? Codegen.empty() : this.userAndGroupQuotas;
     }
 
     @Import(name="volumeType")
       private final @Nullable Output<String> volumeType;
 
     public Output<String> getVolumeType() {
-        return this.volumeType == null ? Output.empty() : this.volumeType;
+        return this.volumeType == null ? Codegen.empty() : this.volumeType;
     }
 
     public OpenZfsVolumeState(
@@ -203,20 +204,20 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
     }
 
     private OpenZfsVolumeState() {
-        this.arn = Output.empty();
-        this.copyTagsToSnapshots = Output.empty();
-        this.dataCompressionType = Output.empty();
-        this.name = Output.empty();
-        this.nfsExports = Output.empty();
-        this.originSnapshot = Output.empty();
-        this.parentVolumeId = Output.empty();
-        this.readOnly = Output.empty();
-        this.storageCapacityQuotaGib = Output.empty();
-        this.storageCapacityReservationGib = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.userAndGroupQuotas = Output.empty();
-        this.volumeType = Output.empty();
+        this.arn = Codegen.empty();
+        this.copyTagsToSnapshots = Codegen.empty();
+        this.dataCompressionType = Codegen.empty();
+        this.name = Codegen.empty();
+        this.nfsExports = Codegen.empty();
+        this.originSnapshot = Codegen.empty();
+        this.parentVolumeId = Codegen.empty();
+        this.readOnly = Codegen.empty();
+        this.storageCapacityQuotaGib = Codegen.empty();
+        this.storageCapacityReservationGib = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.userAndGroupQuotas = Codegen.empty();
+        this.volumeType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -270,7 +271,7 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder copyTagsToSnapshots(@Nullable Output<Boolean> copyTagsToSnapshots) {
@@ -278,7 +279,7 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder copyTagsToSnapshots(@Nullable Boolean copyTagsToSnapshots) {
-            this.copyTagsToSnapshots = Output.ofNullable(copyTagsToSnapshots);
+            this.copyTagsToSnapshots = Codegen.ofNullable(copyTagsToSnapshots);
             return this;
         }
         public Builder dataCompressionType(@Nullable Output<String> dataCompressionType) {
@@ -286,7 +287,7 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataCompressionType(@Nullable String dataCompressionType) {
-            this.dataCompressionType = Output.ofNullable(dataCompressionType);
+            this.dataCompressionType = Codegen.ofNullable(dataCompressionType);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -294,7 +295,7 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder nfsExports(@Nullable Output<OpenZfsVolumeNfsExportsGetArgs> nfsExports) {
@@ -302,7 +303,7 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nfsExports(@Nullable OpenZfsVolumeNfsExportsGetArgs nfsExports) {
-            this.nfsExports = Output.ofNullable(nfsExports);
+            this.nfsExports = Codegen.ofNullable(nfsExports);
             return this;
         }
         public Builder originSnapshot(@Nullable Output<OpenZfsVolumeOriginSnapshotGetArgs> originSnapshot) {
@@ -310,7 +311,7 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder originSnapshot(@Nullable OpenZfsVolumeOriginSnapshotGetArgs originSnapshot) {
-            this.originSnapshot = Output.ofNullable(originSnapshot);
+            this.originSnapshot = Codegen.ofNullable(originSnapshot);
             return this;
         }
         public Builder parentVolumeId(@Nullable Output<String> parentVolumeId) {
@@ -318,7 +319,7 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parentVolumeId(@Nullable String parentVolumeId) {
-            this.parentVolumeId = Output.ofNullable(parentVolumeId);
+            this.parentVolumeId = Codegen.ofNullable(parentVolumeId);
             return this;
         }
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
@@ -326,7 +327,7 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }
         public Builder storageCapacityQuotaGib(@Nullable Output<Integer> storageCapacityQuotaGib) {
@@ -334,7 +335,7 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageCapacityQuotaGib(@Nullable Integer storageCapacityQuotaGib) {
-            this.storageCapacityQuotaGib = Output.ofNullable(storageCapacityQuotaGib);
+            this.storageCapacityQuotaGib = Codegen.ofNullable(storageCapacityQuotaGib);
             return this;
         }
         public Builder storageCapacityReservationGib(@Nullable Output<Integer> storageCapacityReservationGib) {
@@ -342,7 +343,7 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageCapacityReservationGib(@Nullable Integer storageCapacityReservationGib) {
-            this.storageCapacityReservationGib = Output.ofNullable(storageCapacityReservationGib);
+            this.storageCapacityReservationGib = Codegen.ofNullable(storageCapacityReservationGib);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -350,7 +351,7 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -358,7 +359,7 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder userAndGroupQuotas(@Nullable Output<List<OpenZfsVolumeUserAndGroupQuotaGetArgs>> userAndGroupQuotas) {
@@ -366,7 +367,7 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userAndGroupQuotas(@Nullable List<OpenZfsVolumeUserAndGroupQuotaGetArgs> userAndGroupQuotas) {
-            this.userAndGroupQuotas = Output.ofNullable(userAndGroupQuotas);
+            this.userAndGroupQuotas = Codegen.ofNullable(userAndGroupQuotas);
             return this;
         }
         public Builder userAndGroupQuotas(OpenZfsVolumeUserAndGroupQuotaGetArgs... userAndGroupQuotas) {
@@ -377,7 +378,7 @@ public final class OpenZfsVolumeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder volumeType(@Nullable String volumeType) {
-            this.volumeType = Output.ofNullable(volumeType);
+            this.volumeType = Codegen.ofNullable(volumeType);
             return this;
         }        public OpenZfsVolumeState build() {
             return new OpenZfsVolumeState(arn, copyTagsToSnapshots, dataCompressionType, name, nfsExports, originSnapshot, parentVolumeId, readOnly, storageCapacityQuotaGib, storageCapacityReservationGib, tags, tagsAll, userAndGroupQuotas, volumeType);

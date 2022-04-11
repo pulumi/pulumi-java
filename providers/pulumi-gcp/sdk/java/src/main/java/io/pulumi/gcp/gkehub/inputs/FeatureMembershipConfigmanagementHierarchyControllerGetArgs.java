@@ -5,6 +5,7 @@ package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class FeatureMembershipConfigmanagementHierarchyControllerGetArgs e
       private final @Nullable Output<Boolean> enableHierarchicalResourceQuota;
 
     public Output<Boolean> getEnableHierarchicalResourceQuota() {
-        return this.enableHierarchicalResourceQuota == null ? Output.empty() : this.enableHierarchicalResourceQuota;
+        return this.enableHierarchicalResourceQuota == null ? Codegen.empty() : this.enableHierarchicalResourceQuota;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class FeatureMembershipConfigmanagementHierarchyControllerGetArgs e
       private final @Nullable Output<Boolean> enablePodTreeLabels;
 
     public Output<Boolean> getEnablePodTreeLabels() {
-        return this.enablePodTreeLabels == null ? Output.empty() : this.enablePodTreeLabels;
+        return this.enablePodTreeLabels == null ? Codegen.empty() : this.enablePodTreeLabels;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class FeatureMembershipConfigmanagementHierarchyControllerGetArgs e
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     public FeatureMembershipConfigmanagementHierarchyControllerGetArgs(
@@ -57,9 +58,9 @@ public final class FeatureMembershipConfigmanagementHierarchyControllerGetArgs e
     }
 
     private FeatureMembershipConfigmanagementHierarchyControllerGetArgs() {
-        this.enableHierarchicalResourceQuota = Output.empty();
-        this.enablePodTreeLabels = Output.empty();
-        this.enabled = Output.empty();
+        this.enableHierarchicalResourceQuota = Codegen.empty();
+        this.enablePodTreeLabels = Codegen.empty();
+        this.enabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class FeatureMembershipConfigmanagementHierarchyControllerGetArgs e
             return this;
         }
         public Builder enableHierarchicalResourceQuota(@Nullable Boolean enableHierarchicalResourceQuota) {
-            this.enableHierarchicalResourceQuota = Output.ofNullable(enableHierarchicalResourceQuota);
+            this.enableHierarchicalResourceQuota = Codegen.ofNullable(enableHierarchicalResourceQuota);
             return this;
         }
         public Builder enablePodTreeLabels(@Nullable Output<Boolean> enablePodTreeLabels) {
@@ -99,7 +100,7 @@ public final class FeatureMembershipConfigmanagementHierarchyControllerGetArgs e
             return this;
         }
         public Builder enablePodTreeLabels(@Nullable Boolean enablePodTreeLabels) {
-            this.enablePodTreeLabels = Output.ofNullable(enablePodTreeLabels);
+            this.enablePodTreeLabels = Codegen.ofNullable(enablePodTreeLabels);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -107,7 +108,7 @@ public final class FeatureMembershipConfigmanagementHierarchyControllerGetArgs e
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }        public FeatureMembershipConfigmanagementHierarchyControllerGetArgs build() {
             return new FeatureMembershipConfigmanagementHierarchyControllerGetArgs(enableHierarchicalResourceQuota, enablePodTreeLabels, enabled);

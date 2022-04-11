@@ -5,6 +5,7 @@ package io.pulumi.gcp.firestore;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.firestore.inputs.IndexFieldArgs;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +36,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> database;
 
     public Output<String> getDatabase() {
-        return this.database == null ? Output.empty() : this.database;
+        return this.database == null ? Codegen.empty() : this.database;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> queryScope;
 
     public Output<String> getQueryScope() {
-        return this.queryScope == null ? Output.empty() : this.queryScope;
+        return this.queryScope == null ? Codegen.empty() : this.queryScope;
     }
 
     public IndexArgs(
@@ -94,11 +95,11 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IndexArgs() {
-        this.collection = Output.empty();
-        this.database = Output.empty();
-        this.fields = Output.empty();
-        this.project = Output.empty();
-        this.queryScope = Output.empty();
+        this.collection = Codegen.empty();
+        this.database = Codegen.empty();
+        this.fields = Codegen.empty();
+        this.project = Codegen.empty();
+        this.queryScope = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder database(@Nullable String database) {
-            this.database = Output.ofNullable(database);
+            this.database = Codegen.ofNullable(database);
             return this;
         }
         public Builder fields(Output<List<IndexFieldArgs>> fields) {
@@ -161,7 +162,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder queryScope(@Nullable Output<String> queryScope) {
@@ -169,7 +170,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder queryScope(@Nullable String queryScope) {
-            this.queryScope = Output.ofNullable(queryScope);
+            this.queryScope = Codegen.ofNullable(queryScope);
             return this;
         }        public IndexArgs build() {
             return new IndexArgs(collection, database, fields, project, queryScope);

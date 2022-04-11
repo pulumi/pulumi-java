@@ -8,6 +8,7 @@ import io.pulumi.azurenative.compute.inputs.VaultSecretGroupArgs;
 import io.pulumi.azurenative.compute.inputs.WindowsConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
       private final @Nullable Output<String> adminPassword;
 
     public Output<String> getAdminPassword() {
-        return this.adminPassword == null ? Output.empty() : this.adminPassword;
+        return this.adminPassword == null ? Codegen.empty() : this.adminPassword;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
       private final @Nullable Output<String> adminUsername;
 
     public Output<String> getAdminUsername() {
-        return this.adminUsername == null ? Output.empty() : this.adminUsername;
+        return this.adminUsername == null ? Codegen.empty() : this.adminUsername;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
       private final @Nullable Output<String> computerNamePrefix;
 
     public Output<String> getComputerNamePrefix() {
-        return this.computerNamePrefix == null ? Output.empty() : this.computerNamePrefix;
+        return this.computerNamePrefix == null ? Codegen.empty() : this.computerNamePrefix;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
       private final @Nullable Output<String> customData;
 
     public Output<String> getCustomData() {
-        return this.customData == null ? Output.empty() : this.customData;
+        return this.customData == null ? Codegen.empty() : this.customData;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
       private final @Nullable Output<LinuxConfigurationArgs> linuxConfiguration;
 
     public Output<LinuxConfigurationArgs> getLinuxConfiguration() {
-        return this.linuxConfiguration == null ? Output.empty() : this.linuxConfiguration;
+        return this.linuxConfiguration == null ? Codegen.empty() : this.linuxConfiguration;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
       private final @Nullable Output<List<VaultSecretGroupArgs>> secrets;
 
     public Output<List<VaultSecretGroupArgs>> getSecrets() {
-        return this.secrets == null ? Output.empty() : this.secrets;
+        return this.secrets == null ? Codegen.empty() : this.secrets;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
       private final @Nullable Output<WindowsConfigurationArgs> windowsConfiguration;
 
     public Output<WindowsConfigurationArgs> getWindowsConfiguration() {
-        return this.windowsConfiguration == null ? Output.empty() : this.windowsConfiguration;
+        return this.windowsConfiguration == null ? Codegen.empty() : this.windowsConfiguration;
     }
 
     public VirtualMachineScaleSetOSProfileArgs(
@@ -117,13 +118,13 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
     }
 
     private VirtualMachineScaleSetOSProfileArgs() {
-        this.adminPassword = Output.empty();
-        this.adminUsername = Output.empty();
-        this.computerNamePrefix = Output.empty();
-        this.customData = Output.empty();
-        this.linuxConfiguration = Output.empty();
-        this.secrets = Output.empty();
-        this.windowsConfiguration = Output.empty();
+        this.adminPassword = Codegen.empty();
+        this.adminUsername = Codegen.empty();
+        this.computerNamePrefix = Codegen.empty();
+        this.customData = Codegen.empty();
+        this.linuxConfiguration = Codegen.empty();
+        this.secrets = Codegen.empty();
+        this.windowsConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -163,7 +164,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
             return this;
         }
         public Builder adminPassword(@Nullable String adminPassword) {
-            this.adminPassword = Output.ofNullable(adminPassword);
+            this.adminPassword = Codegen.ofNullable(adminPassword);
             return this;
         }
         public Builder adminUsername(@Nullable Output<String> adminUsername) {
@@ -171,7 +172,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
             return this;
         }
         public Builder adminUsername(@Nullable String adminUsername) {
-            this.adminUsername = Output.ofNullable(adminUsername);
+            this.adminUsername = Codegen.ofNullable(adminUsername);
             return this;
         }
         public Builder computerNamePrefix(@Nullable Output<String> computerNamePrefix) {
@@ -179,7 +180,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
             return this;
         }
         public Builder computerNamePrefix(@Nullable String computerNamePrefix) {
-            this.computerNamePrefix = Output.ofNullable(computerNamePrefix);
+            this.computerNamePrefix = Codegen.ofNullable(computerNamePrefix);
             return this;
         }
         public Builder customData(@Nullable Output<String> customData) {
@@ -187,7 +188,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
             return this;
         }
         public Builder customData(@Nullable String customData) {
-            this.customData = Output.ofNullable(customData);
+            this.customData = Codegen.ofNullable(customData);
             return this;
         }
         public Builder linuxConfiguration(@Nullable Output<LinuxConfigurationArgs> linuxConfiguration) {
@@ -195,7 +196,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
             return this;
         }
         public Builder linuxConfiguration(@Nullable LinuxConfigurationArgs linuxConfiguration) {
-            this.linuxConfiguration = Output.ofNullable(linuxConfiguration);
+            this.linuxConfiguration = Codegen.ofNullable(linuxConfiguration);
             return this;
         }
         public Builder secrets(@Nullable Output<List<VaultSecretGroupArgs>> secrets) {
@@ -203,7 +204,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
             return this;
         }
         public Builder secrets(@Nullable List<VaultSecretGroupArgs> secrets) {
-            this.secrets = Output.ofNullable(secrets);
+            this.secrets = Codegen.ofNullable(secrets);
             return this;
         }
         public Builder secrets(VaultSecretGroupArgs... secrets) {
@@ -214,7 +215,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
             return this;
         }
         public Builder windowsConfiguration(@Nullable WindowsConfigurationArgs windowsConfiguration) {
-            this.windowsConfiguration = Output.ofNullable(windowsConfiguration);
+            this.windowsConfiguration = Codegen.ofNullable(windowsConfiguration);
             return this;
         }        public VirtualMachineScaleSetOSProfileArgs build() {
             return new VirtualMachineScaleSetOSProfileArgs(adminPassword, adminUsername, computerNamePrefix, customData, linuxConfiguration, secrets, windowsConfiguration);

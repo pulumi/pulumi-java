@@ -7,6 +7,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.ManagedSslCertificateArgs;
 import io.pulumi.gcp.compute.inputs.ManagedSslCertificateState;
@@ -251,7 +252,7 @@ public class ManagedSslCertificate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ManagedSslCertificate(String name, @Nullable ManagedSslCertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/managedSslCertificate:ManagedSslCertificate", name, args == null ? ManagedSslCertificateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/managedSslCertificate:ManagedSslCertificate", name, args == null ? ManagedSslCertificateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ManagedSslCertificate(String name, Output<String> id, @Nullable ManagedSslCertificateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

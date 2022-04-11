@@ -5,6 +5,7 @@ package io.pulumi.aws.servicequotas.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -24,7 +25,7 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> adjustable;
 
     public Output<Boolean> getAdjustable() {
-        return this.adjustable == null ? Output.empty() : this.adjustable;
+        return this.adjustable == null ? Codegen.empty() : this.adjustable;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> defaultValue;
 
     public Output<Double> getDefaultValue() {
-        return this.defaultValue == null ? Output.empty() : this.defaultValue;
+        return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> quotaCode;
 
     public Output<String> getQuotaCode() {
-        return this.quotaCode == null ? Output.empty() : this.quotaCode;
+        return this.quotaCode == null ? Codegen.empty() : this.quotaCode;
     }
 
     /**
@@ -68,21 +69,21 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> quotaName;
 
     public Output<String> getQuotaName() {
-        return this.quotaName == null ? Output.empty() : this.quotaName;
+        return this.quotaName == null ? Codegen.empty() : this.quotaName;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     @Import(name="requestStatus")
       private final @Nullable Output<String> requestStatus;
 
     public Output<String> getRequestStatus() {
-        return this.requestStatus == null ? Output.empty() : this.requestStatus;
+        return this.requestStatus == null ? Codegen.empty() : this.requestStatus;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serviceCode;
 
     public Output<String> getServiceCode() {
-        return this.serviceCode == null ? Output.empty() : this.serviceCode;
+        return this.serviceCode == null ? Codegen.empty() : this.serviceCode;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serviceName;
 
     public Output<String> getServiceName() {
-        return this.serviceName == null ? Output.empty() : this.serviceName;
+        return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> value;
 
     public Output<Double> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public ServiceQuotaState(
@@ -142,16 +143,16 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceQuotaState() {
-        this.adjustable = Output.empty();
-        this.arn = Output.empty();
-        this.defaultValue = Output.empty();
-        this.quotaCode = Output.empty();
-        this.quotaName = Output.empty();
-        this.requestId = Output.empty();
-        this.requestStatus = Output.empty();
-        this.serviceCode = Output.empty();
-        this.serviceName = Output.empty();
-        this.value = Output.empty();
+        this.adjustable = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.defaultValue = Codegen.empty();
+        this.quotaCode = Codegen.empty();
+        this.quotaName = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.requestStatus = Codegen.empty();
+        this.serviceCode = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -197,7 +198,7 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder adjustable(@Nullable Boolean adjustable) {
-            this.adjustable = Output.ofNullable(adjustable);
+            this.adjustable = Codegen.ofNullable(adjustable);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -205,7 +206,7 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder defaultValue(@Nullable Output<Double> defaultValue) {
@@ -213,7 +214,7 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultValue(@Nullable Double defaultValue) {
-            this.defaultValue = Output.ofNullable(defaultValue);
+            this.defaultValue = Codegen.ofNullable(defaultValue);
             return this;
         }
         public Builder quotaCode(@Nullable Output<String> quotaCode) {
@@ -221,7 +222,7 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder quotaCode(@Nullable String quotaCode) {
-            this.quotaCode = Output.ofNullable(quotaCode);
+            this.quotaCode = Codegen.ofNullable(quotaCode);
             return this;
         }
         public Builder quotaName(@Nullable Output<String> quotaName) {
@@ -229,7 +230,7 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder quotaName(@Nullable String quotaName) {
-            this.quotaName = Output.ofNullable(quotaName);
+            this.quotaName = Codegen.ofNullable(quotaName);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -237,7 +238,7 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder requestStatus(@Nullable Output<String> requestStatus) {
@@ -245,7 +246,7 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestStatus(@Nullable String requestStatus) {
-            this.requestStatus = Output.ofNullable(requestStatus);
+            this.requestStatus = Codegen.ofNullable(requestStatus);
             return this;
         }
         public Builder serviceCode(@Nullable Output<String> serviceCode) {
@@ -253,7 +254,7 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceCode(@Nullable String serviceCode) {
-            this.serviceCode = Output.ofNullable(serviceCode);
+            this.serviceCode = Codegen.ofNullable(serviceCode);
             return this;
         }
         public Builder serviceName(@Nullable Output<String> serviceName) {
@@ -261,7 +262,7 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Output.ofNullable(serviceName);
+            this.serviceName = Codegen.ofNullable(serviceName);
             return this;
         }
         public Builder value(@Nullable Output<Double> value) {
@@ -269,7 +270,7 @@ public final class ServiceQuotaState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable Double value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public ServiceQuotaState build() {
             return new ServiceQuotaState(adjustable, arn, defaultValue, quotaCode, quotaName, requestId, requestStatus, serviceCode, serviceName, value);

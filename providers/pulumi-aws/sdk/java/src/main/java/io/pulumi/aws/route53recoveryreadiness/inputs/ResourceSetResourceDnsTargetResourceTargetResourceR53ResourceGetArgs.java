@@ -5,6 +5,7 @@ package io.pulumi.aws.route53recoveryreadiness.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceR53Resource
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
-        return this.domainName == null ? Output.empty() : this.domainName;
+        return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceR53Resource
       private final @Nullable Output<String> recordSetId;
 
     public Output<String> getRecordSetId() {
-        return this.recordSetId == null ? Output.empty() : this.recordSetId;
+        return this.recordSetId == null ? Codegen.empty() : this.recordSetId;
     }
 
     public ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceGetArgs(
@@ -44,8 +45,8 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceR53Resource
     }
 
     private ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceGetArgs() {
-        this.domainName = Output.empty();
-        this.recordSetId = Output.empty();
+        this.domainName = Codegen.empty();
+        this.recordSetId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceR53Resource
             return this;
         }
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Output.ofNullable(domainName);
+            this.domainName = Codegen.ofNullable(domainName);
             return this;
         }
         public Builder recordSetId(@Nullable Output<String> recordSetId) {
@@ -83,7 +84,7 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceR53Resource
             return this;
         }
         public Builder recordSetId(@Nullable String recordSetId) {
-            this.recordSetId = Output.ofNullable(recordSetId);
+            this.recordSetId = Codegen.ofNullable(recordSetId);
             return this;
         }        public ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceGetArgs build() {
             return new ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceGetArgs(domainName, recordSetId);

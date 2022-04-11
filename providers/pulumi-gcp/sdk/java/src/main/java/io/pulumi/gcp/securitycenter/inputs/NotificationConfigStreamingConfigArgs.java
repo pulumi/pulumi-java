@@ -5,6 +5,7 @@ package io.pulumi.gcp.securitycenter.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -47,7 +48,7 @@ public final class NotificationConfigStreamingConfigArgs extends io.pulumi.resou
     }
 
     private NotificationConfigStreamingConfigArgs() {
-        this.filter = Output.empty();
+        this.filter = Codegen.empty();
     }
 
     public static Builder builder() {

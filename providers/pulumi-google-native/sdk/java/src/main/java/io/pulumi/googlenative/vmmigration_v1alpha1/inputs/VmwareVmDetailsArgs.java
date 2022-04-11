@@ -5,6 +5,7 @@ package io.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.vmmigration_v1alpha1.enums.VmwareVmDetailsPowerState;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> committedStorage;
 
     public Output<String> getCommittedStorage() {
-        return this.committedStorage == null ? Output.empty() : this.committedStorage;
+        return this.committedStorage == null ? Codegen.empty() : this.committedStorage;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> committedStorageMb;
 
     public Output<String> getCommittedStorageMb() {
-        return this.committedStorageMb == null ? Output.empty() : this.committedStorageMb;
+        return this.committedStorageMb == null ? Codegen.empty() : this.committedStorageMb;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Integer> cpuCount;
 
     public Output<Integer> getCpuCount() {
-        return this.cpuCount == null ? Output.empty() : this.cpuCount;
+        return this.cpuCount == null ? Codegen.empty() : this.cpuCount;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> datacenterDescription;
 
     public Output<String> getDatacenterDescription() {
-        return this.datacenterDescription == null ? Output.empty() : this.datacenterDescription;
+        return this.datacenterDescription == null ? Codegen.empty() : this.datacenterDescription;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> datacenterId;
 
     public Output<String> getDatacenterId() {
-        return this.datacenterId == null ? Output.empty() : this.datacenterId;
+        return this.datacenterId == null ? Codegen.empty() : this.datacenterId;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Integer> diskCount;
 
     public Output<Integer> getDiskCount() {
-        return this.diskCount == null ? Output.empty() : this.diskCount;
+        return this.diskCount == null ? Codegen.empty() : this.diskCount;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> guestDescription;
 
     public Output<String> getGuestDescription() {
-        return this.guestDescription == null ? Output.empty() : this.guestDescription;
+        return this.guestDescription == null ? Codegen.empty() : this.guestDescription;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Integer> memoryMb;
 
     public Output<Integer> getMemoryMb() {
-        return this.memoryMb == null ? Output.empty() : this.memoryMb;
+        return this.memoryMb == null ? Codegen.empty() : this.memoryMb;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<VmwareVmDetailsPowerState> powerState;
 
     public Output<VmwareVmDetailsPowerState> getPowerState() {
-        return this.powerState == null ? Output.empty() : this.powerState;
+        return this.powerState == null ? Codegen.empty() : this.powerState;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> uuid;
 
     public Output<String> getUuid() {
-        return this.uuid == null ? Output.empty() : this.uuid;
+        return this.uuid == null ? Codegen.empty() : this.uuid;
     }
 
     /**
@@ -149,7 +150,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> vmId;
 
     public Output<String> getVmId() {
-        return this.vmId == null ? Output.empty() : this.vmId;
+        return this.vmId == null ? Codegen.empty() : this.vmId;
     }
 
     public VmwareVmDetailsArgs(
@@ -180,18 +181,18 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private VmwareVmDetailsArgs() {
-        this.committedStorage = Output.empty();
-        this.committedStorageMb = Output.empty();
-        this.cpuCount = Output.empty();
-        this.datacenterDescription = Output.empty();
-        this.datacenterId = Output.empty();
-        this.diskCount = Output.empty();
-        this.displayName = Output.empty();
-        this.guestDescription = Output.empty();
-        this.memoryMb = Output.empty();
-        this.powerState = Output.empty();
-        this.uuid = Output.empty();
-        this.vmId = Output.empty();
+        this.committedStorage = Codegen.empty();
+        this.committedStorageMb = Codegen.empty();
+        this.cpuCount = Codegen.empty();
+        this.datacenterDescription = Codegen.empty();
+        this.datacenterId = Codegen.empty();
+        this.diskCount = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.guestDescription = Codegen.empty();
+        this.memoryMb = Codegen.empty();
+        this.powerState = Codegen.empty();
+        this.uuid = Codegen.empty();
+        this.vmId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -241,7 +242,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder committedStorage(@Nullable String committedStorage) {
-            this.committedStorage = Output.ofNullable(committedStorage);
+            this.committedStorage = Codegen.ofNullable(committedStorage);
             return this;
         }
         public Builder committedStorageMb(@Nullable Output<String> committedStorageMb) {
@@ -249,7 +250,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder committedStorageMb(@Nullable String committedStorageMb) {
-            this.committedStorageMb = Output.ofNullable(committedStorageMb);
+            this.committedStorageMb = Codegen.ofNullable(committedStorageMb);
             return this;
         }
         public Builder cpuCount(@Nullable Output<Integer> cpuCount) {
@@ -257,7 +258,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder cpuCount(@Nullable Integer cpuCount) {
-            this.cpuCount = Output.ofNullable(cpuCount);
+            this.cpuCount = Codegen.ofNullable(cpuCount);
             return this;
         }
         public Builder datacenterDescription(@Nullable Output<String> datacenterDescription) {
@@ -265,7 +266,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder datacenterDescription(@Nullable String datacenterDescription) {
-            this.datacenterDescription = Output.ofNullable(datacenterDescription);
+            this.datacenterDescription = Codegen.ofNullable(datacenterDescription);
             return this;
         }
         public Builder datacenterId(@Nullable Output<String> datacenterId) {
@@ -273,7 +274,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder datacenterId(@Nullable String datacenterId) {
-            this.datacenterId = Output.ofNullable(datacenterId);
+            this.datacenterId = Codegen.ofNullable(datacenterId);
             return this;
         }
         public Builder diskCount(@Nullable Output<Integer> diskCount) {
@@ -281,7 +282,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder diskCount(@Nullable Integer diskCount) {
-            this.diskCount = Output.ofNullable(diskCount);
+            this.diskCount = Codegen.ofNullable(diskCount);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -289,7 +290,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder guestDescription(@Nullable Output<String> guestDescription) {
@@ -297,7 +298,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder guestDescription(@Nullable String guestDescription) {
-            this.guestDescription = Output.ofNullable(guestDescription);
+            this.guestDescription = Codegen.ofNullable(guestDescription);
             return this;
         }
         public Builder memoryMb(@Nullable Output<Integer> memoryMb) {
@@ -305,7 +306,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder memoryMb(@Nullable Integer memoryMb) {
-            this.memoryMb = Output.ofNullable(memoryMb);
+            this.memoryMb = Codegen.ofNullable(memoryMb);
             return this;
         }
         public Builder powerState(@Nullable Output<VmwareVmDetailsPowerState> powerState) {
@@ -313,7 +314,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder powerState(@Nullable VmwareVmDetailsPowerState powerState) {
-            this.powerState = Output.ofNullable(powerState);
+            this.powerState = Codegen.ofNullable(powerState);
             return this;
         }
         public Builder uuid(@Nullable Output<String> uuid) {
@@ -321,7 +322,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder uuid(@Nullable String uuid) {
-            this.uuid = Output.ofNullable(uuid);
+            this.uuid = Codegen.ofNullable(uuid);
             return this;
         }
         public Builder vmId(@Nullable Output<String> vmId) {
@@ -329,7 +330,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder vmId(@Nullable String vmId) {
-            this.vmId = Output.ofNullable(vmId);
+            this.vmId = Codegen.ofNullable(vmId);
             return this;
         }        public VmwareVmDetailsArgs build() {
             return new VmwareVmDetailsArgs(committedStorage, committedStorageMb, cpuCount, datacenterDescription, datacenterId, diskCount, displayName, guestDescription, memoryMb, powerState, uuid, vmId);

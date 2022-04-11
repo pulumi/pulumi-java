@@ -7,6 +7,7 @@ import io.pulumi.azurenative.documentdb.enums.ConflictResolutionMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class ConflictResolutionPolicyArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> conflictResolutionPath;
 
     public Output<String> getConflictResolutionPath() {
-        return this.conflictResolutionPath == null ? Output.empty() : this.conflictResolutionPath;
+        return this.conflictResolutionPath == null ? Codegen.empty() : this.conflictResolutionPath;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ConflictResolutionPolicyArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> conflictResolutionProcedure;
 
     public Output<String> getConflictResolutionProcedure() {
-        return this.conflictResolutionProcedure == null ? Output.empty() : this.conflictResolutionProcedure;
+        return this.conflictResolutionProcedure == null ? Codegen.empty() : this.conflictResolutionProcedure;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ConflictResolutionPolicyArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Either<String,ConflictResolutionMode>> mode;
 
     public Output<Either<String,ConflictResolutionMode>> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     public ConflictResolutionPolicyArgs(
@@ -63,9 +64,9 @@ public final class ConflictResolutionPolicyArgs extends io.pulumi.resources.Reso
     }
 
     private ConflictResolutionPolicyArgs() {
-        this.conflictResolutionPath = Output.empty();
-        this.conflictResolutionProcedure = Output.empty();
-        this.mode = Output.empty();
+        this.conflictResolutionPath = Codegen.empty();
+        this.conflictResolutionProcedure = Codegen.empty();
+        this.mode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class ConflictResolutionPolicyArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder conflictResolutionPath(@Nullable String conflictResolutionPath) {
-            this.conflictResolutionPath = Output.ofNullable(conflictResolutionPath);
+            this.conflictResolutionPath = Codegen.ofNullable(conflictResolutionPath);
             return this;
         }
         public Builder conflictResolutionProcedure(@Nullable Output<String> conflictResolutionProcedure) {
@@ -105,7 +106,7 @@ public final class ConflictResolutionPolicyArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder conflictResolutionProcedure(@Nullable String conflictResolutionProcedure) {
-            this.conflictResolutionProcedure = Output.ofNullable(conflictResolutionProcedure);
+            this.conflictResolutionProcedure = Codegen.ofNullable(conflictResolutionProcedure);
             return this;
         }
         public Builder mode(@Nullable Output<Either<String,ConflictResolutionMode>> mode) {
@@ -113,7 +114,7 @@ public final class ConflictResolutionPolicyArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder mode(@Nullable Either<String,ConflictResolutionMode> mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }        public ConflictResolutionPolicyArgs build() {
             return new ConflictResolutionPolicyArgs(conflictResolutionPath, conflictResolutionProcedure, mode);

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.securityinsights.inputs.WatchlistUserInfoArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
-        return this.contentType == null ? Output.empty() : this.contentType;
+        return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> created;
 
     public Output<String> getCreated() {
-        return this.created == null ? Output.empty() : this.created;
+        return this.created == null ? Codegen.empty() : this.created;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<WatchlistUserInfoArgs> createdBy;
 
     public Output<WatchlistUserInfoArgs> getCreatedBy() {
-        return this.createdBy == null ? Output.empty() : this.createdBy;
+        return this.createdBy == null ? Codegen.empty() : this.createdBy;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> defaultDuration;
 
     public Output<String> getDefaultDuration() {
-        return this.defaultDuration == null ? Output.empty() : this.defaultDuration;
+        return this.defaultDuration == null ? Codegen.empty() : this.defaultDuration;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> isDeleted;
 
     public Output<Boolean> getIsDeleted() {
-        return this.isDeleted == null ? Output.empty() : this.isDeleted;
+        return this.isDeleted == null ? Codegen.empty() : this.isDeleted;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> labels;
 
     public Output<List<String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> numberOfLinesToSkip;
 
     public Output<Integer> getNumberOfLinesToSkip() {
-        return this.numberOfLinesToSkip == null ? Output.empty() : this.numberOfLinesToSkip;
+        return this.numberOfLinesToSkip == null ? Codegen.empty() : this.numberOfLinesToSkip;
     }
 
     /**
@@ -160,7 +161,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> rawContent;
 
     public Output<String> getRawContent() {
-        return this.rawContent == null ? Output.empty() : this.rawContent;
+        return this.rawContent == null ? Codegen.empty() : this.rawContent;
     }
 
     /**
@@ -193,7 +194,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {
-        return this.tenantId == null ? Output.empty() : this.tenantId;
+        return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
     /**
@@ -204,7 +205,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> updated;
 
     public Output<String> getUpdated() {
-        return this.updated == null ? Output.empty() : this.updated;
+        return this.updated == null ? Codegen.empty() : this.updated;
     }
 
     /**
@@ -215,7 +216,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<WatchlistUserInfoArgs> updatedBy;
 
     public Output<WatchlistUserInfoArgs> getUpdatedBy() {
-        return this.updatedBy == null ? Output.empty() : this.updatedBy;
+        return this.updatedBy == null ? Codegen.empty() : this.updatedBy;
     }
 
     /**
@@ -226,7 +227,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> uploadStatus;
 
     public Output<String> getUploadStatus() {
-        return this.uploadStatus == null ? Output.empty() : this.uploadStatus;
+        return this.uploadStatus == null ? Codegen.empty() : this.uploadStatus;
     }
 
     /**
@@ -237,7 +238,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> watchlistAlias;
 
     public Output<String> getWatchlistAlias() {
-        return this.watchlistAlias == null ? Output.empty() : this.watchlistAlias;
+        return this.watchlistAlias == null ? Codegen.empty() : this.watchlistAlias;
     }
 
     /**
@@ -248,7 +249,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> watchlistId;
 
     public Output<String> getWatchlistId() {
-        return this.watchlistId == null ? Output.empty() : this.watchlistId;
+        return this.watchlistId == null ? Codegen.empty() : this.watchlistId;
     }
 
     /**
@@ -259,7 +260,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> watchlistItemsCount;
 
     public Output<Integer> getWatchlistItemsCount() {
-        return this.watchlistItemsCount == null ? Output.empty() : this.watchlistItemsCount;
+        return this.watchlistItemsCount == null ? Codegen.empty() : this.watchlistItemsCount;
     }
 
     /**
@@ -270,7 +271,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> watchlistType;
 
     public Output<String> getWatchlistType() {
-        return this.watchlistType == null ? Output.empty() : this.watchlistType;
+        return this.watchlistType == null ? Codegen.empty() : this.watchlistType;
     }
 
     /**
@@ -336,30 +337,30 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WatchlistArgs() {
-        this.contentType = Output.empty();
-        this.created = Output.empty();
-        this.createdBy = Output.empty();
-        this.defaultDuration = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.isDeleted = Output.empty();
-        this.itemsSearchKey = Output.empty();
-        this.labels = Output.empty();
-        this.numberOfLinesToSkip = Output.empty();
-        this.operationalInsightsResourceProvider = Output.empty();
-        this.provider = Output.empty();
-        this.rawContent = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.source = Output.empty();
-        this.tenantId = Output.empty();
-        this.updated = Output.empty();
-        this.updatedBy = Output.empty();
-        this.uploadStatus = Output.empty();
-        this.watchlistAlias = Output.empty();
-        this.watchlistId = Output.empty();
-        this.watchlistItemsCount = Output.empty();
-        this.watchlistType = Output.empty();
-        this.workspaceName = Output.empty();
+        this.contentType = Codegen.empty();
+        this.created = Codegen.empty();
+        this.createdBy = Codegen.empty();
+        this.defaultDuration = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.isDeleted = Codegen.empty();
+        this.itemsSearchKey = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.numberOfLinesToSkip = Codegen.empty();
+        this.operationalInsightsResourceProvider = Codegen.empty();
+        this.provider = Codegen.empty();
+        this.rawContent = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.source = Codegen.empty();
+        this.tenantId = Codegen.empty();
+        this.updated = Codegen.empty();
+        this.updatedBy = Codegen.empty();
+        this.uploadStatus = Codegen.empty();
+        this.watchlistAlias = Codegen.empty();
+        this.watchlistId = Codegen.empty();
+        this.watchlistItemsCount = Codegen.empty();
+        this.watchlistType = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -433,7 +434,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Output.ofNullable(contentType);
+            this.contentType = Codegen.ofNullable(contentType);
             return this;
         }
         public Builder created(@Nullable Output<String> created) {
@@ -441,7 +442,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder created(@Nullable String created) {
-            this.created = Output.ofNullable(created);
+            this.created = Codegen.ofNullable(created);
             return this;
         }
         public Builder createdBy(@Nullable Output<WatchlistUserInfoArgs> createdBy) {
@@ -449,7 +450,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdBy(@Nullable WatchlistUserInfoArgs createdBy) {
-            this.createdBy = Output.ofNullable(createdBy);
+            this.createdBy = Codegen.ofNullable(createdBy);
             return this;
         }
         public Builder defaultDuration(@Nullable Output<String> defaultDuration) {
@@ -457,7 +458,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultDuration(@Nullable String defaultDuration) {
-            this.defaultDuration = Output.ofNullable(defaultDuration);
+            this.defaultDuration = Codegen.ofNullable(defaultDuration);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -465,7 +466,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -481,7 +482,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isDeleted(@Nullable Boolean isDeleted) {
-            this.isDeleted = Output.ofNullable(isDeleted);
+            this.isDeleted = Codegen.ofNullable(isDeleted);
             return this;
         }
         public Builder itemsSearchKey(Output<String> itemsSearchKey) {
@@ -497,7 +498,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable List<String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder labels(String... labels) {
@@ -508,7 +509,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder numberOfLinesToSkip(@Nullable Integer numberOfLinesToSkip) {
-            this.numberOfLinesToSkip = Output.ofNullable(numberOfLinesToSkip);
+            this.numberOfLinesToSkip = Codegen.ofNullable(numberOfLinesToSkip);
             return this;
         }
         public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
@@ -532,7 +533,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rawContent(@Nullable String rawContent) {
-            this.rawContent = Output.ofNullable(rawContent);
+            this.rawContent = Codegen.ofNullable(rawContent);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -556,7 +557,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Output.ofNullable(tenantId);
+            this.tenantId = Codegen.ofNullable(tenantId);
             return this;
         }
         public Builder updated(@Nullable Output<String> updated) {
@@ -564,7 +565,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updated(@Nullable String updated) {
-            this.updated = Output.ofNullable(updated);
+            this.updated = Codegen.ofNullable(updated);
             return this;
         }
         public Builder updatedBy(@Nullable Output<WatchlistUserInfoArgs> updatedBy) {
@@ -572,7 +573,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updatedBy(@Nullable WatchlistUserInfoArgs updatedBy) {
-            this.updatedBy = Output.ofNullable(updatedBy);
+            this.updatedBy = Codegen.ofNullable(updatedBy);
             return this;
         }
         public Builder uploadStatus(@Nullable Output<String> uploadStatus) {
@@ -580,7 +581,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uploadStatus(@Nullable String uploadStatus) {
-            this.uploadStatus = Output.ofNullable(uploadStatus);
+            this.uploadStatus = Codegen.ofNullable(uploadStatus);
             return this;
         }
         public Builder watchlistAlias(@Nullable Output<String> watchlistAlias) {
@@ -588,7 +589,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder watchlistAlias(@Nullable String watchlistAlias) {
-            this.watchlistAlias = Output.ofNullable(watchlistAlias);
+            this.watchlistAlias = Codegen.ofNullable(watchlistAlias);
             return this;
         }
         public Builder watchlistId(@Nullable Output<String> watchlistId) {
@@ -596,7 +597,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder watchlistId(@Nullable String watchlistId) {
-            this.watchlistId = Output.ofNullable(watchlistId);
+            this.watchlistId = Codegen.ofNullable(watchlistId);
             return this;
         }
         public Builder watchlistItemsCount(@Nullable Output<Integer> watchlistItemsCount) {
@@ -604,7 +605,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder watchlistItemsCount(@Nullable Integer watchlistItemsCount) {
-            this.watchlistItemsCount = Output.ofNullable(watchlistItemsCount);
+            this.watchlistItemsCount = Codegen.ofNullable(watchlistItemsCount);
             return this;
         }
         public Builder watchlistType(@Nullable Output<String> watchlistType) {
@@ -612,7 +613,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder watchlistType(@Nullable String watchlistType) {
-            this.watchlistType = Output.ofNullable(watchlistType);
+            this.watchlistType = Codegen.ofNullable(watchlistType);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

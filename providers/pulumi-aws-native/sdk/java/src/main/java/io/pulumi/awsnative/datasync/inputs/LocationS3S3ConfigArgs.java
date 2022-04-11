@@ -5,6 +5,7 @@ package io.pulumi.awsnative.datasync.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,7 +34,7 @@ public final class LocationS3S3ConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     private LocationS3S3ConfigArgs() {
-        this.bucketAccessRoleArn = Output.empty();
+        this.bucketAccessRoleArn = Codegen.empty();
     }
 
     public static Builder builder() {

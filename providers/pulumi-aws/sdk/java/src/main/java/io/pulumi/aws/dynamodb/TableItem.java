@@ -9,6 +9,7 @@ import io.pulumi.aws.dynamodb.inputs.TableItemState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -108,7 +109,7 @@ public class TableItem extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TableItem(String name, TableItemArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:dynamodb/tableItem:TableItem", name, args == null ? TableItemArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:dynamodb/tableItem:TableItem", name, args == null ? TableItemArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TableItem(String name, Output<String> id, @Nullable TableItemState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

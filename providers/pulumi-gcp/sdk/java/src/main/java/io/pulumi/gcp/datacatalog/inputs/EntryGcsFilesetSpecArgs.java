@@ -5,6 +5,7 @@ package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.datacatalog.inputs.EntryGcsFilesetSpecSampleGcsFileSpecArgs;
 import java.lang.String;
 import java.util.List;
@@ -47,7 +48,7 @@ public final class EntryGcsFilesetSpecArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<EntryGcsFilesetSpecSampleGcsFileSpecArgs>> sampleGcsFileSpecs;
 
     public Output<List<EntryGcsFilesetSpecSampleGcsFileSpecArgs>> getSampleGcsFileSpecs() {
-        return this.sampleGcsFileSpecs == null ? Output.empty() : this.sampleGcsFileSpecs;
+        return this.sampleGcsFileSpecs == null ? Codegen.empty() : this.sampleGcsFileSpecs;
     }
 
     public EntryGcsFilesetSpecArgs(
@@ -58,8 +59,8 @@ public final class EntryGcsFilesetSpecArgs extends io.pulumi.resources.ResourceA
     }
 
     private EntryGcsFilesetSpecArgs() {
-        this.filePatterns = Output.empty();
-        this.sampleGcsFileSpecs = Output.empty();
+        this.filePatterns = Codegen.empty();
+        this.sampleGcsFileSpecs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class EntryGcsFilesetSpecArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder sampleGcsFileSpecs(@Nullable List<EntryGcsFilesetSpecSampleGcsFileSpecArgs> sampleGcsFileSpecs) {
-            this.sampleGcsFileSpecs = Output.ofNullable(sampleGcsFileSpecs);
+            this.sampleGcsFileSpecs = Codegen.ofNullable(sampleGcsFileSpecs);
             return this;
         }
         public Builder sampleGcsFileSpecs(EntryGcsFilesetSpecSampleGcsFileSpecArgs... sampleGcsFileSpecs) {

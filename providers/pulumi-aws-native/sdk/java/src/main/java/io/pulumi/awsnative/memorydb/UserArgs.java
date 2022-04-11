@@ -7,6 +7,7 @@ import io.pulumi.awsnative.memorydb.inputs.AuthenticationModePropertiesArgs;
 import io.pulumi.awsnative.memorydb.inputs.UserTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -43,7 +44,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<UserTagArgs>> tags;
 
     public Output<List<UserTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> userName;
 
     public Output<String> getUserName() {
-        return this.userName == null ? Output.empty() : this.userName;
+        return this.userName == null ? Codegen.empty() : this.userName;
     }
 
     public UserArgs(
@@ -69,10 +70,10 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserArgs() {
-        this.accessString = Output.empty();
-        this.authenticationMode = Output.empty();
-        this.tags = Output.empty();
-        this.userName = Output.empty();
+        this.accessString = Codegen.empty();
+        this.authenticationMode = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -122,7 +123,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<UserTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(UserTagArgs... tags) {
@@ -133,7 +134,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userName(@Nullable String userName) {
-            this.userName = Output.ofNullable(userName);
+            this.userName = Codegen.ofNullable(userName);
             return this;
         }        public UserArgs build() {
             return new UserArgs(accessString, authenticationMode, tags, userName);

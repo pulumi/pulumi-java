@@ -10,6 +10,7 @@ import io.pulumi.azurenative.hybriddata.inputs.CustomerSecretArgs;
 import io.pulumi.azurenative.hybriddata.inputs.ScheduleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +30,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<CustomerSecretArgs>> customerSecrets;
 
     public Output<List<CustomerSecretArgs>> getCustomerSecrets() {
-        return this.customerSecrets == null ? Output.empty() : this.customerSecrets;
+        return this.customerSecrets == null ? Codegen.empty() : this.customerSecrets;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> dataServiceInput;
 
     public Output<Object> getDataServiceInput() {
-        return this.dataServiceInput == null ? Output.empty() : this.dataServiceInput;
+        return this.dataServiceInput == null ? Codegen.empty() : this.dataServiceInput;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> jobDefinitionName;
 
     public Output<String> getJobDefinitionName() {
-        return this.jobDefinitionName == null ? Output.empty() : this.jobDefinitionName;
+        return this.jobDefinitionName == null ? Codegen.empty() : this.jobDefinitionName;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> lastModifiedTime;
 
     public Output<String> getLastModifiedTime() {
-        return this.lastModifiedTime == null ? Output.empty() : this.lastModifiedTime;
+        return this.lastModifiedTime == null ? Codegen.empty() : this.lastModifiedTime;
     }
 
     /**
@@ -128,7 +129,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RunLocation> runLocation;
 
     public Output<RunLocation> getRunLocation() {
-        return this.runLocation == null ? Output.empty() : this.runLocation;
+        return this.runLocation == null ? Codegen.empty() : this.runLocation;
     }
 
     /**
@@ -139,7 +140,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ScheduleArgs>> schedules;
 
     public Output<List<ScheduleArgs>> getSchedules() {
-        return this.schedules == null ? Output.empty() : this.schedules;
+        return this.schedules == null ? Codegen.empty() : this.schedules;
     }
 
     /**
@@ -161,7 +162,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<UserConfirmation> userConfirmation;
 
     public Output<UserConfirmation> getUserConfirmation() {
-        return this.userConfirmation == null ? Output.empty() : this.userConfirmation;
+        return this.userConfirmation == null ? Codegen.empty() : this.userConfirmation;
     }
 
     public JobDefinitionArgs(
@@ -190,23 +191,23 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
         this.runLocation = runLocation;
         this.schedules = schedules;
         this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.userConfirmation = userConfirmation == null ? Output.ofNullable(io.pulumi.azurenative.hybriddata.enums.UserConfirmation.NotRequired) : userConfirmation;
+        this.userConfirmation = userConfirmation == null ? Codegen.ofNullable(io.pulumi.azurenative.hybriddata.enums.UserConfirmation.NotRequired) : userConfirmation;
     }
 
     private JobDefinitionArgs() {
-        this.customerSecrets = Output.empty();
-        this.dataManagerName = Output.empty();
-        this.dataServiceInput = Output.empty();
-        this.dataServiceName = Output.empty();
-        this.dataSinkId = Output.empty();
-        this.dataSourceId = Output.empty();
-        this.jobDefinitionName = Output.empty();
-        this.lastModifiedTime = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.runLocation = Output.empty();
-        this.schedules = Output.empty();
-        this.state = Output.empty();
-        this.userConfirmation = Output.empty();
+        this.customerSecrets = Codegen.empty();
+        this.dataManagerName = Codegen.empty();
+        this.dataServiceInput = Codegen.empty();
+        this.dataServiceName = Codegen.empty();
+        this.dataSinkId = Codegen.empty();
+        this.dataSourceId = Codegen.empty();
+        this.jobDefinitionName = Codegen.empty();
+        this.lastModifiedTime = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.runLocation = Codegen.empty();
+        this.schedules = Codegen.empty();
+        this.state = Codegen.empty();
+        this.userConfirmation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -258,7 +259,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customerSecrets(@Nullable List<CustomerSecretArgs> customerSecrets) {
-            this.customerSecrets = Output.ofNullable(customerSecrets);
+            this.customerSecrets = Codegen.ofNullable(customerSecrets);
             return this;
         }
         public Builder customerSecrets(CustomerSecretArgs... customerSecrets) {
@@ -277,7 +278,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataServiceInput(@Nullable Object dataServiceInput) {
-            this.dataServiceInput = Output.ofNullable(dataServiceInput);
+            this.dataServiceInput = Codegen.ofNullable(dataServiceInput);
             return this;
         }
         public Builder dataServiceName(Output<String> dataServiceName) {
@@ -309,7 +310,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jobDefinitionName(@Nullable String jobDefinitionName) {
-            this.jobDefinitionName = Output.ofNullable(jobDefinitionName);
+            this.jobDefinitionName = Codegen.ofNullable(jobDefinitionName);
             return this;
         }
         public Builder lastModifiedTime(@Nullable Output<String> lastModifiedTime) {
@@ -317,7 +318,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
-            this.lastModifiedTime = Output.ofNullable(lastModifiedTime);
+            this.lastModifiedTime = Codegen.ofNullable(lastModifiedTime);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -333,7 +334,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder runLocation(@Nullable RunLocation runLocation) {
-            this.runLocation = Output.ofNullable(runLocation);
+            this.runLocation = Codegen.ofNullable(runLocation);
             return this;
         }
         public Builder schedules(@Nullable Output<List<ScheduleArgs>> schedules) {
@@ -341,7 +342,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schedules(@Nullable List<ScheduleArgs> schedules) {
-            this.schedules = Output.ofNullable(schedules);
+            this.schedules = Codegen.ofNullable(schedules);
             return this;
         }
         public Builder schedules(ScheduleArgs... schedules) {
@@ -360,7 +361,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userConfirmation(@Nullable UserConfirmation userConfirmation) {
-            this.userConfirmation = Output.ofNullable(userConfirmation);
+            this.userConfirmation = Codegen.ofNullable(userConfirmation);
             return this;
         }        public JobDefinitionArgs build() {
             return new JobDefinitionArgs(customerSecrets, dataManagerName, dataServiceInput, dataServiceName, dataSinkId, dataSourceId, jobDefinitionName, lastModifiedTime, resourceGroupName, runLocation, schedules, state, userConfirmation);

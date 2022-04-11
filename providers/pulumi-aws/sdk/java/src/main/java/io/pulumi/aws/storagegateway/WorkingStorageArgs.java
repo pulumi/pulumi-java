@@ -5,6 +5,7 @@ package io.pulumi.aws.storagegateway;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class WorkingStorageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkingStorageArgs() {
-        this.diskId = Output.empty();
-        this.gatewayArn = Output.empty();
+        this.diskId = Codegen.empty();
+        this.gatewayArn = Codegen.empty();
     }
 
     public static Builder builder() {

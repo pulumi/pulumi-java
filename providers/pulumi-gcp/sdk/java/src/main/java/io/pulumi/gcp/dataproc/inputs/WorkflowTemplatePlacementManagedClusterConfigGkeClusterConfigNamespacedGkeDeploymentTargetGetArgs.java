@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
       private final @Nullable Output<String> clusterNamespace;
 
     public Output<String> getClusterNamespace() {
-        return this.clusterNamespace == null ? Output.empty() : this.clusterNamespace;
+        return this.clusterNamespace == null ? Codegen.empty() : this.clusterNamespace;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
       private final @Nullable Output<String> targetGkeCluster;
 
     public Output<String> getTargetGkeCluster() {
-        return this.targetGkeCluster == null ? Output.empty() : this.targetGkeCluster;
+        return this.targetGkeCluster == null ? Codegen.empty() : this.targetGkeCluster;
     }
 
     public WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetGetArgs(
@@ -44,8 +45,8 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
     }
 
     private WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetGetArgs() {
-        this.clusterNamespace = Output.empty();
-        this.targetGkeCluster = Output.empty();
+        this.clusterNamespace = Codegen.empty();
+        this.targetGkeCluster = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
             return this;
         }
         public Builder clusterNamespace(@Nullable String clusterNamespace) {
-            this.clusterNamespace = Output.ofNullable(clusterNamespace);
+            this.clusterNamespace = Codegen.ofNullable(clusterNamespace);
             return this;
         }
         public Builder targetGkeCluster(@Nullable Output<String> targetGkeCluster) {
@@ -83,7 +84,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
             return this;
         }
         public Builder targetGkeCluster(@Nullable String targetGkeCluster) {
-            this.targetGkeCluster = Output.ofNullable(targetGkeCluster);
+            this.targetGkeCluster = Codegen.ofNullable(targetGkeCluster);
             return this;
         }        public WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetGetArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTargetGetArgs(clusterNamespace, targetGkeCluster);

@@ -8,6 +8,7 @@ import io.pulumi.awsnative.amplify.inputs.AppBasicAuthConfigArgs;
 import io.pulumi.awsnative.amplify.inputs.AppEnvironmentVariableArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,70 +24,70 @@ public final class AppAutoBranchCreationConfigArgs extends io.pulumi.resources.R
       private final @Nullable Output<List<String>> autoBranchCreationPatterns;
 
     public Output<List<String>> getAutoBranchCreationPatterns() {
-        return this.autoBranchCreationPatterns == null ? Output.empty() : this.autoBranchCreationPatterns;
+        return this.autoBranchCreationPatterns == null ? Codegen.empty() : this.autoBranchCreationPatterns;
     }
 
     @Import(name="basicAuthConfig")
       private final @Nullable Output<AppBasicAuthConfigArgs> basicAuthConfig;
 
     public Output<AppBasicAuthConfigArgs> getBasicAuthConfig() {
-        return this.basicAuthConfig == null ? Output.empty() : this.basicAuthConfig;
+        return this.basicAuthConfig == null ? Codegen.empty() : this.basicAuthConfig;
     }
 
     @Import(name="buildSpec")
       private final @Nullable Output<String> buildSpec;
 
     public Output<String> getBuildSpec() {
-        return this.buildSpec == null ? Output.empty() : this.buildSpec;
+        return this.buildSpec == null ? Codegen.empty() : this.buildSpec;
     }
 
     @Import(name="enableAutoBranchCreation")
       private final @Nullable Output<Boolean> enableAutoBranchCreation;
 
     public Output<Boolean> getEnableAutoBranchCreation() {
-        return this.enableAutoBranchCreation == null ? Output.empty() : this.enableAutoBranchCreation;
+        return this.enableAutoBranchCreation == null ? Codegen.empty() : this.enableAutoBranchCreation;
     }
 
     @Import(name="enableAutoBuild")
       private final @Nullable Output<Boolean> enableAutoBuild;
 
     public Output<Boolean> getEnableAutoBuild() {
-        return this.enableAutoBuild == null ? Output.empty() : this.enableAutoBuild;
+        return this.enableAutoBuild == null ? Codegen.empty() : this.enableAutoBuild;
     }
 
     @Import(name="enablePerformanceMode")
       private final @Nullable Output<Boolean> enablePerformanceMode;
 
     public Output<Boolean> getEnablePerformanceMode() {
-        return this.enablePerformanceMode == null ? Output.empty() : this.enablePerformanceMode;
+        return this.enablePerformanceMode == null ? Codegen.empty() : this.enablePerformanceMode;
     }
 
     @Import(name="enablePullRequestPreview")
       private final @Nullable Output<Boolean> enablePullRequestPreview;
 
     public Output<Boolean> getEnablePullRequestPreview() {
-        return this.enablePullRequestPreview == null ? Output.empty() : this.enablePullRequestPreview;
+        return this.enablePullRequestPreview == null ? Codegen.empty() : this.enablePullRequestPreview;
     }
 
     @Import(name="environmentVariables")
       private final @Nullable Output<List<AppEnvironmentVariableArgs>> environmentVariables;
 
     public Output<List<AppEnvironmentVariableArgs>> getEnvironmentVariables() {
-        return this.environmentVariables == null ? Output.empty() : this.environmentVariables;
+        return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
     }
 
     @Import(name="pullRequestEnvironmentName")
       private final @Nullable Output<String> pullRequestEnvironmentName;
 
     public Output<String> getPullRequestEnvironmentName() {
-        return this.pullRequestEnvironmentName == null ? Output.empty() : this.pullRequestEnvironmentName;
+        return this.pullRequestEnvironmentName == null ? Codegen.empty() : this.pullRequestEnvironmentName;
     }
 
     @Import(name="stage")
       private final @Nullable Output<AppAutoBranchCreationConfigStage> stage;
 
     public Output<AppAutoBranchCreationConfigStage> getStage() {
-        return this.stage == null ? Output.empty() : this.stage;
+        return this.stage == null ? Codegen.empty() : this.stage;
     }
 
     public AppAutoBranchCreationConfigArgs(
@@ -113,16 +114,16 @@ public final class AppAutoBranchCreationConfigArgs extends io.pulumi.resources.R
     }
 
     private AppAutoBranchCreationConfigArgs() {
-        this.autoBranchCreationPatterns = Output.empty();
-        this.basicAuthConfig = Output.empty();
-        this.buildSpec = Output.empty();
-        this.enableAutoBranchCreation = Output.empty();
-        this.enableAutoBuild = Output.empty();
-        this.enablePerformanceMode = Output.empty();
-        this.enablePullRequestPreview = Output.empty();
-        this.environmentVariables = Output.empty();
-        this.pullRequestEnvironmentName = Output.empty();
-        this.stage = Output.empty();
+        this.autoBranchCreationPatterns = Codegen.empty();
+        this.basicAuthConfig = Codegen.empty();
+        this.buildSpec = Codegen.empty();
+        this.enableAutoBranchCreation = Codegen.empty();
+        this.enableAutoBuild = Codegen.empty();
+        this.enablePerformanceMode = Codegen.empty();
+        this.enablePullRequestPreview = Codegen.empty();
+        this.environmentVariables = Codegen.empty();
+        this.pullRequestEnvironmentName = Codegen.empty();
+        this.stage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -168,7 +169,7 @@ public final class AppAutoBranchCreationConfigArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder autoBranchCreationPatterns(@Nullable List<String> autoBranchCreationPatterns) {
-            this.autoBranchCreationPatterns = Output.ofNullable(autoBranchCreationPatterns);
+            this.autoBranchCreationPatterns = Codegen.ofNullable(autoBranchCreationPatterns);
             return this;
         }
         public Builder autoBranchCreationPatterns(String... autoBranchCreationPatterns) {
@@ -179,7 +180,7 @@ public final class AppAutoBranchCreationConfigArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder basicAuthConfig(@Nullable AppBasicAuthConfigArgs basicAuthConfig) {
-            this.basicAuthConfig = Output.ofNullable(basicAuthConfig);
+            this.basicAuthConfig = Codegen.ofNullable(basicAuthConfig);
             return this;
         }
         public Builder buildSpec(@Nullable Output<String> buildSpec) {
@@ -187,7 +188,7 @@ public final class AppAutoBranchCreationConfigArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder buildSpec(@Nullable String buildSpec) {
-            this.buildSpec = Output.ofNullable(buildSpec);
+            this.buildSpec = Codegen.ofNullable(buildSpec);
             return this;
         }
         public Builder enableAutoBranchCreation(@Nullable Output<Boolean> enableAutoBranchCreation) {
@@ -195,7 +196,7 @@ public final class AppAutoBranchCreationConfigArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder enableAutoBranchCreation(@Nullable Boolean enableAutoBranchCreation) {
-            this.enableAutoBranchCreation = Output.ofNullable(enableAutoBranchCreation);
+            this.enableAutoBranchCreation = Codegen.ofNullable(enableAutoBranchCreation);
             return this;
         }
         public Builder enableAutoBuild(@Nullable Output<Boolean> enableAutoBuild) {
@@ -203,7 +204,7 @@ public final class AppAutoBranchCreationConfigArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder enableAutoBuild(@Nullable Boolean enableAutoBuild) {
-            this.enableAutoBuild = Output.ofNullable(enableAutoBuild);
+            this.enableAutoBuild = Codegen.ofNullable(enableAutoBuild);
             return this;
         }
         public Builder enablePerformanceMode(@Nullable Output<Boolean> enablePerformanceMode) {
@@ -211,7 +212,7 @@ public final class AppAutoBranchCreationConfigArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder enablePerformanceMode(@Nullable Boolean enablePerformanceMode) {
-            this.enablePerformanceMode = Output.ofNullable(enablePerformanceMode);
+            this.enablePerformanceMode = Codegen.ofNullable(enablePerformanceMode);
             return this;
         }
         public Builder enablePullRequestPreview(@Nullable Output<Boolean> enablePullRequestPreview) {
@@ -219,7 +220,7 @@ public final class AppAutoBranchCreationConfigArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder enablePullRequestPreview(@Nullable Boolean enablePullRequestPreview) {
-            this.enablePullRequestPreview = Output.ofNullable(enablePullRequestPreview);
+            this.enablePullRequestPreview = Codegen.ofNullable(enablePullRequestPreview);
             return this;
         }
         public Builder environmentVariables(@Nullable Output<List<AppEnvironmentVariableArgs>> environmentVariables) {
@@ -227,7 +228,7 @@ public final class AppAutoBranchCreationConfigArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder environmentVariables(@Nullable List<AppEnvironmentVariableArgs> environmentVariables) {
-            this.environmentVariables = Output.ofNullable(environmentVariables);
+            this.environmentVariables = Codegen.ofNullable(environmentVariables);
             return this;
         }
         public Builder environmentVariables(AppEnvironmentVariableArgs... environmentVariables) {
@@ -238,7 +239,7 @@ public final class AppAutoBranchCreationConfigArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder pullRequestEnvironmentName(@Nullable String pullRequestEnvironmentName) {
-            this.pullRequestEnvironmentName = Output.ofNullable(pullRequestEnvironmentName);
+            this.pullRequestEnvironmentName = Codegen.ofNullable(pullRequestEnvironmentName);
             return this;
         }
         public Builder stage(@Nullable Output<AppAutoBranchCreationConfigStage> stage) {
@@ -246,7 +247,7 @@ public final class AppAutoBranchCreationConfigArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder stage(@Nullable AppAutoBranchCreationConfigStage stage) {
-            this.stage = Output.ofNullable(stage);
+            this.stage = Codegen.ofNullable(stage);
             return this;
         }        public AppAutoBranchCreationConfigArgs build() {
             return new AppAutoBranchCreationConfigArgs(autoBranchCreationPatterns, basicAuthConfig, buildSpec, enableAutoBranchCreation, enableAutoBuild, enablePerformanceMode, enablePullRequestPreview, environmentVariables, pullRequestEnvironmentName, stage);

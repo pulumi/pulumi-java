@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class JobNotificationPropertyGetArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Integer> notifyDelayAfter;
 
     public Output<Integer> getNotifyDelayAfter() {
-        return this.notifyDelayAfter == null ? Output.empty() : this.notifyDelayAfter;
+        return this.notifyDelayAfter == null ? Codegen.empty() : this.notifyDelayAfter;
     }
 
     public JobNotificationPropertyGetArgs(@Nullable Output<Integer> notifyDelayAfter) {
@@ -30,7 +31,7 @@ public final class JobNotificationPropertyGetArgs extends io.pulumi.resources.Re
     }
 
     private JobNotificationPropertyGetArgs() {
-        this.notifyDelayAfter = Output.empty();
+        this.notifyDelayAfter = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class JobNotificationPropertyGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder notifyDelayAfter(@Nullable Integer notifyDelayAfter) {
-            this.notifyDelayAfter = Output.ofNullable(notifyDelayAfter);
+            this.notifyDelayAfter = Codegen.ofNullable(notifyDelayAfter);
             return this;
         }        public JobNotificationPropertyGetArgs build() {
             return new JobNotificationPropertyGetArgs(notifyDelayAfter);

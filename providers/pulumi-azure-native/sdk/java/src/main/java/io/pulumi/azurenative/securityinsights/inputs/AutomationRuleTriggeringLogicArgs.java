@@ -9,6 +9,7 @@ import io.pulumi.azurenative.securityinsights.inputs.AutomationRulePropertyValue
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +33,7 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
       private final @Nullable Output<List<AutomationRulePropertyValuesConditionArgs>> conditions;
 
     public Output<List<AutomationRulePropertyValuesConditionArgs>> getConditions() {
-        return this.conditions == null ? Output.empty() : this.conditions;
+        return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
       private final @Nullable Output<String> expirationTimeUtc;
 
     public Output<String> getExpirationTimeUtc() {
-        return this.expirationTimeUtc == null ? Output.empty() : this.expirationTimeUtc;
+        return this.expirationTimeUtc == null ? Codegen.empty() : this.expirationTimeUtc;
     }
 
     /**
@@ -93,11 +94,11 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
     }
 
     private AutomationRuleTriggeringLogicArgs() {
-        this.conditions = Output.empty();
-        this.expirationTimeUtc = Output.empty();
-        this.isEnabled = Output.empty();
-        this.triggersOn = Output.empty();
-        this.triggersWhen = Output.empty();
+        this.conditions = Codegen.empty();
+        this.expirationTimeUtc = Codegen.empty();
+        this.isEnabled = Codegen.empty();
+        this.triggersOn = Codegen.empty();
+        this.triggersWhen = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -133,7 +134,7 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
             return this;
         }
         public Builder conditions(@Nullable List<AutomationRulePropertyValuesConditionArgs> conditions) {
-            this.conditions = Output.ofNullable(conditions);
+            this.conditions = Codegen.ofNullable(conditions);
             return this;
         }
         public Builder conditions(AutomationRulePropertyValuesConditionArgs... conditions) {
@@ -144,7 +145,7 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
             return this;
         }
         public Builder expirationTimeUtc(@Nullable String expirationTimeUtc) {
-            this.expirationTimeUtc = Output.ofNullable(expirationTimeUtc);
+            this.expirationTimeUtc = Codegen.ofNullable(expirationTimeUtc);
             return this;
         }
         public Builder isEnabled(Output<Boolean> isEnabled) {

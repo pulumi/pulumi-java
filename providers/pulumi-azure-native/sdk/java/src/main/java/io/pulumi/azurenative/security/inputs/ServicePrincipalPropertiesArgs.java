@@ -5,6 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ServicePrincipalPropertiesArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> applicationId;
 
     public Output<String> getApplicationId() {
-        return this.applicationId == null ? Output.empty() : this.applicationId;
+        return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ServicePrincipalPropertiesArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> secret;
 
     public Output<String> getSecret() {
-        return this.secret == null ? Output.empty() : this.secret;
+        return this.secret == null ? Codegen.empty() : this.secret;
     }
 
     public ServicePrincipalPropertiesArgs(
@@ -48,8 +49,8 @@ public final class ServicePrincipalPropertiesArgs extends io.pulumi.resources.Re
     }
 
     private ServicePrincipalPropertiesArgs() {
-        this.applicationId = Output.empty();
-        this.secret = Output.empty();
+        this.applicationId = Codegen.empty();
+        this.secret = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ServicePrincipalPropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Output.ofNullable(applicationId);
+            this.applicationId = Codegen.ofNullable(applicationId);
             return this;
         }
         public Builder secret(@Nullable Output<String> secret) {
@@ -87,7 +88,7 @@ public final class ServicePrincipalPropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder secret(@Nullable String secret) {
-            this.secret = Output.ofNullable(secret);
+            this.secret = Codegen.ofNullable(secret);
             return this;
         }        public ServicePrincipalPropertiesArgs build() {
             return new ServicePrincipalPropertiesArgs(applicationId, secret);

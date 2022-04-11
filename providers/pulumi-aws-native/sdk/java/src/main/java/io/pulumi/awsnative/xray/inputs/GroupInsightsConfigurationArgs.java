@@ -5,6 +5,7 @@ package io.pulumi.awsnative.xray.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class GroupInsightsConfigurationArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Boolean> insightsEnabled;
 
     public Output<Boolean> getInsightsEnabled() {
-        return this.insightsEnabled == null ? Output.empty() : this.insightsEnabled;
+        return this.insightsEnabled == null ? Codegen.empty() : this.insightsEnabled;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class GroupInsightsConfigurationArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Boolean> notificationsEnabled;
 
     public Output<Boolean> getNotificationsEnabled() {
-        return this.notificationsEnabled == null ? Output.empty() : this.notificationsEnabled;
+        return this.notificationsEnabled == null ? Codegen.empty() : this.notificationsEnabled;
     }
 
     public GroupInsightsConfigurationArgs(
@@ -44,8 +45,8 @@ public final class GroupInsightsConfigurationArgs extends io.pulumi.resources.Re
     }
 
     private GroupInsightsConfigurationArgs() {
-        this.insightsEnabled = Output.empty();
-        this.notificationsEnabled = Output.empty();
+        this.insightsEnabled = Codegen.empty();
+        this.notificationsEnabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class GroupInsightsConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder insightsEnabled(@Nullable Boolean insightsEnabled) {
-            this.insightsEnabled = Output.ofNullable(insightsEnabled);
+            this.insightsEnabled = Codegen.ofNullable(insightsEnabled);
             return this;
         }
         public Builder notificationsEnabled(@Nullable Output<Boolean> notificationsEnabled) {
@@ -83,7 +84,7 @@ public final class GroupInsightsConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder notificationsEnabled(@Nullable Boolean notificationsEnabled) {
-            this.notificationsEnabled = Output.ofNullable(notificationsEnabled);
+            this.notificationsEnabled = Codegen.ofNullable(notificationsEnabled);
             return this;
         }        public GroupInsightsConfigurationArgs build() {
             return new GroupInsightsConfigurationArgs(insightsEnabled, notificationsEnabled);

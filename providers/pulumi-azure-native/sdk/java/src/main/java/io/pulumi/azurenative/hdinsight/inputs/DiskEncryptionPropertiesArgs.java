@@ -7,6 +7,7 @@ import io.pulumi.azurenative.hdinsight.enums.JsonWebKeyEncryptionAlgorithm;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Either<String,JsonWebKeyEncryptionAlgorithm>> encryptionAlgorithm;
 
     public Output<Either<String,JsonWebKeyEncryptionAlgorithm>> getEncryptionAlgorithm() {
-        return this.encryptionAlgorithm == null ? Output.empty() : this.encryptionAlgorithm;
+        return this.encryptionAlgorithm == null ? Codegen.empty() : this.encryptionAlgorithm;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Boolean> encryptionAtHost;
 
     public Output<Boolean> getEncryptionAtHost() {
-        return this.encryptionAtHost == null ? Output.empty() : this.encryptionAtHost;
+        return this.encryptionAtHost == null ? Codegen.empty() : this.encryptionAtHost;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> keyName;
 
     public Output<String> getKeyName() {
-        return this.keyName == null ? Output.empty() : this.keyName;
+        return this.keyName == null ? Codegen.empty() : this.keyName;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> keyVersion;
 
     public Output<String> getKeyVersion() {
-        return this.keyVersion == null ? Output.empty() : this.keyVersion;
+        return this.keyVersion == null ? Codegen.empty() : this.keyVersion;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> msiResourceId;
 
     public Output<String> getMsiResourceId() {
-        return this.msiResourceId == null ? Output.empty() : this.msiResourceId;
+        return this.msiResourceId == null ? Codegen.empty() : this.msiResourceId;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> vaultUri;
 
     public Output<String> getVaultUri() {
-        return this.vaultUri == null ? Output.empty() : this.vaultUri;
+        return this.vaultUri == null ? Codegen.empty() : this.vaultUri;
     }
 
     public DiskEncryptionPropertiesArgs(
@@ -95,7 +96,7 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
         @Nullable Output<String> msiResourceId,
         @Nullable Output<String> vaultUri) {
         this.encryptionAlgorithm = encryptionAlgorithm;
-        this.encryptionAtHost = encryptionAtHost == null ? Output.ofNullable(false) : encryptionAtHost;
+        this.encryptionAtHost = encryptionAtHost == null ? Codegen.ofNullable(false) : encryptionAtHost;
         this.keyName = keyName;
         this.keyVersion = keyVersion;
         this.msiResourceId = msiResourceId;
@@ -103,12 +104,12 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
     }
 
     private DiskEncryptionPropertiesArgs() {
-        this.encryptionAlgorithm = Output.empty();
-        this.encryptionAtHost = Output.empty();
-        this.keyName = Output.empty();
-        this.keyVersion = Output.empty();
-        this.msiResourceId = Output.empty();
-        this.vaultUri = Output.empty();
+        this.encryptionAlgorithm = Codegen.empty();
+        this.encryptionAtHost = Codegen.empty();
+        this.keyName = Codegen.empty();
+        this.keyVersion = Codegen.empty();
+        this.msiResourceId = Codegen.empty();
+        this.vaultUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder encryptionAlgorithm(@Nullable Either<String,JsonWebKeyEncryptionAlgorithm> encryptionAlgorithm) {
-            this.encryptionAlgorithm = Output.ofNullable(encryptionAlgorithm);
+            this.encryptionAlgorithm = Codegen.ofNullable(encryptionAlgorithm);
             return this;
         }
         public Builder encryptionAtHost(@Nullable Output<Boolean> encryptionAtHost) {
@@ -154,7 +155,7 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder encryptionAtHost(@Nullable Boolean encryptionAtHost) {
-            this.encryptionAtHost = Output.ofNullable(encryptionAtHost);
+            this.encryptionAtHost = Codegen.ofNullable(encryptionAtHost);
             return this;
         }
         public Builder keyName(@Nullable Output<String> keyName) {
@@ -162,7 +163,7 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = Output.ofNullable(keyName);
+            this.keyName = Codegen.ofNullable(keyName);
             return this;
         }
         public Builder keyVersion(@Nullable Output<String> keyVersion) {
@@ -170,7 +171,7 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder keyVersion(@Nullable String keyVersion) {
-            this.keyVersion = Output.ofNullable(keyVersion);
+            this.keyVersion = Codegen.ofNullable(keyVersion);
             return this;
         }
         public Builder msiResourceId(@Nullable Output<String> msiResourceId) {
@@ -178,7 +179,7 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder msiResourceId(@Nullable String msiResourceId) {
-            this.msiResourceId = Output.ofNullable(msiResourceId);
+            this.msiResourceId = Codegen.ofNullable(msiResourceId);
             return this;
         }
         public Builder vaultUri(@Nullable Output<String> vaultUri) {
@@ -186,7 +187,7 @@ public final class DiskEncryptionPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder vaultUri(@Nullable String vaultUri) {
-            this.vaultUri = Output.ofNullable(vaultUri);
+            this.vaultUri = Codegen.ofNullable(vaultUri);
             return this;
         }        public DiskEncryptionPropertiesArgs build() {
             return new DiskEncryptionPropertiesArgs(encryptionAlgorithm, encryptionAtHost, keyName, keyVersion, msiResourceId, vaultUri);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.monitoring_v1.inputs.RowArgs;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class RowLayoutArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<RowArgs>> rows;
 
     public Output<List<RowArgs>> getRows() {
-        return this.rows == null ? Output.empty() : this.rows;
+        return this.rows == null ? Codegen.empty() : this.rows;
     }
 
     public RowLayoutArgs(@Nullable Output<List<RowArgs>> rows) {
@@ -35,7 +36,7 @@ public final class RowLayoutArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RowLayoutArgs() {
-        this.rows = Output.empty();
+        this.rows = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class RowLayoutArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rows(@Nullable List<RowArgs> rows) {
-            this.rows = Output.ofNullable(rows);
+            this.rows = Codegen.ofNullable(rows);
             return this;
         }
         public Builder rows(RowArgs... rows) {

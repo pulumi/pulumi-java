@@ -10,6 +10,7 @@ import io.pulumi.aws.cloudformation.outputs.StackSetInstanceDeploymentTargets;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -170,7 +171,7 @@ public class StackSetInstance extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public StackSetInstance(String name, StackSetInstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudformation/stackSetInstance:StackSetInstance", name, args == null ? StackSetInstanceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cloudformation/stackSetInstance:StackSetInstance", name, args == null ? StackSetInstanceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private StackSetInstance(String name, Output<String> id, @Nullable StackSetInstanceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

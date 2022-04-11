@@ -11,6 +11,7 @@ import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +36,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Either<String,SftpAuthenticationType>> authenticationType;
 
     public Output<Either<String,SftpAuthenticationType>> getAuthenticationType() {
-        return this.authenticationType == null ? Output.empty() : this.authenticationType;
+        return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Output.empty() : this.connectVia;
+        return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Object> encryptedCredential;
 
     public Output<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
+        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Object> hostKeyFingerprint;
 
     public Output<Object> getHostKeyFingerprint() {
-        return this.hostKeyFingerprint == null ? Output.empty() : this.hostKeyFingerprint;
+        return this.hostKeyFingerprint == null ? Codegen.empty() : this.hostKeyFingerprint;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> passPhrase;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassPhrase() {
-        return this.passPhrase == null ? Output.empty() : this.passPhrase;
+        return this.passPhrase == null ? Codegen.empty() : this.passPhrase;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -145,7 +146,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Object> port;
 
     public Output<Object> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -156,7 +157,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> privateKeyContent;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPrivateKeyContent() {
-        return this.privateKeyContent == null ? Output.empty() : this.privateKeyContent;
+        return this.privateKeyContent == null ? Codegen.empty() : this.privateKeyContent;
     }
 
     /**
@@ -167,7 +168,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Object> privateKeyPath;
 
     public Output<Object> getPrivateKeyPath() {
-        return this.privateKeyPath == null ? Output.empty() : this.privateKeyPath;
+        return this.privateKeyPath == null ? Codegen.empty() : this.privateKeyPath;
     }
 
     /**
@@ -178,7 +179,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Object> skipHostKeyValidation;
 
     public Output<Object> getSkipHostKeyValidation() {
-        return this.skipHostKeyValidation == null ? Output.empty() : this.skipHostKeyValidation;
+        return this.skipHostKeyValidation == null ? Codegen.empty() : this.skipHostKeyValidation;
     }
 
     /**
@@ -201,7 +202,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Object> userName;
 
     public Output<Object> getUserName() {
-        return this.userName == null ? Output.empty() : this.userName;
+        return this.userName == null ? Codegen.empty() : this.userName;
     }
 
     public SftpServerLinkedServiceArgs(
@@ -240,22 +241,22 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
     }
 
     private SftpServerLinkedServiceArgs() {
-        this.annotations = Output.empty();
-        this.authenticationType = Output.empty();
-        this.connectVia = Output.empty();
-        this.description = Output.empty();
-        this.encryptedCredential = Output.empty();
-        this.host = Output.empty();
-        this.hostKeyFingerprint = Output.empty();
-        this.parameters = Output.empty();
-        this.passPhrase = Output.empty();
-        this.password = Output.empty();
-        this.port = Output.empty();
-        this.privateKeyContent = Output.empty();
-        this.privateKeyPath = Output.empty();
-        this.skipHostKeyValidation = Output.empty();
-        this.type = Output.empty();
-        this.userName = Output.empty();
+        this.annotations = Codegen.empty();
+        this.authenticationType = Codegen.empty();
+        this.connectVia = Codegen.empty();
+        this.description = Codegen.empty();
+        this.encryptedCredential = Codegen.empty();
+        this.host = Codegen.empty();
+        this.hostKeyFingerprint = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.passPhrase = Codegen.empty();
+        this.password = Codegen.empty();
+        this.port = Codegen.empty();
+        this.privateKeyContent = Codegen.empty();
+        this.privateKeyPath = Codegen.empty();
+        this.skipHostKeyValidation = Codegen.empty();
+        this.type = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -313,7 +314,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -324,7 +325,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder authenticationType(@Nullable Either<String,SftpAuthenticationType> authenticationType) {
-            this.authenticationType = Output.ofNullable(authenticationType);
+            this.authenticationType = Codegen.ofNullable(authenticationType);
             return this;
         }
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
@@ -332,7 +333,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Output.ofNullable(connectVia);
+            this.connectVia = Codegen.ofNullable(connectVia);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -340,7 +341,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
@@ -348,7 +349,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Output.ofNullable(encryptedCredential);
+            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
             return this;
         }
         public Builder host(Output<Object> host) {
@@ -364,7 +365,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder hostKeyFingerprint(@Nullable Object hostKeyFingerprint) {
-            this.hostKeyFingerprint = Output.ofNullable(hostKeyFingerprint);
+            this.hostKeyFingerprint = Codegen.ofNullable(hostKeyFingerprint);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
@@ -372,7 +373,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder passPhrase(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> passPhrase) {
@@ -380,7 +381,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder passPhrase(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> passPhrase) {
-            this.passPhrase = Output.ofNullable(passPhrase);
+            this.passPhrase = Codegen.ofNullable(passPhrase);
             return this;
         }
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
@@ -388,7 +389,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder port(@Nullable Output<Object> port) {
@@ -396,7 +397,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder port(@Nullable Object port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder privateKeyContent(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> privateKeyContent) {
@@ -404,7 +405,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder privateKeyContent(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> privateKeyContent) {
-            this.privateKeyContent = Output.ofNullable(privateKeyContent);
+            this.privateKeyContent = Codegen.ofNullable(privateKeyContent);
             return this;
         }
         public Builder privateKeyPath(@Nullable Output<Object> privateKeyPath) {
@@ -412,7 +413,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder privateKeyPath(@Nullable Object privateKeyPath) {
-            this.privateKeyPath = Output.ofNullable(privateKeyPath);
+            this.privateKeyPath = Codegen.ofNullable(privateKeyPath);
             return this;
         }
         public Builder skipHostKeyValidation(@Nullable Output<Object> skipHostKeyValidation) {
@@ -420,7 +421,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder skipHostKeyValidation(@Nullable Object skipHostKeyValidation) {
-            this.skipHostKeyValidation = Output.ofNullable(skipHostKeyValidation);
+            this.skipHostKeyValidation = Codegen.ofNullable(skipHostKeyValidation);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -436,7 +437,7 @@ public final class SftpServerLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder userName(@Nullable Object userName) {
-            this.userName = Output.ofNullable(userName);
+            this.userName = Codegen.ofNullable(userName);
             return this;
         }        public SftpServerLinkedServiceArgs build() {
             return new SftpServerLinkedServiceArgs(annotations, authenticationType, connectVia, description, encryptedCredential, host, hostKeyFingerprint, parameters, passPhrase, password, port, privateKeyContent, privateKeyPath, skipHostKeyValidation, type, userName);

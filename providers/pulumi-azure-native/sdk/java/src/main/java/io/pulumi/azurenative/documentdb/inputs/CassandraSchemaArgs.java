@@ -8,6 +8,7 @@ import io.pulumi.azurenative.documentdb.inputs.ClusterKeyArgs;
 import io.pulumi.azurenative.documentdb.inputs.ColumnArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public final class CassandraSchemaArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<ClusterKeyArgs>> clusterKeys;
 
     public Output<List<ClusterKeyArgs>> getClusterKeys() {
-        return this.clusterKeys == null ? Output.empty() : this.clusterKeys;
+        return this.clusterKeys == null ? Codegen.empty() : this.clusterKeys;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class CassandraSchemaArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<ColumnArgs>> columns;
 
     public Output<List<ColumnArgs>> getColumns() {
-        return this.columns == null ? Output.empty() : this.columns;
+        return this.columns == null ? Codegen.empty() : this.columns;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class CassandraSchemaArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<CassandraPartitionKeyArgs>> partitionKeys;
 
     public Output<List<CassandraPartitionKeyArgs>> getPartitionKeys() {
-        return this.partitionKeys == null ? Output.empty() : this.partitionKeys;
+        return this.partitionKeys == null ? Codegen.empty() : this.partitionKeys;
     }
 
     public CassandraSchemaArgs(
@@ -64,9 +65,9 @@ public final class CassandraSchemaArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private CassandraSchemaArgs() {
-        this.clusterKeys = Output.empty();
-        this.columns = Output.empty();
-        this.partitionKeys = Output.empty();
+        this.clusterKeys = Codegen.empty();
+        this.columns = Codegen.empty();
+        this.partitionKeys = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class CassandraSchemaArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder clusterKeys(@Nullable List<ClusterKeyArgs> clusterKeys) {
-            this.clusterKeys = Output.ofNullable(clusterKeys);
+            this.clusterKeys = Codegen.ofNullable(clusterKeys);
             return this;
         }
         public Builder clusterKeys(ClusterKeyArgs... clusterKeys) {
@@ -109,7 +110,7 @@ public final class CassandraSchemaArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder columns(@Nullable List<ColumnArgs> columns) {
-            this.columns = Output.ofNullable(columns);
+            this.columns = Codegen.ofNullable(columns);
             return this;
         }
         public Builder columns(ColumnArgs... columns) {
@@ -120,7 +121,7 @@ public final class CassandraSchemaArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder partitionKeys(@Nullable List<CassandraPartitionKeyArgs> partitionKeys) {
-            this.partitionKeys = Output.ofNullable(partitionKeys);
+            this.partitionKeys = Codegen.ofNullable(partitionKeys);
             return this;
         }
         public Builder partitionKeys(CassandraPartitionKeyArgs... partitionKeys) {

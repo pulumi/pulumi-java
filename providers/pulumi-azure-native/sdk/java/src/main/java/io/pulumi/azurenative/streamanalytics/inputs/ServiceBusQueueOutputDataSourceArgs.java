@@ -5,6 +5,7 @@ package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ServiceBusQueueOutputDataSourceArgs extends io.pulumi.resourc
       private final @Nullable Output<List<String>> propertyColumns;
 
     public Output<List<String>> getPropertyColumns() {
-        return this.propertyColumns == null ? Output.empty() : this.propertyColumns;
+        return this.propertyColumns == null ? Codegen.empty() : this.propertyColumns;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ServiceBusQueueOutputDataSourceArgs extends io.pulumi.resourc
       private final @Nullable Output<String> queueName;
 
     public Output<String> getQueueName() {
-        return this.queueName == null ? Output.empty() : this.queueName;
+        return this.queueName == null ? Codegen.empty() : this.queueName;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ServiceBusQueueOutputDataSourceArgs extends io.pulumi.resourc
       private final @Nullable Output<String> serviceBusNamespace;
 
     public Output<String> getServiceBusNamespace() {
-        return this.serviceBusNamespace == null ? Output.empty() : this.serviceBusNamespace;
+        return this.serviceBusNamespace == null ? Codegen.empty() : this.serviceBusNamespace;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ServiceBusQueueOutputDataSourceArgs extends io.pulumi.resourc
       private final @Nullable Output<String> sharedAccessPolicyKey;
 
     public Output<String> getSharedAccessPolicyKey() {
-        return this.sharedAccessPolicyKey == null ? Output.empty() : this.sharedAccessPolicyKey;
+        return this.sharedAccessPolicyKey == null ? Codegen.empty() : this.sharedAccessPolicyKey;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ServiceBusQueueOutputDataSourceArgs extends io.pulumi.resourc
       private final @Nullable Output<String> sharedAccessPolicyName;
 
     public Output<String> getSharedAccessPolicyName() {
-        return this.sharedAccessPolicyName == null ? Output.empty() : this.sharedAccessPolicyName;
+        return this.sharedAccessPolicyName == null ? Codegen.empty() : this.sharedAccessPolicyName;
     }
 
     /**
@@ -102,12 +103,12 @@ public final class ServiceBusQueueOutputDataSourceArgs extends io.pulumi.resourc
     }
 
     private ServiceBusQueueOutputDataSourceArgs() {
-        this.propertyColumns = Output.empty();
-        this.queueName = Output.empty();
-        this.serviceBusNamespace = Output.empty();
-        this.sharedAccessPolicyKey = Output.empty();
-        this.sharedAccessPolicyName = Output.empty();
-        this.type = Output.empty();
+        this.propertyColumns = Codegen.empty();
+        this.queueName = Codegen.empty();
+        this.serviceBusNamespace = Codegen.empty();
+        this.sharedAccessPolicyKey = Codegen.empty();
+        this.sharedAccessPolicyName = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class ServiceBusQueueOutputDataSourceArgs extends io.pulumi.resourc
             return this;
         }
         public Builder propertyColumns(@Nullable List<String> propertyColumns) {
-            this.propertyColumns = Output.ofNullable(propertyColumns);
+            this.propertyColumns = Codegen.ofNullable(propertyColumns);
             return this;
         }
         public Builder propertyColumns(String... propertyColumns) {
@@ -156,7 +157,7 @@ public final class ServiceBusQueueOutputDataSourceArgs extends io.pulumi.resourc
             return this;
         }
         public Builder queueName(@Nullable String queueName) {
-            this.queueName = Output.ofNullable(queueName);
+            this.queueName = Codegen.ofNullable(queueName);
             return this;
         }
         public Builder serviceBusNamespace(@Nullable Output<String> serviceBusNamespace) {
@@ -164,7 +165,7 @@ public final class ServiceBusQueueOutputDataSourceArgs extends io.pulumi.resourc
             return this;
         }
         public Builder serviceBusNamespace(@Nullable String serviceBusNamespace) {
-            this.serviceBusNamespace = Output.ofNullable(serviceBusNamespace);
+            this.serviceBusNamespace = Codegen.ofNullable(serviceBusNamespace);
             return this;
         }
         public Builder sharedAccessPolicyKey(@Nullable Output<String> sharedAccessPolicyKey) {
@@ -172,7 +173,7 @@ public final class ServiceBusQueueOutputDataSourceArgs extends io.pulumi.resourc
             return this;
         }
         public Builder sharedAccessPolicyKey(@Nullable String sharedAccessPolicyKey) {
-            this.sharedAccessPolicyKey = Output.ofNullable(sharedAccessPolicyKey);
+            this.sharedAccessPolicyKey = Codegen.ofNullable(sharedAccessPolicyKey);
             return this;
         }
         public Builder sharedAccessPolicyName(@Nullable Output<String> sharedAccessPolicyName) {
@@ -180,7 +181,7 @@ public final class ServiceBusQueueOutputDataSourceArgs extends io.pulumi.resourc
             return this;
         }
         public Builder sharedAccessPolicyName(@Nullable String sharedAccessPolicyName) {
-            this.sharedAccessPolicyName = Output.ofNullable(sharedAccessPolicyName);
+            this.sharedAccessPolicyName = Codegen.ofNullable(sharedAccessPolicyName);
             return this;
         }
         public Builder type(Output<String> type) {

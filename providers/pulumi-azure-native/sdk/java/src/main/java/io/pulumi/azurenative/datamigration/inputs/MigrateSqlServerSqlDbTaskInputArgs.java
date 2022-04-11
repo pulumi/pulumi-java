@@ -8,6 +8,7 @@ import io.pulumi.azurenative.datamigration.inputs.MigrationValidationOptionsArgs
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -64,7 +65,7 @@ public final class MigrateSqlServerSqlDbTaskInputArgs extends io.pulumi.resource
       private final @Nullable Output<MigrationValidationOptionsArgs> validationOptions;
 
     public Output<MigrationValidationOptionsArgs> getValidationOptions() {
-        return this.validationOptions == null ? Output.empty() : this.validationOptions;
+        return this.validationOptions == null ? Codegen.empty() : this.validationOptions;
     }
 
     public MigrateSqlServerSqlDbTaskInputArgs(
@@ -79,10 +80,10 @@ public final class MigrateSqlServerSqlDbTaskInputArgs extends io.pulumi.resource
     }
 
     private MigrateSqlServerSqlDbTaskInputArgs() {
-        this.selectedDatabases = Output.empty();
-        this.sourceConnectionInfo = Output.empty();
-        this.targetConnectionInfo = Output.empty();
-        this.validationOptions = Output.empty();
+        this.selectedDatabases = Codegen.empty();
+        this.sourceConnectionInfo = Codegen.empty();
+        this.targetConnectionInfo = Codegen.empty();
+        this.validationOptions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -143,7 +144,7 @@ public final class MigrateSqlServerSqlDbTaskInputArgs extends io.pulumi.resource
             return this;
         }
         public Builder validationOptions(@Nullable MigrationValidationOptionsArgs validationOptions) {
-            this.validationOptions = Output.ofNullable(validationOptions);
+            this.validationOptions = Codegen.ofNullable(validationOptions);
             return this;
         }        public MigrateSqlServerSqlDbTaskInputArgs build() {
             return new MigrateSqlServerSqlDbTaskInputArgs(selectedDatabases, sourceConnectionInfo, targetConnectionInfo, validationOptions);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.BuildProvenanceArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.InTotoStatementArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class BuildDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<InTotoStatementArgs> intotoStatement;
 
     public Output<InTotoStatementArgs> getIntotoStatement() {
-        return this.intotoStatement == null ? Output.empty() : this.intotoStatement;
+        return this.intotoStatement == null ? Codegen.empty() : this.intotoStatement;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class BuildDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BuildProvenanceArgs> provenance;
 
     public Output<BuildProvenanceArgs> getProvenance() {
-        return this.provenance == null ? Output.empty() : this.provenance;
+        return this.provenance == null ? Codegen.empty() : this.provenance;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class BuildDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> provenanceBytes;
 
     public Output<String> getProvenanceBytes() {
-        return this.provenanceBytes == null ? Output.empty() : this.provenanceBytes;
+        return this.provenanceBytes == null ? Codegen.empty() : this.provenanceBytes;
     }
 
     public BuildDetailsArgs(
@@ -63,9 +64,9 @@ public final class BuildDetailsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BuildDetailsArgs() {
-        this.intotoStatement = Output.empty();
-        this.provenance = Output.empty();
-        this.provenanceBytes = Output.empty();
+        this.intotoStatement = Codegen.empty();
+        this.provenance = Codegen.empty();
+        this.provenanceBytes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class BuildDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder intotoStatement(@Nullable InTotoStatementArgs intotoStatement) {
-            this.intotoStatement = Output.ofNullable(intotoStatement);
+            this.intotoStatement = Codegen.ofNullable(intotoStatement);
             return this;
         }
         public Builder provenance(@Nullable Output<BuildProvenanceArgs> provenance) {
@@ -105,7 +106,7 @@ public final class BuildDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder provenance(@Nullable BuildProvenanceArgs provenance) {
-            this.provenance = Output.ofNullable(provenance);
+            this.provenance = Codegen.ofNullable(provenance);
             return this;
         }
         public Builder provenanceBytes(@Nullable Output<String> provenanceBytes) {
@@ -113,7 +114,7 @@ public final class BuildDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder provenanceBytes(@Nullable String provenanceBytes) {
-            this.provenanceBytes = Output.ofNullable(provenanceBytes);
+            this.provenanceBytes = Codegen.ofNullable(provenanceBytes);
             return this;
         }        public BuildDetailsArgs build() {
             return new BuildDetailsArgs(intotoStatement, provenance, provenanceBytes);

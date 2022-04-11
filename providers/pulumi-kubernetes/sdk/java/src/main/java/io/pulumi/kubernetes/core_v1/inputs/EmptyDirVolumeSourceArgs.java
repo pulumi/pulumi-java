@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class EmptyDirVolumeSourceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> medium;
 
     public Output<String> getMedium() {
-        return this.medium == null ? Output.empty() : this.medium;
+        return this.medium == null ? Codegen.empty() : this.medium;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class EmptyDirVolumeSourceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> sizeLimit;
 
     public Output<String> getSizeLimit() {
-        return this.sizeLimit == null ? Output.empty() : this.sizeLimit;
+        return this.sizeLimit == null ? Codegen.empty() : this.sizeLimit;
     }
 
     public EmptyDirVolumeSourceArgs(
@@ -48,8 +49,8 @@ public final class EmptyDirVolumeSourceArgs extends io.pulumi.resources.Resource
     }
 
     private EmptyDirVolumeSourceArgs() {
-        this.medium = Output.empty();
-        this.sizeLimit = Output.empty();
+        this.medium = Codegen.empty();
+        this.sizeLimit = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class EmptyDirVolumeSourceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder medium(@Nullable String medium) {
-            this.medium = Output.ofNullable(medium);
+            this.medium = Codegen.ofNullable(medium);
             return this;
         }
         public Builder sizeLimit(@Nullable Output<String> sizeLimit) {
@@ -87,7 +88,7 @@ public final class EmptyDirVolumeSourceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder sizeLimit(@Nullable String sizeLimit) {
-            this.sizeLimit = Output.ofNullable(sizeLimit);
+            this.sizeLimit = Codegen.ofNullable(sizeLimit);
             return this;
         }        public EmptyDirVolumeSourceArgs build() {
             return new EmptyDirVolumeSourceArgs(medium, sizeLimit);

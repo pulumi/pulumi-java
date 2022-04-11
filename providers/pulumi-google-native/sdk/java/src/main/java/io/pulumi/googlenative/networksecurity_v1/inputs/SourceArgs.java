@@ -5,6 +5,7 @@ package io.pulumi.googlenative.networksecurity_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> ipBlocks;
 
     public Output<List<String>> getIpBlocks() {
-        return this.ipBlocks == null ? Output.empty() : this.ipBlocks;
+        return this.ipBlocks == null ? Codegen.empty() : this.ipBlocks;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> principals;
 
     public Output<List<String>> getPrincipals() {
-        return this.principals == null ? Output.empty() : this.principals;
+        return this.principals == null ? Codegen.empty() : this.principals;
     }
 
     public SourceArgs(
@@ -49,8 +50,8 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SourceArgs() {
-        this.ipBlocks = Output.empty();
-        this.principals = Output.empty();
+        this.ipBlocks = Codegen.empty();
+        this.principals = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipBlocks(@Nullable List<String> ipBlocks) {
-            this.ipBlocks = Output.ofNullable(ipBlocks);
+            this.ipBlocks = Codegen.ofNullable(ipBlocks);
             return this;
         }
         public Builder ipBlocks(String... ipBlocks) {
@@ -91,7 +92,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder principals(@Nullable List<String> principals) {
-            this.principals = Output.ofNullable(principals);
+            this.principals = Codegen.ofNullable(principals);
             return this;
         }
         public Builder principals(String... principals) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class BatchRetrySettingsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Integer> maxRetries;
 
     public Output<Integer> getMaxRetries() {
-        return this.maxRetries == null ? Output.empty() : this.maxRetries;
+        return this.maxRetries == null ? Codegen.empty() : this.maxRetries;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class BatchRetrySettingsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> timeout;
 
     public Output<String> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     public BatchRetrySettingsArgs(
@@ -49,8 +50,8 @@ public final class BatchRetrySettingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private BatchRetrySettingsArgs() {
-        this.maxRetries = Output.empty();
-        this.timeout = Output.empty();
+        this.maxRetries = Codegen.empty();
+        this.timeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class BatchRetrySettingsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder maxRetries(@Nullable Integer maxRetries) {
-            this.maxRetries = Output.ofNullable(maxRetries);
+            this.maxRetries = Codegen.ofNullable(maxRetries);
             return this;
         }
         public Builder timeout(@Nullable Output<String> timeout) {
@@ -88,7 +89,7 @@ public final class BatchRetrySettingsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }        public BatchRetrySettingsArgs build() {
             return new BatchRetrySettingsArgs(maxRetries, timeout);

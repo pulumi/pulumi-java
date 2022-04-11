@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1.enums.DeploymentOccurrencePlatform;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class DeploymentOccurrenceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> address;
 
     public Output<String> getAddress() {
-        return this.address == null ? Output.empty() : this.address;
+        return this.address == null ? Codegen.empty() : this.address;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class DeploymentOccurrenceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> config;
 
     public Output<String> getConfig() {
-        return this.config == null ? Output.empty() : this.config;
+        return this.config == null ? Codegen.empty() : this.config;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class DeploymentOccurrenceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<DeploymentOccurrencePlatform> platform;
 
     public Output<DeploymentOccurrencePlatform> getPlatform() {
-        return this.platform == null ? Output.empty() : this.platform;
+        return this.platform == null ? Codegen.empty() : this.platform;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class DeploymentOccurrenceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> undeployTime;
 
     public Output<String> getUndeployTime() {
-        return this.undeployTime == null ? Output.empty() : this.undeployTime;
+        return this.undeployTime == null ? Codegen.empty() : this.undeployTime;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class DeploymentOccurrenceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> userEmail;
 
     public Output<String> getUserEmail() {
-        return this.userEmail == null ? Output.empty() : this.userEmail;
+        return this.userEmail == null ? Codegen.empty() : this.userEmail;
     }
 
     public DeploymentOccurrenceArgs(
@@ -101,12 +102,12 @@ public final class DeploymentOccurrenceArgs extends io.pulumi.resources.Resource
     }
 
     private DeploymentOccurrenceArgs() {
-        this.address = Output.empty();
-        this.config = Output.empty();
-        this.deployTime = Output.empty();
-        this.platform = Output.empty();
-        this.undeployTime = Output.empty();
-        this.userEmail = Output.empty();
+        this.address = Codegen.empty();
+        this.config = Codegen.empty();
+        this.deployTime = Codegen.empty();
+        this.platform = Codegen.empty();
+        this.undeployTime = Codegen.empty();
+        this.userEmail = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class DeploymentOccurrenceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder address(@Nullable String address) {
-            this.address = Output.ofNullable(address);
+            this.address = Codegen.ofNullable(address);
             return this;
         }
         public Builder config(@Nullable Output<String> config) {
@@ -152,7 +153,7 @@ public final class DeploymentOccurrenceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder config(@Nullable String config) {
-            this.config = Output.ofNullable(config);
+            this.config = Codegen.ofNullable(config);
             return this;
         }
         public Builder deployTime(Output<String> deployTime) {
@@ -168,7 +169,7 @@ public final class DeploymentOccurrenceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder platform(@Nullable DeploymentOccurrencePlatform platform) {
-            this.platform = Output.ofNullable(platform);
+            this.platform = Codegen.ofNullable(platform);
             return this;
         }
         public Builder undeployTime(@Nullable Output<String> undeployTime) {
@@ -176,7 +177,7 @@ public final class DeploymentOccurrenceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder undeployTime(@Nullable String undeployTime) {
-            this.undeployTime = Output.ofNullable(undeployTime);
+            this.undeployTime = Codegen.ofNullable(undeployTime);
             return this;
         }
         public Builder userEmail(@Nullable Output<String> userEmail) {
@@ -184,7 +185,7 @@ public final class DeploymentOccurrenceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder userEmail(@Nullable String userEmail) {
-            this.userEmail = Output.ofNullable(userEmail);
+            this.userEmail = Codegen.ofNullable(userEmail);
             return this;
         }        public DeploymentOccurrenceArgs build() {
             return new DeploymentOccurrenceArgs(address, config, deployTime, platform, undeployTime, userEmail);

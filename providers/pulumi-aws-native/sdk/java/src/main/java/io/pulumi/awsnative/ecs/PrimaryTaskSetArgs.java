@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ecs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -56,9 +57,9 @@ public final class PrimaryTaskSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PrimaryTaskSetArgs() {
-        this.cluster = Output.empty();
-        this.service = Output.empty();
-        this.taskSetId = Output.empty();
+        this.cluster = Codegen.empty();
+        this.service = Codegen.empty();
+        this.taskSetId = Codegen.empty();
     }
 
     public static Builder builder() {

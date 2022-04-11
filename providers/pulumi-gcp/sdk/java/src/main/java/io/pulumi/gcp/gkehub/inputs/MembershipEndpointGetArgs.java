@@ -5,6 +5,7 @@ package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.gkehub.inputs.MembershipEndpointGkeClusterGetArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class MembershipEndpointGetArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<MembershipEndpointGkeClusterGetArgs> gkeCluster;
 
     public Output<MembershipEndpointGkeClusterGetArgs> getGkeCluster() {
-        return this.gkeCluster == null ? Output.empty() : this.gkeCluster;
+        return this.gkeCluster == null ? Codegen.empty() : this.gkeCluster;
     }
 
     public MembershipEndpointGetArgs(@Nullable Output<MembershipEndpointGkeClusterGetArgs> gkeCluster) {
@@ -31,7 +32,7 @@ public final class MembershipEndpointGetArgs extends io.pulumi.resources.Resourc
     }
 
     private MembershipEndpointGetArgs() {
-        this.gkeCluster = Output.empty();
+        this.gkeCluster = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class MembershipEndpointGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder gkeCluster(@Nullable MembershipEndpointGkeClusterGetArgs gkeCluster) {
-            this.gkeCluster = Output.ofNullable(gkeCluster);
+            this.gkeCluster = Codegen.ofNullable(gkeCluster);
             return this;
         }        public MembershipEndpointGetArgs build() {
             return new MembershipEndpointGetArgs(gkeCluster);

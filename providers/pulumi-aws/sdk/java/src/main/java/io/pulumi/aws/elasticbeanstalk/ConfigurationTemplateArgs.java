@@ -6,6 +6,7 @@ package io.pulumi.aws.elasticbeanstalk;
 import io.pulumi.aws.elasticbeanstalk.inputs.ConfigurationTemplateSettingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class ConfigurationTemplateArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ConfigurationTemplateArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> environmentId;
 
     public Output<String> getEnvironmentId() {
-        return this.environmentId == null ? Output.empty() : this.environmentId;
+        return this.environmentId == null ? Codegen.empty() : this.environmentId;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class ConfigurationTemplateArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class ConfigurationTemplateArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<ConfigurationTemplateSettingArgs>> settings;
 
     public Output<List<ConfigurationTemplateSettingArgs>> getSettings() {
-        return this.settings == null ? Output.empty() : this.settings;
+        return this.settings == null ? Codegen.empty() : this.settings;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class ConfigurationTemplateArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> solutionStackName;
 
     public Output<String> getSolutionStackName() {
-        return this.solutionStackName == null ? Output.empty() : this.solutionStackName;
+        return this.solutionStackName == null ? Codegen.empty() : this.solutionStackName;
     }
 
     public ConfigurationTemplateArgs(
@@ -101,12 +102,12 @@ public final class ConfigurationTemplateArgs extends io.pulumi.resources.Resourc
     }
 
     private ConfigurationTemplateArgs() {
-        this.application = Output.empty();
-        this.description = Output.empty();
-        this.environmentId = Output.empty();
-        this.name = Output.empty();
-        this.settings = Output.empty();
-        this.solutionStackName = Output.empty();
+        this.application = Codegen.empty();
+        this.description = Codegen.empty();
+        this.environmentId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.settings = Codegen.empty();
+        this.solutionStackName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -152,7 +153,7 @@ public final class ConfigurationTemplateArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder environmentId(@Nullable Output<String> environmentId) {
@@ -160,7 +161,7 @@ public final class ConfigurationTemplateArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder environmentId(@Nullable String environmentId) {
-            this.environmentId = Output.ofNullable(environmentId);
+            this.environmentId = Codegen.ofNullable(environmentId);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -168,7 +169,7 @@ public final class ConfigurationTemplateArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder settings(@Nullable Output<List<ConfigurationTemplateSettingArgs>> settings) {
@@ -176,7 +177,7 @@ public final class ConfigurationTemplateArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder settings(@Nullable List<ConfigurationTemplateSettingArgs> settings) {
-            this.settings = Output.ofNullable(settings);
+            this.settings = Codegen.ofNullable(settings);
             return this;
         }
         public Builder settings(ConfigurationTemplateSettingArgs... settings) {
@@ -187,7 +188,7 @@ public final class ConfigurationTemplateArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder solutionStackName(@Nullable String solutionStackName) {
-            this.solutionStackName = Output.ofNullable(solutionStackName);
+            this.solutionStackName = Codegen.ofNullable(solutionStackName);
             return this;
         }        public ConfigurationTemplateArgs build() {
             return new ConfigurationTemplateArgs(application, description, environmentId, name, settings, solutionStackName);

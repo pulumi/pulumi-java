@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -54,8 +55,8 @@ public final class NonResourcePolicyRuleArgs extends io.pulumi.resources.Resourc
     }
 
     private NonResourcePolicyRuleArgs() {
-        this.nonResourceURLs = Output.empty();
-        this.verbs = Output.empty();
+        this.nonResourceURLs = Codegen.empty();
+        this.verbs = Codegen.empty();
     }
 
     public static Builder builder() {

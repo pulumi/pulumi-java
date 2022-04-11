@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GoogleMonitoringV3RangeArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Double> max;
 
     public Output<Double> getMax() {
-        return this.max == null ? Output.empty() : this.max;
+        return this.max == null ? Codegen.empty() : this.max;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class GoogleMonitoringV3RangeArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Double> min;
 
     public Output<Double> getMin() {
-        return this.min == null ? Output.empty() : this.min;
+        return this.min == null ? Codegen.empty() : this.min;
     }
 
     public GoogleMonitoringV3RangeArgs(
@@ -48,8 +49,8 @@ public final class GoogleMonitoringV3RangeArgs extends io.pulumi.resources.Resou
     }
 
     private GoogleMonitoringV3RangeArgs() {
-        this.max = Output.empty();
-        this.min = Output.empty();
+        this.max = Codegen.empty();
+        this.min = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class GoogleMonitoringV3RangeArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder max(@Nullable Double max) {
-            this.max = Output.ofNullable(max);
+            this.max = Codegen.ofNullable(max);
             return this;
         }
         public Builder min(@Nullable Output<Double> min) {
@@ -87,7 +88,7 @@ public final class GoogleMonitoringV3RangeArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder min(@Nullable Double min) {
-            this.min = Output.ofNullable(min);
+            this.min = Codegen.ofNullable(min);
             return this;
         }        public GoogleMonitoringV3RangeArgs build() {
             return new GoogleMonitoringV3RangeArgs(max, min);

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,14 +20,14 @@ public final class DomainConfigurationAuthorizerConfigArgs extends io.pulumi.res
       private final @Nullable Output<Boolean> allowAuthorizerOverride;
 
     public Output<Boolean> getAllowAuthorizerOverride() {
-        return this.allowAuthorizerOverride == null ? Output.empty() : this.allowAuthorizerOverride;
+        return this.allowAuthorizerOverride == null ? Codegen.empty() : this.allowAuthorizerOverride;
     }
 
     @Import(name="defaultAuthorizerName")
       private final @Nullable Output<String> defaultAuthorizerName;
 
     public Output<String> getDefaultAuthorizerName() {
-        return this.defaultAuthorizerName == null ? Output.empty() : this.defaultAuthorizerName;
+        return this.defaultAuthorizerName == null ? Codegen.empty() : this.defaultAuthorizerName;
     }
 
     public DomainConfigurationAuthorizerConfigArgs(
@@ -37,8 +38,8 @@ public final class DomainConfigurationAuthorizerConfigArgs extends io.pulumi.res
     }
 
     private DomainConfigurationAuthorizerConfigArgs() {
-        this.allowAuthorizerOverride = Output.empty();
-        this.defaultAuthorizerName = Output.empty();
+        this.allowAuthorizerOverride = Codegen.empty();
+        this.defaultAuthorizerName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class DomainConfigurationAuthorizerConfigArgs extends io.pulumi.res
             return this;
         }
         public Builder allowAuthorizerOverride(@Nullable Boolean allowAuthorizerOverride) {
-            this.allowAuthorizerOverride = Output.ofNullable(allowAuthorizerOverride);
+            this.allowAuthorizerOverride = Codegen.ofNullable(allowAuthorizerOverride);
             return this;
         }
         public Builder defaultAuthorizerName(@Nullable Output<String> defaultAuthorizerName) {
@@ -76,7 +77,7 @@ public final class DomainConfigurationAuthorizerConfigArgs extends io.pulumi.res
             return this;
         }
         public Builder defaultAuthorizerName(@Nullable String defaultAuthorizerName) {
-            this.defaultAuthorizerName = Output.ofNullable(defaultAuthorizerName);
+            this.defaultAuthorizerName = Codegen.ofNullable(defaultAuthorizerName);
             return this;
         }        public DomainConfigurationAuthorizerConfigArgs build() {
             return new DomainConfigurationAuthorizerConfigArgs(allowAuthorizerOverride, defaultAuthorizerName);

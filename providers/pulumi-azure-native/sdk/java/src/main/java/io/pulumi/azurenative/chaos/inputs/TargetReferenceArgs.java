@@ -6,6 +6,7 @@ package io.pulumi.azurenative.chaos.inputs;
 import io.pulumi.azurenative.chaos.enums.TargetReferenceType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -48,8 +49,8 @@ public final class TargetReferenceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private TargetReferenceArgs() {
-        this.id = Output.empty();
-        this.type = Output.empty();
+        this.id = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

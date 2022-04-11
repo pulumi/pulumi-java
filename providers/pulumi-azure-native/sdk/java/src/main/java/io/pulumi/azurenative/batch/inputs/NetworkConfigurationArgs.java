@@ -7,6 +7,7 @@ import io.pulumi.azurenative.batch.inputs.PoolEndpointConfigurationArgs;
 import io.pulumi.azurenative.batch.inputs.PublicIPAddressConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<PoolEndpointConfigurationArgs> endpointConfiguration;
 
     public Output<PoolEndpointConfigurationArgs> getEndpointConfiguration() {
-        return this.endpointConfiguration == null ? Output.empty() : this.endpointConfiguration;
+        return this.endpointConfiguration == null ? Codegen.empty() : this.endpointConfiguration;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<PublicIPAddressConfigurationArgs> publicIPAddressConfiguration;
 
     public Output<PublicIPAddressConfigurationArgs> getPublicIPAddressConfiguration() {
-        return this.publicIPAddressConfiguration == null ? Output.empty() : this.publicIPAddressConfiguration;
+        return this.publicIPAddressConfiguration == null ? Codegen.empty() : this.publicIPAddressConfiguration;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
-        return this.subnetId == null ? Output.empty() : this.subnetId;
+        return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
     public NetworkConfigurationArgs(
@@ -63,9 +64,9 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
     }
 
     private NetworkConfigurationArgs() {
-        this.endpointConfiguration = Output.empty();
-        this.publicIPAddressConfiguration = Output.empty();
-        this.subnetId = Output.empty();
+        this.endpointConfiguration = Codegen.empty();
+        this.publicIPAddressConfiguration = Codegen.empty();
+        this.subnetId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder endpointConfiguration(@Nullable PoolEndpointConfigurationArgs endpointConfiguration) {
-            this.endpointConfiguration = Output.ofNullable(endpointConfiguration);
+            this.endpointConfiguration = Codegen.ofNullable(endpointConfiguration);
             return this;
         }
         public Builder publicIPAddressConfiguration(@Nullable Output<PublicIPAddressConfigurationArgs> publicIPAddressConfiguration) {
@@ -105,7 +106,7 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder publicIPAddressConfiguration(@Nullable PublicIPAddressConfigurationArgs publicIPAddressConfiguration) {
-            this.publicIPAddressConfiguration = Output.ofNullable(publicIPAddressConfiguration);
+            this.publicIPAddressConfiguration = Codegen.ofNullable(publicIPAddressConfiguration);
             return this;
         }
         public Builder subnetId(@Nullable Output<String> subnetId) {
@@ -113,7 +114,7 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Output.ofNullable(subnetId);
+            this.subnetId = Codegen.ofNullable(subnetId);
             return this;
         }        public NetworkConfigurationArgs build() {
             return new NetworkConfigurationArgs(endpointConfiguration, publicIPAddressConfiguration, subnetId);

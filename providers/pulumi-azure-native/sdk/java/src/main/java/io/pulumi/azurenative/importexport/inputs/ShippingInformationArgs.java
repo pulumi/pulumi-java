@@ -5,6 +5,7 @@ package io.pulumi.azurenative.importexport.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> city;
 
     public Output<String> getCity() {
-        return this.city == null ? Output.empty() : this.city;
+        return this.city == null ? Codegen.empty() : this.city;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> countryOrRegion;
 
     public Output<String> getCountryOrRegion() {
-        return this.countryOrRegion == null ? Output.empty() : this.countryOrRegion;
+        return this.countryOrRegion == null ? Codegen.empty() : this.countryOrRegion;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> phone;
 
     public Output<String> getPhone() {
-        return this.phone == null ? Output.empty() : this.phone;
+        return this.phone == null ? Codegen.empty() : this.phone;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> postalCode;
 
     public Output<String> getPostalCode() {
-        return this.postalCode == null ? Output.empty() : this.postalCode;
+        return this.postalCode == null ? Codegen.empty() : this.postalCode;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> recipientName;
 
     public Output<String> getRecipientName() {
-        return this.recipientName == null ? Output.empty() : this.recipientName;
+        return this.recipientName == null ? Codegen.empty() : this.recipientName;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> stateOrProvince;
 
     public Output<String> getStateOrProvince() {
-        return this.stateOrProvince == null ? Output.empty() : this.stateOrProvince;
+        return this.stateOrProvince == null ? Codegen.empty() : this.stateOrProvince;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> streetAddress1;
 
     public Output<String> getStreetAddress1() {
-        return this.streetAddress1 == null ? Output.empty() : this.streetAddress1;
+        return this.streetAddress1 == null ? Codegen.empty() : this.streetAddress1;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> streetAddress2;
 
     public Output<String> getStreetAddress2() {
-        return this.streetAddress2 == null ? Output.empty() : this.streetAddress2;
+        return this.streetAddress2 == null ? Codegen.empty() : this.streetAddress2;
     }
 
     public ShippingInformationArgs(
@@ -126,14 +127,14 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
     }
 
     private ShippingInformationArgs() {
-        this.city = Output.empty();
-        this.countryOrRegion = Output.empty();
-        this.phone = Output.empty();
-        this.postalCode = Output.empty();
-        this.recipientName = Output.empty();
-        this.stateOrProvince = Output.empty();
-        this.streetAddress1 = Output.empty();
-        this.streetAddress2 = Output.empty();
+        this.city = Codegen.empty();
+        this.countryOrRegion = Codegen.empty();
+        this.phone = Codegen.empty();
+        this.postalCode = Codegen.empty();
+        this.recipientName = Codegen.empty();
+        this.stateOrProvince = Codegen.empty();
+        this.streetAddress1 = Codegen.empty();
+        this.streetAddress2 = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -175,7 +176,7 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder city(@Nullable String city) {
-            this.city = Output.ofNullable(city);
+            this.city = Codegen.ofNullable(city);
             return this;
         }
         public Builder countryOrRegion(@Nullable Output<String> countryOrRegion) {
@@ -183,7 +184,7 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder countryOrRegion(@Nullable String countryOrRegion) {
-            this.countryOrRegion = Output.ofNullable(countryOrRegion);
+            this.countryOrRegion = Codegen.ofNullable(countryOrRegion);
             return this;
         }
         public Builder phone(@Nullable Output<String> phone) {
@@ -191,7 +192,7 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder phone(@Nullable String phone) {
-            this.phone = Output.ofNullable(phone);
+            this.phone = Codegen.ofNullable(phone);
             return this;
         }
         public Builder postalCode(@Nullable Output<String> postalCode) {
@@ -199,7 +200,7 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder postalCode(@Nullable String postalCode) {
-            this.postalCode = Output.ofNullable(postalCode);
+            this.postalCode = Codegen.ofNullable(postalCode);
             return this;
         }
         public Builder recipientName(@Nullable Output<String> recipientName) {
@@ -207,7 +208,7 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder recipientName(@Nullable String recipientName) {
-            this.recipientName = Output.ofNullable(recipientName);
+            this.recipientName = Codegen.ofNullable(recipientName);
             return this;
         }
         public Builder stateOrProvince(@Nullable Output<String> stateOrProvince) {
@@ -215,7 +216,7 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder stateOrProvince(@Nullable String stateOrProvince) {
-            this.stateOrProvince = Output.ofNullable(stateOrProvince);
+            this.stateOrProvince = Codegen.ofNullable(stateOrProvince);
             return this;
         }
         public Builder streetAddress1(@Nullable Output<String> streetAddress1) {
@@ -223,7 +224,7 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder streetAddress1(@Nullable String streetAddress1) {
-            this.streetAddress1 = Output.ofNullable(streetAddress1);
+            this.streetAddress1 = Codegen.ofNullable(streetAddress1);
             return this;
         }
         public Builder streetAddress2(@Nullable Output<String> streetAddress2) {
@@ -231,7 +232,7 @@ public final class ShippingInformationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder streetAddress2(@Nullable String streetAddress2) {
-            this.streetAddress2 = Output.ofNullable(streetAddress2);
+            this.streetAddress2 = Codegen.ofNullable(streetAddress2);
             return this;
         }        public ShippingInformationArgs build() {
             return new ShippingInformationArgs(city, countryOrRegion, phone, postalCode, recipientName, stateOrProvince, streetAddress1, streetAddress2);

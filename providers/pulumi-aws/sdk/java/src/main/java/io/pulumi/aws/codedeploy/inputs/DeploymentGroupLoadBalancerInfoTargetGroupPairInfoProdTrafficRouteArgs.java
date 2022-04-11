@@ -5,6 +5,7 @@ package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTraffic
     }
 
     private DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteArgs() {
-        this.listenerArns = Output.empty();
+        this.listenerArns = Codegen.empty();
     }
 
     public static Builder builder() {

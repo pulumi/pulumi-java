@@ -5,6 +5,7 @@ package io.pulumi.googlenative.sqladmin_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.sqladmin_v1.inputs.InstanceReferenceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> caCertificate;
 
     public Output<String> getCaCertificate() {
-        return this.caCertificate == null ? Output.empty() : this.caCertificate;
+        return this.caCertificate == null ? Codegen.empty() : this.caCertificate;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> clientCertificate;
 
     public Output<String> getClientCertificate() {
-        return this.clientCertificate == null ? Output.empty() : this.clientCertificate;
+        return this.clientCertificate == null ? Codegen.empty() : this.clientCertificate;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> clientKey;
 
     public Output<String> getClientKey() {
-        return this.clientKey == null ? Output.empty() : this.clientKey;
+        return this.clientKey == null ? Codegen.empty() : this.clientKey;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> dumpFilePath;
 
     public Output<String> getDumpFilePath() {
-        return this.dumpFilePath == null ? Output.empty() : this.dumpFilePath;
+        return this.dumpFilePath == null ? Codegen.empty() : this.dumpFilePath;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> hostPort;
 
     public Output<String> getHostPort() {
-        return this.hostPort == null ? Output.empty() : this.hostPort;
+        return this.hostPort == null ? Codegen.empty() : this.hostPort;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<InstanceReferenceArgs> sourceInstance;
 
     public Output<InstanceReferenceArgs> getSourceInstance() {
-        return this.sourceInstance == null ? Output.empty() : this.sourceInstance;
+        return this.sourceInstance == null ? Codegen.empty() : this.sourceInstance;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     public OnPremisesConfigurationArgs(
@@ -140,15 +141,15 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
     }
 
     private OnPremisesConfigurationArgs() {
-        this.caCertificate = Output.empty();
-        this.clientCertificate = Output.empty();
-        this.clientKey = Output.empty();
-        this.dumpFilePath = Output.empty();
-        this.hostPort = Output.empty();
-        this.kind = Output.empty();
-        this.password = Output.empty();
-        this.sourceInstance = Output.empty();
-        this.username = Output.empty();
+        this.caCertificate = Codegen.empty();
+        this.clientCertificate = Codegen.empty();
+        this.clientKey = Codegen.empty();
+        this.dumpFilePath = Codegen.empty();
+        this.hostPort = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.password = Codegen.empty();
+        this.sourceInstance = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -192,7 +193,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder caCertificate(@Nullable String caCertificate) {
-            this.caCertificate = Output.ofNullable(caCertificate);
+            this.caCertificate = Codegen.ofNullable(caCertificate);
             return this;
         }
         public Builder clientCertificate(@Nullable Output<String> clientCertificate) {
@@ -200,7 +201,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder clientCertificate(@Nullable String clientCertificate) {
-            this.clientCertificate = Output.ofNullable(clientCertificate);
+            this.clientCertificate = Codegen.ofNullable(clientCertificate);
             return this;
         }
         public Builder clientKey(@Nullable Output<String> clientKey) {
@@ -208,7 +209,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder clientKey(@Nullable String clientKey) {
-            this.clientKey = Output.ofNullable(clientKey);
+            this.clientKey = Codegen.ofNullable(clientKey);
             return this;
         }
         public Builder dumpFilePath(@Nullable Output<String> dumpFilePath) {
@@ -216,7 +217,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder dumpFilePath(@Nullable String dumpFilePath) {
-            this.dumpFilePath = Output.ofNullable(dumpFilePath);
+            this.dumpFilePath = Codegen.ofNullable(dumpFilePath);
             return this;
         }
         public Builder hostPort(@Nullable Output<String> hostPort) {
@@ -224,7 +225,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder hostPort(@Nullable String hostPort) {
-            this.hostPort = Output.ofNullable(hostPort);
+            this.hostPort = Codegen.ofNullable(hostPort);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -232,7 +233,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder password(@Nullable Output<String> password) {
@@ -240,7 +241,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder sourceInstance(@Nullable Output<InstanceReferenceArgs> sourceInstance) {
@@ -248,7 +249,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder sourceInstance(@Nullable InstanceReferenceArgs sourceInstance) {
-            this.sourceInstance = Output.ofNullable(sourceInstance);
+            this.sourceInstance = Codegen.ofNullable(sourceInstance);
             return this;
         }
         public Builder username(@Nullable Output<String> username) {
@@ -256,7 +257,7 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder username(@Nullable String username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }        public OnPremisesConfigurationArgs build() {
             return new OnPremisesConfigurationArgs(caCertificate, clientCertificate, clientKey, dumpFilePath, hostPort, kind, password, sourceInstance, username);

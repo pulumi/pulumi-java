@@ -9,6 +9,7 @@ import io.pulumi.aws.servicecatalog.inputs.PortfolioShareState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -158,7 +159,7 @@ public class PortfolioShare extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PortfolioShare(String name, PortfolioShareArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:servicecatalog/portfolioShare:PortfolioShare", name, args == null ? PortfolioShareArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:servicecatalog/portfolioShare:PortfolioShare", name, args == null ? PortfolioShareArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PortfolioShare(String name, Output<String> id, @Nullable PortfolioShareState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

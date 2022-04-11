@@ -5,6 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class MabFileFolderProtectedItemExtendedInfoArgs extends io.pulumi.
       private final @Nullable Output<String> lastRefreshedAt;
 
     public Output<String> getLastRefreshedAt() {
-        return this.lastRefreshedAt == null ? Output.empty() : this.lastRefreshedAt;
+        return this.lastRefreshedAt == null ? Codegen.empty() : this.lastRefreshedAt;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class MabFileFolderProtectedItemExtendedInfoArgs extends io.pulumi.
       private final @Nullable Output<String> oldestRecoveryPoint;
 
     public Output<String> getOldestRecoveryPoint() {
-        return this.oldestRecoveryPoint == null ? Output.empty() : this.oldestRecoveryPoint;
+        return this.oldestRecoveryPoint == null ? Codegen.empty() : this.oldestRecoveryPoint;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class MabFileFolderProtectedItemExtendedInfoArgs extends io.pulumi.
       private final @Nullable Output<Integer> recoveryPointCount;
 
     public Output<Integer> getRecoveryPointCount() {
-        return this.recoveryPointCount == null ? Output.empty() : this.recoveryPointCount;
+        return this.recoveryPointCount == null ? Codegen.empty() : this.recoveryPointCount;
     }
 
     public MabFileFolderProtectedItemExtendedInfoArgs(
@@ -62,9 +63,9 @@ public final class MabFileFolderProtectedItemExtendedInfoArgs extends io.pulumi.
     }
 
     private MabFileFolderProtectedItemExtendedInfoArgs() {
-        this.lastRefreshedAt = Output.empty();
-        this.oldestRecoveryPoint = Output.empty();
-        this.recoveryPointCount = Output.empty();
+        this.lastRefreshedAt = Codegen.empty();
+        this.oldestRecoveryPoint = Codegen.empty();
+        this.recoveryPointCount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class MabFileFolderProtectedItemExtendedInfoArgs extends io.pulumi.
             return this;
         }
         public Builder lastRefreshedAt(@Nullable String lastRefreshedAt) {
-            this.lastRefreshedAt = Output.ofNullable(lastRefreshedAt);
+            this.lastRefreshedAt = Codegen.ofNullable(lastRefreshedAt);
             return this;
         }
         public Builder oldestRecoveryPoint(@Nullable Output<String> oldestRecoveryPoint) {
@@ -104,7 +105,7 @@ public final class MabFileFolderProtectedItemExtendedInfoArgs extends io.pulumi.
             return this;
         }
         public Builder oldestRecoveryPoint(@Nullable String oldestRecoveryPoint) {
-            this.oldestRecoveryPoint = Output.ofNullable(oldestRecoveryPoint);
+            this.oldestRecoveryPoint = Codegen.ofNullable(oldestRecoveryPoint);
             return this;
         }
         public Builder recoveryPointCount(@Nullable Output<Integer> recoveryPointCount) {
@@ -112,7 +113,7 @@ public final class MabFileFolderProtectedItemExtendedInfoArgs extends io.pulumi.
             return this;
         }
         public Builder recoveryPointCount(@Nullable Integer recoveryPointCount) {
-            this.recoveryPointCount = Output.ofNullable(recoveryPointCount);
+            this.recoveryPointCount = Codegen.ofNullable(recoveryPointCount);
             return this;
         }        public MabFileFolderProtectedItemExtendedInfoArgs build() {
             return new MabFileFolderProtectedItemExtendedInfoArgs(lastRefreshedAt, oldestRecoveryPoint, recoveryPointCount);

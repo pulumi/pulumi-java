@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.events.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -48,8 +49,8 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EventSeriesArgs() {
-        this.count = Output.empty();
-        this.lastObservedTime = Output.empty();
+        this.count = Codegen.empty();
+        this.lastObservedTime = Codegen.empty();
     }
 
     public static Builder builder() {

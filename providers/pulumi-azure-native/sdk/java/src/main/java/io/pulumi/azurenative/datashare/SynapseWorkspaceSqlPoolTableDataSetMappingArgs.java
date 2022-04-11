@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datashare;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -44,7 +45,7 @@ public final class SynapseWorkspaceSqlPoolTableDataSetMappingArgs extends io.pul
       private final @Nullable Output<String> dataSetMappingName;
 
     public Output<String> getDataSetMappingName() {
-        return this.dataSetMappingName == null ? Output.empty() : this.dataSetMappingName;
+        return this.dataSetMappingName == null ? Codegen.empty() : this.dataSetMappingName;
     }
 
     /**
@@ -110,13 +111,13 @@ public final class SynapseWorkspaceSqlPoolTableDataSetMappingArgs extends io.pul
     }
 
     private SynapseWorkspaceSqlPoolTableDataSetMappingArgs() {
-        this.accountName = Output.empty();
-        this.dataSetId = Output.empty();
-        this.dataSetMappingName = Output.empty();
-        this.kind = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.shareSubscriptionName = Output.empty();
-        this.synapseWorkspaceSqlPoolTableResourceId = Output.empty();
+        this.accountName = Codegen.empty();
+        this.dataSetId = Codegen.empty();
+        this.dataSetMappingName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.shareSubscriptionName = Codegen.empty();
+        this.synapseWorkspaceSqlPoolTableResourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -172,7 +173,7 @@ public final class SynapseWorkspaceSqlPoolTableDataSetMappingArgs extends io.pul
             return this;
         }
         public Builder dataSetMappingName(@Nullable String dataSetMappingName) {
-            this.dataSetMappingName = Output.ofNullable(dataSetMappingName);
+            this.dataSetMappingName = Codegen.ofNullable(dataSetMappingName);
             return this;
         }
         public Builder kind(Output<String> kind) {

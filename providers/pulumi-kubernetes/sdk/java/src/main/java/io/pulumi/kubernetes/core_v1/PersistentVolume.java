@@ -6,6 +6,7 @@ package io.pulumi.kubernetes.core_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.core_v1.PersistentVolumeArgs;
 import io.pulumi.kubernetes.core_v1.outputs.PersistentVolumeSpec;
@@ -113,7 +114,7 @@ public class PersistentVolume extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PersistentVolume(String name, @Nullable PersistentVolumeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:core/v1:PersistentVolume", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:core/v1:PersistentVolume", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private PersistentVolume(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class UserIdentityPropertiesArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> clientId;
 
     public Output<String> getClientId() {
-        return this.clientId == null ? Output.empty() : this.clientId;
+        return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class UserIdentityPropertiesArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> principalId;
 
     public Output<String> getPrincipalId() {
-        return this.principalId == null ? Output.empty() : this.principalId;
+        return this.principalId == null ? Codegen.empty() : this.principalId;
     }
 
     public UserIdentityPropertiesArgs(
@@ -44,8 +45,8 @@ public final class UserIdentityPropertiesArgs extends io.pulumi.resources.Resour
     }
 
     private UserIdentityPropertiesArgs() {
-        this.clientId = Output.empty();
-        this.principalId = Output.empty();
+        this.clientId = Codegen.empty();
+        this.principalId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class UserIdentityPropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Output.ofNullable(clientId);
+            this.clientId = Codegen.ofNullable(clientId);
             return this;
         }
         public Builder principalId(@Nullable Output<String> principalId) {
@@ -83,7 +84,7 @@ public final class UserIdentityPropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder principalId(@Nullable String principalId) {
-            this.principalId = Output.ofNullable(principalId);
+            this.principalId = Codegen.ofNullable(principalId);
             return this;
         }        public UserIdentityPropertiesArgs build() {
             return new UserIdentityPropertiesArgs(clientId, principalId);

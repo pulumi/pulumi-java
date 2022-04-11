@@ -6,6 +6,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 import io.pulumi.azurenative.providerhub.inputs.ResourceTypeExtensionOptionsResourceCreationBeginArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +19,7 @@ public final class ResourceTypeRegistrationPropertiesExtensionOptionsArgs extend
       private final @Nullable Output<ResourceTypeExtensionOptionsResourceCreationBeginArgs> resourceCreationBegin;
 
     public Output<ResourceTypeExtensionOptionsResourceCreationBeginArgs> getResourceCreationBegin() {
-        return this.resourceCreationBegin == null ? Output.empty() : this.resourceCreationBegin;
+        return this.resourceCreationBegin == null ? Codegen.empty() : this.resourceCreationBegin;
     }
 
     public ResourceTypeRegistrationPropertiesExtensionOptionsArgs(@Nullable Output<ResourceTypeExtensionOptionsResourceCreationBeginArgs> resourceCreationBegin) {
@@ -26,7 +27,7 @@ public final class ResourceTypeRegistrationPropertiesExtensionOptionsArgs extend
     }
 
     private ResourceTypeRegistrationPropertiesExtensionOptionsArgs() {
-        this.resourceCreationBegin = Output.empty();
+        this.resourceCreationBegin = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class ResourceTypeRegistrationPropertiesExtensionOptionsArgs extend
             return this;
         }
         public Builder resourceCreationBegin(@Nullable ResourceTypeExtensionOptionsResourceCreationBeginArgs resourceCreationBegin) {
-            this.resourceCreationBegin = Output.ofNullable(resourceCreationBegin);
+            this.resourceCreationBegin = Codegen.ofNullable(resourceCreationBegin);
             return this;
         }        public ResourceTypeRegistrationPropertiesExtensionOptionsArgs build() {
             return new ResourceTypeRegistrationPropertiesExtensionOptionsArgs(resourceCreationBegin);

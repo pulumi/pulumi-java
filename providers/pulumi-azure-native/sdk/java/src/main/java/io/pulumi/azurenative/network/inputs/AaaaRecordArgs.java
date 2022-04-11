@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class AaaaRecordArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ipv6Address;
 
     public Output<String> getIpv6Address() {
-        return this.ipv6Address == null ? Output.empty() : this.ipv6Address;
+        return this.ipv6Address == null ? Codegen.empty() : this.ipv6Address;
     }
 
     public AaaaRecordArgs(@Nullable Output<String> ipv6Address) {
@@ -34,7 +35,7 @@ public final class AaaaRecordArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AaaaRecordArgs() {
-        this.ipv6Address = Output.empty();
+        this.ipv6Address = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class AaaaRecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipv6Address(@Nullable String ipv6Address) {
-            this.ipv6Address = Output.ofNullable(ipv6Address);
+            this.ipv6Address = Codegen.ofNullable(ipv6Address);
             return this;
         }        public AaaaRecordArgs build() {
             return new AaaaRecordArgs(ipv6Address);

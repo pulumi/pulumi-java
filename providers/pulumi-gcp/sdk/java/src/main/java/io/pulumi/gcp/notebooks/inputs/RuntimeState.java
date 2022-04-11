@@ -5,6 +5,7 @@ package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.notebooks.inputs.RuntimeAccessConfigGetArgs;
 import io.pulumi.gcp.notebooks.inputs.RuntimeMetricGetArgs;
 import io.pulumi.gcp.notebooks.inputs.RuntimeSoftwareConfigGetArgs;
@@ -28,7 +29,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RuntimeAccessConfigGetArgs> accessConfig;
 
     public Output<RuntimeAccessConfigGetArgs> getAccessConfig() {
-        return this.accessConfig == null ? Output.empty() : this.accessConfig;
+        return this.accessConfig == null ? Codegen.empty() : this.accessConfig;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> healthState;
 
     public Output<String> getHealthState() {
-        return this.healthState == null ? Output.empty() : this.healthState;
+        return this.healthState == null ? Codegen.empty() : this.healthState;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<RuntimeMetricGetArgs>> metrics;
 
     public Output<List<RuntimeMetricGetArgs>> getMetrics() {
-        return this.metrics == null ? Output.empty() : this.metrics;
+        return this.metrics == null ? Codegen.empty() : this.metrics;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RuntimeSoftwareConfigGetArgs> softwareConfig;
 
     public Output<RuntimeSoftwareConfigGetArgs> getSoftwareConfig() {
-        return this.softwareConfig == null ? Output.empty() : this.softwareConfig;
+        return this.softwareConfig == null ? Codegen.empty() : this.softwareConfig;
     }
 
     /**
@@ -108,7 +109,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -120,7 +121,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RuntimeVirtualMachineGetArgs> virtualMachine;
 
     public Output<RuntimeVirtualMachineGetArgs> getVirtualMachine() {
-        return this.virtualMachine == null ? Output.empty() : this.virtualMachine;
+        return this.virtualMachine == null ? Codegen.empty() : this.virtualMachine;
     }
 
     public RuntimeState(
@@ -145,15 +146,15 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RuntimeState() {
-        this.accessConfig = Output.empty();
-        this.healthState = Output.empty();
-        this.location = Output.empty();
-        this.metrics = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.softwareConfig = Output.empty();
-        this.state = Output.empty();
-        this.virtualMachine = Output.empty();
+        this.accessConfig = Codegen.empty();
+        this.healthState = Codegen.empty();
+        this.location = Codegen.empty();
+        this.metrics = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.softwareConfig = Codegen.empty();
+        this.state = Codegen.empty();
+        this.virtualMachine = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -197,7 +198,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessConfig(@Nullable RuntimeAccessConfigGetArgs accessConfig) {
-            this.accessConfig = Output.ofNullable(accessConfig);
+            this.accessConfig = Codegen.ofNullable(accessConfig);
             return this;
         }
         public Builder healthState(@Nullable Output<String> healthState) {
@@ -205,7 +206,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder healthState(@Nullable String healthState) {
-            this.healthState = Output.ofNullable(healthState);
+            this.healthState = Codegen.ofNullable(healthState);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -213,7 +214,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder metrics(@Nullable Output<List<RuntimeMetricGetArgs>> metrics) {
@@ -221,7 +222,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metrics(@Nullable List<RuntimeMetricGetArgs> metrics) {
-            this.metrics = Output.ofNullable(metrics);
+            this.metrics = Codegen.ofNullable(metrics);
             return this;
         }
         public Builder metrics(RuntimeMetricGetArgs... metrics) {
@@ -232,7 +233,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -240,7 +241,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder softwareConfig(@Nullable Output<RuntimeSoftwareConfigGetArgs> softwareConfig) {
@@ -248,7 +249,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder softwareConfig(@Nullable RuntimeSoftwareConfigGetArgs softwareConfig) {
-            this.softwareConfig = Output.ofNullable(softwareConfig);
+            this.softwareConfig = Codegen.ofNullable(softwareConfig);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -256,7 +257,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder virtualMachine(@Nullable Output<RuntimeVirtualMachineGetArgs> virtualMachine) {
@@ -264,7 +265,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder virtualMachine(@Nullable RuntimeVirtualMachineGetArgs virtualMachine) {
-            this.virtualMachine = Output.ofNullable(virtualMachine);
+            this.virtualMachine = Codegen.ofNullable(virtualMachine);
             return this;
         }        public RuntimeState build() {
             return new RuntimeState(accessConfig, healthState, location, metrics, name, project, softwareConfig, state, virtualMachine);

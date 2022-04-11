@@ -6,6 +6,7 @@ package io.pulumi.awsnative.lookoutmetrics.inputs;
 import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorVpcConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -91,14 +92,14 @@ public final class AnomalyDetectorRedshiftSourceConfigArgs extends io.pulumi.res
     }
 
     private AnomalyDetectorRedshiftSourceConfigArgs() {
-        this.clusterIdentifier = Output.empty();
-        this.databaseHost = Output.empty();
-        this.databaseName = Output.empty();
-        this.databasePort = Output.empty();
-        this.roleArn = Output.empty();
-        this.secretManagerArn = Output.empty();
-        this.tableName = Output.empty();
-        this.vpcConfiguration = Output.empty();
+        this.clusterIdentifier = Codegen.empty();
+        this.databaseHost = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.databasePort = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.secretManagerArn = Codegen.empty();
+        this.tableName = Codegen.empty();
+        this.vpcConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.netapp.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class VolumeBackupsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> backupsCount;
 
     public Output<Integer> getBackupsCount() {
-        return this.backupsCount == null ? Output.empty() : this.backupsCount;
+        return this.backupsCount == null ? Codegen.empty() : this.backupsCount;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class VolumeBackupsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> policyEnabled;
 
     public Output<Boolean> getPolicyEnabled() {
-        return this.policyEnabled == null ? Output.empty() : this.policyEnabled;
+        return this.policyEnabled == null ? Codegen.empty() : this.policyEnabled;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class VolumeBackupsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> volumeName;
 
     public Output<String> getVolumeName() {
-        return this.volumeName == null ? Output.empty() : this.volumeName;
+        return this.volumeName == null ? Codegen.empty() : this.volumeName;
     }
 
     public VolumeBackupsArgs(
@@ -63,9 +64,9 @@ public final class VolumeBackupsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VolumeBackupsArgs() {
-        this.backupsCount = Output.empty();
-        this.policyEnabled = Output.empty();
-        this.volumeName = Output.empty();
+        this.backupsCount = Codegen.empty();
+        this.policyEnabled = Codegen.empty();
+        this.volumeName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class VolumeBackupsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backupsCount(@Nullable Integer backupsCount) {
-            this.backupsCount = Output.ofNullable(backupsCount);
+            this.backupsCount = Codegen.ofNullable(backupsCount);
             return this;
         }
         public Builder policyEnabled(@Nullable Output<Boolean> policyEnabled) {
@@ -105,7 +106,7 @@ public final class VolumeBackupsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder policyEnabled(@Nullable Boolean policyEnabled) {
-            this.policyEnabled = Output.ofNullable(policyEnabled);
+            this.policyEnabled = Codegen.ofNullable(policyEnabled);
             return this;
         }
         public Builder volumeName(@Nullable Output<String> volumeName) {
@@ -113,7 +114,7 @@ public final class VolumeBackupsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder volumeName(@Nullable String volumeName) {
-            this.volumeName = Output.ofNullable(volumeName);
+            this.volumeName = Codegen.ofNullable(volumeName);
             return this;
         }        public VolumeBackupsArgs build() {
             return new VolumeBackupsArgs(backupsCount, policyEnabled, volumeName);

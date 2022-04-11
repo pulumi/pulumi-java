@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ReliableCollectionsRefArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Boolean> doNotPersistState;
 
     public Output<Boolean> getDoNotPersistState() {
-        return this.doNotPersistState == null ? Output.empty() : this.doNotPersistState;
+        return this.doNotPersistState == null ? Codegen.empty() : this.doNotPersistState;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class ReliableCollectionsRefArgs extends io.pulumi.resources.Resour
     }
 
     private ReliableCollectionsRefArgs() {
-        this.doNotPersistState = Output.empty();
-        this.name = Output.empty();
+        this.doNotPersistState = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ReliableCollectionsRefArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder doNotPersistState(@Nullable Boolean doNotPersistState) {
-            this.doNotPersistState = Output.ofNullable(doNotPersistState);
+            this.doNotPersistState = Codegen.ofNullable(doNotPersistState);
             return this;
         }
         public Builder name(Output<String> name) {

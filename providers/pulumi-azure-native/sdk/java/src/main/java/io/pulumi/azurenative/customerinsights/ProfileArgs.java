@@ -8,6 +8,7 @@ import io.pulumi.azurenative.customerinsights.inputs.PropertyDefinitionArgs;
 import io.pulumi.azurenative.customerinsights.inputs.StrongIdArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> apiEntitySetName;
 
     public Output<String> getApiEntitySetName() {
-        return this.apiEntitySetName == null ? Output.empty() : this.apiEntitySetName;
+        return this.apiEntitySetName == null ? Codegen.empty() : this.apiEntitySetName;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,List<String>>> attributes;
 
     public Output<Map<String,List<String>>> getAttributes() {
-        return this.attributes == null ? Output.empty() : this.attributes;
+        return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> description;
 
     public Output<Map<String,String>> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> displayName;
 
     public Output<Map<String,String>> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EntityTypes> entityType;
 
     public Output<EntityTypes> getEntityType() {
-        return this.entityType == null ? Output.empty() : this.entityType;
+        return this.entityType == null ? Codegen.empty() : this.entityType;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<PropertyDefinitionArgs>> fields;
 
     public Output<List<PropertyDefinitionArgs>> getFields() {
-        return this.fields == null ? Output.empty() : this.fields;
+        return this.fields == null ? Codegen.empty() : this.fields;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> instancesCount;
 
     public Output<Integer> getInstancesCount() {
-        return this.instancesCount == null ? Output.empty() : this.instancesCount;
+        return this.instancesCount == null ? Codegen.empty() : this.instancesCount;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> largeImage;
 
     public Output<String> getLargeImage() {
-        return this.largeImage == null ? Output.empty() : this.largeImage;
+        return this.largeImage == null ? Codegen.empty() : this.largeImage;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,Map<String,String>>> localizedAttributes;
 
     public Output<Map<String,Map<String,String>>> getLocalizedAttributes() {
-        return this.localizedAttributes == null ? Output.empty() : this.localizedAttributes;
+        return this.localizedAttributes == null ? Codegen.empty() : this.localizedAttributes;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> mediumImage;
 
     public Output<String> getMediumImage() {
-        return this.mediumImage == null ? Output.empty() : this.mediumImage;
+        return this.mediumImage == null ? Codegen.empty() : this.mediumImage;
     }
 
     /**
@@ -149,7 +150,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> profileName;
 
     public Output<String> getProfileName() {
-        return this.profileName == null ? Output.empty() : this.profileName;
+        return this.profileName == null ? Codegen.empty() : this.profileName;
     }
 
     /**
@@ -171,7 +172,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> schemaItemTypeLink;
 
     public Output<String> getSchemaItemTypeLink() {
-        return this.schemaItemTypeLink == null ? Output.empty() : this.schemaItemTypeLink;
+        return this.schemaItemTypeLink == null ? Codegen.empty() : this.schemaItemTypeLink;
     }
 
     /**
@@ -182,7 +183,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> smallImage;
 
     public Output<String> getSmallImage() {
-        return this.smallImage == null ? Output.empty() : this.smallImage;
+        return this.smallImage == null ? Codegen.empty() : this.smallImage;
     }
 
     /**
@@ -193,7 +194,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<StrongIdArgs>> strongIds;
 
     public Output<List<StrongIdArgs>> getStrongIds() {
-        return this.strongIds == null ? Output.empty() : this.strongIds;
+        return this.strongIds == null ? Codegen.empty() : this.strongIds;
     }
 
     /**
@@ -204,7 +205,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> timestampFieldName;
 
     public Output<String> getTimestampFieldName() {
-        return this.timestampFieldName == null ? Output.empty() : this.timestampFieldName;
+        return this.timestampFieldName == null ? Codegen.empty() : this.timestampFieldName;
     }
 
     /**
@@ -215,7 +216,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> typeName;
 
     public Output<String> getTypeName() {
-        return this.typeName == null ? Output.empty() : this.typeName;
+        return this.typeName == null ? Codegen.empty() : this.typeName;
     }
 
     public ProfileArgs(
@@ -258,24 +259,24 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProfileArgs() {
-        this.apiEntitySetName = Output.empty();
-        this.attributes = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.entityType = Output.empty();
-        this.fields = Output.empty();
-        this.hubName = Output.empty();
-        this.instancesCount = Output.empty();
-        this.largeImage = Output.empty();
-        this.localizedAttributes = Output.empty();
-        this.mediumImage = Output.empty();
-        this.profileName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.schemaItemTypeLink = Output.empty();
-        this.smallImage = Output.empty();
-        this.strongIds = Output.empty();
-        this.timestampFieldName = Output.empty();
-        this.typeName = Output.empty();
+        this.apiEntitySetName = Codegen.empty();
+        this.attributes = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.entityType = Codegen.empty();
+        this.fields = Codegen.empty();
+        this.hubName = Codegen.empty();
+        this.instancesCount = Codegen.empty();
+        this.largeImage = Codegen.empty();
+        this.localizedAttributes = Codegen.empty();
+        this.mediumImage = Codegen.empty();
+        this.profileName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.schemaItemTypeLink = Codegen.empty();
+        this.smallImage = Codegen.empty();
+        this.strongIds = Codegen.empty();
+        this.timestampFieldName = Codegen.empty();
+        this.typeName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -337,7 +338,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiEntitySetName(@Nullable String apiEntitySetName) {
-            this.apiEntitySetName = Output.ofNullable(apiEntitySetName);
+            this.apiEntitySetName = Codegen.ofNullable(apiEntitySetName);
             return this;
         }
         public Builder attributes(@Nullable Output<Map<String,List<String>>> attributes) {
@@ -345,7 +346,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder attributes(@Nullable Map<String,List<String>> attributes) {
-            this.attributes = Output.ofNullable(attributes);
+            this.attributes = Codegen.ofNullable(attributes);
             return this;
         }
         public Builder description(@Nullable Output<Map<String,String>> description) {
@@ -353,7 +354,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable Map<String,String> description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
@@ -361,7 +362,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable Map<String,String> displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder entityType(@Nullable Output<EntityTypes> entityType) {
@@ -369,7 +370,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder entityType(@Nullable EntityTypes entityType) {
-            this.entityType = Output.ofNullable(entityType);
+            this.entityType = Codegen.ofNullable(entityType);
             return this;
         }
         public Builder fields(@Nullable Output<List<PropertyDefinitionArgs>> fields) {
@@ -377,7 +378,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fields(@Nullable List<PropertyDefinitionArgs> fields) {
-            this.fields = Output.ofNullable(fields);
+            this.fields = Codegen.ofNullable(fields);
             return this;
         }
         public Builder fields(PropertyDefinitionArgs... fields) {
@@ -396,7 +397,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instancesCount(@Nullable Integer instancesCount) {
-            this.instancesCount = Output.ofNullable(instancesCount);
+            this.instancesCount = Codegen.ofNullable(instancesCount);
             return this;
         }
         public Builder largeImage(@Nullable Output<String> largeImage) {
@@ -404,7 +405,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder largeImage(@Nullable String largeImage) {
-            this.largeImage = Output.ofNullable(largeImage);
+            this.largeImage = Codegen.ofNullable(largeImage);
             return this;
         }
         public Builder localizedAttributes(@Nullable Output<Map<String,Map<String,String>>> localizedAttributes) {
@@ -412,7 +413,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder localizedAttributes(@Nullable Map<String,Map<String,String>> localizedAttributes) {
-            this.localizedAttributes = Output.ofNullable(localizedAttributes);
+            this.localizedAttributes = Codegen.ofNullable(localizedAttributes);
             return this;
         }
         public Builder mediumImage(@Nullable Output<String> mediumImage) {
@@ -420,7 +421,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mediumImage(@Nullable String mediumImage) {
-            this.mediumImage = Output.ofNullable(mediumImage);
+            this.mediumImage = Codegen.ofNullable(mediumImage);
             return this;
         }
         public Builder profileName(@Nullable Output<String> profileName) {
@@ -428,7 +429,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder profileName(@Nullable String profileName) {
-            this.profileName = Output.ofNullable(profileName);
+            this.profileName = Codegen.ofNullable(profileName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -444,7 +445,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schemaItemTypeLink(@Nullable String schemaItemTypeLink) {
-            this.schemaItemTypeLink = Output.ofNullable(schemaItemTypeLink);
+            this.schemaItemTypeLink = Codegen.ofNullable(schemaItemTypeLink);
             return this;
         }
         public Builder smallImage(@Nullable Output<String> smallImage) {
@@ -452,7 +453,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder smallImage(@Nullable String smallImage) {
-            this.smallImage = Output.ofNullable(smallImage);
+            this.smallImage = Codegen.ofNullable(smallImage);
             return this;
         }
         public Builder strongIds(@Nullable Output<List<StrongIdArgs>> strongIds) {
@@ -460,7 +461,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder strongIds(@Nullable List<StrongIdArgs> strongIds) {
-            this.strongIds = Output.ofNullable(strongIds);
+            this.strongIds = Codegen.ofNullable(strongIds);
             return this;
         }
         public Builder strongIds(StrongIdArgs... strongIds) {
@@ -471,7 +472,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timestampFieldName(@Nullable String timestampFieldName) {
-            this.timestampFieldName = Output.ofNullable(timestampFieldName);
+            this.timestampFieldName = Codegen.ofNullable(timestampFieldName);
             return this;
         }
         public Builder typeName(@Nullable Output<String> typeName) {
@@ -479,7 +480,7 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder typeName(@Nullable String typeName) {
-            this.typeName = Output.ofNullable(typeName);
+            this.typeName = Codegen.ofNullable(typeName);
             return this;
         }        public ProfileArgs build() {
             return new ProfileArgs(apiEntitySetName, attributes, description, displayName, entityType, fields, hubName, instancesCount, largeImage, localizedAttributes, mediumImage, profileName, resourceGroupName, schemaItemTypeLink, smallImage, strongIds, timestampFieldName, typeName);

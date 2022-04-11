@@ -6,6 +6,7 @@ package io.pulumi.aws.glue;
 import io.pulumi.aws.glue.inputs.PartitionStorageDescriptorArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class PartitionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> catalogId;
 
     public Output<String> getCatalogId() {
-        return this.catalogId == null ? Output.empty() : this.catalogId;
+        return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class PartitionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> parameters;
 
     public Output<Map<String,String>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class PartitionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PartitionStorageDescriptorArgs> storageDescriptor;
 
     public Output<PartitionStorageDescriptorArgs> getStorageDescriptor() {
-        return this.storageDescriptor == null ? Output.empty() : this.storageDescriptor;
+        return this.storageDescriptor == null ? Codegen.empty() : this.storageDescriptor;
     }
 
     @Import(name="tableName", required=true)
@@ -95,12 +96,12 @@ public final class PartitionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PartitionArgs() {
-        this.catalogId = Output.empty();
-        this.databaseName = Output.empty();
-        this.parameters = Output.empty();
-        this.partitionValues = Output.empty();
-        this.storageDescriptor = Output.empty();
-        this.tableName = Output.empty();
+        this.catalogId = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.partitionValues = Codegen.empty();
+        this.storageDescriptor = Codegen.empty();
+        this.tableName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -138,7 +139,7 @@ public final class PartitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Output.ofNullable(catalogId);
+            this.catalogId = Codegen.ofNullable(catalogId);
             return this;
         }
         public Builder databaseName(Output<String> databaseName) {
@@ -154,7 +155,7 @@ public final class PartitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder partitionValues(Output<List<String>> partitionValues) {
@@ -173,7 +174,7 @@ public final class PartitionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageDescriptor(@Nullable PartitionStorageDescriptorArgs storageDescriptor) {
-            this.storageDescriptor = Output.ofNullable(storageDescriptor);
+            this.storageDescriptor = Codegen.ofNullable(storageDescriptor);
             return this;
         }
         public Builder tableName(Output<String> tableName) {

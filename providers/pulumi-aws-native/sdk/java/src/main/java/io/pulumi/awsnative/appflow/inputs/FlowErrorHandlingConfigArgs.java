@@ -5,6 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,21 +20,21 @@ public final class FlowErrorHandlingConfigArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> bucketName;
 
     public Output<String> getBucketName() {
-        return this.bucketName == null ? Output.empty() : this.bucketName;
+        return this.bucketName == null ? Codegen.empty() : this.bucketName;
     }
 
     @Import(name="bucketPrefix")
       private final @Nullable Output<String> bucketPrefix;
 
     public Output<String> getBucketPrefix() {
-        return this.bucketPrefix == null ? Output.empty() : this.bucketPrefix;
+        return this.bucketPrefix == null ? Codegen.empty() : this.bucketPrefix;
     }
 
     @Import(name="failOnFirstError")
       private final @Nullable Output<Boolean> failOnFirstError;
 
     public Output<Boolean> getFailOnFirstError() {
-        return this.failOnFirstError == null ? Output.empty() : this.failOnFirstError;
+        return this.failOnFirstError == null ? Codegen.empty() : this.failOnFirstError;
     }
 
     public FlowErrorHandlingConfigArgs(
@@ -46,9 +47,9 @@ public final class FlowErrorHandlingConfigArgs extends io.pulumi.resources.Resou
     }
 
     private FlowErrorHandlingConfigArgs() {
-        this.bucketName = Output.empty();
-        this.bucketPrefix = Output.empty();
-        this.failOnFirstError = Output.empty();
+        this.bucketName = Codegen.empty();
+        this.bucketPrefix = Codegen.empty();
+        this.failOnFirstError = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class FlowErrorHandlingConfigArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder bucketName(@Nullable String bucketName) {
-            this.bucketName = Output.ofNullable(bucketName);
+            this.bucketName = Codegen.ofNullable(bucketName);
             return this;
         }
         public Builder bucketPrefix(@Nullable Output<String> bucketPrefix) {
@@ -88,7 +89,7 @@ public final class FlowErrorHandlingConfigArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
-            this.bucketPrefix = Output.ofNullable(bucketPrefix);
+            this.bucketPrefix = Codegen.ofNullable(bucketPrefix);
             return this;
         }
         public Builder failOnFirstError(@Nullable Output<Boolean> failOnFirstError) {
@@ -96,7 +97,7 @@ public final class FlowErrorHandlingConfigArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder failOnFirstError(@Nullable Boolean failOnFirstError) {
-            this.failOnFirstError = Output.ofNullable(failOnFirstError);
+            this.failOnFirstError = Codegen.ofNullable(failOnFirstError);
             return this;
         }        public FlowErrorHandlingConfigArgs build() {
             return new FlowErrorHandlingConfigArgs(bucketName, bucketPrefix, failOnFirstError);

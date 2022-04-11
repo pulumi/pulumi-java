@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class AmiLaunchPermissionArgs extends io.pulumi.resources.ResourceA
     }
 
     private AmiLaunchPermissionArgs() {
-        this.accountId = Output.empty();
-        this.imageId = Output.empty();
+        this.accountId = Codegen.empty();
+        this.imageId = Codegen.empty();
     }
 
     public static Builder builder() {

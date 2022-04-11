@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class InstanceAutoSnapshotAddOnArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> snapshotTimeOfDay;
 
     public Output<String> getSnapshotTimeOfDay() {
-        return this.snapshotTimeOfDay == null ? Output.empty() : this.snapshotTimeOfDay;
+        return this.snapshotTimeOfDay == null ? Codegen.empty() : this.snapshotTimeOfDay;
     }
 
     public InstanceAutoSnapshotAddOnArgs(@Nullable Output<String> snapshotTimeOfDay) {
@@ -34,7 +35,7 @@ public final class InstanceAutoSnapshotAddOnArgs extends io.pulumi.resources.Res
     }
 
     private InstanceAutoSnapshotAddOnArgs() {
-        this.snapshotTimeOfDay = Output.empty();
+        this.snapshotTimeOfDay = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class InstanceAutoSnapshotAddOnArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder snapshotTimeOfDay(@Nullable String snapshotTimeOfDay) {
-            this.snapshotTimeOfDay = Output.ofNullable(snapshotTimeOfDay);
+            this.snapshotTimeOfDay = Codegen.ofNullable(snapshotTimeOfDay);
             return this;
         }        public InstanceAutoSnapshotAddOnArgs build() {
             return new InstanceAutoSnapshotAddOnArgs(snapshotTimeOfDay);

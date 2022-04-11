@@ -5,6 +5,7 @@ package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class TaskSetServiceRegistriesGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> containerName;
 
     public Output<String> getContainerName() {
-        return this.containerName == null ? Output.empty() : this.containerName;
+        return this.containerName == null ? Codegen.empty() : this.containerName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class TaskSetServiceRegistriesGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<Integer> containerPort;
 
     public Output<Integer> getContainerPort() {
-        return this.containerPort == null ? Output.empty() : this.containerPort;
+        return this.containerPort == null ? Codegen.empty() : this.containerPort;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class TaskSetServiceRegistriesGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -71,10 +72,10 @@ public final class TaskSetServiceRegistriesGetArgs extends io.pulumi.resources.R
     }
 
     private TaskSetServiceRegistriesGetArgs() {
-        this.containerName = Output.empty();
-        this.containerPort = Output.empty();
-        this.port = Output.empty();
-        this.registryArn = Output.empty();
+        this.containerName = Codegen.empty();
+        this.containerPort = Codegen.empty();
+        this.port = Codegen.empty();
+        this.registryArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class TaskSetServiceRegistriesGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder containerName(@Nullable String containerName) {
-            this.containerName = Output.ofNullable(containerName);
+            this.containerName = Codegen.ofNullable(containerName);
             return this;
         }
         public Builder containerPort(@Nullable Output<Integer> containerPort) {
@@ -116,7 +117,7 @@ public final class TaskSetServiceRegistriesGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder containerPort(@Nullable Integer containerPort) {
-            this.containerPort = Output.ofNullable(containerPort);
+            this.containerPort = Codegen.ofNullable(containerPort);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -124,7 +125,7 @@ public final class TaskSetServiceRegistriesGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder registryArn(Output<String> registryArn) {

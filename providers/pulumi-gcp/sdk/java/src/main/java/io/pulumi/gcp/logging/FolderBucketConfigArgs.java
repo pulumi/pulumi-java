@@ -5,6 +5,7 @@ package io.pulumi.gcp.logging;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class FolderBucketConfigArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class FolderBucketConfigArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Integer> retentionDays;
 
     public Output<Integer> getRetentionDays() {
-        return this.retentionDays == null ? Output.empty() : this.retentionDays;
+        return this.retentionDays == null ? Codegen.empty() : this.retentionDays;
     }
 
     public FolderBucketConfigArgs(
@@ -84,11 +85,11 @@ public final class FolderBucketConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     private FolderBucketConfigArgs() {
-        this.bucketId = Output.empty();
-        this.description = Output.empty();
-        this.folder = Output.empty();
-        this.location = Output.empty();
-        this.retentionDays = Output.empty();
+        this.bucketId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.folder = Codegen.empty();
+        this.location = Codegen.empty();
+        this.retentionDays = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class FolderBucketConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder folder(Output<String> folder) {
@@ -156,7 +157,7 @@ public final class FolderBucketConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder retentionDays(@Nullable Integer retentionDays) {
-            this.retentionDays = Output.ofNullable(retentionDays);
+            this.retentionDays = Codegen.ofNullable(retentionDays);
             return this;
         }        public FolderBucketConfigArgs build() {
             return new FolderBucketConfigArgs(bucketId, description, folder, location, retentionDays);

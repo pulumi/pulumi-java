@@ -5,6 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class SkuCostArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> extendedUnit;
 
     public Output<String> getExtendedUnit() {
-        return this.extendedUnit == null ? Output.empty() : this.extendedUnit;
+        return this.extendedUnit == null ? Codegen.empty() : this.extendedUnit;
     }
 
     @Import(name="meterId", required=true)
@@ -33,7 +34,7 @@ public final class SkuCostArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> quantity;
 
     public Output<Integer> getQuantity() {
-        return this.quantity == null ? Output.empty() : this.quantity;
+        return this.quantity == null ? Codegen.empty() : this.quantity;
     }
 
     public SkuCostArgs(
@@ -46,9 +47,9 @@ public final class SkuCostArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SkuCostArgs() {
-        this.extendedUnit = Output.empty();
-        this.meterId = Output.empty();
-        this.quantity = Output.empty();
+        this.extendedUnit = Codegen.empty();
+        this.meterId = Codegen.empty();
+        this.quantity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class SkuCostArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder extendedUnit(@Nullable String extendedUnit) {
-            this.extendedUnit = Output.ofNullable(extendedUnit);
+            this.extendedUnit = Codegen.ofNullable(extendedUnit);
             return this;
         }
         public Builder meterId(Output<String> meterId) {
@@ -96,7 +97,7 @@ public final class SkuCostArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder quantity(@Nullable Integer quantity) {
-            this.quantity = Output.ofNullable(quantity);
+            this.quantity = Codegen.ofNullable(quantity);
             return this;
         }        public SkuCostArgs build() {
             return new SkuCostArgs(extendedUnit, meterId, quantity);

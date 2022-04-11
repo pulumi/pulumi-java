@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -37,7 +38,7 @@ public final class TableEncryptionConfigurationArgs extends io.pulumi.resources.
       private final @Nullable Output<String> kmsKeyVersion;
 
     public Output<String> getKmsKeyVersion() {
-        return this.kmsKeyVersion == null ? Output.empty() : this.kmsKeyVersion;
+        return this.kmsKeyVersion == null ? Codegen.empty() : this.kmsKeyVersion;
     }
 
     public TableEncryptionConfigurationArgs(
@@ -48,8 +49,8 @@ public final class TableEncryptionConfigurationArgs extends io.pulumi.resources.
     }
 
     private TableEncryptionConfigurationArgs() {
-        this.kmsKeyName = Output.empty();
-        this.kmsKeyVersion = Output.empty();
+        this.kmsKeyName = Codegen.empty();
+        this.kmsKeyVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class TableEncryptionConfigurationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder kmsKeyVersion(@Nullable String kmsKeyVersion) {
-            this.kmsKeyVersion = Output.ofNullable(kmsKeyVersion);
+            this.kmsKeyVersion = Codegen.ofNullable(kmsKeyVersion);
             return this;
         }        public TableEncryptionConfigurationArgs build() {
             return new TableEncryptionConfigurationArgs(kmsKeyName, kmsKeyVersion);

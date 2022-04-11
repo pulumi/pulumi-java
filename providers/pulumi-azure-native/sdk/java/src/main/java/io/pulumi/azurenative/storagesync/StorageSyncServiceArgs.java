@@ -7,6 +7,7 @@ import io.pulumi.azurenative.storagesync.enums.IncomingTrafficPolicy;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Either<String,IncomingTrafficPolicy>> incomingTrafficPolicy;
 
     public Output<Either<String,IncomingTrafficPolicy>> getIncomingTrafficPolicy() {
-        return this.incomingTrafficPolicy == null ? Output.empty() : this.incomingTrafficPolicy;
+        return this.incomingTrafficPolicy == null ? Codegen.empty() : this.incomingTrafficPolicy;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> storageSyncServiceName;
 
     public Output<String> getStorageSyncServiceName() {
-        return this.storageSyncServiceName == null ? Output.empty() : this.storageSyncServiceName;
+        return this.storageSyncServiceName == null ? Codegen.empty() : this.storageSyncServiceName;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public StorageSyncServiceArgs(
@@ -86,11 +87,11 @@ public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceAr
     }
 
     private StorageSyncServiceArgs() {
-        this.incomingTrafficPolicy = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.storageSyncServiceName = Output.empty();
-        this.tags = Output.empty();
+        this.incomingTrafficPolicy = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.storageSyncServiceName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder incomingTrafficPolicy(@Nullable Either<String,IncomingTrafficPolicy> incomingTrafficPolicy) {
-            this.incomingTrafficPolicy = Output.ofNullable(incomingTrafficPolicy);
+            this.incomingTrafficPolicy = Codegen.ofNullable(incomingTrafficPolicy);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -134,7 +135,7 @@ public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -150,7 +151,7 @@ public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder storageSyncServiceName(@Nullable String storageSyncServiceName) {
-            this.storageSyncServiceName = Output.ofNullable(storageSyncServiceName);
+            this.storageSyncServiceName = Codegen.ofNullable(storageSyncServiceName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -158,7 +159,7 @@ public final class StorageSyncServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public StorageSyncServiceArgs build() {
             return new StorageSyncServiceArgs(incomingTrafficPolicy, location, resourceGroupName, storageSyncServiceName, tags);

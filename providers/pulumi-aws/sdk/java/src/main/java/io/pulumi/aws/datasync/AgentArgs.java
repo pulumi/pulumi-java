@@ -5,6 +5,7 @@ package io.pulumi.aws.datasync;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> activationKey;
 
     public Output<String> getActivationKey() {
-        return this.activationKey == null ? Output.empty() : this.activationKey;
+        return this.activationKey == null ? Codegen.empty() : this.activationKey;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
-        return this.ipAddress == null ? Output.empty() : this.ipAddress;
+        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> privateLinkEndpoint;
 
     public Output<String> getPrivateLinkEndpoint() {
-        return this.privateLinkEndpoint == null ? Output.empty() : this.privateLinkEndpoint;
+        return this.privateLinkEndpoint == null ? Codegen.empty() : this.privateLinkEndpoint;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> securityGroupArns;
 
     public Output<List<String>> getSecurityGroupArns() {
-        return this.securityGroupArns == null ? Output.empty() : this.securityGroupArns;
+        return this.securityGroupArns == null ? Codegen.empty() : this.securityGroupArns;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> subnetArns;
 
     public Output<List<String>> getSubnetArns() {
-        return this.subnetArns == null ? Output.empty() : this.subnetArns;
+        return this.subnetArns == null ? Codegen.empty() : this.subnetArns;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> vpcEndpointId;
 
     public Output<String> getVpcEndpointId() {
-        return this.vpcEndpointId == null ? Output.empty() : this.vpcEndpointId;
+        return this.vpcEndpointId == null ? Codegen.empty() : this.vpcEndpointId;
     }
 
     public AgentArgs(
@@ -124,14 +125,14 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AgentArgs() {
-        this.activationKey = Output.empty();
-        this.ipAddress = Output.empty();
-        this.name = Output.empty();
-        this.privateLinkEndpoint = Output.empty();
-        this.securityGroupArns = Output.empty();
-        this.subnetArns = Output.empty();
-        this.tags = Output.empty();
-        this.vpcEndpointId = Output.empty();
+        this.activationKey = Codegen.empty();
+        this.ipAddress = Codegen.empty();
+        this.name = Codegen.empty();
+        this.privateLinkEndpoint = Codegen.empty();
+        this.securityGroupArns = Codegen.empty();
+        this.subnetArns = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vpcEndpointId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -173,7 +174,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder activationKey(@Nullable String activationKey) {
-            this.activationKey = Output.ofNullable(activationKey);
+            this.activationKey = Codegen.ofNullable(activationKey);
             return this;
         }
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
@@ -181,7 +182,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Output.ofNullable(ipAddress);
+            this.ipAddress = Codegen.ofNullable(ipAddress);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -189,7 +190,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder privateLinkEndpoint(@Nullable Output<String> privateLinkEndpoint) {
@@ -197,7 +198,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder privateLinkEndpoint(@Nullable String privateLinkEndpoint) {
-            this.privateLinkEndpoint = Output.ofNullable(privateLinkEndpoint);
+            this.privateLinkEndpoint = Codegen.ofNullable(privateLinkEndpoint);
             return this;
         }
         public Builder securityGroupArns(@Nullable Output<List<String>> securityGroupArns) {
@@ -205,7 +206,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder securityGroupArns(@Nullable List<String> securityGroupArns) {
-            this.securityGroupArns = Output.ofNullable(securityGroupArns);
+            this.securityGroupArns = Codegen.ofNullable(securityGroupArns);
             return this;
         }
         public Builder securityGroupArns(String... securityGroupArns) {
@@ -216,7 +217,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetArns(@Nullable List<String> subnetArns) {
-            this.subnetArns = Output.ofNullable(subnetArns);
+            this.subnetArns = Codegen.ofNullable(subnetArns);
             return this;
         }
         public Builder subnetArns(String... subnetArns) {
@@ -227,7 +228,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder vpcEndpointId(@Nullable Output<String> vpcEndpointId) {
@@ -235,7 +236,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
-            this.vpcEndpointId = Output.ofNullable(vpcEndpointId);
+            this.vpcEndpointId = Codegen.ofNullable(vpcEndpointId);
             return this;
         }        public AgentArgs build() {
             return new AgentArgs(activationKey, ipAddress, name, privateLinkEndpoint, securityGroupArns, subnetArns, tags, vpcEndpointId);

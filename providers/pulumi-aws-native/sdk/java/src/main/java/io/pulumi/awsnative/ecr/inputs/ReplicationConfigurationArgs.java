@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ecr.inputs;
 import io.pulumi.awsnative.ecr.inputs.ReplicationConfigurationReplicationRuleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -34,7 +35,7 @@ public final class ReplicationConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     private ReplicationConfigurationArgs() {
-        this.rules = Output.empty();
+        this.rules = Codegen.empty();
     }
 
     public static Builder builder() {

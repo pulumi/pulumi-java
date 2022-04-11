@@ -5,6 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -89,11 +90,11 @@ public final class TimeWindowCustomAlertRuleArgs extends io.pulumi.resources.Res
     }
 
     private TimeWindowCustomAlertRuleArgs() {
-        this.isEnabled = Output.empty();
-        this.maxThreshold = Output.empty();
-        this.minThreshold = Output.empty();
-        this.ruleType = Output.empty();
-        this.timeWindowSize = Output.empty();
+        this.isEnabled = Codegen.empty();
+        this.maxThreshold = Codegen.empty();
+        this.minThreshold = Codegen.empty();
+        this.ruleType = Codegen.empty();
+        this.timeWindowSize = Codegen.empty();
     }
 
     public static Builder builder() {

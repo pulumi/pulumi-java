@@ -8,6 +8,7 @@ import io.pulumi.awsnative.athena.NamedQueryArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -126,7 +127,7 @@ public class NamedQuery extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NamedQuery(String name, NamedQueryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:athena:NamedQuery", name, args == null ? NamedQueryArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:athena:NamedQuery", name, args == null ? NamedQueryArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NamedQuery(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

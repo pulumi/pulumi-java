@@ -11,6 +11,7 @@ import io.pulumi.aws.globalaccelerator.outputs.EndpointGroupPortOverride;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -212,7 +213,7 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EndpointGroup(String name, EndpointGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:globalaccelerator/endpointGroup:EndpointGroup", name, args == null ? EndpointGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:globalaccelerator/endpointGroup:EndpointGroup", name, args == null ? EndpointGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EndpointGroup(String name, Output<String> id, @Nullable EndpointGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

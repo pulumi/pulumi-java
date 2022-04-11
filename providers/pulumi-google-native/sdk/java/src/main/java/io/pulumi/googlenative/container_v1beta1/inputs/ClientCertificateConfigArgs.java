@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ClientCertificateConfigArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Boolean> issueClientCertificate;
 
     public Output<Boolean> getIssueClientCertificate() {
-        return this.issueClientCertificate == null ? Output.empty() : this.issueClientCertificate;
+        return this.issueClientCertificate == null ? Codegen.empty() : this.issueClientCertificate;
     }
 
     public ClientCertificateConfigArgs(@Nullable Output<Boolean> issueClientCertificate) {
@@ -34,7 +35,7 @@ public final class ClientCertificateConfigArgs extends io.pulumi.resources.Resou
     }
 
     private ClientCertificateConfigArgs() {
-        this.issueClientCertificate = Output.empty();
+        this.issueClientCertificate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ClientCertificateConfigArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder issueClientCertificate(@Nullable Boolean issueClientCertificate) {
-            this.issueClientCertificate = Output.ofNullable(issueClientCertificate);
+            this.issueClientCertificate = Codegen.ofNullable(issueClientCertificate);
             return this;
         }        public ClientCertificateConfigArgs build() {
             return new ClientCertificateConfigArgs(issueClientCertificate);

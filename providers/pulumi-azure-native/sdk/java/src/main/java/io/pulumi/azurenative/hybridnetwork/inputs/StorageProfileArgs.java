@@ -8,6 +8,7 @@ import io.pulumi.azurenative.hybridnetwork.inputs.ImageReferenceArgs;
 import io.pulumi.azurenative.hybridnetwork.inputs.OsDiskArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DataDiskArgs>> dataDisks;
 
     public Output<List<DataDiskArgs>> getDataDisks() {
-        return this.dataDisks == null ? Output.empty() : this.dataDisks;
+        return this.dataDisks == null ? Codegen.empty() : this.dataDisks;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ImageReferenceArgs> imageReference;
 
     public Output<ImageReferenceArgs> getImageReference() {
-        return this.imageReference == null ? Output.empty() : this.imageReference;
+        return this.imageReference == null ? Codegen.empty() : this.imageReference;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<OsDiskArgs> osDisk;
 
     public Output<OsDiskArgs> getOsDisk() {
-        return this.osDisk == null ? Output.empty() : this.osDisk;
+        return this.osDisk == null ? Codegen.empty() : this.osDisk;
     }
 
     public StorageProfileArgs(
@@ -64,9 +65,9 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StorageProfileArgs() {
-        this.dataDisks = Output.empty();
-        this.imageReference = Output.empty();
-        this.osDisk = Output.empty();
+        this.dataDisks = Codegen.empty();
+        this.imageReference = Codegen.empty();
+        this.osDisk = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataDisks(@Nullable List<DataDiskArgs> dataDisks) {
-            this.dataDisks = Output.ofNullable(dataDisks);
+            this.dataDisks = Codegen.ofNullable(dataDisks);
             return this;
         }
         public Builder dataDisks(DataDiskArgs... dataDisks) {
@@ -109,7 +110,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageReference(@Nullable ImageReferenceArgs imageReference) {
-            this.imageReference = Output.ofNullable(imageReference);
+            this.imageReference = Codegen.ofNullable(imageReference);
             return this;
         }
         public Builder osDisk(@Nullable Output<OsDiskArgs> osDisk) {
@@ -117,7 +118,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder osDisk(@Nullable OsDiskArgs osDisk) {
-            this.osDisk = Output.ofNullable(osDisk);
+            this.osDisk = Codegen.ofNullable(osDisk);
             return this;
         }        public StorageProfileArgs build() {
             return new StorageProfileArgs(dataDisks, imageReference, osDisk);

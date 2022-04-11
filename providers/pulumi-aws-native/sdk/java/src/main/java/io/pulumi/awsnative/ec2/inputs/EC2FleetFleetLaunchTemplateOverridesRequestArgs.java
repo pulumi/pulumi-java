@@ -7,6 +7,7 @@ import io.pulumi.awsnative.ec2.inputs.EC2FleetInstanceRequirementsRequestArgs;
 import io.pulumi.awsnative.ec2.inputs.EC2FleetPlacementArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,56 +22,56 @@ public final class EC2FleetFleetLaunchTemplateOverridesRequestArgs extends io.pu
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
+        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     @Import(name="instanceRequirements")
       private final @Nullable Output<EC2FleetInstanceRequirementsRequestArgs> instanceRequirements;
 
     public Output<EC2FleetInstanceRequirementsRequestArgs> getInstanceRequirements() {
-        return this.instanceRequirements == null ? Output.empty() : this.instanceRequirements;
+        return this.instanceRequirements == null ? Codegen.empty() : this.instanceRequirements;
     }
 
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
-        return this.instanceType == null ? Output.empty() : this.instanceType;
+        return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     @Import(name="maxPrice")
       private final @Nullable Output<String> maxPrice;
 
     public Output<String> getMaxPrice() {
-        return this.maxPrice == null ? Output.empty() : this.maxPrice;
+        return this.maxPrice == null ? Codegen.empty() : this.maxPrice;
     }
 
     @Import(name="placement")
       private final @Nullable Output<EC2FleetPlacementArgs> placement;
 
     public Output<EC2FleetPlacementArgs> getPlacement() {
-        return this.placement == null ? Output.empty() : this.placement;
+        return this.placement == null ? Codegen.empty() : this.placement;
     }
 
     @Import(name="priority")
       private final @Nullable Output<Double> priority;
 
     public Output<Double> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
-        return this.subnetId == null ? Output.empty() : this.subnetId;
+        return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
     @Import(name="weightedCapacity")
       private final @Nullable Output<Double> weightedCapacity;
 
     public Output<Double> getWeightedCapacity() {
-        return this.weightedCapacity == null ? Output.empty() : this.weightedCapacity;
+        return this.weightedCapacity == null ? Codegen.empty() : this.weightedCapacity;
     }
 
     public EC2FleetFleetLaunchTemplateOverridesRequestArgs(
@@ -93,14 +94,14 @@ public final class EC2FleetFleetLaunchTemplateOverridesRequestArgs extends io.pu
     }
 
     private EC2FleetFleetLaunchTemplateOverridesRequestArgs() {
-        this.availabilityZone = Output.empty();
-        this.instanceRequirements = Output.empty();
-        this.instanceType = Output.empty();
-        this.maxPrice = Output.empty();
-        this.placement = Output.empty();
-        this.priority = Output.empty();
-        this.subnetId = Output.empty();
-        this.weightedCapacity = Output.empty();
+        this.availabilityZone = Codegen.empty();
+        this.instanceRequirements = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.maxPrice = Codegen.empty();
+        this.placement = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.subnetId = Codegen.empty();
+        this.weightedCapacity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class EC2FleetFleetLaunchTemplateOverridesRequestArgs extends io.pu
             return this;
         }
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Output.ofNullable(availabilityZone);
+            this.availabilityZone = Codegen.ofNullable(availabilityZone);
             return this;
         }
         public Builder instanceRequirements(@Nullable Output<EC2FleetInstanceRequirementsRequestArgs> instanceRequirements) {
@@ -150,7 +151,7 @@ public final class EC2FleetFleetLaunchTemplateOverridesRequestArgs extends io.pu
             return this;
         }
         public Builder instanceRequirements(@Nullable EC2FleetInstanceRequirementsRequestArgs instanceRequirements) {
-            this.instanceRequirements = Output.ofNullable(instanceRequirements);
+            this.instanceRequirements = Codegen.ofNullable(instanceRequirements);
             return this;
         }
         public Builder instanceType(@Nullable Output<String> instanceType) {
@@ -158,7 +159,7 @@ public final class EC2FleetFleetLaunchTemplateOverridesRequestArgs extends io.pu
             return this;
         }
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Output.ofNullable(instanceType);
+            this.instanceType = Codegen.ofNullable(instanceType);
             return this;
         }
         public Builder maxPrice(@Nullable Output<String> maxPrice) {
@@ -166,7 +167,7 @@ public final class EC2FleetFleetLaunchTemplateOverridesRequestArgs extends io.pu
             return this;
         }
         public Builder maxPrice(@Nullable String maxPrice) {
-            this.maxPrice = Output.ofNullable(maxPrice);
+            this.maxPrice = Codegen.ofNullable(maxPrice);
             return this;
         }
         public Builder placement(@Nullable Output<EC2FleetPlacementArgs> placement) {
@@ -174,7 +175,7 @@ public final class EC2FleetFleetLaunchTemplateOverridesRequestArgs extends io.pu
             return this;
         }
         public Builder placement(@Nullable EC2FleetPlacementArgs placement) {
-            this.placement = Output.ofNullable(placement);
+            this.placement = Codegen.ofNullable(placement);
             return this;
         }
         public Builder priority(@Nullable Output<Double> priority) {
@@ -182,7 +183,7 @@ public final class EC2FleetFleetLaunchTemplateOverridesRequestArgs extends io.pu
             return this;
         }
         public Builder priority(@Nullable Double priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder subnetId(@Nullable Output<String> subnetId) {
@@ -190,7 +191,7 @@ public final class EC2FleetFleetLaunchTemplateOverridesRequestArgs extends io.pu
             return this;
         }
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Output.ofNullable(subnetId);
+            this.subnetId = Codegen.ofNullable(subnetId);
             return this;
         }
         public Builder weightedCapacity(@Nullable Output<Double> weightedCapacity) {
@@ -198,7 +199,7 @@ public final class EC2FleetFleetLaunchTemplateOverridesRequestArgs extends io.pu
             return this;
         }
         public Builder weightedCapacity(@Nullable Double weightedCapacity) {
-            this.weightedCapacity = Output.ofNullable(weightedCapacity);
+            this.weightedCapacity = Codegen.ofNullable(weightedCapacity);
             return this;
         }        public EC2FleetFleetLaunchTemplateOverridesRequestArgs build() {
             return new EC2FleetFleetLaunchTemplateOverridesRequestArgs(availabilityZone, instanceRequirements, instanceType, maxPrice, placement, priority, subnetId, weightedCapacity);

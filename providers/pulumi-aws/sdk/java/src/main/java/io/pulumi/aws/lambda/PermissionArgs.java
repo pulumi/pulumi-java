@@ -5,6 +5,7 @@ package io.pulumi.aws.lambda;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> eventSourceToken;
 
     public Output<String> getEventSourceToken() {
-        return this.eventSourceToken == null ? Output.empty() : this.eventSourceToken;
+        return this.eventSourceToken == null ? Codegen.empty() : this.eventSourceToken;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> qualifier;
 
     public Output<String> getQualifier() {
-        return this.qualifier == null ? Output.empty() : this.qualifier;
+        return this.qualifier == null ? Codegen.empty() : this.qualifier;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sourceAccount;
 
     public Output<String> getSourceAccount() {
-        return this.sourceAccount == null ? Output.empty() : this.sourceAccount;
+        return this.sourceAccount == null ? Codegen.empty() : this.sourceAccount;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sourceArn;
 
     public Output<String> getSourceArn() {
-        return this.sourceArn == null ? Output.empty() : this.sourceArn;
+        return this.sourceArn == null ? Codegen.empty() : this.sourceArn;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> statementId;
 
     public Output<String> getStatementId() {
-        return this.statementId == null ? Output.empty() : this.statementId;
+        return this.statementId == null ? Codegen.empty() : this.statementId;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> statementIdPrefix;
 
     public Output<String> getStatementIdPrefix() {
-        return this.statementIdPrefix == null ? Output.empty() : this.statementIdPrefix;
+        return this.statementIdPrefix == null ? Codegen.empty() : this.statementIdPrefix;
     }
 
     public PermissionArgs(
@@ -139,15 +140,15 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PermissionArgs() {
-        this.action = Output.empty();
-        this.eventSourceToken = Output.empty();
-        this.function = Output.empty();
-        this.principal = Output.empty();
-        this.qualifier = Output.empty();
-        this.sourceAccount = Output.empty();
-        this.sourceArn = Output.empty();
-        this.statementId = Output.empty();
-        this.statementIdPrefix = Output.empty();
+        this.action = Codegen.empty();
+        this.eventSourceToken = Codegen.empty();
+        this.function = Codegen.empty();
+        this.principal = Codegen.empty();
+        this.qualifier = Codegen.empty();
+        this.sourceAccount = Codegen.empty();
+        this.sourceArn = Codegen.empty();
+        this.statementId = Codegen.empty();
+        this.statementIdPrefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -199,7 +200,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eventSourceToken(@Nullable String eventSourceToken) {
-            this.eventSourceToken = Output.ofNullable(eventSourceToken);
+            this.eventSourceToken = Codegen.ofNullable(eventSourceToken);
             return this;
         }
         public Builder function(Output<String> function) {
@@ -219,7 +220,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder qualifier(@Nullable String qualifier) {
-            this.qualifier = Output.ofNullable(qualifier);
+            this.qualifier = Codegen.ofNullable(qualifier);
             return this;
         }
         public Builder sourceAccount(@Nullable Output<String> sourceAccount) {
@@ -227,7 +228,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceAccount(@Nullable String sourceAccount) {
-            this.sourceAccount = Output.ofNullable(sourceAccount);
+            this.sourceAccount = Codegen.ofNullable(sourceAccount);
             return this;
         }
         public Builder sourceArn(@Nullable Output<String> sourceArn) {
@@ -235,7 +236,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceArn(@Nullable String sourceArn) {
-            this.sourceArn = Output.ofNullable(sourceArn);
+            this.sourceArn = Codegen.ofNullable(sourceArn);
             return this;
         }
         public Builder statementId(@Nullable Output<String> statementId) {
@@ -243,7 +244,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder statementId(@Nullable String statementId) {
-            this.statementId = Output.ofNullable(statementId);
+            this.statementId = Codegen.ofNullable(statementId);
             return this;
         }
         public Builder statementIdPrefix(@Nullable Output<String> statementIdPrefix) {
@@ -251,7 +252,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder statementIdPrefix(@Nullable String statementIdPrefix) {
-            this.statementIdPrefix = Output.ofNullable(statementIdPrefix);
+            this.statementIdPrefix = Codegen.ofNullable(statementIdPrefix);
             return this;
         }        public PermissionArgs build() {
             return new PermissionArgs(action, eventSourceToken, function, principal, qualifier, sourceAccount, sourceArn, statementId, statementIdPrefix);

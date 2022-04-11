@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.network.inputs.PrivateLinkServiceConnectionStateArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
       private final @Nullable Output<String> connectionName;
 
     public Output<String> getConnectionName() {
-        return this.connectionName == null ? Output.empty() : this.connectionName;
+        return this.connectionName == null ? Codegen.empty() : this.connectionName;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
       private final @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Output<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
-        return this.privateLinkServiceConnectionState == null ? Output.empty() : this.privateLinkServiceConnectionState;
+        return this.privateLinkServiceConnectionState == null ? Codegen.empty() : this.privateLinkServiceConnectionState;
     }
 
     /**
@@ -97,12 +98,12 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
     }
 
     private ApplicationGatewayPrivateEndpointConnectionArgs() {
-        this.applicationGatewayName = Output.empty();
-        this.connectionName = Output.empty();
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.privateLinkServiceConnectionState = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.applicationGatewayName = Codegen.empty();
+        this.connectionName = Codegen.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.privateLinkServiceConnectionState = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
             return this;
         }
         public Builder connectionName(@Nullable String connectionName) {
-            this.connectionName = Output.ofNullable(connectionName);
+            this.connectionName = Codegen.ofNullable(connectionName);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -156,7 +157,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -164,7 +165,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder privateLinkServiceConnectionState(@Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
@@ -172,7 +173,7 @@ public final class ApplicationGatewayPrivateEndpointConnectionArgs extends io.pu
             return this;
         }
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Output.ofNullable(privateLinkServiceConnectionState);
+            this.privateLinkServiceConnectionState = Codegen.ofNullable(privateLinkServiceConnectionState);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

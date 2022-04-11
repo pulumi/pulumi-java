@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class DynamicThresholdFailingPeriodsArgs extends io.pulumi.resource
     }
 
     private DynamicThresholdFailingPeriodsArgs() {
-        this.minFailingPeriodsToAlert = Output.empty();
-        this.numberOfEvaluationPeriods = Output.empty();
+        this.minFailingPeriodsToAlert = Codegen.empty();
+        this.numberOfEvaluationPeriods = Codegen.empty();
     }
 
     public static Builder builder() {

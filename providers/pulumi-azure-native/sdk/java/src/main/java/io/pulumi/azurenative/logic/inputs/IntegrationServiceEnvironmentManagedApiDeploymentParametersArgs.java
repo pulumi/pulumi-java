@@ -6,6 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.inputs.ContentLinkArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,7 +27,7 @@ public final class IntegrationServiceEnvironmentManagedApiDeploymentParametersAr
       private final @Nullable Output<ContentLinkArgs> contentLinkDefinition;
 
     public Output<ContentLinkArgs> getContentLinkDefinition() {
-        return this.contentLinkDefinition == null ? Output.empty() : this.contentLinkDefinition;
+        return this.contentLinkDefinition == null ? Codegen.empty() : this.contentLinkDefinition;
     }
 
     public IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs(@Nullable Output<ContentLinkArgs> contentLinkDefinition) {
@@ -34,7 +35,7 @@ public final class IntegrationServiceEnvironmentManagedApiDeploymentParametersAr
     }
 
     private IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs() {
-        this.contentLinkDefinition = Output.empty();
+        this.contentLinkDefinition = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class IntegrationServiceEnvironmentManagedApiDeploymentParametersAr
             return this;
         }
         public Builder contentLinkDefinition(@Nullable ContentLinkArgs contentLinkDefinition) {
-            this.contentLinkDefinition = Output.ofNullable(contentLinkDefinition);
+            this.contentLinkDefinition = Codegen.ofNullable(contentLinkDefinition);
             return this;
         }        public IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs build() {
             return new IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs(contentLinkDefinition);

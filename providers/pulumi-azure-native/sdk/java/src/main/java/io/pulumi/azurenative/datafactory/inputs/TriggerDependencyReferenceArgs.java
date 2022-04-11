@@ -6,6 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.TriggerReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -49,8 +50,8 @@ public final class TriggerDependencyReferenceArgs extends io.pulumi.resources.Re
     }
 
     private TriggerDependencyReferenceArgs() {
-        this.referenceTrigger = Output.empty();
-        this.type = Output.empty();
+        this.referenceTrigger = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

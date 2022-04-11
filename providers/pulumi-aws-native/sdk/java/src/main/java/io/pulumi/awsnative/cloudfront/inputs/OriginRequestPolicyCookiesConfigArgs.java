@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class OriginRequestPolicyCookiesConfigArgs extends io.pulumi.resour
       private final @Nullable Output<List<String>> cookies;
 
     public Output<List<String>> getCookies() {
-        return this.cookies == null ? Output.empty() : this.cookies;
+        return this.cookies == null ? Codegen.empty() : this.cookies;
     }
 
     public OriginRequestPolicyCookiesConfigArgs(
@@ -37,8 +38,8 @@ public final class OriginRequestPolicyCookiesConfigArgs extends io.pulumi.resour
     }
 
     private OriginRequestPolicyCookiesConfigArgs() {
-        this.cookieBehavior = Output.empty();
-        this.cookies = Output.empty();
+        this.cookieBehavior = Codegen.empty();
+        this.cookies = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class OriginRequestPolicyCookiesConfigArgs extends io.pulumi.resour
             return this;
         }
         public Builder cookies(@Nullable List<String> cookies) {
-            this.cookies = Output.ofNullable(cookies);
+            this.cookies = Codegen.ofNullable(cookies);
             return this;
         }
         public Builder cookies(String... cookies) {

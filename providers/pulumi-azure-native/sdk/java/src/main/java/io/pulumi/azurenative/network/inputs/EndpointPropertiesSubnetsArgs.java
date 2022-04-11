@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class EndpointPropertiesSubnetsArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> first;
 
     public Output<String> getFirst() {
-        return this.first == null ? Output.empty() : this.first;
+        return this.first == null ? Codegen.empty() : this.first;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class EndpointPropertiesSubnetsArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> last;
 
     public Output<String> getLast() {
-        return this.last == null ? Output.empty() : this.last;
+        return this.last == null ? Codegen.empty() : this.last;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class EndpointPropertiesSubnetsArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Integer> scope;
 
     public Output<Integer> getScope() {
-        return this.scope == null ? Output.empty() : this.scope;
+        return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     public EndpointPropertiesSubnetsArgs(
@@ -62,9 +63,9 @@ public final class EndpointPropertiesSubnetsArgs extends io.pulumi.resources.Res
     }
 
     private EndpointPropertiesSubnetsArgs() {
-        this.first = Output.empty();
-        this.last = Output.empty();
-        this.scope = Output.empty();
+        this.first = Codegen.empty();
+        this.last = Codegen.empty();
+        this.scope = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class EndpointPropertiesSubnetsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder first(@Nullable String first) {
-            this.first = Output.ofNullable(first);
+            this.first = Codegen.ofNullable(first);
             return this;
         }
         public Builder last(@Nullable Output<String> last) {
@@ -104,7 +105,7 @@ public final class EndpointPropertiesSubnetsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder last(@Nullable String last) {
-            this.last = Output.ofNullable(last);
+            this.last = Codegen.ofNullable(last);
             return this;
         }
         public Builder scope(@Nullable Output<Integer> scope) {
@@ -112,7 +113,7 @@ public final class EndpointPropertiesSubnetsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder scope(@Nullable Integer scope) {
-            this.scope = Output.ofNullable(scope);
+            this.scope = Codegen.ofNullable(scope);
             return this;
         }        public EndpointPropertiesSubnetsArgs build() {
             return new EndpointPropertiesSubnetsArgs(first, last, scope);

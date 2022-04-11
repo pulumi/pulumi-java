@@ -5,6 +5,7 @@ package io.pulumi.googlenative.composer_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class PrivateClusterConfigArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> enablePrivateEndpoint;
 
     public Output<Boolean> getEnablePrivateEndpoint() {
-        return this.enablePrivateEndpoint == null ? Output.empty() : this.enablePrivateEndpoint;
+        return this.enablePrivateEndpoint == null ? Codegen.empty() : this.enablePrivateEndpoint;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class PrivateClusterConfigArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> masterIpv4CidrBlock;
 
     public Output<String> getMasterIpv4CidrBlock() {
-        return this.masterIpv4CidrBlock == null ? Output.empty() : this.masterIpv4CidrBlock;
+        return this.masterIpv4CidrBlock == null ? Codegen.empty() : this.masterIpv4CidrBlock;
     }
 
     public PrivateClusterConfigArgs(
@@ -49,8 +50,8 @@ public final class PrivateClusterConfigArgs extends io.pulumi.resources.Resource
     }
 
     private PrivateClusterConfigArgs() {
-        this.enablePrivateEndpoint = Output.empty();
-        this.masterIpv4CidrBlock = Output.empty();
+        this.enablePrivateEndpoint = Codegen.empty();
+        this.masterIpv4CidrBlock = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class PrivateClusterConfigArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder enablePrivateEndpoint(@Nullable Boolean enablePrivateEndpoint) {
-            this.enablePrivateEndpoint = Output.ofNullable(enablePrivateEndpoint);
+            this.enablePrivateEndpoint = Codegen.ofNullable(enablePrivateEndpoint);
             return this;
         }
         public Builder masterIpv4CidrBlock(@Nullable Output<String> masterIpv4CidrBlock) {
@@ -88,7 +89,7 @@ public final class PrivateClusterConfigArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder masterIpv4CidrBlock(@Nullable String masterIpv4CidrBlock) {
-            this.masterIpv4CidrBlock = Output.ofNullable(masterIpv4CidrBlock);
+            this.masterIpv4CidrBlock = Codegen.ofNullable(masterIpv4CidrBlock);
             return this;
         }        public PrivateClusterConfigArgs build() {
             return new PrivateClusterConfigArgs(enablePrivateEndpoint, masterIpv4CidrBlock);

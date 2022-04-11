@@ -7,6 +7,7 @@ import io.pulumi.azurenative.devtestlab.enums.LinuxOsState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class LinuxOsInfoArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,LinuxOsState>> linuxOsState;
 
     public Output<Either<String,LinuxOsState>> getLinuxOsState() {
-        return this.linuxOsState == null ? Output.empty() : this.linuxOsState;
+        return this.linuxOsState == null ? Codegen.empty() : this.linuxOsState;
     }
 
     public LinuxOsInfoArgs(@Nullable Output<Either<String,LinuxOsState>> linuxOsState) {
@@ -36,7 +37,7 @@ public final class LinuxOsInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LinuxOsInfoArgs() {
-        this.linuxOsState = Output.empty();
+        this.linuxOsState = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -64,7 +65,7 @@ public final class LinuxOsInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder linuxOsState(@Nullable Either<String,LinuxOsState> linuxOsState) {
-            this.linuxOsState = Output.ofNullable(linuxOsState);
+            this.linuxOsState = Codegen.ofNullable(linuxOsState);
             return this;
         }        public LinuxOsInfoArgs build() {
             return new LinuxOsInfoArgs(linuxOsState);

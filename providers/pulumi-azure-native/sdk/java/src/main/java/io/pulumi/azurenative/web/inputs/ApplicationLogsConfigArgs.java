@@ -8,6 +8,7 @@ import io.pulumi.azurenative.web.inputs.AzureTableStorageApplicationLogsConfigAr
 import io.pulumi.azurenative.web.inputs.FileSystemApplicationLogsConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -28,7 +29,7 @@ public final class ApplicationLogsConfigArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<AzureBlobStorageApplicationLogsConfigArgs> azureBlobStorage;
 
     public Output<AzureBlobStorageApplicationLogsConfigArgs> getAzureBlobStorage() {
-        return this.azureBlobStorage == null ? Output.empty() : this.azureBlobStorage;
+        return this.azureBlobStorage == null ? Codegen.empty() : this.azureBlobStorage;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ApplicationLogsConfigArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<AzureTableStorageApplicationLogsConfigArgs> azureTableStorage;
 
     public Output<AzureTableStorageApplicationLogsConfigArgs> getAzureTableStorage() {
-        return this.azureTableStorage == null ? Output.empty() : this.azureTableStorage;
+        return this.azureTableStorage == null ? Codegen.empty() : this.azureTableStorage;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ApplicationLogsConfigArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<FileSystemApplicationLogsConfigArgs> fileSystem;
 
     public Output<FileSystemApplicationLogsConfigArgs> getFileSystem() {
-        return this.fileSystem == null ? Output.empty() : this.fileSystem;
+        return this.fileSystem == null ? Codegen.empty() : this.fileSystem;
     }
 
     public ApplicationLogsConfigArgs(
@@ -63,9 +64,9 @@ public final class ApplicationLogsConfigArgs extends io.pulumi.resources.Resourc
     }
 
     private ApplicationLogsConfigArgs() {
-        this.azureBlobStorage = Output.empty();
-        this.azureTableStorage = Output.empty();
-        this.fileSystem = Output.empty();
+        this.azureBlobStorage = Codegen.empty();
+        this.azureTableStorage = Codegen.empty();
+        this.fileSystem = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class ApplicationLogsConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder azureBlobStorage(@Nullable AzureBlobStorageApplicationLogsConfigArgs azureBlobStorage) {
-            this.azureBlobStorage = Output.ofNullable(azureBlobStorage);
+            this.azureBlobStorage = Codegen.ofNullable(azureBlobStorage);
             return this;
         }
         public Builder azureTableStorage(@Nullable Output<AzureTableStorageApplicationLogsConfigArgs> azureTableStorage) {
@@ -105,7 +106,7 @@ public final class ApplicationLogsConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder azureTableStorage(@Nullable AzureTableStorageApplicationLogsConfigArgs azureTableStorage) {
-            this.azureTableStorage = Output.ofNullable(azureTableStorage);
+            this.azureTableStorage = Codegen.ofNullable(azureTableStorage);
             return this;
         }
         public Builder fileSystem(@Nullable Output<FileSystemApplicationLogsConfigArgs> fileSystem) {
@@ -113,7 +114,7 @@ public final class ApplicationLogsConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder fileSystem(@Nullable FileSystemApplicationLogsConfigArgs fileSystem) {
-            this.fileSystem = Output.ofNullable(fileSystem);
+            this.fileSystem = Codegen.ofNullable(fileSystem);
             return this;
         }        public ApplicationLogsConfigArgs build() {
             return new ApplicationLogsConfigArgs(azureBlobStorage, azureTableStorage, fileSystem);

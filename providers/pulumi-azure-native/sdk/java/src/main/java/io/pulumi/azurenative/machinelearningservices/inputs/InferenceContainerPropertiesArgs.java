@@ -6,6 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 import io.pulumi.azurenative.machinelearningservices.inputs.RouteArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +23,7 @@ public final class InferenceContainerPropertiesArgs extends io.pulumi.resources.
       private final @Nullable Output<RouteArgs> livenessRoute;
 
     public Output<RouteArgs> getLivenessRoute() {
-        return this.livenessRoute == null ? Output.empty() : this.livenessRoute;
+        return this.livenessRoute == null ? Codegen.empty() : this.livenessRoute;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class InferenceContainerPropertiesArgs extends io.pulumi.resources.
       private final @Nullable Output<RouteArgs> readinessRoute;
 
     public Output<RouteArgs> getReadinessRoute() {
-        return this.readinessRoute == null ? Output.empty() : this.readinessRoute;
+        return this.readinessRoute == null ? Codegen.empty() : this.readinessRoute;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class InferenceContainerPropertiesArgs extends io.pulumi.resources.
       private final @Nullable Output<RouteArgs> scoringRoute;
 
     public Output<RouteArgs> getScoringRoute() {
-        return this.scoringRoute == null ? Output.empty() : this.scoringRoute;
+        return this.scoringRoute == null ? Codegen.empty() : this.scoringRoute;
     }
 
     public InferenceContainerPropertiesArgs(
@@ -57,9 +58,9 @@ public final class InferenceContainerPropertiesArgs extends io.pulumi.resources.
     }
 
     private InferenceContainerPropertiesArgs() {
-        this.livenessRoute = Output.empty();
-        this.readinessRoute = Output.empty();
-        this.scoringRoute = Output.empty();
+        this.livenessRoute = Codegen.empty();
+        this.readinessRoute = Codegen.empty();
+        this.scoringRoute = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class InferenceContainerPropertiesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder livenessRoute(@Nullable RouteArgs livenessRoute) {
-            this.livenessRoute = Output.ofNullable(livenessRoute);
+            this.livenessRoute = Codegen.ofNullable(livenessRoute);
             return this;
         }
         public Builder readinessRoute(@Nullable Output<RouteArgs> readinessRoute) {
@@ -99,7 +100,7 @@ public final class InferenceContainerPropertiesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder readinessRoute(@Nullable RouteArgs readinessRoute) {
-            this.readinessRoute = Output.ofNullable(readinessRoute);
+            this.readinessRoute = Codegen.ofNullable(readinessRoute);
             return this;
         }
         public Builder scoringRoute(@Nullable Output<RouteArgs> scoringRoute) {
@@ -107,7 +108,7 @@ public final class InferenceContainerPropertiesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder scoringRoute(@Nullable RouteArgs scoringRoute) {
-            this.scoringRoute = Output.ofNullable(scoringRoute);
+            this.scoringRoute = Codegen.ofNullable(scoringRoute);
             return this;
         }        public InferenceContainerPropertiesArgs build() {
             return new InferenceContainerPropertiesArgs(livenessRoute, readinessRoute, scoringRoute);

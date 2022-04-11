@@ -5,6 +5,7 @@ package io.pulumi.aws.datasync.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class LocationHdfsQopConfigurationGetArgs extends io.pulumi.resourc
       private final @Nullable Output<String> dataTransferProtection;
 
     public Output<String> getDataTransferProtection() {
-        return this.dataTransferProtection == null ? Output.empty() : this.dataTransferProtection;
+        return this.dataTransferProtection == null ? Codegen.empty() : this.dataTransferProtection;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class LocationHdfsQopConfigurationGetArgs extends io.pulumi.resourc
       private final @Nullable Output<String> rpcProtection;
 
     public Output<String> getRpcProtection() {
-        return this.rpcProtection == null ? Output.empty() : this.rpcProtection;
+        return this.rpcProtection == null ? Codegen.empty() : this.rpcProtection;
     }
 
     public LocationHdfsQopConfigurationGetArgs(
@@ -44,8 +45,8 @@ public final class LocationHdfsQopConfigurationGetArgs extends io.pulumi.resourc
     }
 
     private LocationHdfsQopConfigurationGetArgs() {
-        this.dataTransferProtection = Output.empty();
-        this.rpcProtection = Output.empty();
+        this.dataTransferProtection = Codegen.empty();
+        this.rpcProtection = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class LocationHdfsQopConfigurationGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder dataTransferProtection(@Nullable String dataTransferProtection) {
-            this.dataTransferProtection = Output.ofNullable(dataTransferProtection);
+            this.dataTransferProtection = Codegen.ofNullable(dataTransferProtection);
             return this;
         }
         public Builder rpcProtection(@Nullable Output<String> rpcProtection) {
@@ -83,7 +84,7 @@ public final class LocationHdfsQopConfigurationGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder rpcProtection(@Nullable String rpcProtection) {
-            this.rpcProtection = Output.ofNullable(rpcProtection);
+            this.rpcProtection = Codegen.ofNullable(rpcProtection);
             return this;
         }        public LocationHdfsQopConfigurationGetArgs build() {
             return new LocationHdfsQopConfigurationGetArgs(dataTransferProtection, rpcProtection);

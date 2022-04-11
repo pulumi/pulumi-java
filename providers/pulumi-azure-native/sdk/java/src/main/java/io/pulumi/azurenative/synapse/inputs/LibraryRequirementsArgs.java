@@ -5,6 +5,7 @@ package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class LibraryRequirementsArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
-        return this.content == null ? Output.empty() : this.content;
+        return this.content == null ? Codegen.empty() : this.content;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class LibraryRequirementsArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> filename;
 
     public Output<String> getFilename() {
-        return this.filename == null ? Output.empty() : this.filename;
+        return this.filename == null ? Codegen.empty() : this.filename;
     }
 
     public LibraryRequirementsArgs(
@@ -48,8 +49,8 @@ public final class LibraryRequirementsArgs extends io.pulumi.resources.ResourceA
     }
 
     private LibraryRequirementsArgs() {
-        this.content = Output.empty();
-        this.filename = Output.empty();
+        this.content = Codegen.empty();
+        this.filename = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class LibraryRequirementsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder content(@Nullable String content) {
-            this.content = Output.ofNullable(content);
+            this.content = Codegen.ofNullable(content);
             return this;
         }
         public Builder filename(@Nullable Output<String> filename) {
@@ -87,7 +88,7 @@ public final class LibraryRequirementsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder filename(@Nullable String filename) {
-            this.filename = Output.ofNullable(filename);
+            this.filename = Codegen.ofNullable(filename);
             return this;
         }        public LibraryRequirementsArgs build() {
             return new LibraryRequirementsArgs(content, filename);

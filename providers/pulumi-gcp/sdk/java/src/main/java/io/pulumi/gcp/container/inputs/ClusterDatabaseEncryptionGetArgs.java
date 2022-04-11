@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ClusterDatabaseEncryptionGetArgs extends io.pulumi.resources.
       private final @Nullable Output<String> keyName;
 
     public Output<String> getKeyName() {
-        return this.keyName == null ? Output.empty() : this.keyName;
+        return this.keyName == null ? Codegen.empty() : this.keyName;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ClusterDatabaseEncryptionGetArgs extends io.pulumi.resources.
     }
 
     private ClusterDatabaseEncryptionGetArgs() {
-        this.keyName = Output.empty();
-        this.state = Output.empty();
+        this.keyName = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class ClusterDatabaseEncryptionGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = Output.ofNullable(keyName);
+            this.keyName = Codegen.ofNullable(keyName);
             return this;
         }
         public Builder state(Output<String> state) {

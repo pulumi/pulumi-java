@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
       private final @Nullable Output<String> alias;
 
     public Output<String> getAlias() {
-        return this.alias == null ? Output.empty() : this.alias;
+        return this.alias == null ? Codegen.empty() : this.alias;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
       private final @Nullable Output<String> function;
 
     public Output<String> getFunction() {
-        return this.function == null ? Output.empty() : this.function;
+        return this.function == null ? Codegen.empty() : this.function;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
       private final @Nullable Output<String> operator;
 
     public Output<String> getOperator() {
-        return this.operator == null ? Output.empty() : this.operator;
+        return this.operator == null ? Codegen.empty() : this.operator;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public GoogleCloudApigeeV1QueryMetricArgs(
@@ -87,11 +88,11 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
     }
 
     private GoogleCloudApigeeV1QueryMetricArgs() {
-        this.alias = Output.empty();
-        this.function = Output.empty();
-        this.name = Output.empty();
-        this.operator = Output.empty();
-        this.value = Output.empty();
+        this.alias = Codegen.empty();
+        this.function = Codegen.empty();
+        this.name = Codegen.empty();
+        this.operator = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
             return this;
         }
         public Builder alias(@Nullable String alias) {
-            this.alias = Output.ofNullable(alias);
+            this.alias = Codegen.ofNullable(alias);
             return this;
         }
         public Builder function(@Nullable Output<String> function) {
@@ -135,7 +136,7 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
             return this;
         }
         public Builder function(@Nullable String function) {
-            this.function = Output.ofNullable(function);
+            this.function = Codegen.ofNullable(function);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -151,7 +152,7 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
             return this;
         }
         public Builder operator(@Nullable String operator) {
-            this.operator = Output.ofNullable(operator);
+            this.operator = Codegen.ofNullable(operator);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -159,7 +160,7 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public GoogleCloudApigeeV1QueryMetricArgs build() {
             return new GoogleCloudApigeeV1QueryMetricArgs(alias, function, name, operator, value);

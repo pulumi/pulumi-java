@@ -5,6 +5,7 @@ package io.pulumi.googlenative.websecurityscanner_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.websecurityscanner_v1beta.enums.ScanRunErrorTraceCode;
 import io.pulumi.googlenative.websecurityscanner_v1beta.inputs.ScanConfigErrorArgs;
 import java.lang.Integer;
@@ -28,7 +29,7 @@ public final class ScanRunErrorTraceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<ScanRunErrorTraceCode> code;
 
     public Output<ScanRunErrorTraceCode> getCode() {
-        return this.code == null ? Output.empty() : this.code;
+        return this.code == null ? Codegen.empty() : this.code;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ScanRunErrorTraceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> mostCommonHttpErrorCode;
 
     public Output<Integer> getMostCommonHttpErrorCode() {
-        return this.mostCommonHttpErrorCode == null ? Output.empty() : this.mostCommonHttpErrorCode;
+        return this.mostCommonHttpErrorCode == null ? Codegen.empty() : this.mostCommonHttpErrorCode;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ScanRunErrorTraceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<ScanConfigErrorArgs> scanConfigError;
 
     public Output<ScanConfigErrorArgs> getScanConfigError() {
-        return this.scanConfigError == null ? Output.empty() : this.scanConfigError;
+        return this.scanConfigError == null ? Codegen.empty() : this.scanConfigError;
     }
 
     public ScanRunErrorTraceArgs(
@@ -63,9 +64,9 @@ public final class ScanRunErrorTraceArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ScanRunErrorTraceArgs() {
-        this.code = Output.empty();
-        this.mostCommonHttpErrorCode = Output.empty();
-        this.scanConfigError = Output.empty();
+        this.code = Codegen.empty();
+        this.mostCommonHttpErrorCode = Codegen.empty();
+        this.scanConfigError = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class ScanRunErrorTraceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder code(@Nullable ScanRunErrorTraceCode code) {
-            this.code = Output.ofNullable(code);
+            this.code = Codegen.ofNullable(code);
             return this;
         }
         public Builder mostCommonHttpErrorCode(@Nullable Output<Integer> mostCommonHttpErrorCode) {
@@ -105,7 +106,7 @@ public final class ScanRunErrorTraceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder mostCommonHttpErrorCode(@Nullable Integer mostCommonHttpErrorCode) {
-            this.mostCommonHttpErrorCode = Output.ofNullable(mostCommonHttpErrorCode);
+            this.mostCommonHttpErrorCode = Codegen.ofNullable(mostCommonHttpErrorCode);
             return this;
         }
         public Builder scanConfigError(@Nullable Output<ScanConfigErrorArgs> scanConfigError) {
@@ -113,7 +114,7 @@ public final class ScanRunErrorTraceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder scanConfigError(@Nullable ScanConfigErrorArgs scanConfigError) {
-            this.scanConfigError = Output.ofNullable(scanConfigError);
+            this.scanConfigError = Codegen.ofNullable(scanConfigError);
             return this;
         }        public ScanRunErrorTraceArgs build() {
             return new ScanRunErrorTraceArgs(code, mostCommonHttpErrorCode, scanConfigError);

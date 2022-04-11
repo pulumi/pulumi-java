@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.healthcare_v1.inputs.AttributeArgs;
 import io.pulumi.googlenative.healthcare_v1.inputs.ExprArgs;
 import java.util.List;
@@ -39,7 +40,7 @@ public final class GoogleCloudHealthcareV1ConsentPolicyArgs extends io.pulumi.re
       private final @Nullable Output<List<AttributeArgs>> resourceAttributes;
 
     public Output<List<AttributeArgs>> getResourceAttributes() {
-        return this.resourceAttributes == null ? Output.empty() : this.resourceAttributes;
+        return this.resourceAttributes == null ? Codegen.empty() : this.resourceAttributes;
     }
 
     public GoogleCloudHealthcareV1ConsentPolicyArgs(
@@ -50,8 +51,8 @@ public final class GoogleCloudHealthcareV1ConsentPolicyArgs extends io.pulumi.re
     }
 
     private GoogleCloudHealthcareV1ConsentPolicyArgs() {
-        this.authorizationRule = Output.empty();
-        this.resourceAttributes = Output.empty();
+        this.authorizationRule = Codegen.empty();
+        this.resourceAttributes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -89,7 +90,7 @@ public final class GoogleCloudHealthcareV1ConsentPolicyArgs extends io.pulumi.re
             return this;
         }
         public Builder resourceAttributes(@Nullable List<AttributeArgs> resourceAttributes) {
-            this.resourceAttributes = Output.ofNullable(resourceAttributes);
+            this.resourceAttributes = Codegen.ofNullable(resourceAttributes);
             return this;
         }
         public Builder resourceAttributes(AttributeArgs... resourceAttributes) {

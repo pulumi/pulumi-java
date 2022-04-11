@@ -5,6 +5,7 @@ package io.pulumi.aws.codepipeline.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class WebhookFilterGetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private WebhookFilterGetArgs() {
-        this.jsonPath = Output.empty();
-        this.matchEquals = Output.empty();
+        this.jsonPath = Codegen.empty();
+        this.matchEquals = Codegen.empty();
     }
 
     public static Builder builder() {

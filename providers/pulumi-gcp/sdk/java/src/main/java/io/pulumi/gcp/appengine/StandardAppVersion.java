@@ -6,6 +6,7 @@ package io.pulumi.gcp.appengine;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.appengine.StandardAppVersionArgs;
 import io.pulumi.gcp.appengine.inputs.StandardAppVersionState;
@@ -391,7 +392,7 @@ public class StandardAppVersion extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public StandardAppVersion(String name, StandardAppVersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:appengine/standardAppVersion:StandardAppVersion", name, args == null ? StandardAppVersionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:appengine/standardAppVersion:StandardAppVersion", name, args == null ? StandardAppVersionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private StandardAppVersion(String name, Output<String> id, @Nullable StandardAppVersionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_alpha;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.RegionSslPolicyArgs;
 import io.pulumi.googlenative.compute_alpha.outputs.RegionSslPolicyWarningsItemResponse;
@@ -239,7 +240,7 @@ public class RegionSslPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RegionSslPolicy(String name, RegionSslPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/alpha:RegionSslPolicy", name, args == null ? RegionSslPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/alpha:RegionSslPolicy", name, args == null ? RegionSslPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegionSslPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

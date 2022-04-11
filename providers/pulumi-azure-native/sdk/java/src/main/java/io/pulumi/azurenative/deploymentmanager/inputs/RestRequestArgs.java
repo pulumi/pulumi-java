@@ -9,6 +9,7 @@ import io.pulumi.azurenative.deploymentmanager.inputs.RolloutIdentityAuthenticat
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -64,9 +65,9 @@ public final class RestRequestArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RestRequestArgs() {
-        this.authentication = Output.empty();
-        this.method = Output.empty();
-        this.uri = Output.empty();
+        this.authentication = Codegen.empty();
+        this.method = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {

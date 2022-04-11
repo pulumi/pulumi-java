@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeoutGetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -37,7 +38,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyGetArgs
       private final @Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeoutGetArgs> perTryTimeout;
 
     public Output<RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeoutGetArgs> getPerTryTimeout() {
-        return this.perTryTimeout == null ? Output.empty() : this.perTryTimeout;
+        return this.perTryTimeout == null ? Codegen.empty() : this.perTryTimeout;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyGetArgs
       private final @Nullable Output<List<String>> retryConditions;
 
     public Output<List<String>> getRetryConditions() {
-        return this.retryConditions == null ? Output.empty() : this.retryConditions;
+        return this.retryConditions == null ? Codegen.empty() : this.retryConditions;
     }
 
     public RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyGetArgs(
@@ -81,9 +82,9 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyGetArgs
     }
 
     private RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyGetArgs() {
-        this.numRetries = Output.empty();
-        this.perTryTimeout = Output.empty();
-        this.retryConditions = Output.empty();
+        this.numRetries = Codegen.empty();
+        this.perTryTimeout = Codegen.empty();
+        this.retryConditions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyGetArgs
             return this;
         }
         public Builder perTryTimeout(@Nullable RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeoutGetArgs perTryTimeout) {
-            this.perTryTimeout = Output.ofNullable(perTryTimeout);
+            this.perTryTimeout = Codegen.ofNullable(perTryTimeout);
             return this;
         }
         public Builder retryConditions(@Nullable Output<List<String>> retryConditions) {
@@ -131,7 +132,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyGetArgs
             return this;
         }
         public Builder retryConditions(@Nullable List<String> retryConditions) {
-            this.retryConditions = Output.ofNullable(retryConditions);
+            this.retryConditions = Codegen.ofNullable(retryConditions);
             return this;
         }
         public Builder retryConditions(String... retryConditions) {

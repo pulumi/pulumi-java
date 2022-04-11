@@ -7,6 +7,7 @@ import io.pulumi.azurenative.security.inputs.DefenderForServersAwsOfferingArcAut
 import io.pulumi.azurenative.security.inputs.DefenderForServersAwsOfferingDefenderForServersArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class DefenderForServersAwsOfferingArgs extends io.pulumi.resources
       private final @Nullable Output<DefenderForServersAwsOfferingArcAutoProvisioningArgs> arcAutoProvisioning;
 
     public Output<DefenderForServersAwsOfferingArcAutoProvisioningArgs> getArcAutoProvisioning() {
-        return this.arcAutoProvisioning == null ? Output.empty() : this.arcAutoProvisioning;
+        return this.arcAutoProvisioning == null ? Codegen.empty() : this.arcAutoProvisioning;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class DefenderForServersAwsOfferingArgs extends io.pulumi.resources
       private final @Nullable Output<DefenderForServersAwsOfferingDefenderForServersArgs> defenderForServers;
 
     public Output<DefenderForServersAwsOfferingDefenderForServersArgs> getDefenderForServers() {
-        return this.defenderForServers == null ? Output.empty() : this.defenderForServers;
+        return this.defenderForServers == null ? Codegen.empty() : this.defenderForServers;
     }
 
     /**
@@ -64,9 +65,9 @@ public final class DefenderForServersAwsOfferingArgs extends io.pulumi.resources
     }
 
     private DefenderForServersAwsOfferingArgs() {
-        this.arcAutoProvisioning = Output.empty();
-        this.defenderForServers = Output.empty();
-        this.offeringType = Output.empty();
+        this.arcAutoProvisioning = Codegen.empty();
+        this.defenderForServers = Codegen.empty();
+        this.offeringType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class DefenderForServersAwsOfferingArgs extends io.pulumi.resources
             return this;
         }
         public Builder arcAutoProvisioning(@Nullable DefenderForServersAwsOfferingArcAutoProvisioningArgs arcAutoProvisioning) {
-            this.arcAutoProvisioning = Output.ofNullable(arcAutoProvisioning);
+            this.arcAutoProvisioning = Codegen.ofNullable(arcAutoProvisioning);
             return this;
         }
         public Builder defenderForServers(@Nullable Output<DefenderForServersAwsOfferingDefenderForServersArgs> defenderForServers) {
@@ -106,7 +107,7 @@ public final class DefenderForServersAwsOfferingArgs extends io.pulumi.resources
             return this;
         }
         public Builder defenderForServers(@Nullable DefenderForServersAwsOfferingDefenderForServersArgs defenderForServers) {
-            this.defenderForServers = Output.ofNullable(defenderForServers);
+            this.defenderForServers = Codegen.ofNullable(defenderForServers);
             return this;
         }
         public Builder offeringType(Output<String> offeringType) {

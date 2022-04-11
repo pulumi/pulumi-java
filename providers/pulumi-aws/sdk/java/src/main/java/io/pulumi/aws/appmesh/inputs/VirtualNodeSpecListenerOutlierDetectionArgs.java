@@ -7,6 +7,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerOutlierDetectionBaseE
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerOutlierDetectionIntervalArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -72,10 +73,10 @@ public final class VirtualNodeSpecListenerOutlierDetectionArgs extends io.pulumi
     }
 
     private VirtualNodeSpecListenerOutlierDetectionArgs() {
-        this.baseEjectionDuration = Output.empty();
-        this.interval = Output.empty();
-        this.maxEjectionPercent = Output.empty();
-        this.maxServerErrors = Output.empty();
+        this.baseEjectionDuration = Codegen.empty();
+        this.interval = Codegen.empty();
+        this.maxEjectionPercent = Codegen.empty();
+        this.maxServerErrors = Codegen.empty();
     }
 
     public static Builder builder() {

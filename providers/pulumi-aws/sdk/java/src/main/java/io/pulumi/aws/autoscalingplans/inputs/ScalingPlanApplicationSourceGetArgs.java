@@ -6,6 +6,7 @@ package io.pulumi.aws.autoscalingplans.inputs;
 import io.pulumi.aws.autoscalingplans.inputs.ScalingPlanApplicationSourceTagFilterGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class ScalingPlanApplicationSourceGetArgs extends io.pulumi.resourc
       private final @Nullable Output<String> cloudformationStackArn;
 
     public Output<String> getCloudformationStackArn() {
-        return this.cloudformationStackArn == null ? Output.empty() : this.cloudformationStackArn;
+        return this.cloudformationStackArn == null ? Codegen.empty() : this.cloudformationStackArn;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ScalingPlanApplicationSourceGetArgs extends io.pulumi.resourc
       private final @Nullable Output<List<ScalingPlanApplicationSourceTagFilterGetArgs>> tagFilters;
 
     public Output<List<ScalingPlanApplicationSourceTagFilterGetArgs>> getTagFilters() {
-        return this.tagFilters == null ? Output.empty() : this.tagFilters;
+        return this.tagFilters == null ? Codegen.empty() : this.tagFilters;
     }
 
     public ScalingPlanApplicationSourceGetArgs(
@@ -46,8 +47,8 @@ public final class ScalingPlanApplicationSourceGetArgs extends io.pulumi.resourc
     }
 
     private ScalingPlanApplicationSourceGetArgs() {
-        this.cloudformationStackArn = Output.empty();
-        this.tagFilters = Output.empty();
+        this.cloudformationStackArn = Codegen.empty();
+        this.tagFilters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class ScalingPlanApplicationSourceGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder cloudformationStackArn(@Nullable String cloudformationStackArn) {
-            this.cloudformationStackArn = Output.ofNullable(cloudformationStackArn);
+            this.cloudformationStackArn = Codegen.ofNullable(cloudformationStackArn);
             return this;
         }
         public Builder tagFilters(@Nullable Output<List<ScalingPlanApplicationSourceTagFilterGetArgs>> tagFilters) {
@@ -85,7 +86,7 @@ public final class ScalingPlanApplicationSourceGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder tagFilters(@Nullable List<ScalingPlanApplicationSourceTagFilterGetArgs> tagFilters) {
-            this.tagFilters = Output.ofNullable(tagFilters);
+            this.tagFilters = Codegen.ofNullable(tagFilters);
             return this;
         }
         public Builder tagFilters(ScalingPlanApplicationSourceTagFilterGetArgs... tagFilters) {

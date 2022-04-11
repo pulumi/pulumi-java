@@ -5,6 +5,7 @@ package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.testing_v1.inputs.GoogleCloudStorageArgs;
 import io.pulumi.googlenative.testing_v1.inputs.ToolResultsHistoryArgs;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class ResultStorageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ToolResultsHistoryArgs> toolResultsHistory;
 
     public Output<ToolResultsHistoryArgs> getToolResultsHistory() {
-        return this.toolResultsHistory == null ? Output.empty() : this.toolResultsHistory;
+        return this.toolResultsHistory == null ? Codegen.empty() : this.toolResultsHistory;
     }
 
     public ResultStorageArgs(
@@ -49,8 +50,8 @@ public final class ResultStorageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResultStorageArgs() {
-        this.googleCloudStorage = Output.empty();
-        this.toolResultsHistory = Output.empty();
+        this.googleCloudStorage = Codegen.empty();
+        this.toolResultsHistory = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class ResultStorageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder toolResultsHistory(@Nullable ToolResultsHistoryArgs toolResultsHistory) {
-            this.toolResultsHistory = Output.ofNullable(toolResultsHistory);
+            this.toolResultsHistory = Codegen.ofNullable(toolResultsHistory);
             return this;
         }        public ResultStorageArgs build() {
             return new ResultStorageArgs(googleCloudStorage, toolResultsHistory);

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.wisdom.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class KnowledgeBaseServerSideEncryptionConfigurationArgs extends io
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     public KnowledgeBaseServerSideEncryptionConfigurationArgs(@Nullable Output<String> kmsKeyId) {
@@ -26,7 +27,7 @@ public final class KnowledgeBaseServerSideEncryptionConfigurationArgs extends io
     }
 
     private KnowledgeBaseServerSideEncryptionConfigurationArgs() {
-        this.kmsKeyId = Output.empty();
+        this.kmsKeyId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class KnowledgeBaseServerSideEncryptionConfigurationArgs extends io
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }        public KnowledgeBaseServerSideEncryptionConfigurationArgs build() {
             return new KnowledgeBaseServerSideEncryptionConfigurationArgs(kmsKeyId);

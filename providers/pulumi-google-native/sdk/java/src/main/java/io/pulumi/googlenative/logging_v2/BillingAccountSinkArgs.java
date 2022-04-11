@@ -5,6 +5,7 @@ package io.pulumi.googlenative.logging_v2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.logging_v2.inputs.BigQueryOptionsArgs;
 import io.pulumi.googlenative.logging_v2.inputs.LogExclusionArgs;
 import java.lang.Boolean;
@@ -26,7 +27,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<BigQueryOptionsArgs> bigqueryOptions;
 
     public Output<BigQueryOptionsArgs> getBigqueryOptions() {
-        return this.bigqueryOptions == null ? Output.empty() : this.bigqueryOptions;
+        return this.bigqueryOptions == null ? Codegen.empty() : this.bigqueryOptions;
     }
 
     @Import(name="billingAccountId", required=true)
@@ -44,7 +45,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
-        return this.disabled == null ? Output.empty() : this.disabled;
+        return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<LogExclusionArgs>> exclusions;
 
     public Output<List<LogExclusionArgs>> getExclusions() {
-        return this.exclusions == null ? Output.empty() : this.exclusions;
+        return this.exclusions == null ? Codegen.empty() : this.exclusions;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> filter;
 
     public Output<String> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     /**
@@ -99,7 +100,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Boolean> includeChildren;
 
     public Output<Boolean> getIncludeChildren() {
-        return this.includeChildren == null ? Output.empty() : this.includeChildren;
+        return this.includeChildren == null ? Codegen.empty() : this.includeChildren;
     }
 
     /**
@@ -110,14 +111,14 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="uniqueWriterIdentity")
       private final @Nullable Output<String> uniqueWriterIdentity;
 
     public Output<String> getUniqueWriterIdentity() {
-        return this.uniqueWriterIdentity == null ? Output.empty() : this.uniqueWriterIdentity;
+        return this.uniqueWriterIdentity == null ? Codegen.empty() : this.uniqueWriterIdentity;
     }
 
     public BillingAccountSinkArgs(
@@ -144,16 +145,16 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
     }
 
     private BillingAccountSinkArgs() {
-        this.bigqueryOptions = Output.empty();
-        this.billingAccountId = Output.empty();
-        this.description = Output.empty();
-        this.destination = Output.empty();
-        this.disabled = Output.empty();
-        this.exclusions = Output.empty();
-        this.filter = Output.empty();
-        this.includeChildren = Output.empty();
-        this.name = Output.empty();
-        this.uniqueWriterIdentity = Output.empty();
+        this.bigqueryOptions = Codegen.empty();
+        this.billingAccountId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.destination = Codegen.empty();
+        this.disabled = Codegen.empty();
+        this.exclusions = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.includeChildren = Codegen.empty();
+        this.name = Codegen.empty();
+        this.uniqueWriterIdentity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -199,7 +200,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder bigqueryOptions(@Nullable BigQueryOptionsArgs bigqueryOptions) {
-            this.bigqueryOptions = Output.ofNullable(bigqueryOptions);
+            this.bigqueryOptions = Codegen.ofNullable(bigqueryOptions);
             return this;
         }
         public Builder billingAccountId(Output<String> billingAccountId) {
@@ -215,7 +216,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder destination(Output<String> destination) {
@@ -231,7 +232,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Output.ofNullable(disabled);
+            this.disabled = Codegen.ofNullable(disabled);
             return this;
         }
         public Builder exclusions(@Nullable Output<List<LogExclusionArgs>> exclusions) {
@@ -239,7 +240,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder exclusions(@Nullable List<LogExclusionArgs> exclusions) {
-            this.exclusions = Output.ofNullable(exclusions);
+            this.exclusions = Codegen.ofNullable(exclusions);
             return this;
         }
         public Builder exclusions(LogExclusionArgs... exclusions) {
@@ -250,7 +251,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder filter(@Nullable String filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder includeChildren(@Nullable Output<Boolean> includeChildren) {
@@ -258,7 +259,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder includeChildren(@Nullable Boolean includeChildren) {
-            this.includeChildren = Output.ofNullable(includeChildren);
+            this.includeChildren = Codegen.ofNullable(includeChildren);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -266,7 +267,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder uniqueWriterIdentity(@Nullable Output<String> uniqueWriterIdentity) {
@@ -274,7 +275,7 @@ public final class BillingAccountSinkArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder uniqueWriterIdentity(@Nullable String uniqueWriterIdentity) {
-            this.uniqueWriterIdentity = Output.ofNullable(uniqueWriterIdentity);
+            this.uniqueWriterIdentity = Codegen.ofNullable(uniqueWriterIdentity);
             return this;
         }        public BillingAccountSinkArgs build() {
             return new BillingAccountSinkArgs(bigqueryOptions, billingAccountId, description, destination, disabled, exclusions, filter, includeChildren, name, uniqueWriterIdentity);

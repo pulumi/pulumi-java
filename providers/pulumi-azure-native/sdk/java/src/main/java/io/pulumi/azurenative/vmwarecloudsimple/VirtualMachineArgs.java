@@ -9,6 +9,7 @@ import io.pulumi.azurenative.vmwarecloudsimple.inputs.VirtualDiskArgs;
 import io.pulumi.azurenative.vmwarecloudsimple.inputs.VirtualNicArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -41,7 +42,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GuestOSCustomizationArgs> customization;
 
     public Output<GuestOSCustomizationArgs> getCustomization() {
-        return this.customization == null ? Output.empty() : this.customization;
+        return this.customization == null ? Codegen.empty() : this.customization;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<VirtualDiskArgs>> disks;
 
     public Output<List<VirtualDiskArgs>> getDisks() {
-        return this.disks == null ? Output.empty() : this.disks;
+        return this.disks == null ? Codegen.empty() : this.disks;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> exposeToGuestVM;
 
     public Output<Boolean> getExposeToGuestVM() {
-        return this.exposeToGuestVM == null ? Output.empty() : this.exposeToGuestVM;
+        return this.exposeToGuestVM == null ? Codegen.empty() : this.exposeToGuestVM;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<VirtualNicArgs>> nics;
 
     public Output<List<VirtualNicArgs>> getNics() {
-        return this.nics == null ? Output.empty() : this.nics;
+        return this.nics == null ? Codegen.empty() : this.nics;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -140,7 +141,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ResourcePoolArgs> resourcePool;
 
     public Output<ResourcePoolArgs> getResourcePool() {
-        return this.resourcePool == null ? Output.empty() : this.resourcePool;
+        return this.resourcePool == null ? Codegen.empty() : this.resourcePool;
     }
 
     /**
@@ -151,7 +152,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -162,7 +163,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> templateId;
 
     public Output<String> getTemplateId() {
-        return this.templateId == null ? Output.empty() : this.templateId;
+        return this.templateId == null ? Codegen.empty() : this.templateId;
     }
 
     /**
@@ -173,7 +174,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     /**
@@ -184,7 +185,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> vSphereNetworks;
 
     public Output<List<String>> getVSphereNetworks() {
-        return this.vSphereNetworks == null ? Output.empty() : this.vSphereNetworks;
+        return this.vSphereNetworks == null ? Codegen.empty() : this.vSphereNetworks;
     }
 
     /**
@@ -195,7 +196,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> virtualMachineName;
 
     public Output<String> getVirtualMachineName() {
-        return this.virtualMachineName == null ? Output.empty() : this.virtualMachineName;
+        return this.virtualMachineName == null ? Codegen.empty() : this.virtualMachineName;
     }
 
     public VirtualMachineArgs(
@@ -234,22 +235,22 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VirtualMachineArgs() {
-        this.amountOfRam = Output.empty();
-        this.customization = Output.empty();
-        this.disks = Output.empty();
-        this.exposeToGuestVM = Output.empty();
-        this.location = Output.empty();
-        this.nics = Output.empty();
-        this.numberOfCores = Output.empty();
-        this.password = Output.empty();
-        this.privateCloudId = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourcePool = Output.empty();
-        this.tags = Output.empty();
-        this.templateId = Output.empty();
-        this.username = Output.empty();
-        this.vSphereNetworks = Output.empty();
-        this.virtualMachineName = Output.empty();
+        this.amountOfRam = Codegen.empty();
+        this.customization = Codegen.empty();
+        this.disks = Codegen.empty();
+        this.exposeToGuestVM = Codegen.empty();
+        this.location = Codegen.empty();
+        this.nics = Codegen.empty();
+        this.numberOfCores = Codegen.empty();
+        this.password = Codegen.empty();
+        this.privateCloudId = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourcePool = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.templateId = Codegen.empty();
+        this.username = Codegen.empty();
+        this.vSphereNetworks = Codegen.empty();
+        this.virtualMachineName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -315,7 +316,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customization(@Nullable GuestOSCustomizationArgs customization) {
-            this.customization = Output.ofNullable(customization);
+            this.customization = Codegen.ofNullable(customization);
             return this;
         }
         public Builder disks(@Nullable Output<List<VirtualDiskArgs>> disks) {
@@ -323,7 +324,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disks(@Nullable List<VirtualDiskArgs> disks) {
-            this.disks = Output.ofNullable(disks);
+            this.disks = Codegen.ofNullable(disks);
             return this;
         }
         public Builder disks(VirtualDiskArgs... disks) {
@@ -334,7 +335,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder exposeToGuestVM(@Nullable Boolean exposeToGuestVM) {
-            this.exposeToGuestVM = Output.ofNullable(exposeToGuestVM);
+            this.exposeToGuestVM = Codegen.ofNullable(exposeToGuestVM);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -342,7 +343,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder nics(@Nullable Output<List<VirtualNicArgs>> nics) {
@@ -350,7 +351,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nics(@Nullable List<VirtualNicArgs> nics) {
-            this.nics = Output.ofNullable(nics);
+            this.nics = Codegen.ofNullable(nics);
             return this;
         }
         public Builder nics(VirtualNicArgs... nics) {
@@ -369,7 +370,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder privateCloudId(Output<String> privateCloudId) {
@@ -393,7 +394,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourcePool(@Nullable ResourcePoolArgs resourcePool) {
-            this.resourcePool = Output.ofNullable(resourcePool);
+            this.resourcePool = Codegen.ofNullable(resourcePool);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -401,7 +402,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder templateId(@Nullable Output<String> templateId) {
@@ -409,7 +410,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder templateId(@Nullable String templateId) {
-            this.templateId = Output.ofNullable(templateId);
+            this.templateId = Codegen.ofNullable(templateId);
             return this;
         }
         public Builder username(@Nullable Output<String> username) {
@@ -417,7 +418,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder username(@Nullable String username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }
         public Builder vSphereNetworks(@Nullable Output<List<String>> vSphereNetworks) {
@@ -425,7 +426,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vSphereNetworks(@Nullable List<String> vSphereNetworks) {
-            this.vSphereNetworks = Output.ofNullable(vSphereNetworks);
+            this.vSphereNetworks = Codegen.ofNullable(vSphereNetworks);
             return this;
         }
         public Builder vSphereNetworks(String... vSphereNetworks) {
@@ -436,7 +437,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder virtualMachineName(@Nullable String virtualMachineName) {
-            this.virtualMachineName = Output.ofNullable(virtualMachineName);
+            this.virtualMachineName = Codegen.ofNullable(virtualMachineName);
             return this;
         }        public VirtualMachineArgs build() {
             return new VirtualMachineArgs(amountOfRam, customization, disks, exposeToGuestVM, location, nics, numberOfCores, password, privateCloudId, resourceGroupName, resourcePool, tags, templateId, username, vSphereNetworks, virtualMachineName);

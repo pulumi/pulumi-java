@@ -5,6 +5,7 @@ package io.pulumi.gcp.secretmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.secretmanager.inputs.SecretReplicationUserManagedArgs;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class SecretReplicationArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Boolean> automatic;
 
     public Output<Boolean> getAutomatic() {
-        return this.automatic == null ? Output.empty() : this.automatic;
+        return this.automatic == null ? Codegen.empty() : this.automatic;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class SecretReplicationArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<SecretReplicationUserManagedArgs> userManaged;
 
     public Output<SecretReplicationUserManagedArgs> getUserManaged() {
-        return this.userManaged == null ? Output.empty() : this.userManaged;
+        return this.userManaged == null ? Codegen.empty() : this.userManaged;
     }
 
     public SecretReplicationArgs(
@@ -46,8 +47,8 @@ public final class SecretReplicationArgs extends io.pulumi.resources.ResourceArg
     }
 
     private SecretReplicationArgs() {
-        this.automatic = Output.empty();
-        this.userManaged = Output.empty();
+        this.automatic = Codegen.empty();
+        this.userManaged = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class SecretReplicationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder automatic(@Nullable Boolean automatic) {
-            this.automatic = Output.ofNullable(automatic);
+            this.automatic = Codegen.ofNullable(automatic);
             return this;
         }
         public Builder userManaged(@Nullable Output<SecretReplicationUserManagedArgs> userManaged) {
@@ -85,7 +86,7 @@ public final class SecretReplicationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder userManaged(@Nullable SecretReplicationUserManagedArgs userManaged) {
-            this.userManaged = Output.ofNullable(userManaged);
+            this.userManaged = Codegen.ofNullable(userManaged);
             return this;
         }        public SecretReplicationArgs build() {
             return new SecretReplicationArgs(automatic, userManaged);

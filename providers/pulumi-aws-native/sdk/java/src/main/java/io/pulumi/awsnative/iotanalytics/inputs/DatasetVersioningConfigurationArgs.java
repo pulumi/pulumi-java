@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,14 +20,14 @@ public final class DatasetVersioningConfigurationArgs extends io.pulumi.resource
       private final @Nullable Output<Integer> maxVersions;
 
     public Output<Integer> getMaxVersions() {
-        return this.maxVersions == null ? Output.empty() : this.maxVersions;
+        return this.maxVersions == null ? Codegen.empty() : this.maxVersions;
     }
 
     @Import(name="unlimited")
       private final @Nullable Output<Boolean> unlimited;
 
     public Output<Boolean> getUnlimited() {
-        return this.unlimited == null ? Output.empty() : this.unlimited;
+        return this.unlimited == null ? Codegen.empty() : this.unlimited;
     }
 
     public DatasetVersioningConfigurationArgs(
@@ -37,8 +38,8 @@ public final class DatasetVersioningConfigurationArgs extends io.pulumi.resource
     }
 
     private DatasetVersioningConfigurationArgs() {
-        this.maxVersions = Output.empty();
-        this.unlimited = Output.empty();
+        this.maxVersions = Codegen.empty();
+        this.unlimited = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class DatasetVersioningConfigurationArgs extends io.pulumi.resource
             return this;
         }
         public Builder maxVersions(@Nullable Integer maxVersions) {
-            this.maxVersions = Output.ofNullable(maxVersions);
+            this.maxVersions = Codegen.ofNullable(maxVersions);
             return this;
         }
         public Builder unlimited(@Nullable Output<Boolean> unlimited) {
@@ -76,7 +77,7 @@ public final class DatasetVersioningConfigurationArgs extends io.pulumi.resource
             return this;
         }
         public Builder unlimited(@Nullable Boolean unlimited) {
-            this.unlimited = Output.ofNullable(unlimited);
+            this.unlimited = Codegen.ofNullable(unlimited);
             return this;
         }        public DatasetVersioningConfigurationArgs build() {
             return new DatasetVersioningConfigurationArgs(maxVersions, unlimited);

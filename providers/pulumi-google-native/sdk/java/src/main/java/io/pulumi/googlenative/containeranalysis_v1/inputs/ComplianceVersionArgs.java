@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ComplianceVersionArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> cpeUri;
 
     public Output<String> getCpeUri() {
-        return this.cpeUri == null ? Output.empty() : this.cpeUri;
+        return this.cpeUri == null ? Codegen.empty() : this.cpeUri;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ComplianceVersionArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public ComplianceVersionArgs(
@@ -48,8 +49,8 @@ public final class ComplianceVersionArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ComplianceVersionArgs() {
-        this.cpeUri = Output.empty();
-        this.version = Output.empty();
+        this.cpeUri = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ComplianceVersionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder cpeUri(@Nullable String cpeUri) {
-            this.cpeUri = Output.ofNullable(cpeUri);
+            this.cpeUri = Codegen.ofNullable(cpeUri);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -87,7 +88,7 @@ public final class ComplianceVersionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public ComplianceVersionArgs build() {
             return new ComplianceVersionArgs(cpeUri, version);

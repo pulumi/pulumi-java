@@ -5,6 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class VirtualMachineScaleSetVMProtectionPolicyArgs extends io.pulum
       private final @Nullable Output<Boolean> protectFromScaleIn;
 
     public Output<Boolean> getProtectFromScaleIn() {
-        return this.protectFromScaleIn == null ? Output.empty() : this.protectFromScaleIn;
+        return this.protectFromScaleIn == null ? Codegen.empty() : this.protectFromScaleIn;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class VirtualMachineScaleSetVMProtectionPolicyArgs extends io.pulum
       private final @Nullable Output<Boolean> protectFromScaleSetActions;
 
     public Output<Boolean> getProtectFromScaleSetActions() {
-        return this.protectFromScaleSetActions == null ? Output.empty() : this.protectFromScaleSetActions;
+        return this.protectFromScaleSetActions == null ? Codegen.empty() : this.protectFromScaleSetActions;
     }
 
     public VirtualMachineScaleSetVMProtectionPolicyArgs(
@@ -48,8 +49,8 @@ public final class VirtualMachineScaleSetVMProtectionPolicyArgs extends io.pulum
     }
 
     private VirtualMachineScaleSetVMProtectionPolicyArgs() {
-        this.protectFromScaleIn = Output.empty();
-        this.protectFromScaleSetActions = Output.empty();
+        this.protectFromScaleIn = Codegen.empty();
+        this.protectFromScaleSetActions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class VirtualMachineScaleSetVMProtectionPolicyArgs extends io.pulum
             return this;
         }
         public Builder protectFromScaleIn(@Nullable Boolean protectFromScaleIn) {
-            this.protectFromScaleIn = Output.ofNullable(protectFromScaleIn);
+            this.protectFromScaleIn = Codegen.ofNullable(protectFromScaleIn);
             return this;
         }
         public Builder protectFromScaleSetActions(@Nullable Output<Boolean> protectFromScaleSetActions) {
@@ -87,7 +88,7 @@ public final class VirtualMachineScaleSetVMProtectionPolicyArgs extends io.pulum
             return this;
         }
         public Builder protectFromScaleSetActions(@Nullable Boolean protectFromScaleSetActions) {
-            this.protectFromScaleSetActions = Output.ofNullable(protectFromScaleSetActions);
+            this.protectFromScaleSetActions = Codegen.ofNullable(protectFromScaleSetActions);
             return this;
         }        public VirtualMachineScaleSetVMProtectionPolicyArgs build() {
             return new VirtualMachineScaleSetVMProtectionPolicyArgs(protectFromScaleIn, protectFromScaleSetActions);

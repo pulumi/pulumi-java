@@ -6,6 +6,7 @@ package io.pulumi.aws.ebs.inputs;
 import io.pulumi.aws.ebs.inputs.SnapshotImportDiskContainerUserBucketGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class SnapshotImportDiskContainerGetArgs extends io.pulumi.resource
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class SnapshotImportDiskContainerGetArgs extends io.pulumi.resource
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {
-        return this.url == null ? Output.empty() : this.url;
+        return this.url == null ? Codegen.empty() : this.url;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class SnapshotImportDiskContainerGetArgs extends io.pulumi.resource
       private final @Nullable Output<SnapshotImportDiskContainerUserBucketGetArgs> userBucket;
 
     public Output<SnapshotImportDiskContainerUserBucketGetArgs> getUserBucket() {
-        return this.userBucket == null ? Output.empty() : this.userBucket;
+        return this.userBucket == null ? Codegen.empty() : this.userBucket;
     }
 
     public SnapshotImportDiskContainerGetArgs(
@@ -71,10 +72,10 @@ public final class SnapshotImportDiskContainerGetArgs extends io.pulumi.resource
     }
 
     private SnapshotImportDiskContainerGetArgs() {
-        this.description = Output.empty();
-        this.format = Output.empty();
-        this.url = Output.empty();
-        this.userBucket = Output.empty();
+        this.description = Codegen.empty();
+        this.format = Codegen.empty();
+        this.url = Codegen.empty();
+        this.userBucket = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class SnapshotImportDiskContainerGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder format(Output<String> format) {
@@ -124,7 +125,7 @@ public final class SnapshotImportDiskContainerGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder url(@Nullable String url) {
-            this.url = Output.ofNullable(url);
+            this.url = Codegen.ofNullable(url);
             return this;
         }
         public Builder userBucket(@Nullable Output<SnapshotImportDiskContainerUserBucketGetArgs> userBucket) {
@@ -132,7 +133,7 @@ public final class SnapshotImportDiskContainerGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder userBucket(@Nullable SnapshotImportDiskContainerUserBucketGetArgs userBucket) {
-            this.userBucket = Output.ofNullable(userBucket);
+            this.userBucket = Codegen.ofNullable(userBucket);
             return this;
         }        public SnapshotImportDiskContainerGetArgs build() {
             return new SnapshotImportDiskContainerGetArgs(description, format, url, userBucket);

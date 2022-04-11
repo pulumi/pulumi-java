@@ -8,6 +8,7 @@ import io.pulumi.awsnative.groundstation.inputs.ConfigFrequencyArgs;
 import io.pulumi.awsnative.groundstation.inputs.ConfigFrequencyBandwidthArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,21 +21,21 @@ public final class ConfigSpectrumConfigArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<ConfigFrequencyBandwidthArgs> bandwidth;
 
     public Output<ConfigFrequencyBandwidthArgs> getBandwidth() {
-        return this.bandwidth == null ? Output.empty() : this.bandwidth;
+        return this.bandwidth == null ? Codegen.empty() : this.bandwidth;
     }
 
     @Import(name="centerFrequency")
       private final @Nullable Output<ConfigFrequencyArgs> centerFrequency;
 
     public Output<ConfigFrequencyArgs> getCenterFrequency() {
-        return this.centerFrequency == null ? Output.empty() : this.centerFrequency;
+        return this.centerFrequency == null ? Codegen.empty() : this.centerFrequency;
     }
 
     @Import(name="polarization")
       private final @Nullable Output<ConfigPolarization> polarization;
 
     public Output<ConfigPolarization> getPolarization() {
-        return this.polarization == null ? Output.empty() : this.polarization;
+        return this.polarization == null ? Codegen.empty() : this.polarization;
     }
 
     public ConfigSpectrumConfigArgs(
@@ -47,9 +48,9 @@ public final class ConfigSpectrumConfigArgs extends io.pulumi.resources.Resource
     }
 
     private ConfigSpectrumConfigArgs() {
-        this.bandwidth = Output.empty();
-        this.centerFrequency = Output.empty();
-        this.polarization = Output.empty();
+        this.bandwidth = Codegen.empty();
+        this.centerFrequency = Codegen.empty();
+        this.polarization = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ConfigSpectrumConfigArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder bandwidth(@Nullable ConfigFrequencyBandwidthArgs bandwidth) {
-            this.bandwidth = Output.ofNullable(bandwidth);
+            this.bandwidth = Codegen.ofNullable(bandwidth);
             return this;
         }
         public Builder centerFrequency(@Nullable Output<ConfigFrequencyArgs> centerFrequency) {
@@ -89,7 +90,7 @@ public final class ConfigSpectrumConfigArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder centerFrequency(@Nullable ConfigFrequencyArgs centerFrequency) {
-            this.centerFrequency = Output.ofNullable(centerFrequency);
+            this.centerFrequency = Codegen.ofNullable(centerFrequency);
             return this;
         }
         public Builder polarization(@Nullable Output<ConfigPolarization> polarization) {
@@ -97,7 +98,7 @@ public final class ConfigSpectrumConfigArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder polarization(@Nullable ConfigPolarization polarization) {
-            this.polarization = Output.ofNullable(polarization);
+            this.polarization = Codegen.ofNullable(polarization);
             return this;
         }        public ConfigSpectrumConfigArgs build() {
             return new ConfigSpectrumConfigArgs(bandwidth, centerFrequency, polarization);

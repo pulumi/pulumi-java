@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +27,7 @@ public final class FlexibleAppVersionHandlerStaticFilesArgs extends io.pulumi.re
       private final @Nullable Output<Boolean> applicationReadable;
 
     public Output<Boolean> getApplicationReadable() {
-        return this.applicationReadable == null ? Output.empty() : this.applicationReadable;
+        return this.applicationReadable == null ? Codegen.empty() : this.applicationReadable;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class FlexibleAppVersionHandlerStaticFilesArgs extends io.pulumi.re
       private final @Nullable Output<String> expiration;
 
     public Output<String> getExpiration() {
-        return this.expiration == null ? Output.empty() : this.expiration;
+        return this.expiration == null ? Codegen.empty() : this.expiration;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class FlexibleAppVersionHandlerStaticFilesArgs extends io.pulumi.re
       private final @Nullable Output<Map<String,String>> httpHeaders;
 
     public Output<Map<String,String>> getHttpHeaders() {
-        return this.httpHeaders == null ? Output.empty() : this.httpHeaders;
+        return this.httpHeaders == null ? Codegen.empty() : this.httpHeaders;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class FlexibleAppVersionHandlerStaticFilesArgs extends io.pulumi.re
       private final @Nullable Output<String> mimeType;
 
     public Output<String> getMimeType() {
-        return this.mimeType == null ? Output.empty() : this.mimeType;
+        return this.mimeType == null ? Codegen.empty() : this.mimeType;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class FlexibleAppVersionHandlerStaticFilesArgs extends io.pulumi.re
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class FlexibleAppVersionHandlerStaticFilesArgs extends io.pulumi.re
       private final @Nullable Output<Boolean> requireMatchingFile;
 
     public Output<Boolean> getRequireMatchingFile() {
-        return this.requireMatchingFile == null ? Output.empty() : this.requireMatchingFile;
+        return this.requireMatchingFile == null ? Codegen.empty() : this.requireMatchingFile;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class FlexibleAppVersionHandlerStaticFilesArgs extends io.pulumi.re
       private final @Nullable Output<String> uploadPathRegex;
 
     public Output<String> getUploadPathRegex() {
-        return this.uploadPathRegex == null ? Output.empty() : this.uploadPathRegex;
+        return this.uploadPathRegex == null ? Codegen.empty() : this.uploadPathRegex;
     }
 
     public FlexibleAppVersionHandlerStaticFilesArgs(
@@ -118,13 +119,13 @@ public final class FlexibleAppVersionHandlerStaticFilesArgs extends io.pulumi.re
     }
 
     private FlexibleAppVersionHandlerStaticFilesArgs() {
-        this.applicationReadable = Output.empty();
-        this.expiration = Output.empty();
-        this.httpHeaders = Output.empty();
-        this.mimeType = Output.empty();
-        this.path = Output.empty();
-        this.requireMatchingFile = Output.empty();
-        this.uploadPathRegex = Output.empty();
+        this.applicationReadable = Codegen.empty();
+        this.expiration = Codegen.empty();
+        this.httpHeaders = Codegen.empty();
+        this.mimeType = Codegen.empty();
+        this.path = Codegen.empty();
+        this.requireMatchingFile = Codegen.empty();
+        this.uploadPathRegex = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -164,7 +165,7 @@ public final class FlexibleAppVersionHandlerStaticFilesArgs extends io.pulumi.re
             return this;
         }
         public Builder applicationReadable(@Nullable Boolean applicationReadable) {
-            this.applicationReadable = Output.ofNullable(applicationReadable);
+            this.applicationReadable = Codegen.ofNullable(applicationReadable);
             return this;
         }
         public Builder expiration(@Nullable Output<String> expiration) {
@@ -172,7 +173,7 @@ public final class FlexibleAppVersionHandlerStaticFilesArgs extends io.pulumi.re
             return this;
         }
         public Builder expiration(@Nullable String expiration) {
-            this.expiration = Output.ofNullable(expiration);
+            this.expiration = Codegen.ofNullable(expiration);
             return this;
         }
         public Builder httpHeaders(@Nullable Output<Map<String,String>> httpHeaders) {
@@ -180,7 +181,7 @@ public final class FlexibleAppVersionHandlerStaticFilesArgs extends io.pulumi.re
             return this;
         }
         public Builder httpHeaders(@Nullable Map<String,String> httpHeaders) {
-            this.httpHeaders = Output.ofNullable(httpHeaders);
+            this.httpHeaders = Codegen.ofNullable(httpHeaders);
             return this;
         }
         public Builder mimeType(@Nullable Output<String> mimeType) {
@@ -188,7 +189,7 @@ public final class FlexibleAppVersionHandlerStaticFilesArgs extends io.pulumi.re
             return this;
         }
         public Builder mimeType(@Nullable String mimeType) {
-            this.mimeType = Output.ofNullable(mimeType);
+            this.mimeType = Codegen.ofNullable(mimeType);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -196,7 +197,7 @@ public final class FlexibleAppVersionHandlerStaticFilesArgs extends io.pulumi.re
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder requireMatchingFile(@Nullable Output<Boolean> requireMatchingFile) {
@@ -204,7 +205,7 @@ public final class FlexibleAppVersionHandlerStaticFilesArgs extends io.pulumi.re
             return this;
         }
         public Builder requireMatchingFile(@Nullable Boolean requireMatchingFile) {
-            this.requireMatchingFile = Output.ofNullable(requireMatchingFile);
+            this.requireMatchingFile = Codegen.ofNullable(requireMatchingFile);
             return this;
         }
         public Builder uploadPathRegex(@Nullable Output<String> uploadPathRegex) {
@@ -212,7 +213,7 @@ public final class FlexibleAppVersionHandlerStaticFilesArgs extends io.pulumi.re
             return this;
         }
         public Builder uploadPathRegex(@Nullable String uploadPathRegex) {
-            this.uploadPathRegex = Output.ofNullable(uploadPathRegex);
+            this.uploadPathRegex = Codegen.ofNullable(uploadPathRegex);
             return this;
         }        public FlexibleAppVersionHandlerStaticFilesArgs build() {
             return new FlexibleAppVersionHandlerStaticFilesArgs(applicationReadable, expiration, httpHeaders, mimeType, path, requireMatchingFile, uploadPathRegex);

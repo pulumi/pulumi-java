@@ -6,6 +6,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupPublishMetricActionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +19,7 @@ public final class RuleGroupActionDefinitionArgs extends io.pulumi.resources.Res
       private final @Nullable Output<RuleGroupPublishMetricActionArgs> publishMetricAction;
 
     public Output<RuleGroupPublishMetricActionArgs> getPublishMetricAction() {
-        return this.publishMetricAction == null ? Output.empty() : this.publishMetricAction;
+        return this.publishMetricAction == null ? Codegen.empty() : this.publishMetricAction;
     }
 
     public RuleGroupActionDefinitionArgs(@Nullable Output<RuleGroupPublishMetricActionArgs> publishMetricAction) {
@@ -26,7 +27,7 @@ public final class RuleGroupActionDefinitionArgs extends io.pulumi.resources.Res
     }
 
     private RuleGroupActionDefinitionArgs() {
-        this.publishMetricAction = Output.empty();
+        this.publishMetricAction = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class RuleGroupActionDefinitionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder publishMetricAction(@Nullable RuleGroupPublishMetricActionArgs publishMetricAction) {
-            this.publishMetricAction = Output.ofNullable(publishMetricAction);
+            this.publishMetricAction = Codegen.ofNullable(publishMetricAction);
             return this;
         }        public RuleGroupActionDefinitionArgs build() {
             return new RuleGroupActionDefinitionArgs(publishMetricAction);

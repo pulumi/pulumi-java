@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceArgs;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupArgs extends io.pulumi
       private final @Nullable Output<List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterArgs>> inventoryFilters;
 
     public Output<List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterArgs>> getInventoryFilters() {
-        return this.inventoryFilters == null ? Output.empty() : this.inventoryFilters;
+        return this.inventoryFilters == null ? Codegen.empty() : this.inventoryFilters;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupArgs extends io.pulumi
     }
 
     private OsPolicyAssignmentOsPolicyResourceGroupArgs() {
-        this.inventoryFilters = Output.empty();
-        this.resources = Output.empty();
+        this.inventoryFilters = Codegen.empty();
+        this.resources = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupArgs extends io.pulumi
             return this;
         }
         public Builder inventoryFilters(@Nullable List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterArgs> inventoryFilters) {
-            this.inventoryFilters = Output.ofNullable(inventoryFilters);
+            this.inventoryFilters = Codegen.ofNullable(inventoryFilters);
             return this;
         }
         public Builder inventoryFilters(OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterArgs... inventoryFilters) {

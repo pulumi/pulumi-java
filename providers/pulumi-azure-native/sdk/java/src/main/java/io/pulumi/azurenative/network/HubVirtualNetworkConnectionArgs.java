@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.inputs.RoutingConfigurationArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
       private final @Nullable Output<Boolean> allowHubToRemoteVnetTransit;
 
     public Output<Boolean> getAllowHubToRemoteVnetTransit() {
-        return this.allowHubToRemoteVnetTransit == null ? Output.empty() : this.allowHubToRemoteVnetTransit;
+        return this.allowHubToRemoteVnetTransit == null ? Codegen.empty() : this.allowHubToRemoteVnetTransit;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
       private final @Nullable Output<Boolean> allowRemoteVnetToUseHubVnetGateways;
 
     public Output<Boolean> getAllowRemoteVnetToUseHubVnetGateways() {
-        return this.allowRemoteVnetToUseHubVnetGateways == null ? Output.empty() : this.allowRemoteVnetToUseHubVnetGateways;
+        return this.allowRemoteVnetToUseHubVnetGateways == null ? Codegen.empty() : this.allowRemoteVnetToUseHubVnetGateways;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> connectionName;
 
     public Output<String> getConnectionName() {
-        return this.connectionName == null ? Output.empty() : this.connectionName;
+        return this.connectionName == null ? Codegen.empty() : this.connectionName;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
       private final @Nullable Output<Boolean> enableInternetSecurity;
 
     public Output<Boolean> getEnableInternetSecurity() {
-        return this.enableInternetSecurity == null ? Output.empty() : this.enableInternetSecurity;
+        return this.enableInternetSecurity == null ? Codegen.empty() : this.enableInternetSecurity;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
       private final @Nullable Output<SubResourceArgs> remoteVirtualNetwork;
 
     public Output<SubResourceArgs> getRemoteVirtualNetwork() {
-        return this.remoteVirtualNetwork == null ? Output.empty() : this.remoteVirtualNetwork;
+        return this.remoteVirtualNetwork == null ? Codegen.empty() : this.remoteVirtualNetwork;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
       private final @Nullable Output<RoutingConfigurationArgs> routingConfiguration;
 
     public Output<RoutingConfigurationArgs> getRoutingConfiguration() {
-        return this.routingConfiguration == null ? Output.empty() : this.routingConfiguration;
+        return this.routingConfiguration == null ? Codegen.empty() : this.routingConfiguration;
     }
 
     /**
@@ -151,16 +152,16 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
     }
 
     private HubVirtualNetworkConnectionArgs() {
-        this.allowHubToRemoteVnetTransit = Output.empty();
-        this.allowRemoteVnetToUseHubVnetGateways = Output.empty();
-        this.connectionName = Output.empty();
-        this.enableInternetSecurity = Output.empty();
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.remoteVirtualNetwork = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.routingConfiguration = Output.empty();
-        this.virtualHubName = Output.empty();
+        this.allowHubToRemoteVnetTransit = Codegen.empty();
+        this.allowRemoteVnetToUseHubVnetGateways = Codegen.empty();
+        this.connectionName = Codegen.empty();
+        this.enableInternetSecurity = Codegen.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.remoteVirtualNetwork = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.routingConfiguration = Codegen.empty();
+        this.virtualHubName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -206,7 +207,7 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder allowHubToRemoteVnetTransit(@Nullable Boolean allowHubToRemoteVnetTransit) {
-            this.allowHubToRemoteVnetTransit = Output.ofNullable(allowHubToRemoteVnetTransit);
+            this.allowHubToRemoteVnetTransit = Codegen.ofNullable(allowHubToRemoteVnetTransit);
             return this;
         }
         public Builder allowRemoteVnetToUseHubVnetGateways(@Nullable Output<Boolean> allowRemoteVnetToUseHubVnetGateways) {
@@ -214,7 +215,7 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder allowRemoteVnetToUseHubVnetGateways(@Nullable Boolean allowRemoteVnetToUseHubVnetGateways) {
-            this.allowRemoteVnetToUseHubVnetGateways = Output.ofNullable(allowRemoteVnetToUseHubVnetGateways);
+            this.allowRemoteVnetToUseHubVnetGateways = Codegen.ofNullable(allowRemoteVnetToUseHubVnetGateways);
             return this;
         }
         public Builder connectionName(@Nullable Output<String> connectionName) {
@@ -222,7 +223,7 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder connectionName(@Nullable String connectionName) {
-            this.connectionName = Output.ofNullable(connectionName);
+            this.connectionName = Codegen.ofNullable(connectionName);
             return this;
         }
         public Builder enableInternetSecurity(@Nullable Output<Boolean> enableInternetSecurity) {
@@ -230,7 +231,7 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder enableInternetSecurity(@Nullable Boolean enableInternetSecurity) {
-            this.enableInternetSecurity = Output.ofNullable(enableInternetSecurity);
+            this.enableInternetSecurity = Codegen.ofNullable(enableInternetSecurity);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -238,7 +239,7 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -246,7 +247,7 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder remoteVirtualNetwork(@Nullable Output<SubResourceArgs> remoteVirtualNetwork) {
@@ -254,7 +255,7 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder remoteVirtualNetwork(@Nullable SubResourceArgs remoteVirtualNetwork) {
-            this.remoteVirtualNetwork = Output.ofNullable(remoteVirtualNetwork);
+            this.remoteVirtualNetwork = Codegen.ofNullable(remoteVirtualNetwork);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -270,7 +271,7 @@ public final class HubVirtualNetworkConnectionArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder routingConfiguration(@Nullable RoutingConfigurationArgs routingConfiguration) {
-            this.routingConfiguration = Output.ofNullable(routingConfiguration);
+            this.routingConfiguration = Codegen.ofNullable(routingConfiguration);
             return this;
         }
         public Builder virtualHubName(Output<String> virtualHubName) {

@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iotevents.inputs.DetectorModelEventArgs;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelTransitionEventArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class DetectorModelOnInputArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<DetectorModelEventArgs>> events;
 
     public Output<List<DetectorModelEventArgs>> getEvents() {
-        return this.events == null ? Output.empty() : this.events;
+        return this.events == null ? Codegen.empty() : this.events;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class DetectorModelOnInputArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<DetectorModelTransitionEventArgs>> transitionEvents;
 
     public Output<List<DetectorModelTransitionEventArgs>> getTransitionEvents() {
-        return this.transitionEvents == null ? Output.empty() : this.transitionEvents;
+        return this.transitionEvents == null ? Codegen.empty() : this.transitionEvents;
     }
 
     public DetectorModelOnInputArgs(
@@ -50,8 +51,8 @@ public final class DetectorModelOnInputArgs extends io.pulumi.resources.Resource
     }
 
     private DetectorModelOnInputArgs() {
-        this.events = Output.empty();
-        this.transitionEvents = Output.empty();
+        this.events = Codegen.empty();
+        this.transitionEvents = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class DetectorModelOnInputArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder events(@Nullable List<DetectorModelEventArgs> events) {
-            this.events = Output.ofNullable(events);
+            this.events = Codegen.ofNullable(events);
             return this;
         }
         public Builder events(DetectorModelEventArgs... events) {
@@ -92,7 +93,7 @@ public final class DetectorModelOnInputArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder transitionEvents(@Nullable List<DetectorModelTransitionEventArgs> transitionEvents) {
-            this.transitionEvents = Output.ofNullable(transitionEvents);
+            this.transitionEvents = Codegen.ofNullable(transitionEvents);
             return this;
         }
         public Builder transitionEvents(DetectorModelTransitionEventArgs... transitionEvents) {

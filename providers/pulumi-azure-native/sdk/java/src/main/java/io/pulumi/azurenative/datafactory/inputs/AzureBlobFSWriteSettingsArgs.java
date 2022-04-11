@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class AzureBlobFSWriteSettingsArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Object> blockSizeInMB;
 
     public Output<Object> getBlockSizeInMB() {
-        return this.blockSizeInMB == null ? Output.empty() : this.blockSizeInMB;
+        return this.blockSizeInMB == null ? Codegen.empty() : this.blockSizeInMB;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class AzureBlobFSWriteSettingsArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Object> copyBehavior;
 
     public Output<Object> getCopyBehavior() {
-        return this.copyBehavior == null ? Output.empty() : this.copyBehavior;
+        return this.copyBehavior == null ? Codegen.empty() : this.copyBehavior;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class AzureBlobFSWriteSettingsArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Object> disableMetricsCollection;
 
     public Output<Object> getDisableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Output.empty() : this.disableMetricsCollection;
+        return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class AzureBlobFSWriteSettingsArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Object> maxConcurrentConnections;
 
     public Output<Object> getMaxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Output.empty() : this.maxConcurrentConnections;
+        return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
     }
 
     /**
@@ -89,11 +90,11 @@ public final class AzureBlobFSWriteSettingsArgs extends io.pulumi.resources.Reso
     }
 
     private AzureBlobFSWriteSettingsArgs() {
-        this.blockSizeInMB = Output.empty();
-        this.copyBehavior = Output.empty();
-        this.disableMetricsCollection = Output.empty();
-        this.maxConcurrentConnections = Output.empty();
-        this.type = Output.empty();
+        this.blockSizeInMB = Codegen.empty();
+        this.copyBehavior = Codegen.empty();
+        this.disableMetricsCollection = Codegen.empty();
+        this.maxConcurrentConnections = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class AzureBlobFSWriteSettingsArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder blockSizeInMB(@Nullable Object blockSizeInMB) {
-            this.blockSizeInMB = Output.ofNullable(blockSizeInMB);
+            this.blockSizeInMB = Codegen.ofNullable(blockSizeInMB);
             return this;
         }
         public Builder copyBehavior(@Nullable Output<Object> copyBehavior) {
@@ -137,7 +138,7 @@ public final class AzureBlobFSWriteSettingsArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder copyBehavior(@Nullable Object copyBehavior) {
-            this.copyBehavior = Output.ofNullable(copyBehavior);
+            this.copyBehavior = Codegen.ofNullable(copyBehavior);
             return this;
         }
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
@@ -145,7 +146,7 @@ public final class AzureBlobFSWriteSettingsArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
+            this.disableMetricsCollection = Codegen.ofNullable(disableMetricsCollection);
             return this;
         }
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
@@ -153,7 +154,7 @@ public final class AzureBlobFSWriteSettingsArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
+            this.maxConcurrentConnections = Codegen.ofNullable(maxConcurrentConnections);
             return this;
         }
         public Builder type(Output<String> type) {

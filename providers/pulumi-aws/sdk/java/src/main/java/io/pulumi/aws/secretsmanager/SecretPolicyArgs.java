@@ -5,6 +5,7 @@ package io.pulumi.aws.secretsmanager;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class SecretPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> blockPublicPolicy;
 
     public Output<Boolean> getBlockPublicPolicy() {
-        return this.blockPublicPolicy == null ? Output.empty() : this.blockPublicPolicy;
+        return this.blockPublicPolicy == null ? Codegen.empty() : this.blockPublicPolicy;
     }
 
     /**
@@ -58,9 +59,9 @@ public final class SecretPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SecretPolicyArgs() {
-        this.blockPublicPolicy = Output.empty();
-        this.policy = Output.empty();
-        this.secretArn = Output.empty();
+        this.blockPublicPolicy = Codegen.empty();
+        this.policy = Codegen.empty();
+        this.secretArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class SecretPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder blockPublicPolicy(@Nullable Boolean blockPublicPolicy) {
-            this.blockPublicPolicy = Output.ofNullable(blockPublicPolicy);
+            this.blockPublicPolicy = Codegen.ofNullable(blockPublicPolicy);
             return this;
         }
         public Builder policy(Output<String> policy) {

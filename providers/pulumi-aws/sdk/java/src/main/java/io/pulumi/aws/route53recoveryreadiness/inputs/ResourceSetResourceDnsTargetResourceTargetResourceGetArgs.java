@@ -7,6 +7,7 @@ import io.pulumi.aws.route53recoveryreadiness.inputs.ResourceSetResourceDnsTarge
 import io.pulumi.aws.route53recoveryreadiness.inputs.ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +24,7 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceGetArgs ext
       private final @Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceGetArgs> nlbResource;
 
     public Output<ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceGetArgs> getNlbResource() {
-        return this.nlbResource == null ? Output.empty() : this.nlbResource;
+        return this.nlbResource == null ? Codegen.empty() : this.nlbResource;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceGetArgs ext
       private final @Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceGetArgs> r53Resource;
 
     public Output<ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceGetArgs> getR53Resource() {
-        return this.r53Resource == null ? Output.empty() : this.r53Resource;
+        return this.r53Resource == null ? Codegen.empty() : this.r53Resource;
     }
 
     public ResourceSetResourceDnsTargetResourceTargetResourceGetArgs(
@@ -45,8 +46,8 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceGetArgs ext
     }
 
     private ResourceSetResourceDnsTargetResourceTargetResourceGetArgs() {
-        this.nlbResource = Output.empty();
-        this.r53Resource = Output.empty();
+        this.nlbResource = Codegen.empty();
+        this.r53Resource = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceGetArgs ext
             return this;
         }
         public Builder nlbResource(@Nullable ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceGetArgs nlbResource) {
-            this.nlbResource = Output.ofNullable(nlbResource);
+            this.nlbResource = Codegen.ofNullable(nlbResource);
             return this;
         }
         public Builder r53Resource(@Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceGetArgs> r53Resource) {
@@ -84,7 +85,7 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceGetArgs ext
             return this;
         }
         public Builder r53Resource(@Nullable ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceGetArgs r53Resource) {
-            this.r53Resource = Output.ofNullable(r53Resource);
+            this.r53Resource = Codegen.ofNullable(r53Resource);
             return this;
         }        public ResourceSetResourceDnsTargetResourceTargetResourceGetArgs build() {
             return new ResourceSetResourceDnsTargetResourceTargetResourceGetArgs(nlbResource, r53Resource);

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.container_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.container_v1beta1.ClusterArgs;
 import io.pulumi.googlenative.container_v1beta1.outputs.AddonsConfigResponse;
@@ -876,7 +877,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Cluster(String name, @Nullable ClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:container/v1beta1:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:container/v1beta1:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Cluster(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

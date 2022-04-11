@@ -13,6 +13,7 @@ import io.pulumi.azurenative.network.inputs.SrvRecordArgs;
 import io.pulumi.azurenative.network.inputs.TxtRecordArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +34,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<ARecordArgs>> aRecords;
 
     public Output<List<ARecordArgs>> getARecords() {
-        return this.aRecords == null ? Output.empty() : this.aRecords;
+        return this.aRecords == null ? Codegen.empty() : this.aRecords;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<AaaaRecordArgs>> aaaaRecords;
 
     public Output<List<AaaaRecordArgs>> getAaaaRecords() {
-        return this.aaaaRecords == null ? Output.empty() : this.aaaaRecords;
+        return this.aaaaRecords == null ? Codegen.empty() : this.aaaaRecords;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<CnameRecordArgs> cnameRecord;
 
     public Output<CnameRecordArgs> getCnameRecord() {
-        return this.cnameRecord == null ? Output.empty() : this.cnameRecord;
+        return this.cnameRecord == null ? Codegen.empty() : this.cnameRecord;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<MxRecordArgs>> mxRecords;
 
     public Output<List<MxRecordArgs>> getMxRecords() {
-        return this.mxRecords == null ? Output.empty() : this.mxRecords;
+        return this.mxRecords == null ? Codegen.empty() : this.mxRecords;
     }
 
     /**
@@ -99,7 +100,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<PtrRecordArgs>> ptrRecords;
 
     public Output<List<PtrRecordArgs>> getPtrRecords() {
-        return this.ptrRecords == null ? Output.empty() : this.ptrRecords;
+        return this.ptrRecords == null ? Codegen.empty() : this.ptrRecords;
     }
 
     /**
@@ -121,7 +122,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> relativeRecordSetName;
 
     public Output<String> getRelativeRecordSetName() {
-        return this.relativeRecordSetName == null ? Output.empty() : this.relativeRecordSetName;
+        return this.relativeRecordSetName == null ? Codegen.empty() : this.relativeRecordSetName;
     }
 
     /**
@@ -143,7 +144,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<SoaRecordArgs> soaRecord;
 
     public Output<SoaRecordArgs> getSoaRecord() {
-        return this.soaRecord == null ? Output.empty() : this.soaRecord;
+        return this.soaRecord == null ? Codegen.empty() : this.soaRecord;
     }
 
     /**
@@ -154,7 +155,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<SrvRecordArgs>> srvRecords;
 
     public Output<List<SrvRecordArgs>> getSrvRecords() {
-        return this.srvRecords == null ? Output.empty() : this.srvRecords;
+        return this.srvRecords == null ? Codegen.empty() : this.srvRecords;
     }
 
     /**
@@ -165,7 +166,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Double> ttl;
 
     public Output<Double> getTtl() {
-        return this.ttl == null ? Output.empty() : this.ttl;
+        return this.ttl == null ? Codegen.empty() : this.ttl;
     }
 
     /**
@@ -176,7 +177,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<TxtRecordArgs>> txtRecords;
 
     public Output<List<TxtRecordArgs>> getTxtRecords() {
-        return this.txtRecords == null ? Output.empty() : this.txtRecords;
+        return this.txtRecords == null ? Codegen.empty() : this.txtRecords;
     }
 
     public PrivateRecordSetArgs(
@@ -211,20 +212,20 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private PrivateRecordSetArgs() {
-        this.aRecords = Output.empty();
-        this.aaaaRecords = Output.empty();
-        this.cnameRecord = Output.empty();
-        this.metadata = Output.empty();
-        this.mxRecords = Output.empty();
-        this.privateZoneName = Output.empty();
-        this.ptrRecords = Output.empty();
-        this.recordType = Output.empty();
-        this.relativeRecordSetName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.soaRecord = Output.empty();
-        this.srvRecords = Output.empty();
-        this.ttl = Output.empty();
-        this.txtRecords = Output.empty();
+        this.aRecords = Codegen.empty();
+        this.aaaaRecords = Codegen.empty();
+        this.cnameRecord = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.mxRecords = Codegen.empty();
+        this.privateZoneName = Codegen.empty();
+        this.ptrRecords = Codegen.empty();
+        this.recordType = Codegen.empty();
+        this.relativeRecordSetName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.soaRecord = Codegen.empty();
+        this.srvRecords = Codegen.empty();
+        this.ttl = Codegen.empty();
+        this.txtRecords = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -278,7 +279,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder aRecords(@Nullable List<ARecordArgs> aRecords) {
-            this.aRecords = Output.ofNullable(aRecords);
+            this.aRecords = Codegen.ofNullable(aRecords);
             return this;
         }
         public Builder aRecords(ARecordArgs... aRecords) {
@@ -289,7 +290,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder aaaaRecords(@Nullable List<AaaaRecordArgs> aaaaRecords) {
-            this.aaaaRecords = Output.ofNullable(aaaaRecords);
+            this.aaaaRecords = Codegen.ofNullable(aaaaRecords);
             return this;
         }
         public Builder aaaaRecords(AaaaRecordArgs... aaaaRecords) {
@@ -300,7 +301,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder cnameRecord(@Nullable CnameRecordArgs cnameRecord) {
-            this.cnameRecord = Output.ofNullable(cnameRecord);
+            this.cnameRecord = Codegen.ofNullable(cnameRecord);
             return this;
         }
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
@@ -308,7 +309,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder mxRecords(@Nullable Output<List<MxRecordArgs>> mxRecords) {
@@ -316,7 +317,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder mxRecords(@Nullable List<MxRecordArgs> mxRecords) {
-            this.mxRecords = Output.ofNullable(mxRecords);
+            this.mxRecords = Codegen.ofNullable(mxRecords);
             return this;
         }
         public Builder mxRecords(MxRecordArgs... mxRecords) {
@@ -335,7 +336,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ptrRecords(@Nullable List<PtrRecordArgs> ptrRecords) {
-            this.ptrRecords = Output.ofNullable(ptrRecords);
+            this.ptrRecords = Codegen.ofNullable(ptrRecords);
             return this;
         }
         public Builder ptrRecords(PtrRecordArgs... ptrRecords) {
@@ -354,7 +355,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder relativeRecordSetName(@Nullable String relativeRecordSetName) {
-            this.relativeRecordSetName = Output.ofNullable(relativeRecordSetName);
+            this.relativeRecordSetName = Codegen.ofNullable(relativeRecordSetName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -370,7 +371,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder soaRecord(@Nullable SoaRecordArgs soaRecord) {
-            this.soaRecord = Output.ofNullable(soaRecord);
+            this.soaRecord = Codegen.ofNullable(soaRecord);
             return this;
         }
         public Builder srvRecords(@Nullable Output<List<SrvRecordArgs>> srvRecords) {
@@ -378,7 +379,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder srvRecords(@Nullable List<SrvRecordArgs> srvRecords) {
-            this.srvRecords = Output.ofNullable(srvRecords);
+            this.srvRecords = Codegen.ofNullable(srvRecords);
             return this;
         }
         public Builder srvRecords(SrvRecordArgs... srvRecords) {
@@ -389,7 +390,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ttl(@Nullable Double ttl) {
-            this.ttl = Output.ofNullable(ttl);
+            this.ttl = Codegen.ofNullable(ttl);
             return this;
         }
         public Builder txtRecords(@Nullable Output<List<TxtRecordArgs>> txtRecords) {
@@ -397,7 +398,7 @@ public final class PrivateRecordSetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder txtRecords(@Nullable List<TxtRecordArgs> txtRecords) {
-            this.txtRecords = Output.ofNullable(txtRecords);
+            this.txtRecords = Codegen.ofNullable(txtRecords);
             return this;
         }
         public Builder txtRecords(TxtRecordArgs... txtRecords) {

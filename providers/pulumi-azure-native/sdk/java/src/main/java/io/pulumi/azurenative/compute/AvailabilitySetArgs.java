@@ -7,6 +7,7 @@ import io.pulumi.azurenative.compute.inputs.SkuArgs;
 import io.pulumi.azurenative.compute.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> availabilitySetName;
 
     public Output<String> getAvailabilitySetName() {
-        return this.availabilitySetName == null ? Output.empty() : this.availabilitySetName;
+        return this.availabilitySetName == null ? Codegen.empty() : this.availabilitySetName;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Integer> platformFaultDomainCount;
 
     public Output<Integer> getPlatformFaultDomainCount() {
-        return this.platformFaultDomainCount == null ? Output.empty() : this.platformFaultDomainCount;
+        return this.platformFaultDomainCount == null ? Codegen.empty() : this.platformFaultDomainCount;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Integer> platformUpdateDomainCount;
 
     public Output<Integer> getPlatformUpdateDomainCount() {
-        return this.platformUpdateDomainCount == null ? Output.empty() : this.platformUpdateDomainCount;
+        return this.platformUpdateDomainCount == null ? Codegen.empty() : this.platformUpdateDomainCount;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<SubResourceArgs> proximityPlacementGroup;
 
     public Output<SubResourceArgs> getProximityPlacementGroup() {
-        return this.proximityPlacementGroup == null ? Output.empty() : this.proximityPlacementGroup;
+        return this.proximityPlacementGroup == null ? Codegen.empty() : this.proximityPlacementGroup;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<SubResourceArgs>> virtualMachines;
 
     public Output<List<SubResourceArgs>> getVirtualMachines() {
-        return this.virtualMachines == null ? Output.empty() : this.virtualMachines;
+        return this.virtualMachines == null ? Codegen.empty() : this.virtualMachines;
     }
 
     public AvailabilitySetArgs(
@@ -140,15 +141,15 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private AvailabilitySetArgs() {
-        this.availabilitySetName = Output.empty();
-        this.location = Output.empty();
-        this.platformFaultDomainCount = Output.empty();
-        this.platformUpdateDomainCount = Output.empty();
-        this.proximityPlacementGroup = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
-        this.virtualMachines = Output.empty();
+        this.availabilitySetName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.platformFaultDomainCount = Codegen.empty();
+        this.platformUpdateDomainCount = Codegen.empty();
+        this.proximityPlacementGroup = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.virtualMachines = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -192,7 +193,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder availabilitySetName(@Nullable String availabilitySetName) {
-            this.availabilitySetName = Output.ofNullable(availabilitySetName);
+            this.availabilitySetName = Codegen.ofNullable(availabilitySetName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -200,7 +201,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder platformFaultDomainCount(@Nullable Output<Integer> platformFaultDomainCount) {
@@ -208,7 +209,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder platformFaultDomainCount(@Nullable Integer platformFaultDomainCount) {
-            this.platformFaultDomainCount = Output.ofNullable(platformFaultDomainCount);
+            this.platformFaultDomainCount = Codegen.ofNullable(platformFaultDomainCount);
             return this;
         }
         public Builder platformUpdateDomainCount(@Nullable Output<Integer> platformUpdateDomainCount) {
@@ -216,7 +217,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder platformUpdateDomainCount(@Nullable Integer platformUpdateDomainCount) {
-            this.platformUpdateDomainCount = Output.ofNullable(platformUpdateDomainCount);
+            this.platformUpdateDomainCount = Codegen.ofNullable(platformUpdateDomainCount);
             return this;
         }
         public Builder proximityPlacementGroup(@Nullable Output<SubResourceArgs> proximityPlacementGroup) {
@@ -224,7 +225,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder proximityPlacementGroup(@Nullable SubResourceArgs proximityPlacementGroup) {
-            this.proximityPlacementGroup = Output.ofNullable(proximityPlacementGroup);
+            this.proximityPlacementGroup = Codegen.ofNullable(proximityPlacementGroup);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -240,7 +241,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -248,7 +249,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder virtualMachines(@Nullable Output<List<SubResourceArgs>> virtualMachines) {
@@ -256,7 +257,7 @@ public final class AvailabilitySetArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder virtualMachines(@Nullable List<SubResourceArgs> virtualMachines) {
-            this.virtualMachines = Output.ofNullable(virtualMachines);
+            this.virtualMachines = Codegen.ofNullable(virtualMachines);
             return this;
         }
         public Builder virtualMachines(SubResourceArgs... virtualMachines) {

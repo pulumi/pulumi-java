@@ -5,6 +5,7 @@ package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> azureKeyVaultUrl;
 
     public Output<String> getAzureKeyVaultUrl() {
-        return this.azureKeyVaultUrl == null ? Output.empty() : this.azureKeyVaultUrl;
+        return this.azureKeyVaultUrl == null ? Codegen.empty() : this.azureKeyVaultUrl;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> credentialName;
 
     public Output<String> getCredentialName() {
-        return this.credentialName == null ? Output.empty() : this.credentialName;
+        return this.credentialName == null ? Codegen.empty() : this.credentialName;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Boolean> enable;
 
     public Output<Boolean> getEnable() {
-        return this.enable == null ? Output.empty() : this.enable;
+        return this.enable == null ? Codegen.empty() : this.enable;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> servicePrincipalName;
 
     public Output<String> getServicePrincipalName() {
-        return this.servicePrincipalName == null ? Output.empty() : this.servicePrincipalName;
+        return this.servicePrincipalName == null ? Codegen.empty() : this.servicePrincipalName;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> servicePrincipalSecret;
 
     public Output<String> getServicePrincipalSecret() {
-        return this.servicePrincipalSecret == null ? Output.empty() : this.servicePrincipalSecret;
+        return this.servicePrincipalSecret == null ? Codegen.empty() : this.servicePrincipalSecret;
     }
 
     public KeyVaultCredentialSettingsArgs(
@@ -88,11 +89,11 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
     }
 
     private KeyVaultCredentialSettingsArgs() {
-        this.azureKeyVaultUrl = Output.empty();
-        this.credentialName = Output.empty();
-        this.enable = Output.empty();
-        this.servicePrincipalName = Output.empty();
-        this.servicePrincipalSecret = Output.empty();
+        this.azureKeyVaultUrl = Codegen.empty();
+        this.credentialName = Codegen.empty();
+        this.enable = Codegen.empty();
+        this.servicePrincipalName = Codegen.empty();
+        this.servicePrincipalSecret = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder azureKeyVaultUrl(@Nullable String azureKeyVaultUrl) {
-            this.azureKeyVaultUrl = Output.ofNullable(azureKeyVaultUrl);
+            this.azureKeyVaultUrl = Codegen.ofNullable(azureKeyVaultUrl);
             return this;
         }
         public Builder credentialName(@Nullable Output<String> credentialName) {
@@ -136,7 +137,7 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder credentialName(@Nullable String credentialName) {
-            this.credentialName = Output.ofNullable(credentialName);
+            this.credentialName = Codegen.ofNullable(credentialName);
             return this;
         }
         public Builder enable(@Nullable Output<Boolean> enable) {
@@ -144,7 +145,7 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder enable(@Nullable Boolean enable) {
-            this.enable = Output.ofNullable(enable);
+            this.enable = Codegen.ofNullable(enable);
             return this;
         }
         public Builder servicePrincipalName(@Nullable Output<String> servicePrincipalName) {
@@ -152,7 +153,7 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder servicePrincipalName(@Nullable String servicePrincipalName) {
-            this.servicePrincipalName = Output.ofNullable(servicePrincipalName);
+            this.servicePrincipalName = Codegen.ofNullable(servicePrincipalName);
             return this;
         }
         public Builder servicePrincipalSecret(@Nullable Output<String> servicePrincipalSecret) {
@@ -160,7 +161,7 @@ public final class KeyVaultCredentialSettingsArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder servicePrincipalSecret(@Nullable String servicePrincipalSecret) {
-            this.servicePrincipalSecret = Output.ofNullable(servicePrincipalSecret);
+            this.servicePrincipalSecret = Codegen.ofNullable(servicePrincipalSecret);
             return this;
         }        public KeyVaultCredentialSettingsArgs build() {
             return new KeyVaultCredentialSettingsArgs(azureKeyVaultUrl, credentialName, enable, servicePrincipalName, servicePrincipalSecret);

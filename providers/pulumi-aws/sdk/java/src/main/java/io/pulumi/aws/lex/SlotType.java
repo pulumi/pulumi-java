@@ -10,6 +10,7 @@ import io.pulumi.aws.lex.outputs.SlotTypeEnumerationValue;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -197,7 +198,7 @@ public class SlotType extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SlotType(String name, SlotTypeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:lex/slotType:SlotType", name, args == null ? SlotTypeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:lex/slotType:SlotType", name, args == null ? SlotTypeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SlotType(String name, Output<String> id, @Nullable SlotTypeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

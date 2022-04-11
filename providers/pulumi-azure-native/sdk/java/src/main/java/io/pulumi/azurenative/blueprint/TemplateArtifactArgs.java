@@ -6,6 +6,7 @@ package io.pulumi.azurenative.blueprint;
 import io.pulumi.azurenative.blueprint.inputs.ParameterValueArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> artifactName;
 
     public Output<String> getArtifactName() {
-        return this.artifactName == null ? Output.empty() : this.artifactName;
+        return this.artifactName == null ? Codegen.empty() : this.artifactName;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> dependsOn;
 
     public Output<List<String>> getDependsOn() {
-        return this.dependsOn == null ? Output.empty() : this.dependsOn;
+        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> resourceGroup;
 
     public Output<String> getResourceGroup() {
-        return this.resourceGroup == null ? Output.empty() : this.resourceGroup;
+        return this.resourceGroup == null ? Codegen.empty() : this.resourceGroup;
     }
 
     /**
@@ -153,16 +154,16 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private TemplateArtifactArgs() {
-        this.artifactName = Output.empty();
-        this.blueprintName = Output.empty();
-        this.dependsOn = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.kind = Output.empty();
-        this.parameters = Output.empty();
-        this.resourceGroup = Output.empty();
-        this.resourceScope = Output.empty();
-        this.template = Output.empty();
+        this.artifactName = Codegen.empty();
+        this.blueprintName = Codegen.empty();
+        this.dependsOn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.resourceGroup = Codegen.empty();
+        this.resourceScope = Codegen.empty();
+        this.template = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -208,7 +209,7 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder artifactName(@Nullable String artifactName) {
-            this.artifactName = Output.ofNullable(artifactName);
+            this.artifactName = Codegen.ofNullable(artifactName);
             return this;
         }
         public Builder blueprintName(Output<String> blueprintName) {
@@ -224,7 +225,7 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder dependsOn(@Nullable List<String> dependsOn) {
-            this.dependsOn = Output.ofNullable(dependsOn);
+            this.dependsOn = Codegen.ofNullable(dependsOn);
             return this;
         }
         public Builder dependsOn(String... dependsOn) {
@@ -235,7 +236,7 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -243,7 +244,7 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder kind(Output<String> kind) {
@@ -267,7 +268,7 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder resourceGroup(@Nullable String resourceGroup) {
-            this.resourceGroup = Output.ofNullable(resourceGroup);
+            this.resourceGroup = Codegen.ofNullable(resourceGroup);
             return this;
         }
         public Builder resourceScope(Output<String> resourceScope) {

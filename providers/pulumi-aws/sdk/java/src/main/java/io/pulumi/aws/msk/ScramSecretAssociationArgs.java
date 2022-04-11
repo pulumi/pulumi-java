@@ -5,6 +5,7 @@ package io.pulumi.aws.msk;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -44,8 +45,8 @@ public final class ScramSecretAssociationArgs extends io.pulumi.resources.Resour
     }
 
     private ScramSecretAssociationArgs() {
-        this.clusterArn = Output.empty();
-        this.secretArnLists = Output.empty();
+        this.clusterArn = Codegen.empty();
+        this.secretArnLists = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFil
       private final @Nullable Output<String> sha256Checksum;
 
     public Output<String> getSha256Checksum() {
-        return this.sha256Checksum == null ? Output.empty() : this.sha256Checksum;
+        return this.sha256Checksum == null ? Codegen.empty() : this.sha256Checksum;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFil
     }
 
     private OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemoteGetArgs() {
-        this.sha256Checksum = Output.empty();
-        this.uri = Output.empty();
+        this.sha256Checksum = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFil
             return this;
         }
         public Builder sha256Checksum(@Nullable String sha256Checksum) {
-            this.sha256Checksum = Output.ofNullable(sha256Checksum);
+            this.sha256Checksum = Codegen.ofNullable(sha256Checksum);
             return this;
         }
         public Builder uri(Output<String> uri) {

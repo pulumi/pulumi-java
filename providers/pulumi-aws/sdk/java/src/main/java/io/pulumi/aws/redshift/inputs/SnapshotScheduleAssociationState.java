@@ -5,6 +5,7 @@ package io.pulumi.aws.redshift.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class SnapshotScheduleAssociationState extends io.pulumi.resources.
       private final @Nullable Output<String> clusterIdentifier;
 
     public Output<String> getClusterIdentifier() {
-        return this.clusterIdentifier == null ? Output.empty() : this.clusterIdentifier;
+        return this.clusterIdentifier == null ? Codegen.empty() : this.clusterIdentifier;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class SnapshotScheduleAssociationState extends io.pulumi.resources.
       private final @Nullable Output<String> scheduleIdentifier;
 
     public Output<String> getScheduleIdentifier() {
-        return this.scheduleIdentifier == null ? Output.empty() : this.scheduleIdentifier;
+        return this.scheduleIdentifier == null ? Codegen.empty() : this.scheduleIdentifier;
     }
 
     public SnapshotScheduleAssociationState(
@@ -44,8 +45,8 @@ public final class SnapshotScheduleAssociationState extends io.pulumi.resources.
     }
 
     private SnapshotScheduleAssociationState() {
-        this.clusterIdentifier = Output.empty();
-        this.scheduleIdentifier = Output.empty();
+        this.clusterIdentifier = Codegen.empty();
+        this.scheduleIdentifier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class SnapshotScheduleAssociationState extends io.pulumi.resources.
             return this;
         }
         public Builder clusterIdentifier(@Nullable String clusterIdentifier) {
-            this.clusterIdentifier = Output.ofNullable(clusterIdentifier);
+            this.clusterIdentifier = Codegen.ofNullable(clusterIdentifier);
             return this;
         }
         public Builder scheduleIdentifier(@Nullable Output<String> scheduleIdentifier) {
@@ -83,7 +84,7 @@ public final class SnapshotScheduleAssociationState extends io.pulumi.resources.
             return this;
         }
         public Builder scheduleIdentifier(@Nullable String scheduleIdentifier) {
-            this.scheduleIdentifier = Output.ofNullable(scheduleIdentifier);
+            this.scheduleIdentifier = Codegen.ofNullable(scheduleIdentifier);
             return this;
         }        public SnapshotScheduleAssociationState build() {
             return new SnapshotScheduleAssociationState(clusterIdentifier, scheduleIdentifier);

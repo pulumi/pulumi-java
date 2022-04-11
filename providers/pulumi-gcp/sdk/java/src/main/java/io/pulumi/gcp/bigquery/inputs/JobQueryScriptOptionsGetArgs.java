@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class JobQueryScriptOptionsGetArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> keyResultStatement;
 
     public Output<String> getKeyResultStatement() {
-        return this.keyResultStatement == null ? Output.empty() : this.keyResultStatement;
+        return this.keyResultStatement == null ? Codegen.empty() : this.keyResultStatement;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class JobQueryScriptOptionsGetArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> statementByteBudget;
 
     public Output<String> getStatementByteBudget() {
-        return this.statementByteBudget == null ? Output.empty() : this.statementByteBudget;
+        return this.statementByteBudget == null ? Codegen.empty() : this.statementByteBudget;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class JobQueryScriptOptionsGetArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> statementTimeoutMs;
 
     public Output<String> getStatementTimeoutMs() {
-        return this.statementTimeoutMs == null ? Output.empty() : this.statementTimeoutMs;
+        return this.statementTimeoutMs == null ? Codegen.empty() : this.statementTimeoutMs;
     }
 
     public JobQueryScriptOptionsGetArgs(
@@ -59,9 +60,9 @@ public final class JobQueryScriptOptionsGetArgs extends io.pulumi.resources.Reso
     }
 
     private JobQueryScriptOptionsGetArgs() {
-        this.keyResultStatement = Output.empty();
-        this.statementByteBudget = Output.empty();
-        this.statementTimeoutMs = Output.empty();
+        this.keyResultStatement = Codegen.empty();
+        this.statementByteBudget = Codegen.empty();
+        this.statementTimeoutMs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class JobQueryScriptOptionsGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder keyResultStatement(@Nullable String keyResultStatement) {
-            this.keyResultStatement = Output.ofNullable(keyResultStatement);
+            this.keyResultStatement = Codegen.ofNullable(keyResultStatement);
             return this;
         }
         public Builder statementByteBudget(@Nullable Output<String> statementByteBudget) {
@@ -101,7 +102,7 @@ public final class JobQueryScriptOptionsGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder statementByteBudget(@Nullable String statementByteBudget) {
-            this.statementByteBudget = Output.ofNullable(statementByteBudget);
+            this.statementByteBudget = Codegen.ofNullable(statementByteBudget);
             return this;
         }
         public Builder statementTimeoutMs(@Nullable Output<String> statementTimeoutMs) {
@@ -109,7 +110,7 @@ public final class JobQueryScriptOptionsGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder statementTimeoutMs(@Nullable String statementTimeoutMs) {
-            this.statementTimeoutMs = Output.ofNullable(statementTimeoutMs);
+            this.statementTimeoutMs = Codegen.ofNullable(statementTimeoutMs);
             return this;
         }        public JobQueryScriptOptionsGetArgs build() {
             return new JobQueryScriptOptionsGetArgs(keyResultStatement, statementByteBudget, statementTimeoutMs);

@@ -6,6 +6,7 @@ package io.pulumi.aws.dlm.inputs;
 import io.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -59,9 +60,9 @@ public final class LifecyclePolicyPolicyDetailsArgs extends io.pulumi.resources.
     }
 
     private LifecyclePolicyPolicyDetailsArgs() {
-        this.resourceTypes = Output.empty();
-        this.schedules = Output.empty();
-        this.targetTags = Output.empty();
+        this.resourceTypes = Codegen.empty();
+        this.schedules = Codegen.empty();
+        this.targetTags = Codegen.empty();
     }
 
     public static Builder builder() {

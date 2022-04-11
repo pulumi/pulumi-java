@@ -9,6 +9,7 @@ import io.pulumi.aws.route53.inputs.ResolverFirewallRuleGroupState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -136,7 +137,7 @@ public class ResolverFirewallRuleGroup extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public ResolverFirewallRuleGroup(String name, @Nullable ResolverFirewallRuleGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:route53/resolverFirewallRuleGroup:ResolverFirewallRuleGroup", name, args == null ? ResolverFirewallRuleGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:route53/resolverFirewallRuleGroup:ResolverFirewallRuleGroup", name, args == null ? ResolverFirewallRuleGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResolverFirewallRuleGroup(String name, Output<String> id, @Nullable ResolverFirewallRuleGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

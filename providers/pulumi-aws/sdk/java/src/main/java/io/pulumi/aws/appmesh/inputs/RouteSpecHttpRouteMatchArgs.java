@@ -6,6 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecHttpRouteMatchHeaderArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class RouteSpecHttpRouteMatchArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<List<RouteSpecHttpRouteMatchHeaderArgs>> headers;
 
     public Output<List<RouteSpecHttpRouteMatchHeaderArgs>> getHeaders() {
-        return this.headers == null ? Output.empty() : this.headers;
+        return this.headers == null ? Codegen.empty() : this.headers;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class RouteSpecHttpRouteMatchArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> method;
 
     public Output<String> getMethod() {
-        return this.method == null ? Output.empty() : this.method;
+        return this.method == null ? Codegen.empty() : this.method;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class RouteSpecHttpRouteMatchArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> scheme;
 
     public Output<String> getScheme() {
-        return this.scheme == null ? Output.empty() : this.scheme;
+        return this.scheme == null ? Codegen.empty() : this.scheme;
     }
 
     public RouteSpecHttpRouteMatchArgs(
@@ -73,10 +74,10 @@ public final class RouteSpecHttpRouteMatchArgs extends io.pulumi.resources.Resou
     }
 
     private RouteSpecHttpRouteMatchArgs() {
-        this.headers = Output.empty();
-        this.method = Output.empty();
-        this.prefix = Output.empty();
-        this.scheme = Output.empty();
+        this.headers = Codegen.empty();
+        this.method = Codegen.empty();
+        this.prefix = Codegen.empty();
+        this.scheme = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class RouteSpecHttpRouteMatchArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder headers(@Nullable List<RouteSpecHttpRouteMatchHeaderArgs> headers) {
-            this.headers = Output.ofNullable(headers);
+            this.headers = Codegen.ofNullable(headers);
             return this;
         }
         public Builder headers(RouteSpecHttpRouteMatchHeaderArgs... headers) {
@@ -121,7 +122,7 @@ public final class RouteSpecHttpRouteMatchArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder method(@Nullable String method) {
-            this.method = Output.ofNullable(method);
+            this.method = Codegen.ofNullable(method);
             return this;
         }
         public Builder prefix(Output<String> prefix) {
@@ -137,7 +138,7 @@ public final class RouteSpecHttpRouteMatchArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder scheme(@Nullable String scheme) {
-            this.scheme = Output.ofNullable(scheme);
+            this.scheme = Codegen.ofNullable(scheme);
             return this;
         }        public RouteSpecHttpRouteMatchArgs build() {
             return new RouteSpecHttpRouteMatchArgs(headers, method, prefix, scheme);

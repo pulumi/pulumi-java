@@ -6,6 +6,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 import io.pulumi.azurenative.securityinsights.inputs.AutomationRuleModifyPropertiesActionActionConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -63,9 +64,9 @@ public final class AutomationRuleModifyPropertiesActionArgs extends io.pulumi.re
     }
 
     private AutomationRuleModifyPropertiesActionArgs() {
-        this.actionConfiguration = Output.empty();
-        this.actionType = Output.empty();
-        this.order = Output.empty();
+        this.actionConfiguration = Codegen.empty();
+        this.actionType = Codegen.empty();
+        this.order = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class DistributedNodesInfoArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> nodeName;
 
     public Output<String> getNodeName() {
-        return this.nodeName == null ? Output.empty() : this.nodeName;
+        return this.nodeName == null ? Codegen.empty() : this.nodeName;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class DistributedNodesInfoArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public DistributedNodesInfoArgs(
@@ -49,8 +50,8 @@ public final class DistributedNodesInfoArgs extends io.pulumi.resources.Resource
     }
 
     private DistributedNodesInfoArgs() {
-        this.nodeName = Output.empty();
-        this.status = Output.empty();
+        this.nodeName = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class DistributedNodesInfoArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder nodeName(@Nullable String nodeName) {
-            this.nodeName = Output.ofNullable(nodeName);
+            this.nodeName = Codegen.ofNullable(nodeName);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -88,7 +89,7 @@ public final class DistributedNodesInfoArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public DistributedNodesInfoArgs build() {
             return new DistributedNodesInfoArgs(nodeName, status);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datacatalog.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class PrincipalsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> objectId;
 
     public Output<String> getObjectId() {
-        return this.objectId == null ? Output.empty() : this.objectId;
+        return this.objectId == null ? Codegen.empty() : this.objectId;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class PrincipalsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> upn;
 
     public Output<String> getUpn() {
-        return this.upn == null ? Output.empty() : this.upn;
+        return this.upn == null ? Codegen.empty() : this.upn;
     }
 
     public PrincipalsArgs(
@@ -48,8 +49,8 @@ public final class PrincipalsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PrincipalsArgs() {
-        this.objectId = Output.empty();
-        this.upn = Output.empty();
+        this.objectId = Codegen.empty();
+        this.upn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class PrincipalsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder objectId(@Nullable String objectId) {
-            this.objectId = Output.ofNullable(objectId);
+            this.objectId = Codegen.ofNullable(objectId);
             return this;
         }
         public Builder upn(@Nullable Output<String> upn) {
@@ -87,7 +88,7 @@ public final class PrincipalsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder upn(@Nullable String upn) {
-            this.upn = Output.ofNullable(upn);
+            this.upn = Codegen.ofNullable(upn);
             return this;
         }        public PrincipalsArgs build() {
             return new PrincipalsArgs(objectId, upn);

@@ -5,6 +5,7 @@ package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class GroupMixedInstancesPolicyInstancesDistributionGetArgs extends
       private final @Nullable Output<String> onDemandAllocationStrategy;
 
     public Output<String> getOnDemandAllocationStrategy() {
-        return this.onDemandAllocationStrategy == null ? Output.empty() : this.onDemandAllocationStrategy;
+        return this.onDemandAllocationStrategy == null ? Codegen.empty() : this.onDemandAllocationStrategy;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class GroupMixedInstancesPolicyInstancesDistributionGetArgs extends
       private final @Nullable Output<Integer> onDemandBaseCapacity;
 
     public Output<Integer> getOnDemandBaseCapacity() {
-        return this.onDemandBaseCapacity == null ? Output.empty() : this.onDemandBaseCapacity;
+        return this.onDemandBaseCapacity == null ? Codegen.empty() : this.onDemandBaseCapacity;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class GroupMixedInstancesPolicyInstancesDistributionGetArgs extends
       private final @Nullable Output<Integer> onDemandPercentageAboveBaseCapacity;
 
     public Output<Integer> getOnDemandPercentageAboveBaseCapacity() {
-        return this.onDemandPercentageAboveBaseCapacity == null ? Output.empty() : this.onDemandPercentageAboveBaseCapacity;
+        return this.onDemandPercentageAboveBaseCapacity == null ? Codegen.empty() : this.onDemandPercentageAboveBaseCapacity;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class GroupMixedInstancesPolicyInstancesDistributionGetArgs extends
       private final @Nullable Output<String> spotAllocationStrategy;
 
     public Output<String> getSpotAllocationStrategy() {
-        return this.spotAllocationStrategy == null ? Output.empty() : this.spotAllocationStrategy;
+        return this.spotAllocationStrategy == null ? Codegen.empty() : this.spotAllocationStrategy;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class GroupMixedInstancesPolicyInstancesDistributionGetArgs extends
       private final @Nullable Output<Integer> spotInstancePools;
 
     public Output<Integer> getSpotInstancePools() {
-        return this.spotInstancePools == null ? Output.empty() : this.spotInstancePools;
+        return this.spotInstancePools == null ? Codegen.empty() : this.spotInstancePools;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class GroupMixedInstancesPolicyInstancesDistributionGetArgs extends
       private final @Nullable Output<String> spotMaxPrice;
 
     public Output<String> getSpotMaxPrice() {
-        return this.spotMaxPrice == null ? Output.empty() : this.spotMaxPrice;
+        return this.spotMaxPrice == null ? Codegen.empty() : this.spotMaxPrice;
     }
 
     public GroupMixedInstancesPolicyInstancesDistributionGetArgs(
@@ -97,12 +98,12 @@ public final class GroupMixedInstancesPolicyInstancesDistributionGetArgs extends
     }
 
     private GroupMixedInstancesPolicyInstancesDistributionGetArgs() {
-        this.onDemandAllocationStrategy = Output.empty();
-        this.onDemandBaseCapacity = Output.empty();
-        this.onDemandPercentageAboveBaseCapacity = Output.empty();
-        this.spotAllocationStrategy = Output.empty();
-        this.spotInstancePools = Output.empty();
-        this.spotMaxPrice = Output.empty();
+        this.onDemandAllocationStrategy = Codegen.empty();
+        this.onDemandBaseCapacity = Codegen.empty();
+        this.onDemandPercentageAboveBaseCapacity = Codegen.empty();
+        this.spotAllocationStrategy = Codegen.empty();
+        this.spotInstancePools = Codegen.empty();
+        this.spotMaxPrice = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class GroupMixedInstancesPolicyInstancesDistributionGetArgs extends
             return this;
         }
         public Builder onDemandAllocationStrategy(@Nullable String onDemandAllocationStrategy) {
-            this.onDemandAllocationStrategy = Output.ofNullable(onDemandAllocationStrategy);
+            this.onDemandAllocationStrategy = Codegen.ofNullable(onDemandAllocationStrategy);
             return this;
         }
         public Builder onDemandBaseCapacity(@Nullable Output<Integer> onDemandBaseCapacity) {
@@ -148,7 +149,7 @@ public final class GroupMixedInstancesPolicyInstancesDistributionGetArgs extends
             return this;
         }
         public Builder onDemandBaseCapacity(@Nullable Integer onDemandBaseCapacity) {
-            this.onDemandBaseCapacity = Output.ofNullable(onDemandBaseCapacity);
+            this.onDemandBaseCapacity = Codegen.ofNullable(onDemandBaseCapacity);
             return this;
         }
         public Builder onDemandPercentageAboveBaseCapacity(@Nullable Output<Integer> onDemandPercentageAboveBaseCapacity) {
@@ -156,7 +157,7 @@ public final class GroupMixedInstancesPolicyInstancesDistributionGetArgs extends
             return this;
         }
         public Builder onDemandPercentageAboveBaseCapacity(@Nullable Integer onDemandPercentageAboveBaseCapacity) {
-            this.onDemandPercentageAboveBaseCapacity = Output.ofNullable(onDemandPercentageAboveBaseCapacity);
+            this.onDemandPercentageAboveBaseCapacity = Codegen.ofNullable(onDemandPercentageAboveBaseCapacity);
             return this;
         }
         public Builder spotAllocationStrategy(@Nullable Output<String> spotAllocationStrategy) {
@@ -164,7 +165,7 @@ public final class GroupMixedInstancesPolicyInstancesDistributionGetArgs extends
             return this;
         }
         public Builder spotAllocationStrategy(@Nullable String spotAllocationStrategy) {
-            this.spotAllocationStrategy = Output.ofNullable(spotAllocationStrategy);
+            this.spotAllocationStrategy = Codegen.ofNullable(spotAllocationStrategy);
             return this;
         }
         public Builder spotInstancePools(@Nullable Output<Integer> spotInstancePools) {
@@ -172,7 +173,7 @@ public final class GroupMixedInstancesPolicyInstancesDistributionGetArgs extends
             return this;
         }
         public Builder spotInstancePools(@Nullable Integer spotInstancePools) {
-            this.spotInstancePools = Output.ofNullable(spotInstancePools);
+            this.spotInstancePools = Codegen.ofNullable(spotInstancePools);
             return this;
         }
         public Builder spotMaxPrice(@Nullable Output<String> spotMaxPrice) {
@@ -180,7 +181,7 @@ public final class GroupMixedInstancesPolicyInstancesDistributionGetArgs extends
             return this;
         }
         public Builder spotMaxPrice(@Nullable String spotMaxPrice) {
-            this.spotMaxPrice = Output.ofNullable(spotMaxPrice);
+            this.spotMaxPrice = Codegen.ofNullable(spotMaxPrice);
             return this;
         }        public GroupMixedInstancesPolicyInstancesDistributionGetArgs build() {
             return new GroupMixedInstancesPolicyInstancesDistributionGetArgs(onDemandAllocationStrategy, onDemandBaseCapacity, onDemandPercentageAboveBaseCapacity, spotAllocationStrategy, spotInstancePools, spotMaxPrice);

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.privateca_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.privateca_v1beta1.CertificateAuthorityCertificateRevocationListIamPolicyArgs;
 import io.pulumi.googlenative.privateca_v1beta1.outputs.AuditConfigResponse;
@@ -102,7 +103,7 @@ public class CertificateAuthorityCertificateRevocationListIamPolicy extends io.p
      * @param options A bag of options that control this resource's behavior.
      */
     public CertificateAuthorityCertificateRevocationListIamPolicy(String name, CertificateAuthorityCertificateRevocationListIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:privateca/v1beta1:CertificateAuthorityCertificateRevocationListIamPolicy", name, args == null ? CertificateAuthorityCertificateRevocationListIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:privateca/v1beta1:CertificateAuthorityCertificateRevocationListIamPolicy", name, args == null ? CertificateAuthorityCertificateRevocationListIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CertificateAuthorityCertificateRevocationListIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

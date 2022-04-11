@@ -6,6 +6,7 @@ package io.pulumi.aws.cognito;
 import io.pulumi.aws.cognito.inputs.ResourceServerScopeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class ResourceServerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ResourceServerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ResourceServerScopeArgs>> scopes;
 
     public Output<List<ResourceServerScopeArgs>> getScopes() {
-        return this.scopes == null ? Output.empty() : this.scopes;
+        return this.scopes == null ? Codegen.empty() : this.scopes;
     }
 
     @Import(name="userPoolId", required=true)
@@ -68,10 +69,10 @@ public final class ResourceServerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourceServerArgs() {
-        this.identifier = Output.empty();
-        this.name = Output.empty();
-        this.scopes = Output.empty();
-        this.userPoolId = Output.empty();
+        this.identifier = Codegen.empty();
+        this.name = Codegen.empty();
+        this.scopes = Codegen.empty();
+        this.userPoolId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class ResourceServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder scopes(@Nullable Output<List<ResourceServerScopeArgs>> scopes) {
@@ -121,7 +122,7 @@ public final class ResourceServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scopes(@Nullable List<ResourceServerScopeArgs> scopes) {
-            this.scopes = Output.ofNullable(scopes);
+            this.scopes = Codegen.ofNullable(scopes);
             return this;
         }
         public Builder scopes(ResourceServerScopeArgs... scopes) {

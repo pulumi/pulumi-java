@@ -5,6 +5,7 @@ package io.pulumi.awsnative.servicecatalog;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,9 +45,9 @@ public final class ServiceActionAssociationArgs extends io.pulumi.resources.Reso
     }
 
     private ServiceActionAssociationArgs() {
-        this.productId = Output.empty();
-        this.provisioningArtifactId = Output.empty();
-        this.serviceActionId = Output.empty();
+        this.productId = Codegen.empty();
+        this.provisioningArtifactId = Codegen.empty();
+        this.serviceActionId = Codegen.empty();
     }
 
     public static Builder builder() {

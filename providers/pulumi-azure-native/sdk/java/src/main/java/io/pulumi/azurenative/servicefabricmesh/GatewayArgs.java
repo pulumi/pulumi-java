@@ -8,6 +8,7 @@ import io.pulumi.azurenative.servicefabricmesh.inputs.NetworkRefArgs;
 import io.pulumi.azurenative.servicefabricmesh.inputs.TcpConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -27,7 +28,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> gatewayResourceName;
 
     public Output<String> getGatewayResourceName() {
-        return this.gatewayResourceName == null ? Output.empty() : this.gatewayResourceName;
+        return this.gatewayResourceName == null ? Codegen.empty() : this.gatewayResourceName;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<HttpConfigArgs>> http;
 
     public Output<List<HttpConfigArgs>> getHttp() {
-        return this.http == null ? Output.empty() : this.http;
+        return this.http == null ? Codegen.empty() : this.http;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<TcpConfigArgs>> tcp;
 
     public Output<List<TcpConfigArgs>> getTcp() {
-        return this.tcp == null ? Output.empty() : this.tcp;
+        return this.tcp == null ? Codegen.empty() : this.tcp;
     }
 
     public GatewayArgs(
@@ -140,15 +141,15 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GatewayArgs() {
-        this.description = Output.empty();
-        this.destinationNetwork = Output.empty();
-        this.gatewayResourceName = Output.empty();
-        this.http = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sourceNetwork = Output.empty();
-        this.tags = Output.empty();
-        this.tcp = Output.empty();
+        this.description = Codegen.empty();
+        this.destinationNetwork = Codegen.empty();
+        this.gatewayResourceName = Codegen.empty();
+        this.http = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sourceNetwork = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tcp = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -192,7 +193,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder destinationNetwork(Output<NetworkRefArgs> destinationNetwork) {
@@ -208,7 +209,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gatewayResourceName(@Nullable String gatewayResourceName) {
-            this.gatewayResourceName = Output.ofNullable(gatewayResourceName);
+            this.gatewayResourceName = Codegen.ofNullable(gatewayResourceName);
             return this;
         }
         public Builder http(@Nullable Output<List<HttpConfigArgs>> http) {
@@ -216,7 +217,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder http(@Nullable List<HttpConfigArgs> http) {
-            this.http = Output.ofNullable(http);
+            this.http = Codegen.ofNullable(http);
             return this;
         }
         public Builder http(HttpConfigArgs... http) {
@@ -227,7 +228,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -251,7 +252,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tcp(@Nullable Output<List<TcpConfigArgs>> tcp) {
@@ -259,7 +260,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tcp(@Nullable List<TcpConfigArgs> tcp) {
-            this.tcp = Output.ofNullable(tcp);
+            this.tcp = Codegen.ofNullable(tcp);
             return this;
         }
         public Builder tcp(TcpConfigArgs... tcp) {

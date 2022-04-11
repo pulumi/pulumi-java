@@ -9,6 +9,7 @@ import io.pulumi.aws.xray.inputs.EncryptionConfigState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -81,7 +82,7 @@ public class EncryptionConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EncryptionConfig(String name, EncryptionConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:xray/encryptionConfig:EncryptionConfig", name, args == null ? EncryptionConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:xray/encryptionConfig:EncryptionConfig", name, args == null ? EncryptionConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EncryptionConfig(String name, Output<String> id, @Nullable EncryptionConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

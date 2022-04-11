@@ -6,6 +6,7 @@ package io.pulumi.googlenative.metastore_v1alpha;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.metastore_v1alpha.ServiceDatabaseTableIamPolicyArgs;
 import io.pulumi.googlenative.metastore_v1alpha.outputs.AuditConfigResponse;
@@ -102,7 +103,7 @@ public class ServiceDatabaseTableIamPolicy extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public ServiceDatabaseTableIamPolicy(String name, ServiceDatabaseTableIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:metastore/v1alpha:ServiceDatabaseTableIamPolicy", name, args == null ? ServiceDatabaseTableIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:metastore/v1alpha:ServiceDatabaseTableIamPolicy", name, args == null ? ServiceDatabaseTableIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ServiceDatabaseTableIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -7,6 +7,7 @@ import io.pulumi.aws.ec2.inputs.FleetLaunchTemplateConfigLaunchTemplateSpecifica
 import io.pulumi.aws.ec2.inputs.FleetLaunchTemplateConfigOverrideArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -35,7 +36,7 @@ public final class FleetLaunchTemplateConfigArgs extends io.pulumi.resources.Res
       private final @Nullable Output<List<FleetLaunchTemplateConfigOverrideArgs>> overrides;
 
     public Output<List<FleetLaunchTemplateConfigOverrideArgs>> getOverrides() {
-        return this.overrides == null ? Output.empty() : this.overrides;
+        return this.overrides == null ? Codegen.empty() : this.overrides;
     }
 
     public FleetLaunchTemplateConfigArgs(
@@ -46,8 +47,8 @@ public final class FleetLaunchTemplateConfigArgs extends io.pulumi.resources.Res
     }
 
     private FleetLaunchTemplateConfigArgs() {
-        this.launchTemplateSpecification = Output.empty();
-        this.overrides = Output.empty();
+        this.launchTemplateSpecification = Codegen.empty();
+        this.overrides = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -85,7 +86,7 @@ public final class FleetLaunchTemplateConfigArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder overrides(@Nullable List<FleetLaunchTemplateConfigOverrideArgs> overrides) {
-            this.overrides = Output.ofNullable(overrides);
+            this.overrides = Codegen.ofNullable(overrides);
             return this;
         }
         public Builder overrides(FleetLaunchTemplateConfigOverrideArgs... overrides) {

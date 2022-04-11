@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v3.enums.EntityTypeAutoExpansionMode;
 import io.pulumi.googlenative.dialogflow_v3.enums.EntityTypeKind;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3EntityTypeEntityArgs;
@@ -35,7 +36,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EntityTypeAutoExpansionMode> autoExpansionMode;
 
     public Output<EntityTypeAutoExpansionMode> getAutoExpansionMode() {
-        return this.autoExpansionMode == null ? Output.empty() : this.autoExpansionMode;
+        return this.autoExpansionMode == null ? Codegen.empty() : this.autoExpansionMode;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableFuzzyExtraction;
 
     public Output<Boolean> getEnableFuzzyExtraction() {
-        return this.enableFuzzyExtraction == null ? Output.empty() : this.enableFuzzyExtraction;
+        return this.enableFuzzyExtraction == null ? Codegen.empty() : this.enableFuzzyExtraction;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3EntityTypeEntityArgs>> entities;
 
     public Output<List<GoogleCloudDialogflowCxV3EntityTypeEntityArgs>> getEntities() {
-        return this.entities == null ? Output.empty() : this.entities;
+        return this.entities == null ? Codegen.empty() : this.entities;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseArgs>> excludedPhrases;
 
     public Output<List<GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseArgs>> getExcludedPhrases() {
-        return this.excludedPhrases == null ? Output.empty() : this.excludedPhrases;
+        return this.excludedPhrases == null ? Codegen.empty() : this.excludedPhrases;
     }
 
     /**
@@ -97,14 +98,14 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> languageCode;
 
     public Output<String> getLanguageCode() {
-        return this.languageCode == null ? Output.empty() : this.languageCode;
+        return this.languageCode == null ? Codegen.empty() : this.languageCode;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -115,14 +116,14 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -133,7 +134,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> redact;
 
     public Output<Boolean> getRedact() {
-        return this.redact == null ? Output.empty() : this.redact;
+        return this.redact == null ? Codegen.empty() : this.redact;
     }
 
     public EntityTypeArgs(
@@ -164,18 +165,18 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EntityTypeArgs() {
-        this.agentId = Output.empty();
-        this.autoExpansionMode = Output.empty();
-        this.displayName = Output.empty();
-        this.enableFuzzyExtraction = Output.empty();
-        this.entities = Output.empty();
-        this.excludedPhrases = Output.empty();
-        this.kind = Output.empty();
-        this.languageCode = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.redact = Output.empty();
+        this.agentId = Codegen.empty();
+        this.autoExpansionMode = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.enableFuzzyExtraction = Codegen.empty();
+        this.entities = Codegen.empty();
+        this.excludedPhrases = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.languageCode = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.redact = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -233,7 +234,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoExpansionMode(@Nullable EntityTypeAutoExpansionMode autoExpansionMode) {
-            this.autoExpansionMode = Output.ofNullable(autoExpansionMode);
+            this.autoExpansionMode = Codegen.ofNullable(autoExpansionMode);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -249,7 +250,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableFuzzyExtraction(@Nullable Boolean enableFuzzyExtraction) {
-            this.enableFuzzyExtraction = Output.ofNullable(enableFuzzyExtraction);
+            this.enableFuzzyExtraction = Codegen.ofNullable(enableFuzzyExtraction);
             return this;
         }
         public Builder entities(@Nullable Output<List<GoogleCloudDialogflowCxV3EntityTypeEntityArgs>> entities) {
@@ -257,7 +258,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder entities(@Nullable List<GoogleCloudDialogflowCxV3EntityTypeEntityArgs> entities) {
-            this.entities = Output.ofNullable(entities);
+            this.entities = Codegen.ofNullable(entities);
             return this;
         }
         public Builder entities(GoogleCloudDialogflowCxV3EntityTypeEntityArgs... entities) {
@@ -268,7 +269,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder excludedPhrases(@Nullable List<GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseArgs> excludedPhrases) {
-            this.excludedPhrases = Output.ofNullable(excludedPhrases);
+            this.excludedPhrases = Codegen.ofNullable(excludedPhrases);
             return this;
         }
         public Builder excludedPhrases(GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseArgs... excludedPhrases) {
@@ -287,7 +288,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = Output.ofNullable(languageCode);
+            this.languageCode = Codegen.ofNullable(languageCode);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -295,7 +296,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -303,7 +304,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -311,7 +312,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder redact(@Nullable Output<Boolean> redact) {
@@ -319,7 +320,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder redact(@Nullable Boolean redact) {
-            this.redact = Output.ofNullable(redact);
+            this.redact = Codegen.ofNullable(redact);
             return this;
         }        public EntityTypeArgs build() {
             return new EntityTypeArgs(agentId, autoExpansionMode, displayName, enableFuzzyExtraction, entities, excludedPhrases, kind, languageCode, location, name, project, redact);

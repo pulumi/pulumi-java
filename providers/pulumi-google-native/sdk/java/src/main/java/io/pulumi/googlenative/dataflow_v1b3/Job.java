@@ -6,6 +6,7 @@ package io.pulumi.googlenative.dataflow_v1b3;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dataflow_v1b3.JobArgs;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.EnvironmentResponse;
@@ -372,7 +373,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Job(String name, @Nullable JobArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:dataflow/v1b3:Job", name, args == null ? JobArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:dataflow/v1b3:Job", name, args == null ? JobArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Job(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

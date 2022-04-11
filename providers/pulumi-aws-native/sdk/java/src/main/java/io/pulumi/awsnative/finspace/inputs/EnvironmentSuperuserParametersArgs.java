@@ -5,6 +5,7 @@ package io.pulumi.awsnative.finspace.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class EnvironmentSuperuserParametersArgs extends io.pulumi.resource
       private final @Nullable Output<String> emailAddress;
 
     public Output<String> getEmailAddress() {
-        return this.emailAddress == null ? Output.empty() : this.emailAddress;
+        return this.emailAddress == null ? Codegen.empty() : this.emailAddress;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class EnvironmentSuperuserParametersArgs extends io.pulumi.resource
       private final @Nullable Output<String> firstName;
 
     public Output<String> getFirstName() {
-        return this.firstName == null ? Output.empty() : this.firstName;
+        return this.firstName == null ? Codegen.empty() : this.firstName;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class EnvironmentSuperuserParametersArgs extends io.pulumi.resource
       private final @Nullable Output<String> lastName;
 
     public Output<String> getLastName() {
-        return this.lastName == null ? Output.empty() : this.lastName;
+        return this.lastName == null ? Codegen.empty() : this.lastName;
     }
 
     public EnvironmentSuperuserParametersArgs(
@@ -61,9 +62,9 @@ public final class EnvironmentSuperuserParametersArgs extends io.pulumi.resource
     }
 
     private EnvironmentSuperuserParametersArgs() {
-        this.emailAddress = Output.empty();
-        this.firstName = Output.empty();
-        this.lastName = Output.empty();
+        this.emailAddress = Codegen.empty();
+        this.firstName = Codegen.empty();
+        this.lastName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class EnvironmentSuperuserParametersArgs extends io.pulumi.resource
             return this;
         }
         public Builder emailAddress(@Nullable String emailAddress) {
-            this.emailAddress = Output.ofNullable(emailAddress);
+            this.emailAddress = Codegen.ofNullable(emailAddress);
             return this;
         }
         public Builder firstName(@Nullable Output<String> firstName) {
@@ -103,7 +104,7 @@ public final class EnvironmentSuperuserParametersArgs extends io.pulumi.resource
             return this;
         }
         public Builder firstName(@Nullable String firstName) {
-            this.firstName = Output.ofNullable(firstName);
+            this.firstName = Codegen.ofNullable(firstName);
             return this;
         }
         public Builder lastName(@Nullable Output<String> lastName) {
@@ -111,7 +112,7 @@ public final class EnvironmentSuperuserParametersArgs extends io.pulumi.resource
             return this;
         }
         public Builder lastName(@Nullable String lastName) {
-            this.lastName = Output.ofNullable(lastName);
+            this.lastName = Codegen.ofNullable(lastName);
             return this;
         }        public EnvironmentSuperuserParametersArgs build() {
             return new EnvironmentSuperuserParametersArgs(emailAddress, firstName, lastName);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatc
     }
 
     private RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchGetArgs() {
-        this.rangeEnd = Output.empty();
-        this.rangeStart = Output.empty();
+        this.rangeEnd = Codegen.empty();
+        this.rangeStart = Codegen.empty();
     }
 
     public static Builder builder() {

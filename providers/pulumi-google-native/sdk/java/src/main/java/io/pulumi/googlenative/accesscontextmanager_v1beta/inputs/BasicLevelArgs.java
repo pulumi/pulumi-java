@@ -5,6 +5,7 @@ package io.pulumi.googlenative.accesscontextmanager_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.accesscontextmanager_v1beta.enums.BasicLevelCombiningFunction;
 import io.pulumi.googlenative.accesscontextmanager_v1beta.inputs.ConditionArgs;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class BasicLevelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BasicLevelCombiningFunction> combiningFunction;
 
     public Output<BasicLevelCombiningFunction> getCombiningFunction() {
-        return this.combiningFunction == null ? Output.empty() : this.combiningFunction;
+        return this.combiningFunction == null ? Codegen.empty() : this.combiningFunction;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class BasicLevelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BasicLevelArgs() {
-        this.combiningFunction = Output.empty();
-        this.conditions = Output.empty();
+        this.combiningFunction = Codegen.empty();
+        this.conditions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class BasicLevelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder combiningFunction(@Nullable BasicLevelCombiningFunction combiningFunction) {
-            this.combiningFunction = Output.ofNullable(combiningFunction);
+            this.combiningFunction = Codegen.ofNullable(combiningFunction);
             return this;
         }
         public Builder conditions(Output<List<ConditionArgs>> conditions) {

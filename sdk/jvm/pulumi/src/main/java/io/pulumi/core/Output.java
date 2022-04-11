@@ -77,34 +77,7 @@ public interface Output<T> extends Copyable<Output<T>> {
      * @see Output#apply(Function) for more details.
      */
     default <U> Output<U> applyValue(Function<T, U> func) {
-        return apply(t -> Output.of(func.apply(t)));
-    }
-
-    /**
-     * @see Output#apply(Function) for more details.
-     */
-    default <U> Output<U> applyOptional(Function<T, Optional<U>> func) {
-        return apply(t -> Output.ofOptional(func.apply(t)));
-    }
-
-    /**
-     * @see Output#apply(Function) for more details.
-     */
-    default <U> Output<U> applyFuture(Function<T, CompletableFuture<U>> func) {
-        return apply(t -> Output.of(func.apply(t)));
-    }
-
-    /**
-     * A special case of {@link Output#apply(Function)} that takes {@link Consumer}
-     *
-     * @see Output#apply(Function) for more details.
-     */
-    @CanIgnoreReturnValue
-    default Output<Void> applyVoid(Consumer<T> consumer) {
-        return apply(t -> {
-            consumer.accept(t);
-            return Output.empty();
-        });
+        return apply(t -> Output.ofNullable(func.apply(t)));
     }
 
     /**
@@ -127,19 +100,6 @@ public interface Output<T> extends Copyable<Output<T>> {
     Output<T> asSecret();
 
     // Static section -----
-
-    /**
-     * Returns an empty {@code Output<T>} instance. No value is present for this
-     * {@code Output<T>}.
-     * <p/>
-     * Equivalent of {@code Output.ofNullable((T) null)}
-     *
-     * @param <T> The type of the non-existent value
-     * @return an empty {@code Output<T>}
-     */
-    static <T> Output<T> of() {
-        return Output.empty();
-    }
 
     /**
      * Returns an {@code Output<T>} describing the given non-{@code null} value.
@@ -179,29 +139,6 @@ public interface Output<T> extends Copyable<Output<T>> {
     }
 
     /**
-     * @see Output#of() for more details
-     */
-    static <T> Output<T> empty() {
-        return new OutputInternal<>(OutputData.empty());
-    }
-
-    /**
-     * Returns an {@code Output<T>} with given output, if
-     * non-{@code null}, otherwise returns an empty {@code Output<T>}.
-     *
-     * @param output the possibly-{@code null} output
-     * @param <T>    the type of the value
-     * @return an {@code Output<T>} if the specified output
-     * is non-{@code null}, otherwise an empty {@code Output<T>}
-     */
-    static <T> Output<T> ofNullable(@Nullable Output<T> output) {
-        if (output == null) {
-            return Output.empty();
-        }
-        return output;
-    }
-
-    /**
      * Returns an {@code Output<T>} describing the given value, if
      * non-{@code null}, otherwise returns an empty {@code Output<T>}.
      *
@@ -211,28 +148,7 @@ public interface Output<T> extends Copyable<Output<T>> {
      * is non-{@code null}, otherwise an empty {@code Output<T>}
      */
     static <T> Output<T> ofNullable(@Nullable T value) {
-        if (value == null) {
-            return Output.empty();
-        }
-        return Output.of(value);
-    }
-
-    /**
-     * Returns an {@code Output<T>} describing the given value, if
-     * present, otherwise returns an empty {@code Output<T>}.
-     *
-     * @param value the possibly-empty value to describe
-     * @param <T>   the type of the value
-     * @return an {@code Output<T>} with a present value if the specified value
-     * is present, otherwise an empty {@code Output<T>}
-     */
-    @SuppressWarnings("OptionalUsedAsFieldOrParameterType") // this is a converter method, so it's ok
-    static <T> Output<T> ofOptional(Optional<T> value) {
-        requireNonNull(value);
-        if (value.isEmpty()) {
-            return Output.empty();
-        }
-        return Output.of(value.get());
+        return new OutputInternal<>(value);
     }
 
     /**

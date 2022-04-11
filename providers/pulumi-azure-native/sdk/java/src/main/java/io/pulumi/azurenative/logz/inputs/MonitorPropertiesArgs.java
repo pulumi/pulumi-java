@@ -11,6 +11,7 @@ import io.pulumi.azurenative.logz.inputs.UserInfoArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<LogzOrganizationPropertiesArgs> logzOrganizationProperties;
 
     public Output<LogzOrganizationPropertiesArgs> getLogzOrganizationProperties() {
-        return this.logzOrganizationProperties == null ? Output.empty() : this.logzOrganizationProperties;
+        return this.logzOrganizationProperties == null ? Codegen.empty() : this.logzOrganizationProperties;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Either<String,MarketplaceSubscriptionStatus>> marketplaceSubscriptionStatus;
 
     public Output<Either<String,MarketplaceSubscriptionStatus>> getMarketplaceSubscriptionStatus() {
-        return this.marketplaceSubscriptionStatus == null ? Output.empty() : this.marketplaceSubscriptionStatus;
+        return this.marketplaceSubscriptionStatus == null ? Codegen.empty() : this.marketplaceSubscriptionStatus;
     }
 
     /**
@@ -50,21 +51,21 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Either<String,MonitoringStatus>> monitoringStatus;
 
     public Output<Either<String,MonitoringStatus>> getMonitoringStatus() {
-        return this.monitoringStatus == null ? Output.empty() : this.monitoringStatus;
+        return this.monitoringStatus == null ? Codegen.empty() : this.monitoringStatus;
     }
 
     @Import(name="planData")
       private final @Nullable Output<PlanDataArgs> planData;
 
     public Output<PlanDataArgs> getPlanData() {
-        return this.planData == null ? Output.empty() : this.planData;
+        return this.planData == null ? Codegen.empty() : this.planData;
     }
 
     @Import(name="userInfo")
       private final @Nullable Output<UserInfoArgs> userInfo;
 
     public Output<UserInfoArgs> getUserInfo() {
-        return this.userInfo == null ? Output.empty() : this.userInfo;
+        return this.userInfo == null ? Codegen.empty() : this.userInfo;
     }
 
     public MonitorPropertiesArgs(
@@ -81,11 +82,11 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
     }
 
     private MonitorPropertiesArgs() {
-        this.logzOrganizationProperties = Output.empty();
-        this.marketplaceSubscriptionStatus = Output.empty();
-        this.monitoringStatus = Output.empty();
-        this.planData = Output.empty();
-        this.userInfo = Output.empty();
+        this.logzOrganizationProperties = Codegen.empty();
+        this.marketplaceSubscriptionStatus = Codegen.empty();
+        this.monitoringStatus = Codegen.empty();
+        this.planData = Codegen.empty();
+        this.userInfo = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -121,7 +122,7 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder logzOrganizationProperties(@Nullable LogzOrganizationPropertiesArgs logzOrganizationProperties) {
-            this.logzOrganizationProperties = Output.ofNullable(logzOrganizationProperties);
+            this.logzOrganizationProperties = Codegen.ofNullable(logzOrganizationProperties);
             return this;
         }
         public Builder marketplaceSubscriptionStatus(@Nullable Output<Either<String,MarketplaceSubscriptionStatus>> marketplaceSubscriptionStatus) {
@@ -129,7 +130,7 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder marketplaceSubscriptionStatus(@Nullable Either<String,MarketplaceSubscriptionStatus> marketplaceSubscriptionStatus) {
-            this.marketplaceSubscriptionStatus = Output.ofNullable(marketplaceSubscriptionStatus);
+            this.marketplaceSubscriptionStatus = Codegen.ofNullable(marketplaceSubscriptionStatus);
             return this;
         }
         public Builder monitoringStatus(@Nullable Output<Either<String,MonitoringStatus>> monitoringStatus) {
@@ -137,7 +138,7 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder monitoringStatus(@Nullable Either<String,MonitoringStatus> monitoringStatus) {
-            this.monitoringStatus = Output.ofNullable(monitoringStatus);
+            this.monitoringStatus = Codegen.ofNullable(monitoringStatus);
             return this;
         }
         public Builder planData(@Nullable Output<PlanDataArgs> planData) {
@@ -145,7 +146,7 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder planData(@Nullable PlanDataArgs planData) {
-            this.planData = Output.ofNullable(planData);
+            this.planData = Codegen.ofNullable(planData);
             return this;
         }
         public Builder userInfo(@Nullable Output<UserInfoArgs> userInfo) {
@@ -153,7 +154,7 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder userInfo(@Nullable UserInfoArgs userInfo) {
-            this.userInfo = Output.ofNullable(userInfo);
+            this.userInfo = Codegen.ofNullable(userInfo);
             return this;
         }        public MonitorPropertiesArgs build() {
             return new MonitorPropertiesArgs(logzOrganizationProperties, marketplaceSubscriptionStatus, monitoringStatus, planData, userInfo);

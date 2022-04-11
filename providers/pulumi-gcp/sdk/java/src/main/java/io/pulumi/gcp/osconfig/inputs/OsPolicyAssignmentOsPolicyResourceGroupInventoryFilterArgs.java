@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterArgs ex
       private final @Nullable Output<String> osVersion;
 
     public Output<String> getOsVersion() {
-        return this.osVersion == null ? Output.empty() : this.osVersion;
+        return this.osVersion == null ? Codegen.empty() : this.osVersion;
     }
 
     public OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterArgs(
@@ -44,8 +45,8 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterArgs ex
     }
 
     private OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterArgs() {
-        this.osShortName = Output.empty();
-        this.osVersion = Output.empty();
+        this.osShortName = Codegen.empty();
+        this.osVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterArgs ex
             return this;
         }
         public Builder osVersion(@Nullable String osVersion) {
-            this.osVersion = Output.ofNullable(osVersion);
+            this.osVersion = Codegen.ofNullable(osVersion);
             return this;
         }        public OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterArgs(osShortName, osVersion);

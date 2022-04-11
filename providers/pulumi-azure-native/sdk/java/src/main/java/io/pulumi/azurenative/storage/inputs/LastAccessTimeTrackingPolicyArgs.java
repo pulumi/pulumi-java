@@ -7,6 +7,7 @@ import io.pulumi.azurenative.storage.enums.Name;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -31,7 +32,7 @@ public final class LastAccessTimeTrackingPolicyArgs extends io.pulumi.resources.
       private final @Nullable Output<List<String>> blobType;
 
     public Output<List<String>> getBlobType() {
-        return this.blobType == null ? Output.empty() : this.blobType;
+        return this.blobType == null ? Codegen.empty() : this.blobType;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class LastAccessTimeTrackingPolicyArgs extends io.pulumi.resources.
       private final @Nullable Output<Either<String,Name>> name;
 
     public Output<Either<String,Name>> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class LastAccessTimeTrackingPolicyArgs extends io.pulumi.resources.
       private final @Nullable Output<Integer> trackingGranularityInDays;
 
     public Output<Integer> getTrackingGranularityInDays() {
-        return this.trackingGranularityInDays == null ? Output.empty() : this.trackingGranularityInDays;
+        return this.trackingGranularityInDays == null ? Codegen.empty() : this.trackingGranularityInDays;
     }
 
     public LastAccessTimeTrackingPolicyArgs(
@@ -79,10 +80,10 @@ public final class LastAccessTimeTrackingPolicyArgs extends io.pulumi.resources.
     }
 
     private LastAccessTimeTrackingPolicyArgs() {
-        this.blobType = Output.empty();
-        this.enable = Output.empty();
-        this.name = Output.empty();
-        this.trackingGranularityInDays = Output.empty();
+        this.blobType = Codegen.empty();
+        this.enable = Codegen.empty();
+        this.name = Codegen.empty();
+        this.trackingGranularityInDays = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class LastAccessTimeTrackingPolicyArgs extends io.pulumi.resources.
             return this;
         }
         public Builder blobType(@Nullable List<String> blobType) {
-            this.blobType = Output.ofNullable(blobType);
+            this.blobType = Codegen.ofNullable(blobType);
             return this;
         }
         public Builder blobType(String... blobType) {
@@ -135,7 +136,7 @@ public final class LastAccessTimeTrackingPolicyArgs extends io.pulumi.resources.
             return this;
         }
         public Builder name(@Nullable Either<String,Name> name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder trackingGranularityInDays(@Nullable Output<Integer> trackingGranularityInDays) {
@@ -143,7 +144,7 @@ public final class LastAccessTimeTrackingPolicyArgs extends io.pulumi.resources.
             return this;
         }
         public Builder trackingGranularityInDays(@Nullable Integer trackingGranularityInDays) {
-            this.trackingGranularityInDays = Output.ofNullable(trackingGranularityInDays);
+            this.trackingGranularityInDays = Codegen.ofNullable(trackingGranularityInDays);
             return this;
         }        public LastAccessTimeTrackingPolicyArgs build() {
             return new LastAccessTimeTrackingPolicyArgs(blobType, enable, name, trackingGranularityInDays);

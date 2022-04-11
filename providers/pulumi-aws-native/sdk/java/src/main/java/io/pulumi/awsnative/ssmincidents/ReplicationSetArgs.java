@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ssmincidents;
 import io.pulumi.awsnative.ssmincidents.inputs.ReplicationSetReplicationRegionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ public final class ReplicationSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> deletionProtected;
 
     public Output<Boolean> getDeletionProtected() {
-        return this.deletionProtected == null ? Output.empty() : this.deletionProtected;
+        return this.deletionProtected == null ? Codegen.empty() : this.deletionProtected;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class ReplicationSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReplicationSetArgs() {
-        this.deletionProtected = Output.empty();
-        this.regions = Output.empty();
+        this.deletionProtected = Codegen.empty();
+        this.regions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -73,7 +74,7 @@ public final class ReplicationSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deletionProtected(@Nullable Boolean deletionProtected) {
-            this.deletionProtected = Output.ofNullable(deletionProtected);
+            this.deletionProtected = Codegen.ofNullable(deletionProtected);
             return this;
         }
         public Builder regions(Output<List<ReplicationSetReplicationRegionArgs>> regions) {

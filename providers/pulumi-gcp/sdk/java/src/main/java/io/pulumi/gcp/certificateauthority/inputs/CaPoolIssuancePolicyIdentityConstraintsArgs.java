@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyIdentityConstraintsCelExpressionArgs;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -50,7 +51,7 @@ public final class CaPoolIssuancePolicyIdentityConstraintsArgs extends io.pulumi
       private final @Nullable Output<CaPoolIssuancePolicyIdentityConstraintsCelExpressionArgs> celExpression;
 
     public Output<CaPoolIssuancePolicyIdentityConstraintsCelExpressionArgs> getCelExpression() {
-        return this.celExpression == null ? Output.empty() : this.celExpression;
+        return this.celExpression == null ? Codegen.empty() : this.celExpression;
     }
 
     public CaPoolIssuancePolicyIdentityConstraintsArgs(
@@ -63,9 +64,9 @@ public final class CaPoolIssuancePolicyIdentityConstraintsArgs extends io.pulumi
     }
 
     private CaPoolIssuancePolicyIdentityConstraintsArgs() {
-        this.allowSubjectAltNamesPassthrough = Output.empty();
-        this.allowSubjectPassthrough = Output.empty();
-        this.celExpression = Output.empty();
+        this.allowSubjectAltNamesPassthrough = Codegen.empty();
+        this.allowSubjectPassthrough = Codegen.empty();
+        this.celExpression = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class CaPoolIssuancePolicyIdentityConstraintsArgs extends io.pulumi
             return this;
         }
         public Builder celExpression(@Nullable CaPoolIssuancePolicyIdentityConstraintsCelExpressionArgs celExpression) {
-            this.celExpression = Output.ofNullable(celExpression);
+            this.celExpression = Codegen.ofNullable(celExpression);
             return this;
         }        public CaPoolIssuancePolicyIdentityConstraintsArgs build() {
             return new CaPoolIssuancePolicyIdentityConstraintsArgs(allowSubjectAltNamesPassthrough, allowSubjectPassthrough, celExpression);

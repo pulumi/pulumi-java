@@ -6,6 +6,7 @@ package io.pulumi.azurenative.cache;
 import io.pulumi.azurenative.cache.enums.ReplicationRole;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -45,7 +46,7 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> linkedServerName;
 
     public Output<String> getLinkedServerName() {
-        return this.linkedServerName == null ? Output.empty() : this.linkedServerName;
+        return this.linkedServerName == null ? Codegen.empty() : this.linkedServerName;
     }
 
     /**
@@ -97,12 +98,12 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LinkedServerArgs() {
-        this.linkedRedisCacheId = Output.empty();
-        this.linkedRedisCacheLocation = Output.empty();
-        this.linkedServerName = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverRole = Output.empty();
+        this.linkedRedisCacheId = Codegen.empty();
+        this.linkedRedisCacheLocation = Codegen.empty();
+        this.linkedServerName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverRole = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder linkedServerName(@Nullable String linkedServerName) {
-            this.linkedServerName = Output.ofNullable(linkedServerName);
+            this.linkedServerName = Codegen.ofNullable(linkedServerName);
             return this;
         }
         public Builder name(Output<String> name) {

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.wisdom.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class KnowledgeBaseRenderingConfigurationArgs extends io.pulumi.res
       private final @Nullable Output<String> templateUri;
 
     public Output<String> getTemplateUri() {
-        return this.templateUri == null ? Output.empty() : this.templateUri;
+        return this.templateUri == null ? Codegen.empty() : this.templateUri;
     }
 
     public KnowledgeBaseRenderingConfigurationArgs(@Nullable Output<String> templateUri) {
@@ -26,7 +27,7 @@ public final class KnowledgeBaseRenderingConfigurationArgs extends io.pulumi.res
     }
 
     private KnowledgeBaseRenderingConfigurationArgs() {
-        this.templateUri = Output.empty();
+        this.templateUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class KnowledgeBaseRenderingConfigurationArgs extends io.pulumi.res
             return this;
         }
         public Builder templateUri(@Nullable String templateUri) {
-            this.templateUri = Output.ofNullable(templateUri);
+            this.templateUri = Codegen.ofNullable(templateUri);
             return this;
         }        public KnowledgeBaseRenderingConfigurationArgs build() {
             return new KnowledgeBaseRenderingConfigurationArgs(templateUri);

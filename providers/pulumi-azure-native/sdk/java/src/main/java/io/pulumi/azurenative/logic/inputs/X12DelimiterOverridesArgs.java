@@ -6,6 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.enums.SegmentTerminatorSuffix;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -51,7 +52,7 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> messageId;
 
     public Output<String> getMessageId() {
-        return this.messageId == null ? Output.empty() : this.messageId;
+        return this.messageId == null ? Codegen.empty() : this.messageId;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> protocolVersion;
 
     public Output<String> getProtocolVersion() {
-        return this.protocolVersion == null ? Output.empty() : this.protocolVersion;
+        return this.protocolVersion == null ? Codegen.empty() : this.protocolVersion;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> targetNamespace;
 
     public Output<String> getTargetNamespace() {
-        return this.targetNamespace == null ? Output.empty() : this.targetNamespace;
+        return this.targetNamespace == null ? Codegen.empty() : this.targetNamespace;
     }
 
     public X12DelimiterOverridesArgs(
@@ -142,15 +143,15 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
     }
 
     private X12DelimiterOverridesArgs() {
-        this.componentSeparator = Output.empty();
-        this.dataElementSeparator = Output.empty();
-        this.messageId = Output.empty();
-        this.protocolVersion = Output.empty();
-        this.replaceCharacter = Output.empty();
-        this.replaceSeparatorsInPayload = Output.empty();
-        this.segmentTerminator = Output.empty();
-        this.segmentTerminatorSuffix = Output.empty();
-        this.targetNamespace = Output.empty();
+        this.componentSeparator = Codegen.empty();
+        this.dataElementSeparator = Codegen.empty();
+        this.messageId = Codegen.empty();
+        this.protocolVersion = Codegen.empty();
+        this.replaceCharacter = Codegen.empty();
+        this.replaceSeparatorsInPayload = Codegen.empty();
+        this.segmentTerminator = Codegen.empty();
+        this.segmentTerminatorSuffix = Codegen.empty();
+        this.targetNamespace = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -210,7 +211,7 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder messageId(@Nullable String messageId) {
-            this.messageId = Output.ofNullable(messageId);
+            this.messageId = Codegen.ofNullable(messageId);
             return this;
         }
         public Builder protocolVersion(@Nullable Output<String> protocolVersion) {
@@ -218,7 +219,7 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder protocolVersion(@Nullable String protocolVersion) {
-            this.protocolVersion = Output.ofNullable(protocolVersion);
+            this.protocolVersion = Codegen.ofNullable(protocolVersion);
             return this;
         }
         public Builder replaceCharacter(Output<Integer> replaceCharacter) {
@@ -258,7 +259,7 @@ public final class X12DelimiterOverridesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder targetNamespace(@Nullable String targetNamespace) {
-            this.targetNamespace = Output.ofNullable(targetNamespace);
+            this.targetNamespace = Codegen.ofNullable(targetNamespace);
             return this;
         }        public X12DelimiterOverridesArgs build() {
             return new X12DelimiterOverridesArgs(componentSeparator, dataElementSeparator, messageId, protocolVersion, replaceCharacter, replaceSeparatorsInPayload, segmentTerminator, segmentTerminatorSuffix, targetNamespace);

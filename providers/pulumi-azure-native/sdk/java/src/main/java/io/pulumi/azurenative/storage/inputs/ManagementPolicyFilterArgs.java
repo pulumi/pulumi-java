@@ -6,6 +6,7 @@ package io.pulumi.azurenative.storage.inputs;
 import io.pulumi.azurenative.storage.inputs.TagFilterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class ManagementPolicyFilterArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<TagFilterArgs>> blobIndexMatch;
 
     public Output<List<TagFilterArgs>> getBlobIndexMatch() {
-        return this.blobIndexMatch == null ? Output.empty() : this.blobIndexMatch;
+        return this.blobIndexMatch == null ? Codegen.empty() : this.blobIndexMatch;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ManagementPolicyFilterArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<String>> prefixMatch;
 
     public Output<List<String>> getPrefixMatch() {
-        return this.prefixMatch == null ? Output.empty() : this.prefixMatch;
+        return this.prefixMatch == null ? Codegen.empty() : this.prefixMatch;
     }
 
     public ManagementPolicyFilterArgs(
@@ -63,9 +64,9 @@ public final class ManagementPolicyFilterArgs extends io.pulumi.resources.Resour
     }
 
     private ManagementPolicyFilterArgs() {
-        this.blobIndexMatch = Output.empty();
-        this.blobTypes = Output.empty();
-        this.prefixMatch = Output.empty();
+        this.blobIndexMatch = Codegen.empty();
+        this.blobTypes = Codegen.empty();
+        this.prefixMatch = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class ManagementPolicyFilterArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder blobIndexMatch(@Nullable List<TagFilterArgs> blobIndexMatch) {
-            this.blobIndexMatch = Output.ofNullable(blobIndexMatch);
+            this.blobIndexMatch = Codegen.ofNullable(blobIndexMatch);
             return this;
         }
         public Builder blobIndexMatch(TagFilterArgs... blobIndexMatch) {
@@ -119,7 +120,7 @@ public final class ManagementPolicyFilterArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder prefixMatch(@Nullable List<String> prefixMatch) {
-            this.prefixMatch = Output.ofNullable(prefixMatch);
+            this.prefixMatch = Codegen.ofNullable(prefixMatch);
             return this;
         }
         public Builder prefixMatch(String... prefixMatch) {

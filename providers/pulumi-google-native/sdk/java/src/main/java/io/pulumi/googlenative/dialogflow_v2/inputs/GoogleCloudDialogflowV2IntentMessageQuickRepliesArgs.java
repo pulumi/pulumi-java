@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs extends 
       private final @Nullable Output<List<String>> quickReplies;
 
     public Output<List<String>> getQuickReplies() {
-        return this.quickReplies == null ? Output.empty() : this.quickReplies;
+        return this.quickReplies == null ? Codegen.empty() : this.quickReplies;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs extends 
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     public GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs(
@@ -49,8 +50,8 @@ public final class GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs extends 
     }
 
     private GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs() {
-        this.quickReplies = Output.empty();
-        this.title = Output.empty();
+        this.quickReplies = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs extends 
             return this;
         }
         public Builder quickReplies(@Nullable List<String> quickReplies) {
-            this.quickReplies = Output.ofNullable(quickReplies);
+            this.quickReplies = Codegen.ofNullable(quickReplies);
             return this;
         }
         public Builder quickReplies(String... quickReplies) {
@@ -91,7 +92,7 @@ public final class GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs extends 
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }        public GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageQuickRepliesArgs(quickReplies, title);

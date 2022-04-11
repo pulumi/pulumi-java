@@ -5,6 +5,7 @@ package io.pulumi.aws.cognito;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,String>> attributeMapping;
 
     public Output<Map<String,String>> getAttributeMapping() {
-        return this.attributeMapping == null ? Output.empty() : this.attributeMapping;
+        return this.attributeMapping == null ? Codegen.empty() : this.attributeMapping;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> idpIdentifiers;
 
     public Output<List<String>> getIdpIdentifiers() {
-        return this.idpIdentifiers == null ? Output.empty() : this.idpIdentifiers;
+        return this.idpIdentifiers == null ? Codegen.empty() : this.idpIdentifiers;
     }
 
     /**
@@ -98,12 +99,12 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private IdentityProviderArgs() {
-        this.attributeMapping = Output.empty();
-        this.idpIdentifiers = Output.empty();
-        this.providerDetails = Output.empty();
-        this.providerName = Output.empty();
-        this.providerType = Output.empty();
-        this.userPoolId = Output.empty();
+        this.attributeMapping = Codegen.empty();
+        this.idpIdentifiers = Codegen.empty();
+        this.providerDetails = Codegen.empty();
+        this.providerName = Codegen.empty();
+        this.providerType = Codegen.empty();
+        this.userPoolId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder attributeMapping(@Nullable Map<String,String> attributeMapping) {
-            this.attributeMapping = Output.ofNullable(attributeMapping);
+            this.attributeMapping = Codegen.ofNullable(attributeMapping);
             return this;
         }
         public Builder idpIdentifiers(@Nullable Output<List<String>> idpIdentifiers) {
@@ -149,7 +150,7 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder idpIdentifiers(@Nullable List<String> idpIdentifiers) {
-            this.idpIdentifiers = Output.ofNullable(idpIdentifiers);
+            this.idpIdentifiers = Codegen.ofNullable(idpIdentifiers);
             return this;
         }
         public Builder idpIdentifiers(String... idpIdentifiers) {

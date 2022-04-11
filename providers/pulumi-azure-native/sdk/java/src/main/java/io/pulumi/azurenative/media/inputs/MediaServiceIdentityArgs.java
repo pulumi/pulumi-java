@@ -7,6 +7,7 @@ import io.pulumi.azurenative.media.enums.ManagedIdentityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,7 +32,7 @@ public final class MediaServiceIdentityArgs extends io.pulumi.resources.Resource
     }
 
     private MediaServiceIdentityArgs() {
-        this.type = Output.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

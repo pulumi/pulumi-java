@@ -6,6 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigArgs ext
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigArgs ext
       private final @Nullable Output<EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigArgs> notificationConfig;
 
     public Output<EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigArgs> getNotificationConfig() {
-        return this.notificationConfig == null ? Output.empty() : this.notificationConfig;
+        return this.notificationConfig == null ? Codegen.empty() : this.notificationConfig;
     }
 
     /**
@@ -58,9 +59,9 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigArgs ext
     }
 
     private EndpointConfigurationAsyncInferenceConfigOutputConfigArgs() {
-        this.kmsKeyId = Output.empty();
-        this.notificationConfig = Output.empty();
-        this.s3OutputPath = Output.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.notificationConfig = Codegen.empty();
+        this.s3OutputPath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigArgs ext
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder notificationConfig(@Nullable Output<EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigArgs> notificationConfig) {
@@ -100,7 +101,7 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigArgs ext
             return this;
         }
         public Builder notificationConfig(@Nullable EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfigArgs notificationConfig) {
-            this.notificationConfig = Output.ofNullable(notificationConfig);
+            this.notificationConfig = Codegen.ofNullable(notificationConfig);
             return this;
         }
         public Builder s3OutputPath(Output<String> s3OutputPath) {

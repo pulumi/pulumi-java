@@ -9,6 +9,7 @@ import io.pulumi.aws.pinpoint.inputs.BaiduChannelState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -108,7 +109,7 @@ public class BaiduChannel extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BaiduChannel(String name, BaiduChannelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:pinpoint/baiduChannel:BaiduChannel", name, args == null ? BaiduChannelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:pinpoint/baiduChannel:BaiduChannel", name, args == null ? BaiduChannelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BaiduChannel(String name, Output<String> id, @Nullable BaiduChannelState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

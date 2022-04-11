@@ -6,6 +6,7 @@ package io.pulumi.awsnative.evidently.inputs;
 import io.pulumi.awsnative.evidently.inputs.ProjectS3DestinationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,14 +24,14 @@ public final class ProjectDataDeliveryObjectArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> logGroup;
 
     public Output<String> getLogGroup() {
-        return this.logGroup == null ? Output.empty() : this.logGroup;
+        return this.logGroup == null ? Codegen.empty() : this.logGroup;
     }
 
     @Import(name="s3")
       private final @Nullable Output<ProjectS3DestinationArgs> s3;
 
     public Output<ProjectS3DestinationArgs> getS3() {
-        return this.s3 == null ? Output.empty() : this.s3;
+        return this.s3 == null ? Codegen.empty() : this.s3;
     }
 
     public ProjectDataDeliveryObjectArgs(
@@ -41,8 +42,8 @@ public final class ProjectDataDeliveryObjectArgs extends io.pulumi.resources.Res
     }
 
     private ProjectDataDeliveryObjectArgs() {
-        this.logGroup = Output.empty();
-        this.s3 = Output.empty();
+        this.logGroup = Codegen.empty();
+        this.s3 = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class ProjectDataDeliveryObjectArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder logGroup(@Nullable String logGroup) {
-            this.logGroup = Output.ofNullable(logGroup);
+            this.logGroup = Codegen.ofNullable(logGroup);
             return this;
         }
         public Builder s3(@Nullable Output<ProjectS3DestinationArgs> s3) {
@@ -80,7 +81,7 @@ public final class ProjectDataDeliveryObjectArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder s3(@Nullable ProjectS3DestinationArgs s3) {
-            this.s3 = Output.ofNullable(s3);
+            this.s3 = Codegen.ofNullable(s3);
             return this;
         }        public ProjectDataDeliveryObjectArgs build() {
             return new ProjectDataDeliveryObjectArgs(logGroup, s3);

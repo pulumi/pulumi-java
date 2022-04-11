@@ -5,6 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class AutomaticOSUpgradePolicyArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Boolean> disableAutomaticRollback;
 
     public Output<Boolean> getDisableAutomaticRollback() {
-        return this.disableAutomaticRollback == null ? Output.empty() : this.disableAutomaticRollback;
+        return this.disableAutomaticRollback == null ? Codegen.empty() : this.disableAutomaticRollback;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class AutomaticOSUpgradePolicyArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Boolean> enableAutomaticOSUpgrade;
 
     public Output<Boolean> getEnableAutomaticOSUpgrade() {
-        return this.enableAutomaticOSUpgrade == null ? Output.empty() : this.enableAutomaticOSUpgrade;
+        return this.enableAutomaticOSUpgrade == null ? Codegen.empty() : this.enableAutomaticOSUpgrade;
     }
 
     public AutomaticOSUpgradePolicyArgs(
@@ -48,8 +49,8 @@ public final class AutomaticOSUpgradePolicyArgs extends io.pulumi.resources.Reso
     }
 
     private AutomaticOSUpgradePolicyArgs() {
-        this.disableAutomaticRollback = Output.empty();
-        this.enableAutomaticOSUpgrade = Output.empty();
+        this.disableAutomaticRollback = Codegen.empty();
+        this.enableAutomaticOSUpgrade = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class AutomaticOSUpgradePolicyArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder disableAutomaticRollback(@Nullable Boolean disableAutomaticRollback) {
-            this.disableAutomaticRollback = Output.ofNullable(disableAutomaticRollback);
+            this.disableAutomaticRollback = Codegen.ofNullable(disableAutomaticRollback);
             return this;
         }
         public Builder enableAutomaticOSUpgrade(@Nullable Output<Boolean> enableAutomaticOSUpgrade) {
@@ -87,7 +88,7 @@ public final class AutomaticOSUpgradePolicyArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder enableAutomaticOSUpgrade(@Nullable Boolean enableAutomaticOSUpgrade) {
-            this.enableAutomaticOSUpgrade = Output.ofNullable(enableAutomaticOSUpgrade);
+            this.enableAutomaticOSUpgrade = Codegen.ofNullable(enableAutomaticOSUpgrade);
             return this;
         }        public AutomaticOSUpgradePolicyArgs build() {
             return new AutomaticOSUpgradePolicyArgs(disableAutomaticRollback, enableAutomaticOSUpgrade);

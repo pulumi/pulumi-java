@@ -6,6 +6,7 @@ package io.pulumi.aws.codebuild;
 import io.pulumi.aws.codebuild.inputs.ReportGroupExportConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class ReportGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> deleteReports;
 
     public Output<Boolean> getDeleteReports() {
-        return this.deleteReports == null ? Output.empty() : this.deleteReports;
+        return this.deleteReports == null ? Codegen.empty() : this.deleteReports;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class ReportGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class ReportGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -86,11 +87,11 @@ public final class ReportGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReportGroupArgs() {
-        this.deleteReports = Output.empty();
-        this.exportConfig = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
-        this.type = Output.empty();
+        this.deleteReports = Codegen.empty();
+        this.exportConfig = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class ReportGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deleteReports(@Nullable Boolean deleteReports) {
-            this.deleteReports = Output.ofNullable(deleteReports);
+            this.deleteReports = Codegen.ofNullable(deleteReports);
             return this;
         }
         public Builder exportConfig(Output<ReportGroupExportConfigArgs> exportConfig) {
@@ -142,7 +143,7 @@ public final class ReportGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -150,7 +151,7 @@ public final class ReportGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder type(Output<String> type) {

@@ -13,6 +13,7 @@ import io.pulumi.awsnative.lambda.outputs.FilterCriteriaProperties;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -315,7 +316,7 @@ public class EventSourceMapping extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EventSourceMapping(String name, EventSourceMappingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:lambda:EventSourceMapping", name, args == null ? EventSourceMappingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:lambda:EventSourceMapping", name, args == null ? EventSourceMappingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EventSourceMapping(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

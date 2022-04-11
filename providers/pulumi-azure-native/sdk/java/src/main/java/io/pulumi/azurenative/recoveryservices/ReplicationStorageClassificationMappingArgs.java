@@ -6,6 +6,7 @@ package io.pulumi.azurenative.recoveryservices;
 import io.pulumi.azurenative.recoveryservices.inputs.StorageMappingInputPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
       private final @Nullable Output<StorageMappingInputPropertiesArgs> properties;
 
     public Output<StorageMappingInputPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
       private final @Nullable Output<String> storageClassificationMappingName;
 
     public Output<String> getStorageClassificationMappingName() {
-        return this.storageClassificationMappingName == null ? Output.empty() : this.storageClassificationMappingName;
+        return this.storageClassificationMappingName == null ? Codegen.empty() : this.storageClassificationMappingName;
     }
 
     /**
@@ -97,12 +98,12 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
     }
 
     private ReplicationStorageClassificationMappingArgs() {
-        this.fabricName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
-        this.storageClassificationMappingName = Output.empty();
-        this.storageClassificationName = Output.empty();
+        this.fabricName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.storageClassificationMappingName = Codegen.empty();
+        this.storageClassificationName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
             return this;
         }
         public Builder properties(@Nullable StorageMappingInputPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -172,7 +173,7 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
             return this;
         }
         public Builder storageClassificationMappingName(@Nullable String storageClassificationMappingName) {
-            this.storageClassificationMappingName = Output.ofNullable(storageClassificationMappingName);
+            this.storageClassificationMappingName = Codegen.ofNullable(storageClassificationMappingName);
             return this;
         }
         public Builder storageClassificationName(Output<String> storageClassificationName) {

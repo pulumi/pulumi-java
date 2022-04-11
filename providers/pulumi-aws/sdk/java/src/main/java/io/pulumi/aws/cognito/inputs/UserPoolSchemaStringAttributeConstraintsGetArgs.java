@@ -5,6 +5,7 @@ package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class UserPoolSchemaStringAttributeConstraintsGetArgs extends io.pu
       private final @Nullable Output<String> maxLength;
 
     public Output<String> getMaxLength() {
-        return this.maxLength == null ? Output.empty() : this.maxLength;
+        return this.maxLength == null ? Codegen.empty() : this.maxLength;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class UserPoolSchemaStringAttributeConstraintsGetArgs extends io.pu
       private final @Nullable Output<String> minLength;
 
     public Output<String> getMinLength() {
-        return this.minLength == null ? Output.empty() : this.minLength;
+        return this.minLength == null ? Codegen.empty() : this.minLength;
     }
 
     public UserPoolSchemaStringAttributeConstraintsGetArgs(
@@ -44,8 +45,8 @@ public final class UserPoolSchemaStringAttributeConstraintsGetArgs extends io.pu
     }
 
     private UserPoolSchemaStringAttributeConstraintsGetArgs() {
-        this.maxLength = Output.empty();
-        this.minLength = Output.empty();
+        this.maxLength = Codegen.empty();
+        this.minLength = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class UserPoolSchemaStringAttributeConstraintsGetArgs extends io.pu
             return this;
         }
         public Builder maxLength(@Nullable String maxLength) {
-            this.maxLength = Output.ofNullable(maxLength);
+            this.maxLength = Codegen.ofNullable(maxLength);
             return this;
         }
         public Builder minLength(@Nullable Output<String> minLength) {
@@ -83,7 +84,7 @@ public final class UserPoolSchemaStringAttributeConstraintsGetArgs extends io.pu
             return this;
         }
         public Builder minLength(@Nullable String minLength) {
-            this.minLength = Output.ofNullable(minLength);
+            this.minLength = Codegen.ofNullable(minLength);
             return this;
         }        public UserPoolSchemaStringAttributeConstraintsGetArgs build() {
             return new UserPoolSchemaStringAttributeConstraintsGetArgs(maxLength, minLength);

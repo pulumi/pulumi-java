@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class NetworkInterfaceAttachmentGetArgs extends io.pulumi.resources
       private final @Nullable Output<String> attachmentId;
 
     public Output<String> getAttachmentId() {
-        return this.attachmentId == null ? Output.empty() : this.attachmentId;
+        return this.attachmentId == null ? Codegen.empty() : this.attachmentId;
     }
 
     /**
@@ -54,9 +55,9 @@ public final class NetworkInterfaceAttachmentGetArgs extends io.pulumi.resources
     }
 
     private NetworkInterfaceAttachmentGetArgs() {
-        this.attachmentId = Output.empty();
-        this.deviceIndex = Output.empty();
-        this.instance = Output.empty();
+        this.attachmentId = Codegen.empty();
+        this.deviceIndex = Codegen.empty();
+        this.instance = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class NetworkInterfaceAttachmentGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder attachmentId(@Nullable String attachmentId) {
-            this.attachmentId = Output.ofNullable(attachmentId);
+            this.attachmentId = Codegen.ofNullable(attachmentId);
             return this;
         }
         public Builder deviceIndex(Output<Integer> deviceIndex) {

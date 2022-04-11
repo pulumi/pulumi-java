@@ -9,6 +9,7 @@ import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementGetArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleVisibilityConfigGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -61,7 +62,7 @@ public final class RuleGroupRuleGetArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<RuleGroupRuleRuleLabelGetArgs>> ruleLabels;
 
     public Output<List<RuleGroupRuleRuleLabelGetArgs>> getRuleLabels() {
-        return this.ruleLabels == null ? Output.empty() : this.ruleLabels;
+        return this.ruleLabels == null ? Codegen.empty() : this.ruleLabels;
     }
 
     /**
@@ -102,12 +103,12 @@ public final class RuleGroupRuleGetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private RuleGroupRuleGetArgs() {
-        this.action = Output.empty();
-        this.name = Output.empty();
-        this.priority = Output.empty();
-        this.ruleLabels = Output.empty();
-        this.statement = Output.empty();
-        this.visibilityConfig = Output.empty();
+        this.action = Codegen.empty();
+        this.name = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.ruleLabels = Codegen.empty();
+        this.statement = Codegen.empty();
+        this.visibilityConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -169,7 +170,7 @@ public final class RuleGroupRuleGetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ruleLabels(@Nullable List<RuleGroupRuleRuleLabelGetArgs> ruleLabels) {
-            this.ruleLabels = Output.ofNullable(ruleLabels);
+            this.ruleLabels = Codegen.ofNullable(ruleLabels);
             return this;
         }
         public Builder ruleLabels(RuleGroupRuleRuleLabelGetArgs... ruleLabels) {

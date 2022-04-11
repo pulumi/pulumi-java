@@ -5,6 +5,7 @@ package io.pulumi.gcp.apigee;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class EnvGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> hostnames;
 
     public Output<List<String>> getHostnames() {
-        return this.hostnames == null ? Output.empty() : this.hostnames;
+        return this.hostnames == null ? Codegen.empty() : this.hostnames;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class EnvGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -59,9 +60,9 @@ public final class EnvGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EnvGroupArgs() {
-        this.hostnames = Output.empty();
-        this.name = Output.empty();
-        this.orgId = Output.empty();
+        this.hostnames = Codegen.empty();
+        this.name = Codegen.empty();
+        this.orgId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class EnvGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostnames(@Nullable List<String> hostnames) {
-            this.hostnames = Output.ofNullable(hostnames);
+            this.hostnames = Codegen.ofNullable(hostnames);
             return this;
         }
         public Builder hostnames(String... hostnames) {
@@ -104,7 +105,7 @@ public final class EnvGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder orgId(Output<String> orgId) {

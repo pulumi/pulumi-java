@@ -7,6 +7,7 @@ import io.pulumi.aws.directoryservice.inputs.DirectoryConnectSettingsArgs;
 import io.pulumi.aws.directoryservice.inputs.DirectoryVpcSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +27,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> alias;
 
     public Output<String> getAlias() {
-        return this.alias == null ? Output.empty() : this.alias;
+        return this.alias == null ? Codegen.empty() : this.alias;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DirectoryConnectSettingsArgs> connectSettings;
 
     public Output<DirectoryConnectSettingsArgs> getConnectSettings() {
-        return this.connectSettings == null ? Output.empty() : this.connectSettings;
+        return this.connectSettings == null ? Codegen.empty() : this.connectSettings;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> edition;
 
     public Output<String> getEdition() {
-        return this.edition == null ? Output.empty() : this.edition;
+        return this.edition == null ? Codegen.empty() : this.edition;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableSso;
 
     public Output<Boolean> getEnableSso() {
-        return this.enableSso == null ? Output.empty() : this.enableSso;
+        return this.enableSso == null ? Codegen.empty() : this.enableSso;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> shortName;
 
     public Output<String> getShortName() {
-        return this.shortName == null ? Output.empty() : this.shortName;
+        return this.shortName == null ? Codegen.empty() : this.shortName;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> size;
 
     public Output<String> getSize() {
-        return this.size == null ? Output.empty() : this.size;
+        return this.size == null ? Codegen.empty() : this.size;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DirectoryVpcSettingsArgs> vpcSettings;
 
     public Output<DirectoryVpcSettingsArgs> getVpcSettings() {
-        return this.vpcSettings == null ? Output.empty() : this.vpcSettings;
+        return this.vpcSettings == null ? Codegen.empty() : this.vpcSettings;
     }
 
     public DirectoryArgs(
@@ -178,18 +179,18 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DirectoryArgs() {
-        this.alias = Output.empty();
-        this.connectSettings = Output.empty();
-        this.description = Output.empty();
-        this.edition = Output.empty();
-        this.enableSso = Output.empty();
-        this.name = Output.empty();
-        this.password = Output.empty();
-        this.shortName = Output.empty();
-        this.size = Output.empty();
-        this.tags = Output.empty();
-        this.type = Output.empty();
-        this.vpcSettings = Output.empty();
+        this.alias = Codegen.empty();
+        this.connectSettings = Codegen.empty();
+        this.description = Codegen.empty();
+        this.edition = Codegen.empty();
+        this.enableSso = Codegen.empty();
+        this.name = Codegen.empty();
+        this.password = Codegen.empty();
+        this.shortName = Codegen.empty();
+        this.size = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.type = Codegen.empty();
+        this.vpcSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -239,7 +240,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder alias(@Nullable String alias) {
-            this.alias = Output.ofNullable(alias);
+            this.alias = Codegen.ofNullable(alias);
             return this;
         }
         public Builder connectSettings(@Nullable Output<DirectoryConnectSettingsArgs> connectSettings) {
@@ -247,7 +248,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder connectSettings(@Nullable DirectoryConnectSettingsArgs connectSettings) {
-            this.connectSettings = Output.ofNullable(connectSettings);
+            this.connectSettings = Codegen.ofNullable(connectSettings);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -255,7 +256,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder edition(@Nullable Output<String> edition) {
@@ -263,7 +264,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder edition(@Nullable String edition) {
-            this.edition = Output.ofNullable(edition);
+            this.edition = Codegen.ofNullable(edition);
             return this;
         }
         public Builder enableSso(@Nullable Output<Boolean> enableSso) {
@@ -271,7 +272,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableSso(@Nullable Boolean enableSso) {
-            this.enableSso = Output.ofNullable(enableSso);
+            this.enableSso = Codegen.ofNullable(enableSso);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -295,7 +296,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shortName(@Nullable String shortName) {
-            this.shortName = Output.ofNullable(shortName);
+            this.shortName = Codegen.ofNullable(shortName);
             return this;
         }
         public Builder size(@Nullable Output<String> size) {
@@ -303,7 +304,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder size(@Nullable String size) {
-            this.size = Output.ofNullable(size);
+            this.size = Codegen.ofNullable(size);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -311,7 +312,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -319,7 +320,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder vpcSettings(@Nullable Output<DirectoryVpcSettingsArgs> vpcSettings) {
@@ -327,7 +328,7 @@ public final class DirectoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcSettings(@Nullable DirectoryVpcSettingsArgs vpcSettings) {
-            this.vpcSettings = Output.ofNullable(vpcSettings);
+            this.vpcSettings = Codegen.ofNullable(vpcSettings);
             return this;
         }        public DirectoryArgs build() {
             return new DirectoryArgs(alias, connectSettings, description, edition, enableSso, name, password, shortName, size, tags, type, vpcSettings);

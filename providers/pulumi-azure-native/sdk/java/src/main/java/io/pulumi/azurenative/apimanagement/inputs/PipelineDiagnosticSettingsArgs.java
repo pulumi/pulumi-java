@@ -6,6 +6,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 import io.pulumi.azurenative.apimanagement.inputs.HttpMessageDiagnosticArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,7 +27,7 @@ public final class PipelineDiagnosticSettingsArgs extends io.pulumi.resources.Re
       private final @Nullable Output<HttpMessageDiagnosticArgs> request;
 
     public Output<HttpMessageDiagnosticArgs> getRequest() {
-        return this.request == null ? Output.empty() : this.request;
+        return this.request == null ? Codegen.empty() : this.request;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class PipelineDiagnosticSettingsArgs extends io.pulumi.resources.Re
       private final @Nullable Output<HttpMessageDiagnosticArgs> response;
 
     public Output<HttpMessageDiagnosticArgs> getResponse() {
-        return this.response == null ? Output.empty() : this.response;
+        return this.response == null ? Codegen.empty() : this.response;
     }
 
     public PipelineDiagnosticSettingsArgs(
@@ -48,8 +49,8 @@ public final class PipelineDiagnosticSettingsArgs extends io.pulumi.resources.Re
     }
 
     private PipelineDiagnosticSettingsArgs() {
-        this.request = Output.empty();
-        this.response = Output.empty();
+        this.request = Codegen.empty();
+        this.response = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class PipelineDiagnosticSettingsArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder request(@Nullable HttpMessageDiagnosticArgs request) {
-            this.request = Output.ofNullable(request);
+            this.request = Codegen.ofNullable(request);
             return this;
         }
         public Builder response(@Nullable Output<HttpMessageDiagnosticArgs> response) {
@@ -87,7 +88,7 @@ public final class PipelineDiagnosticSettingsArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder response(@Nullable HttpMessageDiagnosticArgs response) {
-            this.response = Output.ofNullable(response);
+            this.response = Codegen.ofNullable(response);
             return this;
         }        public PipelineDiagnosticSettingsArgs build() {
             return new PipelineDiagnosticSettingsArgs(request, response);

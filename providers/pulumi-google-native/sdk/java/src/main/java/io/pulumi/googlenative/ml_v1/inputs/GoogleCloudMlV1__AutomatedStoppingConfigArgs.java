@@ -5,6 +5,7 @@ package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigArgs;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs;
 import java.util.Objects;
@@ -23,14 +24,14 @@ public final class GoogleCloudMlV1__AutomatedStoppingConfigArgs extends io.pulum
       private final @Nullable Output<GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigArgs> decayCurveStoppingConfig;
 
     public Output<GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigArgs> getDecayCurveStoppingConfig() {
-        return this.decayCurveStoppingConfig == null ? Output.empty() : this.decayCurveStoppingConfig;
+        return this.decayCurveStoppingConfig == null ? Codegen.empty() : this.decayCurveStoppingConfig;
     }
 
     @Import(name="medianAutomatedStoppingConfig")
       private final @Nullable Output<GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs> medianAutomatedStoppingConfig;
 
     public Output<GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs> getMedianAutomatedStoppingConfig() {
-        return this.medianAutomatedStoppingConfig == null ? Output.empty() : this.medianAutomatedStoppingConfig;
+        return this.medianAutomatedStoppingConfig == null ? Codegen.empty() : this.medianAutomatedStoppingConfig;
     }
 
     public GoogleCloudMlV1__AutomatedStoppingConfigArgs(
@@ -41,8 +42,8 @@ public final class GoogleCloudMlV1__AutomatedStoppingConfigArgs extends io.pulum
     }
 
     private GoogleCloudMlV1__AutomatedStoppingConfigArgs() {
-        this.decayCurveStoppingConfig = Output.empty();
-        this.medianAutomatedStoppingConfig = Output.empty();
+        this.decayCurveStoppingConfig = Codegen.empty();
+        this.medianAutomatedStoppingConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class GoogleCloudMlV1__AutomatedStoppingConfigArgs extends io.pulum
             return this;
         }
         public Builder decayCurveStoppingConfig(@Nullable GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigArgs decayCurveStoppingConfig) {
-            this.decayCurveStoppingConfig = Output.ofNullable(decayCurveStoppingConfig);
+            this.decayCurveStoppingConfig = Codegen.ofNullable(decayCurveStoppingConfig);
             return this;
         }
         public Builder medianAutomatedStoppingConfig(@Nullable Output<GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs> medianAutomatedStoppingConfig) {
@@ -80,7 +81,7 @@ public final class GoogleCloudMlV1__AutomatedStoppingConfigArgs extends io.pulum
             return this;
         }
         public Builder medianAutomatedStoppingConfig(@Nullable GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs medianAutomatedStoppingConfig) {
-            this.medianAutomatedStoppingConfig = Output.ofNullable(medianAutomatedStoppingConfig);
+            this.medianAutomatedStoppingConfig = Codegen.ofNullable(medianAutomatedStoppingConfig);
             return this;
         }        public GoogleCloudMlV1__AutomatedStoppingConfigArgs build() {
             return new GoogleCloudMlV1__AutomatedStoppingConfigArgs(decayCurveStoppingConfig, medianAutomatedStoppingConfig);

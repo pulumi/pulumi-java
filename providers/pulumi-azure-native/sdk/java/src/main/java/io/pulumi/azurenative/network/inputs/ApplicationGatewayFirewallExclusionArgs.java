@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -60,9 +61,9 @@ public final class ApplicationGatewayFirewallExclusionArgs extends io.pulumi.res
     }
 
     private ApplicationGatewayFirewallExclusionArgs() {
-        this.matchVariable = Output.empty();
-        this.selector = Output.empty();
-        this.selectorMatchOperator = Output.empty();
+        this.matchVariable = Codegen.empty();
+        this.selector = Codegen.empty();
+        this.selectorMatchOperator = Codegen.empty();
     }
 
     public static Builder builder() {

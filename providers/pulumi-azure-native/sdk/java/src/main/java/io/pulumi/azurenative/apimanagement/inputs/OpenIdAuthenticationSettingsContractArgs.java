@@ -7,6 +7,7 @@ import io.pulumi.azurenative.apimanagement.enums.BearerTokenSendingMethods;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class OpenIdAuthenticationSettingsContractArgs extends io.pulumi.re
       private final @Nullable Output<List<Either<String,BearerTokenSendingMethods>>> bearerTokenSendingMethods;
 
     public Output<List<Either<String,BearerTokenSendingMethods>>> getBearerTokenSendingMethods() {
-        return this.bearerTokenSendingMethods == null ? Output.empty() : this.bearerTokenSendingMethods;
+        return this.bearerTokenSendingMethods == null ? Codegen.empty() : this.bearerTokenSendingMethods;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class OpenIdAuthenticationSettingsContractArgs extends io.pulumi.re
       private final @Nullable Output<String> openidProviderId;
 
     public Output<String> getOpenidProviderId() {
-        return this.openidProviderId == null ? Output.empty() : this.openidProviderId;
+        return this.openidProviderId == null ? Codegen.empty() : this.openidProviderId;
     }
 
     public OpenIdAuthenticationSettingsContractArgs(
@@ -51,8 +52,8 @@ public final class OpenIdAuthenticationSettingsContractArgs extends io.pulumi.re
     }
 
     private OpenIdAuthenticationSettingsContractArgs() {
-        this.bearerTokenSendingMethods = Output.empty();
-        this.openidProviderId = Output.empty();
+        this.bearerTokenSendingMethods = Codegen.empty();
+        this.openidProviderId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class OpenIdAuthenticationSettingsContractArgs extends io.pulumi.re
             return this;
         }
         public Builder bearerTokenSendingMethods(@Nullable List<Either<String,BearerTokenSendingMethods>> bearerTokenSendingMethods) {
-            this.bearerTokenSendingMethods = Output.ofNullable(bearerTokenSendingMethods);
+            this.bearerTokenSendingMethods = Codegen.ofNullable(bearerTokenSendingMethods);
             return this;
         }
         public Builder bearerTokenSendingMethods(Either<String,BearerTokenSendingMethods>... bearerTokenSendingMethods) {
@@ -93,7 +94,7 @@ public final class OpenIdAuthenticationSettingsContractArgs extends io.pulumi.re
             return this;
         }
         public Builder openidProviderId(@Nullable String openidProviderId) {
-            this.openidProviderId = Output.ofNullable(openidProviderId);
+            this.openidProviderId = Codegen.ofNullable(openidProviderId);
             return this;
         }        public OpenIdAuthenticationSettingsContractArgs build() {
             return new OpenIdAuthenticationSettingsContractArgs(bearerTokenSendingMethods, openidProviderId);

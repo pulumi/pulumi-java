@@ -8,6 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.DatasetReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +32,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Object> childItems;
 
     public Output<Object> getChildItems() {
-        return this.childItems == null ? Output.empty() : this.childItems;
+        return this.childItems == null ? Codegen.empty() : this.childItems;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
     public Output<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Output.empty() : this.dependsOn;
+        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Object> minimumSize;
 
     public Output<Object> getMinimumSize() {
-        return this.minimumSize == null ? Output.empty() : this.minimumSize;
+        return this.minimumSize == null ? Codegen.empty() : this.minimumSize;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Object> sleep;
 
     public Output<Object> getSleep() {
-        return this.sleep == null ? Output.empty() : this.sleep;
+        return this.sleep == null ? Codegen.empty() : this.sleep;
     }
 
     /**
@@ -108,7 +109,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Object> timeout;
 
     public Output<Object> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     /**
@@ -131,7 +132,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
     public Output<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Output.empty() : this.userProperties;
+        return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 
     public ValidationActivityArgs(
@@ -158,16 +159,16 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ValidationActivityArgs() {
-        this.childItems = Output.empty();
-        this.dataset = Output.empty();
-        this.dependsOn = Output.empty();
-        this.description = Output.empty();
-        this.minimumSize = Output.empty();
-        this.name = Output.empty();
-        this.sleep = Output.empty();
-        this.timeout = Output.empty();
-        this.type = Output.empty();
-        this.userProperties = Output.empty();
+        this.childItems = Codegen.empty();
+        this.dataset = Codegen.empty();
+        this.dependsOn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.minimumSize = Codegen.empty();
+        this.name = Codegen.empty();
+        this.sleep = Codegen.empty();
+        this.timeout = Codegen.empty();
+        this.type = Codegen.empty();
+        this.userProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -213,7 +214,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder childItems(@Nullable Object childItems) {
-            this.childItems = Output.ofNullable(childItems);
+            this.childItems = Codegen.ofNullable(childItems);
             return this;
         }
         public Builder dataset(Output<DatasetReferenceArgs> dataset) {
@@ -229,7 +230,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Output.ofNullable(dependsOn);
+            this.dependsOn = Codegen.ofNullable(dependsOn);
             return this;
         }
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
@@ -240,7 +241,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder minimumSize(@Nullable Output<Object> minimumSize) {
@@ -248,7 +249,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder minimumSize(@Nullable Object minimumSize) {
-            this.minimumSize = Output.ofNullable(minimumSize);
+            this.minimumSize = Codegen.ofNullable(minimumSize);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -264,7 +265,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder sleep(@Nullable Object sleep) {
-            this.sleep = Output.ofNullable(sleep);
+            this.sleep = Codegen.ofNullable(sleep);
             return this;
         }
         public Builder timeout(@Nullable Output<Object> timeout) {
@@ -272,7 +273,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder timeout(@Nullable Object timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -288,7 +289,7 @@ public final class ValidationActivityArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Output.ofNullable(userProperties);
+            this.userProperties = Codegen.ofNullable(userProperties);
             return this;
         }
         public Builder userProperties(UserPropertyArgs... userProperties) {

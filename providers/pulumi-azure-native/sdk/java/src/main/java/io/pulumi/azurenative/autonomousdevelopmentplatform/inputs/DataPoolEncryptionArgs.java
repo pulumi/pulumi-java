@@ -5,6 +5,7 @@ package io.pulumi.azurenative.autonomousdevelopmentplatform.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -48,7 +49,7 @@ public final class DataPoolEncryptionArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> keyVersion;
 
     public Output<String> getKeyVersion() {
-        return this.keyVersion == null ? Output.empty() : this.keyVersion;
+        return this.keyVersion == null ? Codegen.empty() : this.keyVersion;
     }
 
     /**
@@ -74,10 +75,10 @@ public final class DataPoolEncryptionArgs extends io.pulumi.resources.ResourceAr
     }
 
     private DataPoolEncryptionArgs() {
-        this.keyName = Output.empty();
-        this.keyVaultUri = Output.empty();
-        this.keyVersion = Output.empty();
-        this.userAssignedIdentity = Output.empty();
+        this.keyName = Codegen.empty();
+        this.keyVaultUri = Codegen.empty();
+        this.keyVersion = Codegen.empty();
+        this.userAssignedIdentity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class DataPoolEncryptionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder keyVersion(@Nullable String keyVersion) {
-            this.keyVersion = Output.ofNullable(keyVersion);
+            this.keyVersion = Codegen.ofNullable(keyVersion);
             return this;
         }
         public Builder userAssignedIdentity(Output<String> userAssignedIdentity) {

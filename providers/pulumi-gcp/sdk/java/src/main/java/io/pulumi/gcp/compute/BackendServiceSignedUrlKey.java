@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.BackendServiceSignedUrlKeyArgs;
 import io.pulumi.gcp.compute.inputs.BackendServiceSignedUrlKeyState;
@@ -118,7 +119,7 @@ public class BackendServiceSignedUrlKey extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public BackendServiceSignedUrlKey(String name, BackendServiceSignedUrlKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/backendServiceSignedUrlKey:BackendServiceSignedUrlKey", name, args == null ? BackendServiceSignedUrlKeyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/backendServiceSignedUrlKey:BackendServiceSignedUrlKey", name, args == null ? BackendServiceSignedUrlKeyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BackendServiceSignedUrlKey(String name, Output<String> id, @Nullable BackendServiceSignedUrlKeyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

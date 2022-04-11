@@ -6,6 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +23,7 @@ public final class DomainDefaultUserSettingsTensorBoardAppSettingsArgs extends i
       private final @Nullable Output<DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs> defaultResourceSpec;
 
     public Output<DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs> getDefaultResourceSpec() {
-        return this.defaultResourceSpec == null ? Output.empty() : this.defaultResourceSpec;
+        return this.defaultResourceSpec == null ? Codegen.empty() : this.defaultResourceSpec;
     }
 
     public DomainDefaultUserSettingsTensorBoardAppSettingsArgs(@Nullable Output<DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs> defaultResourceSpec) {
@@ -30,7 +31,7 @@ public final class DomainDefaultUserSettingsTensorBoardAppSettingsArgs extends i
     }
 
     private DomainDefaultUserSettingsTensorBoardAppSettingsArgs() {
-        this.defaultResourceSpec = Output.empty();
+        this.defaultResourceSpec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class DomainDefaultUserSettingsTensorBoardAppSettingsArgs extends i
             return this;
         }
         public Builder defaultResourceSpec(@Nullable DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs defaultResourceSpec) {
-            this.defaultResourceSpec = Output.ofNullable(defaultResourceSpec);
+            this.defaultResourceSpec = Codegen.ofNullable(defaultResourceSpec);
             return this;
         }        public DomainDefaultUserSettingsTensorBoardAppSettingsArgs build() {
             return new DomainDefaultUserSettingsTensorBoardAppSettingsArgs(defaultResourceSpec);

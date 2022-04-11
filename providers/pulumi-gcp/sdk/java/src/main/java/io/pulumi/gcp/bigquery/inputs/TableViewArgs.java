@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class TableViewArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> useLegacySql;
 
     public Output<Boolean> getUseLegacySql() {
-        return this.useLegacySql == null ? Output.empty() : this.useLegacySql;
+        return this.useLegacySql == null ? Codegen.empty() : this.useLegacySql;
     }
 
     public TableViewArgs(
@@ -46,8 +47,8 @@ public final class TableViewArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TableViewArgs() {
-        this.query = Output.empty();
-        this.useLegacySql = Output.empty();
+        this.query = Codegen.empty();
+        this.useLegacySql = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -85,7 +86,7 @@ public final class TableViewArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder useLegacySql(@Nullable Boolean useLegacySql) {
-            this.useLegacySql = Output.ofNullable(useLegacySql);
+            this.useLegacySql = Codegen.ofNullable(useLegacySql);
             return this;
         }        public TableViewArgs build() {
             return new TableViewArgs(query, useLegacySql);

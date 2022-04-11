@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> maxOccurs;
 
     public Output<Integer> getMaxOccurs() {
-        return this.maxOccurs == null ? Output.empty() : this.maxOccurs;
+        return this.maxOccurs == null ? Codegen.empty() : this.maxOccurs;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> minOccurs;
 
     public Output<Integer> getMinOccurs() {
-        return this.minOccurs == null ? Output.empty() : this.minOccurs;
+        return this.minOccurs == null ? Codegen.empty() : this.minOccurs;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> table;
 
     public Output<String> getTable() {
-        return this.table == null ? Output.empty() : this.table;
+        return this.table == null ? Codegen.empty() : this.table;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public FieldArgs(
@@ -88,11 +89,11 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FieldArgs() {
-        this.maxOccurs = Output.empty();
-        this.minOccurs = Output.empty();
-        this.name = Output.empty();
-        this.table = Output.empty();
-        this.type = Output.empty();
+        this.maxOccurs = Codegen.empty();
+        this.minOccurs = Codegen.empty();
+        this.name = Codegen.empty();
+        this.table = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxOccurs(@Nullable Integer maxOccurs) {
-            this.maxOccurs = Output.ofNullable(maxOccurs);
+            this.maxOccurs = Codegen.ofNullable(maxOccurs);
             return this;
         }
         public Builder minOccurs(@Nullable Output<Integer> minOccurs) {
@@ -136,7 +137,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minOccurs(@Nullable Integer minOccurs) {
-            this.minOccurs = Output.ofNullable(minOccurs);
+            this.minOccurs = Codegen.ofNullable(minOccurs);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -144,7 +145,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder table(@Nullable Output<String> table) {
@@ -152,7 +153,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder table(@Nullable String table) {
-            this.table = Output.ofNullable(table);
+            this.table = Codegen.ofNullable(table);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -160,7 +161,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public FieldArgs build() {
             return new FieldArgs(maxOccurs, minOccurs, name, table, type);

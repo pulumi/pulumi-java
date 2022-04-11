@@ -6,6 +6,7 @@ package io.pulumi.googlenative.policysimulator_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.policysimulator_v1beta1.FolderReplayArgs;
 import io.pulumi.googlenative.policysimulator_v1beta1.outputs.GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse;
@@ -101,7 +102,7 @@ public class FolderReplay extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FolderReplay(String name, FolderReplayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:policysimulator/v1beta1:FolderReplay", name, args == null ? FolderReplayArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:policysimulator/v1beta1:FolderReplay", name, args == null ? FolderReplayArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FolderReplay(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

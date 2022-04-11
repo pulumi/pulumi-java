@@ -9,6 +9,7 @@ import io.pulumi.aws.detective.inputs.GraphState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -100,7 +101,7 @@ public class Graph extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Graph(String name, @Nullable GraphArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:detective/graph:Graph", name, args == null ? GraphArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:detective/graph:Graph", name, args == null ? GraphArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Graph(String name, Output<String> id, @Nullable GraphState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

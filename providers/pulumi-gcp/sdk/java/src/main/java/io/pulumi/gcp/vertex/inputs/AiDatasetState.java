@@ -5,6 +5,7 @@ package io.pulumi.gcp.vertex.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.vertex.inputs.AiDatasetEncryptionSpecGetArgs;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AiDatasetEncryptionSpecGetArgs> encryptionSpec;
 
     public Output<AiDatasetEncryptionSpecGetArgs> getEncryptionSpec() {
-        return this.encryptionSpec == null ? Output.empty() : this.encryptionSpec;
+        return this.encryptionSpec == null ? Codegen.empty() : this.encryptionSpec;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> metadataSchemaUri;
 
     public Output<String> getMetadataSchemaUri() {
-        return this.metadataSchemaUri == null ? Output.empty() : this.metadataSchemaUri;
+        return this.metadataSchemaUri == null ? Codegen.empty() : this.metadataSchemaUri;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {
-        return this.updateTime == null ? Output.empty() : this.updateTime;
+        return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
     public AiDatasetState(
@@ -141,15 +142,15 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AiDatasetState() {
-        this.createTime = Output.empty();
-        this.displayName = Output.empty();
-        this.encryptionSpec = Output.empty();
-        this.labels = Output.empty();
-        this.metadataSchemaUri = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.updateTime = Output.empty();
+        this.createTime = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.encryptionSpec = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.metadataSchemaUri = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.updateTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -193,7 +194,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -201,7 +202,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder encryptionSpec(@Nullable Output<AiDatasetEncryptionSpecGetArgs> encryptionSpec) {
@@ -209,7 +210,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptionSpec(@Nullable AiDatasetEncryptionSpecGetArgs encryptionSpec) {
-            this.encryptionSpec = Output.ofNullable(encryptionSpec);
+            this.encryptionSpec = Codegen.ofNullable(encryptionSpec);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -217,7 +218,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder metadataSchemaUri(@Nullable Output<String> metadataSchemaUri) {
@@ -225,7 +226,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadataSchemaUri(@Nullable String metadataSchemaUri) {
-            this.metadataSchemaUri = Output.ofNullable(metadataSchemaUri);
+            this.metadataSchemaUri = Codegen.ofNullable(metadataSchemaUri);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -233,7 +234,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -241,7 +242,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -249,7 +250,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder updateTime(@Nullable Output<String> updateTime) {
@@ -257,7 +258,7 @@ public final class AiDatasetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Output.ofNullable(updateTime);
+            this.updateTime = Codegen.ofNullable(updateTime);
             return this;
         }        public AiDatasetState build() {
             return new AiDatasetState(createTime, displayName, encryptionSpec, labels, metadataSchemaUri, name, project, region, updateTime);

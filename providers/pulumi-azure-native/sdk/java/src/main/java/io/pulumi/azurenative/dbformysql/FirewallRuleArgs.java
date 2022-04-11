@@ -5,6 +5,7 @@ package io.pulumi.azurenative.dbformysql;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> firewallRuleName;
 
     public Output<String> getFirewallRuleName() {
-        return this.firewallRuleName == null ? Output.empty() : this.firewallRuleName;
+        return this.firewallRuleName == null ? Codegen.empty() : this.firewallRuleName;
     }
 
     /**
@@ -83,11 +84,11 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FirewallRuleArgs() {
-        this.endIpAddress = Output.empty();
-        this.firewallRuleName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverName = Output.empty();
-        this.startIpAddress = Output.empty();
+        this.endIpAddress = Codegen.empty();
+        this.firewallRuleName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.startIpAddress = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder firewallRuleName(@Nullable String firewallRuleName) {
-            this.firewallRuleName = Output.ofNullable(firewallRuleName);
+            this.firewallRuleName = Codegen.ofNullable(firewallRuleName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

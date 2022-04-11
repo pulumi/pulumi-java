@@ -7,6 +7,7 @@ import io.pulumi.aws.appmesh.inputs.GatewayRouteSpecGrpcRouteActionGetArgs;
 import io.pulumi.aws.appmesh.inputs.GatewayRouteSpecGrpcRouteMatchGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -44,8 +45,8 @@ public final class GatewayRouteSpecGrpcRouteGetArgs extends io.pulumi.resources.
     }
 
     private GatewayRouteSpecGrpcRouteGetArgs() {
-        this.action = Output.empty();
-        this.match = Output.empty();
+        this.action = Codegen.empty();
+        this.match = Codegen.empty();
     }
 
     public static Builder builder() {

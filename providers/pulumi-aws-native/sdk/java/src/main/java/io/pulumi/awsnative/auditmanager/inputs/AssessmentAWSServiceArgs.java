@@ -5,6 +5,7 @@ package io.pulumi.awsnative.auditmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class AssessmentAWSServiceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> serviceName;
 
     public Output<String> getServiceName() {
-        return this.serviceName == null ? Output.empty() : this.serviceName;
+        return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
     public AssessmentAWSServiceArgs(@Nullable Output<String> serviceName) {
@@ -30,7 +31,7 @@ public final class AssessmentAWSServiceArgs extends io.pulumi.resources.Resource
     }
 
     private AssessmentAWSServiceArgs() {
-        this.serviceName = Output.empty();
+        this.serviceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class AssessmentAWSServiceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Output.ofNullable(serviceName);
+            this.serviceName = Codegen.ofNullable(serviceName);
             return this;
         }        public AssessmentAWSServiceArgs build() {
             return new AssessmentAWSServiceArgs(serviceName);

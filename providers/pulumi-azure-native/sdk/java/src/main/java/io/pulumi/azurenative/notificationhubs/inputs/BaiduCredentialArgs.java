@@ -5,6 +5,7 @@ package io.pulumi.azurenative.notificationhubs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class BaiduCredentialArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> baiduApiKey;
 
     public Output<String> getBaiduApiKey() {
-        return this.baiduApiKey == null ? Output.empty() : this.baiduApiKey;
+        return this.baiduApiKey == null ? Codegen.empty() : this.baiduApiKey;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class BaiduCredentialArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> baiduEndPoint;
 
     public Output<String> getBaiduEndPoint() {
-        return this.baiduEndPoint == null ? Output.empty() : this.baiduEndPoint;
+        return this.baiduEndPoint == null ? Codegen.empty() : this.baiduEndPoint;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class BaiduCredentialArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> baiduSecretKey;
 
     public Output<String> getBaiduSecretKey() {
-        return this.baiduSecretKey == null ? Output.empty() : this.baiduSecretKey;
+        return this.baiduSecretKey == null ? Codegen.empty() : this.baiduSecretKey;
     }
 
     public BaiduCredentialArgs(
@@ -61,9 +62,9 @@ public final class BaiduCredentialArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private BaiduCredentialArgs() {
-        this.baiduApiKey = Output.empty();
-        this.baiduEndPoint = Output.empty();
-        this.baiduSecretKey = Output.empty();
+        this.baiduApiKey = Codegen.empty();
+        this.baiduEndPoint = Codegen.empty();
+        this.baiduSecretKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class BaiduCredentialArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder baiduApiKey(@Nullable String baiduApiKey) {
-            this.baiduApiKey = Output.ofNullable(baiduApiKey);
+            this.baiduApiKey = Codegen.ofNullable(baiduApiKey);
             return this;
         }
         public Builder baiduEndPoint(@Nullable Output<String> baiduEndPoint) {
@@ -103,7 +104,7 @@ public final class BaiduCredentialArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder baiduEndPoint(@Nullable String baiduEndPoint) {
-            this.baiduEndPoint = Output.ofNullable(baiduEndPoint);
+            this.baiduEndPoint = Codegen.ofNullable(baiduEndPoint);
             return this;
         }
         public Builder baiduSecretKey(@Nullable Output<String> baiduSecretKey) {
@@ -111,7 +112,7 @@ public final class BaiduCredentialArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder baiduSecretKey(@Nullable String baiduSecretKey) {
-            this.baiduSecretKey = Output.ofNullable(baiduSecretKey);
+            this.baiduSecretKey = Codegen.ofNullable(baiduSecretKey);
             return this;
         }        public BaiduCredentialArgs build() {
             return new BaiduCredentialArgs(baiduApiKey, baiduEndPoint, baiduSecretKey);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> associationAssignedCode;
 
     public Output<String> getAssociationAssignedCode() {
-        return this.associationAssignedCode == null ? Output.empty() : this.associationAssignedCode;
+        return this.associationAssignedCode == null ? Codegen.empty() : this.associationAssignedCode;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> senderApplicationId;
 
     public Output<String> getSenderApplicationId() {
-        return this.senderApplicationId == null ? Output.empty() : this.senderApplicationId;
+        return this.senderApplicationId == null ? Codegen.empty() : this.senderApplicationId;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> senderApplicationQualifier;
 
     public Output<String> getSenderApplicationQualifier() {
-        return this.senderApplicationQualifier == null ? Output.empty() : this.senderApplicationQualifier;
+        return this.senderApplicationQualifier == null ? Codegen.empty() : this.senderApplicationQualifier;
     }
 
     public EdifactSchemaReferenceArgs(
@@ -113,13 +114,13 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
     }
 
     private EdifactSchemaReferenceArgs() {
-        this.associationAssignedCode = Output.empty();
-        this.messageId = Output.empty();
-        this.messageRelease = Output.empty();
-        this.messageVersion = Output.empty();
-        this.schemaName = Output.empty();
-        this.senderApplicationId = Output.empty();
-        this.senderApplicationQualifier = Output.empty();
+        this.associationAssignedCode = Codegen.empty();
+        this.messageId = Codegen.empty();
+        this.messageRelease = Codegen.empty();
+        this.messageVersion = Codegen.empty();
+        this.schemaName = Codegen.empty();
+        this.senderApplicationId = Codegen.empty();
+        this.senderApplicationQualifier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder associationAssignedCode(@Nullable String associationAssignedCode) {
-            this.associationAssignedCode = Output.ofNullable(associationAssignedCode);
+            this.associationAssignedCode = Codegen.ofNullable(associationAssignedCode);
             return this;
         }
         public Builder messageId(Output<String> messageId) {
@@ -199,7 +200,7 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder senderApplicationId(@Nullable String senderApplicationId) {
-            this.senderApplicationId = Output.ofNullable(senderApplicationId);
+            this.senderApplicationId = Codegen.ofNullable(senderApplicationId);
             return this;
         }
         public Builder senderApplicationQualifier(@Nullable Output<String> senderApplicationQualifier) {
@@ -207,7 +208,7 @@ public final class EdifactSchemaReferenceArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder senderApplicationQualifier(@Nullable String senderApplicationQualifier) {
-            this.senderApplicationQualifier = Output.ofNullable(senderApplicationQualifier);
+            this.senderApplicationQualifier = Codegen.ofNullable(senderApplicationQualifier);
             return this;
         }        public EdifactSchemaReferenceArgs build() {
             return new EdifactSchemaReferenceArgs(associationAssignedCode, messageId, messageRelease, messageVersion, schemaName, senderApplicationId, senderApplicationQualifier);

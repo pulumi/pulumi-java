@@ -6,6 +6,7 @@ package io.pulumi.azurenative.storsimple;
 import io.pulumi.azurenative.storsimple.enums.Kind;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> encryptionKey;
 
     public Output<String> getEncryptionKey() {
-        return this.encryptionKey == null ? Output.empty() : this.encryptionKey;
+        return this.encryptionKey == null ? Codegen.empty() : this.encryptionKey;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> encryptionKeyThumbprint;
 
     public Output<String> getEncryptionKeyThumbprint() {
-        return this.encryptionKeyThumbprint == null ? Output.empty() : this.encryptionKeyThumbprint;
+        return this.encryptionKeyThumbprint == null ? Codegen.empty() : this.encryptionKeyThumbprint;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Kind> kind;
 
     public Output<Kind> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> portalCertificateThumbprint;
 
     public Output<String> getPortalCertificateThumbprint() {
-        return this.portalCertificateThumbprint == null ? Output.empty() : this.portalCertificateThumbprint;
+        return this.portalCertificateThumbprint == null ? Codegen.empty() : this.portalCertificateThumbprint;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public ManagerExtendedInfoArgs(
@@ -136,15 +137,15 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
     }
 
     private ManagerExtendedInfoArgs() {
-        this.algorithm = Output.empty();
-        this.encryptionKey = Output.empty();
-        this.encryptionKeyThumbprint = Output.empty();
-        this.integrityKey = Output.empty();
-        this.kind = Output.empty();
-        this.managerName = Output.empty();
-        this.portalCertificateThumbprint = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.version = Output.empty();
+        this.algorithm = Codegen.empty();
+        this.encryptionKey = Codegen.empty();
+        this.encryptionKeyThumbprint = Codegen.empty();
+        this.integrityKey = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.managerName = Codegen.empty();
+        this.portalCertificateThumbprint = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -196,7 +197,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder encryptionKey(@Nullable String encryptionKey) {
-            this.encryptionKey = Output.ofNullable(encryptionKey);
+            this.encryptionKey = Codegen.ofNullable(encryptionKey);
             return this;
         }
         public Builder encryptionKeyThumbprint(@Nullable Output<String> encryptionKeyThumbprint) {
@@ -204,7 +205,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder encryptionKeyThumbprint(@Nullable String encryptionKeyThumbprint) {
-            this.encryptionKeyThumbprint = Output.ofNullable(encryptionKeyThumbprint);
+            this.encryptionKeyThumbprint = Codegen.ofNullable(encryptionKeyThumbprint);
             return this;
         }
         public Builder integrityKey(Output<String> integrityKey) {
@@ -220,7 +221,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder kind(@Nullable Kind kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder managerName(Output<String> managerName) {
@@ -236,7 +237,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder portalCertificateThumbprint(@Nullable String portalCertificateThumbprint) {
-            this.portalCertificateThumbprint = Output.ofNullable(portalCertificateThumbprint);
+            this.portalCertificateThumbprint = Codegen.ofNullable(portalCertificateThumbprint);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -252,7 +253,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public ManagerExtendedInfoArgs build() {
             return new ManagerExtendedInfoArgs(algorithm, encryptionKey, encryptionKeyThumbprint, integrityKey, kind, managerName, portalCertificateThumbprint, resourceGroupName, version);

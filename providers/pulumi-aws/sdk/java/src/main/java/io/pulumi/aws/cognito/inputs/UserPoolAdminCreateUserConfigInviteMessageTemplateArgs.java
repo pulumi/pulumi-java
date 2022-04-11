@@ -5,6 +5,7 @@ package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplateArgs extend
       private final @Nullable Output<String> emailMessage;
 
     public Output<String> getEmailMessage() {
-        return this.emailMessage == null ? Output.empty() : this.emailMessage;
+        return this.emailMessage == null ? Codegen.empty() : this.emailMessage;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplateArgs extend
       private final @Nullable Output<String> emailSubject;
 
     public Output<String> getEmailSubject() {
-        return this.emailSubject == null ? Output.empty() : this.emailSubject;
+        return this.emailSubject == null ? Codegen.empty() : this.emailSubject;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplateArgs extend
       private final @Nullable Output<String> smsMessage;
 
     public Output<String> getSmsMessage() {
-        return this.smsMessage == null ? Output.empty() : this.smsMessage;
+        return this.smsMessage == null ? Codegen.empty() : this.smsMessage;
     }
 
     public UserPoolAdminCreateUserConfigInviteMessageTemplateArgs(
@@ -57,9 +58,9 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplateArgs extend
     }
 
     private UserPoolAdminCreateUserConfigInviteMessageTemplateArgs() {
-        this.emailMessage = Output.empty();
-        this.emailSubject = Output.empty();
-        this.smsMessage = Output.empty();
+        this.emailMessage = Codegen.empty();
+        this.emailSubject = Codegen.empty();
+        this.smsMessage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplateArgs extend
             return this;
         }
         public Builder emailMessage(@Nullable String emailMessage) {
-            this.emailMessage = Output.ofNullable(emailMessage);
+            this.emailMessage = Codegen.ofNullable(emailMessage);
             return this;
         }
         public Builder emailSubject(@Nullable Output<String> emailSubject) {
@@ -99,7 +100,7 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplateArgs extend
             return this;
         }
         public Builder emailSubject(@Nullable String emailSubject) {
-            this.emailSubject = Output.ofNullable(emailSubject);
+            this.emailSubject = Codegen.ofNullable(emailSubject);
             return this;
         }
         public Builder smsMessage(@Nullable Output<String> smsMessage) {
@@ -107,7 +108,7 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplateArgs extend
             return this;
         }
         public Builder smsMessage(@Nullable String smsMessage) {
-            this.smsMessage = Output.ofNullable(smsMessage);
+            this.smsMessage = Codegen.ofNullable(smsMessage);
             return this;
         }        public UserPoolAdminCreateUserConfigInviteMessageTemplateArgs build() {
             return new UserPoolAdminCreateUserConfigInviteMessageTemplateArgs(emailMessage, emailSubject, smsMessage);

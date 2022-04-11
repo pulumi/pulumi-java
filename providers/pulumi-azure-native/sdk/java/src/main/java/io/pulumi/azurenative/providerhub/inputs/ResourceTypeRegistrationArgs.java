@@ -6,6 +6,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 import io.pulumi.azurenative.providerhub.inputs.ResourceTypeRegistrationPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +19,7 @@ public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<ResourceTypeRegistrationPropertiesArgs> properties;
 
     public Output<ResourceTypeRegistrationPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     public ResourceTypeRegistrationArgs(@Nullable Output<ResourceTypeRegistrationPropertiesArgs> properties) {
@@ -26,7 +27,7 @@ public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.Reso
     }
 
     private ResourceTypeRegistrationArgs() {
-        this.properties = Output.empty();
+        this.properties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder properties(@Nullable ResourceTypeRegistrationPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }        public ResourceTypeRegistrationArgs build() {
             return new ResourceTypeRegistrationArgs(properties);

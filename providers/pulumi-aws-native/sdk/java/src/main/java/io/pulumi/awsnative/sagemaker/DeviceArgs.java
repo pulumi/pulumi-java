@@ -6,6 +6,7 @@ package io.pulumi.awsnative.sagemaker;
 import io.pulumi.awsnative.sagemaker.inputs.DeviceTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<io.pulumi.awsnative.sagemaker.inputs.DeviceArgs> device;
 
     public Output<io.pulumi.awsnative.sagemaker.inputs.DeviceArgs> getDevice() {
-        return this.device == null ? Output.empty() : this.device;
+        return this.device == null ? Codegen.empty() : this.device;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DeviceTagArgs>> tags;
 
     public Output<List<DeviceTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DeviceArgs(
@@ -59,9 +60,9 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeviceArgs() {
-        this.device = Output.empty();
-        this.deviceFleetName = Output.empty();
-        this.tags = Output.empty();
+        this.device = Codegen.empty();
+        this.deviceFleetName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder device(@Nullable io.pulumi.awsnative.sagemaker.inputs.DeviceArgs device) {
-            this.device = Output.ofNullable(device);
+            this.device = Codegen.ofNullable(device);
             return this;
         }
         public Builder deviceFleetName(Output<String> deviceFleetName) {
@@ -109,7 +110,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<DeviceTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(DeviceTagArgs... tags) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.datacatalog.inputs.TaxonomyIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ public final class TaxonomyIamBindingArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<TaxonomyIamBindingConditionArgs> condition;
 
     public Output<TaxonomyIamBindingConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="members", required=true)
@@ -39,14 +40,14 @@ public final class TaxonomyIamBindingArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -89,12 +90,12 @@ public final class TaxonomyIamBindingArgs extends io.pulumi.resources.ResourceAr
     }
 
     private TaxonomyIamBindingArgs() {
-        this.condition = Output.empty();
-        this.members = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.role = Output.empty();
-        this.taxonomy = Output.empty();
+        this.condition = Codegen.empty();
+        this.members = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.role = Codegen.empty();
+        this.taxonomy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class TaxonomyIamBindingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder condition(@Nullable TaxonomyIamBindingConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder members(Output<List<String>> members) {
@@ -151,7 +152,7 @@ public final class TaxonomyIamBindingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -159,7 +160,7 @@ public final class TaxonomyIamBindingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder role(Output<String> role) {

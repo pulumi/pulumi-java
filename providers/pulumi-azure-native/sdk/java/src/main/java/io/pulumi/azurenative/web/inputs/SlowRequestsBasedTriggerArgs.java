@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Integer> count;
 
     public Output<Integer> getCount() {
-        return this.count == null ? Output.empty() : this.count;
+        return this.count == null ? Codegen.empty() : this.count;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> timeInterval;
 
     public Output<String> getTimeInterval() {
-        return this.timeInterval == null ? Output.empty() : this.timeInterval;
+        return this.timeInterval == null ? Codegen.empty() : this.timeInterval;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> timeTaken;
 
     public Output<String> getTimeTaken() {
-        return this.timeTaken == null ? Output.empty() : this.timeTaken;
+        return this.timeTaken == null ? Codegen.empty() : this.timeTaken;
     }
 
     public SlowRequestsBasedTriggerArgs(
@@ -75,10 +76,10 @@ public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.Reso
     }
 
     private SlowRequestsBasedTriggerArgs() {
-        this.count = Output.empty();
-        this.path = Output.empty();
-        this.timeInterval = Output.empty();
-        this.timeTaken = Output.empty();
+        this.count = Codegen.empty();
+        this.path = Codegen.empty();
+        this.timeInterval = Codegen.empty();
+        this.timeTaken = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder count(@Nullable Integer count) {
-            this.count = Output.ofNullable(count);
+            this.count = Codegen.ofNullable(count);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -120,7 +121,7 @@ public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder timeInterval(@Nullable Output<String> timeInterval) {
@@ -128,7 +129,7 @@ public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder timeInterval(@Nullable String timeInterval) {
-            this.timeInterval = Output.ofNullable(timeInterval);
+            this.timeInterval = Codegen.ofNullable(timeInterval);
             return this;
         }
         public Builder timeTaken(@Nullable Output<String> timeTaken) {
@@ -136,7 +137,7 @@ public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder timeTaken(@Nullable String timeTaken) {
-            this.timeTaken = Output.ofNullable(timeTaken);
+            this.timeTaken = Codegen.ofNullable(timeTaken);
             return this;
         }        public SlowRequestsBasedTriggerArgs build() {
             return new SlowRequestsBasedTriggerArgs(count, path, timeInterval, timeTaken);

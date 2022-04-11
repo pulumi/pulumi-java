@@ -9,6 +9,7 @@ import io.pulumi.aws.detective.inputs.InvitationAccepterState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -65,7 +66,7 @@ public class InvitationAccepter extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public InvitationAccepter(String name, InvitationAccepterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:detective/invitationAccepter:InvitationAccepter", name, args == null ? InvitationAccepterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:detective/invitationAccepter:InvitationAccepter", name, args == null ? InvitationAccepterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private InvitationAccepter(String name, Output<String> id, @Nullable InvitationAccepterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.inputs.CallCredentialsArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.ChannelCredentialsArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class GrpcServiceConfigArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<CallCredentialsArgs> callCredentials;
 
     public Output<CallCredentialsArgs> getCallCredentials() {
-        return this.callCredentials == null ? Output.empty() : this.callCredentials;
+        return this.callCredentials == null ? Codegen.empty() : this.callCredentials;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class GrpcServiceConfigArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<ChannelCredentialsArgs> channelCredentials;
 
     public Output<ChannelCredentialsArgs> getChannelCredentials() {
-        return this.channelCredentials == null ? Output.empty() : this.channelCredentials;
+        return this.channelCredentials == null ? Codegen.empty() : this.channelCredentials;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class GrpcServiceConfigArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> targetUri;
 
     public Output<String> getTargetUri() {
-        return this.targetUri == null ? Output.empty() : this.targetUri;
+        return this.targetUri == null ? Codegen.empty() : this.targetUri;
     }
 
     public GrpcServiceConfigArgs(
@@ -63,9 +64,9 @@ public final class GrpcServiceConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     private GrpcServiceConfigArgs() {
-        this.callCredentials = Output.empty();
-        this.channelCredentials = Output.empty();
-        this.targetUri = Output.empty();
+        this.callCredentials = Codegen.empty();
+        this.channelCredentials = Codegen.empty();
+        this.targetUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class GrpcServiceConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder callCredentials(@Nullable CallCredentialsArgs callCredentials) {
-            this.callCredentials = Output.ofNullable(callCredentials);
+            this.callCredentials = Codegen.ofNullable(callCredentials);
             return this;
         }
         public Builder channelCredentials(@Nullable Output<ChannelCredentialsArgs> channelCredentials) {
@@ -105,7 +106,7 @@ public final class GrpcServiceConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder channelCredentials(@Nullable ChannelCredentialsArgs channelCredentials) {
-            this.channelCredentials = Output.ofNullable(channelCredentials);
+            this.channelCredentials = Codegen.ofNullable(channelCredentials);
             return this;
         }
         public Builder targetUri(@Nullable Output<String> targetUri) {
@@ -113,7 +114,7 @@ public final class GrpcServiceConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder targetUri(@Nullable String targetUri) {
-            this.targetUri = Output.ofNullable(targetUri);
+            this.targetUri = Codegen.ofNullable(targetUri);
             return this;
         }        public GrpcServiceConfigArgs build() {
             return new GrpcServiceConfigArgs(callCredentials, channelCredentials, targetUri);

@@ -5,6 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -56,9 +57,9 @@ public final class WorkteamMemberDefinitionCognitoMemberDefinitionArgs extends i
     }
 
     private WorkteamMemberDefinitionCognitoMemberDefinitionArgs() {
-        this.clientId = Output.empty();
-        this.userGroup = Output.empty();
-        this.userPool = Output.empty();
+        this.clientId = Codegen.empty();
+        this.userGroup = Codegen.empty();
+        this.userPool = Codegen.empty();
     }
 
     public static Builder builder() {

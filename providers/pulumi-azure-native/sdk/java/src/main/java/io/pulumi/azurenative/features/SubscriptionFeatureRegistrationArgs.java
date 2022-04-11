@@ -6,6 +6,7 @@ package io.pulumi.azurenative.features;
 import io.pulumi.azurenative.features.inputs.SubscriptionFeatureRegistrationPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,14 +24,14 @@ public final class SubscriptionFeatureRegistrationArgs extends io.pulumi.resourc
       private final @Nullable Output<String> featureName;
 
     public Output<String> getFeatureName() {
-        return this.featureName == null ? Output.empty() : this.featureName;
+        return this.featureName == null ? Codegen.empty() : this.featureName;
     }
 
     @Import(name="properties")
       private final @Nullable Output<SubscriptionFeatureRegistrationPropertiesArgs> properties;
 
     public Output<SubscriptionFeatureRegistrationPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -54,9 +55,9 @@ public final class SubscriptionFeatureRegistrationArgs extends io.pulumi.resourc
     }
 
     private SubscriptionFeatureRegistrationArgs() {
-        this.featureName = Output.empty();
-        this.properties = Output.empty();
-        this.providerNamespace = Output.empty();
+        this.featureName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.providerNamespace = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class SubscriptionFeatureRegistrationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder featureName(@Nullable String featureName) {
-            this.featureName = Output.ofNullable(featureName);
+            this.featureName = Codegen.ofNullable(featureName);
             return this;
         }
         public Builder properties(@Nullable Output<SubscriptionFeatureRegistrationPropertiesArgs> properties) {
@@ -96,7 +97,7 @@ public final class SubscriptionFeatureRegistrationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder properties(@Nullable SubscriptionFeatureRegistrationPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder providerNamespace(Output<String> providerNamespace) {

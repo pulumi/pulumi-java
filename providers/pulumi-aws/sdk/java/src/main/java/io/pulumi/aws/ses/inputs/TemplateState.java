@@ -5,6 +5,7 @@ package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class TemplateState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class TemplateState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> html;
 
     public Output<String> getHtml() {
-        return this.html == null ? Output.empty() : this.html;
+        return this.html == null ? Codegen.empty() : this.html;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class TemplateState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class TemplateState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> subject;
 
     public Output<String> getSubject() {
-        return this.subject == null ? Output.empty() : this.subject;
+        return this.subject == null ? Codegen.empty() : this.subject;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class TemplateState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> text;
 
     public Output<String> getText() {
-        return this.text == null ? Output.empty() : this.text;
+        return this.text == null ? Codegen.empty() : this.text;
     }
 
     public TemplateState(
@@ -83,11 +84,11 @@ public final class TemplateState extends io.pulumi.resources.ResourceArgs {
     }
 
     private TemplateState() {
-        this.arn = Output.empty();
-        this.html = Output.empty();
-        this.name = Output.empty();
-        this.subject = Output.empty();
-        this.text = Output.empty();
+        this.arn = Codegen.empty();
+        this.html = Codegen.empty();
+        this.name = Codegen.empty();
+        this.subject = Codegen.empty();
+        this.text = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class TemplateState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder html(@Nullable Output<String> html) {
@@ -131,7 +132,7 @@ public final class TemplateState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder html(@Nullable String html) {
-            this.html = Output.ofNullable(html);
+            this.html = Codegen.ofNullable(html);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -139,7 +140,7 @@ public final class TemplateState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder subject(@Nullable Output<String> subject) {
@@ -147,7 +148,7 @@ public final class TemplateState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subject(@Nullable String subject) {
-            this.subject = Output.ofNullable(subject);
+            this.subject = Codegen.ofNullable(subject);
             return this;
         }
         public Builder text(@Nullable Output<String> text) {
@@ -155,7 +156,7 @@ public final class TemplateState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder text(@Nullable String text) {
-            this.text = Output.ofNullable(text);
+            this.text = Codegen.ofNullable(text);
             return this;
         }        public TemplateState build() {
             return new TemplateState(arn, html, name, subject, text);

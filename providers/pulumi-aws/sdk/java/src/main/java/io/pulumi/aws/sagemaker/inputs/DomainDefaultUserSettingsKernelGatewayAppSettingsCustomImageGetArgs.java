@@ -5,6 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -45,7 +46,7 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageG
       private final @Nullable Output<Integer> imageVersionNumber;
 
     public Output<Integer> getImageVersionNumber() {
-        return this.imageVersionNumber == null ? Output.empty() : this.imageVersionNumber;
+        return this.imageVersionNumber == null ? Codegen.empty() : this.imageVersionNumber;
     }
 
     public DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageGetArgs(
@@ -58,9 +59,9 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageG
     }
 
     private DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageGetArgs() {
-        this.appImageConfigName = Output.empty();
-        this.imageName = Output.empty();
-        this.imageVersionNumber = Output.empty();
+        this.appImageConfigName = Codegen.empty();
+        this.imageName = Codegen.empty();
+        this.imageVersionNumber = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageG
             return this;
         }
         public Builder imageVersionNumber(@Nullable Integer imageVersionNumber) {
-            this.imageVersionNumber = Output.ofNullable(imageVersionNumber);
+            this.imageVersionNumber = Codegen.ofNullable(imageVersionNumber);
             return this;
         }        public DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageGetArgs build() {
             return new DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageGetArgs(appImageConfigName, imageName, imageVersionNumber);

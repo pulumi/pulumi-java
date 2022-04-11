@@ -5,6 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class BucketReplicationConfigurationRuleFilterArgs extends io.pulum
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class BucketReplicationConfigurationRuleFilterArgs extends io.pulum
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public BucketReplicationConfigurationRuleFilterArgs(
@@ -46,8 +47,8 @@ public final class BucketReplicationConfigurationRuleFilterArgs extends io.pulum
     }
 
     private BucketReplicationConfigurationRuleFilterArgs() {
-        this.prefix = Output.empty();
-        this.tags = Output.empty();
+        this.prefix = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class BucketReplicationConfigurationRuleFilterArgs extends io.pulum
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -85,7 +86,7 @@ public final class BucketReplicationConfigurationRuleFilterArgs extends io.pulum
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public BucketReplicationConfigurationRuleFilterArgs build() {
             return new BucketReplicationConfigurationRuleFilterArgs(prefix, tags);

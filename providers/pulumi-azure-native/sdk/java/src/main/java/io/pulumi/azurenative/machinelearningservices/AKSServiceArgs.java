@@ -13,6 +13,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.CreateServiceRequest
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -34,7 +35,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> aadAuthEnabled;
 
     public Output<Boolean> getAadAuthEnabled() {
-        return this.aadAuthEnabled == null ? Output.empty() : this.aadAuthEnabled;
+        return this.aadAuthEnabled == null ? Codegen.empty() : this.aadAuthEnabled;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> appInsightsEnabled;
 
     public Output<Boolean> getAppInsightsEnabled() {
-        return this.appInsightsEnabled == null ? Output.empty() : this.appInsightsEnabled;
+        return this.appInsightsEnabled == null ? Codegen.empty() : this.appInsightsEnabled;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> authEnabled;
 
     public Output<Boolean> getAuthEnabled() {
-        return this.authEnabled == null ? Output.empty() : this.authEnabled;
+        return this.authEnabled == null ? Codegen.empty() : this.authEnabled;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AKSServiceCreateRequestAutoScalerArgs> autoScaler;
 
     public Output<AKSServiceCreateRequestAutoScalerArgs> getAutoScaler() {
-        return this.autoScaler == null ? Output.empty() : this.autoScaler;
+        return this.autoScaler == null ? Codegen.empty() : this.autoScaler;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> computeName;
 
     public Output<String> getComputeName() {
-        return this.computeName == null ? Output.empty() : this.computeName;
+        return this.computeName == null ? Codegen.empty() : this.computeName;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ContainerResourceRequirementsArgs> containerResourceRequirements;
 
     public Output<ContainerResourceRequirementsArgs> getContainerResourceRequirements() {
-        return this.containerResourceRequirements == null ? Output.empty() : this.containerResourceRequirements;
+        return this.containerResourceRequirements == null ? Codegen.empty() : this.containerResourceRequirements;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AKSServiceCreateRequestDataCollectionArgs> dataCollection;
 
     public Output<AKSServiceCreateRequestDataCollectionArgs> getDataCollection() {
-        return this.dataCollection == null ? Output.empty() : this.dataCollection;
+        return this.dataCollection == null ? Codegen.empty() : this.dataCollection;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
 
     public Output<CreateServiceRequestEnvironmentImageRequestArgs> getEnvironmentImageRequest() {
-        return this.environmentImageRequest == null ? Output.empty() : this.environmentImageRequest;
+        return this.environmentImageRequest == null ? Codegen.empty() : this.environmentImageRequest;
     }
 
     /**
@@ -145,7 +146,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> isDefault;
 
     public Output<Boolean> getIsDefault() {
-        return this.isDefault == null ? Output.empty() : this.isDefault;
+        return this.isDefault == null ? Codegen.empty() : this.isDefault;
     }
 
     /**
@@ -156,7 +157,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<CreateServiceRequestKeysArgs> keys;
 
     public Output<CreateServiceRequestKeysArgs> getKeys() {
-        return this.keys == null ? Output.empty() : this.keys;
+        return this.keys == null ? Codegen.empty() : this.keys;
     }
 
     /**
@@ -167,7 +168,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> kvTags;
 
     public Output<Map<String,String>> getKvTags() {
-        return this.kvTags == null ? Output.empty() : this.kvTags;
+        return this.kvTags == null ? Codegen.empty() : this.kvTags;
     }
 
     /**
@@ -178,7 +179,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AKSServiceCreateRequestLivenessProbeRequirementsArgs> livenessProbeRequirements;
 
     public Output<AKSServiceCreateRequestLivenessProbeRequirementsArgs> getLivenessProbeRequirements() {
-        return this.livenessProbeRequirements == null ? Output.empty() : this.livenessProbeRequirements;
+        return this.livenessProbeRequirements == null ? Codegen.empty() : this.livenessProbeRequirements;
     }
 
     /**
@@ -189,7 +190,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -200,7 +201,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> maxConcurrentRequestsPerContainer;
 
     public Output<Integer> getMaxConcurrentRequestsPerContainer() {
-        return this.maxConcurrentRequestsPerContainer == null ? Output.empty() : this.maxConcurrentRequestsPerContainer;
+        return this.maxConcurrentRequestsPerContainer == null ? Codegen.empty() : this.maxConcurrentRequestsPerContainer;
     }
 
     /**
@@ -211,7 +212,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> maxQueueWaitMs;
 
     public Output<Integer> getMaxQueueWaitMs() {
-        return this.maxQueueWaitMs == null ? Output.empty() : this.maxQueueWaitMs;
+        return this.maxQueueWaitMs == null ? Codegen.empty() : this.maxQueueWaitMs;
     }
 
     /**
@@ -222,7 +223,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> namespace;
 
     public Output<String> getNamespace() {
-        return this.namespace == null ? Output.empty() : this.namespace;
+        return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
     /**
@@ -233,7 +234,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> numReplicas;
 
     public Output<Integer> getNumReplicas() {
-        return this.numReplicas == null ? Output.empty() : this.numReplicas;
+        return this.numReplicas == null ? Codegen.empty() : this.numReplicas;
     }
 
     /**
@@ -244,7 +245,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -266,7 +267,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> scoringTimeoutMs;
 
     public Output<Integer> getScoringTimeoutMs() {
-        return this.scoringTimeoutMs == null ? Output.empty() : this.scoringTimeoutMs;
+        return this.scoringTimeoutMs == null ? Codegen.empty() : this.scoringTimeoutMs;
     }
 
     /**
@@ -277,7 +278,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serviceName;
 
     public Output<String> getServiceName() {
-        return this.serviceName == null ? Output.empty() : this.serviceName;
+        return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
     /**
@@ -288,7 +289,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> trafficPercentile;
 
     public Output<Double> getTrafficPercentile() {
-        return this.trafficPercentile == null ? Output.empty() : this.trafficPercentile;
+        return this.trafficPercentile == null ? Codegen.empty() : this.trafficPercentile;
     }
 
     /**
@@ -299,7 +300,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,VariantType>> type;
 
     public Output<Either<String,VariantType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -369,32 +370,32 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AKSServiceArgs() {
-        this.aadAuthEnabled = Output.empty();
-        this.appInsightsEnabled = Output.empty();
-        this.authEnabled = Output.empty();
-        this.autoScaler = Output.empty();
-        this.computeName = Output.empty();
-        this.computeType = Output.empty();
-        this.containerResourceRequirements = Output.empty();
-        this.dataCollection = Output.empty();
-        this.description = Output.empty();
-        this.environmentImageRequest = Output.empty();
-        this.isDefault = Output.empty();
-        this.keys = Output.empty();
-        this.kvTags = Output.empty();
-        this.livenessProbeRequirements = Output.empty();
-        this.location = Output.empty();
-        this.maxConcurrentRequestsPerContainer = Output.empty();
-        this.maxQueueWaitMs = Output.empty();
-        this.namespace = Output.empty();
-        this.numReplicas = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.scoringTimeoutMs = Output.empty();
-        this.serviceName = Output.empty();
-        this.trafficPercentile = Output.empty();
-        this.type = Output.empty();
-        this.workspaceName = Output.empty();
+        this.aadAuthEnabled = Codegen.empty();
+        this.appInsightsEnabled = Codegen.empty();
+        this.authEnabled = Codegen.empty();
+        this.autoScaler = Codegen.empty();
+        this.computeName = Codegen.empty();
+        this.computeType = Codegen.empty();
+        this.containerResourceRequirements = Codegen.empty();
+        this.dataCollection = Codegen.empty();
+        this.description = Codegen.empty();
+        this.environmentImageRequest = Codegen.empty();
+        this.isDefault = Codegen.empty();
+        this.keys = Codegen.empty();
+        this.kvTags = Codegen.empty();
+        this.livenessProbeRequirements = Codegen.empty();
+        this.location = Codegen.empty();
+        this.maxConcurrentRequestsPerContainer = Codegen.empty();
+        this.maxQueueWaitMs = Codegen.empty();
+        this.namespace = Codegen.empty();
+        this.numReplicas = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.scoringTimeoutMs = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.trafficPercentile = Codegen.empty();
+        this.type = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -472,7 +473,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder aadAuthEnabled(@Nullable Boolean aadAuthEnabled) {
-            this.aadAuthEnabled = Output.ofNullable(aadAuthEnabled);
+            this.aadAuthEnabled = Codegen.ofNullable(aadAuthEnabled);
             return this;
         }
         public Builder appInsightsEnabled(@Nullable Output<Boolean> appInsightsEnabled) {
@@ -480,7 +481,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appInsightsEnabled(@Nullable Boolean appInsightsEnabled) {
-            this.appInsightsEnabled = Output.ofNullable(appInsightsEnabled);
+            this.appInsightsEnabled = Codegen.ofNullable(appInsightsEnabled);
             return this;
         }
         public Builder authEnabled(@Nullable Output<Boolean> authEnabled) {
@@ -488,7 +489,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authEnabled(@Nullable Boolean authEnabled) {
-            this.authEnabled = Output.ofNullable(authEnabled);
+            this.authEnabled = Codegen.ofNullable(authEnabled);
             return this;
         }
         public Builder autoScaler(@Nullable Output<AKSServiceCreateRequestAutoScalerArgs> autoScaler) {
@@ -496,7 +497,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoScaler(@Nullable AKSServiceCreateRequestAutoScalerArgs autoScaler) {
-            this.autoScaler = Output.ofNullable(autoScaler);
+            this.autoScaler = Codegen.ofNullable(autoScaler);
             return this;
         }
         public Builder computeName(@Nullable Output<String> computeName) {
@@ -504,7 +505,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder computeName(@Nullable String computeName) {
-            this.computeName = Output.ofNullable(computeName);
+            this.computeName = Codegen.ofNullable(computeName);
             return this;
         }
         public Builder computeType(Output<String> computeType) {
@@ -520,7 +521,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder containerResourceRequirements(@Nullable ContainerResourceRequirementsArgs containerResourceRequirements) {
-            this.containerResourceRequirements = Output.ofNullable(containerResourceRequirements);
+            this.containerResourceRequirements = Codegen.ofNullable(containerResourceRequirements);
             return this;
         }
         public Builder dataCollection(@Nullable Output<AKSServiceCreateRequestDataCollectionArgs> dataCollection) {
@@ -528,7 +529,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataCollection(@Nullable AKSServiceCreateRequestDataCollectionArgs dataCollection) {
-            this.dataCollection = Output.ofNullable(dataCollection);
+            this.dataCollection = Codegen.ofNullable(dataCollection);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -536,7 +537,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder environmentImageRequest(@Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest) {
@@ -544,7 +545,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder environmentImageRequest(@Nullable CreateServiceRequestEnvironmentImageRequestArgs environmentImageRequest) {
-            this.environmentImageRequest = Output.ofNullable(environmentImageRequest);
+            this.environmentImageRequest = Codegen.ofNullable(environmentImageRequest);
             return this;
         }
         public Builder isDefault(@Nullable Output<Boolean> isDefault) {
@@ -552,7 +553,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isDefault(@Nullable Boolean isDefault) {
-            this.isDefault = Output.ofNullable(isDefault);
+            this.isDefault = Codegen.ofNullable(isDefault);
             return this;
         }
         public Builder keys(@Nullable Output<CreateServiceRequestKeysArgs> keys) {
@@ -560,7 +561,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keys(@Nullable CreateServiceRequestKeysArgs keys) {
-            this.keys = Output.ofNullable(keys);
+            this.keys = Codegen.ofNullable(keys);
             return this;
         }
         public Builder kvTags(@Nullable Output<Map<String,String>> kvTags) {
@@ -568,7 +569,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kvTags(@Nullable Map<String,String> kvTags) {
-            this.kvTags = Output.ofNullable(kvTags);
+            this.kvTags = Codegen.ofNullable(kvTags);
             return this;
         }
         public Builder livenessProbeRequirements(@Nullable Output<AKSServiceCreateRequestLivenessProbeRequirementsArgs> livenessProbeRequirements) {
@@ -576,7 +577,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder livenessProbeRequirements(@Nullable AKSServiceCreateRequestLivenessProbeRequirementsArgs livenessProbeRequirements) {
-            this.livenessProbeRequirements = Output.ofNullable(livenessProbeRequirements);
+            this.livenessProbeRequirements = Codegen.ofNullable(livenessProbeRequirements);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -584,7 +585,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder maxConcurrentRequestsPerContainer(@Nullable Output<Integer> maxConcurrentRequestsPerContainer) {
@@ -592,7 +593,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxConcurrentRequestsPerContainer(@Nullable Integer maxConcurrentRequestsPerContainer) {
-            this.maxConcurrentRequestsPerContainer = Output.ofNullable(maxConcurrentRequestsPerContainer);
+            this.maxConcurrentRequestsPerContainer = Codegen.ofNullable(maxConcurrentRequestsPerContainer);
             return this;
         }
         public Builder maxQueueWaitMs(@Nullable Output<Integer> maxQueueWaitMs) {
@@ -600,7 +601,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxQueueWaitMs(@Nullable Integer maxQueueWaitMs) {
-            this.maxQueueWaitMs = Output.ofNullable(maxQueueWaitMs);
+            this.maxQueueWaitMs = Codegen.ofNullable(maxQueueWaitMs);
             return this;
         }
         public Builder namespace(@Nullable Output<String> namespace) {
@@ -608,7 +609,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Output.ofNullable(namespace);
+            this.namespace = Codegen.ofNullable(namespace);
             return this;
         }
         public Builder numReplicas(@Nullable Output<Integer> numReplicas) {
@@ -616,7 +617,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder numReplicas(@Nullable Integer numReplicas) {
-            this.numReplicas = Output.ofNullable(numReplicas);
+            this.numReplicas = Codegen.ofNullable(numReplicas);
             return this;
         }
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
@@ -624,7 +625,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -640,7 +641,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scoringTimeoutMs(@Nullable Integer scoringTimeoutMs) {
-            this.scoringTimeoutMs = Output.ofNullable(scoringTimeoutMs);
+            this.scoringTimeoutMs = Codegen.ofNullable(scoringTimeoutMs);
             return this;
         }
         public Builder serviceName(@Nullable Output<String> serviceName) {
@@ -648,7 +649,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Output.ofNullable(serviceName);
+            this.serviceName = Codegen.ofNullable(serviceName);
             return this;
         }
         public Builder trafficPercentile(@Nullable Output<Double> trafficPercentile) {
@@ -656,7 +657,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder trafficPercentile(@Nullable Double trafficPercentile) {
-            this.trafficPercentile = Output.ofNullable(trafficPercentile);
+            this.trafficPercentile = Codegen.ofNullable(trafficPercentile);
             return this;
         }
         public Builder type(@Nullable Output<Either<String,VariantType>> type) {
@@ -664,7 +665,7 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable Either<String,VariantType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

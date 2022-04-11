@@ -5,6 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class ThemeFontArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> fontFamily;
 
     public Output<String> getFontFamily() {
-        return this.fontFamily == null ? Output.empty() : this.fontFamily;
+        return this.fontFamily == null ? Codegen.empty() : this.fontFamily;
     }
 
     public ThemeFontArgs(@Nullable Output<String> fontFamily) {
@@ -26,7 +27,7 @@ public final class ThemeFontArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ThemeFontArgs() {
-        this.fontFamily = Output.empty();
+        this.fontFamily = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class ThemeFontArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fontFamily(@Nullable String fontFamily) {
-            this.fontFamily = Output.ofNullable(fontFamily);
+            this.fontFamily = Codegen.ofNullable(fontFamily);
             return this;
         }        public ThemeFontArgs build() {
             return new ThemeFontArgs(fontFamily);

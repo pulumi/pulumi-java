@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudscheduler_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudscheduler_v1beta1.inputs.AppEngineHttpTargetArgs;
 import io.pulumi.googlenative.cloudscheduler_v1beta1.inputs.HttpTargetArgs;
 import io.pulumi.googlenative.cloudscheduler_v1beta1.inputs.PubsubTargetArgs;
@@ -27,7 +28,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AppEngineHttpTargetArgs> appEngineHttpTarget;
 
     public Output<AppEngineHttpTargetArgs> getAppEngineHttpTarget() {
-        return this.appEngineHttpTarget == null ? Output.empty() : this.appEngineHttpTarget;
+        return this.appEngineHttpTarget == null ? Codegen.empty() : this.appEngineHttpTarget;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> attemptDeadline;
 
     public Output<String> getAttemptDeadline() {
-        return this.attemptDeadline == null ? Output.empty() : this.attemptDeadline;
+        return this.attemptDeadline == null ? Codegen.empty() : this.attemptDeadline;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<HttpTargetArgs> httpTarget;
 
     public Output<HttpTargetArgs> getHttpTarget() {
-        return this.httpTarget == null ? Output.empty() : this.httpTarget;
+        return this.httpTarget == null ? Codegen.empty() : this.httpTarget;
     }
 
     /**
@@ -71,14 +72,14 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> legacyAppEngineCron;
 
     public Output<Boolean> getLegacyAppEngineCron() {
-        return this.legacyAppEngineCron == null ? Output.empty() : this.legacyAppEngineCron;
+        return this.legacyAppEngineCron == null ? Codegen.empty() : this.legacyAppEngineCron;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -89,14 +90,14 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PubsubTargetArgs> pubsubTarget;
 
     public Output<PubsubTargetArgs> getPubsubTarget() {
-        return this.pubsubTarget == null ? Output.empty() : this.pubsubTarget;
+        return this.pubsubTarget == null ? Codegen.empty() : this.pubsubTarget;
     }
 
     /**
@@ -118,7 +119,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RetryConfigArgs> retryConfig;
 
     public Output<RetryConfigArgs> getRetryConfig() {
-        return this.retryConfig == null ? Output.empty() : this.retryConfig;
+        return this.retryConfig == null ? Codegen.empty() : this.retryConfig;
     }
 
     /**
@@ -129,7 +130,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> schedule;
 
     public Output<String> getSchedule() {
-        return this.schedule == null ? Output.empty() : this.schedule;
+        return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
     /**
@@ -140,7 +141,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> timeZone;
 
     public Output<String> getTimeZone() {
-        return this.timeZone == null ? Output.empty() : this.timeZone;
+        return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 
     public JobArgs(
@@ -171,18 +172,18 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobArgs() {
-        this.appEngineHttpTarget = Output.empty();
-        this.attemptDeadline = Output.empty();
-        this.description = Output.empty();
-        this.httpTarget = Output.empty();
-        this.legacyAppEngineCron = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.pubsubTarget = Output.empty();
-        this.retryConfig = Output.empty();
-        this.schedule = Output.empty();
-        this.timeZone = Output.empty();
+        this.appEngineHttpTarget = Codegen.empty();
+        this.attemptDeadline = Codegen.empty();
+        this.description = Codegen.empty();
+        this.httpTarget = Codegen.empty();
+        this.legacyAppEngineCron = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.pubsubTarget = Codegen.empty();
+        this.retryConfig = Codegen.empty();
+        this.schedule = Codegen.empty();
+        this.timeZone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -232,7 +233,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appEngineHttpTarget(@Nullable AppEngineHttpTargetArgs appEngineHttpTarget) {
-            this.appEngineHttpTarget = Output.ofNullable(appEngineHttpTarget);
+            this.appEngineHttpTarget = Codegen.ofNullable(appEngineHttpTarget);
             return this;
         }
         public Builder attemptDeadline(@Nullable Output<String> attemptDeadline) {
@@ -240,7 +241,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder attemptDeadline(@Nullable String attemptDeadline) {
-            this.attemptDeadline = Output.ofNullable(attemptDeadline);
+            this.attemptDeadline = Codegen.ofNullable(attemptDeadline);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -248,7 +249,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder httpTarget(@Nullable Output<HttpTargetArgs> httpTarget) {
@@ -256,7 +257,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder httpTarget(@Nullable HttpTargetArgs httpTarget) {
-            this.httpTarget = Output.ofNullable(httpTarget);
+            this.httpTarget = Codegen.ofNullable(httpTarget);
             return this;
         }
         public Builder legacyAppEngineCron(@Nullable Output<Boolean> legacyAppEngineCron) {
@@ -264,7 +265,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder legacyAppEngineCron(@Nullable Boolean legacyAppEngineCron) {
-            this.legacyAppEngineCron = Output.ofNullable(legacyAppEngineCron);
+            this.legacyAppEngineCron = Codegen.ofNullable(legacyAppEngineCron);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -272,7 +273,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -280,7 +281,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -288,7 +289,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder pubsubTarget(@Nullable Output<PubsubTargetArgs> pubsubTarget) {
@@ -296,7 +297,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pubsubTarget(@Nullable PubsubTargetArgs pubsubTarget) {
-            this.pubsubTarget = Output.ofNullable(pubsubTarget);
+            this.pubsubTarget = Codegen.ofNullable(pubsubTarget);
             return this;
         }
         public Builder retryConfig(@Nullable Output<RetryConfigArgs> retryConfig) {
@@ -304,7 +305,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retryConfig(@Nullable RetryConfigArgs retryConfig) {
-            this.retryConfig = Output.ofNullable(retryConfig);
+            this.retryConfig = Codegen.ofNullable(retryConfig);
             return this;
         }
         public Builder schedule(@Nullable Output<String> schedule) {
@@ -312,7 +313,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schedule(@Nullable String schedule) {
-            this.schedule = Output.ofNullable(schedule);
+            this.schedule = Codegen.ofNullable(schedule);
             return this;
         }
         public Builder timeZone(@Nullable Output<String> timeZone) {
@@ -320,7 +321,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Output.ofNullable(timeZone);
+            this.timeZone = Codegen.ofNullable(timeZone);
             return this;
         }        public JobArgs build() {
             return new JobArgs(appEngineHttpTarget, attemptDeadline, description, httpTarget, legacyAppEngineCron, location, name, project, pubsubTarget, retryConfig, schedule, timeZone);

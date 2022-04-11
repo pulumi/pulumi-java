@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -210,7 +211,7 @@ public class VirtualMachineScaleSetVMExtension extends io.pulumi.resources.Custo
      * @param options A bag of options that control this resource's behavior.
      */
     public VirtualMachineScaleSetVMExtension(String name, VirtualMachineScaleSetVMExtensionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:compute:VirtualMachineScaleSetVMExtension", name, args == null ? VirtualMachineScaleSetVMExtensionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:compute:VirtualMachineScaleSetVMExtension", name, args == null ? VirtualMachineScaleSetVMExtensionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VirtualMachineScaleSetVMExtension(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

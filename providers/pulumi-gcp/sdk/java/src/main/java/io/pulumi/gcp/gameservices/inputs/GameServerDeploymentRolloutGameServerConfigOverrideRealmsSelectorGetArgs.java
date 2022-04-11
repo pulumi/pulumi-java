@@ -5,6 +5,7 @@ package io.pulumi.gcp.gameservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideRealmsSele
       private final @Nullable Output<List<String>> realms;
 
     public Output<List<String>> getRealms() {
-        return this.realms == null ? Output.empty() : this.realms;
+        return this.realms == null ? Codegen.empty() : this.realms;
     }
 
     public GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorGetArgs(@Nullable Output<List<String>> realms) {
@@ -31,7 +32,7 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideRealmsSele
     }
 
     private GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorGetArgs() {
-        this.realms = Output.empty();
+        this.realms = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideRealmsSele
             return this;
         }
         public Builder realms(@Nullable List<String> realms) {
-            this.realms = Output.ofNullable(realms);
+            this.realms = Codegen.ofNullable(realms);
             return this;
         }
         public Builder realms(String... realms) {

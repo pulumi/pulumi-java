@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearning.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,7 +34,7 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CommitmentPlanArgs() {
-        this.id = Output.empty();
+        this.id = Codegen.empty();
     }
 
     public static Builder builder() {

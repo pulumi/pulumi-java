@@ -5,6 +5,7 @@ package io.pulumi.aws.lakeformation.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class PermissionsDatabaseGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> catalogId;
 
     public Output<String> getCatalogId() {
-        return this.catalogId == null ? Output.empty() : this.catalogId;
+        return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class PermissionsDatabaseGetArgs extends io.pulumi.resources.Resour
     }
 
     private PermissionsDatabaseGetArgs() {
-        this.catalogId = Output.empty();
-        this.name = Output.empty();
+        this.catalogId = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class PermissionsDatabaseGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Output.ofNullable(catalogId);
+            this.catalogId = Codegen.ofNullable(catalogId);
             return this;
         }
         public Builder name(Output<String> name) {

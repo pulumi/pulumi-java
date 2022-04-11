@@ -10,6 +10,7 @@ import io.pulumi.azurenative.network.inputs.EndpointPropertiesSubnetsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +30,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<EndpointPropertiesCustomHeadersArgs>> customHeaders;
 
     public Output<List<EndpointPropertiesCustomHeadersArgs>> getCustomHeaders() {
-        return this.customHeaders == null ? Output.empty() : this.customHeaders;
+        return this.customHeaders == null ? Codegen.empty() : this.customHeaders;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> endpointLocation;
 
     public Output<String> getEndpointLocation() {
-        return this.endpointLocation == null ? Output.empty() : this.endpointLocation;
+        return this.endpointLocation == null ? Codegen.empty() : this.endpointLocation;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,EndpointMonitorStatus>> endpointMonitorStatus;
 
     public Output<Either<String,EndpointMonitorStatus>> getEndpointMonitorStatus() {
-        return this.endpointMonitorStatus == null ? Output.empty() : this.endpointMonitorStatus;
+        return this.endpointMonitorStatus == null ? Codegen.empty() : this.endpointMonitorStatus;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> endpointName;
 
     public Output<String> getEndpointName() {
-        return this.endpointName == null ? Output.empty() : this.endpointName;
+        return this.endpointName == null ? Codegen.empty() : this.endpointName;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,EndpointStatus>> endpointStatus;
 
     public Output<Either<String,EndpointStatus>> getEndpointStatus() {
-        return this.endpointStatus == null ? Output.empty() : this.endpointStatus;
+        return this.endpointStatus == null ? Codegen.empty() : this.endpointStatus;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> geoMapping;
 
     public Output<List<String>> getGeoMapping() {
-        return this.geoMapping == null ? Output.empty() : this.geoMapping;
+        return this.geoMapping == null ? Codegen.empty() : this.geoMapping;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> minChildEndpoints;
 
     public Output<Double> getMinChildEndpoints() {
-        return this.minChildEndpoints == null ? Output.empty() : this.minChildEndpoints;
+        return this.minChildEndpoints == null ? Codegen.empty() : this.minChildEndpoints;
     }
 
     /**
@@ -128,7 +129,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> minChildEndpointsIPv4;
 
     public Output<Double> getMinChildEndpointsIPv4() {
-        return this.minChildEndpointsIPv4 == null ? Output.empty() : this.minChildEndpointsIPv4;
+        return this.minChildEndpointsIPv4 == null ? Codegen.empty() : this.minChildEndpointsIPv4;
     }
 
     /**
@@ -139,7 +140,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> minChildEndpointsIPv6;
 
     public Output<Double> getMinChildEndpointsIPv6() {
-        return this.minChildEndpointsIPv6 == null ? Output.empty() : this.minChildEndpointsIPv6;
+        return this.minChildEndpointsIPv6 == null ? Codegen.empty() : this.minChildEndpointsIPv6;
     }
 
     /**
@@ -150,7 +151,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -161,7 +162,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> priority;
 
     public Output<Double> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     /**
@@ -194,7 +195,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<EndpointPropertiesSubnetsArgs>> subnets;
 
     public Output<List<EndpointPropertiesSubnetsArgs>> getSubnets() {
-        return this.subnets == null ? Output.empty() : this.subnets;
+        return this.subnets == null ? Codegen.empty() : this.subnets;
     }
 
     /**
@@ -205,7 +206,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> target;
 
     public Output<String> getTarget() {
-        return this.target == null ? Output.empty() : this.target;
+        return this.target == null ? Codegen.empty() : this.target;
     }
 
     /**
@@ -216,7 +217,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> targetResourceId;
 
     public Output<String> getTargetResourceId() {
-        return this.targetResourceId == null ? Output.empty() : this.targetResourceId;
+        return this.targetResourceId == null ? Codegen.empty() : this.targetResourceId;
     }
 
     /**
@@ -227,7 +228,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -238,7 +239,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> weight;
 
     public Output<Double> getWeight() {
-        return this.weight == null ? Output.empty() : this.weight;
+        return this.weight == null ? Codegen.empty() : this.weight;
     }
 
     public EndpointArgs(
@@ -285,26 +286,26 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndpointArgs() {
-        this.customHeaders = Output.empty();
-        this.endpointLocation = Output.empty();
-        this.endpointMonitorStatus = Output.empty();
-        this.endpointName = Output.empty();
-        this.endpointStatus = Output.empty();
-        this.endpointType = Output.empty();
-        this.geoMapping = Output.empty();
-        this.id = Output.empty();
-        this.minChildEndpoints = Output.empty();
-        this.minChildEndpointsIPv4 = Output.empty();
-        this.minChildEndpointsIPv6 = Output.empty();
-        this.name = Output.empty();
-        this.priority = Output.empty();
-        this.profileName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.subnets = Output.empty();
-        this.target = Output.empty();
-        this.targetResourceId = Output.empty();
-        this.type = Output.empty();
-        this.weight = Output.empty();
+        this.customHeaders = Codegen.empty();
+        this.endpointLocation = Codegen.empty();
+        this.endpointMonitorStatus = Codegen.empty();
+        this.endpointName = Codegen.empty();
+        this.endpointStatus = Codegen.empty();
+        this.endpointType = Codegen.empty();
+        this.geoMapping = Codegen.empty();
+        this.id = Codegen.empty();
+        this.minChildEndpoints = Codegen.empty();
+        this.minChildEndpointsIPv4 = Codegen.empty();
+        this.minChildEndpointsIPv6 = Codegen.empty();
+        this.name = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.profileName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.subnets = Codegen.empty();
+        this.target = Codegen.empty();
+        this.targetResourceId = Codegen.empty();
+        this.type = Codegen.empty();
+        this.weight = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -370,7 +371,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customHeaders(@Nullable List<EndpointPropertiesCustomHeadersArgs> customHeaders) {
-            this.customHeaders = Output.ofNullable(customHeaders);
+            this.customHeaders = Codegen.ofNullable(customHeaders);
             return this;
         }
         public Builder customHeaders(EndpointPropertiesCustomHeadersArgs... customHeaders) {
@@ -381,7 +382,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpointLocation(@Nullable String endpointLocation) {
-            this.endpointLocation = Output.ofNullable(endpointLocation);
+            this.endpointLocation = Codegen.ofNullable(endpointLocation);
             return this;
         }
         public Builder endpointMonitorStatus(@Nullable Output<Either<String,EndpointMonitorStatus>> endpointMonitorStatus) {
@@ -389,7 +390,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpointMonitorStatus(@Nullable Either<String,EndpointMonitorStatus> endpointMonitorStatus) {
-            this.endpointMonitorStatus = Output.ofNullable(endpointMonitorStatus);
+            this.endpointMonitorStatus = Codegen.ofNullable(endpointMonitorStatus);
             return this;
         }
         public Builder endpointName(@Nullable Output<String> endpointName) {
@@ -397,7 +398,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpointName(@Nullable String endpointName) {
-            this.endpointName = Output.ofNullable(endpointName);
+            this.endpointName = Codegen.ofNullable(endpointName);
             return this;
         }
         public Builder endpointStatus(@Nullable Output<Either<String,EndpointStatus>> endpointStatus) {
@@ -405,7 +406,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpointStatus(@Nullable Either<String,EndpointStatus> endpointStatus) {
-            this.endpointStatus = Output.ofNullable(endpointStatus);
+            this.endpointStatus = Codegen.ofNullable(endpointStatus);
             return this;
         }
         public Builder endpointType(Output<String> endpointType) {
@@ -421,7 +422,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder geoMapping(@Nullable List<String> geoMapping) {
-            this.geoMapping = Output.ofNullable(geoMapping);
+            this.geoMapping = Codegen.ofNullable(geoMapping);
             return this;
         }
         public Builder geoMapping(String... geoMapping) {
@@ -432,7 +433,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder minChildEndpoints(@Nullable Output<Double> minChildEndpoints) {
@@ -440,7 +441,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minChildEndpoints(@Nullable Double minChildEndpoints) {
-            this.minChildEndpoints = Output.ofNullable(minChildEndpoints);
+            this.minChildEndpoints = Codegen.ofNullable(minChildEndpoints);
             return this;
         }
         public Builder minChildEndpointsIPv4(@Nullable Output<Double> minChildEndpointsIPv4) {
@@ -448,7 +449,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minChildEndpointsIPv4(@Nullable Double minChildEndpointsIPv4) {
-            this.minChildEndpointsIPv4 = Output.ofNullable(minChildEndpointsIPv4);
+            this.minChildEndpointsIPv4 = Codegen.ofNullable(minChildEndpointsIPv4);
             return this;
         }
         public Builder minChildEndpointsIPv6(@Nullable Output<Double> minChildEndpointsIPv6) {
@@ -456,7 +457,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minChildEndpointsIPv6(@Nullable Double minChildEndpointsIPv6) {
-            this.minChildEndpointsIPv6 = Output.ofNullable(minChildEndpointsIPv6);
+            this.minChildEndpointsIPv6 = Codegen.ofNullable(minChildEndpointsIPv6);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -464,7 +465,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder priority(@Nullable Output<Double> priority) {
@@ -472,7 +473,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder priority(@Nullable Double priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder profileName(Output<String> profileName) {
@@ -496,7 +497,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnets(@Nullable List<EndpointPropertiesSubnetsArgs> subnets) {
-            this.subnets = Output.ofNullable(subnets);
+            this.subnets = Codegen.ofNullable(subnets);
             return this;
         }
         public Builder subnets(EndpointPropertiesSubnetsArgs... subnets) {
@@ -507,7 +508,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder target(@Nullable String target) {
-            this.target = Output.ofNullable(target);
+            this.target = Codegen.ofNullable(target);
             return this;
         }
         public Builder targetResourceId(@Nullable Output<String> targetResourceId) {
@@ -515,7 +516,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetResourceId(@Nullable String targetResourceId) {
-            this.targetResourceId = Output.ofNullable(targetResourceId);
+            this.targetResourceId = Codegen.ofNullable(targetResourceId);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -523,7 +524,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder weight(@Nullable Output<Double> weight) {
@@ -531,7 +532,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder weight(@Nullable Double weight) {
-            this.weight = Output.ofNullable(weight);
+            this.weight = Codegen.ofNullable(weight);
             return this;
         }        public EndpointArgs build() {
             return new EndpointArgs(customHeaders, endpointLocation, endpointMonitorStatus, endpointName, endpointStatus, endpointType, geoMapping, id, minChildEndpoints, minChildEndpointsIPv4, minChildEndpointsIPv6, name, priority, profileName, resourceGroupName, subnets, target, targetResourceId, type, weight);

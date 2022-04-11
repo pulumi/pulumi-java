@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.ConfigMapProjectionArgs;
 import io.pulumi.kubernetes.core_v1.inputs.DownwardAPIProjectionArgs;
 import io.pulumi.kubernetes.core_v1.inputs.SecretProjectionArgs;
@@ -29,7 +30,7 @@ public final class VolumeProjectionArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<ConfigMapProjectionArgs> configMap;
 
     public Output<ConfigMapProjectionArgs> getConfigMap() {
-        return this.configMap == null ? Output.empty() : this.configMap;
+        return this.configMap == null ? Codegen.empty() : this.configMap;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class VolumeProjectionArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<DownwardAPIProjectionArgs> downwardAPI;
 
     public Output<DownwardAPIProjectionArgs> getDownwardAPI() {
-        return this.downwardAPI == null ? Output.empty() : this.downwardAPI;
+        return this.downwardAPI == null ? Codegen.empty() : this.downwardAPI;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class VolumeProjectionArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<SecretProjectionArgs> secret;
 
     public Output<SecretProjectionArgs> getSecret() {
-        return this.secret == null ? Output.empty() : this.secret;
+        return this.secret == null ? Codegen.empty() : this.secret;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class VolumeProjectionArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<ServiceAccountTokenProjectionArgs> serviceAccountToken;
 
     public Output<ServiceAccountTokenProjectionArgs> getServiceAccountToken() {
-        return this.serviceAccountToken == null ? Output.empty() : this.serviceAccountToken;
+        return this.serviceAccountToken == null ? Codegen.empty() : this.serviceAccountToken;
     }
 
     public VolumeProjectionArgs(
@@ -77,10 +78,10 @@ public final class VolumeProjectionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private VolumeProjectionArgs() {
-        this.configMap = Output.empty();
-        this.downwardAPI = Output.empty();
-        this.secret = Output.empty();
-        this.serviceAccountToken = Output.empty();
+        this.configMap = Codegen.empty();
+        this.downwardAPI = Codegen.empty();
+        this.secret = Codegen.empty();
+        this.serviceAccountToken = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class VolumeProjectionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder configMap(@Nullable ConfigMapProjectionArgs configMap) {
-            this.configMap = Output.ofNullable(configMap);
+            this.configMap = Codegen.ofNullable(configMap);
             return this;
         }
         public Builder downwardAPI(@Nullable Output<DownwardAPIProjectionArgs> downwardAPI) {
@@ -122,7 +123,7 @@ public final class VolumeProjectionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder downwardAPI(@Nullable DownwardAPIProjectionArgs downwardAPI) {
-            this.downwardAPI = Output.ofNullable(downwardAPI);
+            this.downwardAPI = Codegen.ofNullable(downwardAPI);
             return this;
         }
         public Builder secret(@Nullable Output<SecretProjectionArgs> secret) {
@@ -130,7 +131,7 @@ public final class VolumeProjectionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder secret(@Nullable SecretProjectionArgs secret) {
-            this.secret = Output.ofNullable(secret);
+            this.secret = Codegen.ofNullable(secret);
             return this;
         }
         public Builder serviceAccountToken(@Nullable Output<ServiceAccountTokenProjectionArgs> serviceAccountToken) {
@@ -138,7 +139,7 @@ public final class VolumeProjectionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder serviceAccountToken(@Nullable ServiceAccountTokenProjectionArgs serviceAccountToken) {
-            this.serviceAccountToken = Output.ofNullable(serviceAccountToken);
+            this.serviceAccountToken = Codegen.ofNullable(serviceAccountToken);
             return this;
         }        public VolumeProjectionArgs build() {
             return new VolumeProjectionArgs(configMap, downwardAPI, secret, serviceAccountToken);

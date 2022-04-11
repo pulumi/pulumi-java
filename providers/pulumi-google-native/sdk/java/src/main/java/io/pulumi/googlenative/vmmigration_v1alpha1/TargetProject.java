@@ -6,6 +6,7 @@ package io.pulumi.googlenative.vmmigration_v1alpha1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.vmmigration_v1alpha1.TargetProjectArgs;
 import java.lang.String;
@@ -110,7 +111,7 @@ public class TargetProject extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TargetProject(String name, TargetProjectArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:vmmigration/v1alpha1:TargetProject", name, args == null ? TargetProjectArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:vmmigration/v1alpha1:TargetProject", name, args == null ? TargetProjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TargetProject(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

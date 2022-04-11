@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -56,9 +57,9 @@ public final class TransitGatewayMulticastDomainAssociationArgs extends io.pulum
     }
 
     private TransitGatewayMulticastDomainAssociationArgs() {
-        this.subnetId = Output.empty();
-        this.transitGatewayAttachmentId = Output.empty();
-        this.transitGatewayMulticastDomainId = Output.empty();
+        this.subnetId = Codegen.empty();
+        this.transitGatewayAttachmentId = Codegen.empty();
+        this.transitGatewayMulticastDomainId = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.enums.DiscoveryAnalysisKind;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class DiscoveryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DiscoveryAnalysisKind> analysisKind;
 
     public Output<DiscoveryAnalysisKind> getAnalysisKind() {
-        return this.analysisKind == null ? Output.empty() : this.analysisKind;
+        return this.analysisKind == null ? Codegen.empty() : this.analysisKind;
     }
 
     public DiscoveryArgs(@Nullable Output<DiscoveryAnalysisKind> analysisKind) {
@@ -34,7 +35,7 @@ public final class DiscoveryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DiscoveryArgs() {
-        this.analysisKind = Output.empty();
+        this.analysisKind = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class DiscoveryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder analysisKind(@Nullable DiscoveryAnalysisKind analysisKind) {
-            this.analysisKind = Output.ofNullable(analysisKind);
+            this.analysisKind = Codegen.ofNullable(analysisKind);
             return this;
         }        public DiscoveryArgs build() {
             return new DiscoveryArgs(analysisKind);

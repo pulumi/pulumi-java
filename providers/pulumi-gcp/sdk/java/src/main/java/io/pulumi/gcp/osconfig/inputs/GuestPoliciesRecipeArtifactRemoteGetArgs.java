@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class GuestPoliciesRecipeArtifactRemoteGetArgs extends io.pulumi.re
       private final @Nullable Output<String> checkSum;
 
     public Output<String> getCheckSum() {
-        return this.checkSum == null ? Output.empty() : this.checkSum;
+        return this.checkSum == null ? Codegen.empty() : this.checkSum;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class GuestPoliciesRecipeArtifactRemoteGetArgs extends io.pulumi.re
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {
-        return this.uri == null ? Output.empty() : this.uri;
+        return this.uri == null ? Codegen.empty() : this.uri;
     }
 
     public GuestPoliciesRecipeArtifactRemoteGetArgs(
@@ -46,8 +47,8 @@ public final class GuestPoliciesRecipeArtifactRemoteGetArgs extends io.pulumi.re
     }
 
     private GuestPoliciesRecipeArtifactRemoteGetArgs() {
-        this.checkSum = Output.empty();
-        this.uri = Output.empty();
+        this.checkSum = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class GuestPoliciesRecipeArtifactRemoteGetArgs extends io.pulumi.re
             return this;
         }
         public Builder checkSum(@Nullable String checkSum) {
-            this.checkSum = Output.ofNullable(checkSum);
+            this.checkSum = Codegen.ofNullable(checkSum);
             return this;
         }
         public Builder uri(@Nullable Output<String> uri) {
@@ -85,7 +86,7 @@ public final class GuestPoliciesRecipeArtifactRemoteGetArgs extends io.pulumi.re
             return this;
         }
         public Builder uri(@Nullable String uri) {
-            this.uri = Output.ofNullable(uri);
+            this.uri = Codegen.ofNullable(uri);
             return this;
         }        public GuestPoliciesRecipeArtifactRemoteGetArgs build() {
             return new GuestPoliciesRecipeArtifactRemoteGetArgs(checkSum, uri);

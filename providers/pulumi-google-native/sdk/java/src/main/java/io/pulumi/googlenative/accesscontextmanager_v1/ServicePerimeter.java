@@ -6,6 +6,7 @@ package io.pulumi.googlenative.accesscontextmanager_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.accesscontextmanager_v1.ServicePerimeterArgs;
 import io.pulumi.googlenative.accesscontextmanager_v1.outputs.ServicePerimeterConfigResponse;
@@ -140,7 +141,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ServicePerimeter(String name, ServicePerimeterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:accesscontextmanager/v1:ServicePerimeter", name, args == null ? ServicePerimeterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:accesscontextmanager/v1:ServicePerimeter", name, args == null ? ServicePerimeterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ServicePerimeter(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

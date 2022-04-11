@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iotsitewise.inputs.AccessPolicyIdentityArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.AccessPolicyResourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -58,9 +59,9 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccessPolicyArgs() {
-        this.accessPolicyIdentity = Output.empty();
-        this.accessPolicyPermission = Output.empty();
-        this.accessPolicyResource = Output.empty();
+        this.accessPolicyIdentity = Codegen.empty();
+        this.accessPolicyPermission = Codegen.empty();
+        this.accessPolicyResource = Codegen.empty();
     }
 
     public static Builder builder() {

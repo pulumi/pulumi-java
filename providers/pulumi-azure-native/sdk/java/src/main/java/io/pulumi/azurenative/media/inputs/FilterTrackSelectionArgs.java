@@ -6,6 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.inputs.FilterTrackPropertyConditionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -34,7 +35,7 @@ public final class FilterTrackSelectionArgs extends io.pulumi.resources.Resource
     }
 
     private FilterTrackSelectionArgs() {
-        this.trackSelections = Output.empty();
+        this.trackSelections = Codegen.empty();
     }
 
     public static Builder builder() {

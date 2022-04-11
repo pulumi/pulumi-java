@@ -5,6 +5,7 @@ package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class DeliveryStreamHiveJsonSerDeArgs extends io.pulumi.resources.R
       private final @Nullable Output<List<String>> timestampFormats;
 
     public Output<List<String>> getTimestampFormats() {
-        return this.timestampFormats == null ? Output.empty() : this.timestampFormats;
+        return this.timestampFormats == null ? Codegen.empty() : this.timestampFormats;
     }
 
     public DeliveryStreamHiveJsonSerDeArgs(@Nullable Output<List<String>> timestampFormats) {
@@ -27,7 +28,7 @@ public final class DeliveryStreamHiveJsonSerDeArgs extends io.pulumi.resources.R
     }
 
     private DeliveryStreamHiveJsonSerDeArgs() {
-        this.timestampFormats = Output.empty();
+        this.timestampFormats = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -55,7 +56,7 @@ public final class DeliveryStreamHiveJsonSerDeArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder timestampFormats(@Nullable List<String> timestampFormats) {
-            this.timestampFormats = Output.ofNullable(timestampFormats);
+            this.timestampFormats = Codegen.ofNullable(timestampFormats);
             return this;
         }
         public Builder timestampFormats(String... timestampFormats) {

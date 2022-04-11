@@ -5,6 +5,7 @@ package io.pulumi.azurenative.virtualmachineimages.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ImageTemplateShellCustomizerArgs extends io.pulumi.resources.
       private final @Nullable Output<List<String>> inline;
 
     public Output<List<String>> getInline() {
-        return this.inline == null ? Output.empty() : this.inline;
+        return this.inline == null ? Codegen.empty() : this.inline;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ImageTemplateShellCustomizerArgs extends io.pulumi.resources.
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ImageTemplateShellCustomizerArgs extends io.pulumi.resources.
       private final @Nullable Output<String> scriptUri;
 
     public Output<String> getScriptUri() {
-        return this.scriptUri == null ? Output.empty() : this.scriptUri;
+        return this.scriptUri == null ? Codegen.empty() : this.scriptUri;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ImageTemplateShellCustomizerArgs extends io.pulumi.resources.
       private final @Nullable Output<String> sha256Checksum;
 
     public Output<String> getSha256Checksum() {
-        return this.sha256Checksum == null ? Output.empty() : this.sha256Checksum;
+        return this.sha256Checksum == null ? Codegen.empty() : this.sha256Checksum;
     }
 
     /**
@@ -84,16 +85,16 @@ public final class ImageTemplateShellCustomizerArgs extends io.pulumi.resources.
         this.inline = inline;
         this.name = name;
         this.scriptUri = scriptUri;
-        this.sha256Checksum = sha256Checksum == null ? Output.ofNullable("") : sha256Checksum;
+        this.sha256Checksum = sha256Checksum == null ? Codegen.ofNullable("") : sha256Checksum;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private ImageTemplateShellCustomizerArgs() {
-        this.inline = Output.empty();
-        this.name = Output.empty();
-        this.scriptUri = Output.empty();
-        this.sha256Checksum = Output.empty();
-        this.type = Output.empty();
+        this.inline = Codegen.empty();
+        this.name = Codegen.empty();
+        this.scriptUri = Codegen.empty();
+        this.sha256Checksum = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class ImageTemplateShellCustomizerArgs extends io.pulumi.resources.
             return this;
         }
         public Builder inline(@Nullable List<String> inline) {
-            this.inline = Output.ofNullable(inline);
+            this.inline = Codegen.ofNullable(inline);
             return this;
         }
         public Builder inline(String... inline) {
@@ -140,7 +141,7 @@ public final class ImageTemplateShellCustomizerArgs extends io.pulumi.resources.
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder scriptUri(@Nullable Output<String> scriptUri) {
@@ -148,7 +149,7 @@ public final class ImageTemplateShellCustomizerArgs extends io.pulumi.resources.
             return this;
         }
         public Builder scriptUri(@Nullable String scriptUri) {
-            this.scriptUri = Output.ofNullable(scriptUri);
+            this.scriptUri = Codegen.ofNullable(scriptUri);
             return this;
         }
         public Builder sha256Checksum(@Nullable Output<String> sha256Checksum) {
@@ -156,7 +157,7 @@ public final class ImageTemplateShellCustomizerArgs extends io.pulumi.resources.
             return this;
         }
         public Builder sha256Checksum(@Nullable String sha256Checksum) {
-            this.sha256Checksum = Output.ofNullable(sha256Checksum);
+            this.sha256Checksum = Codegen.ofNullable(sha256Checksum);
             return this;
         }
         public Builder type(Output<String> type) {

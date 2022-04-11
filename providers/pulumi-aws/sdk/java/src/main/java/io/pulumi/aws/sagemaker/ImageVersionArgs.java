@@ -5,6 +5,7 @@ package io.pulumi.aws.sagemaker;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class ImageVersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ImageVersionArgs() {
-        this.baseImage = Output.empty();
-        this.imageName = Output.empty();
+        this.baseImage = Codegen.empty();
+        this.imageName = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.enums.DataBindingMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class InputDataBindingArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> dataId;
 
     public Output<String> getDataId() {
-        return this.dataId == null ? Output.empty() : this.dataId;
+        return this.dataId == null ? Codegen.empty() : this.dataId;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class InputDataBindingArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Either<String,DataBindingMode>> mode;
 
     public Output<Either<String,DataBindingMode>> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class InputDataBindingArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> pathOnCompute;
 
     public Output<String> getPathOnCompute() {
-        return this.pathOnCompute == null ? Output.empty() : this.pathOnCompute;
+        return this.pathOnCompute == null ? Codegen.empty() : this.pathOnCompute;
     }
 
     public InputDataBindingArgs(
@@ -59,9 +60,9 @@ public final class InputDataBindingArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private InputDataBindingArgs() {
-        this.dataId = Output.empty();
-        this.mode = Output.empty();
-        this.pathOnCompute = Output.empty();
+        this.dataId = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.pathOnCompute = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class InputDataBindingArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder dataId(@Nullable String dataId) {
-            this.dataId = Output.ofNullable(dataId);
+            this.dataId = Codegen.ofNullable(dataId);
             return this;
         }
         public Builder mode(@Nullable Output<Either<String,DataBindingMode>> mode) {
@@ -101,7 +102,7 @@ public final class InputDataBindingArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder mode(@Nullable Either<String,DataBindingMode> mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder pathOnCompute(@Nullable Output<String> pathOnCompute) {
@@ -109,7 +110,7 @@ public final class InputDataBindingArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder pathOnCompute(@Nullable String pathOnCompute) {
-            this.pathOnCompute = Output.ofNullable(pathOnCompute);
+            this.pathOnCompute = Codegen.ofNullable(pathOnCompute);
             return this;
         }        public InputDataBindingArgs build() {
             return new InputDataBindingArgs(dataId, mode, pathOnCompute);

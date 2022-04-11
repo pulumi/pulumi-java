@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class DnsConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> relativeName;
 
     public Output<String> getRelativeName() {
-        return this.relativeName == null ? Output.empty() : this.relativeName;
+        return this.relativeName == null ? Codegen.empty() : this.relativeName;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class DnsConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> ttl;
 
     public Output<Double> getTtl() {
-        return this.ttl == null ? Output.empty() : this.ttl;
+        return this.ttl == null ? Codegen.empty() : this.ttl;
     }
 
     public DnsConfigArgs(
@@ -49,8 +50,8 @@ public final class DnsConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DnsConfigArgs() {
-        this.relativeName = Output.empty();
-        this.ttl = Output.empty();
+        this.relativeName = Codegen.empty();
+        this.ttl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class DnsConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder relativeName(@Nullable String relativeName) {
-            this.relativeName = Output.ofNullable(relativeName);
+            this.relativeName = Codegen.ofNullable(relativeName);
             return this;
         }
         public Builder ttl(@Nullable Output<Double> ttl) {
@@ -88,7 +89,7 @@ public final class DnsConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ttl(@Nullable Double ttl) {
-            this.ttl = Output.ofNullable(ttl);
+            this.ttl = Codegen.ofNullable(ttl);
             return this;
         }        public DnsConfigArgs build() {
             return new DnsConfigArgs(relativeName, ttl);

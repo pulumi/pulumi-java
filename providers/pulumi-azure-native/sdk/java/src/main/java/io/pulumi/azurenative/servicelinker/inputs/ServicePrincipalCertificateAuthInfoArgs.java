@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicelinker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,10 +75,10 @@ public final class ServicePrincipalCertificateAuthInfoArgs extends io.pulumi.res
     }
 
     private ServicePrincipalCertificateAuthInfoArgs() {
-        this.authType = Output.empty();
-        this.certificate = Output.empty();
-        this.clientId = Output.empty();
-        this.principalId = Output.empty();
+        this.authType = Codegen.empty();
+        this.certificate = Codegen.empty();
+        this.clientId = Codegen.empty();
+        this.principalId = Codegen.empty();
     }
 
     public static Builder builder() {

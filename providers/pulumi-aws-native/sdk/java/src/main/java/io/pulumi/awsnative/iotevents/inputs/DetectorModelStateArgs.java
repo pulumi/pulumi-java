@@ -8,6 +8,7 @@ import io.pulumi.awsnative.iotevents.inputs.DetectorModelOnExitArgs;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelOnInputArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,21 +26,21 @@ public final class DetectorModelStateArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<DetectorModelOnEnterArgs> onEnter;
 
     public Output<DetectorModelOnEnterArgs> getOnEnter() {
-        return this.onEnter == null ? Output.empty() : this.onEnter;
+        return this.onEnter == null ? Codegen.empty() : this.onEnter;
     }
 
     @Import(name="onExit")
       private final @Nullable Output<DetectorModelOnExitArgs> onExit;
 
     public Output<DetectorModelOnExitArgs> getOnExit() {
-        return this.onExit == null ? Output.empty() : this.onExit;
+        return this.onExit == null ? Codegen.empty() : this.onExit;
     }
 
     @Import(name="onInput")
       private final @Nullable Output<DetectorModelOnInputArgs> onInput;
 
     public Output<DetectorModelOnInputArgs> getOnInput() {
-        return this.onInput == null ? Output.empty() : this.onInput;
+        return this.onInput == null ? Codegen.empty() : this.onInput;
     }
 
     /**
@@ -65,10 +66,10 @@ public final class DetectorModelStateArgs extends io.pulumi.resources.ResourceAr
     }
 
     private DetectorModelStateArgs() {
-        this.onEnter = Output.empty();
-        this.onExit = Output.empty();
-        this.onInput = Output.empty();
-        this.stateName = Output.empty();
+        this.onEnter = Codegen.empty();
+        this.onExit = Codegen.empty();
+        this.onInput = Codegen.empty();
+        this.stateName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -102,7 +103,7 @@ public final class DetectorModelStateArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder onEnter(@Nullable DetectorModelOnEnterArgs onEnter) {
-            this.onEnter = Output.ofNullable(onEnter);
+            this.onEnter = Codegen.ofNullable(onEnter);
             return this;
         }
         public Builder onExit(@Nullable Output<DetectorModelOnExitArgs> onExit) {
@@ -110,7 +111,7 @@ public final class DetectorModelStateArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder onExit(@Nullable DetectorModelOnExitArgs onExit) {
-            this.onExit = Output.ofNullable(onExit);
+            this.onExit = Codegen.ofNullable(onExit);
             return this;
         }
         public Builder onInput(@Nullable Output<DetectorModelOnInputArgs> onInput) {
@@ -118,7 +119,7 @@ public final class DetectorModelStateArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder onInput(@Nullable DetectorModelOnInputArgs onInput) {
-            this.onInput = Output.ofNullable(onInput);
+            this.onInput = Codegen.ofNullable(onInput);
             return this;
         }
         public Builder stateName(Output<String> stateName) {

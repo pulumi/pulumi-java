@@ -8,6 +8,7 @@ import io.pulumi.aws.budgets.inputs.BudgetActionDefinitionArgs;
 import io.pulumi.aws.budgets.inputs.BudgetActionSubscriberArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class BudgetActionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
-        return this.accountId == null ? Output.empty() : this.accountId;
+        return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
     /**
@@ -139,15 +140,15 @@ public final class BudgetActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BudgetActionArgs() {
-        this.accountId = Output.empty();
-        this.actionThreshold = Output.empty();
-        this.actionType = Output.empty();
-        this.approvalModel = Output.empty();
-        this.budgetName = Output.empty();
-        this.definition = Output.empty();
-        this.executionRoleArn = Output.empty();
-        this.notificationType = Output.empty();
-        this.subscribers = Output.empty();
+        this.accountId = Codegen.empty();
+        this.actionThreshold = Codegen.empty();
+        this.actionType = Codegen.empty();
+        this.approvalModel = Codegen.empty();
+        this.budgetName = Codegen.empty();
+        this.definition = Codegen.empty();
+        this.executionRoleArn = Codegen.empty();
+        this.notificationType = Codegen.empty();
+        this.subscribers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -191,7 +192,7 @@ public final class BudgetActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Output.ofNullable(accountId);
+            this.accountId = Codegen.ofNullable(accountId);
             return this;
         }
         public Builder actionThreshold(Output<BudgetActionActionThresholdArgs> actionThreshold) {

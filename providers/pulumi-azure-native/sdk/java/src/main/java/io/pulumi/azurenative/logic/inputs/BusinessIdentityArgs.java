@@ -5,6 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class BusinessIdentityArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private BusinessIdentityArgs() {
-        this.qualifier = Output.empty();
-        this.value = Output.empty();
+        this.qualifier = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

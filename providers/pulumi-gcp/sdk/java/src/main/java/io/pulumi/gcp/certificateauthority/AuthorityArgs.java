@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigArgs;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityKeySpecArgs;
 import java.lang.Boolean;
@@ -53,7 +54,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> gcsBucket;
 
     public Output<String> getGcsBucket() {
-        return this.gcsBucket == null ? Output.empty() : this.gcsBucket;
+        return this.gcsBucket == null ? Codegen.empty() : this.gcsBucket;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> ignoreActiveCertificatesOnDeletion;
 
     public Output<Boolean> getIgnoreActiveCertificatesOnDeletion() {
-        return this.ignoreActiveCertificatesOnDeletion == null ? Output.empty() : this.ignoreActiveCertificatesOnDeletion;
+        return this.ignoreActiveCertificatesOnDeletion == null ? Codegen.empty() : this.ignoreActiveCertificatesOnDeletion;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> lifetime;
 
     public Output<String> getLifetime() {
-        return this.lifetime == null ? Output.empty() : this.lifetime;
+        return this.lifetime == null ? Codegen.empty() : this.lifetime;
     }
 
     /**
@@ -140,7 +141,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -156,7 +157,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public AuthorityArgs(
@@ -185,17 +186,17 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AuthorityArgs() {
-        this.certificateAuthorityId = Output.empty();
-        this.config = Output.empty();
-        this.gcsBucket = Output.empty();
-        this.ignoreActiveCertificatesOnDeletion = Output.empty();
-        this.keySpec = Output.empty();
-        this.labels = Output.empty();
-        this.lifetime = Output.empty();
-        this.location = Output.empty();
-        this.pool = Output.empty();
-        this.project = Output.empty();
-        this.type = Output.empty();
+        this.certificateAuthorityId = Codegen.empty();
+        this.config = Codegen.empty();
+        this.gcsBucket = Codegen.empty();
+        this.ignoreActiveCertificatesOnDeletion = Codegen.empty();
+        this.keySpec = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.lifetime = Codegen.empty();
+        this.location = Codegen.empty();
+        this.pool = Codegen.empty();
+        this.project = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -259,7 +260,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gcsBucket(@Nullable String gcsBucket) {
-            this.gcsBucket = Output.ofNullable(gcsBucket);
+            this.gcsBucket = Codegen.ofNullable(gcsBucket);
             return this;
         }
         public Builder ignoreActiveCertificatesOnDeletion(@Nullable Output<Boolean> ignoreActiveCertificatesOnDeletion) {
@@ -267,7 +268,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ignoreActiveCertificatesOnDeletion(@Nullable Boolean ignoreActiveCertificatesOnDeletion) {
-            this.ignoreActiveCertificatesOnDeletion = Output.ofNullable(ignoreActiveCertificatesOnDeletion);
+            this.ignoreActiveCertificatesOnDeletion = Codegen.ofNullable(ignoreActiveCertificatesOnDeletion);
             return this;
         }
         public Builder keySpec(Output<AuthorityKeySpecArgs> keySpec) {
@@ -283,7 +284,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder lifetime(@Nullable Output<String> lifetime) {
@@ -291,7 +292,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lifetime(@Nullable String lifetime) {
-            this.lifetime = Output.ofNullable(lifetime);
+            this.lifetime = Codegen.ofNullable(lifetime);
             return this;
         }
         public Builder location(Output<String> location) {
@@ -315,7 +316,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -323,7 +324,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public AuthorityArgs build() {
             return new AuthorityArgs(certificateAuthorityId, config, gcsBucket, ignoreActiveCertificatesOnDeletion, keySpec, labels, lifetime, location, pool, project, type);

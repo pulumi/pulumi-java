@@ -7,6 +7,7 @@ import io.pulumi.azurenative.containerregistry.enums.TriggerStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -31,7 +32,7 @@ public final class PipelineSourceTriggerPropertiesArgs extends io.pulumi.resourc
     }
 
     private PipelineSourceTriggerPropertiesArgs() {
-        this.status = Output.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {

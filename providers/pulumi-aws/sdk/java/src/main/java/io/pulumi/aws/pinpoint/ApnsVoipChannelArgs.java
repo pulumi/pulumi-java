@@ -5,6 +5,7 @@ package io.pulumi.aws.pinpoint;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class ApnsVoipChannelArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> bundleId;
 
     public Output<String> getBundleId() {
-        return this.bundleId == null ? Output.empty() : this.bundleId;
+        return this.bundleId == null ? Codegen.empty() : this.bundleId;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ApnsVoipChannelArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> certificate;
 
     public Output<String> getCertificate() {
-        return this.certificate == null ? Output.empty() : this.certificate;
+        return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ApnsVoipChannelArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> defaultAuthenticationMethod;
 
     public Output<String> getDefaultAuthenticationMethod() {
-        return this.defaultAuthenticationMethod == null ? Output.empty() : this.defaultAuthenticationMethod;
+        return this.defaultAuthenticationMethod == null ? Codegen.empty() : this.defaultAuthenticationMethod;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class ApnsVoipChannelArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class ApnsVoipChannelArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> privateKey;
 
     public Output<String> getPrivateKey() {
-        return this.privateKey == null ? Output.empty() : this.privateKey;
+        return this.privateKey == null ? Codegen.empty() : this.privateKey;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class ApnsVoipChannelArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> teamId;
 
     public Output<String> getTeamId() {
-        return this.teamId == null ? Output.empty() : this.teamId;
+        return this.teamId == null ? Codegen.empty() : this.teamId;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class ApnsVoipChannelArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> tokenKey;
 
     public Output<String> getTokenKey() {
-        return this.tokenKey == null ? Output.empty() : this.tokenKey;
+        return this.tokenKey == null ? Codegen.empty() : this.tokenKey;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class ApnsVoipChannelArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> tokenKeyId;
 
     public Output<String> getTokenKeyId() {
-        return this.tokenKeyId == null ? Output.empty() : this.tokenKeyId;
+        return this.tokenKeyId == null ? Codegen.empty() : this.tokenKeyId;
     }
 
     public ApnsVoipChannelArgs(
@@ -139,15 +140,15 @@ public final class ApnsVoipChannelArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ApnsVoipChannelArgs() {
-        this.applicationId = Output.empty();
-        this.bundleId = Output.empty();
-        this.certificate = Output.empty();
-        this.defaultAuthenticationMethod = Output.empty();
-        this.enabled = Output.empty();
-        this.privateKey = Output.empty();
-        this.teamId = Output.empty();
-        this.tokenKey = Output.empty();
-        this.tokenKeyId = Output.empty();
+        this.applicationId = Codegen.empty();
+        this.bundleId = Codegen.empty();
+        this.certificate = Codegen.empty();
+        this.defaultAuthenticationMethod = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.privateKey = Codegen.empty();
+        this.teamId = Codegen.empty();
+        this.tokenKey = Codegen.empty();
+        this.tokenKeyId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -199,7 +200,7 @@ public final class ApnsVoipChannelArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder bundleId(@Nullable String bundleId) {
-            this.bundleId = Output.ofNullable(bundleId);
+            this.bundleId = Codegen.ofNullable(bundleId);
             return this;
         }
         public Builder certificate(@Nullable Output<String> certificate) {
@@ -207,7 +208,7 @@ public final class ApnsVoipChannelArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder certificate(@Nullable String certificate) {
-            this.certificate = Output.ofNullable(certificate);
+            this.certificate = Codegen.ofNullable(certificate);
             return this;
         }
         public Builder defaultAuthenticationMethod(@Nullable Output<String> defaultAuthenticationMethod) {
@@ -215,7 +216,7 @@ public final class ApnsVoipChannelArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder defaultAuthenticationMethod(@Nullable String defaultAuthenticationMethod) {
-            this.defaultAuthenticationMethod = Output.ofNullable(defaultAuthenticationMethod);
+            this.defaultAuthenticationMethod = Codegen.ofNullable(defaultAuthenticationMethod);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -223,7 +224,7 @@ public final class ApnsVoipChannelArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder privateKey(@Nullable Output<String> privateKey) {
@@ -231,7 +232,7 @@ public final class ApnsVoipChannelArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder privateKey(@Nullable String privateKey) {
-            this.privateKey = Output.ofNullable(privateKey);
+            this.privateKey = Codegen.ofNullable(privateKey);
             return this;
         }
         public Builder teamId(@Nullable Output<String> teamId) {
@@ -239,7 +240,7 @@ public final class ApnsVoipChannelArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder teamId(@Nullable String teamId) {
-            this.teamId = Output.ofNullable(teamId);
+            this.teamId = Codegen.ofNullable(teamId);
             return this;
         }
         public Builder tokenKey(@Nullable Output<String> tokenKey) {
@@ -247,7 +248,7 @@ public final class ApnsVoipChannelArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tokenKey(@Nullable String tokenKey) {
-            this.tokenKey = Output.ofNullable(tokenKey);
+            this.tokenKey = Codegen.ofNullable(tokenKey);
             return this;
         }
         public Builder tokenKeyId(@Nullable Output<String> tokenKeyId) {
@@ -255,7 +256,7 @@ public final class ApnsVoipChannelArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tokenKeyId(@Nullable String tokenKeyId) {
-            this.tokenKeyId = Output.ofNullable(tokenKeyId);
+            this.tokenKeyId = Codegen.ofNullable(tokenKeyId);
             return this;
         }        public ApnsVoipChannelArgs build() {
             return new ApnsVoipChannelArgs(applicationId, bundleId, certificate, defaultAuthenticationMethod, enabled, privateKey, teamId, tokenKey, tokenKeyId);

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.devtestlab.enums.NotificationChannelEventType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,NotificationChannelEventType>> eventName;
 
     public Output<Either<String,NotificationChannelEventType>> getEventName() {
-        return this.eventName == null ? Output.empty() : this.eventName;
+        return this.eventName == null ? Codegen.empty() : this.eventName;
     }
 
     public EventArgs(@Nullable Output<Either<String,NotificationChannelEventType>> eventName) {
@@ -36,7 +37,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EventArgs() {
-        this.eventName = Output.empty();
+        this.eventName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -64,7 +65,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eventName(@Nullable Either<String,NotificationChannelEventType> eventName) {
-            this.eventName = Output.ofNullable(eventName);
+            this.eventName = Codegen.ofNullable(eventName);
             return this;
         }        public EventArgs build() {
             return new EventArgs(eventName);

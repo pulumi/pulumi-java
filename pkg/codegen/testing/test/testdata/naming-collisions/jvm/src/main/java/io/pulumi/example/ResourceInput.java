@@ -6,6 +6,7 @@ package io.pulumi.example;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.example.ResourceInputArgs;
 import io.pulumi.example.Utilities;
 import java.lang.String;
@@ -42,7 +43,7 @@ public class ResourceInput extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResourceInput(String name, @Nullable ResourceInputArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("example::ResourceInput", name, args == null ? ResourceInputArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("example::ResourceInput", name, args == null ? ResourceInputArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResourceInput(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

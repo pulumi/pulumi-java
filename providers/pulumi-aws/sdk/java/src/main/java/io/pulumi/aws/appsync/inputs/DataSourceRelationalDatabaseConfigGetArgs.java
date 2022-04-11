@@ -6,6 +6,7 @@ package io.pulumi.aws.appsync.inputs;
 import io.pulumi.aws.appsync.inputs.DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class DataSourceRelationalDatabaseConfigGetArgs extends io.pulumi.r
       private final @Nullable Output<DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs> httpEndpointConfig;
 
     public Output<DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs> getHttpEndpointConfig() {
-        return this.httpEndpointConfig == null ? Output.empty() : this.httpEndpointConfig;
+        return this.httpEndpointConfig == null ? Codegen.empty() : this.httpEndpointConfig;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class DataSourceRelationalDatabaseConfigGetArgs extends io.pulumi.r
       private final @Nullable Output<String> sourceType;
 
     public Output<String> getSourceType() {
-        return this.sourceType == null ? Output.empty() : this.sourceType;
+        return this.sourceType == null ? Codegen.empty() : this.sourceType;
     }
 
     public DataSourceRelationalDatabaseConfigGetArgs(
@@ -45,8 +46,8 @@ public final class DataSourceRelationalDatabaseConfigGetArgs extends io.pulumi.r
     }
 
     private DataSourceRelationalDatabaseConfigGetArgs() {
-        this.httpEndpointConfig = Output.empty();
-        this.sourceType = Output.empty();
+        this.httpEndpointConfig = Codegen.empty();
+        this.sourceType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class DataSourceRelationalDatabaseConfigGetArgs extends io.pulumi.r
             return this;
         }
         public Builder httpEndpointConfig(@Nullable DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs httpEndpointConfig) {
-            this.httpEndpointConfig = Output.ofNullable(httpEndpointConfig);
+            this.httpEndpointConfig = Codegen.ofNullable(httpEndpointConfig);
             return this;
         }
         public Builder sourceType(@Nullable Output<String> sourceType) {
@@ -84,7 +85,7 @@ public final class DataSourceRelationalDatabaseConfigGetArgs extends io.pulumi.r
             return this;
         }
         public Builder sourceType(@Nullable String sourceType) {
-            this.sourceType = Output.ofNullable(sourceType);
+            this.sourceType = Codegen.ofNullable(sourceType);
             return this;
         }        public DataSourceRelationalDatabaseConfigGetArgs build() {
             return new DataSourceRelationalDatabaseConfigGetArgs(httpEndpointConfig, sourceType);

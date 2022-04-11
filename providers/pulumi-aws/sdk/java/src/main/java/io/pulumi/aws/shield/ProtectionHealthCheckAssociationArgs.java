@@ -5,6 +5,7 @@ package io.pulumi.aws.shield;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class ProtectionHealthCheckAssociationArgs extends io.pulumi.resour
     }
 
     private ProtectionHealthCheckAssociationArgs() {
-        this.healthCheckArn = Output.empty();
-        this.shieldProtectionId = Output.empty();
+        this.healthCheckArn = Codegen.empty();
+        this.shieldProtectionId = Codegen.empty();
     }
 
     public static Builder builder() {

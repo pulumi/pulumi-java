@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class ClusterClusterConfigAutoscalingConfigGetArgs extends io.pulum
     }
 
     private ClusterClusterConfigAutoscalingConfigGetArgs() {
-        this.policyUri = Output.empty();
+        this.policyUri = Codegen.empty();
     }
 
     public static Builder builder() {

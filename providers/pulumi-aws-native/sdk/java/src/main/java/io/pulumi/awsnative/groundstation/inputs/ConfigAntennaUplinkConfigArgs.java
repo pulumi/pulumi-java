@@ -7,6 +7,7 @@ import io.pulumi.awsnative.groundstation.inputs.ConfigEirpArgs;
 import io.pulumi.awsnative.groundstation.inputs.ConfigUplinkSpectrumConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,21 +21,21 @@ public final class ConfigAntennaUplinkConfigArgs extends io.pulumi.resources.Res
       private final @Nullable Output<ConfigUplinkSpectrumConfigArgs> spectrumConfig;
 
     public Output<ConfigUplinkSpectrumConfigArgs> getSpectrumConfig() {
-        return this.spectrumConfig == null ? Output.empty() : this.spectrumConfig;
+        return this.spectrumConfig == null ? Codegen.empty() : this.spectrumConfig;
     }
 
     @Import(name="targetEirp")
       private final @Nullable Output<ConfigEirpArgs> targetEirp;
 
     public Output<ConfigEirpArgs> getTargetEirp() {
-        return this.targetEirp == null ? Output.empty() : this.targetEirp;
+        return this.targetEirp == null ? Codegen.empty() : this.targetEirp;
     }
 
     @Import(name="transmitDisabled")
       private final @Nullable Output<Boolean> transmitDisabled;
 
     public Output<Boolean> getTransmitDisabled() {
-        return this.transmitDisabled == null ? Output.empty() : this.transmitDisabled;
+        return this.transmitDisabled == null ? Codegen.empty() : this.transmitDisabled;
     }
 
     public ConfigAntennaUplinkConfigArgs(
@@ -47,9 +48,9 @@ public final class ConfigAntennaUplinkConfigArgs extends io.pulumi.resources.Res
     }
 
     private ConfigAntennaUplinkConfigArgs() {
-        this.spectrumConfig = Output.empty();
-        this.targetEirp = Output.empty();
-        this.transmitDisabled = Output.empty();
+        this.spectrumConfig = Codegen.empty();
+        this.targetEirp = Codegen.empty();
+        this.transmitDisabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ConfigAntennaUplinkConfigArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder spectrumConfig(@Nullable ConfigUplinkSpectrumConfigArgs spectrumConfig) {
-            this.spectrumConfig = Output.ofNullable(spectrumConfig);
+            this.spectrumConfig = Codegen.ofNullable(spectrumConfig);
             return this;
         }
         public Builder targetEirp(@Nullable Output<ConfigEirpArgs> targetEirp) {
@@ -89,7 +90,7 @@ public final class ConfigAntennaUplinkConfigArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder targetEirp(@Nullable ConfigEirpArgs targetEirp) {
-            this.targetEirp = Output.ofNullable(targetEirp);
+            this.targetEirp = Codegen.ofNullable(targetEirp);
             return this;
         }
         public Builder transmitDisabled(@Nullable Output<Boolean> transmitDisabled) {
@@ -97,7 +98,7 @@ public final class ConfigAntennaUplinkConfigArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder transmitDisabled(@Nullable Boolean transmitDisabled) {
-            this.transmitDisabled = Output.ofNullable(transmitDisabled);
+            this.transmitDisabled = Codegen.ofNullable(transmitDisabled);
             return this;
         }        public ConfigAntennaUplinkConfigArgs build() {
             return new ConfigAntennaUplinkConfigArgs(spectrumConfig, targetEirp, transmitDisabled);

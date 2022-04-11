@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class SpotInstanceRequestMetadataOptionsGetArgs extends io.pulumi.r
       private final @Nullable Output<String> httpEndpoint;
 
     public Output<String> getHttpEndpoint() {
-        return this.httpEndpoint == null ? Output.empty() : this.httpEndpoint;
+        return this.httpEndpoint == null ? Codegen.empty() : this.httpEndpoint;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class SpotInstanceRequestMetadataOptionsGetArgs extends io.pulumi.r
       private final @Nullable Output<Integer> httpPutResponseHopLimit;
 
     public Output<Integer> getHttpPutResponseHopLimit() {
-        return this.httpPutResponseHopLimit == null ? Output.empty() : this.httpPutResponseHopLimit;
+        return this.httpPutResponseHopLimit == null ? Codegen.empty() : this.httpPutResponseHopLimit;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class SpotInstanceRequestMetadataOptionsGetArgs extends io.pulumi.r
       private final @Nullable Output<String> httpTokens;
 
     public Output<String> getHttpTokens() {
-        return this.httpTokens == null ? Output.empty() : this.httpTokens;
+        return this.httpTokens == null ? Codegen.empty() : this.httpTokens;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class SpotInstanceRequestMetadataOptionsGetArgs extends io.pulumi.r
       private final @Nullable Output<String> instanceMetadataTags;
 
     public Output<String> getInstanceMetadataTags() {
-        return this.instanceMetadataTags == null ? Output.empty() : this.instanceMetadataTags;
+        return this.instanceMetadataTags == null ? Codegen.empty() : this.instanceMetadataTags;
     }
 
     public SpotInstanceRequestMetadataOptionsGetArgs(
@@ -71,10 +72,10 @@ public final class SpotInstanceRequestMetadataOptionsGetArgs extends io.pulumi.r
     }
 
     private SpotInstanceRequestMetadataOptionsGetArgs() {
-        this.httpEndpoint = Output.empty();
-        this.httpPutResponseHopLimit = Output.empty();
-        this.httpTokens = Output.empty();
-        this.instanceMetadataTags = Output.empty();
+        this.httpEndpoint = Codegen.empty();
+        this.httpPutResponseHopLimit = Codegen.empty();
+        this.httpTokens = Codegen.empty();
+        this.instanceMetadataTags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class SpotInstanceRequestMetadataOptionsGetArgs extends io.pulumi.r
             return this;
         }
         public Builder httpEndpoint(@Nullable String httpEndpoint) {
-            this.httpEndpoint = Output.ofNullable(httpEndpoint);
+            this.httpEndpoint = Codegen.ofNullable(httpEndpoint);
             return this;
         }
         public Builder httpPutResponseHopLimit(@Nullable Output<Integer> httpPutResponseHopLimit) {
@@ -116,7 +117,7 @@ public final class SpotInstanceRequestMetadataOptionsGetArgs extends io.pulumi.r
             return this;
         }
         public Builder httpPutResponseHopLimit(@Nullable Integer httpPutResponseHopLimit) {
-            this.httpPutResponseHopLimit = Output.ofNullable(httpPutResponseHopLimit);
+            this.httpPutResponseHopLimit = Codegen.ofNullable(httpPutResponseHopLimit);
             return this;
         }
         public Builder httpTokens(@Nullable Output<String> httpTokens) {
@@ -124,7 +125,7 @@ public final class SpotInstanceRequestMetadataOptionsGetArgs extends io.pulumi.r
             return this;
         }
         public Builder httpTokens(@Nullable String httpTokens) {
-            this.httpTokens = Output.ofNullable(httpTokens);
+            this.httpTokens = Codegen.ofNullable(httpTokens);
             return this;
         }
         public Builder instanceMetadataTags(@Nullable Output<String> instanceMetadataTags) {
@@ -132,7 +133,7 @@ public final class SpotInstanceRequestMetadataOptionsGetArgs extends io.pulumi.r
             return this;
         }
         public Builder instanceMetadataTags(@Nullable String instanceMetadataTags) {
-            this.instanceMetadataTags = Output.ofNullable(instanceMetadataTags);
+            this.instanceMetadataTags = Codegen.ofNullable(instanceMetadataTags);
             return this;
         }        public SpotInstanceRequestMetadataOptionsGetArgs build() {
             return new SpotInstanceRequestMetadataOptionsGetArgs(httpEndpoint, httpPutResponseHopLimit, httpTokens, instanceMetadataTags);

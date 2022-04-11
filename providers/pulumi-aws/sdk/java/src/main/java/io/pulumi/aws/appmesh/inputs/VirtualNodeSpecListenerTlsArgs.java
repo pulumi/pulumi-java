@@ -7,6 +7,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTlsCertificateArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTlsValidationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -46,7 +47,7 @@ public final class VirtualNodeSpecListenerTlsArgs extends io.pulumi.resources.Re
       private final @Nullable Output<VirtualNodeSpecListenerTlsValidationArgs> validation;
 
     public Output<VirtualNodeSpecListenerTlsValidationArgs> getValidation() {
-        return this.validation == null ? Output.empty() : this.validation;
+        return this.validation == null ? Codegen.empty() : this.validation;
     }
 
     public VirtualNodeSpecListenerTlsArgs(
@@ -59,9 +60,9 @@ public final class VirtualNodeSpecListenerTlsArgs extends io.pulumi.resources.Re
     }
 
     private VirtualNodeSpecListenerTlsArgs() {
-        this.certificate = Output.empty();
-        this.mode = Output.empty();
-        this.validation = Output.empty();
+        this.certificate = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.validation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class VirtualNodeSpecListenerTlsArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder validation(@Nullable VirtualNodeSpecListenerTlsValidationArgs validation) {
-            this.validation = Output.ofNullable(validation);
+            this.validation = Codegen.ofNullable(validation);
             return this;
         }        public VirtualNodeSpecListenerTlsArgs build() {
             return new VirtualNodeSpecListenerTlsArgs(certificate, mode, validation);

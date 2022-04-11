@@ -6,6 +6,7 @@ package io.pulumi.azurenative.storagecache.inputs;
 import io.pulumi.azurenative.storagecache.inputs.NfsAccessPolicyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class CacheSecuritySettingsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<NfsAccessPolicyArgs>> accessPolicies;
 
     public Output<List<NfsAccessPolicyArgs>> getAccessPolicies() {
-        return this.accessPolicies == null ? Output.empty() : this.accessPolicies;
+        return this.accessPolicies == null ? Codegen.empty() : this.accessPolicies;
     }
 
     public CacheSecuritySettingsArgs(@Nullable Output<List<NfsAccessPolicyArgs>> accessPolicies) {
@@ -35,7 +36,7 @@ public final class CacheSecuritySettingsArgs extends io.pulumi.resources.Resourc
     }
 
     private CacheSecuritySettingsArgs() {
-        this.accessPolicies = Output.empty();
+        this.accessPolicies = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class CacheSecuritySettingsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder accessPolicies(@Nullable List<NfsAccessPolicyArgs> accessPolicies) {
-            this.accessPolicies = Output.ofNullable(accessPolicies);
+            this.accessPolicies = Codegen.ofNullable(accessPolicies);
             return this;
         }
         public Builder accessPolicies(NfsAccessPolicyArgs... accessPolicies) {

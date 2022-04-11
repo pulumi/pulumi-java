@@ -7,6 +7,7 @@ import io.pulumi.azurenative.containerservice.enums.UpgradeChannel;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class ManagedClusterAutoUpgradeProfileArgs extends io.pulumi.resour
       private final @Nullable Output<Either<String,UpgradeChannel>> upgradeChannel;
 
     public Output<Either<String,UpgradeChannel>> getUpgradeChannel() {
-        return this.upgradeChannel == null ? Output.empty() : this.upgradeChannel;
+        return this.upgradeChannel == null ? Codegen.empty() : this.upgradeChannel;
     }
 
     public ManagedClusterAutoUpgradeProfileArgs(@Nullable Output<Either<String,UpgradeChannel>> upgradeChannel) {
@@ -36,7 +37,7 @@ public final class ManagedClusterAutoUpgradeProfileArgs extends io.pulumi.resour
     }
 
     private ManagedClusterAutoUpgradeProfileArgs() {
-        this.upgradeChannel = Output.empty();
+        this.upgradeChannel = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -64,7 +65,7 @@ public final class ManagedClusterAutoUpgradeProfileArgs extends io.pulumi.resour
             return this;
         }
         public Builder upgradeChannel(@Nullable Either<String,UpgradeChannel> upgradeChannel) {
-            this.upgradeChannel = Output.ofNullable(upgradeChannel);
+            this.upgradeChannel = Codegen.ofNullable(upgradeChannel);
             return this;
         }        public ManagedClusterAutoUpgradeProfileArgs build() {
             return new ManagedClusterAutoUpgradeProfileArgs(upgradeChannel);

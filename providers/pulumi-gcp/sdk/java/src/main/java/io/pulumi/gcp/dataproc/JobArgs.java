@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataproc.inputs.JobHadoopConfigArgs;
 import io.pulumi.gcp.dataproc.inputs.JobHiveConfigArgs;
 import io.pulumi.gcp.dataproc.inputs.JobPigConfigArgs;
@@ -35,7 +36,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> forceDelete;
 
     public Output<Boolean> getForceDelete() {
-        return this.forceDelete == null ? Output.empty() : this.forceDelete;
+        return this.forceDelete == null ? Codegen.empty() : this.forceDelete;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<JobHadoopConfigArgs> hadoopConfig;
 
     public Output<JobHadoopConfigArgs> getHadoopConfig() {
-        return this.hadoopConfig == null ? Output.empty() : this.hadoopConfig;
+        return this.hadoopConfig == null ? Codegen.empty() : this.hadoopConfig;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<JobHiveConfigArgs> hiveConfig;
 
     public Output<JobHiveConfigArgs> getHiveConfig() {
-        return this.hiveConfig == null ? Output.empty() : this.hiveConfig;
+        return this.hiveConfig == null ? Codegen.empty() : this.hiveConfig;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<JobPigConfigArgs> pigConfig;
 
     public Output<JobPigConfigArgs> getPigConfig() {
-        return this.pigConfig == null ? Output.empty() : this.pigConfig;
+        return this.pigConfig == null ? Codegen.empty() : this.pigConfig;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<JobPysparkConfigArgs> pysparkConfig;
 
     public Output<JobPysparkConfigArgs> getPysparkConfig() {
-        return this.pysparkConfig == null ? Output.empty() : this.pysparkConfig;
+        return this.pysparkConfig == null ? Codegen.empty() : this.pysparkConfig;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<JobReferenceArgs> reference;
 
     public Output<JobReferenceArgs> getReference() {
-        return this.reference == null ? Output.empty() : this.reference;
+        return this.reference == null ? Codegen.empty() : this.reference;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<JobSchedulingArgs> scheduling;
 
     public Output<JobSchedulingArgs> getScheduling() {
-        return this.scheduling == null ? Output.empty() : this.scheduling;
+        return this.scheduling == null ? Codegen.empty() : this.scheduling;
     }
 
     /**
@@ -158,7 +159,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<JobSparkConfigArgs> sparkConfig;
 
     public Output<JobSparkConfigArgs> getSparkConfig() {
-        return this.sparkConfig == null ? Output.empty() : this.sparkConfig;
+        return this.sparkConfig == null ? Codegen.empty() : this.sparkConfig;
     }
 
     /**
@@ -169,7 +170,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<JobSparksqlConfigArgs> sparksqlConfig;
 
     public Output<JobSparksqlConfigArgs> getSparksqlConfig() {
-        return this.sparksqlConfig == null ? Output.empty() : this.sparksqlConfig;
+        return this.sparksqlConfig == null ? Codegen.empty() : this.sparksqlConfig;
     }
 
     public JobArgs(
@@ -202,19 +203,19 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobArgs() {
-        this.forceDelete = Output.empty();
-        this.hadoopConfig = Output.empty();
-        this.hiveConfig = Output.empty();
-        this.labels = Output.empty();
-        this.pigConfig = Output.empty();
-        this.placement = Output.empty();
-        this.project = Output.empty();
-        this.pysparkConfig = Output.empty();
-        this.reference = Output.empty();
-        this.region = Output.empty();
-        this.scheduling = Output.empty();
-        this.sparkConfig = Output.empty();
-        this.sparksqlConfig = Output.empty();
+        this.forceDelete = Codegen.empty();
+        this.hadoopConfig = Codegen.empty();
+        this.hiveConfig = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.pigConfig = Codegen.empty();
+        this.placement = Codegen.empty();
+        this.project = Codegen.empty();
+        this.pysparkConfig = Codegen.empty();
+        this.reference = Codegen.empty();
+        this.region = Codegen.empty();
+        this.scheduling = Codegen.empty();
+        this.sparkConfig = Codegen.empty();
+        this.sparksqlConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -266,7 +267,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder forceDelete(@Nullable Boolean forceDelete) {
-            this.forceDelete = Output.ofNullable(forceDelete);
+            this.forceDelete = Codegen.ofNullable(forceDelete);
             return this;
         }
         public Builder hadoopConfig(@Nullable Output<JobHadoopConfigArgs> hadoopConfig) {
@@ -274,7 +275,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hadoopConfig(@Nullable JobHadoopConfigArgs hadoopConfig) {
-            this.hadoopConfig = Output.ofNullable(hadoopConfig);
+            this.hadoopConfig = Codegen.ofNullable(hadoopConfig);
             return this;
         }
         public Builder hiveConfig(@Nullable Output<JobHiveConfigArgs> hiveConfig) {
@@ -282,7 +283,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hiveConfig(@Nullable JobHiveConfigArgs hiveConfig) {
-            this.hiveConfig = Output.ofNullable(hiveConfig);
+            this.hiveConfig = Codegen.ofNullable(hiveConfig);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -290,7 +291,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder pigConfig(@Nullable Output<JobPigConfigArgs> pigConfig) {
@@ -298,7 +299,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pigConfig(@Nullable JobPigConfigArgs pigConfig) {
-            this.pigConfig = Output.ofNullable(pigConfig);
+            this.pigConfig = Codegen.ofNullable(pigConfig);
             return this;
         }
         public Builder placement(Output<JobPlacementArgs> placement) {
@@ -314,7 +315,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder pysparkConfig(@Nullable Output<JobPysparkConfigArgs> pysparkConfig) {
@@ -322,7 +323,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pysparkConfig(@Nullable JobPysparkConfigArgs pysparkConfig) {
-            this.pysparkConfig = Output.ofNullable(pysparkConfig);
+            this.pysparkConfig = Codegen.ofNullable(pysparkConfig);
             return this;
         }
         public Builder reference(@Nullable Output<JobReferenceArgs> reference) {
@@ -330,7 +331,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reference(@Nullable JobReferenceArgs reference) {
-            this.reference = Output.ofNullable(reference);
+            this.reference = Codegen.ofNullable(reference);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -338,7 +339,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder scheduling(@Nullable Output<JobSchedulingArgs> scheduling) {
@@ -346,7 +347,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scheduling(@Nullable JobSchedulingArgs scheduling) {
-            this.scheduling = Output.ofNullable(scheduling);
+            this.scheduling = Codegen.ofNullable(scheduling);
             return this;
         }
         public Builder sparkConfig(@Nullable Output<JobSparkConfigArgs> sparkConfig) {
@@ -354,7 +355,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sparkConfig(@Nullable JobSparkConfigArgs sparkConfig) {
-            this.sparkConfig = Output.ofNullable(sparkConfig);
+            this.sparkConfig = Codegen.ofNullable(sparkConfig);
             return this;
         }
         public Builder sparksqlConfig(@Nullable Output<JobSparksqlConfigArgs> sparksqlConfig) {
@@ -362,7 +363,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sparksqlConfig(@Nullable JobSparksqlConfigArgs sparksqlConfig) {
-            this.sparksqlConfig = Output.ofNullable(sparksqlConfig);
+            this.sparksqlConfig = Codegen.ofNullable(sparksqlConfig);
             return this;
         }        public JobArgs build() {
             return new JobArgs(forceDelete, hadoopConfig, hiveConfig, labels, pigConfig, placement, project, pysparkConfig, reference, region, scheduling, sparkConfig, sparksqlConfig);

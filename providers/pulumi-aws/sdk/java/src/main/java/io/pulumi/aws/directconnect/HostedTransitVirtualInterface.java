@@ -9,6 +9,7 @@ import io.pulumi.aws.directconnect.inputs.HostedTransitVirtualInterfaceState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -243,7 +244,7 @@ public class HostedTransitVirtualInterface extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public HostedTransitVirtualInterface(String name, HostedTransitVirtualInterfaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:directconnect/hostedTransitVirtualInterface:HostedTransitVirtualInterface", name, args == null ? HostedTransitVirtualInterfaceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:directconnect/hostedTransitVirtualInterface:HostedTransitVirtualInterface", name, args == null ? HostedTransitVirtualInterfaceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private HostedTransitVirtualInterface(String name, Output<String> id, @Nullable HostedTransitVirtualInterfaceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

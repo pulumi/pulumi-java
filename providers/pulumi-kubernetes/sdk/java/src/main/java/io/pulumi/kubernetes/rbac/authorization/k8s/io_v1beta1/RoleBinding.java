@@ -7,6 +7,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import io.pulumi.kubernetes.rbac.authorization.k8s.io_v1beta1.RoleBindingArgs;
@@ -115,7 +116,7 @@ public class RoleBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RoleBinding(String name, RoleBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:rbac.authorization.k8s.io/v1beta1:RoleBinding", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:rbac.authorization.k8s.io/v1beta1:RoleBinding", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private RoleBinding(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iotsitewise.inputs.AlarmsPropertiesArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.PortalTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AlarmsPropertiesArgs> alarms;
 
     public Output<AlarmsPropertiesArgs> getAlarms() {
-        return this.alarms == null ? Output.empty() : this.alarms;
+        return this.alarms == null ? Codegen.empty() : this.alarms;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> notificationSenderEmail;
 
     public Output<String> getNotificationSenderEmail() {
-        return this.notificationSenderEmail == null ? Output.empty() : this.notificationSenderEmail;
+        return this.notificationSenderEmail == null ? Codegen.empty() : this.notificationSenderEmail;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> portalAuthMode;
 
     public Output<String> getPortalAuthMode() {
-        return this.portalAuthMode == null ? Output.empty() : this.portalAuthMode;
+        return this.portalAuthMode == null ? Codegen.empty() : this.portalAuthMode;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> portalDescription;
 
     public Output<String> getPortalDescription() {
-        return this.portalDescription == null ? Output.empty() : this.portalDescription;
+        return this.portalDescription == null ? Codegen.empty() : this.portalDescription;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> portalName;
 
     public Output<String> getPortalName() {
-        return this.portalName == null ? Output.empty() : this.portalName;
+        return this.portalName == null ? Codegen.empty() : this.portalName;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<PortalTagArgs>> tags;
 
     public Output<List<PortalTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public PortalArgs(
@@ -125,14 +126,14 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PortalArgs() {
-        this.alarms = Output.empty();
-        this.notificationSenderEmail = Output.empty();
-        this.portalAuthMode = Output.empty();
-        this.portalContactEmail = Output.empty();
-        this.portalDescription = Output.empty();
-        this.portalName = Output.empty();
-        this.roleArn = Output.empty();
-        this.tags = Output.empty();
+        this.alarms = Codegen.empty();
+        this.notificationSenderEmail = Codegen.empty();
+        this.portalAuthMode = Codegen.empty();
+        this.portalContactEmail = Codegen.empty();
+        this.portalDescription = Codegen.empty();
+        this.portalName = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -174,7 +175,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder alarms(@Nullable AlarmsPropertiesArgs alarms) {
-            this.alarms = Output.ofNullable(alarms);
+            this.alarms = Codegen.ofNullable(alarms);
             return this;
         }
         public Builder notificationSenderEmail(@Nullable Output<String> notificationSenderEmail) {
@@ -182,7 +183,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notificationSenderEmail(@Nullable String notificationSenderEmail) {
-            this.notificationSenderEmail = Output.ofNullable(notificationSenderEmail);
+            this.notificationSenderEmail = Codegen.ofNullable(notificationSenderEmail);
             return this;
         }
         public Builder portalAuthMode(@Nullable Output<String> portalAuthMode) {
@@ -190,7 +191,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder portalAuthMode(@Nullable String portalAuthMode) {
-            this.portalAuthMode = Output.ofNullable(portalAuthMode);
+            this.portalAuthMode = Codegen.ofNullable(portalAuthMode);
             return this;
         }
         public Builder portalContactEmail(Output<String> portalContactEmail) {
@@ -206,7 +207,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder portalDescription(@Nullable String portalDescription) {
-            this.portalDescription = Output.ofNullable(portalDescription);
+            this.portalDescription = Codegen.ofNullable(portalDescription);
             return this;
         }
         public Builder portalName(@Nullable Output<String> portalName) {
@@ -214,7 +215,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder portalName(@Nullable String portalName) {
-            this.portalName = Output.ofNullable(portalName);
+            this.portalName = Codegen.ofNullable(portalName);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {
@@ -230,7 +231,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<PortalTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(PortalTagArgs... tags) {

@@ -6,6 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.DeviceFleetOutputConfigGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class DeviceFleetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class DeviceFleetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class DeviceFleetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> deviceFleetName;
 
     public Output<String> getDeviceFleetName() {
-        return this.deviceFleetName == null ? Output.empty() : this.deviceFleetName;
+        return this.deviceFleetName == null ? Codegen.empty() : this.deviceFleetName;
     }
 
     /**
@@ -58,14 +59,14 @@ public final class DeviceFleetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableIotRoleAlias;
 
     public Output<Boolean> getEnableIotRoleAlias() {
-        return this.enableIotRoleAlias == null ? Output.empty() : this.enableIotRoleAlias;
+        return this.enableIotRoleAlias == null ? Codegen.empty() : this.enableIotRoleAlias;
     }
 
     @Import(name="iotRoleAlias")
       private final @Nullable Output<String> iotRoleAlias;
 
     public Output<String> getIotRoleAlias() {
-        return this.iotRoleAlias == null ? Output.empty() : this.iotRoleAlias;
+        return this.iotRoleAlias == null ? Codegen.empty() : this.iotRoleAlias;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class DeviceFleetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DeviceFleetOutputConfigGetArgs> outputConfig;
 
     public Output<DeviceFleetOutputConfigGetArgs> getOutputConfig() {
-        return this.outputConfig == null ? Output.empty() : this.outputConfig;
+        return this.outputConfig == null ? Codegen.empty() : this.outputConfig;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class DeviceFleetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     /**
@@ -98,7 +99,7 @@ public final class DeviceFleetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -109,7 +110,7 @@ public final class DeviceFleetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public DeviceFleetState(
@@ -134,15 +135,15 @@ public final class DeviceFleetState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeviceFleetState() {
-        this.arn = Output.empty();
-        this.description = Output.empty();
-        this.deviceFleetName = Output.empty();
-        this.enableIotRoleAlias = Output.empty();
-        this.iotRoleAlias = Output.empty();
-        this.outputConfig = Output.empty();
-        this.roleArn = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.deviceFleetName = Codegen.empty();
+        this.enableIotRoleAlias = Codegen.empty();
+        this.iotRoleAlias = Codegen.empty();
+        this.outputConfig = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -186,7 +187,7 @@ public final class DeviceFleetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -194,7 +195,7 @@ public final class DeviceFleetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder deviceFleetName(@Nullable Output<String> deviceFleetName) {
@@ -202,7 +203,7 @@ public final class DeviceFleetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deviceFleetName(@Nullable String deviceFleetName) {
-            this.deviceFleetName = Output.ofNullable(deviceFleetName);
+            this.deviceFleetName = Codegen.ofNullable(deviceFleetName);
             return this;
         }
         public Builder enableIotRoleAlias(@Nullable Output<Boolean> enableIotRoleAlias) {
@@ -210,7 +211,7 @@ public final class DeviceFleetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableIotRoleAlias(@Nullable Boolean enableIotRoleAlias) {
-            this.enableIotRoleAlias = Output.ofNullable(enableIotRoleAlias);
+            this.enableIotRoleAlias = Codegen.ofNullable(enableIotRoleAlias);
             return this;
         }
         public Builder iotRoleAlias(@Nullable Output<String> iotRoleAlias) {
@@ -218,7 +219,7 @@ public final class DeviceFleetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iotRoleAlias(@Nullable String iotRoleAlias) {
-            this.iotRoleAlias = Output.ofNullable(iotRoleAlias);
+            this.iotRoleAlias = Codegen.ofNullable(iotRoleAlias);
             return this;
         }
         public Builder outputConfig(@Nullable Output<DeviceFleetOutputConfigGetArgs> outputConfig) {
@@ -226,7 +227,7 @@ public final class DeviceFleetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder outputConfig(@Nullable DeviceFleetOutputConfigGetArgs outputConfig) {
-            this.outputConfig = Output.ofNullable(outputConfig);
+            this.outputConfig = Codegen.ofNullable(outputConfig);
             return this;
         }
         public Builder roleArn(@Nullable Output<String> roleArn) {
@@ -234,7 +235,7 @@ public final class DeviceFleetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -242,7 +243,7 @@ public final class DeviceFleetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -250,7 +251,7 @@ public final class DeviceFleetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public DeviceFleetState build() {
             return new DeviceFleetState(arn, description, deviceFleetName, enableIotRoleAlias, iotRoleAlias, outputConfig, roleArn, tags, tagsAll);

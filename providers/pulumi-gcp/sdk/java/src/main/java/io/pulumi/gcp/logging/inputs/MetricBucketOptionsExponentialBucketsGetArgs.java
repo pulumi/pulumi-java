@@ -5,6 +5,7 @@ package io.pulumi.gcp.logging.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class MetricBucketOptionsExponentialBucketsGetArgs extends io.pulum
       private final @Nullable Output<Double> growthFactor;
 
     public Output<Double> getGrowthFactor() {
-        return this.growthFactor == null ? Output.empty() : this.growthFactor;
+        return this.growthFactor == null ? Codegen.empty() : this.growthFactor;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class MetricBucketOptionsExponentialBucketsGetArgs extends io.pulum
       private final @Nullable Output<Integer> numFiniteBuckets;
 
     public Output<Integer> getNumFiniteBuckets() {
-        return this.numFiniteBuckets == null ? Output.empty() : this.numFiniteBuckets;
+        return this.numFiniteBuckets == null ? Codegen.empty() : this.numFiniteBuckets;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class MetricBucketOptionsExponentialBucketsGetArgs extends io.pulum
       private final @Nullable Output<Double> scale;
 
     public Output<Double> getScale() {
-        return this.scale == null ? Output.empty() : this.scale;
+        return this.scale == null ? Codegen.empty() : this.scale;
     }
 
     public MetricBucketOptionsExponentialBucketsGetArgs(
@@ -58,9 +59,9 @@ public final class MetricBucketOptionsExponentialBucketsGetArgs extends io.pulum
     }
 
     private MetricBucketOptionsExponentialBucketsGetArgs() {
-        this.growthFactor = Output.empty();
-        this.numFiniteBuckets = Output.empty();
-        this.scale = Output.empty();
+        this.growthFactor = Codegen.empty();
+        this.numFiniteBuckets = Codegen.empty();
+        this.scale = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class MetricBucketOptionsExponentialBucketsGetArgs extends io.pulum
             return this;
         }
         public Builder growthFactor(@Nullable Double growthFactor) {
-            this.growthFactor = Output.ofNullable(growthFactor);
+            this.growthFactor = Codegen.ofNullable(growthFactor);
             return this;
         }
         public Builder numFiniteBuckets(@Nullable Output<Integer> numFiniteBuckets) {
@@ -100,7 +101,7 @@ public final class MetricBucketOptionsExponentialBucketsGetArgs extends io.pulum
             return this;
         }
         public Builder numFiniteBuckets(@Nullable Integer numFiniteBuckets) {
-            this.numFiniteBuckets = Output.ofNullable(numFiniteBuckets);
+            this.numFiniteBuckets = Codegen.ofNullable(numFiniteBuckets);
             return this;
         }
         public Builder scale(@Nullable Output<Double> scale) {
@@ -108,7 +109,7 @@ public final class MetricBucketOptionsExponentialBucketsGetArgs extends io.pulum
             return this;
         }
         public Builder scale(@Nullable Double scale) {
-            this.scale = Output.ofNullable(scale);
+            this.scale = Codegen.ofNullable(scale);
             return this;
         }        public MetricBucketOptionsExponentialBucketsGetArgs build() {
             return new MetricBucketOptionsExponentialBucketsGetArgs(growthFactor, numFiniteBuckets, scale);

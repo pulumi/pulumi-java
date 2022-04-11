@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigPreStepWindowsExecStepConfigArgs;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class PatchDeploymentPatchConfigPreStepArgs extends io.pulumi.resou
       private final @Nullable Output<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs> linuxExecStepConfig;
 
     public Output<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs> getLinuxExecStepConfig() {
-        return this.linuxExecStepConfig == null ? Output.empty() : this.linuxExecStepConfig;
+        return this.linuxExecStepConfig == null ? Codegen.empty() : this.linuxExecStepConfig;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class PatchDeploymentPatchConfigPreStepArgs extends io.pulumi.resou
       private final @Nullable Output<PatchDeploymentPatchConfigPreStepWindowsExecStepConfigArgs> windowsExecStepConfig;
 
     public Output<PatchDeploymentPatchConfigPreStepWindowsExecStepConfigArgs> getWindowsExecStepConfig() {
-        return this.windowsExecStepConfig == null ? Output.empty() : this.windowsExecStepConfig;
+        return this.windowsExecStepConfig == null ? Codegen.empty() : this.windowsExecStepConfig;
     }
 
     public PatchDeploymentPatchConfigPreStepArgs(
@@ -47,8 +48,8 @@ public final class PatchDeploymentPatchConfigPreStepArgs extends io.pulumi.resou
     }
 
     private PatchDeploymentPatchConfigPreStepArgs() {
-        this.linuxExecStepConfig = Output.empty();
-        this.windowsExecStepConfig = Output.empty();
+        this.linuxExecStepConfig = Codegen.empty();
+        this.windowsExecStepConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -78,7 +79,7 @@ public final class PatchDeploymentPatchConfigPreStepArgs extends io.pulumi.resou
             return this;
         }
         public Builder linuxExecStepConfig(@Nullable PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs linuxExecStepConfig) {
-            this.linuxExecStepConfig = Output.ofNullable(linuxExecStepConfig);
+            this.linuxExecStepConfig = Codegen.ofNullable(linuxExecStepConfig);
             return this;
         }
         public Builder windowsExecStepConfig(@Nullable Output<PatchDeploymentPatchConfigPreStepWindowsExecStepConfigArgs> windowsExecStepConfig) {
@@ -86,7 +87,7 @@ public final class PatchDeploymentPatchConfigPreStepArgs extends io.pulumi.resou
             return this;
         }
         public Builder windowsExecStepConfig(@Nullable PatchDeploymentPatchConfigPreStepWindowsExecStepConfigArgs windowsExecStepConfig) {
-            this.windowsExecStepConfig = Output.ofNullable(windowsExecStepConfig);
+            this.windowsExecStepConfig = Codegen.ofNullable(windowsExecStepConfig);
             return this;
         }        public PatchDeploymentPatchConfigPreStepArgs build() {
             return new PatchDeploymentPatchConfigPreStepArgs(linuxExecStepConfig, windowsExecStepConfig);

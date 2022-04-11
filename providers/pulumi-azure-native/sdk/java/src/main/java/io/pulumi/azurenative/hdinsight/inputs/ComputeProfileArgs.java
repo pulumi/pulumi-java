@@ -6,6 +6,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 import io.pulumi.azurenative.hdinsight.inputs.RoleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class ComputeProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<RoleArgs>> roles;
 
     public Output<List<RoleArgs>> getRoles() {
-        return this.roles == null ? Output.empty() : this.roles;
+        return this.roles == null ? Codegen.empty() : this.roles;
     }
 
     public ComputeProfileArgs(@Nullable Output<List<RoleArgs>> roles) {
@@ -35,7 +36,7 @@ public final class ComputeProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ComputeProfileArgs() {
-        this.roles = Output.empty();
+        this.roles = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class ComputeProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roles(@Nullable List<RoleArgs> roles) {
-            this.roles = Output.ofNullable(roles);
+            this.roles = Codegen.ofNullable(roles);
             return this;
         }
         public Builder roles(RoleArgs... roles) {

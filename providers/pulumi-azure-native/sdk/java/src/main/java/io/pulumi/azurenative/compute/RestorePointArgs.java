@@ -6,6 +6,7 @@ package io.pulumi.azurenative.compute;
 import io.pulumi.azurenative.compute.inputs.ApiEntityReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class RestorePointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ApiEntityReferenceArgs>> excludeDisks;
 
     public Output<List<ApiEntityReferenceArgs>> getExcludeDisks() {
-        return this.excludeDisks == null ? Output.empty() : this.excludeDisks;
+        return this.excludeDisks == null ? Codegen.empty() : this.excludeDisks;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class RestorePointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> restorePointName;
 
     public Output<String> getRestorePointName() {
-        return this.restorePointName == null ? Output.empty() : this.restorePointName;
+        return this.restorePointName == null ? Codegen.empty() : this.restorePointName;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class RestorePointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> timeCreated;
 
     public Output<String> getTimeCreated() {
-        return this.timeCreated == null ? Output.empty() : this.timeCreated;
+        return this.timeCreated == null ? Codegen.empty() : this.timeCreated;
     }
 
     public RestorePointArgs(
@@ -85,11 +86,11 @@ public final class RestorePointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RestorePointArgs() {
-        this.excludeDisks = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.restorePointCollectionName = Output.empty();
-        this.restorePointName = Output.empty();
-        this.timeCreated = Output.empty();
+        this.excludeDisks = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.restorePointCollectionName = Codegen.empty();
+        this.restorePointName = Codegen.empty();
+        this.timeCreated = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class RestorePointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder excludeDisks(@Nullable List<ApiEntityReferenceArgs> excludeDisks) {
-            this.excludeDisks = Output.ofNullable(excludeDisks);
+            this.excludeDisks = Codegen.ofNullable(excludeDisks);
             return this;
         }
         public Builder excludeDisks(ApiEntityReferenceArgs... excludeDisks) {
@@ -152,7 +153,7 @@ public final class RestorePointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder restorePointName(@Nullable String restorePointName) {
-            this.restorePointName = Output.ofNullable(restorePointName);
+            this.restorePointName = Codegen.ofNullable(restorePointName);
             return this;
         }
         public Builder timeCreated(@Nullable Output<String> timeCreated) {
@@ -160,7 +161,7 @@ public final class RestorePointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeCreated(@Nullable String timeCreated) {
-            this.timeCreated = Output.ofNullable(timeCreated);
+            this.timeCreated = Codegen.ofNullable(timeCreated);
             return this;
         }        public RestorePointArgs build() {
             return new RestorePointArgs(excludeDisks, resourceGroupName, restorePointCollectionName, restorePointName, timeCreated);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.enums.GoogleDevtoolsContaineranalysisV1alpha1AliasContextKind;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs exten
       private final @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextKind> kind;
 
     public Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextKind> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs exten
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs(
@@ -49,8 +50,8 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs exten
     }
 
     private GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs() {
-        this.kind = Output.empty();
-        this.name = Output.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs exten
             return this;
         }
         public Builder kind(@Nullable GoogleDevtoolsContaineranalysisV1alpha1AliasContextKind kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -88,7 +89,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs exten
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs(kind, name);

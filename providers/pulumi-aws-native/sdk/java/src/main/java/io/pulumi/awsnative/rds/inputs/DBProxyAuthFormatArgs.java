@@ -7,6 +7,7 @@ import io.pulumi.awsnative.rds.enums.DBProxyAuthFormatAuthScheme;
 import io.pulumi.awsnative.rds.enums.DBProxyAuthFormatIAMAuth;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class DBProxyAuthFormatArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<DBProxyAuthFormatAuthScheme> authScheme;
 
     public Output<DBProxyAuthFormatAuthScheme> getAuthScheme() {
-        return this.authScheme == null ? Output.empty() : this.authScheme;
+        return this.authScheme == null ? Codegen.empty() : this.authScheme;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class DBProxyAuthFormatArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class DBProxyAuthFormatArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<DBProxyAuthFormatIAMAuth> iAMAuth;
 
     public Output<DBProxyAuthFormatIAMAuth> getIAMAuth() {
-        return this.iAMAuth == null ? Output.empty() : this.iAMAuth;
+        return this.iAMAuth == null ? Codegen.empty() : this.iAMAuth;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class DBProxyAuthFormatArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> secretArn;
 
     public Output<String> getSecretArn() {
-        return this.secretArn == null ? Output.empty() : this.secretArn;
+        return this.secretArn == null ? Codegen.empty() : this.secretArn;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class DBProxyAuthFormatArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> userName;
 
     public Output<String> getUserName() {
-        return this.userName == null ? Output.empty() : this.userName;
+        return this.userName == null ? Codegen.empty() : this.userName;
     }
 
     public DBProxyAuthFormatArgs(
@@ -85,11 +86,11 @@ public final class DBProxyAuthFormatArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DBProxyAuthFormatArgs() {
-        this.authScheme = Output.empty();
-        this.description = Output.empty();
-        this.iAMAuth = Output.empty();
-        this.secretArn = Output.empty();
-        this.userName = Output.empty();
+        this.authScheme = Codegen.empty();
+        this.description = Codegen.empty();
+        this.iAMAuth = Codegen.empty();
+        this.secretArn = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class DBProxyAuthFormatArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder authScheme(@Nullable DBProxyAuthFormatAuthScheme authScheme) {
-            this.authScheme = Output.ofNullable(authScheme);
+            this.authScheme = Codegen.ofNullable(authScheme);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -133,7 +134,7 @@ public final class DBProxyAuthFormatArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder iAMAuth(@Nullable Output<DBProxyAuthFormatIAMAuth> iAMAuth) {
@@ -141,7 +142,7 @@ public final class DBProxyAuthFormatArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder iAMAuth(@Nullable DBProxyAuthFormatIAMAuth iAMAuth) {
-            this.iAMAuth = Output.ofNullable(iAMAuth);
+            this.iAMAuth = Codegen.ofNullable(iAMAuth);
             return this;
         }
         public Builder secretArn(@Nullable Output<String> secretArn) {
@@ -149,7 +150,7 @@ public final class DBProxyAuthFormatArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder secretArn(@Nullable String secretArn) {
-            this.secretArn = Output.ofNullable(secretArn);
+            this.secretArn = Codegen.ofNullable(secretArn);
             return this;
         }
         public Builder userName(@Nullable Output<String> userName) {
@@ -157,7 +158,7 @@ public final class DBProxyAuthFormatArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder userName(@Nullable String userName) {
-            this.userName = Output.ofNullable(userName);
+            this.userName = Codegen.ofNullable(userName);
             return this;
         }        public DBProxyAuthFormatArgs build() {
             return new DBProxyAuthFormatArgs(authScheme, description, iAMAuth, secretArn, userName);

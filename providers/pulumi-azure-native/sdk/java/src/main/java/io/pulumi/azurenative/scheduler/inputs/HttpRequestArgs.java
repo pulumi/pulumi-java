@@ -8,6 +8,7 @@ import io.pulumi.azurenative.scheduler.inputs.ClientCertAuthenticationArgs;
 import io.pulumi.azurenative.scheduler.inputs.OAuthAuthenticationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -27,7 +28,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> authentication;
 
     public Output<Object> getAuthentication() {
-        return this.authentication == null ? Output.empty() : this.authentication;
+        return this.authentication == null ? Codegen.empty() : this.authentication;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> body;
 
     public Output<String> getBody() {
-        return this.body == null ? Output.empty() : this.body;
+        return this.body == null ? Codegen.empty() : this.body;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> headers;
 
     public Output<Map<String,String>> getHeaders() {
-        return this.headers == null ? Output.empty() : this.headers;
+        return this.headers == null ? Codegen.empty() : this.headers;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> method;
 
     public Output<String> getMethod() {
-        return this.method == null ? Output.empty() : this.method;
+        return this.method == null ? Codegen.empty() : this.method;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {
-        return this.uri == null ? Output.empty() : this.uri;
+        return this.uri == null ? Codegen.empty() : this.uri;
     }
 
     public HttpRequestArgs(
@@ -88,11 +89,11 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HttpRequestArgs() {
-        this.authentication = Output.empty();
-        this.body = Output.empty();
-        this.headers = Output.empty();
-        this.method = Output.empty();
-        this.uri = Output.empty();
+        this.authentication = Codegen.empty();
+        this.body = Codegen.empty();
+        this.headers = Codegen.empty();
+        this.method = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authentication(@Nullable Object authentication) {
-            this.authentication = Output.ofNullable(authentication);
+            this.authentication = Codegen.ofNullable(authentication);
             return this;
         }
         public Builder body(@Nullable Output<String> body) {
@@ -136,7 +137,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder body(@Nullable String body) {
-            this.body = Output.ofNullable(body);
+            this.body = Codegen.ofNullable(body);
             return this;
         }
         public Builder headers(@Nullable Output<Map<String,String>> headers) {
@@ -144,7 +145,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder headers(@Nullable Map<String,String> headers) {
-            this.headers = Output.ofNullable(headers);
+            this.headers = Codegen.ofNullable(headers);
             return this;
         }
         public Builder method(@Nullable Output<String> method) {
@@ -152,7 +153,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder method(@Nullable String method) {
-            this.method = Output.ofNullable(method);
+            this.method = Codegen.ofNullable(method);
             return this;
         }
         public Builder uri(@Nullable Output<String> uri) {
@@ -160,7 +161,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uri(@Nullable String uri) {
-            this.uri = Output.ofNullable(uri);
+            this.uri = Codegen.ofNullable(uri);
             return this;
         }        public HttpRequestArgs build() {
             return new HttpRequestArgs(authentication, body, headers, method, uri);

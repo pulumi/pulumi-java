@@ -7,6 +7,7 @@ import io.pulumi.awsnative.acmpca.inputs.CertificateAuthorityAccessDescriptionAr
 import io.pulumi.awsnative.acmpca.inputs.CertificateAuthorityKeyUsageArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,14 +25,14 @@ public final class CertificateAuthorityCsrExtensionsArgs extends io.pulumi.resou
       private final @Nullable Output<CertificateAuthorityKeyUsageArgs> keyUsage;
 
     public Output<CertificateAuthorityKeyUsageArgs> getKeyUsage() {
-        return this.keyUsage == null ? Output.empty() : this.keyUsage;
+        return this.keyUsage == null ? Codegen.empty() : this.keyUsage;
     }
 
     @Import(name="subjectInformationAccess")
       private final @Nullable Output<List<CertificateAuthorityAccessDescriptionArgs>> subjectInformationAccess;
 
     public Output<List<CertificateAuthorityAccessDescriptionArgs>> getSubjectInformationAccess() {
-        return this.subjectInformationAccess == null ? Output.empty() : this.subjectInformationAccess;
+        return this.subjectInformationAccess == null ? Codegen.empty() : this.subjectInformationAccess;
     }
 
     public CertificateAuthorityCsrExtensionsArgs(
@@ -42,8 +43,8 @@ public final class CertificateAuthorityCsrExtensionsArgs extends io.pulumi.resou
     }
 
     private CertificateAuthorityCsrExtensionsArgs() {
-        this.keyUsage = Output.empty();
-        this.subjectInformationAccess = Output.empty();
+        this.keyUsage = Codegen.empty();
+        this.subjectInformationAccess = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -73,7 +74,7 @@ public final class CertificateAuthorityCsrExtensionsArgs extends io.pulumi.resou
             return this;
         }
         public Builder keyUsage(@Nullable CertificateAuthorityKeyUsageArgs keyUsage) {
-            this.keyUsage = Output.ofNullable(keyUsage);
+            this.keyUsage = Codegen.ofNullable(keyUsage);
             return this;
         }
         public Builder subjectInformationAccess(@Nullable Output<List<CertificateAuthorityAccessDescriptionArgs>> subjectInformationAccess) {
@@ -81,7 +82,7 @@ public final class CertificateAuthorityCsrExtensionsArgs extends io.pulumi.resou
             return this;
         }
         public Builder subjectInformationAccess(@Nullable List<CertificateAuthorityAccessDescriptionArgs> subjectInformationAccess) {
-            this.subjectInformationAccess = Output.ofNullable(subjectInformationAccess);
+            this.subjectInformationAccess = Codegen.ofNullable(subjectInformationAccess);
             return this;
         }
         public Builder subjectInformationAccess(CertificateAuthorityAccessDescriptionArgs... subjectInformationAccess) {

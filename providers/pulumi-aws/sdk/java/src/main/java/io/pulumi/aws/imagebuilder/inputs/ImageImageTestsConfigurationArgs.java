@@ -5,6 +5,7 @@ package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ImageImageTestsConfigurationArgs extends io.pulumi.resources.
       private final @Nullable Output<Boolean> imageTestsEnabled;
 
     public Output<Boolean> getImageTestsEnabled() {
-        return this.imageTestsEnabled == null ? Output.empty() : this.imageTestsEnabled;
+        return this.imageTestsEnabled == null ? Codegen.empty() : this.imageTestsEnabled;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ImageImageTestsConfigurationArgs extends io.pulumi.resources.
       private final @Nullable Output<Integer> timeoutMinutes;
 
     public Output<Integer> getTimeoutMinutes() {
-        return this.timeoutMinutes == null ? Output.empty() : this.timeoutMinutes;
+        return this.timeoutMinutes == null ? Codegen.empty() : this.timeoutMinutes;
     }
 
     public ImageImageTestsConfigurationArgs(
@@ -45,8 +46,8 @@ public final class ImageImageTestsConfigurationArgs extends io.pulumi.resources.
     }
 
     private ImageImageTestsConfigurationArgs() {
-        this.imageTestsEnabled = Output.empty();
-        this.timeoutMinutes = Output.empty();
+        this.imageTestsEnabled = Codegen.empty();
+        this.timeoutMinutes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class ImageImageTestsConfigurationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder imageTestsEnabled(@Nullable Boolean imageTestsEnabled) {
-            this.imageTestsEnabled = Output.ofNullable(imageTestsEnabled);
+            this.imageTestsEnabled = Codegen.ofNullable(imageTestsEnabled);
             return this;
         }
         public Builder timeoutMinutes(@Nullable Output<Integer> timeoutMinutes) {
@@ -84,7 +85,7 @@ public final class ImageImageTestsConfigurationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder timeoutMinutes(@Nullable Integer timeoutMinutes) {
-            this.timeoutMinutes = Output.ofNullable(timeoutMinutes);
+            this.timeoutMinutes = Codegen.ofNullable(timeoutMinutes);
             return this;
         }        public ImageImageTestsConfigurationArgs build() {
             return new ImageImageTestsConfigurationArgs(imageTestsEnabled, timeoutMinutes);

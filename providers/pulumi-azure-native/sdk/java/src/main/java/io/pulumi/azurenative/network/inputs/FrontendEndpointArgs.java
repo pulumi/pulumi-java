@@ -8,6 +8,7 @@ import io.pulumi.azurenative.network.inputs.FrontendEndpointUpdateParametersWebA
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> hostName;
 
     public Output<String> getHostName() {
-        return this.hostName == null ? Output.empty() : this.hostName;
+        return this.hostName == null ? Codegen.empty() : this.hostName;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Either<String,SessionAffinityEnabledState>> sessionAffinityEnabledState;
 
     public Output<Either<String,SessionAffinityEnabledState>> getSessionAffinityEnabledState() {
-        return this.sessionAffinityEnabledState == null ? Output.empty() : this.sessionAffinityEnabledState;
+        return this.sessionAffinityEnabledState == null ? Codegen.empty() : this.sessionAffinityEnabledState;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Integer> sessionAffinityTtlSeconds;
 
     public Output<Integer> getSessionAffinityTtlSeconds() {
-        return this.sessionAffinityTtlSeconds == null ? Output.empty() : this.sessionAffinityTtlSeconds;
+        return this.sessionAffinityTtlSeconds == null ? Codegen.empty() : this.sessionAffinityTtlSeconds;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink;
 
     public Output<FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs> getWebApplicationFirewallPolicyLink() {
-        return this.webApplicationFirewallPolicyLink == null ? Output.empty() : this.webApplicationFirewallPolicyLink;
+        return this.webApplicationFirewallPolicyLink == null ? Codegen.empty() : this.webApplicationFirewallPolicyLink;
     }
 
     public FrontendEndpointArgs(
@@ -104,12 +105,12 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private FrontendEndpointArgs() {
-        this.hostName = Output.empty();
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.sessionAffinityEnabledState = Output.empty();
-        this.sessionAffinityTtlSeconds = Output.empty();
-        this.webApplicationFirewallPolicyLink = Output.empty();
+        this.hostName = Codegen.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.sessionAffinityEnabledState = Codegen.empty();
+        this.sessionAffinityTtlSeconds = Codegen.empty();
+        this.webApplicationFirewallPolicyLink = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder hostName(@Nullable String hostName) {
-            this.hostName = Output.ofNullable(hostName);
+            this.hostName = Codegen.ofNullable(hostName);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -155,7 +156,7 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -163,7 +164,7 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder sessionAffinityEnabledState(@Nullable Output<Either<String,SessionAffinityEnabledState>> sessionAffinityEnabledState) {
@@ -171,7 +172,7 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder sessionAffinityEnabledState(@Nullable Either<String,SessionAffinityEnabledState> sessionAffinityEnabledState) {
-            this.sessionAffinityEnabledState = Output.ofNullable(sessionAffinityEnabledState);
+            this.sessionAffinityEnabledState = Codegen.ofNullable(sessionAffinityEnabledState);
             return this;
         }
         public Builder sessionAffinityTtlSeconds(@Nullable Output<Integer> sessionAffinityTtlSeconds) {
@@ -179,7 +180,7 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder sessionAffinityTtlSeconds(@Nullable Integer sessionAffinityTtlSeconds) {
-            this.sessionAffinityTtlSeconds = Output.ofNullable(sessionAffinityTtlSeconds);
+            this.sessionAffinityTtlSeconds = Codegen.ofNullable(sessionAffinityTtlSeconds);
             return this;
         }
         public Builder webApplicationFirewallPolicyLink(@Nullable Output<FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink) {
@@ -187,7 +188,7 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder webApplicationFirewallPolicyLink(@Nullable FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs webApplicationFirewallPolicyLink) {
-            this.webApplicationFirewallPolicyLink = Output.ofNullable(webApplicationFirewallPolicyLink);
+            this.webApplicationFirewallPolicyLink = Codegen.ofNullable(webApplicationFirewallPolicyLink);
             return this;
         }        public FrontendEndpointArgs build() {
             return new FrontendEndpointArgs(hostName, id, name, sessionAffinityEnabledState, sessionAffinityTtlSeconds, webApplicationFirewallPolicyLink);

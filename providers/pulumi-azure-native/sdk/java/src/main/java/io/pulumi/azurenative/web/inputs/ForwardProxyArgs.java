@@ -6,6 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.enums.ForwardProxyConvention;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class ForwardProxyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ForwardProxyConvention> convention;
 
     public Output<ForwardProxyConvention> getConvention() {
-        return this.convention == null ? Output.empty() : this.convention;
+        return this.convention == null ? Codegen.empty() : this.convention;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ForwardProxyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> customHostHeaderName;
 
     public Output<String> getCustomHostHeaderName() {
-        return this.customHostHeaderName == null ? Output.empty() : this.customHostHeaderName;
+        return this.customHostHeaderName == null ? Codegen.empty() : this.customHostHeaderName;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ForwardProxyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> customProtoHeaderName;
 
     public Output<String> getCustomProtoHeaderName() {
-        return this.customProtoHeaderName == null ? Output.empty() : this.customProtoHeaderName;
+        return this.customProtoHeaderName == null ? Codegen.empty() : this.customProtoHeaderName;
     }
 
     public ForwardProxyArgs(
@@ -62,9 +63,9 @@ public final class ForwardProxyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ForwardProxyArgs() {
-        this.convention = Output.empty();
-        this.customHostHeaderName = Output.empty();
-        this.customProtoHeaderName = Output.empty();
+        this.convention = Codegen.empty();
+        this.customHostHeaderName = Codegen.empty();
+        this.customProtoHeaderName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ForwardProxyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder convention(@Nullable ForwardProxyConvention convention) {
-            this.convention = Output.ofNullable(convention);
+            this.convention = Codegen.ofNullable(convention);
             return this;
         }
         public Builder customHostHeaderName(@Nullable Output<String> customHostHeaderName) {
@@ -104,7 +105,7 @@ public final class ForwardProxyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customHostHeaderName(@Nullable String customHostHeaderName) {
-            this.customHostHeaderName = Output.ofNullable(customHostHeaderName);
+            this.customHostHeaderName = Codegen.ofNullable(customHostHeaderName);
             return this;
         }
         public Builder customProtoHeaderName(@Nullable Output<String> customProtoHeaderName) {
@@ -112,7 +113,7 @@ public final class ForwardProxyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customProtoHeaderName(@Nullable String customProtoHeaderName) {
-            this.customProtoHeaderName = Output.ofNullable(customProtoHeaderName);
+            this.customProtoHeaderName = Codegen.ofNullable(customProtoHeaderName);
             return this;
         }        public ForwardProxyArgs build() {
             return new ForwardProxyArgs(convention, customHostHeaderName, customProtoHeaderName);

@@ -5,6 +5,7 @@ package io.pulumi.aws.servicecatalog;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class PrincipalPortfolioAssociationArgs extends io.pulumi.resources
       private final @Nullable Output<String> acceptLanguage;
 
     public Output<String> getAcceptLanguage() {
-        return this.acceptLanguage == null ? Output.empty() : this.acceptLanguage;
+        return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class PrincipalPortfolioAssociationArgs extends io.pulumi.resources
       private final @Nullable Output<String> principalType;
 
     public Output<String> getPrincipalType() {
-        return this.principalType == null ? Output.empty() : this.principalType;
+        return this.principalType == null ? Codegen.empty() : this.principalType;
     }
 
     public PrincipalPortfolioAssociationArgs(
@@ -70,10 +71,10 @@ public final class PrincipalPortfolioAssociationArgs extends io.pulumi.resources
     }
 
     private PrincipalPortfolioAssociationArgs() {
-        this.acceptLanguage = Output.empty();
-        this.portfolioId = Output.empty();
-        this.principalArn = Output.empty();
-        this.principalType = Output.empty();
+        this.acceptLanguage = Codegen.empty();
+        this.portfolioId = Codegen.empty();
+        this.principalArn = Codegen.empty();
+        this.principalType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class PrincipalPortfolioAssociationArgs extends io.pulumi.resources
             return this;
         }
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Output.ofNullable(acceptLanguage);
+            this.acceptLanguage = Codegen.ofNullable(acceptLanguage);
             return this;
         }
         public Builder portfolioId(Output<String> portfolioId) {
@@ -131,7 +132,7 @@ public final class PrincipalPortfolioAssociationArgs extends io.pulumi.resources
             return this;
         }
         public Builder principalType(@Nullable String principalType) {
-            this.principalType = Output.ofNullable(principalType);
+            this.principalType = Codegen.ofNullable(principalType);
             return this;
         }        public PrincipalPortfolioAssociationArgs build() {
             return new PrincipalPortfolioAssociationArgs(acceptLanguage, portfolioId, principalArn, principalType);

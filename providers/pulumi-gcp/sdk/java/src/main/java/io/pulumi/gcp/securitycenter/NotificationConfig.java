@@ -6,6 +6,7 @@ package io.pulumi.gcp.securitycenter;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.securitycenter.NotificationConfigArgs;
 import io.pulumi.gcp.securitycenter.inputs.NotificationConfigState;
@@ -174,7 +175,7 @@ public class NotificationConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NotificationConfig(String name, NotificationConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:securitycenter/notificationConfig:NotificationConfig", name, args == null ? NotificationConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:securitycenter/notificationConfig:NotificationConfig", name, args == null ? NotificationConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NotificationConfig(String name, Output<String> id, @Nullable NotificationConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

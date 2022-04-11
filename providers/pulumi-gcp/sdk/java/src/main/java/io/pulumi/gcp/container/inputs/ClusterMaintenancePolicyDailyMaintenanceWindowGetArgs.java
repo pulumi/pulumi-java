@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs extends
       private final @Nullable Output<String> duration;
 
     public Output<String> getDuration() {
-        return this.duration == null ? Output.empty() : this.duration;
+        return this.duration == null ? Codegen.empty() : this.duration;
     }
 
     @Import(name="startTime", required=true)
@@ -36,8 +37,8 @@ public final class ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs extends
     }
 
     private ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs() {
-        this.duration = Output.empty();
-        this.startTime = Output.empty();
+        this.duration = Codegen.empty();
+        this.startTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs extends
             return this;
         }
         public Builder duration(@Nullable String duration) {
-            this.duration = Output.ofNullable(duration);
+            this.duration = Codegen.ofNullable(duration);
             return this;
         }
         public Builder startTime(Output<String> startTime) {

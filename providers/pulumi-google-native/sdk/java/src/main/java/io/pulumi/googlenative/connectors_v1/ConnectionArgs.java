@@ -5,6 +5,7 @@ package io.pulumi.googlenative.connectors_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.connectors_v1.inputs.AuthConfigArgs;
 import io.pulumi.googlenative.connectors_v1.inputs.ConfigVariableArgs;
 import io.pulumi.googlenative.connectors_v1.inputs.LockConfigArgs;
@@ -28,7 +29,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AuthConfigArgs> authConfig;
 
     public Output<AuthConfigArgs> getAuthConfig() {
-        return this.authConfig == null ? Output.empty() : this.authConfig;
+        return this.authConfig == null ? Codegen.empty() : this.authConfig;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ConfigVariableArgs>> configVariables;
 
     public Output<List<ConfigVariableArgs>> getConfigVariables() {
-        return this.configVariables == null ? Output.empty() : this.configVariables;
+        return this.configVariables == null ? Codegen.empty() : this.configVariables;
     }
 
     @Import(name="connectionId", required=true)
@@ -68,7 +69,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -79,14 +80,14 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -97,14 +98,14 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<LockConfigArgs> lockConfig;
 
     public Output<LockConfigArgs> getLockConfig() {
-        return this.lockConfig == null ? Output.empty() : this.lockConfig;
+        return this.lockConfig == null ? Codegen.empty() : this.lockConfig;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serviceAccount;
 
     public Output<String> getServiceAccount() {
-        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
+        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
     /**
@@ -126,7 +127,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> suspended;
 
     public Output<Boolean> getSuspended() {
-        return this.suspended == null ? Output.empty() : this.suspended;
+        return this.suspended == null ? Codegen.empty() : this.suspended;
     }
 
     public ConnectionArgs(
@@ -155,17 +156,17 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConnectionArgs() {
-        this.authConfig = Output.empty();
-        this.configVariables = Output.empty();
-        this.connectionId = Output.empty();
-        this.connectorVersion = Output.empty();
-        this.description = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.lockConfig = Output.empty();
-        this.project = Output.empty();
-        this.serviceAccount = Output.empty();
-        this.suspended = Output.empty();
+        this.authConfig = Codegen.empty();
+        this.configVariables = Codegen.empty();
+        this.connectionId = Codegen.empty();
+        this.connectorVersion = Codegen.empty();
+        this.description = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.lockConfig = Codegen.empty();
+        this.project = Codegen.empty();
+        this.serviceAccount = Codegen.empty();
+        this.suspended = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -213,7 +214,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authConfig(@Nullable AuthConfigArgs authConfig) {
-            this.authConfig = Output.ofNullable(authConfig);
+            this.authConfig = Codegen.ofNullable(authConfig);
             return this;
         }
         public Builder configVariables(@Nullable Output<List<ConfigVariableArgs>> configVariables) {
@@ -221,7 +222,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder configVariables(@Nullable List<ConfigVariableArgs> configVariables) {
-            this.configVariables = Output.ofNullable(configVariables);
+            this.configVariables = Codegen.ofNullable(configVariables);
             return this;
         }
         public Builder configVariables(ConfigVariableArgs... configVariables) {
@@ -248,7 +249,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -256,7 +257,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -264,7 +265,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder lockConfig(@Nullable Output<LockConfigArgs> lockConfig) {
@@ -272,7 +273,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lockConfig(@Nullable LockConfigArgs lockConfig) {
-            this.lockConfig = Output.ofNullable(lockConfig);
+            this.lockConfig = Codegen.ofNullable(lockConfig);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -280,7 +281,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
@@ -288,7 +289,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Output.ofNullable(serviceAccount);
+            this.serviceAccount = Codegen.ofNullable(serviceAccount);
             return this;
         }
         public Builder suspended(@Nullable Output<Boolean> suspended) {
@@ -296,7 +297,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder suspended(@Nullable Boolean suspended) {
-            this.suspended = Output.ofNullable(suspended);
+            this.suspended = Codegen.ofNullable(suspended);
             return this;
         }        public ConnectionArgs build() {
             return new ConnectionArgs(authConfig, configVariables, connectionId, connectorVersion, description, labels, location, lockConfig, project, serviceAccount, suspended);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -68,7 +69,7 @@ public final class NetworkPeeringRoutesConfigArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public NetworkPeeringRoutesConfigArgs(
@@ -85,11 +86,11 @@ public final class NetworkPeeringRoutesConfigArgs extends io.pulumi.resources.Re
     }
 
     private NetworkPeeringRoutesConfigArgs() {
-        this.exportCustomRoutes = Output.empty();
-        this.importCustomRoutes = Output.empty();
-        this.network = Output.empty();
-        this.peering = Output.empty();
-        this.project = Output.empty();
+        this.exportCustomRoutes = Codegen.empty();
+        this.importCustomRoutes = Codegen.empty();
+        this.network = Codegen.empty();
+        this.peering = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class NetworkPeeringRoutesConfigArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public NetworkPeeringRoutesConfigArgs build() {
             return new NetworkPeeringRoutesConfigArgs(exportCustomRoutes, importCustomRoutes, network, peering, project);

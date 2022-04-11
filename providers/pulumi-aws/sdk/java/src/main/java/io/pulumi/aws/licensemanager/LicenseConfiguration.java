@@ -9,6 +9,7 @@ import io.pulumi.aws.licensemanager.inputs.LicenseConfigurationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -208,7 +209,7 @@ public class LicenseConfiguration extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LicenseConfiguration(String name, LicenseConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:licensemanager/licenseConfiguration:LicenseConfiguration", name, args == null ? LicenseConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:licensemanager/licenseConfiguration:LicenseConfiguration", name, args == null ? LicenseConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private LicenseConfiguration(String name, Output<String> id, @Nullable LicenseConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

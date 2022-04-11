@@ -6,6 +6,7 @@ package io.pulumi.awsnative.kendra.inputs;
 import io.pulumi.awsnative.kendra.enums.DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class DataSourceWebCrawlerSeedUrlConfigurationArgs extends io.pulum
       private final @Nullable Output<DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode> webCrawlerMode;
 
     public Output<DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode> getWebCrawlerMode() {
-        return this.webCrawlerMode == null ? Output.empty() : this.webCrawlerMode;
+        return this.webCrawlerMode == null ? Codegen.empty() : this.webCrawlerMode;
     }
 
     public DataSourceWebCrawlerSeedUrlConfigurationArgs(
@@ -38,8 +39,8 @@ public final class DataSourceWebCrawlerSeedUrlConfigurationArgs extends io.pulum
     }
 
     private DataSourceWebCrawlerSeedUrlConfigurationArgs() {
-        this.seedUrls = Output.empty();
-        this.webCrawlerMode = Output.empty();
+        this.seedUrls = Codegen.empty();
+        this.webCrawlerMode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class DataSourceWebCrawlerSeedUrlConfigurationArgs extends io.pulum
             return this;
         }
         public Builder webCrawlerMode(@Nullable DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode webCrawlerMode) {
-            this.webCrawlerMode = Output.ofNullable(webCrawlerMode);
+            this.webCrawlerMode = Codegen.ofNullable(webCrawlerMode);
             return this;
         }        public DataSourceWebCrawlerSeedUrlConfigurationArgs build() {
             return new DataSourceWebCrawlerSeedUrlConfigurationArgs(seedUrls, webCrawlerMode);

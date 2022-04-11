@@ -5,6 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class DiskExclusionPropertiesArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<List<Integer>> diskLunList;
 
     public Output<List<Integer>> getDiskLunList() {
-        return this.diskLunList == null ? Output.empty() : this.diskLunList;
+        return this.diskLunList == null ? Codegen.empty() : this.diskLunList;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class DiskExclusionPropertiesArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Boolean> isInclusionList;
 
     public Output<Boolean> getIsInclusionList() {
-        return this.isInclusionList == null ? Output.empty() : this.isInclusionList;
+        return this.isInclusionList == null ? Codegen.empty() : this.isInclusionList;
     }
 
     public DiskExclusionPropertiesArgs(
@@ -46,8 +47,8 @@ public final class DiskExclusionPropertiesArgs extends io.pulumi.resources.Resou
     }
 
     private DiskExclusionPropertiesArgs() {
-        this.diskLunList = Output.empty();
-        this.isInclusionList = Output.empty();
+        this.diskLunList = Codegen.empty();
+        this.isInclusionList = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class DiskExclusionPropertiesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder diskLunList(@Nullable List<Integer> diskLunList) {
-            this.diskLunList = Output.ofNullable(diskLunList);
+            this.diskLunList = Codegen.ofNullable(diskLunList);
             return this;
         }
         public Builder diskLunList(Integer... diskLunList) {
@@ -88,7 +89,7 @@ public final class DiskExclusionPropertiesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder isInclusionList(@Nullable Boolean isInclusionList) {
-            this.isInclusionList = Output.ofNullable(isInclusionList);
+            this.isInclusionList = Codegen.ofNullable(isInclusionList);
             return this;
         }        public DiskExclusionPropertiesArgs build() {
             return new DiskExclusionPropertiesArgs(diskLunList, isInclusionList);

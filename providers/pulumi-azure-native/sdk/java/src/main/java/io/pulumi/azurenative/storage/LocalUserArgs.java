@@ -7,6 +7,7 @@ import io.pulumi.azurenative.storage.inputs.PermissionScopeArgs;
 import io.pulumi.azurenative.storage.inputs.SshPublicKeyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +38,7 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> hasSharedKey;
 
     public Output<Boolean> getHasSharedKey() {
-        return this.hasSharedKey == null ? Output.empty() : this.hasSharedKey;
+        return this.hasSharedKey == null ? Codegen.empty() : this.hasSharedKey;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> hasSshKey;
 
     public Output<Boolean> getHasSshKey() {
-        return this.hasSshKey == null ? Output.empty() : this.hasSshKey;
+        return this.hasSshKey == null ? Codegen.empty() : this.hasSshKey;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> hasSshPassword;
 
     public Output<Boolean> getHasSshPassword() {
-        return this.hasSshPassword == null ? Output.empty() : this.hasSshPassword;
+        return this.hasSshPassword == null ? Codegen.empty() : this.hasSshPassword;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> homeDirectory;
 
     public Output<String> getHomeDirectory() {
-        return this.homeDirectory == null ? Output.empty() : this.homeDirectory;
+        return this.homeDirectory == null ? Codegen.empty() : this.homeDirectory;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<PermissionScopeArgs>> permissionScopes;
 
     public Output<List<PermissionScopeArgs>> getPermissionScopes() {
-        return this.permissionScopes == null ? Output.empty() : this.permissionScopes;
+        return this.permissionScopes == null ? Codegen.empty() : this.permissionScopes;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<SshPublicKeyArgs>> sshAuthorizedKeys;
 
     public Output<List<SshPublicKeyArgs>> getSshAuthorizedKeys() {
-        return this.sshAuthorizedKeys == null ? Output.empty() : this.sshAuthorizedKeys;
+        return this.sshAuthorizedKeys == null ? Codegen.empty() : this.sshAuthorizedKeys;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     public LocalUserArgs(
@@ -139,15 +140,15 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LocalUserArgs() {
-        this.accountName = Output.empty();
-        this.hasSharedKey = Output.empty();
-        this.hasSshKey = Output.empty();
-        this.hasSshPassword = Output.empty();
-        this.homeDirectory = Output.empty();
-        this.permissionScopes = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sshAuthorizedKeys = Output.empty();
-        this.username = Output.empty();
+        this.accountName = Codegen.empty();
+        this.hasSharedKey = Codegen.empty();
+        this.hasSshKey = Codegen.empty();
+        this.hasSshPassword = Codegen.empty();
+        this.homeDirectory = Codegen.empty();
+        this.permissionScopes = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sshAuthorizedKeys = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -199,7 +200,7 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hasSharedKey(@Nullable Boolean hasSharedKey) {
-            this.hasSharedKey = Output.ofNullable(hasSharedKey);
+            this.hasSharedKey = Codegen.ofNullable(hasSharedKey);
             return this;
         }
         public Builder hasSshKey(@Nullable Output<Boolean> hasSshKey) {
@@ -207,7 +208,7 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hasSshKey(@Nullable Boolean hasSshKey) {
-            this.hasSshKey = Output.ofNullable(hasSshKey);
+            this.hasSshKey = Codegen.ofNullable(hasSshKey);
             return this;
         }
         public Builder hasSshPassword(@Nullable Output<Boolean> hasSshPassword) {
@@ -215,7 +216,7 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hasSshPassword(@Nullable Boolean hasSshPassword) {
-            this.hasSshPassword = Output.ofNullable(hasSshPassword);
+            this.hasSshPassword = Codegen.ofNullable(hasSshPassword);
             return this;
         }
         public Builder homeDirectory(@Nullable Output<String> homeDirectory) {
@@ -223,7 +224,7 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder homeDirectory(@Nullable String homeDirectory) {
-            this.homeDirectory = Output.ofNullable(homeDirectory);
+            this.homeDirectory = Codegen.ofNullable(homeDirectory);
             return this;
         }
         public Builder permissionScopes(@Nullable Output<List<PermissionScopeArgs>> permissionScopes) {
@@ -231,7 +232,7 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder permissionScopes(@Nullable List<PermissionScopeArgs> permissionScopes) {
-            this.permissionScopes = Output.ofNullable(permissionScopes);
+            this.permissionScopes = Codegen.ofNullable(permissionScopes);
             return this;
         }
         public Builder permissionScopes(PermissionScopeArgs... permissionScopes) {
@@ -250,7 +251,7 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sshAuthorizedKeys(@Nullable List<SshPublicKeyArgs> sshAuthorizedKeys) {
-            this.sshAuthorizedKeys = Output.ofNullable(sshAuthorizedKeys);
+            this.sshAuthorizedKeys = Codegen.ofNullable(sshAuthorizedKeys);
             return this;
         }
         public Builder sshAuthorizedKeys(SshPublicKeyArgs... sshAuthorizedKeys) {
@@ -261,7 +262,7 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder username(@Nullable String username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }        public LocalUserArgs build() {
             return new LocalUserArgs(accountName, hasSharedKey, hasSshKey, hasSshPassword, homeDirectory, permissionScopes, resourceGroupName, sshAuthorizedKeys, username);

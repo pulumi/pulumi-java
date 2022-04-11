@@ -5,6 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class AzureFabricCreationInputArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
-        return this.instanceType == null ? Output.empty() : this.instanceType;
+        return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class AzureFabricCreationInputArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     public AzureFabricCreationInputArgs(
@@ -49,8 +50,8 @@ public final class AzureFabricCreationInputArgs extends io.pulumi.resources.Reso
     }
 
     private AzureFabricCreationInputArgs() {
-        this.instanceType = Output.empty();
-        this.location = Output.empty();
+        this.instanceType = Codegen.empty();
+        this.location = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class AzureFabricCreationInputArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Output.ofNullable(instanceType);
+            this.instanceType = Codegen.ofNullable(instanceType);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -88,7 +89,7 @@ public final class AzureFabricCreationInputArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }        public AzureFabricCreationInputArgs build() {
             return new AzureFabricCreationInputArgs(instanceType, location);

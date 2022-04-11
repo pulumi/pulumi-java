@@ -12,6 +12,7 @@ import io.pulumi.aws.mwaa.outputs.EnvironmentNetworkConfiguration;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -417,7 +418,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Environment(String name, EnvironmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:mwaa/environment:Environment", name, args == null ? EnvironmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:mwaa/environment:Environment", name, args == null ? EnvironmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Environment(String name, Output<String> id, @Nullable EnvironmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

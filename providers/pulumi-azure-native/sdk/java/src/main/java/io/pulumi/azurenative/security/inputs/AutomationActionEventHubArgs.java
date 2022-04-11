@@ -5,6 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -38,7 +39,7 @@ public final class AutomationActionEventHubArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> connectionString;
 
     public Output<String> getConnectionString() {
-        return this.connectionString == null ? Output.empty() : this.connectionString;
+        return this.connectionString == null ? Codegen.empty() : this.connectionString;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class AutomationActionEventHubArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> eventHubResourceId;
 
     public Output<String> getEventHubResourceId() {
-        return this.eventHubResourceId == null ? Output.empty() : this.eventHubResourceId;
+        return this.eventHubResourceId == null ? Codegen.empty() : this.eventHubResourceId;
     }
 
     public AutomationActionEventHubArgs(
@@ -62,9 +63,9 @@ public final class AutomationActionEventHubArgs extends io.pulumi.resources.Reso
     }
 
     private AutomationActionEventHubArgs() {
-        this.actionType = Output.empty();
-        this.connectionString = Output.empty();
-        this.eventHubResourceId = Output.empty();
+        this.actionType = Codegen.empty();
+        this.connectionString = Codegen.empty();
+        this.eventHubResourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class AutomationActionEventHubArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder connectionString(@Nullable String connectionString) {
-            this.connectionString = Output.ofNullable(connectionString);
+            this.connectionString = Codegen.ofNullable(connectionString);
             return this;
         }
         public Builder eventHubResourceId(@Nullable Output<String> eventHubResourceId) {
@@ -112,7 +113,7 @@ public final class AutomationActionEventHubArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder eventHubResourceId(@Nullable String eventHubResourceId) {
-            this.eventHubResourceId = Output.ofNullable(eventHubResourceId);
+            this.eventHubResourceId = Codegen.ofNullable(eventHubResourceId);
             return this;
         }        public AutomationActionEventHubArgs build() {
             return new AutomationActionEventHubArgs(actionType, connectionString, eventHubResourceId);

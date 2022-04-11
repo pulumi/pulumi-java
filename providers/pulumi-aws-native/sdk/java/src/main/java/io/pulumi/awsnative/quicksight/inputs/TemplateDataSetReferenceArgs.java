@@ -5,6 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class TemplateDataSetReferenceArgs extends io.pulumi.resources.Reso
     }
 
     private TemplateDataSetReferenceArgs() {
-        this.dataSetArn = Output.empty();
-        this.dataSetPlaceholder = Output.empty();
+        this.dataSetArn = Codegen.empty();
+        this.dataSetPlaceholder = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -6,6 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.GatewayRouteSpecHttpRouteActionTargetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -29,7 +30,7 @@ public final class GatewayRouteSpecHttpRouteActionArgs extends io.pulumi.resourc
     }
 
     private GatewayRouteSpecHttpRouteActionArgs() {
-        this.target = Output.empty();
+        this.target = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -9,6 +9,7 @@ import io.pulumi.aws.guardduty.inputs.PublishingDestinationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -107,7 +108,7 @@ public class PublishingDestination extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PublishingDestination(String name, PublishingDestinationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:guardduty/publishingDestination:PublishingDestination", name, args == null ? PublishingDestinationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:guardduty/publishingDestination:PublishingDestination", name, args == null ? PublishingDestinationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PublishingDestination(String name, Output<String> id, @Nullable PublishingDestinationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_beta.enums.DiskInstantiationConfigInstantiateFrom;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class DiskInstantiationConfigArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Boolean> autoDelete;
 
     public Output<Boolean> getAutoDelete() {
-        return this.autoDelete == null ? Output.empty() : this.autoDelete;
+        return this.autoDelete == null ? Codegen.empty() : this.autoDelete;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class DiskInstantiationConfigArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> customImage;
 
     public Output<String> getCustomImage() {
-        return this.customImage == null ? Output.empty() : this.customImage;
+        return this.customImage == null ? Codegen.empty() : this.customImage;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class DiskInstantiationConfigArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> deviceName;
 
     public Output<String> getDeviceName() {
-        return this.deviceName == null ? Output.empty() : this.deviceName;
+        return this.deviceName == null ? Codegen.empty() : this.deviceName;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class DiskInstantiationConfigArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<DiskInstantiationConfigInstantiateFrom> instantiateFrom;
 
     public Output<DiskInstantiationConfigInstantiateFrom> getInstantiateFrom() {
-        return this.instantiateFrom == null ? Output.empty() : this.instantiateFrom;
+        return this.instantiateFrom == null ? Codegen.empty() : this.instantiateFrom;
     }
 
     public DiskInstantiationConfigArgs(
@@ -76,10 +77,10 @@ public final class DiskInstantiationConfigArgs extends io.pulumi.resources.Resou
     }
 
     private DiskInstantiationConfigArgs() {
-        this.autoDelete = Output.empty();
-        this.customImage = Output.empty();
-        this.deviceName = Output.empty();
-        this.instantiateFrom = Output.empty();
+        this.autoDelete = Codegen.empty();
+        this.customImage = Codegen.empty();
+        this.deviceName = Codegen.empty();
+        this.instantiateFrom = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class DiskInstantiationConfigArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder autoDelete(@Nullable Boolean autoDelete) {
-            this.autoDelete = Output.ofNullable(autoDelete);
+            this.autoDelete = Codegen.ofNullable(autoDelete);
             return this;
         }
         public Builder customImage(@Nullable Output<String> customImage) {
@@ -121,7 +122,7 @@ public final class DiskInstantiationConfigArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder customImage(@Nullable String customImage) {
-            this.customImage = Output.ofNullable(customImage);
+            this.customImage = Codegen.ofNullable(customImage);
             return this;
         }
         public Builder deviceName(@Nullable Output<String> deviceName) {
@@ -129,7 +130,7 @@ public final class DiskInstantiationConfigArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Output.ofNullable(deviceName);
+            this.deviceName = Codegen.ofNullable(deviceName);
             return this;
         }
         public Builder instantiateFrom(@Nullable Output<DiskInstantiationConfigInstantiateFrom> instantiateFrom) {
@@ -137,7 +138,7 @@ public final class DiskInstantiationConfigArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder instantiateFrom(@Nullable DiskInstantiationConfigInstantiateFrom instantiateFrom) {
-            this.instantiateFrom = Output.ofNullable(instantiateFrom);
+            this.instantiateFrom = Codegen.ofNullable(instantiateFrom);
             return this;
         }        public DiskInstantiationConfigArgs build() {
             return new DiskInstantiationConfigArgs(autoDelete, customImage, deviceName, instantiateFrom);

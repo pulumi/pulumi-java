@@ -6,6 +6,7 @@ package io.pulumi.azurenative.compute;
 import io.pulumi.azurenative.compute.inputs.SkuArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -36,7 +37,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> capacityReservationName;
 
     public Output<String> getCapacityReservationName() {
-        return this.capacityReservationName == null ? Output.empty() : this.capacityReservationName;
+        return this.capacityReservationName == null ? Codegen.empty() : this.capacityReservationName;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<String>> zones;
 
     public Output<List<String>> getZones() {
-        return this.zones == null ? Output.empty() : this.zones;
+        return this.zones == null ? Codegen.empty() : this.zones;
     }
 
     public CapacityReservationArgs(
@@ -112,13 +113,13 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
     }
 
     private CapacityReservationArgs() {
-        this.capacityReservationGroupName = Output.empty();
-        this.capacityReservationName = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
-        this.zones = Output.empty();
+        this.capacityReservationGroupName = Codegen.empty();
+        this.capacityReservationName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.zones = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -166,7 +167,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder capacityReservationName(@Nullable String capacityReservationName) {
-            this.capacityReservationName = Output.ofNullable(capacityReservationName);
+            this.capacityReservationName = Codegen.ofNullable(capacityReservationName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -174,7 +175,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -198,7 +199,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder zones(@Nullable Output<List<String>> zones) {
@@ -206,7 +207,7 @@ public final class CapacityReservationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = Output.ofNullable(zones);
+            this.zones = Codegen.ofNullable(zones);
             return this;
         }
         public Builder zones(String... zones) {

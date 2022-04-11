@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class LogDestinationPolicyState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> accessPolicy;
 
     public Output<String> getAccessPolicy() {
-        return this.accessPolicy == null ? Output.empty() : this.accessPolicy;
+        return this.accessPolicy == null ? Codegen.empty() : this.accessPolicy;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class LogDestinationPolicyState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> destinationName;
 
     public Output<String> getDestinationName() {
-        return this.destinationName == null ? Output.empty() : this.destinationName;
+        return this.destinationName == null ? Codegen.empty() : this.destinationName;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class LogDestinationPolicyState extends io.pulumi.resources.Resourc
       private final @Nullable Output<Boolean> forceUpdate;
 
     public Output<Boolean> getForceUpdate() {
-        return this.forceUpdate == null ? Output.empty() : this.forceUpdate;
+        return this.forceUpdate == null ? Codegen.empty() : this.forceUpdate;
     }
 
     public LogDestinationPolicyState(
@@ -58,9 +59,9 @@ public final class LogDestinationPolicyState extends io.pulumi.resources.Resourc
     }
 
     private LogDestinationPolicyState() {
-        this.accessPolicy = Output.empty();
-        this.destinationName = Output.empty();
-        this.forceUpdate = Output.empty();
+        this.accessPolicy = Codegen.empty();
+        this.destinationName = Codegen.empty();
+        this.forceUpdate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class LogDestinationPolicyState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder accessPolicy(@Nullable String accessPolicy) {
-            this.accessPolicy = Output.ofNullable(accessPolicy);
+            this.accessPolicy = Codegen.ofNullable(accessPolicy);
             return this;
         }
         public Builder destinationName(@Nullable Output<String> destinationName) {
@@ -100,7 +101,7 @@ public final class LogDestinationPolicyState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder destinationName(@Nullable String destinationName) {
-            this.destinationName = Output.ofNullable(destinationName);
+            this.destinationName = Codegen.ofNullable(destinationName);
             return this;
         }
         public Builder forceUpdate(@Nullable Output<Boolean> forceUpdate) {
@@ -108,7 +109,7 @@ public final class LogDestinationPolicyState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder forceUpdate(@Nullable Boolean forceUpdate) {
-            this.forceUpdate = Output.ofNullable(forceUpdate);
+            this.forceUpdate = Codegen.ofNullable(forceUpdate);
             return this;
         }        public LogDestinationPolicyState build() {
             return new LogDestinationPolicyState(accessPolicy, destinationName, forceUpdate);

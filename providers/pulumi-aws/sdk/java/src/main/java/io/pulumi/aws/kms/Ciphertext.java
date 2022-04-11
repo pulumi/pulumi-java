@@ -9,6 +9,7 @@ import io.pulumi.aws.kms.inputs.CiphertextState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -103,7 +104,7 @@ public class Ciphertext extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Ciphertext(String name, CiphertextArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:kms/ciphertext:Ciphertext", name, args == null ? CiphertextArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:kms/ciphertext:Ciphertext", name, args == null ? CiphertextArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Ciphertext(String name, Output<String> id, @Nullable CiphertextState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

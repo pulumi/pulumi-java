@@ -8,6 +8,7 @@ import io.pulumi.azurenative.storage.inputs.ManagementPolicySnapShotArgs;
 import io.pulumi.azurenative.storage.inputs.ManagementPolicyVersionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -28,7 +29,7 @@ public final class ManagementPolicyActionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<ManagementPolicyBaseBlobArgs> baseBlob;
 
     public Output<ManagementPolicyBaseBlobArgs> getBaseBlob() {
-        return this.baseBlob == null ? Output.empty() : this.baseBlob;
+        return this.baseBlob == null ? Codegen.empty() : this.baseBlob;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ManagementPolicyActionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<ManagementPolicySnapShotArgs> snapshot;
 
     public Output<ManagementPolicySnapShotArgs> getSnapshot() {
-        return this.snapshot == null ? Output.empty() : this.snapshot;
+        return this.snapshot == null ? Codegen.empty() : this.snapshot;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ManagementPolicyActionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<ManagementPolicyVersionArgs> version;
 
     public Output<ManagementPolicyVersionArgs> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public ManagementPolicyActionArgs(
@@ -63,9 +64,9 @@ public final class ManagementPolicyActionArgs extends io.pulumi.resources.Resour
     }
 
     private ManagementPolicyActionArgs() {
-        this.baseBlob = Output.empty();
-        this.snapshot = Output.empty();
-        this.version = Output.empty();
+        this.baseBlob = Codegen.empty();
+        this.snapshot = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class ManagementPolicyActionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder baseBlob(@Nullable ManagementPolicyBaseBlobArgs baseBlob) {
-            this.baseBlob = Output.ofNullable(baseBlob);
+            this.baseBlob = Codegen.ofNullable(baseBlob);
             return this;
         }
         public Builder snapshot(@Nullable Output<ManagementPolicySnapShotArgs> snapshot) {
@@ -105,7 +106,7 @@ public final class ManagementPolicyActionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder snapshot(@Nullable ManagementPolicySnapShotArgs snapshot) {
-            this.snapshot = Output.ofNullable(snapshot);
+            this.snapshot = Codegen.ofNullable(snapshot);
             return this;
         }
         public Builder version(@Nullable Output<ManagementPolicyVersionArgs> version) {
@@ -113,7 +114,7 @@ public final class ManagementPolicyActionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder version(@Nullable ManagementPolicyVersionArgs version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public ManagementPolicyActionArgs build() {
             return new ManagementPolicyActionArgs(baseBlob, snapshot, version);

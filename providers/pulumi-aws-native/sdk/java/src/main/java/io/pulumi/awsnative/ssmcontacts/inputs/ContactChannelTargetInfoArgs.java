@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ssmcontacts.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -48,8 +49,8 @@ public final class ContactChannelTargetInfoArgs extends io.pulumi.resources.Reso
     }
 
     private ContactChannelTargetInfoArgs() {
-        this.channelId = Output.empty();
-        this.retryIntervalInMinutes = Output.empty();
+        this.channelId = Codegen.empty();
+        this.retryIntervalInMinutes = Codegen.empty();
     }
 
     public static Builder builder() {

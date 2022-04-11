@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dns_v1beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs extends io.pulum
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -34,14 +35,14 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs extends io.pulum
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="rrdatas")
       private final @Nullable Output<List<String>> rrdatas;
 
     public Output<List<String>> getRrdatas() {
-        return this.rrdatas == null ? Output.empty() : this.rrdatas;
+        return this.rrdatas == null ? Codegen.empty() : this.rrdatas;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs extends io.pulum
       private final @Nullable Output<List<String>> signatureRrdatas;
 
     public Output<List<String>> getSignatureRrdatas() {
-        return this.signatureRrdatas == null ? Output.empty() : this.signatureRrdatas;
+        return this.signatureRrdatas == null ? Codegen.empty() : this.signatureRrdatas;
     }
 
     public RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs(
@@ -67,10 +68,10 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs extends io.pulum
     }
 
     private RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs() {
-        this.kind = Output.empty();
-        this.location = Output.empty();
-        this.rrdatas = Output.empty();
-        this.signatureRrdatas = Output.empty();
+        this.kind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.rrdatas = Codegen.empty();
+        this.signatureRrdatas = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs extends io.pulum
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -112,7 +113,7 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs extends io.pulum
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder rrdatas(@Nullable Output<List<String>> rrdatas) {
@@ -120,7 +121,7 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs extends io.pulum
             return this;
         }
         public Builder rrdatas(@Nullable List<String> rrdatas) {
-            this.rrdatas = Output.ofNullable(rrdatas);
+            this.rrdatas = Codegen.ofNullable(rrdatas);
             return this;
         }
         public Builder rrdatas(String... rrdatas) {
@@ -131,7 +132,7 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs extends io.pulum
             return this;
         }
         public Builder signatureRrdatas(@Nullable List<String> signatureRrdatas) {
-            this.signatureRrdatas = Output.ofNullable(signatureRrdatas);
+            this.signatureRrdatas = Codegen.ofNullable(signatureRrdatas);
             return this;
         }
         public Builder signatureRrdatas(String... signatureRrdatas) {

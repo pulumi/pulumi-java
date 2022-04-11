@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.InstanceFromMachineImageArgs;
 import io.pulumi.gcp.compute.inputs.InstanceFromMachineImageState;
@@ -603,7 +604,7 @@ public class InstanceFromMachineImage extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public InstanceFromMachineImage(String name, InstanceFromMachineImageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/instanceFromMachineImage:InstanceFromMachineImage", name, args == null ? InstanceFromMachineImageArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/instanceFromMachineImage:InstanceFromMachineImage", name, args == null ? InstanceFromMachineImageArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private InstanceFromMachineImage(String name, Output<String> id, @Nullable InstanceFromMachineImageState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

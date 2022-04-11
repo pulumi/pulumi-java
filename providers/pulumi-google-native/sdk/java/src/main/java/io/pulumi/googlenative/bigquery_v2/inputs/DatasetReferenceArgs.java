@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> datasetId;
 
     public Output<String> getDatasetId() {
-        return this.datasetId == null ? Output.empty() : this.datasetId;
+        return this.datasetId == null ? Codegen.empty() : this.datasetId;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public DatasetReferenceArgs(
@@ -44,8 +45,8 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DatasetReferenceArgs() {
-        this.datasetId = Output.empty();
-        this.project = Output.empty();
+        this.datasetId = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder datasetId(@Nullable String datasetId) {
-            this.datasetId = Output.ofNullable(datasetId);
+            this.datasetId = Codegen.ofNullable(datasetId);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -83,7 +84,7 @@ public final class DatasetReferenceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public DatasetReferenceArgs build() {
             return new DatasetReferenceArgs(datasetId, project);

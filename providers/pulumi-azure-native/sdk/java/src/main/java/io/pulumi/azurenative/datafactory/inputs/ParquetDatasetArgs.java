@@ -21,6 +21,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SftpLocationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -45,7 +46,7 @@ public final class ParquetDatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class ParquetDatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> compressionCodec;
 
     public Output<Object> getCompressionCodec() {
-        return this.compressionCodec == null ? Output.empty() : this.compressionCodec;
+        return this.compressionCodec == null ? Codegen.empty() : this.compressionCodec;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ParquetDatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class ParquetDatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DatasetFolderArgs> folder;
 
     public Output<DatasetFolderArgs> getFolder() {
-        return this.folder == null ? Output.empty() : this.folder;
+        return this.folder == null ? Codegen.empty() : this.folder;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class ParquetDatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -122,7 +123,7 @@ public final class ParquetDatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> schema;
 
     public Output<Object> getSchema() {
-        return this.schema == null ? Output.empty() : this.schema;
+        return this.schema == null ? Codegen.empty() : this.schema;
     }
 
     /**
@@ -133,7 +134,7 @@ public final class ParquetDatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> structure;
 
     public Output<Object> getStructure() {
-        return this.structure == null ? Output.empty() : this.structure;
+        return this.structure == null ? Codegen.empty() : this.structure;
     }
 
     /**
@@ -172,16 +173,16 @@ public final class ParquetDatasetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ParquetDatasetArgs() {
-        this.annotations = Output.empty();
-        this.compressionCodec = Output.empty();
-        this.description = Output.empty();
-        this.folder = Output.empty();
-        this.linkedServiceName = Output.empty();
-        this.location = Output.empty();
-        this.parameters = Output.empty();
-        this.schema = Output.empty();
-        this.structure = Output.empty();
-        this.type = Output.empty();
+        this.annotations = Codegen.empty();
+        this.compressionCodec = Codegen.empty();
+        this.description = Codegen.empty();
+        this.folder = Codegen.empty();
+        this.linkedServiceName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.schema = Codegen.empty();
+        this.structure = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -227,7 +228,7 @@ public final class ParquetDatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -238,7 +239,7 @@ public final class ParquetDatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder compressionCodec(@Nullable Object compressionCodec) {
-            this.compressionCodec = Output.ofNullable(compressionCodec);
+            this.compressionCodec = Codegen.ofNullable(compressionCodec);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -246,7 +247,7 @@ public final class ParquetDatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder folder(@Nullable Output<DatasetFolderArgs> folder) {
@@ -254,7 +255,7 @@ public final class ParquetDatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder folder(@Nullable DatasetFolderArgs folder) {
-            this.folder = Output.ofNullable(folder);
+            this.folder = Codegen.ofNullable(folder);
             return this;
         }
         public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
@@ -278,7 +279,7 @@ public final class ParquetDatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder schema(@Nullable Output<Object> schema) {
@@ -286,7 +287,7 @@ public final class ParquetDatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schema(@Nullable Object schema) {
-            this.schema = Output.ofNullable(schema);
+            this.schema = Codegen.ofNullable(schema);
             return this;
         }
         public Builder structure(@Nullable Output<Object> structure) {
@@ -294,7 +295,7 @@ public final class ParquetDatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder structure(@Nullable Object structure) {
-            this.structure = Output.ofNullable(structure);
+            this.structure = Codegen.ofNullable(structure);
             return this;
         }
         public Builder type(Output<String> type) {

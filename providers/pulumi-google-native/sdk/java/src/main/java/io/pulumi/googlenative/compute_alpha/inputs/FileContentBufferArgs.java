@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.enums.FileContentBufferFileType;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class FileContentBufferArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
-        return this.content == null ? Output.empty() : this.content;
+        return this.content == null ? Codegen.empty() : this.content;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class FileContentBufferArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<FileContentBufferFileType> fileType;
 
     public Output<FileContentBufferFileType> getFileType() {
-        return this.fileType == null ? Output.empty() : this.fileType;
+        return this.fileType == null ? Codegen.empty() : this.fileType;
     }
 
     public FileContentBufferArgs(
@@ -45,8 +46,8 @@ public final class FileContentBufferArgs extends io.pulumi.resources.ResourceArg
     }
 
     private FileContentBufferArgs() {
-        this.content = Output.empty();
-        this.fileType = Output.empty();
+        this.content = Codegen.empty();
+        this.fileType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class FileContentBufferArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder content(@Nullable String content) {
-            this.content = Output.ofNullable(content);
+            this.content = Codegen.ofNullable(content);
             return this;
         }
         public Builder fileType(@Nullable Output<FileContentBufferFileType> fileType) {
@@ -84,7 +85,7 @@ public final class FileContentBufferArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder fileType(@Nullable FileContentBufferFileType fileType) {
-            this.fileType = Output.ofNullable(fileType);
+            this.fileType = Codegen.ofNullable(fileType);
             return this;
         }        public FileContentBufferArgs build() {
             return new FileContentBufferArgs(content, fileType);

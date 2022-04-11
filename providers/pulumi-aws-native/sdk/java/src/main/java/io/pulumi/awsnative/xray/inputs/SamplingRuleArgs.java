@@ -5,6 +5,7 @@ package io.pulumi.awsnative.xray.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.Object;
@@ -25,7 +26,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> attributes;
 
     public Output<Object> getAttributes() {
-        return this.attributes == null ? Output.empty() : this.attributes;
+        return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> fixedRate;
 
     public Output<Double> getFixedRate() {
-        return this.fixedRate == null ? Output.empty() : this.fixedRate;
+        return this.fixedRate == null ? Codegen.empty() : this.fixedRate;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> hTTPMethod;
 
     public Output<String> getHTTPMethod() {
-        return this.hTTPMethod == null ? Output.empty() : this.hTTPMethod;
+        return this.hTTPMethod == null ? Codegen.empty() : this.hTTPMethod;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> host;
 
     public Output<String> getHost() {
-        return this.host == null ? Output.empty() : this.host;
+        return this.host == null ? Codegen.empty() : this.host;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> reservoirSize;
 
     public Output<Integer> getReservoirSize() {
-        return this.reservoirSize == null ? Output.empty() : this.reservoirSize;
+        return this.reservoirSize == null ? Codegen.empty() : this.reservoirSize;
     }
 
     /**
@@ -91,21 +92,21 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> resourceARN;
 
     public Output<String> getResourceARN() {
-        return this.resourceARN == null ? Output.empty() : this.resourceARN;
+        return this.resourceARN == null ? Codegen.empty() : this.resourceARN;
     }
 
     @Import(name="ruleARN")
       private final @Nullable Output<String> ruleARN;
 
     public Output<String> getRuleARN() {
-        return this.ruleARN == null ? Output.empty() : this.ruleARN;
+        return this.ruleARN == null ? Codegen.empty() : this.ruleARN;
     }
 
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
     public Output<String> getRuleName() {
-        return this.ruleName == null ? Output.empty() : this.ruleName;
+        return this.ruleName == null ? Codegen.empty() : this.ruleName;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serviceName;
 
     public Output<String> getServiceName() {
-        return this.serviceName == null ? Output.empty() : this.serviceName;
+        return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serviceType;
 
     public Output<String> getServiceType() {
-        return this.serviceType == null ? Output.empty() : this.serviceType;
+        return this.serviceType == null ? Codegen.empty() : this.serviceType;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> uRLPath;
 
     public Output<String> getURLPath() {
-        return this.uRLPath == null ? Output.empty() : this.uRLPath;
+        return this.uRLPath == null ? Codegen.empty() : this.uRLPath;
     }
 
     /**
@@ -149,7 +150,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> version;
 
     public Output<Integer> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public SamplingRuleArgs(
@@ -182,19 +183,19 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SamplingRuleArgs() {
-        this.attributes = Output.empty();
-        this.fixedRate = Output.empty();
-        this.hTTPMethod = Output.empty();
-        this.host = Output.empty();
-        this.priority = Output.empty();
-        this.reservoirSize = Output.empty();
-        this.resourceARN = Output.empty();
-        this.ruleARN = Output.empty();
-        this.ruleName = Output.empty();
-        this.serviceName = Output.empty();
-        this.serviceType = Output.empty();
-        this.uRLPath = Output.empty();
-        this.version = Output.empty();
+        this.attributes = Codegen.empty();
+        this.fixedRate = Codegen.empty();
+        this.hTTPMethod = Codegen.empty();
+        this.host = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.reservoirSize = Codegen.empty();
+        this.resourceARN = Codegen.empty();
+        this.ruleARN = Codegen.empty();
+        this.ruleName = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.serviceType = Codegen.empty();
+        this.uRLPath = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -246,7 +247,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder attributes(@Nullable Object attributes) {
-            this.attributes = Output.ofNullable(attributes);
+            this.attributes = Codegen.ofNullable(attributes);
             return this;
         }
         public Builder fixedRate(@Nullable Output<Double> fixedRate) {
@@ -254,7 +255,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fixedRate(@Nullable Double fixedRate) {
-            this.fixedRate = Output.ofNullable(fixedRate);
+            this.fixedRate = Codegen.ofNullable(fixedRate);
             return this;
         }
         public Builder hTTPMethod(@Nullable Output<String> hTTPMethod) {
@@ -262,7 +263,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hTTPMethod(@Nullable String hTTPMethod) {
-            this.hTTPMethod = Output.ofNullable(hTTPMethod);
+            this.hTTPMethod = Codegen.ofNullable(hTTPMethod);
             return this;
         }
         public Builder host(@Nullable Output<String> host) {
@@ -270,7 +271,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder host(@Nullable String host) {
-            this.host = Output.ofNullable(host);
+            this.host = Codegen.ofNullable(host);
             return this;
         }
         public Builder priority(@Nullable Output<Integer> priority) {
@@ -278,7 +279,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder reservoirSize(@Nullable Output<Integer> reservoirSize) {
@@ -286,7 +287,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reservoirSize(@Nullable Integer reservoirSize) {
-            this.reservoirSize = Output.ofNullable(reservoirSize);
+            this.reservoirSize = Codegen.ofNullable(reservoirSize);
             return this;
         }
         public Builder resourceARN(@Nullable Output<String> resourceARN) {
@@ -294,7 +295,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceARN(@Nullable String resourceARN) {
-            this.resourceARN = Output.ofNullable(resourceARN);
+            this.resourceARN = Codegen.ofNullable(resourceARN);
             return this;
         }
         public Builder ruleARN(@Nullable Output<String> ruleARN) {
@@ -302,7 +303,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ruleARN(@Nullable String ruleARN) {
-            this.ruleARN = Output.ofNullable(ruleARN);
+            this.ruleARN = Codegen.ofNullable(ruleARN);
             return this;
         }
         public Builder ruleName(@Nullable Output<String> ruleName) {
@@ -310,7 +311,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Output.ofNullable(ruleName);
+            this.ruleName = Codegen.ofNullable(ruleName);
             return this;
         }
         public Builder serviceName(@Nullable Output<String> serviceName) {
@@ -318,7 +319,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Output.ofNullable(serviceName);
+            this.serviceName = Codegen.ofNullable(serviceName);
             return this;
         }
         public Builder serviceType(@Nullable Output<String> serviceType) {
@@ -326,7 +327,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceType(@Nullable String serviceType) {
-            this.serviceType = Output.ofNullable(serviceType);
+            this.serviceType = Codegen.ofNullable(serviceType);
             return this;
         }
         public Builder uRLPath(@Nullable Output<String> uRLPath) {
@@ -334,7 +335,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uRLPath(@Nullable String uRLPath) {
-            this.uRLPath = Output.ofNullable(uRLPath);
+            this.uRLPath = Codegen.ofNullable(uRLPath);
             return this;
         }
         public Builder version(@Nullable Output<Integer> version) {
@@ -342,7 +343,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable Integer version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public SamplingRuleArgs build() {
             return new SamplingRuleArgs(attributes, fixedRate, hTTPMethod, host, priority, reservoirSize, resourceARN, ruleARN, ruleName, serviceName, serviceType, uRLPath, version);

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.cloudkms_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudkms_v1.CryptoKeyVersionArgs;
 import io.pulumi.googlenative.cloudkms_v1.outputs.ExternalProtectionLevelOptionsResponse;
@@ -242,7 +243,7 @@ public class CryptoKeyVersion extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CryptoKeyVersion(String name, CryptoKeyVersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudkms/v1:CryptoKeyVersion", name, args == null ? CryptoKeyVersionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:cloudkms/v1:CryptoKeyVersion", name, args == null ? CryptoKeyVersionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CryptoKeyVersion(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

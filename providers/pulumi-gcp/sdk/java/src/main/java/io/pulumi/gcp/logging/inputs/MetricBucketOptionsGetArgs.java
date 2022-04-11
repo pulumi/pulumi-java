@@ -5,6 +5,7 @@ package io.pulumi.gcp.logging.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.logging.inputs.MetricBucketOptionsExplicitBucketsGetArgs;
 import io.pulumi.gcp.logging.inputs.MetricBucketOptionsExponentialBucketsGetArgs;
 import io.pulumi.gcp.logging.inputs.MetricBucketOptionsLinearBucketsGetArgs;
@@ -25,7 +26,7 @@ public final class MetricBucketOptionsGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<MetricBucketOptionsExplicitBucketsGetArgs> explicitBuckets;
 
     public Output<MetricBucketOptionsExplicitBucketsGetArgs> getExplicitBuckets() {
-        return this.explicitBuckets == null ? Output.empty() : this.explicitBuckets;
+        return this.explicitBuckets == null ? Codegen.empty() : this.explicitBuckets;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class MetricBucketOptionsGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<MetricBucketOptionsExponentialBucketsGetArgs> exponentialBuckets;
 
     public Output<MetricBucketOptionsExponentialBucketsGetArgs> getExponentialBuckets() {
-        return this.exponentialBuckets == null ? Output.empty() : this.exponentialBuckets;
+        return this.exponentialBuckets == null ? Codegen.empty() : this.exponentialBuckets;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class MetricBucketOptionsGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<MetricBucketOptionsLinearBucketsGetArgs> linearBuckets;
 
     public Output<MetricBucketOptionsLinearBucketsGetArgs> getLinearBuckets() {
-        return this.linearBuckets == null ? Output.empty() : this.linearBuckets;
+        return this.linearBuckets == null ? Codegen.empty() : this.linearBuckets;
     }
 
     public MetricBucketOptionsGetArgs(
@@ -64,9 +65,9 @@ public final class MetricBucketOptionsGetArgs extends io.pulumi.resources.Resour
     }
 
     private MetricBucketOptionsGetArgs() {
-        this.explicitBuckets = Output.empty();
-        this.exponentialBuckets = Output.empty();
-        this.linearBuckets = Output.empty();
+        this.explicitBuckets = Codegen.empty();
+        this.exponentialBuckets = Codegen.empty();
+        this.linearBuckets = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class MetricBucketOptionsGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder explicitBuckets(@Nullable MetricBucketOptionsExplicitBucketsGetArgs explicitBuckets) {
-            this.explicitBuckets = Output.ofNullable(explicitBuckets);
+            this.explicitBuckets = Codegen.ofNullable(explicitBuckets);
             return this;
         }
         public Builder exponentialBuckets(@Nullable Output<MetricBucketOptionsExponentialBucketsGetArgs> exponentialBuckets) {
@@ -106,7 +107,7 @@ public final class MetricBucketOptionsGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder exponentialBuckets(@Nullable MetricBucketOptionsExponentialBucketsGetArgs exponentialBuckets) {
-            this.exponentialBuckets = Output.ofNullable(exponentialBuckets);
+            this.exponentialBuckets = Codegen.ofNullable(exponentialBuckets);
             return this;
         }
         public Builder linearBuckets(@Nullable Output<MetricBucketOptionsLinearBucketsGetArgs> linearBuckets) {
@@ -114,7 +115,7 @@ public final class MetricBucketOptionsGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder linearBuckets(@Nullable MetricBucketOptionsLinearBucketsGetArgs linearBuckets) {
-            this.linearBuckets = Output.ofNullable(linearBuckets);
+            this.linearBuckets = Codegen.ofNullable(linearBuckets);
             return this;
         }        public MetricBucketOptionsGetArgs build() {
             return new MetricBucketOptionsGetArgs(explicitBuckets, exponentialBuckets, linearBuckets);

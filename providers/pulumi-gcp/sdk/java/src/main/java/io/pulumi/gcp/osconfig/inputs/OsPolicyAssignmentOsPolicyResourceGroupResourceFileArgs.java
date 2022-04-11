@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs exten
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
-        return this.content == null ? Output.empty() : this.content;
+        return this.content == null ? Codegen.empty() : this.content;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs exten
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileArgs> file;
 
     public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileArgs> getFile() {
-        return this.file == null ? Output.empty() : this.file;
+        return this.file == null ? Codegen.empty() : this.file;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs exten
       private final @Nullable Output<String> permissions;
 
     public Output<String> getPermissions() {
-        return this.permissions == null ? Output.empty() : this.permissions;
+        return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 
     /**
@@ -85,11 +86,11 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs exten
     }
 
     private OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs() {
-        this.content = Output.empty();
-        this.file = Output.empty();
-        this.path = Output.empty();
-        this.permissions = Output.empty();
-        this.state = Output.empty();
+        this.content = Codegen.empty();
+        this.file = Codegen.empty();
+        this.path = Codegen.empty();
+        this.permissions = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs exten
             return this;
         }
         public Builder content(@Nullable String content) {
-            this.content = Output.ofNullable(content);
+            this.content = Codegen.ofNullable(content);
             return this;
         }
         public Builder file(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileArgs> file) {
@@ -133,7 +134,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs exten
             return this;
         }
         public Builder file(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileArgs file) {
-            this.file = Output.ofNullable(file);
+            this.file = Codegen.ofNullable(file);
             return this;
         }
         public Builder path(Output<String> path) {
@@ -149,7 +150,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs exten
             return this;
         }
         public Builder permissions(@Nullable String permissions) {
-            this.permissions = Output.ofNullable(permissions);
+            this.permissions = Codegen.ofNullable(permissions);
             return this;
         }
         public Builder state(Output<String> state) {

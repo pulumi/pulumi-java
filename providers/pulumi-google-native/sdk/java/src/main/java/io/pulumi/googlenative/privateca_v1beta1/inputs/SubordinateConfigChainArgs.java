@@ -5,6 +5,7 @@ package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class SubordinateConfigChainArgs extends io.pulumi.resources.Resour
     }
 
     private SubordinateConfigChainArgs() {
-        this.pemCertificates = Output.empty();
+        this.pemCertificates = Codegen.empty();
     }
 
     public static Builder builder() {

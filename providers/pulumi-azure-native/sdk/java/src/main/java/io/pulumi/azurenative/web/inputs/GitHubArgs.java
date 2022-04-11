@@ -7,6 +7,7 @@ import io.pulumi.azurenative.web.inputs.ClientRegistrationArgs;
 import io.pulumi.azurenative.web.inputs.LoginScopesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class GitHubArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class GitHubArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<LoginScopesArgs> login;
 
     public Output<LoginScopesArgs> getLogin() {
-        return this.login == null ? Output.empty() : this.login;
+        return this.login == null ? Codegen.empty() : this.login;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class GitHubArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ClientRegistrationArgs> registration;
 
     public Output<ClientRegistrationArgs> getRegistration() {
-        return this.registration == null ? Output.empty() : this.registration;
+        return this.registration == null ? Codegen.empty() : this.registration;
     }
 
     public GitHubArgs(
@@ -63,9 +64,9 @@ public final class GitHubArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GitHubArgs() {
-        this.enabled = Output.empty();
-        this.login = Output.empty();
-        this.registration = Output.empty();
+        this.enabled = Codegen.empty();
+        this.login = Codegen.empty();
+        this.registration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class GitHubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder login(@Nullable Output<LoginScopesArgs> login) {
@@ -105,7 +106,7 @@ public final class GitHubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder login(@Nullable LoginScopesArgs login) {
-            this.login = Output.ofNullable(login);
+            this.login = Codegen.ofNullable(login);
             return this;
         }
         public Builder registration(@Nullable Output<ClientRegistrationArgs> registration) {
@@ -113,7 +114,7 @@ public final class GitHubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder registration(@Nullable ClientRegistrationArgs registration) {
-            this.registration = Output.ofNullable(registration);
+            this.registration = Codegen.ofNullable(registration);
             return this;
         }        public GitHubArgs build() {
             return new GitHubArgs(enabled, login, registration);

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.timestream.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class RetentionPropertiesPropertiesArgs extends io.pulumi.resources
       private final @Nullable Output<String> magneticStoreRetentionPeriodInDays;
 
     public Output<String> getMagneticStoreRetentionPeriodInDays() {
-        return this.magneticStoreRetentionPeriodInDays == null ? Output.empty() : this.magneticStoreRetentionPeriodInDays;
+        return this.magneticStoreRetentionPeriodInDays == null ? Codegen.empty() : this.magneticStoreRetentionPeriodInDays;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class RetentionPropertiesPropertiesArgs extends io.pulumi.resources
       private final @Nullable Output<String> memoryStoreRetentionPeriodInHours;
 
     public Output<String> getMemoryStoreRetentionPeriodInHours() {
-        return this.memoryStoreRetentionPeriodInHours == null ? Output.empty() : this.memoryStoreRetentionPeriodInHours;
+        return this.memoryStoreRetentionPeriodInHours == null ? Codegen.empty() : this.memoryStoreRetentionPeriodInHours;
     }
 
     public RetentionPropertiesPropertiesArgs(
@@ -48,8 +49,8 @@ public final class RetentionPropertiesPropertiesArgs extends io.pulumi.resources
     }
 
     private RetentionPropertiesPropertiesArgs() {
-        this.magneticStoreRetentionPeriodInDays = Output.empty();
-        this.memoryStoreRetentionPeriodInHours = Output.empty();
+        this.magneticStoreRetentionPeriodInDays = Codegen.empty();
+        this.memoryStoreRetentionPeriodInHours = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class RetentionPropertiesPropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder magneticStoreRetentionPeriodInDays(@Nullable String magneticStoreRetentionPeriodInDays) {
-            this.magneticStoreRetentionPeriodInDays = Output.ofNullable(magneticStoreRetentionPeriodInDays);
+            this.magneticStoreRetentionPeriodInDays = Codegen.ofNullable(magneticStoreRetentionPeriodInDays);
             return this;
         }
         public Builder memoryStoreRetentionPeriodInHours(@Nullable Output<String> memoryStoreRetentionPeriodInHours) {
@@ -87,7 +88,7 @@ public final class RetentionPropertiesPropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder memoryStoreRetentionPeriodInHours(@Nullable String memoryStoreRetentionPeriodInHours) {
-            this.memoryStoreRetentionPeriodInHours = Output.ofNullable(memoryStoreRetentionPeriodInHours);
+            this.memoryStoreRetentionPeriodInHours = Codegen.ofNullable(memoryStoreRetentionPeriodInHours);
             return this;
         }        public RetentionPropertiesPropertiesArgs build() {
             return new RetentionPropertiesPropertiesArgs(magneticStoreRetentionPeriodInDays, memoryStoreRetentionPeriodInHours);

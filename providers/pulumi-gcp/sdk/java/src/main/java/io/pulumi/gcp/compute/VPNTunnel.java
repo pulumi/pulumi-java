@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.VPNTunnelArgs;
 import io.pulumi.gcp.compute.inputs.VPNTunnelState;
@@ -444,7 +445,7 @@ public class VPNTunnel extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VPNTunnel(String name, VPNTunnelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/vPNTunnel:VPNTunnel", name, args == null ? VPNTunnelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/vPNTunnel:VPNTunnel", name, args == null ? VPNTunnelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VPNTunnel(String name, Output<String> id, @Nullable VPNTunnelState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

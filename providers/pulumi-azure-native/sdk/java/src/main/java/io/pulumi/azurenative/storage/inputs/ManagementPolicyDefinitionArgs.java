@@ -7,6 +7,7 @@ import io.pulumi.azurenative.storage.inputs.ManagementPolicyActionArgs;
 import io.pulumi.azurenative.storage.inputs.ManagementPolicyFilterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -38,7 +39,7 @@ public final class ManagementPolicyDefinitionArgs extends io.pulumi.resources.Re
       private final @Nullable Output<ManagementPolicyFilterArgs> filters;
 
     public Output<ManagementPolicyFilterArgs> getFilters() {
-        return this.filters == null ? Output.empty() : this.filters;
+        return this.filters == null ? Codegen.empty() : this.filters;
     }
 
     public ManagementPolicyDefinitionArgs(
@@ -49,8 +50,8 @@ public final class ManagementPolicyDefinitionArgs extends io.pulumi.resources.Re
     }
 
     private ManagementPolicyDefinitionArgs() {
-        this.actions = Output.empty();
-        this.filters = Output.empty();
+        this.actions = Codegen.empty();
+        this.filters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class ManagementPolicyDefinitionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder filters(@Nullable ManagementPolicyFilterArgs filters) {
-            this.filters = Output.ofNullable(filters);
+            this.filters = Codegen.ofNullable(filters);
             return this;
         }        public ManagementPolicyDefinitionArgs build() {
             return new ManagementPolicyDefinitionArgs(actions, filters);

@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class TopologySpreadConstraintArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<LabelSelectorArgs> labelSelector;
 
     public Output<LabelSelectorArgs> getLabelSelector() {
-        return this.labelSelector == null ? Output.empty() : this.labelSelector;
+        return this.labelSelector == null ? Codegen.empty() : this.labelSelector;
     }
 
     /**
@@ -83,10 +84,10 @@ public final class TopologySpreadConstraintArgs extends io.pulumi.resources.Reso
     }
 
     private TopologySpreadConstraintArgs() {
-        this.labelSelector = Output.empty();
-        this.maxSkew = Output.empty();
-        this.topologyKey = Output.empty();
-        this.whenUnsatisfiable = Output.empty();
+        this.labelSelector = Codegen.empty();
+        this.maxSkew = Codegen.empty();
+        this.topologyKey = Codegen.empty();
+        this.whenUnsatisfiable = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class TopologySpreadConstraintArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder labelSelector(@Nullable LabelSelectorArgs labelSelector) {
-            this.labelSelector = Output.ofNullable(labelSelector);
+            this.labelSelector = Codegen.ofNullable(labelSelector);
             return this;
         }
         public Builder maxSkew(Output<Integer> maxSkew) {

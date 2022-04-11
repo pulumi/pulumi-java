@@ -8,6 +8,7 @@ import io.pulumi.azurenative.managednetwork.inputs.ResourceIdArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Either<String,Kind>> kind;
 
     public Output<Either<String,Kind>> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> managedNetworkGroupName;
 
     public Output<String> getManagedNetworkGroupName() {
-        return this.managedNetworkGroupName == null ? Output.empty() : this.managedNetworkGroupName;
+        return this.managedNetworkGroupName == null ? Codegen.empty() : this.managedNetworkGroupName;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<ResourceIdArgs>> managementGroups;
 
     public Output<List<ResourceIdArgs>> getManagementGroups() {
-        return this.managementGroups == null ? Output.empty() : this.managementGroups;
+        return this.managementGroups == null ? Codegen.empty() : this.managementGroups;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<ResourceIdArgs>> subnets;
 
     public Output<List<ResourceIdArgs>> getSubnets() {
-        return this.subnets == null ? Output.empty() : this.subnets;
+        return this.subnets == null ? Codegen.empty() : this.subnets;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<ResourceIdArgs>> subscriptions;
 
     public Output<List<ResourceIdArgs>> getSubscriptions() {
-        return this.subscriptions == null ? Output.empty() : this.subscriptions;
+        return this.subscriptions == null ? Codegen.empty() : this.subscriptions;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<ResourceIdArgs>> virtualNetworks;
 
     public Output<List<ResourceIdArgs>> getVirtualNetworks() {
-        return this.virtualNetworks == null ? Output.empty() : this.virtualNetworks;
+        return this.virtualNetworks == null ? Codegen.empty() : this.virtualNetworks;
     }
 
     public ManagedNetworkGroupArgs(
@@ -139,15 +140,15 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
     }
 
     private ManagedNetworkGroupArgs() {
-        this.kind = Output.empty();
-        this.location = Output.empty();
-        this.managedNetworkGroupName = Output.empty();
-        this.managedNetworkName = Output.empty();
-        this.managementGroups = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.subnets = Output.empty();
-        this.subscriptions = Output.empty();
-        this.virtualNetworks = Output.empty();
+        this.kind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.managedNetworkGroupName = Codegen.empty();
+        this.managedNetworkName = Codegen.empty();
+        this.managementGroups = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.subnets = Codegen.empty();
+        this.subscriptions = Codegen.empty();
+        this.virtualNetworks = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -191,7 +192,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder kind(@Nullable Either<String,Kind> kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -199,7 +200,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder managedNetworkGroupName(@Nullable Output<String> managedNetworkGroupName) {
@@ -207,7 +208,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder managedNetworkGroupName(@Nullable String managedNetworkGroupName) {
-            this.managedNetworkGroupName = Output.ofNullable(managedNetworkGroupName);
+            this.managedNetworkGroupName = Codegen.ofNullable(managedNetworkGroupName);
             return this;
         }
         public Builder managedNetworkName(Output<String> managedNetworkName) {
@@ -223,7 +224,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder managementGroups(@Nullable List<ResourceIdArgs> managementGroups) {
-            this.managementGroups = Output.ofNullable(managementGroups);
+            this.managementGroups = Codegen.ofNullable(managementGroups);
             return this;
         }
         public Builder managementGroups(ResourceIdArgs... managementGroups) {
@@ -242,7 +243,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder subnets(@Nullable List<ResourceIdArgs> subnets) {
-            this.subnets = Output.ofNullable(subnets);
+            this.subnets = Codegen.ofNullable(subnets);
             return this;
         }
         public Builder subnets(ResourceIdArgs... subnets) {
@@ -253,7 +254,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder subscriptions(@Nullable List<ResourceIdArgs> subscriptions) {
-            this.subscriptions = Output.ofNullable(subscriptions);
+            this.subscriptions = Codegen.ofNullable(subscriptions);
             return this;
         }
         public Builder subscriptions(ResourceIdArgs... subscriptions) {
@@ -264,7 +265,7 @@ public final class ManagedNetworkGroupArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder virtualNetworks(@Nullable List<ResourceIdArgs> virtualNetworks) {
-            this.virtualNetworks = Output.ofNullable(virtualNetworks);
+            this.virtualNetworks = Codegen.ofNullable(virtualNetworks);
             return this;
         }
         public Builder virtualNetworks(ResourceIdArgs... virtualNetworks) {

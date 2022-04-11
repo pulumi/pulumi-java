@@ -5,6 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class BucketNotificationLambdaFunctionArgs extends io.pulumi.resour
       private final @Nullable Output<String> filterPrefix;
 
     public Output<String> getFilterPrefix() {
-        return this.filterPrefix == null ? Output.empty() : this.filterPrefix;
+        return this.filterPrefix == null ? Codegen.empty() : this.filterPrefix;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class BucketNotificationLambdaFunctionArgs extends io.pulumi.resour
       private final @Nullable Output<String> filterSuffix;
 
     public Output<String> getFilterSuffix() {
-        return this.filterSuffix == null ? Output.empty() : this.filterSuffix;
+        return this.filterSuffix == null ? Codegen.empty() : this.filterSuffix;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class BucketNotificationLambdaFunctionArgs extends io.pulumi.resour
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class BucketNotificationLambdaFunctionArgs extends io.pulumi.resour
       private final @Nullable Output<String> lambdaFunctionArn;
 
     public Output<String> getLambdaFunctionArn() {
-        return this.lambdaFunctionArn == null ? Output.empty() : this.lambdaFunctionArn;
+        return this.lambdaFunctionArn == null ? Codegen.empty() : this.lambdaFunctionArn;
     }
 
     public BucketNotificationLambdaFunctionArgs(
@@ -84,11 +85,11 @@ public final class BucketNotificationLambdaFunctionArgs extends io.pulumi.resour
     }
 
     private BucketNotificationLambdaFunctionArgs() {
-        this.events = Output.empty();
-        this.filterPrefix = Output.empty();
-        this.filterSuffix = Output.empty();
-        this.id = Output.empty();
-        this.lambdaFunctionArn = Output.empty();
+        this.events = Codegen.empty();
+        this.filterPrefix = Codegen.empty();
+        this.filterSuffix = Codegen.empty();
+        this.id = Codegen.empty();
+        this.lambdaFunctionArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -135,7 +136,7 @@ public final class BucketNotificationLambdaFunctionArgs extends io.pulumi.resour
             return this;
         }
         public Builder filterPrefix(@Nullable String filterPrefix) {
-            this.filterPrefix = Output.ofNullable(filterPrefix);
+            this.filterPrefix = Codegen.ofNullable(filterPrefix);
             return this;
         }
         public Builder filterSuffix(@Nullable Output<String> filterSuffix) {
@@ -143,7 +144,7 @@ public final class BucketNotificationLambdaFunctionArgs extends io.pulumi.resour
             return this;
         }
         public Builder filterSuffix(@Nullable String filterSuffix) {
-            this.filterSuffix = Output.ofNullable(filterSuffix);
+            this.filterSuffix = Codegen.ofNullable(filterSuffix);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -151,7 +152,7 @@ public final class BucketNotificationLambdaFunctionArgs extends io.pulumi.resour
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder lambdaFunctionArn(@Nullable Output<String> lambdaFunctionArn) {
@@ -159,7 +160,7 @@ public final class BucketNotificationLambdaFunctionArgs extends io.pulumi.resour
             return this;
         }
         public Builder lambdaFunctionArn(@Nullable String lambdaFunctionArn) {
-            this.lambdaFunctionArn = Output.ofNullable(lambdaFunctionArn);
+            this.lambdaFunctionArn = Codegen.ofNullable(lambdaFunctionArn);
             return this;
         }        public BucketNotificationLambdaFunctionArgs build() {
             return new BucketNotificationLambdaFunctionArgs(events, filterPrefix, filterSuffix, id, lambdaFunctionArn);

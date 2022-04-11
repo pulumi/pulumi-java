@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudbuild_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.ArtifactsArgs;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.BuildOptionsArgs;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.BuildStepArgs;
@@ -30,7 +31,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ArtifactsArgs> artifacts;
 
     public Output<ArtifactsArgs> getArtifacts() {
-        return this.artifacts == null ? Output.empty() : this.artifacts;
+        return this.artifacts == null ? Codegen.empty() : this.artifacts;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SecretsArgs> availableSecrets;
 
     public Output<SecretsArgs> getAvailableSecrets() {
-        return this.availableSecrets == null ? Output.empty() : this.availableSecrets;
+        return this.availableSecrets == null ? Codegen.empty() : this.availableSecrets;
     }
 
     /**
@@ -52,14 +53,14 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> images;
 
     public Output<List<String>> getImages() {
-        return this.images == null ? Output.empty() : this.images;
+        return this.images == null ? Codegen.empty() : this.images;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> logsBucket;
 
     public Output<String> getLogsBucket() {
-        return this.logsBucket == null ? Output.empty() : this.logsBucket;
+        return this.logsBucket == null ? Codegen.empty() : this.logsBucket;
     }
 
     /**
@@ -81,14 +82,14 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BuildOptionsArgs> options;
 
     public Output<BuildOptionsArgs> getOptions() {
-        return this.options == null ? Output.empty() : this.options;
+        return this.options == null ? Codegen.empty() : this.options;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="projectId", required=true)
@@ -106,7 +107,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> queueTtl;
 
     public Output<String> getQueueTtl() {
-        return this.queueTtl == null ? Output.empty() : this.queueTtl;
+        return this.queueTtl == null ? Codegen.empty() : this.queueTtl;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<SecretArgs>> secrets;
 
     public Output<List<SecretArgs>> getSecrets() {
-        return this.secrets == null ? Output.empty() : this.secrets;
+        return this.secrets == null ? Codegen.empty() : this.secrets;
     }
 
     /**
@@ -128,7 +129,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serviceAccount;
 
     public Output<String> getServiceAccount() {
-        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
+        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
     /**
@@ -139,7 +140,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SourceArgs> source;
 
     public Output<SourceArgs> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     /**
@@ -161,7 +162,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> substitutions;
 
     public Output<Map<String,String>> getSubstitutions() {
-        return this.substitutions == null ? Output.empty() : this.substitutions;
+        return this.substitutions == null ? Codegen.empty() : this.substitutions;
     }
 
     /**
@@ -172,7 +173,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -183,7 +184,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> timeout;
 
     public Output<String> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     public BuildArgs(
@@ -222,22 +223,22 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BuildArgs() {
-        this.artifacts = Output.empty();
-        this.availableSecrets = Output.empty();
-        this.images = Output.empty();
-        this.location = Output.empty();
-        this.logsBucket = Output.empty();
-        this.options = Output.empty();
-        this.project = Output.empty();
-        this.projectId = Output.empty();
-        this.queueTtl = Output.empty();
-        this.secrets = Output.empty();
-        this.serviceAccount = Output.empty();
-        this.source = Output.empty();
-        this.steps = Output.empty();
-        this.substitutions = Output.empty();
-        this.tags = Output.empty();
-        this.timeout = Output.empty();
+        this.artifacts = Codegen.empty();
+        this.availableSecrets = Codegen.empty();
+        this.images = Codegen.empty();
+        this.location = Codegen.empty();
+        this.logsBucket = Codegen.empty();
+        this.options = Codegen.empty();
+        this.project = Codegen.empty();
+        this.projectId = Codegen.empty();
+        this.queueTtl = Codegen.empty();
+        this.secrets = Codegen.empty();
+        this.serviceAccount = Codegen.empty();
+        this.source = Codegen.empty();
+        this.steps = Codegen.empty();
+        this.substitutions = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.timeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -295,7 +296,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder artifacts(@Nullable ArtifactsArgs artifacts) {
-            this.artifacts = Output.ofNullable(artifacts);
+            this.artifacts = Codegen.ofNullable(artifacts);
             return this;
         }
         public Builder availableSecrets(@Nullable Output<SecretsArgs> availableSecrets) {
@@ -303,7 +304,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder availableSecrets(@Nullable SecretsArgs availableSecrets) {
-            this.availableSecrets = Output.ofNullable(availableSecrets);
+            this.availableSecrets = Codegen.ofNullable(availableSecrets);
             return this;
         }
         public Builder images(@Nullable Output<List<String>> images) {
@@ -311,7 +312,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder images(@Nullable List<String> images) {
-            this.images = Output.ofNullable(images);
+            this.images = Codegen.ofNullable(images);
             return this;
         }
         public Builder images(String... images) {
@@ -322,7 +323,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder logsBucket(@Nullable Output<String> logsBucket) {
@@ -330,7 +331,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logsBucket(@Nullable String logsBucket) {
-            this.logsBucket = Output.ofNullable(logsBucket);
+            this.logsBucket = Codegen.ofNullable(logsBucket);
             return this;
         }
         public Builder options(@Nullable Output<BuildOptionsArgs> options) {
@@ -338,7 +339,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder options(@Nullable BuildOptionsArgs options) {
-            this.options = Output.ofNullable(options);
+            this.options = Codegen.ofNullable(options);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -346,7 +347,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder projectId(Output<String> projectId) {
@@ -362,7 +363,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder queueTtl(@Nullable String queueTtl) {
-            this.queueTtl = Output.ofNullable(queueTtl);
+            this.queueTtl = Codegen.ofNullable(queueTtl);
             return this;
         }
         public Builder secrets(@Nullable Output<List<SecretArgs>> secrets) {
@@ -370,7 +371,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secrets(@Nullable List<SecretArgs> secrets) {
-            this.secrets = Output.ofNullable(secrets);
+            this.secrets = Codegen.ofNullable(secrets);
             return this;
         }
         public Builder secrets(SecretArgs... secrets) {
@@ -381,7 +382,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Output.ofNullable(serviceAccount);
+            this.serviceAccount = Codegen.ofNullable(serviceAccount);
             return this;
         }
         public Builder source(@Nullable Output<SourceArgs> source) {
@@ -389,7 +390,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder source(@Nullable SourceArgs source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }
         public Builder steps(Output<List<BuildStepArgs>> steps) {
@@ -408,7 +409,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder substitutions(@Nullable Map<String,String> substitutions) {
-            this.substitutions = Output.ofNullable(substitutions);
+            this.substitutions = Codegen.ofNullable(substitutions);
             return this;
         }
         public Builder tags(@Nullable Output<List<String>> tags) {
@@ -416,7 +417,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(String... tags) {
@@ -427,7 +428,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }        public BuildArgs build() {
             return new BuildArgs(artifacts, availableSecrets, images, location, logsBucket, options, project, projectId, queueTtl, secrets, serviceAccount, source, steps, substitutions, tags, timeout);

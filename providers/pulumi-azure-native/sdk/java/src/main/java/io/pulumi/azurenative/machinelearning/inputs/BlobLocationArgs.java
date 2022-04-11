@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearning.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class BlobLocationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> credentials;
 
     public Output<String> getCredentials() {
-        return this.credentials == null ? Output.empty() : this.credentials;
+        return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class BlobLocationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BlobLocationArgs() {
-        this.credentials = Output.empty();
-        this.uri = Output.empty();
+        this.credentials = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class BlobLocationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder credentials(@Nullable String credentials) {
-            this.credentials = Output.ofNullable(credentials);
+            this.credentials = Codegen.ofNullable(credentials);
             return this;
         }
         public Builder uri(Output<String> uri) {

@@ -10,6 +10,7 @@ import io.pulumi.aws.appautoscaling.outputs.ScheduledActionScalableTargetAction;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -184,7 +185,7 @@ public class ScheduledAction extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ScheduledAction(String name, ScheduledActionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:appautoscaling/scheduledAction:ScheduledAction", name, args == null ? ScheduledActionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:appautoscaling/scheduledAction:ScheduledAction", name, args == null ? ScheduledActionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ScheduledAction(String name, Output<String> id, @Nullable ScheduledActionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

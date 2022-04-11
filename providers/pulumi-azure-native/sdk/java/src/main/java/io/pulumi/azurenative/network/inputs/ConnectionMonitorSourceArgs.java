@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ConnectionMonitorSourceArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class ConnectionMonitorSourceArgs extends io.pulumi.resources.Resou
     }
 
     private ConnectionMonitorSourceArgs() {
-        this.port = Output.empty();
-        this.resourceId = Output.empty();
+        this.port = Codegen.empty();
+        this.resourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ConnectionMonitorSourceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder resourceId(Output<String> resourceId) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class CloudServiceRoleSkuArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Double> capacity;
 
     public Output<Double> getCapacity() {
-        return this.capacity == null ? Output.empty() : this.capacity;
+        return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class CloudServiceRoleSkuArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class CloudServiceRoleSkuArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> tier;
 
     public Output<String> getTier() {
-        return this.tier == null ? Output.empty() : this.tier;
+        return this.tier == null ? Codegen.empty() : this.tier;
     }
 
     public CloudServiceRoleSkuArgs(
@@ -62,9 +63,9 @@ public final class CloudServiceRoleSkuArgs extends io.pulumi.resources.ResourceA
     }
 
     private CloudServiceRoleSkuArgs() {
-        this.capacity = Output.empty();
-        this.name = Output.empty();
-        this.tier = Output.empty();
+        this.capacity = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class CloudServiceRoleSkuArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder capacity(@Nullable Double capacity) {
-            this.capacity = Output.ofNullable(capacity);
+            this.capacity = Codegen.ofNullable(capacity);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -104,7 +105,7 @@ public final class CloudServiceRoleSkuArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tier(@Nullable Output<String> tier) {
@@ -112,7 +113,7 @@ public final class CloudServiceRoleSkuArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder tier(@Nullable String tier) {
-            this.tier = Output.ofNullable(tier);
+            this.tier = Codegen.ofNullable(tier);
             return this;
         }        public CloudServiceRoleSkuArgs build() {
             return new CloudServiceRoleSkuArgs(capacity, name, tier);

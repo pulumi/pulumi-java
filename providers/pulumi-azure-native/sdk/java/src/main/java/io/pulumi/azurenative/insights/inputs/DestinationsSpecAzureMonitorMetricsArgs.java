@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class DestinationsSpecAzureMonitorMetricsArgs extends io.pulumi.res
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public DestinationsSpecAzureMonitorMetricsArgs(@Nullable Output<String> name) {
@@ -35,7 +36,7 @@ public final class DestinationsSpecAzureMonitorMetricsArgs extends io.pulumi.res
     }
 
     private DestinationsSpecAzureMonitorMetricsArgs() {
-        this.name = Output.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class DestinationsSpecAzureMonitorMetricsArgs extends io.pulumi.res
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public DestinationsSpecAzureMonitorMetricsArgs build() {
             return new DestinationsSpecAzureMonitorMetricsArgs(name);

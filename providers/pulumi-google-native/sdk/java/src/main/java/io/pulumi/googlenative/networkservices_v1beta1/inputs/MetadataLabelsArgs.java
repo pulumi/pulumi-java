@@ -5,6 +5,7 @@ package io.pulumi.googlenative.networkservices_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class MetadataLabelsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MetadataLabelsArgs() {
-        this.labelName = Output.empty();
-        this.labelValue = Output.empty();
+        this.labelName = Codegen.empty();
+        this.labelValue = Codegen.empty();
     }
 
     public static Builder builder() {

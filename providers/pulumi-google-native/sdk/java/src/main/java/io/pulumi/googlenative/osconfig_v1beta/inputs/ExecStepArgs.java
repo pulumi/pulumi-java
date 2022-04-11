@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.ExecStepConfigArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ExecStepArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ExecStepConfigArgs> linuxExecStepConfig;
 
     public Output<ExecStepConfigArgs> getLinuxExecStepConfig() {
-        return this.linuxExecStepConfig == null ? Output.empty() : this.linuxExecStepConfig;
+        return this.linuxExecStepConfig == null ? Codegen.empty() : this.linuxExecStepConfig;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ExecStepArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ExecStepConfigArgs> windowsExecStepConfig;
 
     public Output<ExecStepConfigArgs> getWindowsExecStepConfig() {
-        return this.windowsExecStepConfig == null ? Output.empty() : this.windowsExecStepConfig;
+        return this.windowsExecStepConfig == null ? Codegen.empty() : this.windowsExecStepConfig;
     }
 
     public ExecStepArgs(
@@ -48,8 +49,8 @@ public final class ExecStepArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExecStepArgs() {
-        this.linuxExecStepConfig = Output.empty();
-        this.windowsExecStepConfig = Output.empty();
+        this.linuxExecStepConfig = Codegen.empty();
+        this.windowsExecStepConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ExecStepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder linuxExecStepConfig(@Nullable ExecStepConfigArgs linuxExecStepConfig) {
-            this.linuxExecStepConfig = Output.ofNullable(linuxExecStepConfig);
+            this.linuxExecStepConfig = Codegen.ofNullable(linuxExecStepConfig);
             return this;
         }
         public Builder windowsExecStepConfig(@Nullable Output<ExecStepConfigArgs> windowsExecStepConfig) {
@@ -87,7 +88,7 @@ public final class ExecStepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder windowsExecStepConfig(@Nullable ExecStepConfigArgs windowsExecStepConfig) {
-            this.windowsExecStepConfig = Output.ofNullable(windowsExecStepConfig);
+            this.windowsExecStepConfig = Codegen.ofNullable(windowsExecStepConfig);
             return this;
         }        public ExecStepArgs build() {
             return new ExecStepArgs(linuxExecStepConfig, windowsExecStepConfig);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.bigquery_v2.enums.DatasetAccessEntryTargetTypesItem;
 import io.pulumi.googlenative.bigquery_v2.inputs.DatasetReferenceArgs;
 import java.util.List;
@@ -24,14 +25,14 @@ public final class DatasetAccessEntryArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<DatasetReferenceArgs> dataset;
 
     public Output<DatasetReferenceArgs> getDataset() {
-        return this.dataset == null ? Output.empty() : this.dataset;
+        return this.dataset == null ? Codegen.empty() : this.dataset;
     }
 
     @Import(name="targetTypes")
       private final @Nullable Output<List<DatasetAccessEntryTargetTypesItem>> targetTypes;
 
     public Output<List<DatasetAccessEntryTargetTypesItem>> getTargetTypes() {
-        return this.targetTypes == null ? Output.empty() : this.targetTypes;
+        return this.targetTypes == null ? Codegen.empty() : this.targetTypes;
     }
 
     public DatasetAccessEntryArgs(
@@ -42,8 +43,8 @@ public final class DatasetAccessEntryArgs extends io.pulumi.resources.ResourceAr
     }
 
     private DatasetAccessEntryArgs() {
-        this.dataset = Output.empty();
-        this.targetTypes = Output.empty();
+        this.dataset = Codegen.empty();
+        this.targetTypes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -73,7 +74,7 @@ public final class DatasetAccessEntryArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder dataset(@Nullable DatasetReferenceArgs dataset) {
-            this.dataset = Output.ofNullable(dataset);
+            this.dataset = Codegen.ofNullable(dataset);
             return this;
         }
         public Builder targetTypes(@Nullable Output<List<DatasetAccessEntryTargetTypesItem>> targetTypes) {
@@ -81,7 +82,7 @@ public final class DatasetAccessEntryArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder targetTypes(@Nullable List<DatasetAccessEntryTargetTypesItem> targetTypes) {
-            this.targetTypes = Output.ofNullable(targetTypes);
+            this.targetTypes = Codegen.ofNullable(targetTypes);
             return this;
         }
         public Builder targetTypes(DatasetAccessEntryTargetTypesItem... targetTypes) {

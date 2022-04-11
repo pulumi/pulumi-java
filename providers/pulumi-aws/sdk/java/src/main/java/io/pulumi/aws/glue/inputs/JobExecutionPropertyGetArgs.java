@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class JobExecutionPropertyGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Integer> maxConcurrentRuns;
 
     public Output<Integer> getMaxConcurrentRuns() {
-        return this.maxConcurrentRuns == null ? Output.empty() : this.maxConcurrentRuns;
+        return this.maxConcurrentRuns == null ? Codegen.empty() : this.maxConcurrentRuns;
     }
 
     public JobExecutionPropertyGetArgs(@Nullable Output<Integer> maxConcurrentRuns) {
@@ -30,7 +31,7 @@ public final class JobExecutionPropertyGetArgs extends io.pulumi.resources.Resou
     }
 
     private JobExecutionPropertyGetArgs() {
-        this.maxConcurrentRuns = Output.empty();
+        this.maxConcurrentRuns = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class JobExecutionPropertyGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder maxConcurrentRuns(@Nullable Integer maxConcurrentRuns) {
-            this.maxConcurrentRuns = Output.ofNullable(maxConcurrentRuns);
+            this.maxConcurrentRuns = Codegen.ofNullable(maxConcurrentRuns);
             return this;
         }        public JobExecutionPropertyGetArgs build() {
             return new JobExecutionPropertyGetArgs(maxConcurrentRuns);

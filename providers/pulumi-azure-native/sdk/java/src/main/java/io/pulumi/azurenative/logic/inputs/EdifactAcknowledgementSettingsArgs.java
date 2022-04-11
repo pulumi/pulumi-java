@@ -5,6 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -39,7 +40,7 @@ public final class EdifactAcknowledgementSettingsArgs extends io.pulumi.resource
       private final @Nullable Output<String> acknowledgementControlNumberPrefix;
 
     public Output<String> getAcknowledgementControlNumberPrefix() {
-        return this.acknowledgementControlNumberPrefix == null ? Output.empty() : this.acknowledgementControlNumberPrefix;
+        return this.acknowledgementControlNumberPrefix == null ? Codegen.empty() : this.acknowledgementControlNumberPrefix;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class EdifactAcknowledgementSettingsArgs extends io.pulumi.resource
       private final @Nullable Output<String> acknowledgementControlNumberSuffix;
 
     public Output<String> getAcknowledgementControlNumberSuffix() {
-        return this.acknowledgementControlNumberSuffix == null ? Output.empty() : this.acknowledgementControlNumberSuffix;
+        return this.acknowledgementControlNumberSuffix == null ? Codegen.empty() : this.acknowledgementControlNumberSuffix;
     }
 
     /**
@@ -167,17 +168,17 @@ public final class EdifactAcknowledgementSettingsArgs extends io.pulumi.resource
     }
 
     private EdifactAcknowledgementSettingsArgs() {
-        this.acknowledgementControlNumberLowerBound = Output.empty();
-        this.acknowledgementControlNumberPrefix = Output.empty();
-        this.acknowledgementControlNumberSuffix = Output.empty();
-        this.acknowledgementControlNumberUpperBound = Output.empty();
-        this.batchFunctionalAcknowledgements = Output.empty();
-        this.batchTechnicalAcknowledgements = Output.empty();
-        this.needFunctionalAcknowledgement = Output.empty();
-        this.needLoopForValidMessages = Output.empty();
-        this.needTechnicalAcknowledgement = Output.empty();
-        this.rolloverAcknowledgementControlNumber = Output.empty();
-        this.sendSynchronousAcknowledgement = Output.empty();
+        this.acknowledgementControlNumberLowerBound = Codegen.empty();
+        this.acknowledgementControlNumberPrefix = Codegen.empty();
+        this.acknowledgementControlNumberSuffix = Codegen.empty();
+        this.acknowledgementControlNumberUpperBound = Codegen.empty();
+        this.batchFunctionalAcknowledgements = Codegen.empty();
+        this.batchTechnicalAcknowledgements = Codegen.empty();
+        this.needFunctionalAcknowledgement = Codegen.empty();
+        this.needLoopForValidMessages = Codegen.empty();
+        this.needTechnicalAcknowledgement = Codegen.empty();
+        this.rolloverAcknowledgementControlNumber = Codegen.empty();
+        this.sendSynchronousAcknowledgement = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -233,7 +234,7 @@ public final class EdifactAcknowledgementSettingsArgs extends io.pulumi.resource
             return this;
         }
         public Builder acknowledgementControlNumberPrefix(@Nullable String acknowledgementControlNumberPrefix) {
-            this.acknowledgementControlNumberPrefix = Output.ofNullable(acknowledgementControlNumberPrefix);
+            this.acknowledgementControlNumberPrefix = Codegen.ofNullable(acknowledgementControlNumberPrefix);
             return this;
         }
         public Builder acknowledgementControlNumberSuffix(@Nullable Output<String> acknowledgementControlNumberSuffix) {
@@ -241,7 +242,7 @@ public final class EdifactAcknowledgementSettingsArgs extends io.pulumi.resource
             return this;
         }
         public Builder acknowledgementControlNumberSuffix(@Nullable String acknowledgementControlNumberSuffix) {
-            this.acknowledgementControlNumberSuffix = Output.ofNullable(acknowledgementControlNumberSuffix);
+            this.acknowledgementControlNumberSuffix = Codegen.ofNullable(acknowledgementControlNumberSuffix);
             return this;
         }
         public Builder acknowledgementControlNumberUpperBound(Output<Integer> acknowledgementControlNumberUpperBound) {

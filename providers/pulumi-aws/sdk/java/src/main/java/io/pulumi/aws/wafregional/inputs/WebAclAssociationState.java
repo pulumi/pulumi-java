@@ -5,6 +5,7 @@ package io.pulumi.aws.wafregional.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class WebAclAssociationState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> resourceArn;
 
     public Output<String> getResourceArn() {
-        return this.resourceArn == null ? Output.empty() : this.resourceArn;
+        return this.resourceArn == null ? Codegen.empty() : this.resourceArn;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class WebAclAssociationState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> webAclId;
 
     public Output<String> getWebAclId() {
-        return this.webAclId == null ? Output.empty() : this.webAclId;
+        return this.webAclId == null ? Codegen.empty() : this.webAclId;
     }
 
     public WebAclAssociationState(
@@ -44,8 +45,8 @@ public final class WebAclAssociationState extends io.pulumi.resources.ResourceAr
     }
 
     private WebAclAssociationState() {
-        this.resourceArn = Output.empty();
-        this.webAclId = Output.empty();
+        this.resourceArn = Codegen.empty();
+        this.webAclId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class WebAclAssociationState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder resourceArn(@Nullable String resourceArn) {
-            this.resourceArn = Output.ofNullable(resourceArn);
+            this.resourceArn = Codegen.ofNullable(resourceArn);
             return this;
         }
         public Builder webAclId(@Nullable Output<String> webAclId) {
@@ -83,7 +84,7 @@ public final class WebAclAssociationState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder webAclId(@Nullable String webAclId) {
-            this.webAclId = Output.ofNullable(webAclId);
+            this.webAclId = Codegen.ofNullable(webAclId);
             return this;
         }        public WebAclAssociationState build() {
             return new WebAclAssociationState(resourceArn, webAclId);

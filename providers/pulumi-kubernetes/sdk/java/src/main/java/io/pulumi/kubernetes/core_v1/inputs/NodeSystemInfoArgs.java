@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -151,16 +152,16 @@ public final class NodeSystemInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NodeSystemInfoArgs() {
-        this.architecture = Output.empty();
-        this.bootID = Output.empty();
-        this.containerRuntimeVersion = Output.empty();
-        this.kernelVersion = Output.empty();
-        this.kubeProxyVersion = Output.empty();
-        this.kubeletVersion = Output.empty();
-        this.machineID = Output.empty();
-        this.operatingSystem = Output.empty();
-        this.osImage = Output.empty();
-        this.systemUUID = Output.empty();
+        this.architecture = Codegen.empty();
+        this.bootID = Codegen.empty();
+        this.containerRuntimeVersion = Codegen.empty();
+        this.kernelVersion = Codegen.empty();
+        this.kubeProxyVersion = Codegen.empty();
+        this.kubeletVersion = Codegen.empty();
+        this.machineID = Codegen.empty();
+        this.operatingSystem = Codegen.empty();
+        this.osImage = Codegen.empty();
+        this.systemUUID = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class DetectorModelSetTimerArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> durationExpression;
 
     public Output<String> getDurationExpression() {
-        return this.durationExpression == null ? Output.empty() : this.durationExpression;
+        return this.durationExpression == null ? Codegen.empty() : this.durationExpression;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class DetectorModelSetTimerArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Integer> seconds;
 
     public Output<Integer> getSeconds() {
-        return this.seconds == null ? Output.empty() : this.seconds;
+        return this.seconds == null ? Codegen.empty() : this.seconds;
     }
 
     /**
@@ -62,9 +63,9 @@ public final class DetectorModelSetTimerArgs extends io.pulumi.resources.Resourc
     }
 
     private DetectorModelSetTimerArgs() {
-        this.durationExpression = Output.empty();
-        this.seconds = Output.empty();
-        this.timerName = Output.empty();
+        this.durationExpression = Codegen.empty();
+        this.seconds = Codegen.empty();
+        this.timerName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class DetectorModelSetTimerArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder durationExpression(@Nullable String durationExpression) {
-            this.durationExpression = Output.ofNullable(durationExpression);
+            this.durationExpression = Codegen.ofNullable(durationExpression);
             return this;
         }
         public Builder seconds(@Nullable Output<Integer> seconds) {
@@ -104,7 +105,7 @@ public final class DetectorModelSetTimerArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder seconds(@Nullable Integer seconds) {
-            this.seconds = Output.ofNullable(seconds);
+            this.seconds = Codegen.ofNullable(seconds);
             return this;
         }
         public Builder timerName(Output<String> timerName) {

@@ -9,6 +9,7 @@ import io.pulumi.azurenative.logic.enums.X12TimeFormat;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -65,7 +66,7 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> functionalGroupId;
 
     public Output<String> getFunctionalGroupId() {
-        return this.functionalGroupId == null ? Output.empty() : this.functionalGroupId;
+        return this.functionalGroupId == null ? Codegen.empty() : this.functionalGroupId;
     }
 
     /**
@@ -241,7 +242,7 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> transactionSetControlNumberPrefix;
 
     public Output<String> getTransactionSetControlNumberPrefix() {
-        return this.transactionSetControlNumberPrefix == null ? Output.empty() : this.transactionSetControlNumberPrefix;
+        return this.transactionSetControlNumberPrefix == null ? Codegen.empty() : this.transactionSetControlNumberPrefix;
     }
 
     /**
@@ -252,7 +253,7 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> transactionSetControlNumberSuffix;
 
     public Output<String> getTransactionSetControlNumberSuffix() {
-        return this.transactionSetControlNumberSuffix == null ? Output.empty() : this.transactionSetControlNumberSuffix;
+        return this.transactionSetControlNumberSuffix == null ? Codegen.empty() : this.transactionSetControlNumberSuffix;
     }
 
     /**
@@ -340,30 +341,30 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
     }
 
     private X12EnvelopeSettingsArgs() {
-        this.controlStandardsId = Output.empty();
-        this.controlVersionNumber = Output.empty();
-        this.enableDefaultGroupHeaders = Output.empty();
-        this.functionalGroupId = Output.empty();
-        this.groupControlNumberLowerBound = Output.empty();
-        this.groupControlNumberUpperBound = Output.empty();
-        this.groupHeaderAgencyCode = Output.empty();
-        this.groupHeaderDateFormat = Output.empty();
-        this.groupHeaderTimeFormat = Output.empty();
-        this.groupHeaderVersion = Output.empty();
-        this.interchangeControlNumberLowerBound = Output.empty();
-        this.interchangeControlNumberUpperBound = Output.empty();
-        this.overwriteExistingTransactionSetControlNumber = Output.empty();
-        this.receiverApplicationId = Output.empty();
-        this.rolloverGroupControlNumber = Output.empty();
-        this.rolloverInterchangeControlNumber = Output.empty();
-        this.rolloverTransactionSetControlNumber = Output.empty();
-        this.senderApplicationId = Output.empty();
-        this.transactionSetControlNumberLowerBound = Output.empty();
-        this.transactionSetControlNumberPrefix = Output.empty();
-        this.transactionSetControlNumberSuffix = Output.empty();
-        this.transactionSetControlNumberUpperBound = Output.empty();
-        this.usageIndicator = Output.empty();
-        this.useControlStandardsIdAsRepetitionCharacter = Output.empty();
+        this.controlStandardsId = Codegen.empty();
+        this.controlVersionNumber = Codegen.empty();
+        this.enableDefaultGroupHeaders = Codegen.empty();
+        this.functionalGroupId = Codegen.empty();
+        this.groupControlNumberLowerBound = Codegen.empty();
+        this.groupControlNumberUpperBound = Codegen.empty();
+        this.groupHeaderAgencyCode = Codegen.empty();
+        this.groupHeaderDateFormat = Codegen.empty();
+        this.groupHeaderTimeFormat = Codegen.empty();
+        this.groupHeaderVersion = Codegen.empty();
+        this.interchangeControlNumberLowerBound = Codegen.empty();
+        this.interchangeControlNumberUpperBound = Codegen.empty();
+        this.overwriteExistingTransactionSetControlNumber = Codegen.empty();
+        this.receiverApplicationId = Codegen.empty();
+        this.rolloverGroupControlNumber = Codegen.empty();
+        this.rolloverInterchangeControlNumber = Codegen.empty();
+        this.rolloverTransactionSetControlNumber = Codegen.empty();
+        this.senderApplicationId = Codegen.empty();
+        this.transactionSetControlNumberLowerBound = Codegen.empty();
+        this.transactionSetControlNumberPrefix = Codegen.empty();
+        this.transactionSetControlNumberSuffix = Codegen.empty();
+        this.transactionSetControlNumberUpperBound = Codegen.empty();
+        this.usageIndicator = Codegen.empty();
+        this.useControlStandardsIdAsRepetitionCharacter = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -461,7 +462,7 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder functionalGroupId(@Nullable String functionalGroupId) {
-            this.functionalGroupId = Output.ofNullable(functionalGroupId);
+            this.functionalGroupId = Codegen.ofNullable(functionalGroupId);
             return this;
         }
         public Builder groupControlNumberLowerBound(Output<Integer> groupControlNumberLowerBound) {
@@ -589,7 +590,7 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder transactionSetControlNumberPrefix(@Nullable String transactionSetControlNumberPrefix) {
-            this.transactionSetControlNumberPrefix = Output.ofNullable(transactionSetControlNumberPrefix);
+            this.transactionSetControlNumberPrefix = Codegen.ofNullable(transactionSetControlNumberPrefix);
             return this;
         }
         public Builder transactionSetControlNumberSuffix(@Nullable Output<String> transactionSetControlNumberSuffix) {
@@ -597,7 +598,7 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder transactionSetControlNumberSuffix(@Nullable String transactionSetControlNumberSuffix) {
-            this.transactionSetControlNumberSuffix = Output.ofNullable(transactionSetControlNumberSuffix);
+            this.transactionSetControlNumberSuffix = Codegen.ofNullable(transactionSetControlNumberSuffix);
             return this;
         }
         public Builder transactionSetControlNumberUpperBound(Output<Integer> transactionSetControlNumberUpperBound) {

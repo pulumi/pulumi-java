@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ApiConnectionTestLinkArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> method;
 
     public Output<String> getMethod() {
-        return this.method == null ? Output.empty() : this.method;
+        return this.method == null ? Codegen.empty() : this.method;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ApiConnectionTestLinkArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> requestUri;
 
     public Output<String> getRequestUri() {
-        return this.requestUri == null ? Output.empty() : this.requestUri;
+        return this.requestUri == null ? Codegen.empty() : this.requestUri;
     }
 
     public ApiConnectionTestLinkArgs(
@@ -48,8 +49,8 @@ public final class ApiConnectionTestLinkArgs extends io.pulumi.resources.Resourc
     }
 
     private ApiConnectionTestLinkArgs() {
-        this.method = Output.empty();
-        this.requestUri = Output.empty();
+        this.method = Codegen.empty();
+        this.requestUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ApiConnectionTestLinkArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder method(@Nullable String method) {
-            this.method = Output.ofNullable(method);
+            this.method = Codegen.ofNullable(method);
             return this;
         }
         public Builder requestUri(@Nullable Output<String> requestUri) {
@@ -87,7 +88,7 @@ public final class ApiConnectionTestLinkArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder requestUri(@Nullable String requestUri) {
-            this.requestUri = Output.ofNullable(requestUri);
+            this.requestUri = Codegen.ofNullable(requestUri);
             return this;
         }        public ApiConnectionTestLinkArgs build() {
             return new ApiConnectionTestLinkArgs(method, requestUri);

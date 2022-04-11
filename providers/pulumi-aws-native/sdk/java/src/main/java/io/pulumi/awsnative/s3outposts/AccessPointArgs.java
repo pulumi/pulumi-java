@@ -6,6 +6,7 @@ package io.pulumi.awsnative.s3outposts;
 import io.pulumi.awsnative.s3outposts.inputs.AccessPointVpcConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> policy;
 
     public Output<Object> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     /**
@@ -72,10 +73,10 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccessPointArgs() {
-        this.bucket = Output.empty();
-        this.name = Output.empty();
-        this.policy = Output.empty();
-        this.vpcConfiguration = Output.empty();
+        this.bucket = Codegen.empty();
+        this.name = Codegen.empty();
+        this.policy = Codegen.empty();
+        this.vpcConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -117,7 +118,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder policy(@Nullable Output<Object> policy) {
@@ -125,7 +126,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder policy(@Nullable Object policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }
         public Builder vpcConfiguration(Output<AccessPointVpcConfigurationArgs> vpcConfiguration) {

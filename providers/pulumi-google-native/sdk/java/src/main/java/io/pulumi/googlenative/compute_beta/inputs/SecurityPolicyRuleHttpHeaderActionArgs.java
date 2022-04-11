@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_beta.inputs.SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class SecurityPolicyRuleHttpHeaderActionArgs extends io.pulumi.reso
       private final @Nullable Output<List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs>> requestHeadersToAdds;
 
     public Output<List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs>> getRequestHeadersToAdds() {
-        return this.requestHeadersToAdds == null ? Output.empty() : this.requestHeadersToAdds;
+        return this.requestHeadersToAdds == null ? Codegen.empty() : this.requestHeadersToAdds;
     }
 
     public SecurityPolicyRuleHttpHeaderActionArgs(@Nullable Output<List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs>> requestHeadersToAdds) {
@@ -31,7 +32,7 @@ public final class SecurityPolicyRuleHttpHeaderActionArgs extends io.pulumi.reso
     }
 
     private SecurityPolicyRuleHttpHeaderActionArgs() {
-        this.requestHeadersToAdds = Output.empty();
+        this.requestHeadersToAdds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class SecurityPolicyRuleHttpHeaderActionArgs extends io.pulumi.reso
             return this;
         }
         public Builder requestHeadersToAdds(@Nullable List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs> requestHeadersToAdds) {
-            this.requestHeadersToAdds = Output.ofNullable(requestHeadersToAdds);
+            this.requestHeadersToAdds = Codegen.ofNullable(requestHeadersToAdds);
             return this;
         }
         public Builder requestHeadersToAdds(SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs... requestHeadersToAdds) {

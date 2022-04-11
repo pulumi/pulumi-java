@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteArgs extends io
       private final @Nullable Output<String> functionAppName;
 
     public Output<String> getFunctionAppName() {
-        return this.functionAppName == null ? Output.empty() : this.functionAppName;
+        return this.functionAppName == null ? Codegen.empty() : this.functionAppName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteArgs extends io
       private final @Nullable Output<String> functionAppRegion;
 
     public Output<String> getFunctionAppRegion() {
-        return this.functionAppRegion == null ? Output.empty() : this.functionAppRegion;
+        return this.functionAppRegion == null ? Codegen.empty() : this.functionAppRegion;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteArgs extends io
       private final @Nullable Output<String> functionAppResourceId;
 
     public Output<String> getFunctionAppResourceId() {
-        return this.functionAppResourceId == null ? Output.empty() : this.functionAppResourceId;
+        return this.functionAppResourceId == null ? Codegen.empty() : this.functionAppResourceId;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteArgs extends io
       private final @Nullable Output<Boolean> isForced;
 
     public Output<Boolean> getIsForced() {
-        return this.isForced == null ? Output.empty() : this.isForced;
+        return this.isForced == null ? Codegen.empty() : this.isForced;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteArgs extends io
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -110,13 +111,13 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteArgs extends io
     }
 
     private StaticSiteUserProvidedFunctionAppForStaticSiteArgs() {
-        this.functionAppName = Output.empty();
-        this.functionAppRegion = Output.empty();
-        this.functionAppResourceId = Output.empty();
-        this.isForced = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.functionAppName = Codegen.empty();
+        this.functionAppRegion = Codegen.empty();
+        this.functionAppResourceId = Codegen.empty();
+        this.isForced = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteArgs extends io
             return this;
         }
         public Builder functionAppName(@Nullable String functionAppName) {
-            this.functionAppName = Output.ofNullable(functionAppName);
+            this.functionAppName = Codegen.ofNullable(functionAppName);
             return this;
         }
         public Builder functionAppRegion(@Nullable Output<String> functionAppRegion) {
@@ -164,7 +165,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteArgs extends io
             return this;
         }
         public Builder functionAppRegion(@Nullable String functionAppRegion) {
-            this.functionAppRegion = Output.ofNullable(functionAppRegion);
+            this.functionAppRegion = Codegen.ofNullable(functionAppRegion);
             return this;
         }
         public Builder functionAppResourceId(@Nullable Output<String> functionAppResourceId) {
@@ -172,7 +173,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteArgs extends io
             return this;
         }
         public Builder functionAppResourceId(@Nullable String functionAppResourceId) {
-            this.functionAppResourceId = Output.ofNullable(functionAppResourceId);
+            this.functionAppResourceId = Codegen.ofNullable(functionAppResourceId);
             return this;
         }
         public Builder isForced(@Nullable Output<Boolean> isForced) {
@@ -180,7 +181,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteArgs extends io
             return this;
         }
         public Builder isForced(@Nullable Boolean isForced) {
-            this.isForced = Output.ofNullable(isForced);
+            this.isForced = Codegen.ofNullable(isForced);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -188,7 +189,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteArgs extends io
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder name(Output<String> name) {

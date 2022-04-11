@@ -7,6 +7,7 @@ import io.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionBucketDefinit
 import io.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionScopingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class ClassificationJobS3JobDefinitionArgs extends io.pulumi.resour
       private final @Nullable Output<List<ClassificationJobS3JobDefinitionBucketDefinitionArgs>> bucketDefinitions;
 
     public Output<List<ClassificationJobS3JobDefinitionBucketDefinitionArgs>> getBucketDefinitions() {
-        return this.bucketDefinitions == null ? Output.empty() : this.bucketDefinitions;
+        return this.bucketDefinitions == null ? Codegen.empty() : this.bucketDefinitions;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ClassificationJobS3JobDefinitionArgs extends io.pulumi.resour
       private final @Nullable Output<ClassificationJobS3JobDefinitionScopingArgs> scoping;
 
     public Output<ClassificationJobS3JobDefinitionScopingArgs> getScoping() {
-        return this.scoping == null ? Output.empty() : this.scoping;
+        return this.scoping == null ? Codegen.empty() : this.scoping;
     }
 
     public ClassificationJobS3JobDefinitionArgs(
@@ -46,8 +47,8 @@ public final class ClassificationJobS3JobDefinitionArgs extends io.pulumi.resour
     }
 
     private ClassificationJobS3JobDefinitionArgs() {
-        this.bucketDefinitions = Output.empty();
-        this.scoping = Output.empty();
+        this.bucketDefinitions = Codegen.empty();
+        this.scoping = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class ClassificationJobS3JobDefinitionArgs extends io.pulumi.resour
             return this;
         }
         public Builder bucketDefinitions(@Nullable List<ClassificationJobS3JobDefinitionBucketDefinitionArgs> bucketDefinitions) {
-            this.bucketDefinitions = Output.ofNullable(bucketDefinitions);
+            this.bucketDefinitions = Codegen.ofNullable(bucketDefinitions);
             return this;
         }
         public Builder bucketDefinitions(ClassificationJobS3JobDefinitionBucketDefinitionArgs... bucketDefinitions) {
@@ -88,7 +89,7 @@ public final class ClassificationJobS3JobDefinitionArgs extends io.pulumi.resour
             return this;
         }
         public Builder scoping(@Nullable ClassificationJobS3JobDefinitionScopingArgs scoping) {
-            this.scoping = Output.ofNullable(scoping);
+            this.scoping = Codegen.ofNullable(scoping);
             return this;
         }        public ClassificationJobS3JobDefinitionArgs build() {
             return new ClassificationJobS3JobDefinitionArgs(bucketDefinitions, scoping);

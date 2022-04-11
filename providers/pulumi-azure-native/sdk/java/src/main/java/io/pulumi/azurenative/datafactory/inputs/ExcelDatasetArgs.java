@@ -22,6 +22,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SftpLocationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -46,7 +47,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DatasetCompressionArgs> compression;
 
     public Output<DatasetCompressionArgs> getCompression() {
-        return this.compression == null ? Output.empty() : this.compression;
+        return this.compression == null ? Codegen.empty() : this.compression;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> firstRowAsHeader;
 
     public Output<Object> getFirstRowAsHeader() {
-        return this.firstRowAsHeader == null ? Output.empty() : this.firstRowAsHeader;
+        return this.firstRowAsHeader == null ? Codegen.empty() : this.firstRowAsHeader;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DatasetFolderArgs> folder;
 
     public Output<DatasetFolderArgs> getFolder() {
-        return this.folder == null ? Output.empty() : this.folder;
+        return this.folder == null ? Codegen.empty() : this.folder;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> nullValue;
 
     public Output<Object> getNullValue() {
-        return this.nullValue == null ? Output.empty() : this.nullValue;
+        return this.nullValue == null ? Codegen.empty() : this.nullValue;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -145,7 +146,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> range;
 
     public Output<Object> getRange() {
-        return this.range == null ? Output.empty() : this.range;
+        return this.range == null ? Codegen.empty() : this.range;
     }
 
     /**
@@ -156,7 +157,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> schema;
 
     public Output<Object> getSchema() {
-        return this.schema == null ? Output.empty() : this.schema;
+        return this.schema == null ? Codegen.empty() : this.schema;
     }
 
     /**
@@ -167,7 +168,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> sheetIndex;
 
     public Output<Object> getSheetIndex() {
-        return this.sheetIndex == null ? Output.empty() : this.sheetIndex;
+        return this.sheetIndex == null ? Codegen.empty() : this.sheetIndex;
     }
 
     /**
@@ -178,7 +179,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> sheetName;
 
     public Output<Object> getSheetName() {
-        return this.sheetName == null ? Output.empty() : this.sheetName;
+        return this.sheetName == null ? Codegen.empty() : this.sheetName;
     }
 
     /**
@@ -189,7 +190,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> structure;
 
     public Output<Object> getStructure() {
-        return this.structure == null ? Output.empty() : this.structure;
+        return this.structure == null ? Codegen.empty() : this.structure;
     }
 
     /**
@@ -238,21 +239,21 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExcelDatasetArgs() {
-        this.annotations = Output.empty();
-        this.compression = Output.empty();
-        this.description = Output.empty();
-        this.firstRowAsHeader = Output.empty();
-        this.folder = Output.empty();
-        this.linkedServiceName = Output.empty();
-        this.location = Output.empty();
-        this.nullValue = Output.empty();
-        this.parameters = Output.empty();
-        this.range = Output.empty();
-        this.schema = Output.empty();
-        this.sheetIndex = Output.empty();
-        this.sheetName = Output.empty();
-        this.structure = Output.empty();
-        this.type = Output.empty();
+        this.annotations = Codegen.empty();
+        this.compression = Codegen.empty();
+        this.description = Codegen.empty();
+        this.firstRowAsHeader = Codegen.empty();
+        this.folder = Codegen.empty();
+        this.linkedServiceName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.nullValue = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.range = Codegen.empty();
+        this.schema = Codegen.empty();
+        this.sheetIndex = Codegen.empty();
+        this.sheetName = Codegen.empty();
+        this.structure = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -308,7 +309,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -319,7 +320,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder compression(@Nullable DatasetCompressionArgs compression) {
-            this.compression = Output.ofNullable(compression);
+            this.compression = Codegen.ofNullable(compression);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -327,7 +328,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder firstRowAsHeader(@Nullable Output<Object> firstRowAsHeader) {
@@ -335,7 +336,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder firstRowAsHeader(@Nullable Object firstRowAsHeader) {
-            this.firstRowAsHeader = Output.ofNullable(firstRowAsHeader);
+            this.firstRowAsHeader = Codegen.ofNullable(firstRowAsHeader);
             return this;
         }
         public Builder folder(@Nullable Output<DatasetFolderArgs> folder) {
@@ -343,7 +344,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder folder(@Nullable DatasetFolderArgs folder) {
-            this.folder = Output.ofNullable(folder);
+            this.folder = Codegen.ofNullable(folder);
             return this;
         }
         public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
@@ -367,7 +368,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nullValue(@Nullable Object nullValue) {
-            this.nullValue = Output.ofNullable(nullValue);
+            this.nullValue = Codegen.ofNullable(nullValue);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
@@ -375,7 +376,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder range(@Nullable Output<Object> range) {
@@ -383,7 +384,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder range(@Nullable Object range) {
-            this.range = Output.ofNullable(range);
+            this.range = Codegen.ofNullable(range);
             return this;
         }
         public Builder schema(@Nullable Output<Object> schema) {
@@ -391,7 +392,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schema(@Nullable Object schema) {
-            this.schema = Output.ofNullable(schema);
+            this.schema = Codegen.ofNullable(schema);
             return this;
         }
         public Builder sheetIndex(@Nullable Output<Object> sheetIndex) {
@@ -399,7 +400,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sheetIndex(@Nullable Object sheetIndex) {
-            this.sheetIndex = Output.ofNullable(sheetIndex);
+            this.sheetIndex = Codegen.ofNullable(sheetIndex);
             return this;
         }
         public Builder sheetName(@Nullable Output<Object> sheetName) {
@@ -407,7 +408,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sheetName(@Nullable Object sheetName) {
-            this.sheetName = Output.ofNullable(sheetName);
+            this.sheetName = Codegen.ofNullable(sheetName);
             return this;
         }
         public Builder structure(@Nullable Output<Object> structure) {
@@ -415,7 +416,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder structure(@Nullable Object structure) {
-            this.structure = Output.ofNullable(structure);
+            this.structure = Codegen.ofNullable(structure);
             return this;
         }
         public Builder type(Output<String> type) {

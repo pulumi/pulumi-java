@@ -9,6 +9,7 @@ import io.pulumi.azurenative.network.enums.PolicyRequestBodyCheck;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -31,7 +32,7 @@ public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> customBlockResponseBody;
 
     public Output<String> getCustomBlockResponseBody() {
-        return this.customBlockResponseBody == null ? Output.empty() : this.customBlockResponseBody;
+        return this.customBlockResponseBody == null ? Codegen.empty() : this.customBlockResponseBody;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Integer> customBlockResponseStatusCode;
 
     public Output<Integer> getCustomBlockResponseStatusCode() {
-        return this.customBlockResponseStatusCode == null ? Output.empty() : this.customBlockResponseStatusCode;
+        return this.customBlockResponseStatusCode == null ? Codegen.empty() : this.customBlockResponseStatusCode;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Either<String,PolicyEnabledState>> enabledState;
 
     public Output<Either<String,PolicyEnabledState>> getEnabledState() {
-        return this.enabledState == null ? Output.empty() : this.enabledState;
+        return this.enabledState == null ? Codegen.empty() : this.enabledState;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Either<String,PolicyMode>> mode;
 
     public Output<Either<String,PolicyMode>> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> redirectUrl;
 
     public Output<String> getRedirectUrl() {
-        return this.redirectUrl == null ? Output.empty() : this.redirectUrl;
+        return this.redirectUrl == null ? Codegen.empty() : this.redirectUrl;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Either<String,PolicyRequestBodyCheck>> requestBodyCheck;
 
     public Output<Either<String,PolicyRequestBodyCheck>> getRequestBodyCheck() {
-        return this.requestBodyCheck == null ? Output.empty() : this.requestBodyCheck;
+        return this.requestBodyCheck == null ? Codegen.empty() : this.requestBodyCheck;
     }
 
     public FrontDoorPolicySettingsArgs(
@@ -105,12 +106,12 @@ public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.Resou
     }
 
     private FrontDoorPolicySettingsArgs() {
-        this.customBlockResponseBody = Output.empty();
-        this.customBlockResponseStatusCode = Output.empty();
-        this.enabledState = Output.empty();
-        this.mode = Output.empty();
-        this.redirectUrl = Output.empty();
-        this.requestBodyCheck = Output.empty();
+        this.customBlockResponseBody = Codegen.empty();
+        this.customBlockResponseStatusCode = Codegen.empty();
+        this.enabledState = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.redirectUrl = Codegen.empty();
+        this.requestBodyCheck = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder customBlockResponseBody(@Nullable String customBlockResponseBody) {
-            this.customBlockResponseBody = Output.ofNullable(customBlockResponseBody);
+            this.customBlockResponseBody = Codegen.ofNullable(customBlockResponseBody);
             return this;
         }
         public Builder customBlockResponseStatusCode(@Nullable Output<Integer> customBlockResponseStatusCode) {
@@ -156,7 +157,7 @@ public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder customBlockResponseStatusCode(@Nullable Integer customBlockResponseStatusCode) {
-            this.customBlockResponseStatusCode = Output.ofNullable(customBlockResponseStatusCode);
+            this.customBlockResponseStatusCode = Codegen.ofNullable(customBlockResponseStatusCode);
             return this;
         }
         public Builder enabledState(@Nullable Output<Either<String,PolicyEnabledState>> enabledState) {
@@ -164,7 +165,7 @@ public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder enabledState(@Nullable Either<String,PolicyEnabledState> enabledState) {
-            this.enabledState = Output.ofNullable(enabledState);
+            this.enabledState = Codegen.ofNullable(enabledState);
             return this;
         }
         public Builder mode(@Nullable Output<Either<String,PolicyMode>> mode) {
@@ -172,7 +173,7 @@ public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder mode(@Nullable Either<String,PolicyMode> mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder redirectUrl(@Nullable Output<String> redirectUrl) {
@@ -180,7 +181,7 @@ public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder redirectUrl(@Nullable String redirectUrl) {
-            this.redirectUrl = Output.ofNullable(redirectUrl);
+            this.redirectUrl = Codegen.ofNullable(redirectUrl);
             return this;
         }
         public Builder requestBodyCheck(@Nullable Output<Either<String,PolicyRequestBodyCheck>> requestBodyCheck) {
@@ -188,7 +189,7 @@ public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder requestBodyCheck(@Nullable Either<String,PolicyRequestBodyCheck> requestBodyCheck) {
-            this.requestBodyCheck = Output.ofNullable(requestBodyCheck);
+            this.requestBodyCheck = Codegen.ofNullable(requestBodyCheck);
             return this;
         }        public FrontDoorPolicySettingsArgs build() {
             return new FrontDoorPolicySettingsArgs(customBlockResponseBody, customBlockResponseStatusCode, enabledState, mode, redirectUrl, requestBodyCheck);

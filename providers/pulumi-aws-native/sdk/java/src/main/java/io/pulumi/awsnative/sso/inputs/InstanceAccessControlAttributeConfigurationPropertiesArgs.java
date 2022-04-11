@@ -6,6 +6,7 @@ package io.pulumi.awsnative.sso.inputs;
 import io.pulumi.awsnative.sso.inputs.InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -30,7 +31,7 @@ public final class InstanceAccessControlAttributeConfigurationPropertiesArgs ext
     }
 
     private InstanceAccessControlAttributeConfigurationPropertiesArgs() {
-        this.accessControlAttributes = Output.empty();
+        this.accessControlAttributes = Codegen.empty();
     }
 
     public static Builder builder() {

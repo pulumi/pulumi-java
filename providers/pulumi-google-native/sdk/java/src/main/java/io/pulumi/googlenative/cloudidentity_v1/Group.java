@@ -6,6 +6,7 @@ package io.pulumi.googlenative.cloudidentity_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudidentity_v1.GroupArgs;
 import io.pulumi.googlenative.cloudidentity_v1.outputs.DynamicGroupMetadataResponse;
@@ -170,7 +171,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Group(String name, GroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudidentity/v1:Group", name, args == null ? GroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:cloudidentity/v1:Group", name, args == null ? GroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Group(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

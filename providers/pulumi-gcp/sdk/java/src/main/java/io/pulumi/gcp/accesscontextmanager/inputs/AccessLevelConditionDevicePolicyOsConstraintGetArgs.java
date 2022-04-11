@@ -5,6 +5,7 @@ package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class AccessLevelConditionDevicePolicyOsConstraintGetArgs extends i
       private final @Nullable Output<String> minimumVersion;
 
     public Output<String> getMinimumVersion() {
-        return this.minimumVersion == null ? Output.empty() : this.minimumVersion;
+        return this.minimumVersion == null ? Codegen.empty() : this.minimumVersion;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class AccessLevelConditionDevicePolicyOsConstraintGetArgs extends i
     }
 
     private AccessLevelConditionDevicePolicyOsConstraintGetArgs() {
-        this.minimumVersion = Output.empty();
-        this.osType = Output.empty();
+        this.minimumVersion = Codegen.empty();
+        this.osType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -78,7 +79,7 @@ public final class AccessLevelConditionDevicePolicyOsConstraintGetArgs extends i
             return this;
         }
         public Builder minimumVersion(@Nullable String minimumVersion) {
-            this.minimumVersion = Output.ofNullable(minimumVersion);
+            this.minimumVersion = Codegen.ofNullable(minimumVersion);
             return this;
         }
         public Builder osType(Output<String> osType) {

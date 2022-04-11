@@ -5,6 +5,7 @@ package io.pulumi.gcp.logging.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class MetricBucketOptionsExplicitBucketsGetArgs extends io.pulumi.r
     }
 
     private MetricBucketOptionsExplicitBucketsGetArgs() {
-        this.bounds = Output.empty();
+        this.bounds = Codegen.empty();
     }
 
     public static Builder builder() {

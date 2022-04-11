@@ -5,6 +5,7 @@ package io.pulumi.gcp.containeranalysis;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.containeranalysis.inputs.OccurenceAttestationArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -56,7 +57,7 @@ public final class OccurenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class OccurenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> remediation;
 
     public Output<String> getRemediation() {
-        return this.remediation == null ? Output.empty() : this.remediation;
+        return this.remediation == null ? Codegen.empty() : this.remediation;
     }
 
     /**
@@ -97,11 +98,11 @@ public final class OccurenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OccurenceArgs() {
-        this.attestation = Output.empty();
-        this.noteName = Output.empty();
-        this.project = Output.empty();
-        this.remediation = Output.empty();
-        this.resourceUri = Output.empty();
+        this.attestation = Codegen.empty();
+        this.noteName = Codegen.empty();
+        this.project = Codegen.empty();
+        this.remediation = Codegen.empty();
+        this.resourceUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -153,7 +154,7 @@ public final class OccurenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder remediation(@Nullable Output<String> remediation) {
@@ -161,7 +162,7 @@ public final class OccurenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder remediation(@Nullable String remediation) {
-            this.remediation = Output.ofNullable(remediation);
+            this.remediation = Codegen.ofNullable(remediation);
             return this;
         }
         public Builder resourceUri(Output<String> resourceUri) {

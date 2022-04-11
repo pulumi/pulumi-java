@@ -7,6 +7,7 @@ import io.pulumi.azurenative.devices.enums.RoutingSource;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +31,7 @@ public final class RoutePropertiesArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> condition;
 
     public Output<String> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -91,11 +92,11 @@ public final class RoutePropertiesArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private RoutePropertiesArgs() {
-        this.condition = Output.empty();
-        this.endpointNames = Output.empty();
-        this.isEnabled = Output.empty();
-        this.name = Output.empty();
-        this.source = Output.empty();
+        this.condition = Codegen.empty();
+        this.endpointNames = Codegen.empty();
+        this.isEnabled = Codegen.empty();
+        this.name = Codegen.empty();
+        this.source = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class RoutePropertiesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder condition(@Nullable String condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder endpointNames(Output<List<String>> endpointNames) {

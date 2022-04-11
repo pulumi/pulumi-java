@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.container.inputs.ClusterNotificationConfigPubsubArgs;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class ClusterNotificationConfigArgs extends io.pulumi.resources.Res
     }
 
     private ClusterNotificationConfigArgs() {
-        this.pubsub = Output.empty();
+        this.pubsub = Codegen.empty();
     }
 
     public static Builder builder() {

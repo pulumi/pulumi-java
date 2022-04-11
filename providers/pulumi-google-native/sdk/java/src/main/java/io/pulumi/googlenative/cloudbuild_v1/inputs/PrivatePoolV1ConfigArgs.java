@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.NetworkConfigArgs;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.WorkerConfigArgs;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class PrivatePoolV1ConfigArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<NetworkConfigArgs> networkConfig;
 
     public Output<NetworkConfigArgs> getNetworkConfig() {
-        return this.networkConfig == null ? Output.empty() : this.networkConfig;
+        return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class PrivatePoolV1ConfigArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<WorkerConfigArgs> workerConfig;
 
     public Output<WorkerConfigArgs> getWorkerConfig() {
-        return this.workerConfig == null ? Output.empty() : this.workerConfig;
+        return this.workerConfig == null ? Codegen.empty() : this.workerConfig;
     }
 
     public PrivatePoolV1ConfigArgs(
@@ -49,8 +50,8 @@ public final class PrivatePoolV1ConfigArgs extends io.pulumi.resources.ResourceA
     }
 
     private PrivatePoolV1ConfigArgs() {
-        this.networkConfig = Output.empty();
-        this.workerConfig = Output.empty();
+        this.networkConfig = Codegen.empty();
+        this.workerConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class PrivatePoolV1ConfigArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder networkConfig(@Nullable NetworkConfigArgs networkConfig) {
-            this.networkConfig = Output.ofNullable(networkConfig);
+            this.networkConfig = Codegen.ofNullable(networkConfig);
             return this;
         }
         public Builder workerConfig(@Nullable Output<WorkerConfigArgs> workerConfig) {
@@ -88,7 +89,7 @@ public final class PrivatePoolV1ConfigArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder workerConfig(@Nullable WorkerConfigArgs workerConfig) {
-            this.workerConfig = Output.ofNullable(workerConfig);
+            this.workerConfig = Codegen.ofNullable(workerConfig);
             return this;
         }        public PrivatePoolV1ConfigArgs build() {
             return new PrivatePoolV1ConfigArgs(networkConfig, workerConfig);

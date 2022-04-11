@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.network.inputs.SecurityRuleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> networkSecurityGroupName;
 
     public Output<String> getNetworkSecurityGroupName() {
-        return this.networkSecurityGroupName == null ? Output.empty() : this.networkSecurityGroupName;
+        return this.networkSecurityGroupName == null ? Codegen.empty() : this.networkSecurityGroupName;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<SecurityRuleArgs>> securityRules;
 
     public Output<List<SecurityRuleArgs>> getSecurityRules() {
-        return this.securityRules == null ? Output.empty() : this.securityRules;
+        return this.securityRules == null ? Codegen.empty() : this.securityRules;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public NetworkSecurityGroupArgs(
@@ -99,12 +100,12 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
     }
 
     private NetworkSecurityGroupArgs() {
-        this.id = Output.empty();
-        this.location = Output.empty();
-        this.networkSecurityGroupName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.securityRules = Output.empty();
-        this.tags = Output.empty();
+        this.id = Codegen.empty();
+        this.location = Codegen.empty();
+        this.networkSecurityGroupName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.securityRules = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -150,7 +151,7 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder networkSecurityGroupName(@Nullable Output<String> networkSecurityGroupName) {
@@ -158,7 +159,7 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder networkSecurityGroupName(@Nullable String networkSecurityGroupName) {
-            this.networkSecurityGroupName = Output.ofNullable(networkSecurityGroupName);
+            this.networkSecurityGroupName = Codegen.ofNullable(networkSecurityGroupName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -174,7 +175,7 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder securityRules(@Nullable List<SecurityRuleArgs> securityRules) {
-            this.securityRules = Output.ofNullable(securityRules);
+            this.securityRules = Codegen.ofNullable(securityRules);
             return this;
         }
         public Builder securityRules(SecurityRuleArgs... securityRules) {
@@ -185,7 +186,7 @@ public final class NetworkSecurityGroupArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public NetworkSecurityGroupArgs build() {
             return new NetworkSecurityGroupArgs(id, location, networkSecurityGroupName, resourceGroupName, securityRules, tags);

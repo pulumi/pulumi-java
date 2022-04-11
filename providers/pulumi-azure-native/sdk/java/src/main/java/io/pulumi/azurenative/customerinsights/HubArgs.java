@@ -6,6 +6,7 @@ package io.pulumi.azurenative.customerinsights;
 import io.pulumi.azurenative.customerinsights.inputs.HubBillingInfoFormatArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<HubBillingInfoFormatArgs> hubBillingInfo;
 
     public Output<HubBillingInfoFormatArgs> getHubBillingInfo() {
-        return this.hubBillingInfo == null ? Output.empty() : this.hubBillingInfo;
+        return this.hubBillingInfo == null ? Codegen.empty() : this.hubBillingInfo;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> hubName;
 
     public Output<String> getHubName() {
-        return this.hubName == null ? Output.empty() : this.hubName;
+        return this.hubName == null ? Codegen.empty() : this.hubName;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> tenantFeatures;
 
     public Output<Integer> getTenantFeatures() {
-        return this.tenantFeatures == null ? Output.empty() : this.tenantFeatures;
+        return this.tenantFeatures == null ? Codegen.empty() : this.tenantFeatures;
     }
 
     public HubArgs(
@@ -99,12 +100,12 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HubArgs() {
-        this.hubBillingInfo = Output.empty();
-        this.hubName = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.tenantFeatures = Output.empty();
+        this.hubBillingInfo = Codegen.empty();
+        this.hubName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tenantFeatures = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hubBillingInfo(@Nullable HubBillingInfoFormatArgs hubBillingInfo) {
-            this.hubBillingInfo = Output.ofNullable(hubBillingInfo);
+            this.hubBillingInfo = Codegen.ofNullable(hubBillingInfo);
             return this;
         }
         public Builder hubName(@Nullable Output<String> hubName) {
@@ -150,7 +151,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hubName(@Nullable String hubName) {
-            this.hubName = Output.ofNullable(hubName);
+            this.hubName = Codegen.ofNullable(hubName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -158,7 +159,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -174,7 +175,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tenantFeatures(@Nullable Output<Integer> tenantFeatures) {
@@ -182,7 +183,7 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tenantFeatures(@Nullable Integer tenantFeatures) {
-            this.tenantFeatures = Output.ofNullable(tenantFeatures);
+            this.tenantFeatures = Codegen.ofNullable(tenantFeatures);
             return this;
         }        public HubArgs build() {
             return new HubArgs(hubBillingInfo, hubName, location, resourceGroupName, tags, tenantFeatures);

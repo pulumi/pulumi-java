@@ -9,6 +9,7 @@ import io.pulumi.azurenative.containerregistry.inputs.ParentPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<String>> clientTokenIds;
 
     public Output<List<String>> getClientTokenIds() {
-        return this.clientTokenIds == null ? Output.empty() : this.clientTokenIds;
+        return this.clientTokenIds == null ? Codegen.empty() : this.clientTokenIds;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> connectedRegistryName;
 
     public Output<String> getConnectedRegistryName() {
-        return this.connectedRegistryName == null ? Output.empty() : this.connectedRegistryName;
+        return this.connectedRegistryName == null ? Codegen.empty() : this.connectedRegistryName;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<LoggingPropertiesArgs> logging;
 
     public Output<LoggingPropertiesArgs> getLogging() {
-        return this.logging == null ? Output.empty() : this.logging;
+        return this.logging == null ? Codegen.empty() : this.logging;
     }
 
     /**
@@ -114,13 +115,13 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ConnectedRegistryArgs() {
-        this.clientTokenIds = Output.empty();
-        this.connectedRegistryName = Output.empty();
-        this.logging = Output.empty();
-        this.mode = Output.empty();
-        this.parent = Output.empty();
-        this.registryName = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.clientTokenIds = Codegen.empty();
+        this.connectedRegistryName = Codegen.empty();
+        this.logging = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.parent = Codegen.empty();
+        this.registryName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -160,7 +161,7 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder clientTokenIds(@Nullable List<String> clientTokenIds) {
-            this.clientTokenIds = Output.ofNullable(clientTokenIds);
+            this.clientTokenIds = Codegen.ofNullable(clientTokenIds);
             return this;
         }
         public Builder clientTokenIds(String... clientTokenIds) {
@@ -171,7 +172,7 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder connectedRegistryName(@Nullable String connectedRegistryName) {
-            this.connectedRegistryName = Output.ofNullable(connectedRegistryName);
+            this.connectedRegistryName = Codegen.ofNullable(connectedRegistryName);
             return this;
         }
         public Builder logging(@Nullable Output<LoggingPropertiesArgs> logging) {
@@ -179,7 +180,7 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder logging(@Nullable LoggingPropertiesArgs logging) {
-            this.logging = Output.ofNullable(logging);
+            this.logging = Codegen.ofNullable(logging);
             return this;
         }
         public Builder mode(Output<Either<String,ConnectedRegistryMode>> mode) {

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.network.inputs.PrivateDnsZoneConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<PrivateDnsZoneConfigArgs>> privateDnsZoneConfigs;
 
     public Output<List<PrivateDnsZoneConfigArgs>> getPrivateDnsZoneConfigs() {
-        return this.privateDnsZoneConfigs == null ? Output.empty() : this.privateDnsZoneConfigs;
+        return this.privateDnsZoneConfigs == null ? Codegen.empty() : this.privateDnsZoneConfigs;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> privateDnsZoneGroupName;
 
     public Output<String> getPrivateDnsZoneGroupName() {
-        return this.privateDnsZoneGroupName == null ? Output.empty() : this.privateDnsZoneGroupName;
+        return this.privateDnsZoneGroupName == null ? Codegen.empty() : this.privateDnsZoneGroupName;
     }
 
     /**
@@ -98,12 +99,12 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
     }
 
     private PrivateDnsZoneGroupArgs() {
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.privateDnsZoneConfigs = Output.empty();
-        this.privateDnsZoneGroupName = Output.empty();
-        this.privateEndpointName = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.privateDnsZoneConfigs = Codegen.empty();
+        this.privateDnsZoneGroupName = Codegen.empty();
+        this.privateEndpointName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -149,7 +150,7 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder privateDnsZoneConfigs(@Nullable Output<List<PrivateDnsZoneConfigArgs>> privateDnsZoneConfigs) {
@@ -157,7 +158,7 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder privateDnsZoneConfigs(@Nullable List<PrivateDnsZoneConfigArgs> privateDnsZoneConfigs) {
-            this.privateDnsZoneConfigs = Output.ofNullable(privateDnsZoneConfigs);
+            this.privateDnsZoneConfigs = Codegen.ofNullable(privateDnsZoneConfigs);
             return this;
         }
         public Builder privateDnsZoneConfigs(PrivateDnsZoneConfigArgs... privateDnsZoneConfigs) {
@@ -168,7 +169,7 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder privateDnsZoneGroupName(@Nullable String privateDnsZoneGroupName) {
-            this.privateDnsZoneGroupName = Output.ofNullable(privateDnsZoneGroupName);
+            this.privateDnsZoneGroupName = Codegen.ofNullable(privateDnsZoneGroupName);
             return this;
         }
         public Builder privateEndpointName(Output<String> privateEndpointName) {

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.lex.inputs;
 import io.pulumi.awsnative.lex.inputs.BotMessageGroupArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -29,7 +30,7 @@ public final class BotFulfillmentUpdateResponseSpecificationArgs extends io.pulu
       private final @Nullable Output<Boolean> allowInterrupt;
 
     public Output<Boolean> getAllowInterrupt() {
-        return this.allowInterrupt == null ? Output.empty() : this.allowInterrupt;
+        return this.allowInterrupt == null ? Codegen.empty() : this.allowInterrupt;
     }
 
     /**
@@ -60,9 +61,9 @@ public final class BotFulfillmentUpdateResponseSpecificationArgs extends io.pulu
     }
 
     private BotFulfillmentUpdateResponseSpecificationArgs() {
-        this.allowInterrupt = Output.empty();
-        this.frequencyInSeconds = Output.empty();
-        this.messageGroups = Output.empty();
+        this.allowInterrupt = Codegen.empty();
+        this.frequencyInSeconds = Codegen.empty();
+        this.messageGroups = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class BotFulfillmentUpdateResponseSpecificationArgs extends io.pulu
             return this;
         }
         public Builder allowInterrupt(@Nullable Boolean allowInterrupt) {
-            this.allowInterrupt = Output.ofNullable(allowInterrupt);
+            this.allowInterrupt = Codegen.ofNullable(allowInterrupt);
             return this;
         }
         public Builder frequencyInSeconds(Output<Integer> frequencyInSeconds) {

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.inputs.DimensionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class CriteriaArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DimensionArgs>> dimensions;
 
     public Output<List<DimensionArgs>> getDimensions() {
-        return this.dimensions == null ? Output.empty() : this.dimensions;
+        return this.dimensions == null ? Codegen.empty() : this.dimensions;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class CriteriaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CriteriaArgs() {
-        this.dimensions = Output.empty();
-        this.metricName = Output.empty();
+        this.dimensions = Codegen.empty();
+        this.metricName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class CriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dimensions(@Nullable List<DimensionArgs> dimensions) {
-            this.dimensions = Output.ofNullable(dimensions);
+            this.dimensions = Codegen.ofNullable(dimensions);
             return this;
         }
         public Builder dimensions(DimensionArgs... dimensions) {

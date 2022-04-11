@@ -6,6 +6,7 @@ package io.pulumi.awsnative.budgets.inputs;
 import io.pulumi.awsnative.budgets.enums.BudgetsActionSubscriberType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -36,8 +37,8 @@ public final class BudgetsActionSubscriberArgs extends io.pulumi.resources.Resou
     }
 
     private BudgetsActionSubscriberArgs() {
-        this.address = Output.empty();
-        this.type = Output.empty();
+        this.address = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

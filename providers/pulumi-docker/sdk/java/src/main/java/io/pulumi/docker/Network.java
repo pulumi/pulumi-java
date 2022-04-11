@@ -6,6 +6,7 @@ package io.pulumi.docker;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.docker.NetworkArgs;
 import io.pulumi.docker.Utilities;
 import io.pulumi.docker.inputs.NetworkState;
@@ -273,7 +274,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Network(String name, @Nullable NetworkArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("docker:index/network:Network", name, args == null ? NetworkArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("docker:index/network:Network", name, args == null ? NetworkArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Network(String name, Output<String> id, @Nullable NetworkState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

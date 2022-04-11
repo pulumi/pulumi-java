@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -49,7 +50,7 @@ public final class GlusterfsVolumeSourceArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     public GlusterfsVolumeSourceArgs(
@@ -62,9 +63,9 @@ public final class GlusterfsVolumeSourceArgs extends io.pulumi.resources.Resourc
     }
 
     private GlusterfsVolumeSourceArgs() {
-        this.endpoints = Output.empty();
-        this.path = Output.empty();
-        this.readOnly = Output.empty();
+        this.endpoints = Codegen.empty();
+        this.path = Codegen.empty();
+        this.readOnly = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class GlusterfsVolumeSourceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }        public GlusterfsVolumeSourceArgs build() {
             return new GlusterfsVolumeSourceArgs(endpoints, path, readOnly);

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.connectedvmwarevsphere.enums.DiskType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> controllerKey;
 
     public Output<Integer> getControllerKey() {
-        return this.controllerKey == null ? Output.empty() : this.controllerKey;
+        return this.controllerKey == null ? Codegen.empty() : this.controllerKey;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> deviceKey;
 
     public Output<Integer> getDeviceKey() {
-        return this.deviceKey == null ? Output.empty() : this.deviceKey;
+        return this.deviceKey == null ? Codegen.empty() : this.deviceKey;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> deviceName;
 
     public Output<String> getDeviceName() {
-        return this.deviceName == null ? Output.empty() : this.deviceName;
+        return this.deviceName == null ? Codegen.empty() : this.deviceName;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,DiskMode>> diskMode;
 
     public Output<Either<String,DiskMode>> getDiskMode() {
-        return this.diskMode == null ? Output.empty() : this.diskMode;
+        return this.diskMode == null ? Codegen.empty() : this.diskMode;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> diskSizeGB;
 
     public Output<Integer> getDiskSizeGB() {
-        return this.diskSizeGB == null ? Output.empty() : this.diskSizeGB;
+        return this.diskSizeGB == null ? Codegen.empty() : this.diskSizeGB;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,DiskType>> diskType;
 
     public Output<Either<String,DiskType>> getDiskType() {
-        return this.diskType == null ? Output.empty() : this.diskType;
+        return this.diskType == null ? Codegen.empty() : this.diskType;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> unitNumber;
 
     public Output<Integer> getUnitNumber() {
-        return this.unitNumber == null ? Output.empty() : this.unitNumber;
+        return this.unitNumber == null ? Codegen.empty() : this.unitNumber;
     }
 
     public VirtualDiskArgs(
@@ -130,14 +131,14 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VirtualDiskArgs() {
-        this.controllerKey = Output.empty();
-        this.deviceKey = Output.empty();
-        this.deviceName = Output.empty();
-        this.diskMode = Output.empty();
-        this.diskSizeGB = Output.empty();
-        this.diskType = Output.empty();
-        this.name = Output.empty();
-        this.unitNumber = Output.empty();
+        this.controllerKey = Codegen.empty();
+        this.deviceKey = Codegen.empty();
+        this.deviceName = Codegen.empty();
+        this.diskMode = Codegen.empty();
+        this.diskSizeGB = Codegen.empty();
+        this.diskType = Codegen.empty();
+        this.name = Codegen.empty();
+        this.unitNumber = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -179,7 +180,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder controllerKey(@Nullable Integer controllerKey) {
-            this.controllerKey = Output.ofNullable(controllerKey);
+            this.controllerKey = Codegen.ofNullable(controllerKey);
             return this;
         }
         public Builder deviceKey(@Nullable Output<Integer> deviceKey) {
@@ -187,7 +188,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deviceKey(@Nullable Integer deviceKey) {
-            this.deviceKey = Output.ofNullable(deviceKey);
+            this.deviceKey = Codegen.ofNullable(deviceKey);
             return this;
         }
         public Builder deviceName(@Nullable Output<String> deviceName) {
@@ -195,7 +196,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Output.ofNullable(deviceName);
+            this.deviceName = Codegen.ofNullable(deviceName);
             return this;
         }
         public Builder diskMode(@Nullable Output<Either<String,DiskMode>> diskMode) {
@@ -203,7 +204,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskMode(@Nullable Either<String,DiskMode> diskMode) {
-            this.diskMode = Output.ofNullable(diskMode);
+            this.diskMode = Codegen.ofNullable(diskMode);
             return this;
         }
         public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
@@ -211,7 +212,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = Output.ofNullable(diskSizeGB);
+            this.diskSizeGB = Codegen.ofNullable(diskSizeGB);
             return this;
         }
         public Builder diskType(@Nullable Output<Either<String,DiskType>> diskType) {
@@ -219,7 +220,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskType(@Nullable Either<String,DiskType> diskType) {
-            this.diskType = Output.ofNullable(diskType);
+            this.diskType = Codegen.ofNullable(diskType);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -227,7 +228,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder unitNumber(@Nullable Output<Integer> unitNumber) {
@@ -235,7 +236,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder unitNumber(@Nullable Integer unitNumber) {
-            this.unitNumber = Output.ofNullable(unitNumber);
+            this.unitNumber = Codegen.ofNullable(unitNumber);
             return this;
         }        public VirtualDiskArgs build() {
             return new VirtualDiskArgs(controllerKey, deviceKey, deviceName, diskMode, diskSizeGB, diskType, name, unitNumber);

@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.autoscaling_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.autoscaling_v2.inputs.ContainerResourceMetricStatusArgs;
 import io.pulumi.kubernetes.autoscaling_v2.inputs.ExternalMetricStatusArgs;
 import io.pulumi.kubernetes.autoscaling_v2.inputs.ObjectMetricStatusArgs;
@@ -31,7 +32,7 @@ public final class MetricStatusArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ContainerResourceMetricStatusArgs> containerResource;
 
     public Output<ContainerResourceMetricStatusArgs> getContainerResource() {
-        return this.containerResource == null ? Output.empty() : this.containerResource;
+        return this.containerResource == null ? Codegen.empty() : this.containerResource;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class MetricStatusArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ExternalMetricStatusArgs> external;
 
     public Output<ExternalMetricStatusArgs> getExternal() {
-        return this.external == null ? Output.empty() : this.external;
+        return this.external == null ? Codegen.empty() : this.external;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class MetricStatusArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ObjectMetricStatusArgs> object;
 
     public Output<ObjectMetricStatusArgs> getObject() {
-        return this.object == null ? Output.empty() : this.object;
+        return this.object == null ? Codegen.empty() : this.object;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class MetricStatusArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PodsMetricStatusArgs> pods;
 
     public Output<PodsMetricStatusArgs> getPods() {
-        return this.pods == null ? Output.empty() : this.pods;
+        return this.pods == null ? Codegen.empty() : this.pods;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class MetricStatusArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ResourceMetricStatusArgs> resource;
 
     public Output<ResourceMetricStatusArgs> getResource() {
-        return this.resource == null ? Output.empty() : this.resource;
+        return this.resource == null ? Codegen.empty() : this.resource;
     }
 
     /**
@@ -105,12 +106,12 @@ public final class MetricStatusArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MetricStatusArgs() {
-        this.containerResource = Output.empty();
-        this.external = Output.empty();
-        this.object = Output.empty();
-        this.pods = Output.empty();
-        this.resource = Output.empty();
-        this.type = Output.empty();
+        this.containerResource = Codegen.empty();
+        this.external = Codegen.empty();
+        this.object = Codegen.empty();
+        this.pods = Codegen.empty();
+        this.resource = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class MetricStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder containerResource(@Nullable ContainerResourceMetricStatusArgs containerResource) {
-            this.containerResource = Output.ofNullable(containerResource);
+            this.containerResource = Codegen.ofNullable(containerResource);
             return this;
         }
         public Builder external(@Nullable Output<ExternalMetricStatusArgs> external) {
@@ -156,7 +157,7 @@ public final class MetricStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder external(@Nullable ExternalMetricStatusArgs external) {
-            this.external = Output.ofNullable(external);
+            this.external = Codegen.ofNullable(external);
             return this;
         }
         public Builder object(@Nullable Output<ObjectMetricStatusArgs> object) {
@@ -164,7 +165,7 @@ public final class MetricStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder object(@Nullable ObjectMetricStatusArgs object) {
-            this.object = Output.ofNullable(object);
+            this.object = Codegen.ofNullable(object);
             return this;
         }
         public Builder pods(@Nullable Output<PodsMetricStatusArgs> pods) {
@@ -172,7 +173,7 @@ public final class MetricStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pods(@Nullable PodsMetricStatusArgs pods) {
-            this.pods = Output.ofNullable(pods);
+            this.pods = Codegen.ofNullable(pods);
             return this;
         }
         public Builder resource(@Nullable Output<ResourceMetricStatusArgs> resource) {
@@ -180,7 +181,7 @@ public final class MetricStatusArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resource(@Nullable ResourceMetricStatusArgs resource) {
-            this.resource = Output.ofNullable(resource);
+            this.resource = Codegen.ofNullable(resource);
             return this;
         }
         public Builder type(Output<String> type) {

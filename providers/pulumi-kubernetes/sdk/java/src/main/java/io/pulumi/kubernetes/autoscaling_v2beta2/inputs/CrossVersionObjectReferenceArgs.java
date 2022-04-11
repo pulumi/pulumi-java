@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.autoscaling_v2beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class CrossVersionObjectReferenceArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> apiVersion;
 
     public Output<String> getApiVersion() {
-        return this.apiVersion == null ? Output.empty() : this.apiVersion;
+        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
     /**
@@ -61,9 +62,9 @@ public final class CrossVersionObjectReferenceArgs extends io.pulumi.resources.R
     }
 
     private CrossVersionObjectReferenceArgs() {
-        this.apiVersion = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
+        this.apiVersion = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class CrossVersionObjectReferenceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Output.ofNullable(apiVersion);
+            this.apiVersion = Codegen.ofNullable(apiVersion);
             return this;
         }
         public Builder kind(Output<String> kind) {

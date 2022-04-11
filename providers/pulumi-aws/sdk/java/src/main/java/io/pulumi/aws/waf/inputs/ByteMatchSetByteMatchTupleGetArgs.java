@@ -6,6 +6,7 @@ package io.pulumi.aws.waf.inputs;
 import io.pulumi.aws.waf.inputs.ByteMatchSetByteMatchTupleFieldToMatchGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -51,7 +52,7 @@ public final class ByteMatchSetByteMatchTupleGetArgs extends io.pulumi.resources
       private final @Nullable Output<String> targetString;
 
     public Output<String> getTargetString() {
-        return this.targetString == null ? Output.empty() : this.targetString;
+        return this.targetString == null ? Codegen.empty() : this.targetString;
     }
 
     /**
@@ -81,10 +82,10 @@ public final class ByteMatchSetByteMatchTupleGetArgs extends io.pulumi.resources
     }
 
     private ByteMatchSetByteMatchTupleGetArgs() {
-        this.fieldToMatch = Output.empty();
-        this.positionalConstraint = Output.empty();
-        this.targetString = Output.empty();
-        this.textTransformation = Output.empty();
+        this.fieldToMatch = Codegen.empty();
+        this.positionalConstraint = Codegen.empty();
+        this.targetString = Codegen.empty();
+        this.textTransformation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -134,7 +135,7 @@ public final class ByteMatchSetByteMatchTupleGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder targetString(@Nullable String targetString) {
-            this.targetString = Output.ofNullable(targetString);
+            this.targetString = Codegen.ofNullable(targetString);
             return this;
         }
         public Builder textTransformation(Output<String> textTransformation) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.dynamodb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class TableTtlGetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     public TableTtlGetArgs(
@@ -45,8 +46,8 @@ public final class TableTtlGetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TableTtlGetArgs() {
-        this.attributeName = Output.empty();
-        this.enabled = Output.empty();
+        this.attributeName = Codegen.empty();
+        this.enabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class TableTtlGetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }        public TableTtlGetArgs build() {
             return new TableTtlGetArgs(attributeName, enabled);

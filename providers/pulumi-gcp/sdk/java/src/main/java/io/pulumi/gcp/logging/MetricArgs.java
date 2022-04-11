@@ -5,6 +5,7 @@ package io.pulumi.gcp.logging;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.logging.inputs.MetricBucketOptionsArgs;
 import io.pulumi.gcp.logging.inputs.MetricMetricDescriptorArgs;
 import java.lang.String;
@@ -27,7 +28,7 @@ public final class MetricArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<MetricBucketOptionsArgs> bucketOptions;
 
     public Output<MetricBucketOptionsArgs> getBucketOptions() {
-        return this.bucketOptions == null ? Output.empty() : this.bucketOptions;
+        return this.bucketOptions == null ? Codegen.empty() : this.bucketOptions;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class MetricArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class MetricArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labelExtractors;
 
     public Output<Map<String,String>> getLabelExtractors() {
-        return this.labelExtractors == null ? Output.empty() : this.labelExtractors;
+        return this.labelExtractors == null ? Codegen.empty() : this.labelExtractors;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class MetricArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class MetricArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -121,7 +122,7 @@ public final class MetricArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> valueExtractor;
 
     public Output<String> getValueExtractor() {
-        return this.valueExtractor == null ? Output.empty() : this.valueExtractor;
+        return this.valueExtractor == null ? Codegen.empty() : this.valueExtractor;
     }
 
     public MetricArgs(
@@ -144,14 +145,14 @@ public final class MetricArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MetricArgs() {
-        this.bucketOptions = Output.empty();
-        this.description = Output.empty();
-        this.filter = Output.empty();
-        this.labelExtractors = Output.empty();
-        this.metricDescriptor = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.valueExtractor = Output.empty();
+        this.bucketOptions = Codegen.empty();
+        this.description = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.labelExtractors = Codegen.empty();
+        this.metricDescriptor = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.valueExtractor = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -193,7 +194,7 @@ public final class MetricArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bucketOptions(@Nullable MetricBucketOptionsArgs bucketOptions) {
-            this.bucketOptions = Output.ofNullable(bucketOptions);
+            this.bucketOptions = Codegen.ofNullable(bucketOptions);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -201,7 +202,7 @@ public final class MetricArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder filter(Output<String> filter) {
@@ -217,7 +218,7 @@ public final class MetricArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labelExtractors(@Nullable Map<String,String> labelExtractors) {
-            this.labelExtractors = Output.ofNullable(labelExtractors);
+            this.labelExtractors = Codegen.ofNullable(labelExtractors);
             return this;
         }
         public Builder metricDescriptor(Output<MetricMetricDescriptorArgs> metricDescriptor) {
@@ -233,7 +234,7 @@ public final class MetricArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -241,7 +242,7 @@ public final class MetricArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder valueExtractor(@Nullable Output<String> valueExtractor) {
@@ -249,7 +250,7 @@ public final class MetricArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder valueExtractor(@Nullable String valueExtractor) {
-            this.valueExtractor = Output.ofNullable(valueExtractor);
+            this.valueExtractor = Codegen.ofNullable(valueExtractor);
             return this;
         }        public MetricArgs build() {
             return new MetricArgs(bucketOptions, description, filter, labelExtractors, metricDescriptor, name, project, valueExtractor);

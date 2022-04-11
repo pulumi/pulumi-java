@@ -6,6 +6,7 @@ package io.pulumi.aws.rds;
 import io.pulumi.aws.rds.inputs.ProxyDefaultTargetGroupConnectionPoolConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class ProxyDefaultTargetGroupArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<ProxyDefaultTargetGroupConnectionPoolConfigArgs> connectionPoolConfig;
 
     public Output<ProxyDefaultTargetGroupConnectionPoolConfigArgs> getConnectionPoolConfig() {
-        return this.connectionPoolConfig == null ? Output.empty() : this.connectionPoolConfig;
+        return this.connectionPoolConfig == null ? Codegen.empty() : this.connectionPoolConfig;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class ProxyDefaultTargetGroupArgs extends io.pulumi.resources.Resou
     }
 
     private ProxyDefaultTargetGroupArgs() {
-        this.connectionPoolConfig = Output.empty();
-        this.dbProxyName = Output.empty();
+        this.connectionPoolConfig = Codegen.empty();
+        this.dbProxyName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class ProxyDefaultTargetGroupArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder connectionPoolConfig(@Nullable ProxyDefaultTargetGroupConnectionPoolConfigArgs connectionPoolConfig) {
-            this.connectionPoolConfig = Output.ofNullable(connectionPoolConfig);
+            this.connectionPoolConfig = Codegen.ofNullable(connectionPoolConfig);
             return this;
         }
         public Builder dbProxyName(Output<String> dbProxyName) {

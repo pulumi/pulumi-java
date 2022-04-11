@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.inputs.SecurityGroupRuleState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -258,7 +259,7 @@ public class SecurityGroupRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SecurityGroupRule(String name, SecurityGroupRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/securityGroupRule:SecurityGroupRule", name, args == null ? SecurityGroupRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/securityGroupRule:SecurityGroupRule", name, args == null ? SecurityGroupRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SecurityGroupRule(String name, Output<String> id, @Nullable SecurityGroupRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -11,6 +11,7 @@ import io.pulumi.azurenative.security.inputs.SecurityAssessmentMetadataPropertie
 import io.pulumi.azurenative.security.inputs.SecurityAssessmentPartnerDataArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -30,7 +31,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> additionalData;
 
     public Output<Map<String,String>> getAdditionalData() {
-        return this.additionalData == null ? Output.empty() : this.additionalData;
+        return this.additionalData == null ? Codegen.empty() : this.additionalData;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> assessmentName;
 
     public Output<String> getAssessmentName() {
-        return this.assessmentName == null ? Output.empty() : this.assessmentName;
+        return this.assessmentName == null ? Codegen.empty() : this.assessmentName;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SecurityAssessmentMetadataPropertiesArgs> metadata;
 
     public Output<SecurityAssessmentMetadataPropertiesArgs> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SecurityAssessmentPartnerDataArgs> partnersData;
 
     public Output<SecurityAssessmentPartnerDataArgs> getPartnersData() {
-        return this.partnersData == null ? Output.empty() : this.partnersData;
+        return this.partnersData == null ? Codegen.empty() : this.partnersData;
     }
 
     /**
@@ -117,13 +118,13 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AssessmentArgs() {
-        this.additionalData = Output.empty();
-        this.assessmentName = Output.empty();
-        this.metadata = Output.empty();
-        this.partnersData = Output.empty();
-        this.resourceDetails = Output.empty();
-        this.resourceId = Output.empty();
-        this.status = Output.empty();
+        this.additionalData = Codegen.empty();
+        this.assessmentName = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.partnersData = Codegen.empty();
+        this.resourceDetails = Codegen.empty();
+        this.resourceId = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -163,7 +164,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder additionalData(@Nullable Map<String,String> additionalData) {
-            this.additionalData = Output.ofNullable(additionalData);
+            this.additionalData = Codegen.ofNullable(additionalData);
             return this;
         }
         public Builder assessmentName(@Nullable Output<String> assessmentName) {
@@ -171,7 +172,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder assessmentName(@Nullable String assessmentName) {
-            this.assessmentName = Output.ofNullable(assessmentName);
+            this.assessmentName = Codegen.ofNullable(assessmentName);
             return this;
         }
         public Builder metadata(@Nullable Output<SecurityAssessmentMetadataPropertiesArgs> metadata) {
@@ -179,7 +180,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable SecurityAssessmentMetadataPropertiesArgs metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder partnersData(@Nullable Output<SecurityAssessmentPartnerDataArgs> partnersData) {
@@ -187,7 +188,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder partnersData(@Nullable SecurityAssessmentPartnerDataArgs partnersData) {
-            this.partnersData = Output.ofNullable(partnersData);
+            this.partnersData = Codegen.ofNullable(partnersData);
             return this;
         }
         public Builder resourceDetails(Output<Object> resourceDetails) {

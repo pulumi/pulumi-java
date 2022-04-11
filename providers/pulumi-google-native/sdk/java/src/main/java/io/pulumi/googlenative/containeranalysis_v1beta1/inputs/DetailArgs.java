@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.VersionArgs;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.VulnerabilityLocationArgs;
 import java.lang.Boolean;
@@ -40,7 +41,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<VulnerabilityLocationArgs> fixedLocation;
 
     public Output<VulnerabilityLocationArgs> getFixedLocation() {
-        return this.fixedLocation == null ? Output.empty() : this.fixedLocation;
+        return this.fixedLocation == null ? Codegen.empty() : this.fixedLocation;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> isObsolete;
 
     public Output<Boolean> getIsObsolete() {
-        return this.isObsolete == null ? Output.empty() : this.isObsolete;
+        return this.isObsolete == null ? Codegen.empty() : this.isObsolete;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<VersionArgs> maxAffectedVersion;
 
     public Output<VersionArgs> getMaxAffectedVersion() {
-        return this.maxAffectedVersion == null ? Output.empty() : this.maxAffectedVersion;
+        return this.maxAffectedVersion == null ? Codegen.empty() : this.maxAffectedVersion;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<VersionArgs> minAffectedVersion;
 
     public Output<VersionArgs> getMinAffectedVersion() {
-        return this.minAffectedVersion == null ? Output.empty() : this.minAffectedVersion;
+        return this.minAffectedVersion == null ? Codegen.empty() : this.minAffectedVersion;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> packageType;
 
     public Output<String> getPackageType() {
-        return this.packageType == null ? Output.empty() : this.packageType;
+        return this.packageType == null ? Codegen.empty() : this.packageType;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> severityName;
 
     public Output<String> getSeverityName() {
-        return this.severityName == null ? Output.empty() : this.severityName;
+        return this.severityName == null ? Codegen.empty() : this.severityName;
     }
 
     /**
@@ -128,7 +129,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> source;
 
     public Output<String> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     /**
@@ -139,7 +140,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sourceUpdateTime;
 
     public Output<String> getSourceUpdateTime() {
-        return this.sourceUpdateTime == null ? Output.empty() : this.sourceUpdateTime;
+        return this.sourceUpdateTime == null ? Codegen.empty() : this.sourceUpdateTime;
     }
 
     /**
@@ -150,7 +151,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> vendor;
 
     public Output<String> getVendor() {
-        return this.vendor == null ? Output.empty() : this.vendor;
+        return this.vendor == null ? Codegen.empty() : this.vendor;
     }
 
     public DetailArgs(
@@ -181,18 +182,18 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DetailArgs() {
-        this.cpeUri = Output.empty();
-        this.description = Output.empty();
-        this.fixedLocation = Output.empty();
-        this.isObsolete = Output.empty();
-        this.maxAffectedVersion = Output.empty();
-        this.minAffectedVersion = Output.empty();
-        this.package_ = Output.empty();
-        this.packageType = Output.empty();
-        this.severityName = Output.empty();
-        this.source = Output.empty();
-        this.sourceUpdateTime = Output.empty();
-        this.vendor = Output.empty();
+        this.cpeUri = Codegen.empty();
+        this.description = Codegen.empty();
+        this.fixedLocation = Codegen.empty();
+        this.isObsolete = Codegen.empty();
+        this.maxAffectedVersion = Codegen.empty();
+        this.minAffectedVersion = Codegen.empty();
+        this.package_ = Codegen.empty();
+        this.packageType = Codegen.empty();
+        this.severityName = Codegen.empty();
+        this.source = Codegen.empty();
+        this.sourceUpdateTime = Codegen.empty();
+        this.vendor = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -250,7 +251,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder fixedLocation(@Nullable Output<VulnerabilityLocationArgs> fixedLocation) {
@@ -258,7 +259,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fixedLocation(@Nullable VulnerabilityLocationArgs fixedLocation) {
-            this.fixedLocation = Output.ofNullable(fixedLocation);
+            this.fixedLocation = Codegen.ofNullable(fixedLocation);
             return this;
         }
         public Builder isObsolete(@Nullable Output<Boolean> isObsolete) {
@@ -266,7 +267,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isObsolete(@Nullable Boolean isObsolete) {
-            this.isObsolete = Output.ofNullable(isObsolete);
+            this.isObsolete = Codegen.ofNullable(isObsolete);
             return this;
         }
         public Builder maxAffectedVersion(@Nullable Output<VersionArgs> maxAffectedVersion) {
@@ -274,7 +275,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxAffectedVersion(@Nullable VersionArgs maxAffectedVersion) {
-            this.maxAffectedVersion = Output.ofNullable(maxAffectedVersion);
+            this.maxAffectedVersion = Codegen.ofNullable(maxAffectedVersion);
             return this;
         }
         public Builder minAffectedVersion(@Nullable Output<VersionArgs> minAffectedVersion) {
@@ -282,7 +283,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minAffectedVersion(@Nullable VersionArgs minAffectedVersion) {
-            this.minAffectedVersion = Output.ofNullable(minAffectedVersion);
+            this.minAffectedVersion = Codegen.ofNullable(minAffectedVersion);
             return this;
         }
         public Builder package_(Output<String> package_) {
@@ -298,7 +299,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder packageType(@Nullable String packageType) {
-            this.packageType = Output.ofNullable(packageType);
+            this.packageType = Codegen.ofNullable(packageType);
             return this;
         }
         public Builder severityName(@Nullable Output<String> severityName) {
@@ -306,7 +307,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder severityName(@Nullable String severityName) {
-            this.severityName = Output.ofNullable(severityName);
+            this.severityName = Codegen.ofNullable(severityName);
             return this;
         }
         public Builder source(@Nullable Output<String> source) {
@@ -314,7 +315,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder source(@Nullable String source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }
         public Builder sourceUpdateTime(@Nullable Output<String> sourceUpdateTime) {
@@ -322,7 +323,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceUpdateTime(@Nullable String sourceUpdateTime) {
-            this.sourceUpdateTime = Output.ofNullable(sourceUpdateTime);
+            this.sourceUpdateTime = Codegen.ofNullable(sourceUpdateTime);
             return this;
         }
         public Builder vendor(@Nullable Output<String> vendor) {
@@ -330,7 +331,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vendor(@Nullable String vendor) {
-            this.vendor = Output.ofNullable(vendor);
+            this.vendor = Codegen.ofNullable(vendor);
             return this;
         }        public DetailArgs build() {
             return new DetailArgs(cpeUri, description, fixedLocation, isObsolete, maxAffectedVersion, minAffectedVersion, package_, packageType, severityName, source, sourceUpdateTime, vendor);

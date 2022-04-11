@@ -7,6 +7,7 @@ import io.pulumi.azurenative.containerservice.enums.Expander;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,119 +25,119 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
       private final @Nullable Output<String> balanceSimilarNodeGroups;
 
     public Output<String> getBalanceSimilarNodeGroups() {
-        return this.balanceSimilarNodeGroups == null ? Output.empty() : this.balanceSimilarNodeGroups;
+        return this.balanceSimilarNodeGroups == null ? Codegen.empty() : this.balanceSimilarNodeGroups;
     }
 
     @Import(name="expander")
       private final @Nullable Output<Either<String,Expander>> expander;
 
     public Output<Either<String,Expander>> getExpander() {
-        return this.expander == null ? Output.empty() : this.expander;
+        return this.expander == null ? Codegen.empty() : this.expander;
     }
 
     @Import(name="maxEmptyBulkDelete")
       private final @Nullable Output<String> maxEmptyBulkDelete;
 
     public Output<String> getMaxEmptyBulkDelete() {
-        return this.maxEmptyBulkDelete == null ? Output.empty() : this.maxEmptyBulkDelete;
+        return this.maxEmptyBulkDelete == null ? Codegen.empty() : this.maxEmptyBulkDelete;
     }
 
     @Import(name="maxGracefulTerminationSec")
       private final @Nullable Output<String> maxGracefulTerminationSec;
 
     public Output<String> getMaxGracefulTerminationSec() {
-        return this.maxGracefulTerminationSec == null ? Output.empty() : this.maxGracefulTerminationSec;
+        return this.maxGracefulTerminationSec == null ? Codegen.empty() : this.maxGracefulTerminationSec;
     }
 
     @Import(name="maxNodeProvisionTime")
       private final @Nullable Output<String> maxNodeProvisionTime;
 
     public Output<String> getMaxNodeProvisionTime() {
-        return this.maxNodeProvisionTime == null ? Output.empty() : this.maxNodeProvisionTime;
+        return this.maxNodeProvisionTime == null ? Codegen.empty() : this.maxNodeProvisionTime;
     }
 
     @Import(name="maxTotalUnreadyPercentage")
       private final @Nullable Output<String> maxTotalUnreadyPercentage;
 
     public Output<String> getMaxTotalUnreadyPercentage() {
-        return this.maxTotalUnreadyPercentage == null ? Output.empty() : this.maxTotalUnreadyPercentage;
+        return this.maxTotalUnreadyPercentage == null ? Codegen.empty() : this.maxTotalUnreadyPercentage;
     }
 
     @Import(name="newPodScaleUpDelay")
       private final @Nullable Output<String> newPodScaleUpDelay;
 
     public Output<String> getNewPodScaleUpDelay() {
-        return this.newPodScaleUpDelay == null ? Output.empty() : this.newPodScaleUpDelay;
+        return this.newPodScaleUpDelay == null ? Codegen.empty() : this.newPodScaleUpDelay;
     }
 
     @Import(name="okTotalUnreadyCount")
       private final @Nullable Output<String> okTotalUnreadyCount;
 
     public Output<String> getOkTotalUnreadyCount() {
-        return this.okTotalUnreadyCount == null ? Output.empty() : this.okTotalUnreadyCount;
+        return this.okTotalUnreadyCount == null ? Codegen.empty() : this.okTotalUnreadyCount;
     }
 
     @Import(name="scaleDownDelayAfterAdd")
       private final @Nullable Output<String> scaleDownDelayAfterAdd;
 
     public Output<String> getScaleDownDelayAfterAdd() {
-        return this.scaleDownDelayAfterAdd == null ? Output.empty() : this.scaleDownDelayAfterAdd;
+        return this.scaleDownDelayAfterAdd == null ? Codegen.empty() : this.scaleDownDelayAfterAdd;
     }
 
     @Import(name="scaleDownDelayAfterDelete")
       private final @Nullable Output<String> scaleDownDelayAfterDelete;
 
     public Output<String> getScaleDownDelayAfterDelete() {
-        return this.scaleDownDelayAfterDelete == null ? Output.empty() : this.scaleDownDelayAfterDelete;
+        return this.scaleDownDelayAfterDelete == null ? Codegen.empty() : this.scaleDownDelayAfterDelete;
     }
 
     @Import(name="scaleDownDelayAfterFailure")
       private final @Nullable Output<String> scaleDownDelayAfterFailure;
 
     public Output<String> getScaleDownDelayAfterFailure() {
-        return this.scaleDownDelayAfterFailure == null ? Output.empty() : this.scaleDownDelayAfterFailure;
+        return this.scaleDownDelayAfterFailure == null ? Codegen.empty() : this.scaleDownDelayAfterFailure;
     }
 
     @Import(name="scaleDownUnneededTime")
       private final @Nullable Output<String> scaleDownUnneededTime;
 
     public Output<String> getScaleDownUnneededTime() {
-        return this.scaleDownUnneededTime == null ? Output.empty() : this.scaleDownUnneededTime;
+        return this.scaleDownUnneededTime == null ? Codegen.empty() : this.scaleDownUnneededTime;
     }
 
     @Import(name="scaleDownUnreadyTime")
       private final @Nullable Output<String> scaleDownUnreadyTime;
 
     public Output<String> getScaleDownUnreadyTime() {
-        return this.scaleDownUnreadyTime == null ? Output.empty() : this.scaleDownUnreadyTime;
+        return this.scaleDownUnreadyTime == null ? Codegen.empty() : this.scaleDownUnreadyTime;
     }
 
     @Import(name="scaleDownUtilizationThreshold")
       private final @Nullable Output<String> scaleDownUtilizationThreshold;
 
     public Output<String> getScaleDownUtilizationThreshold() {
-        return this.scaleDownUtilizationThreshold == null ? Output.empty() : this.scaleDownUtilizationThreshold;
+        return this.scaleDownUtilizationThreshold == null ? Codegen.empty() : this.scaleDownUtilizationThreshold;
     }
 
     @Import(name="scanInterval")
       private final @Nullable Output<String> scanInterval;
 
     public Output<String> getScanInterval() {
-        return this.scanInterval == null ? Output.empty() : this.scanInterval;
+        return this.scanInterval == null ? Codegen.empty() : this.scanInterval;
     }
 
     @Import(name="skipNodesWithLocalStorage")
       private final @Nullable Output<String> skipNodesWithLocalStorage;
 
     public Output<String> getSkipNodesWithLocalStorage() {
-        return this.skipNodesWithLocalStorage == null ? Output.empty() : this.skipNodesWithLocalStorage;
+        return this.skipNodesWithLocalStorage == null ? Codegen.empty() : this.skipNodesWithLocalStorage;
     }
 
     @Import(name="skipNodesWithSystemPods")
       private final @Nullable Output<String> skipNodesWithSystemPods;
 
     public Output<String> getSkipNodesWithSystemPods() {
-        return this.skipNodesWithSystemPods == null ? Output.empty() : this.skipNodesWithSystemPods;
+        return this.skipNodesWithSystemPods == null ? Codegen.empty() : this.skipNodesWithSystemPods;
     }
 
     public ManagedClusterPropertiesAutoScalerProfileArgs(
@@ -177,23 +178,23 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
     }
 
     private ManagedClusterPropertiesAutoScalerProfileArgs() {
-        this.balanceSimilarNodeGroups = Output.empty();
-        this.expander = Output.empty();
-        this.maxEmptyBulkDelete = Output.empty();
-        this.maxGracefulTerminationSec = Output.empty();
-        this.maxNodeProvisionTime = Output.empty();
-        this.maxTotalUnreadyPercentage = Output.empty();
-        this.newPodScaleUpDelay = Output.empty();
-        this.okTotalUnreadyCount = Output.empty();
-        this.scaleDownDelayAfterAdd = Output.empty();
-        this.scaleDownDelayAfterDelete = Output.empty();
-        this.scaleDownDelayAfterFailure = Output.empty();
-        this.scaleDownUnneededTime = Output.empty();
-        this.scaleDownUnreadyTime = Output.empty();
-        this.scaleDownUtilizationThreshold = Output.empty();
-        this.scanInterval = Output.empty();
-        this.skipNodesWithLocalStorage = Output.empty();
-        this.skipNodesWithSystemPods = Output.empty();
+        this.balanceSimilarNodeGroups = Codegen.empty();
+        this.expander = Codegen.empty();
+        this.maxEmptyBulkDelete = Codegen.empty();
+        this.maxGracefulTerminationSec = Codegen.empty();
+        this.maxNodeProvisionTime = Codegen.empty();
+        this.maxTotalUnreadyPercentage = Codegen.empty();
+        this.newPodScaleUpDelay = Codegen.empty();
+        this.okTotalUnreadyCount = Codegen.empty();
+        this.scaleDownDelayAfterAdd = Codegen.empty();
+        this.scaleDownDelayAfterDelete = Codegen.empty();
+        this.scaleDownDelayAfterFailure = Codegen.empty();
+        this.scaleDownUnneededTime = Codegen.empty();
+        this.scaleDownUnreadyTime = Codegen.empty();
+        this.scaleDownUtilizationThreshold = Codegen.empty();
+        this.scanInterval = Codegen.empty();
+        this.skipNodesWithLocalStorage = Codegen.empty();
+        this.skipNodesWithSystemPods = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -253,7 +254,7 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
             return this;
         }
         public Builder balanceSimilarNodeGroups(@Nullable String balanceSimilarNodeGroups) {
-            this.balanceSimilarNodeGroups = Output.ofNullable(balanceSimilarNodeGroups);
+            this.balanceSimilarNodeGroups = Codegen.ofNullable(balanceSimilarNodeGroups);
             return this;
         }
         public Builder expander(@Nullable Output<Either<String,Expander>> expander) {
@@ -261,7 +262,7 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
             return this;
         }
         public Builder expander(@Nullable Either<String,Expander> expander) {
-            this.expander = Output.ofNullable(expander);
+            this.expander = Codegen.ofNullable(expander);
             return this;
         }
         public Builder maxEmptyBulkDelete(@Nullable Output<String> maxEmptyBulkDelete) {
@@ -269,7 +270,7 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
             return this;
         }
         public Builder maxEmptyBulkDelete(@Nullable String maxEmptyBulkDelete) {
-            this.maxEmptyBulkDelete = Output.ofNullable(maxEmptyBulkDelete);
+            this.maxEmptyBulkDelete = Codegen.ofNullable(maxEmptyBulkDelete);
             return this;
         }
         public Builder maxGracefulTerminationSec(@Nullable Output<String> maxGracefulTerminationSec) {
@@ -277,7 +278,7 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
             return this;
         }
         public Builder maxGracefulTerminationSec(@Nullable String maxGracefulTerminationSec) {
-            this.maxGracefulTerminationSec = Output.ofNullable(maxGracefulTerminationSec);
+            this.maxGracefulTerminationSec = Codegen.ofNullable(maxGracefulTerminationSec);
             return this;
         }
         public Builder maxNodeProvisionTime(@Nullable Output<String> maxNodeProvisionTime) {
@@ -285,7 +286,7 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
             return this;
         }
         public Builder maxNodeProvisionTime(@Nullable String maxNodeProvisionTime) {
-            this.maxNodeProvisionTime = Output.ofNullable(maxNodeProvisionTime);
+            this.maxNodeProvisionTime = Codegen.ofNullable(maxNodeProvisionTime);
             return this;
         }
         public Builder maxTotalUnreadyPercentage(@Nullable Output<String> maxTotalUnreadyPercentage) {
@@ -293,7 +294,7 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
             return this;
         }
         public Builder maxTotalUnreadyPercentage(@Nullable String maxTotalUnreadyPercentage) {
-            this.maxTotalUnreadyPercentage = Output.ofNullable(maxTotalUnreadyPercentage);
+            this.maxTotalUnreadyPercentage = Codegen.ofNullable(maxTotalUnreadyPercentage);
             return this;
         }
         public Builder newPodScaleUpDelay(@Nullable Output<String> newPodScaleUpDelay) {
@@ -301,7 +302,7 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
             return this;
         }
         public Builder newPodScaleUpDelay(@Nullable String newPodScaleUpDelay) {
-            this.newPodScaleUpDelay = Output.ofNullable(newPodScaleUpDelay);
+            this.newPodScaleUpDelay = Codegen.ofNullable(newPodScaleUpDelay);
             return this;
         }
         public Builder okTotalUnreadyCount(@Nullable Output<String> okTotalUnreadyCount) {
@@ -309,7 +310,7 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
             return this;
         }
         public Builder okTotalUnreadyCount(@Nullable String okTotalUnreadyCount) {
-            this.okTotalUnreadyCount = Output.ofNullable(okTotalUnreadyCount);
+            this.okTotalUnreadyCount = Codegen.ofNullable(okTotalUnreadyCount);
             return this;
         }
         public Builder scaleDownDelayAfterAdd(@Nullable Output<String> scaleDownDelayAfterAdd) {
@@ -317,7 +318,7 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
             return this;
         }
         public Builder scaleDownDelayAfterAdd(@Nullable String scaleDownDelayAfterAdd) {
-            this.scaleDownDelayAfterAdd = Output.ofNullable(scaleDownDelayAfterAdd);
+            this.scaleDownDelayAfterAdd = Codegen.ofNullable(scaleDownDelayAfterAdd);
             return this;
         }
         public Builder scaleDownDelayAfterDelete(@Nullable Output<String> scaleDownDelayAfterDelete) {
@@ -325,7 +326,7 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
             return this;
         }
         public Builder scaleDownDelayAfterDelete(@Nullable String scaleDownDelayAfterDelete) {
-            this.scaleDownDelayAfterDelete = Output.ofNullable(scaleDownDelayAfterDelete);
+            this.scaleDownDelayAfterDelete = Codegen.ofNullable(scaleDownDelayAfterDelete);
             return this;
         }
         public Builder scaleDownDelayAfterFailure(@Nullable Output<String> scaleDownDelayAfterFailure) {
@@ -333,7 +334,7 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
             return this;
         }
         public Builder scaleDownDelayAfterFailure(@Nullable String scaleDownDelayAfterFailure) {
-            this.scaleDownDelayAfterFailure = Output.ofNullable(scaleDownDelayAfterFailure);
+            this.scaleDownDelayAfterFailure = Codegen.ofNullable(scaleDownDelayAfterFailure);
             return this;
         }
         public Builder scaleDownUnneededTime(@Nullable Output<String> scaleDownUnneededTime) {
@@ -341,7 +342,7 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
             return this;
         }
         public Builder scaleDownUnneededTime(@Nullable String scaleDownUnneededTime) {
-            this.scaleDownUnneededTime = Output.ofNullable(scaleDownUnneededTime);
+            this.scaleDownUnneededTime = Codegen.ofNullable(scaleDownUnneededTime);
             return this;
         }
         public Builder scaleDownUnreadyTime(@Nullable Output<String> scaleDownUnreadyTime) {
@@ -349,7 +350,7 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
             return this;
         }
         public Builder scaleDownUnreadyTime(@Nullable String scaleDownUnreadyTime) {
-            this.scaleDownUnreadyTime = Output.ofNullable(scaleDownUnreadyTime);
+            this.scaleDownUnreadyTime = Codegen.ofNullable(scaleDownUnreadyTime);
             return this;
         }
         public Builder scaleDownUtilizationThreshold(@Nullable Output<String> scaleDownUtilizationThreshold) {
@@ -357,7 +358,7 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
             return this;
         }
         public Builder scaleDownUtilizationThreshold(@Nullable String scaleDownUtilizationThreshold) {
-            this.scaleDownUtilizationThreshold = Output.ofNullable(scaleDownUtilizationThreshold);
+            this.scaleDownUtilizationThreshold = Codegen.ofNullable(scaleDownUtilizationThreshold);
             return this;
         }
         public Builder scanInterval(@Nullable Output<String> scanInterval) {
@@ -365,7 +366,7 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
             return this;
         }
         public Builder scanInterval(@Nullable String scanInterval) {
-            this.scanInterval = Output.ofNullable(scanInterval);
+            this.scanInterval = Codegen.ofNullable(scanInterval);
             return this;
         }
         public Builder skipNodesWithLocalStorage(@Nullable Output<String> skipNodesWithLocalStorage) {
@@ -373,7 +374,7 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
             return this;
         }
         public Builder skipNodesWithLocalStorage(@Nullable String skipNodesWithLocalStorage) {
-            this.skipNodesWithLocalStorage = Output.ofNullable(skipNodesWithLocalStorage);
+            this.skipNodesWithLocalStorage = Codegen.ofNullable(skipNodesWithLocalStorage);
             return this;
         }
         public Builder skipNodesWithSystemPods(@Nullable Output<String> skipNodesWithSystemPods) {
@@ -381,7 +382,7 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
             return this;
         }
         public Builder skipNodesWithSystemPods(@Nullable String skipNodesWithSystemPods) {
-            this.skipNodesWithSystemPods = Output.ofNullable(skipNodesWithSystemPods);
+            this.skipNodesWithSystemPods = Codegen.ofNullable(skipNodesWithSystemPods);
             return this;
         }        public ManagedClusterPropertiesAutoScalerProfileArgs build() {
             return new ManagedClusterPropertiesAutoScalerProfileArgs(balanceSimilarNodeGroups, expander, maxEmptyBulkDelete, maxGracefulTerminationSec, maxNodeProvisionTime, maxTotalUnreadyPercentage, newPodScaleUpDelay, okTotalUnreadyCount, scaleDownDelayAfterAdd, scaleDownDelayAfterDelete, scaleDownDelayAfterFailure, scaleDownUnneededTime, scaleDownUnreadyTime, scaleDownUtilizationThreshold, scanInterval, skipNodesWithLocalStorage, skipNodesWithSystemPods);

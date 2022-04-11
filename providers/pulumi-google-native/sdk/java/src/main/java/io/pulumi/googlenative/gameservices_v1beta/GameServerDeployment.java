@@ -6,6 +6,7 @@ package io.pulumi.googlenative.gameservices_v1beta;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.gameservices_v1beta.GameServerDeploymentArgs;
 import java.lang.String;
@@ -125,7 +126,7 @@ public class GameServerDeployment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GameServerDeployment(String name, GameServerDeploymentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:gameservices/v1beta:GameServerDeployment", name, args == null ? GameServerDeploymentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:gameservices/v1beta:GameServerDeployment", name, args == null ? GameServerDeploymentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private GameServerDeployment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

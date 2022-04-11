@@ -5,6 +5,7 @@ package io.pulumi.googlenative.file_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.file_v1.inputs.NfsExportOptionsArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class FileShareConfigArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> capacityGb;
 
     public Output<String> getCapacityGb() {
-        return this.capacityGb == null ? Output.empty() : this.capacityGb;
+        return this.capacityGb == null ? Codegen.empty() : this.capacityGb;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class FileShareConfigArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class FileShareConfigArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<NfsExportOptionsArgs>> nfsExportOptions;
 
     public Output<List<NfsExportOptionsArgs>> getNfsExportOptions() {
-        return this.nfsExportOptions == null ? Output.empty() : this.nfsExportOptions;
+        return this.nfsExportOptions == null ? Codegen.empty() : this.nfsExportOptions;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class FileShareConfigArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> sourceBackup;
 
     public Output<String> getSourceBackup() {
-        return this.sourceBackup == null ? Output.empty() : this.sourceBackup;
+        return this.sourceBackup == null ? Codegen.empty() : this.sourceBackup;
     }
 
     public FileShareConfigArgs(
@@ -76,10 +77,10 @@ public final class FileShareConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private FileShareConfigArgs() {
-        this.capacityGb = Output.empty();
-        this.name = Output.empty();
-        this.nfsExportOptions = Output.empty();
-        this.sourceBackup = Output.empty();
+        this.capacityGb = Codegen.empty();
+        this.name = Codegen.empty();
+        this.nfsExportOptions = Codegen.empty();
+        this.sourceBackup = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class FileShareConfigArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder capacityGb(@Nullable String capacityGb) {
-            this.capacityGb = Output.ofNullable(capacityGb);
+            this.capacityGb = Codegen.ofNullable(capacityGb);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -121,7 +122,7 @@ public final class FileShareConfigArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder nfsExportOptions(@Nullable Output<List<NfsExportOptionsArgs>> nfsExportOptions) {
@@ -129,7 +130,7 @@ public final class FileShareConfigArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder nfsExportOptions(@Nullable List<NfsExportOptionsArgs> nfsExportOptions) {
-            this.nfsExportOptions = Output.ofNullable(nfsExportOptions);
+            this.nfsExportOptions = Codegen.ofNullable(nfsExportOptions);
             return this;
         }
         public Builder nfsExportOptions(NfsExportOptionsArgs... nfsExportOptions) {
@@ -140,7 +141,7 @@ public final class FileShareConfigArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder sourceBackup(@Nullable String sourceBackup) {
-            this.sourceBackup = Output.ofNullable(sourceBackup);
+            this.sourceBackup = Codegen.ofNullable(sourceBackup);
             return this;
         }        public FileShareConfigArgs build() {
             return new FileShareConfigArgs(capacityGb, name, nfsExportOptions, sourceBackup);

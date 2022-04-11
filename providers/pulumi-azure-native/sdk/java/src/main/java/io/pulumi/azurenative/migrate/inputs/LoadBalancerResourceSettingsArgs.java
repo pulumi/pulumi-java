@@ -7,6 +7,7 @@ import io.pulumi.azurenative.migrate.inputs.LBBackendAddressPoolResourceSettings
 import io.pulumi.azurenative.migrate.inputs.LBFrontendIPConfigurationResourceSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
       private final @Nullable Output<List<LBBackendAddressPoolResourceSettingsArgs>> backendAddressPools;
 
     public Output<List<LBBackendAddressPoolResourceSettingsArgs>> getBackendAddressPools() {
-        return this.backendAddressPools == null ? Output.empty() : this.backendAddressPools;
+        return this.backendAddressPools == null ? Codegen.empty() : this.backendAddressPools;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
       private final @Nullable Output<List<LBFrontendIPConfigurationResourceSettingsArgs>> frontendIPConfigurations;
 
     public Output<List<LBFrontendIPConfigurationResourceSettingsArgs>> getFrontendIPConfigurations() {
-        return this.frontendIPConfigurations == null ? Output.empty() : this.frontendIPConfigurations;
+        return this.frontendIPConfigurations == null ? Codegen.empty() : this.frontendIPConfigurations;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
       private final @Nullable Output<String> sku;
 
     public Output<String> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
       private final @Nullable Output<String> zones;
 
     public Output<String> getZones() {
-        return this.zones == null ? Output.empty() : this.zones;
+        return this.zones == null ? Codegen.empty() : this.zones;
     }
 
     public LoadBalancerResourceSettingsArgs(
@@ -105,12 +106,12 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
     }
 
     private LoadBalancerResourceSettingsArgs() {
-        this.backendAddressPools = Output.empty();
-        this.frontendIPConfigurations = Output.empty();
-        this.resourceType = Output.empty();
-        this.sku = Output.empty();
-        this.targetResourceName = Output.empty();
-        this.zones = Output.empty();
+        this.backendAddressPools = Codegen.empty();
+        this.frontendIPConfigurations = Codegen.empty();
+        this.resourceType = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.targetResourceName = Codegen.empty();
+        this.zones = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder backendAddressPools(@Nullable List<LBBackendAddressPoolResourceSettingsArgs> backendAddressPools) {
-            this.backendAddressPools = Output.ofNullable(backendAddressPools);
+            this.backendAddressPools = Codegen.ofNullable(backendAddressPools);
             return this;
         }
         public Builder backendAddressPools(LBBackendAddressPoolResourceSettingsArgs... backendAddressPools) {
@@ -159,7 +160,7 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder frontendIPConfigurations(@Nullable List<LBFrontendIPConfigurationResourceSettingsArgs> frontendIPConfigurations) {
-            this.frontendIPConfigurations = Output.ofNullable(frontendIPConfigurations);
+            this.frontendIPConfigurations = Codegen.ofNullable(frontendIPConfigurations);
             return this;
         }
         public Builder frontendIPConfigurations(LBFrontendIPConfigurationResourceSettingsArgs... frontendIPConfigurations) {
@@ -178,7 +179,7 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder sku(@Nullable String sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder targetResourceName(Output<String> targetResourceName) {
@@ -194,7 +195,7 @@ public final class LoadBalancerResourceSettingsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder zones(@Nullable String zones) {
-            this.zones = Output.ofNullable(zones);
+            this.zones = Codegen.ofNullable(zones);
             return this;
         }        public LoadBalancerResourceSettingsArgs build() {
             return new LoadBalancerResourceSettingsArgs(backendAddressPools, frontendIPConfigurations, resourceType, sku, targetResourceName, zones);

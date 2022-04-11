@@ -5,6 +5,7 @@ package io.pulumi.azurenative.scheduler.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
-        return this.contentType == null ? Output.empty() : this.contentType;
+        return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
       private final @Nullable Output<String> correlationId;
 
     public Output<String> getCorrelationId() {
-        return this.correlationId == null ? Output.empty() : this.correlationId;
+        return this.correlationId == null ? Codegen.empty() : this.correlationId;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
       private final @Nullable Output<Boolean> forcePersistence;
 
     public Output<Boolean> getForcePersistence() {
-        return this.forcePersistence == null ? Output.empty() : this.forcePersistence;
+        return this.forcePersistence == null ? Codegen.empty() : this.forcePersistence;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
       private final @Nullable Output<String> label;
 
     public Output<String> getLabel() {
-        return this.label == null ? Output.empty() : this.label;
+        return this.label == null ? Codegen.empty() : this.label;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
       private final @Nullable Output<String> messageId;
 
     public Output<String> getMessageId() {
-        return this.messageId == null ? Output.empty() : this.messageId;
+        return this.messageId == null ? Codegen.empty() : this.messageId;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
       private final @Nullable Output<String> partitionKey;
 
     public Output<String> getPartitionKey() {
-        return this.partitionKey == null ? Output.empty() : this.partitionKey;
+        return this.partitionKey == null ? Codegen.empty() : this.partitionKey;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
       private final @Nullable Output<String> replyTo;
 
     public Output<String> getReplyTo() {
-        return this.replyTo == null ? Output.empty() : this.replyTo;
+        return this.replyTo == null ? Codegen.empty() : this.replyTo;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
       private final @Nullable Output<String> replyToSessionId;
 
     public Output<String> getReplyToSessionId() {
-        return this.replyToSessionId == null ? Output.empty() : this.replyToSessionId;
+        return this.replyToSessionId == null ? Codegen.empty() : this.replyToSessionId;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
       private final @Nullable Output<String> scheduledEnqueueTimeUtc;
 
     public Output<String> getScheduledEnqueueTimeUtc() {
-        return this.scheduledEnqueueTimeUtc == null ? Output.empty() : this.scheduledEnqueueTimeUtc;
+        return this.scheduledEnqueueTimeUtc == null ? Codegen.empty() : this.scheduledEnqueueTimeUtc;
     }
 
     /**
@@ -122,7 +123,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
       private final @Nullable Output<String> sessionId;
 
     public Output<String> getSessionId() {
-        return this.sessionId == null ? Output.empty() : this.sessionId;
+        return this.sessionId == null ? Codegen.empty() : this.sessionId;
     }
 
     /**
@@ -133,7 +134,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
       private final @Nullable Output<String> timeToLive;
 
     public Output<String> getTimeToLive() {
-        return this.timeToLive == null ? Output.empty() : this.timeToLive;
+        return this.timeToLive == null ? Codegen.empty() : this.timeToLive;
     }
 
     /**
@@ -144,7 +145,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
       private final @Nullable Output<String> to;
 
     public Output<String> getTo() {
-        return this.to == null ? Output.empty() : this.to;
+        return this.to == null ? Codegen.empty() : this.to;
     }
 
     /**
@@ -155,7 +156,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
       private final @Nullable Output<String> viaPartitionKey;
 
     public Output<String> getViaPartitionKey() {
-        return this.viaPartitionKey == null ? Output.empty() : this.viaPartitionKey;
+        return this.viaPartitionKey == null ? Codegen.empty() : this.viaPartitionKey;
     }
 
     public ServiceBusBrokeredMessagePropertiesArgs(
@@ -188,19 +189,19 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
     }
 
     private ServiceBusBrokeredMessagePropertiesArgs() {
-        this.contentType = Output.empty();
-        this.correlationId = Output.empty();
-        this.forcePersistence = Output.empty();
-        this.label = Output.empty();
-        this.messageId = Output.empty();
-        this.partitionKey = Output.empty();
-        this.replyTo = Output.empty();
-        this.replyToSessionId = Output.empty();
-        this.scheduledEnqueueTimeUtc = Output.empty();
-        this.sessionId = Output.empty();
-        this.timeToLive = Output.empty();
-        this.to = Output.empty();
-        this.viaPartitionKey = Output.empty();
+        this.contentType = Codegen.empty();
+        this.correlationId = Codegen.empty();
+        this.forcePersistence = Codegen.empty();
+        this.label = Codegen.empty();
+        this.messageId = Codegen.empty();
+        this.partitionKey = Codegen.empty();
+        this.replyTo = Codegen.empty();
+        this.replyToSessionId = Codegen.empty();
+        this.scheduledEnqueueTimeUtc = Codegen.empty();
+        this.sessionId = Codegen.empty();
+        this.timeToLive = Codegen.empty();
+        this.to = Codegen.empty();
+        this.viaPartitionKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -252,7 +253,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
             return this;
         }
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Output.ofNullable(contentType);
+            this.contentType = Codegen.ofNullable(contentType);
             return this;
         }
         public Builder correlationId(@Nullable Output<String> correlationId) {
@@ -260,7 +261,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
             return this;
         }
         public Builder correlationId(@Nullable String correlationId) {
-            this.correlationId = Output.ofNullable(correlationId);
+            this.correlationId = Codegen.ofNullable(correlationId);
             return this;
         }
         public Builder forcePersistence(@Nullable Output<Boolean> forcePersistence) {
@@ -268,7 +269,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
             return this;
         }
         public Builder forcePersistence(@Nullable Boolean forcePersistence) {
-            this.forcePersistence = Output.ofNullable(forcePersistence);
+            this.forcePersistence = Codegen.ofNullable(forcePersistence);
             return this;
         }
         public Builder label(@Nullable Output<String> label) {
@@ -276,7 +277,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
             return this;
         }
         public Builder label(@Nullable String label) {
-            this.label = Output.ofNullable(label);
+            this.label = Codegen.ofNullable(label);
             return this;
         }
         public Builder messageId(@Nullable Output<String> messageId) {
@@ -284,7 +285,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
             return this;
         }
         public Builder messageId(@Nullable String messageId) {
-            this.messageId = Output.ofNullable(messageId);
+            this.messageId = Codegen.ofNullable(messageId);
             return this;
         }
         public Builder partitionKey(@Nullable Output<String> partitionKey) {
@@ -292,7 +293,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
             return this;
         }
         public Builder partitionKey(@Nullable String partitionKey) {
-            this.partitionKey = Output.ofNullable(partitionKey);
+            this.partitionKey = Codegen.ofNullable(partitionKey);
             return this;
         }
         public Builder replyTo(@Nullable Output<String> replyTo) {
@@ -300,7 +301,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
             return this;
         }
         public Builder replyTo(@Nullable String replyTo) {
-            this.replyTo = Output.ofNullable(replyTo);
+            this.replyTo = Codegen.ofNullable(replyTo);
             return this;
         }
         public Builder replyToSessionId(@Nullable Output<String> replyToSessionId) {
@@ -308,7 +309,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
             return this;
         }
         public Builder replyToSessionId(@Nullable String replyToSessionId) {
-            this.replyToSessionId = Output.ofNullable(replyToSessionId);
+            this.replyToSessionId = Codegen.ofNullable(replyToSessionId);
             return this;
         }
         public Builder scheduledEnqueueTimeUtc(@Nullable Output<String> scheduledEnqueueTimeUtc) {
@@ -316,7 +317,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
             return this;
         }
         public Builder scheduledEnqueueTimeUtc(@Nullable String scheduledEnqueueTimeUtc) {
-            this.scheduledEnqueueTimeUtc = Output.ofNullable(scheduledEnqueueTimeUtc);
+            this.scheduledEnqueueTimeUtc = Codegen.ofNullable(scheduledEnqueueTimeUtc);
             return this;
         }
         public Builder sessionId(@Nullable Output<String> sessionId) {
@@ -324,7 +325,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
             return this;
         }
         public Builder sessionId(@Nullable String sessionId) {
-            this.sessionId = Output.ofNullable(sessionId);
+            this.sessionId = Codegen.ofNullable(sessionId);
             return this;
         }
         public Builder timeToLive(@Nullable Output<String> timeToLive) {
@@ -332,7 +333,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
             return this;
         }
         public Builder timeToLive(@Nullable String timeToLive) {
-            this.timeToLive = Output.ofNullable(timeToLive);
+            this.timeToLive = Codegen.ofNullable(timeToLive);
             return this;
         }
         public Builder to(@Nullable Output<String> to) {
@@ -340,7 +341,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
             return this;
         }
         public Builder to(@Nullable String to) {
-            this.to = Output.ofNullable(to);
+            this.to = Codegen.ofNullable(to);
             return this;
         }
         public Builder viaPartitionKey(@Nullable Output<String> viaPartitionKey) {
@@ -348,7 +349,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
             return this;
         }
         public Builder viaPartitionKey(@Nullable String viaPartitionKey) {
-            this.viaPartitionKey = Output.ofNullable(viaPartitionKey);
+            this.viaPartitionKey = Codegen.ofNullable(viaPartitionKey);
             return this;
         }        public ServiceBusBrokeredMessagePropertiesArgs build() {
             return new ServiceBusBrokeredMessagePropertiesArgs(contentType, correlationId, forcePersistence, label, messageId, partitionKey, replyTo, replyToSessionId, scheduledEnqueueTimeUtc, sessionId, timeToLive, to, viaPartitionKey);

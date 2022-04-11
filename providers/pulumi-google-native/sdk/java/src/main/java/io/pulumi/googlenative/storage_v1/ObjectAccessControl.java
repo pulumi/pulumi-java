@@ -6,6 +6,7 @@ package io.pulumi.googlenative.storage_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.storage_v1.ObjectAccessControlArgs;
 import io.pulumi.googlenative.storage_v1.outputs.ObjectAccessControlProjectTeamResponse;
@@ -232,7 +233,7 @@ public class ObjectAccessControl extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ObjectAccessControl(String name, ObjectAccessControlArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:storage/v1:ObjectAccessControl", name, args == null ? ObjectAccessControlArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:storage/v1:ObjectAccessControl", name, args == null ? ObjectAccessControlArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ObjectAccessControl(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

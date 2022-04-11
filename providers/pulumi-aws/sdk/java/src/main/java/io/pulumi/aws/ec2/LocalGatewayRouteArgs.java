@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -56,9 +57,9 @@ public final class LocalGatewayRouteArgs extends io.pulumi.resources.ResourceArg
     }
 
     private LocalGatewayRouteArgs() {
-        this.destinationCidrBlock = Output.empty();
-        this.localGatewayRouteTableId = Output.empty();
-        this.localGatewayVirtualInterfaceGroupId = Output.empty();
+        this.destinationCidrBlock = Codegen.empty();
+        this.localGatewayRouteTableId = Codegen.empty();
+        this.localGatewayVirtualInterfaceGroupId = Codegen.empty();
     }
 
     public static Builder builder() {

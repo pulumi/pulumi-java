@@ -6,6 +6,7 @@ package io.pulumi.aws.ec2.inputs;
 import io.pulumi.aws.ec2.inputs.FleetSpotOptionsMaintenanceStrategiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class FleetSpotOptionsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> allocationStrategy;
 
     public Output<String> getAllocationStrategy() {
-        return this.allocationStrategy == null ? Output.empty() : this.allocationStrategy;
+        return this.allocationStrategy == null ? Codegen.empty() : this.allocationStrategy;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class FleetSpotOptionsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> instanceInterruptionBehavior;
 
     public Output<String> getInstanceInterruptionBehavior() {
-        return this.instanceInterruptionBehavior == null ? Output.empty() : this.instanceInterruptionBehavior;
+        return this.instanceInterruptionBehavior == null ? Codegen.empty() : this.instanceInterruptionBehavior;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class FleetSpotOptionsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Integer> instancePoolsToUseCount;
 
     public Output<Integer> getInstancePoolsToUseCount() {
-        return this.instancePoolsToUseCount == null ? Output.empty() : this.instancePoolsToUseCount;
+        return this.instancePoolsToUseCount == null ? Codegen.empty() : this.instancePoolsToUseCount;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class FleetSpotOptionsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<FleetSpotOptionsMaintenanceStrategiesArgs> maintenanceStrategies;
 
     public Output<FleetSpotOptionsMaintenanceStrategiesArgs> getMaintenanceStrategies() {
-        return this.maintenanceStrategies == null ? Output.empty() : this.maintenanceStrategies;
+        return this.maintenanceStrategies == null ? Codegen.empty() : this.maintenanceStrategies;
     }
 
     public FleetSpotOptionsArgs(
@@ -72,10 +73,10 @@ public final class FleetSpotOptionsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private FleetSpotOptionsArgs() {
-        this.allocationStrategy = Output.empty();
-        this.instanceInterruptionBehavior = Output.empty();
-        this.instancePoolsToUseCount = Output.empty();
-        this.maintenanceStrategies = Output.empty();
+        this.allocationStrategy = Codegen.empty();
+        this.instanceInterruptionBehavior = Codegen.empty();
+        this.instancePoolsToUseCount = Codegen.empty();
+        this.maintenanceStrategies = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class FleetSpotOptionsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder allocationStrategy(@Nullable String allocationStrategy) {
-            this.allocationStrategy = Output.ofNullable(allocationStrategy);
+            this.allocationStrategy = Codegen.ofNullable(allocationStrategy);
             return this;
         }
         public Builder instanceInterruptionBehavior(@Nullable Output<String> instanceInterruptionBehavior) {
@@ -117,7 +118,7 @@ public final class FleetSpotOptionsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder instanceInterruptionBehavior(@Nullable String instanceInterruptionBehavior) {
-            this.instanceInterruptionBehavior = Output.ofNullable(instanceInterruptionBehavior);
+            this.instanceInterruptionBehavior = Codegen.ofNullable(instanceInterruptionBehavior);
             return this;
         }
         public Builder instancePoolsToUseCount(@Nullable Output<Integer> instancePoolsToUseCount) {
@@ -125,7 +126,7 @@ public final class FleetSpotOptionsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder instancePoolsToUseCount(@Nullable Integer instancePoolsToUseCount) {
-            this.instancePoolsToUseCount = Output.ofNullable(instancePoolsToUseCount);
+            this.instancePoolsToUseCount = Codegen.ofNullable(instancePoolsToUseCount);
             return this;
         }
         public Builder maintenanceStrategies(@Nullable Output<FleetSpotOptionsMaintenanceStrategiesArgs> maintenanceStrategies) {
@@ -133,7 +134,7 @@ public final class FleetSpotOptionsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder maintenanceStrategies(@Nullable FleetSpotOptionsMaintenanceStrategiesArgs maintenanceStrategies) {
-            this.maintenanceStrategies = Output.ofNullable(maintenanceStrategies);
+            this.maintenanceStrategies = Codegen.ofNullable(maintenanceStrategies);
             return this;
         }        public FleetSpotOptionsArgs build() {
             return new FleetSpotOptionsArgs(allocationStrategy, instanceInterruptionBehavior, instancePoolsToUseCount, maintenanceStrategies);

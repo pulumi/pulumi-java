@@ -5,6 +5,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class AutoscaleCapacityArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> maxInstanceCount;
 
     public Output<Integer> getMaxInstanceCount() {
-        return this.maxInstanceCount == null ? Output.empty() : this.maxInstanceCount;
+        return this.maxInstanceCount == null ? Codegen.empty() : this.maxInstanceCount;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class AutoscaleCapacityArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> minInstanceCount;
 
     public Output<Integer> getMinInstanceCount() {
-        return this.minInstanceCount == null ? Output.empty() : this.minInstanceCount;
+        return this.minInstanceCount == null ? Codegen.empty() : this.minInstanceCount;
     }
 
     public AutoscaleCapacityArgs(
@@ -48,8 +49,8 @@ public final class AutoscaleCapacityArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AutoscaleCapacityArgs() {
-        this.maxInstanceCount = Output.empty();
-        this.minInstanceCount = Output.empty();
+        this.maxInstanceCount = Codegen.empty();
+        this.minInstanceCount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class AutoscaleCapacityArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder maxInstanceCount(@Nullable Integer maxInstanceCount) {
-            this.maxInstanceCount = Output.ofNullable(maxInstanceCount);
+            this.maxInstanceCount = Codegen.ofNullable(maxInstanceCount);
             return this;
         }
         public Builder minInstanceCount(@Nullable Output<Integer> minInstanceCount) {
@@ -87,7 +88,7 @@ public final class AutoscaleCapacityArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder minInstanceCount(@Nullable Integer minInstanceCount) {
-            this.minInstanceCount = Output.ofNullable(minInstanceCount);
+            this.minInstanceCount = Codegen.ofNullable(minInstanceCount);
             return this;
         }        public AutoscaleCapacityArgs build() {
             return new AutoscaleCapacityArgs(maxInstanceCount, minInstanceCount);

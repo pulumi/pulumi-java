@@ -13,6 +13,7 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
 
 import static io.pulumi.deployment.internal.DeploymentTests.cleanupDeploymentMocks;
 import static java.util.Objects.requireNonNull;
@@ -37,7 +38,9 @@ public class DeploymentExceptionTest {
 
     @Test
     void testUrnFutureDoesNotHangOnException() {
-        assertThatThrownBy(() -> mock.testAsync(MyIncorrectStack.class).join())
+        mock.standardLogger.setLevel(Level.OFF);
+
+        assertThatThrownBy(() -> mock.testAsync(MyIncorrectStack::new).join())
                 .getRootCause()
                 .isInstanceOf(RunException.class)
                 .hasMessageContaining(DeliberateException.class.getName());

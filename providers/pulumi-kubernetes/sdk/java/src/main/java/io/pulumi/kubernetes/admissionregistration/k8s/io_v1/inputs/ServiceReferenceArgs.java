@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.admissionregistration.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -49,7 +50,7 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     public ServiceReferenceArgs(
@@ -75,10 +76,10 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ServiceReferenceArgs() {
-        this.name = Output.empty();
-        this.namespace = Output.empty();
-        this.path = Output.empty();
-        this.port = Output.empty();
+        this.name = Codegen.empty();
+        this.namespace = Codegen.empty();
+        this.path = Codegen.empty();
+        this.port = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -136,7 +137,7 @@ public final class ServiceReferenceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }        public ServiceReferenceArgs build() {
             return new ServiceReferenceArgs(name, namespace, path, port);

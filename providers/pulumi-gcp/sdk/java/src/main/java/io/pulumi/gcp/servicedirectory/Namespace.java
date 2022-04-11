@@ -6,6 +6,7 @@ package io.pulumi.gcp.servicedirectory;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.servicedirectory.NamespaceArgs;
 import io.pulumi.gcp.servicedirectory.inputs.NamespaceState;
@@ -149,7 +150,7 @@ public class Namespace extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Namespace(String name, NamespaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:servicedirectory/namespace:Namespace", name, args == null ? NamespaceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:servicedirectory/namespace:Namespace", name, args == null ? NamespaceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Namespace(String name, Output<String> id, @Nullable NamespaceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -9,6 +9,7 @@ import io.pulumi.aws.storagegateway.inputs.WorkingStorageState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -81,7 +82,7 @@ public class WorkingStorage extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WorkingStorage(String name, WorkingStorageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:storagegateway/workingStorage:WorkingStorage", name, args == null ? WorkingStorageArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:storagegateway/workingStorage:WorkingStorage", name, args == null ? WorkingStorageArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WorkingStorage(String name, Output<String> id, @Nullable WorkingStorageState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

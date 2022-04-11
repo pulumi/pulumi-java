@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudiot_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class StateNotificationConfigArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> pubsubTopicName;
 
     public Output<String> getPubsubTopicName() {
-        return this.pubsubTopicName == null ? Output.empty() : this.pubsubTopicName;
+        return this.pubsubTopicName == null ? Codegen.empty() : this.pubsubTopicName;
     }
 
     public StateNotificationConfigArgs(@Nullable Output<String> pubsubTopicName) {
@@ -34,7 +35,7 @@ public final class StateNotificationConfigArgs extends io.pulumi.resources.Resou
     }
 
     private StateNotificationConfigArgs() {
-        this.pubsubTopicName = Output.empty();
+        this.pubsubTopicName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class StateNotificationConfigArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder pubsubTopicName(@Nullable String pubsubTopicName) {
-            this.pubsubTopicName = Output.ofNullable(pubsubTopicName);
+            this.pubsubTopicName = Codegen.ofNullable(pubsubTopicName);
             return this;
         }        public StateNotificationConfigArgs build() {
             return new StateNotificationConfigArgs(pubsubTopicName);

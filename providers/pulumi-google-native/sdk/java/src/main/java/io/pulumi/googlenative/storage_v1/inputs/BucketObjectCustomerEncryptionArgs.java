@@ -5,6 +5,7 @@ package io.pulumi.googlenative.storage_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class BucketObjectCustomerEncryptionArgs extends io.pulumi.resource
       private final @Nullable Output<String> encryptionAlgorithm;
 
     public Output<String> getEncryptionAlgorithm() {
-        return this.encryptionAlgorithm == null ? Output.empty() : this.encryptionAlgorithm;
+        return this.encryptionAlgorithm == null ? Codegen.empty() : this.encryptionAlgorithm;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class BucketObjectCustomerEncryptionArgs extends io.pulumi.resource
       private final @Nullable Output<String> keySha256;
 
     public Output<String> getKeySha256() {
-        return this.keySha256 == null ? Output.empty() : this.keySha256;
+        return this.keySha256 == null ? Codegen.empty() : this.keySha256;
     }
 
     public BucketObjectCustomerEncryptionArgs(
@@ -48,8 +49,8 @@ public final class BucketObjectCustomerEncryptionArgs extends io.pulumi.resource
     }
 
     private BucketObjectCustomerEncryptionArgs() {
-        this.encryptionAlgorithm = Output.empty();
-        this.keySha256 = Output.empty();
+        this.encryptionAlgorithm = Codegen.empty();
+        this.keySha256 = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class BucketObjectCustomerEncryptionArgs extends io.pulumi.resource
             return this;
         }
         public Builder encryptionAlgorithm(@Nullable String encryptionAlgorithm) {
-            this.encryptionAlgorithm = Output.ofNullable(encryptionAlgorithm);
+            this.encryptionAlgorithm = Codegen.ofNullable(encryptionAlgorithm);
             return this;
         }
         public Builder keySha256(@Nullable Output<String> keySha256) {
@@ -87,7 +88,7 @@ public final class BucketObjectCustomerEncryptionArgs extends io.pulumi.resource
             return this;
         }
         public Builder keySha256(@Nullable String keySha256) {
-            this.keySha256 = Output.ofNullable(keySha256);
+            this.keySha256 = Codegen.ofNullable(keySha256);
             return this;
         }        public BucketObjectCustomerEncryptionArgs build() {
             return new BucketObjectCustomerEncryptionArgs(encryptionAlgorithm, keySha256);

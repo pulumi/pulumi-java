@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> creationTimestamp;
 
     public Output<String> getCreationTimestamp() {
-        return this.creationTimestamp == null ? Output.empty() : this.creationTimestamp;
+        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> customFeatures;
 
     public Output<List<String>> getCustomFeatures() {
-        return this.customFeatures == null ? Output.empty() : this.customFeatures;
+        return this.customFeatures == null ? Codegen.empty() : this.customFeatures;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> enabledFeatures;
 
     public Output<List<String>> getEnabledFeatures() {
-        return this.enabledFeatures == null ? Output.empty() : this.enabledFeatures;
+        return this.enabledFeatures == null ? Codegen.empty() : this.enabledFeatures;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> fingerprint;
 
     public Output<String> getFingerprint() {
-        return this.fingerprint == null ? Output.empty() : this.fingerprint;
+        return this.fingerprint == null ? Codegen.empty() : this.fingerprint;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> minTlsVersion;
 
     public Output<String> getMinTlsVersion() {
-        return this.minTlsVersion == null ? Output.empty() : this.minTlsVersion;
+        return this.minTlsVersion == null ? Codegen.empty() : this.minTlsVersion;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> profile;
 
     public Output<String> getProfile() {
-        return this.profile == null ? Output.empty() : this.profile;
+        return this.profile == null ? Codegen.empty() : this.profile;
     }
 
     /**
@@ -137,7 +138,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -148,7 +149,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
-        return this.selfLink == null ? Output.empty() : this.selfLink;
+        return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
     public SSLPolicyState(
@@ -175,16 +176,16 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private SSLPolicyState() {
-        this.creationTimestamp = Output.empty();
-        this.customFeatures = Output.empty();
-        this.description = Output.empty();
-        this.enabledFeatures = Output.empty();
-        this.fingerprint = Output.empty();
-        this.minTlsVersion = Output.empty();
-        this.name = Output.empty();
-        this.profile = Output.empty();
-        this.project = Output.empty();
-        this.selfLink = Output.empty();
+        this.creationTimestamp = Codegen.empty();
+        this.customFeatures = Codegen.empty();
+        this.description = Codegen.empty();
+        this.enabledFeatures = Codegen.empty();
+        this.fingerprint = Codegen.empty();
+        this.minTlsVersion = Codegen.empty();
+        this.name = Codegen.empty();
+        this.profile = Codegen.empty();
+        this.project = Codegen.empty();
+        this.selfLink = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -230,7 +231,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Output.ofNullable(creationTimestamp);
+            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
             return this;
         }
         public Builder customFeatures(@Nullable Output<List<String>> customFeatures) {
@@ -238,7 +239,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customFeatures(@Nullable List<String> customFeatures) {
-            this.customFeatures = Output.ofNullable(customFeatures);
+            this.customFeatures = Codegen.ofNullable(customFeatures);
             return this;
         }
         public Builder customFeatures(String... customFeatures) {
@@ -249,7 +250,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder enabledFeatures(@Nullable Output<List<String>> enabledFeatures) {
@@ -257,7 +258,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabledFeatures(@Nullable List<String> enabledFeatures) {
-            this.enabledFeatures = Output.ofNullable(enabledFeatures);
+            this.enabledFeatures = Codegen.ofNullable(enabledFeatures);
             return this;
         }
         public Builder enabledFeatures(String... enabledFeatures) {
@@ -268,7 +269,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fingerprint(@Nullable String fingerprint) {
-            this.fingerprint = Output.ofNullable(fingerprint);
+            this.fingerprint = Codegen.ofNullable(fingerprint);
             return this;
         }
         public Builder minTlsVersion(@Nullable Output<String> minTlsVersion) {
@@ -276,7 +277,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minTlsVersion(@Nullable String minTlsVersion) {
-            this.minTlsVersion = Output.ofNullable(minTlsVersion);
+            this.minTlsVersion = Codegen.ofNullable(minTlsVersion);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -284,7 +285,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder profile(@Nullable Output<String> profile) {
@@ -292,7 +293,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder profile(@Nullable String profile) {
-            this.profile = Output.ofNullable(profile);
+            this.profile = Codegen.ofNullable(profile);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -300,7 +301,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder selfLink(@Nullable Output<String> selfLink) {
@@ -308,7 +309,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Output.ofNullable(selfLink);
+            this.selfLink = Codegen.ofNullable(selfLink);
             return this;
         }        public SSLPolicyState build() {
             return new SSLPolicyState(creationTimestamp, customFeatures, description, enabledFeatures, fingerprint, minTlsVersion, name, profile, project, selfLink);

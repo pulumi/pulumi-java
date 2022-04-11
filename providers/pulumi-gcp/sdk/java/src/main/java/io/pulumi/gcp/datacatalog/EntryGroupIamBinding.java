@@ -6,6 +6,7 @@ package io.pulumi.gcp.datacatalog;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.datacatalog.EntryGroupIamBindingArgs;
 import io.pulumi.gcp.datacatalog.inputs.EntryGroupIamBindingState;
@@ -161,7 +162,7 @@ public class EntryGroupIamBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EntryGroupIamBinding(String name, EntryGroupIamBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:datacatalog/entryGroupIamBinding:EntryGroupIamBinding", name, args == null ? EntryGroupIamBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:datacatalog/entryGroupIamBinding:EntryGroupIamBinding", name, args == null ? EntryGroupIamBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EntryGroupIamBinding(String name, Output<String> id, @Nullable EntryGroupIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

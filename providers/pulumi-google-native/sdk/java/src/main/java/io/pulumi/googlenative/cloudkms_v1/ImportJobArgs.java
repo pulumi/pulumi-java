@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudkms_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudkms_v1.enums.ImportJobImportMethod;
 import io.pulumi.googlenative.cloudkms_v1.enums.ImportJobProtectionLevel;
 import java.lang.String;
@@ -45,14 +46,14 @@ public final class ImportJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -82,12 +83,12 @@ public final class ImportJobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ImportJobArgs() {
-        this.importJobId = Output.empty();
-        this.importMethod = Output.empty();
-        this.keyRingId = Output.empty();
-        this.location = Output.empty();
-        this.project = Output.empty();
-        this.protectionLevel = Output.empty();
+        this.importJobId = Codegen.empty();
+        this.importMethod = Codegen.empty();
+        this.keyRingId = Codegen.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
+        this.protectionLevel = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -149,7 +150,7 @@ public final class ImportJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -157,7 +158,7 @@ public final class ImportJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder protectionLevel(Output<ImportJobProtectionLevel> protectionLevel) {

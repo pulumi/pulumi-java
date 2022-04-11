@@ -5,6 +5,7 @@ package io.pulumi.azurenative.devices;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> certificate;
 
     public Output<String> getCertificate() {
-        return this.certificate == null ? Output.empty() : this.certificate;
+        return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> certificateName;
 
     public Output<String> getCertificateName() {
-        return this.certificateName == null ? Output.empty() : this.certificateName;
+        return this.certificateName == null ? Codegen.empty() : this.certificateName;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> isVerified;
 
     public Output<Boolean> getIsVerified() {
-        return this.isVerified == null ? Output.empty() : this.isVerified;
+        return this.isVerified == null ? Codegen.empty() : this.isVerified;
     }
 
     /**
@@ -84,11 +85,11 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DpsCertificateArgs() {
-        this.certificate = Output.empty();
-        this.certificateName = Output.empty();
-        this.isVerified = Output.empty();
-        this.provisioningServiceName = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.certificate = Codegen.empty();
+        this.certificateName = Codegen.empty();
+        this.isVerified = Codegen.empty();
+        this.provisioningServiceName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certificate(@Nullable String certificate) {
-            this.certificate = Output.ofNullable(certificate);
+            this.certificate = Codegen.ofNullable(certificate);
             return this;
         }
         public Builder certificateName(@Nullable Output<String> certificateName) {
@@ -132,7 +133,7 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certificateName(@Nullable String certificateName) {
-            this.certificateName = Output.ofNullable(certificateName);
+            this.certificateName = Codegen.ofNullable(certificateName);
             return this;
         }
         public Builder isVerified(@Nullable Output<Boolean> isVerified) {
@@ -140,7 +141,7 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isVerified(@Nullable Boolean isVerified) {
-            this.isVerified = Output.ofNullable(isVerified);
+            this.isVerified = Codegen.ofNullable(isVerified);
             return this;
         }
         public Builder provisioningServiceName(Output<String> provisioningServiceName) {

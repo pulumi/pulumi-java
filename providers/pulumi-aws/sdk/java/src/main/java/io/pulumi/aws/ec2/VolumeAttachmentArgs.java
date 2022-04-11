@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Boolean> forceDetach;
 
     public Output<Boolean> getForceDetach() {
-        return this.forceDetach == null ? Output.empty() : this.forceDetach;
+        return this.forceDetach == null ? Codegen.empty() : this.forceDetach;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Boolean> skipDestroy;
 
     public Output<Boolean> getSkipDestroy() {
-        return this.skipDestroy == null ? Output.empty() : this.skipDestroy;
+        return this.skipDestroy == null ? Codegen.empty() : this.skipDestroy;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Boolean> stopInstanceBeforeDetaching;
 
     public Output<Boolean> getStopInstanceBeforeDetaching() {
-        return this.stopInstanceBeforeDetaching == null ? Output.empty() : this.stopInstanceBeforeDetaching;
+        return this.stopInstanceBeforeDetaching == null ? Codegen.empty() : this.stopInstanceBeforeDetaching;
     }
 
     /**
@@ -106,12 +107,12 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private VolumeAttachmentArgs() {
-        this.deviceName = Output.empty();
-        this.forceDetach = Output.empty();
-        this.instanceId = Output.empty();
-        this.skipDestroy = Output.empty();
-        this.stopInstanceBeforeDetaching = Output.empty();
-        this.volumeId = Output.empty();
+        this.deviceName = Codegen.empty();
+        this.forceDetach = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.skipDestroy = Codegen.empty();
+        this.stopInstanceBeforeDetaching = Codegen.empty();
+        this.volumeId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder forceDetach(@Nullable Boolean forceDetach) {
-            this.forceDetach = Output.ofNullable(forceDetach);
+            this.forceDetach = Codegen.ofNullable(forceDetach);
             return this;
         }
         public Builder instanceId(Output<String> instanceId) {
@@ -173,7 +174,7 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder skipDestroy(@Nullable Boolean skipDestroy) {
-            this.skipDestroy = Output.ofNullable(skipDestroy);
+            this.skipDestroy = Codegen.ofNullable(skipDestroy);
             return this;
         }
         public Builder stopInstanceBeforeDetaching(@Nullable Output<Boolean> stopInstanceBeforeDetaching) {
@@ -181,7 +182,7 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder stopInstanceBeforeDetaching(@Nullable Boolean stopInstanceBeforeDetaching) {
-            this.stopInstanceBeforeDetaching = Output.ofNullable(stopInstanceBeforeDetaching);
+            this.stopInstanceBeforeDetaching = Codegen.ofNullable(stopInstanceBeforeDetaching);
             return this;
         }
         public Builder volumeId(Output<String> volumeId) {

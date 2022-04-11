@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> allowCors;
 
     public Output<Boolean> getAllowCors() {
-        return this.allowCors == null ? Output.empty() : this.allowCors;
+        return this.allowCors == null ? Codegen.empty() : this.allowCors;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> target;
 
     public Output<String> getTarget() {
-        return this.target == null ? Output.empty() : this.target;
+        return this.target == null ? Codegen.empty() : this.target;
     }
 
     public EndpointArgs(
@@ -62,9 +63,9 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndpointArgs() {
-        this.allowCors = Output.empty();
-        this.name = Output.empty();
-        this.target = Output.empty();
+        this.allowCors = Codegen.empty();
+        this.name = Codegen.empty();
+        this.target = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowCors(@Nullable Boolean allowCors) {
-            this.allowCors = Output.ofNullable(allowCors);
+            this.allowCors = Codegen.ofNullable(allowCors);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -104,7 +105,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder target(@Nullable Output<String> target) {
@@ -112,7 +113,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder target(@Nullable String target) {
-            this.target = Output.ofNullable(target);
+            this.target = Codegen.ofNullable(target);
             return this;
         }        public EndpointArgs build() {
             return new EndpointArgs(allowCors, name, target);

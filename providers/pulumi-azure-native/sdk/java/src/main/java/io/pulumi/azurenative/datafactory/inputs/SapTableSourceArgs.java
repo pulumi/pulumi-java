@@ -6,6 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.SapTablePartitionSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> additionalColumns;
 
     public Output<Object> getAdditionalColumns() {
-        return this.additionalColumns == null ? Output.empty() : this.additionalColumns;
+        return this.additionalColumns == null ? Codegen.empty() : this.additionalColumns;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> batchSize;
 
     public Output<Object> getBatchSize() {
-        return this.batchSize == null ? Output.empty() : this.batchSize;
+        return this.batchSize == null ? Codegen.empty() : this.batchSize;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> customRfcReadTableFunctionModule;
 
     public Output<Object> getCustomRfcReadTableFunctionModule() {
-        return this.customRfcReadTableFunctionModule == null ? Output.empty() : this.customRfcReadTableFunctionModule;
+        return this.customRfcReadTableFunctionModule == null ? Codegen.empty() : this.customRfcReadTableFunctionModule;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> disableMetricsCollection;
 
     public Output<Object> getDisableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Output.empty() : this.disableMetricsCollection;
+        return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> maxConcurrentConnections;
 
     public Output<Object> getMaxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Output.empty() : this.maxConcurrentConnections;
+        return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> partitionOption;
 
     public Output<Object> getPartitionOption() {
-        return this.partitionOption == null ? Output.empty() : this.partitionOption;
+        return this.partitionOption == null ? Codegen.empty() : this.partitionOption;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SapTablePartitionSettingsArgs> partitionSettings;
 
     public Output<SapTablePartitionSettingsArgs> getPartitionSettings() {
-        return this.partitionSettings == null ? Output.empty() : this.partitionSettings;
+        return this.partitionSettings == null ? Codegen.empty() : this.partitionSettings;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> queryTimeout;
 
     public Output<Object> getQueryTimeout() {
-        return this.queryTimeout == null ? Output.empty() : this.queryTimeout;
+        return this.queryTimeout == null ? Codegen.empty() : this.queryTimeout;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> rfcTableFields;
 
     public Output<Object> getRfcTableFields() {
-        return this.rfcTableFields == null ? Output.empty() : this.rfcTableFields;
+        return this.rfcTableFields == null ? Codegen.empty() : this.rfcTableFields;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> rfcTableOptions;
 
     public Output<Object> getRfcTableOptions() {
-        return this.rfcTableOptions == null ? Output.empty() : this.rfcTableOptions;
+        return this.rfcTableOptions == null ? Codegen.empty() : this.rfcTableOptions;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> rowCount;
 
     public Output<Object> getRowCount() {
-        return this.rowCount == null ? Output.empty() : this.rowCount;
+        return this.rowCount == null ? Codegen.empty() : this.rowCount;
     }
 
     /**
@@ -149,7 +150,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> rowSkips;
 
     public Output<Object> getRowSkips() {
-        return this.rowSkips == null ? Output.empty() : this.rowSkips;
+        return this.rowSkips == null ? Codegen.empty() : this.rowSkips;
     }
 
     /**
@@ -160,7 +161,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> sapDataColumnDelimiter;
 
     public Output<Object> getSapDataColumnDelimiter() {
-        return this.sapDataColumnDelimiter == null ? Output.empty() : this.sapDataColumnDelimiter;
+        return this.sapDataColumnDelimiter == null ? Codegen.empty() : this.sapDataColumnDelimiter;
     }
 
     /**
@@ -171,7 +172,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> sourceRetryCount;
 
     public Output<Object> getSourceRetryCount() {
-        return this.sourceRetryCount == null ? Output.empty() : this.sourceRetryCount;
+        return this.sourceRetryCount == null ? Codegen.empty() : this.sourceRetryCount;
     }
 
     /**
@@ -182,7 +183,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> sourceRetryWait;
 
     public Output<Object> getSourceRetryWait() {
-        return this.sourceRetryWait == null ? Output.empty() : this.sourceRetryWait;
+        return this.sourceRetryWait == null ? Codegen.empty() : this.sourceRetryWait;
     }
 
     /**
@@ -233,22 +234,22 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SapTableSourceArgs() {
-        this.additionalColumns = Output.empty();
-        this.batchSize = Output.empty();
-        this.customRfcReadTableFunctionModule = Output.empty();
-        this.disableMetricsCollection = Output.empty();
-        this.maxConcurrentConnections = Output.empty();
-        this.partitionOption = Output.empty();
-        this.partitionSettings = Output.empty();
-        this.queryTimeout = Output.empty();
-        this.rfcTableFields = Output.empty();
-        this.rfcTableOptions = Output.empty();
-        this.rowCount = Output.empty();
-        this.rowSkips = Output.empty();
-        this.sapDataColumnDelimiter = Output.empty();
-        this.sourceRetryCount = Output.empty();
-        this.sourceRetryWait = Output.empty();
-        this.type = Output.empty();
+        this.additionalColumns = Codegen.empty();
+        this.batchSize = Codegen.empty();
+        this.customRfcReadTableFunctionModule = Codegen.empty();
+        this.disableMetricsCollection = Codegen.empty();
+        this.maxConcurrentConnections = Codegen.empty();
+        this.partitionOption = Codegen.empty();
+        this.partitionSettings = Codegen.empty();
+        this.queryTimeout = Codegen.empty();
+        this.rfcTableFields = Codegen.empty();
+        this.rfcTableOptions = Codegen.empty();
+        this.rowCount = Codegen.empty();
+        this.rowSkips = Codegen.empty();
+        this.sapDataColumnDelimiter = Codegen.empty();
+        this.sourceRetryCount = Codegen.empty();
+        this.sourceRetryWait = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -306,7 +307,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder additionalColumns(@Nullable Object additionalColumns) {
-            this.additionalColumns = Output.ofNullable(additionalColumns);
+            this.additionalColumns = Codegen.ofNullable(additionalColumns);
             return this;
         }
         public Builder batchSize(@Nullable Output<Object> batchSize) {
@@ -314,7 +315,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder batchSize(@Nullable Object batchSize) {
-            this.batchSize = Output.ofNullable(batchSize);
+            this.batchSize = Codegen.ofNullable(batchSize);
             return this;
         }
         public Builder customRfcReadTableFunctionModule(@Nullable Output<Object> customRfcReadTableFunctionModule) {
@@ -322,7 +323,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customRfcReadTableFunctionModule(@Nullable Object customRfcReadTableFunctionModule) {
-            this.customRfcReadTableFunctionModule = Output.ofNullable(customRfcReadTableFunctionModule);
+            this.customRfcReadTableFunctionModule = Codegen.ofNullable(customRfcReadTableFunctionModule);
             return this;
         }
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
@@ -330,7 +331,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
+            this.disableMetricsCollection = Codegen.ofNullable(disableMetricsCollection);
             return this;
         }
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
@@ -338,7 +339,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
+            this.maxConcurrentConnections = Codegen.ofNullable(maxConcurrentConnections);
             return this;
         }
         public Builder partitionOption(@Nullable Output<Object> partitionOption) {
@@ -346,7 +347,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder partitionOption(@Nullable Object partitionOption) {
-            this.partitionOption = Output.ofNullable(partitionOption);
+            this.partitionOption = Codegen.ofNullable(partitionOption);
             return this;
         }
         public Builder partitionSettings(@Nullable Output<SapTablePartitionSettingsArgs> partitionSettings) {
@@ -354,7 +355,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder partitionSettings(@Nullable SapTablePartitionSettingsArgs partitionSettings) {
-            this.partitionSettings = Output.ofNullable(partitionSettings);
+            this.partitionSettings = Codegen.ofNullable(partitionSettings);
             return this;
         }
         public Builder queryTimeout(@Nullable Output<Object> queryTimeout) {
@@ -362,7 +363,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder queryTimeout(@Nullable Object queryTimeout) {
-            this.queryTimeout = Output.ofNullable(queryTimeout);
+            this.queryTimeout = Codegen.ofNullable(queryTimeout);
             return this;
         }
         public Builder rfcTableFields(@Nullable Output<Object> rfcTableFields) {
@@ -370,7 +371,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rfcTableFields(@Nullable Object rfcTableFields) {
-            this.rfcTableFields = Output.ofNullable(rfcTableFields);
+            this.rfcTableFields = Codegen.ofNullable(rfcTableFields);
             return this;
         }
         public Builder rfcTableOptions(@Nullable Output<Object> rfcTableOptions) {
@@ -378,7 +379,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rfcTableOptions(@Nullable Object rfcTableOptions) {
-            this.rfcTableOptions = Output.ofNullable(rfcTableOptions);
+            this.rfcTableOptions = Codegen.ofNullable(rfcTableOptions);
             return this;
         }
         public Builder rowCount(@Nullable Output<Object> rowCount) {
@@ -386,7 +387,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rowCount(@Nullable Object rowCount) {
-            this.rowCount = Output.ofNullable(rowCount);
+            this.rowCount = Codegen.ofNullable(rowCount);
             return this;
         }
         public Builder rowSkips(@Nullable Output<Object> rowSkips) {
@@ -394,7 +395,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rowSkips(@Nullable Object rowSkips) {
-            this.rowSkips = Output.ofNullable(rowSkips);
+            this.rowSkips = Codegen.ofNullable(rowSkips);
             return this;
         }
         public Builder sapDataColumnDelimiter(@Nullable Output<Object> sapDataColumnDelimiter) {
@@ -402,7 +403,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sapDataColumnDelimiter(@Nullable Object sapDataColumnDelimiter) {
-            this.sapDataColumnDelimiter = Output.ofNullable(sapDataColumnDelimiter);
+            this.sapDataColumnDelimiter = Codegen.ofNullable(sapDataColumnDelimiter);
             return this;
         }
         public Builder sourceRetryCount(@Nullable Output<Object> sourceRetryCount) {
@@ -410,7 +411,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
-            this.sourceRetryCount = Output.ofNullable(sourceRetryCount);
+            this.sourceRetryCount = Codegen.ofNullable(sourceRetryCount);
             return this;
         }
         public Builder sourceRetryWait(@Nullable Output<Object> sourceRetryWait) {
@@ -418,7 +419,7 @@ public final class SapTableSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
-            this.sourceRetryWait = Output.ofNullable(sourceRetryWait);
+            this.sourceRetryWait = Codegen.ofNullable(sourceRetryWait);
             return this;
         }
         public Builder type(Output<String> type) {

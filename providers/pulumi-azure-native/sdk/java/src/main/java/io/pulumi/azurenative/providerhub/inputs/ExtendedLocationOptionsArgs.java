@@ -5,6 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +19,14 @@ public final class ExtendedLocationOptionsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> supportedPolicy;
 
     public Output<String> getSupportedPolicy() {
-        return this.supportedPolicy == null ? Output.empty() : this.supportedPolicy;
+        return this.supportedPolicy == null ? Codegen.empty() : this.supportedPolicy;
     }
 
     @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ExtendedLocationOptionsArgs(
@@ -36,8 +37,8 @@ public final class ExtendedLocationOptionsArgs extends io.pulumi.resources.Resou
     }
 
     private ExtendedLocationOptionsArgs() {
-        this.supportedPolicy = Output.empty();
-        this.type = Output.empty();
+        this.supportedPolicy = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class ExtendedLocationOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder supportedPolicy(@Nullable String supportedPolicy) {
-            this.supportedPolicy = Output.ofNullable(supportedPolicy);
+            this.supportedPolicy = Codegen.ofNullable(supportedPolicy);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -75,7 +76,7 @@ public final class ExtendedLocationOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ExtendedLocationOptionsArgs build() {
             return new ExtendedLocationOptionsArgs(supportedPolicy, type);

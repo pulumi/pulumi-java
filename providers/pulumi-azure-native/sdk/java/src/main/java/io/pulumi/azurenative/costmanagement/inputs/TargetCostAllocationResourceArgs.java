@@ -9,6 +9,7 @@ import io.pulumi.azurenative.costmanagement.inputs.CostAllocationProportionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -78,10 +79,10 @@ public final class TargetCostAllocationResourceArgs extends io.pulumi.resources.
     }
 
     private TargetCostAllocationResourceArgs() {
-        this.name = Output.empty();
-        this.policyType = Output.empty();
-        this.resourceType = Output.empty();
-        this.values = Output.empty();
+        this.name = Codegen.empty();
+        this.policyType = Codegen.empty();
+        this.resourceType = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {

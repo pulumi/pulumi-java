@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.InstanceTemplateDiskDiskEncryptionKeyGetArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -27,7 +28,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Boolean> autoDelete;
 
     public Output<Boolean> getAutoDelete() {
-        return this.autoDelete == null ? Output.empty() : this.autoDelete;
+        return this.autoDelete == null ? Codegen.empty() : this.autoDelete;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Boolean> boot;
 
     public Output<Boolean> getBoot() {
-        return this.boot == null ? Output.empty() : this.boot;
+        return this.boot == null ? Codegen.empty() : this.boot;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> deviceName;
 
     public Output<String> getDeviceName() {
-        return this.deviceName == null ? Output.empty() : this.deviceName;
+        return this.deviceName == null ? Codegen.empty() : this.deviceName;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<InstanceTemplateDiskDiskEncryptionKeyGetArgs> diskEncryptionKey;
 
     public Output<InstanceTemplateDiskDiskEncryptionKeyGetArgs> getDiskEncryptionKey() {
-        return this.diskEncryptionKey == null ? Output.empty() : this.diskEncryptionKey;
+        return this.diskEncryptionKey == null ? Codegen.empty() : this.diskEncryptionKey;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> diskName;
 
     public Output<String> getDiskName() {
-        return this.diskName == null ? Output.empty() : this.diskName;
+        return this.diskName == null ? Codegen.empty() : this.diskName;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Integer> diskSizeGb;
 
     public Output<Integer> getDiskSizeGb() {
-        return this.diskSizeGb == null ? Output.empty() : this.diskSizeGb;
+        return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
     }
 
     /**
@@ -99,7 +100,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> diskType;
 
     public Output<String> getDiskType() {
-        return this.diskType == null ? Output.empty() : this.diskType;
+        return this.diskType == null ? Codegen.empty() : this.diskType;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> interface_;
 
     public Output<String> getInterface_() {
-        return this.interface_ == null ? Output.empty() : this.interface_;
+        return this.interface_ == null ? Codegen.empty() : this.interface_;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> mode;
 
     public Output<String> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -149,7 +150,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> resourcePolicies;
 
     public Output<String> getResourcePolicies() {
-        return this.resourcePolicies == null ? Output.empty() : this.resourcePolicies;
+        return this.resourcePolicies == null ? Codegen.empty() : this.resourcePolicies;
     }
 
     /**
@@ -162,7 +163,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> source;
 
     public Output<String> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     /**
@@ -179,7 +180,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> sourceImage;
 
     public Output<String> getSourceImage() {
-        return this.sourceImage == null ? Output.empty() : this.sourceImage;
+        return this.sourceImage == null ? Codegen.empty() : this.sourceImage;
     }
 
     /**
@@ -190,7 +191,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public InstanceTemplateDiskGetArgs(
@@ -225,20 +226,20 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
     }
 
     private InstanceTemplateDiskGetArgs() {
-        this.autoDelete = Output.empty();
-        this.boot = Output.empty();
-        this.deviceName = Output.empty();
-        this.diskEncryptionKey = Output.empty();
-        this.diskName = Output.empty();
-        this.diskSizeGb = Output.empty();
-        this.diskType = Output.empty();
-        this.interface_ = Output.empty();
-        this.labels = Output.empty();
-        this.mode = Output.empty();
-        this.resourcePolicies = Output.empty();
-        this.source = Output.empty();
-        this.sourceImage = Output.empty();
-        this.type = Output.empty();
+        this.autoDelete = Codegen.empty();
+        this.boot = Codegen.empty();
+        this.deviceName = Codegen.empty();
+        this.diskEncryptionKey = Codegen.empty();
+        this.diskName = Codegen.empty();
+        this.diskSizeGb = Codegen.empty();
+        this.diskType = Codegen.empty();
+        this.interface_ = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.resourcePolicies = Codegen.empty();
+        this.source = Codegen.empty();
+        this.sourceImage = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -292,7 +293,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder autoDelete(@Nullable Boolean autoDelete) {
-            this.autoDelete = Output.ofNullable(autoDelete);
+            this.autoDelete = Codegen.ofNullable(autoDelete);
             return this;
         }
         public Builder boot(@Nullable Output<Boolean> boot) {
@@ -300,7 +301,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder boot(@Nullable Boolean boot) {
-            this.boot = Output.ofNullable(boot);
+            this.boot = Codegen.ofNullable(boot);
             return this;
         }
         public Builder deviceName(@Nullable Output<String> deviceName) {
@@ -308,7 +309,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Output.ofNullable(deviceName);
+            this.deviceName = Codegen.ofNullable(deviceName);
             return this;
         }
         public Builder diskEncryptionKey(@Nullable Output<InstanceTemplateDiskDiskEncryptionKeyGetArgs> diskEncryptionKey) {
@@ -316,7 +317,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder diskEncryptionKey(@Nullable InstanceTemplateDiskDiskEncryptionKeyGetArgs diskEncryptionKey) {
-            this.diskEncryptionKey = Output.ofNullable(diskEncryptionKey);
+            this.diskEncryptionKey = Codegen.ofNullable(diskEncryptionKey);
             return this;
         }
         public Builder diskName(@Nullable Output<String> diskName) {
@@ -324,7 +325,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder diskName(@Nullable String diskName) {
-            this.diskName = Output.ofNullable(diskName);
+            this.diskName = Codegen.ofNullable(diskName);
             return this;
         }
         public Builder diskSizeGb(@Nullable Output<Integer> diskSizeGb) {
@@ -332,7 +333,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
-            this.diskSizeGb = Output.ofNullable(diskSizeGb);
+            this.diskSizeGb = Codegen.ofNullable(diskSizeGb);
             return this;
         }
         public Builder diskType(@Nullable Output<String> diskType) {
@@ -340,7 +341,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder diskType(@Nullable String diskType) {
-            this.diskType = Output.ofNullable(diskType);
+            this.diskType = Codegen.ofNullable(diskType);
             return this;
         }
         public Builder interface_(@Nullable Output<String> interface_) {
@@ -348,7 +349,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder interface_(@Nullable String interface_) {
-            this.interface_ = Output.ofNullable(interface_);
+            this.interface_ = Codegen.ofNullable(interface_);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -356,7 +357,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder mode(@Nullable Output<String> mode) {
@@ -364,7 +365,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder mode(@Nullable String mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder resourcePolicies(@Nullable Output<String> resourcePolicies) {
@@ -372,7 +373,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder resourcePolicies(@Nullable String resourcePolicies) {
-            this.resourcePolicies = Output.ofNullable(resourcePolicies);
+            this.resourcePolicies = Codegen.ofNullable(resourcePolicies);
             return this;
         }
         public Builder source(@Nullable Output<String> source) {
@@ -380,7 +381,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder source(@Nullable String source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }
         public Builder sourceImage(@Nullable Output<String> sourceImage) {
@@ -388,7 +389,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder sourceImage(@Nullable String sourceImage) {
-            this.sourceImage = Output.ofNullable(sourceImage);
+            this.sourceImage = Codegen.ofNullable(sourceImage);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -396,7 +397,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public InstanceTemplateDiskGetArgs build() {
             return new InstanceTemplateDiskGetArgs(autoDelete, boot, deviceName, diskEncryptionKey, diskName, diskSizeGb, diskType, interface_, labels, mode, resourcePolicies, source, sourceImage, type);

@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class ResourcePolicyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> enableHybrid;
 
     public Output<String> getEnableHybrid() {
-        return this.enableHybrid == null ? Output.empty() : this.enableHybrid;
+        return this.enableHybrid == null ? Codegen.empty() : this.enableHybrid;
     }
 
     /**
@@ -29,7 +30,7 @@ public final class ResourcePolicyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     public ResourcePolicyState(
@@ -40,8 +41,8 @@ public final class ResourcePolicyState extends io.pulumi.resources.ResourceArgs 
     }
 
     private ResourcePolicyState() {
-        this.enableHybrid = Output.empty();
-        this.policy = Output.empty();
+        this.enableHybrid = Codegen.empty();
+        this.policy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -71,7 +72,7 @@ public final class ResourcePolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder enableHybrid(@Nullable String enableHybrid) {
-            this.enableHybrid = Output.ofNullable(enableHybrid);
+            this.enableHybrid = Codegen.ofNullable(enableHybrid);
             return this;
         }
         public Builder policy(@Nullable Output<String> policy) {
@@ -79,7 +80,7 @@ public final class ResourcePolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder policy(@Nullable String policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }        public ResourcePolicyState build() {
             return new ResourcePolicyState(enableHybrid, policy);

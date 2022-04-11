@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -56,9 +57,9 @@ public final class TableRangePartitioningRangeArgs extends io.pulumi.resources.R
     }
 
     private TableRangePartitioningRangeArgs() {
-        this.end = Output.empty();
-        this.interval = Output.empty();
-        this.start = Output.empty();
+        this.end = Codegen.empty();
+        this.interval = Codegen.empty();
+        this.start = Codegen.empty();
     }
 
     public static Builder builder() {

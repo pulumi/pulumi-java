@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -44,8 +45,8 @@ public final class CrawlerCatalogTargetArgs extends io.pulumi.resources.Resource
     }
 
     private CrawlerCatalogTargetArgs() {
-        this.databaseName = Output.empty();
-        this.tables = Output.empty();
+        this.databaseName = Codegen.empty();
+        this.tables = Codegen.empty();
     }
 
     public static Builder builder() {

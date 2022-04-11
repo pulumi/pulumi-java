@@ -6,6 +6,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 import io.pulumi.awsnative.quicksight.enums.DataSetGeoSpatialCountryCode;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class DataSetGeoSpatialColumnGroupArgs extends io.pulumi.resources.
       private final @Nullable Output<DataSetGeoSpatialCountryCode> countryCode;
 
     public Output<DataSetGeoSpatialCountryCode> getCountryCode() {
-        return this.countryCode == null ? Output.empty() : this.countryCode;
+        return this.countryCode == null ? Codegen.empty() : this.countryCode;
     }
 
     /**
@@ -59,9 +60,9 @@ public final class DataSetGeoSpatialColumnGroupArgs extends io.pulumi.resources.
     }
 
     private DataSetGeoSpatialColumnGroupArgs() {
-        this.columns = Output.empty();
-        this.countryCode = Output.empty();
-        this.name = Output.empty();
+        this.columns = Codegen.empty();
+        this.countryCode = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class DataSetGeoSpatialColumnGroupArgs extends io.pulumi.resources.
             return this;
         }
         public Builder countryCode(@Nullable DataSetGeoSpatialCountryCode countryCode) {
-            this.countryCode = Output.ofNullable(countryCode);
+            this.countryCode = Codegen.ofNullable(countryCode);
             return this;
         }
         public Builder name(Output<String> name) {

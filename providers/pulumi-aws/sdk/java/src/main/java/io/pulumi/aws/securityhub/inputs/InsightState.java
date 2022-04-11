@@ -6,6 +6,7 @@ package io.pulumi.aws.securityhub.inputs;
 import io.pulumi.aws.securityhub.inputs.InsightFiltersGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class InsightState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class InsightState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<InsightFiltersGetArgs> filters;
 
     public Output<InsightFiltersGetArgs> getFilters() {
-        return this.filters == null ? Output.empty() : this.filters;
+        return this.filters == null ? Codegen.empty() : this.filters;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class InsightState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> groupByAttribute;
 
     public Output<String> getGroupByAttribute() {
-        return this.groupByAttribute == null ? Output.empty() : this.groupByAttribute;
+        return this.groupByAttribute == null ? Codegen.empty() : this.groupByAttribute;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class InsightState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public InsightState(
@@ -71,10 +72,10 @@ public final class InsightState extends io.pulumi.resources.ResourceArgs {
     }
 
     private InsightState() {
-        this.arn = Output.empty();
-        this.filters = Output.empty();
-        this.groupByAttribute = Output.empty();
-        this.name = Output.empty();
+        this.arn = Codegen.empty();
+        this.filters = Codegen.empty();
+        this.groupByAttribute = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class InsightState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder filters(@Nullable Output<InsightFiltersGetArgs> filters) {
@@ -116,7 +117,7 @@ public final class InsightState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filters(@Nullable InsightFiltersGetArgs filters) {
-            this.filters = Output.ofNullable(filters);
+            this.filters = Codegen.ofNullable(filters);
             return this;
         }
         public Builder groupByAttribute(@Nullable Output<String> groupByAttribute) {
@@ -124,7 +125,7 @@ public final class InsightState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder groupByAttribute(@Nullable String groupByAttribute) {
-            this.groupByAttribute = Output.ofNullable(groupByAttribute);
+            this.groupByAttribute = Codegen.ofNullable(groupByAttribute);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -132,7 +133,7 @@ public final class InsightState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public InsightState build() {
             return new InsightState(arn, filters, groupByAttribute, name);

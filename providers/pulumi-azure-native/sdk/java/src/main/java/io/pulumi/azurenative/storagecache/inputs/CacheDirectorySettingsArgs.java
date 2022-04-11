@@ -7,6 +7,7 @@ import io.pulumi.azurenative.storagecache.inputs.CacheActiveDirectorySettingsArg
 import io.pulumi.azurenative.storagecache.inputs.CacheUsernameDownloadSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -27,7 +28,7 @@ public final class CacheDirectorySettingsArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<CacheActiveDirectorySettingsArgs> activeDirectory;
 
     public Output<CacheActiveDirectorySettingsArgs> getActiveDirectory() {
-        return this.activeDirectory == null ? Output.empty() : this.activeDirectory;
+        return this.activeDirectory == null ? Codegen.empty() : this.activeDirectory;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class CacheDirectorySettingsArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<CacheUsernameDownloadSettingsArgs> usernameDownload;
 
     public Output<CacheUsernameDownloadSettingsArgs> getUsernameDownload() {
-        return this.usernameDownload == null ? Output.empty() : this.usernameDownload;
+        return this.usernameDownload == null ? Codegen.empty() : this.usernameDownload;
     }
 
     public CacheDirectorySettingsArgs(
@@ -49,8 +50,8 @@ public final class CacheDirectorySettingsArgs extends io.pulumi.resources.Resour
     }
 
     private CacheDirectorySettingsArgs() {
-        this.activeDirectory = Output.empty();
-        this.usernameDownload = Output.empty();
+        this.activeDirectory = Codegen.empty();
+        this.usernameDownload = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class CacheDirectorySettingsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder activeDirectory(@Nullable CacheActiveDirectorySettingsArgs activeDirectory) {
-            this.activeDirectory = Output.ofNullable(activeDirectory);
+            this.activeDirectory = Codegen.ofNullable(activeDirectory);
             return this;
         }
         public Builder usernameDownload(@Nullable Output<CacheUsernameDownloadSettingsArgs> usernameDownload) {
@@ -88,7 +89,7 @@ public final class CacheDirectorySettingsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder usernameDownload(@Nullable CacheUsernameDownloadSettingsArgs usernameDownload) {
-            this.usernameDownload = Output.ofNullable(usernameDownload);
+            this.usernameDownload = Codegen.ofNullable(usernameDownload);
             return this;
         }        public CacheDirectorySettingsArgs build() {
             return new CacheDirectorySettingsArgs(activeDirectory, usernameDownload);

@@ -8,6 +8,7 @@ import io.pulumi.awsnative.ec2.IPAMAllocationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -95,7 +96,7 @@ public class IPAMAllocation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IPAMAllocation(String name, IPAMAllocationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ec2:IPAMAllocation", name, args == null ? IPAMAllocationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ec2:IPAMAllocation", name, args == null ? IPAMAllocationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IPAMAllocation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

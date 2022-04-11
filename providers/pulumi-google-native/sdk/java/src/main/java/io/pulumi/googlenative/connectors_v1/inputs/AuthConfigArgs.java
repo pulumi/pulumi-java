@@ -5,6 +5,7 @@ package io.pulumi.googlenative.connectors_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.connectors_v1.enums.AuthConfigAuthType;
 import io.pulumi.googlenative.connectors_v1.inputs.ConfigVariableArgs;
 import io.pulumi.googlenative.connectors_v1.inputs.Oauth2ClientCredentialsArgs;
@@ -31,7 +32,7 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ConfigVariableArgs>> additionalVariables;
 
     public Output<List<ConfigVariableArgs>> getAdditionalVariables() {
-        return this.additionalVariables == null ? Output.empty() : this.additionalVariables;
+        return this.additionalVariables == null ? Codegen.empty() : this.additionalVariables;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AuthConfigAuthType> authType;
 
     public Output<AuthConfigAuthType> getAuthType() {
-        return this.authType == null ? Output.empty() : this.authType;
+        return this.authType == null ? Codegen.empty() : this.authType;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Oauth2ClientCredentialsArgs> oauth2ClientCredentials;
 
     public Output<Oauth2ClientCredentialsArgs> getOauth2ClientCredentials() {
-        return this.oauth2ClientCredentials == null ? Output.empty() : this.oauth2ClientCredentials;
+        return this.oauth2ClientCredentials == null ? Codegen.empty() : this.oauth2ClientCredentials;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Oauth2JwtBearerArgs> oauth2JwtBearer;
 
     public Output<Oauth2JwtBearerArgs> getOauth2JwtBearer() {
-        return this.oauth2JwtBearer == null ? Output.empty() : this.oauth2JwtBearer;
+        return this.oauth2JwtBearer == null ? Codegen.empty() : this.oauth2JwtBearer;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<UserPasswordArgs> userPassword;
 
     public Output<UserPasswordArgs> getUserPassword() {
-        return this.userPassword == null ? Output.empty() : this.userPassword;
+        return this.userPassword == null ? Codegen.empty() : this.userPassword;
     }
 
     public AuthConfigArgs(
@@ -92,11 +93,11 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AuthConfigArgs() {
-        this.additionalVariables = Output.empty();
-        this.authType = Output.empty();
-        this.oauth2ClientCredentials = Output.empty();
-        this.oauth2JwtBearer = Output.empty();
-        this.userPassword = Output.empty();
+        this.additionalVariables = Codegen.empty();
+        this.authType = Codegen.empty();
+        this.oauth2ClientCredentials = Codegen.empty();
+        this.oauth2JwtBearer = Codegen.empty();
+        this.userPassword = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder additionalVariables(@Nullable List<ConfigVariableArgs> additionalVariables) {
-            this.additionalVariables = Output.ofNullable(additionalVariables);
+            this.additionalVariables = Codegen.ofNullable(additionalVariables);
             return this;
         }
         public Builder additionalVariables(ConfigVariableArgs... additionalVariables) {
@@ -143,7 +144,7 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authType(@Nullable AuthConfigAuthType authType) {
-            this.authType = Output.ofNullable(authType);
+            this.authType = Codegen.ofNullable(authType);
             return this;
         }
         public Builder oauth2ClientCredentials(@Nullable Output<Oauth2ClientCredentialsArgs> oauth2ClientCredentials) {
@@ -151,7 +152,7 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder oauth2ClientCredentials(@Nullable Oauth2ClientCredentialsArgs oauth2ClientCredentials) {
-            this.oauth2ClientCredentials = Output.ofNullable(oauth2ClientCredentials);
+            this.oauth2ClientCredentials = Codegen.ofNullable(oauth2ClientCredentials);
             return this;
         }
         public Builder oauth2JwtBearer(@Nullable Output<Oauth2JwtBearerArgs> oauth2JwtBearer) {
@@ -159,7 +160,7 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder oauth2JwtBearer(@Nullable Oauth2JwtBearerArgs oauth2JwtBearer) {
-            this.oauth2JwtBearer = Output.ofNullable(oauth2JwtBearer);
+            this.oauth2JwtBearer = Codegen.ofNullable(oauth2JwtBearer);
             return this;
         }
         public Builder userPassword(@Nullable Output<UserPasswordArgs> userPassword) {
@@ -167,7 +168,7 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userPassword(@Nullable UserPasswordArgs userPassword) {
-            this.userPassword = Output.ofNullable(userPassword);
+            this.userPassword = Codegen.ofNullable(userPassword);
             return this;
         }        public AuthConfigArgs build() {
             return new AuthConfigArgs(additionalVariables, authType, oauth2ClientCredentials, oauth2JwtBearer, userPassword);

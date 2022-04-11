@@ -7,6 +7,7 @@ import io.pulumi.awsnative.ec2.inputs.OptionsPropertiesArgs;
 import io.pulumi.awsnative.ec2.inputs.TransitGatewayVpcAttachmentTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class TransitGatewayVpcAttachmentArgs extends io.pulumi.resources.R
       private final @Nullable Output<List<String>> addSubnetIds;
 
     public Output<List<String>> getAddSubnetIds() {
-        return this.addSubnetIds == null ? Output.empty() : this.addSubnetIds;
+        return this.addSubnetIds == null ? Codegen.empty() : this.addSubnetIds;
     }
 
     /**
@@ -32,42 +33,42 @@ public final class TransitGatewayVpcAttachmentArgs extends io.pulumi.resources.R
       private final @Nullable Output<OptionsPropertiesArgs> options;
 
     public Output<OptionsPropertiesArgs> getOptions() {
-        return this.options == null ? Output.empty() : this.options;
+        return this.options == null ? Codegen.empty() : this.options;
     }
 
     @Import(name="removeSubnetIds")
       private final @Nullable Output<List<String>> removeSubnetIds;
 
     public Output<List<String>> getRemoveSubnetIds() {
-        return this.removeSubnetIds == null ? Output.empty() : this.removeSubnetIds;
+        return this.removeSubnetIds == null ? Codegen.empty() : this.removeSubnetIds;
     }
 
     @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Output.empty() : this.subnetIds;
+        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<TransitGatewayVpcAttachmentTagArgs>> tags;
 
     public Output<List<TransitGatewayVpcAttachmentTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="transitGatewayId")
       private final @Nullable Output<String> transitGatewayId;
 
     public Output<String> getTransitGatewayId() {
-        return this.transitGatewayId == null ? Output.empty() : this.transitGatewayId;
+        return this.transitGatewayId == null ? Codegen.empty() : this.transitGatewayId;
     }
 
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     public TransitGatewayVpcAttachmentArgs(
@@ -88,13 +89,13 @@ public final class TransitGatewayVpcAttachmentArgs extends io.pulumi.resources.R
     }
 
     private TransitGatewayVpcAttachmentArgs() {
-        this.addSubnetIds = Output.empty();
-        this.options = Output.empty();
-        this.removeSubnetIds = Output.empty();
-        this.subnetIds = Output.empty();
-        this.tags = Output.empty();
-        this.transitGatewayId = Output.empty();
-        this.vpcId = Output.empty();
+        this.addSubnetIds = Codegen.empty();
+        this.options = Codegen.empty();
+        this.removeSubnetIds = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.transitGatewayId = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -134,7 +135,7 @@ public final class TransitGatewayVpcAttachmentArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder addSubnetIds(@Nullable List<String> addSubnetIds) {
-            this.addSubnetIds = Output.ofNullable(addSubnetIds);
+            this.addSubnetIds = Codegen.ofNullable(addSubnetIds);
             return this;
         }
         public Builder addSubnetIds(String... addSubnetIds) {
@@ -145,7 +146,7 @@ public final class TransitGatewayVpcAttachmentArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder options(@Nullable OptionsPropertiesArgs options) {
-            this.options = Output.ofNullable(options);
+            this.options = Codegen.ofNullable(options);
             return this;
         }
         public Builder removeSubnetIds(@Nullable Output<List<String>> removeSubnetIds) {
@@ -153,7 +154,7 @@ public final class TransitGatewayVpcAttachmentArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder removeSubnetIds(@Nullable List<String> removeSubnetIds) {
-            this.removeSubnetIds = Output.ofNullable(removeSubnetIds);
+            this.removeSubnetIds = Codegen.ofNullable(removeSubnetIds);
             return this;
         }
         public Builder removeSubnetIds(String... removeSubnetIds) {
@@ -164,7 +165,7 @@ public final class TransitGatewayVpcAttachmentArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Output.ofNullable(subnetIds);
+            this.subnetIds = Codegen.ofNullable(subnetIds);
             return this;
         }
         public Builder subnetIds(String... subnetIds) {
@@ -175,7 +176,7 @@ public final class TransitGatewayVpcAttachmentArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder tags(@Nullable List<TransitGatewayVpcAttachmentTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(TransitGatewayVpcAttachmentTagArgs... tags) {
@@ -186,7 +187,7 @@ public final class TransitGatewayVpcAttachmentArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder transitGatewayId(@Nullable String transitGatewayId) {
-            this.transitGatewayId = Output.ofNullable(transitGatewayId);
+            this.transitGatewayId = Codegen.ofNullable(transitGatewayId);
             return this;
         }
         public Builder vpcId(@Nullable Output<String> vpcId) {
@@ -194,7 +195,7 @@ public final class TransitGatewayVpcAttachmentArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }        public TransitGatewayVpcAttachmentArgs build() {
             return new TransitGatewayVpcAttachmentArgs(addSubnetIds, options, removeSubnetIds, subnetIds, tags, transitGatewayId, vpcId);

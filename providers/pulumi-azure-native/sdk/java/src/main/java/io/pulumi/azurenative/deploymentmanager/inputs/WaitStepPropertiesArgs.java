@@ -6,6 +6,7 @@ package io.pulumi.azurenative.deploymentmanager.inputs;
 import io.pulumi.azurenative.deploymentmanager.inputs.WaitStepAttributesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -49,8 +50,8 @@ public final class WaitStepPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     private WaitStepPropertiesArgs() {
-        this.attributes = Output.empty();
-        this.stepType = Output.empty();
+        this.attributes = Codegen.empty();
+        this.stepType = Codegen.empty();
     }
 
     public static Builder builder() {

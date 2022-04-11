@@ -7,6 +7,7 @@ import io.pulumi.azurenative.compute.enums.HostCaching;
 import io.pulumi.azurenative.compute.inputs.GalleryArtifactVersionSourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -27,7 +28,7 @@ public final class GalleryOSDiskImageArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<HostCaching> hostCaching;
 
     public Output<HostCaching> getHostCaching() {
-        return this.hostCaching == null ? Output.empty() : this.hostCaching;
+        return this.hostCaching == null ? Codegen.empty() : this.hostCaching;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GalleryOSDiskImageArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<GalleryArtifactVersionSourceArgs> source;
 
     public Output<GalleryArtifactVersionSourceArgs> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     public GalleryOSDiskImageArgs(
@@ -49,8 +50,8 @@ public final class GalleryOSDiskImageArgs extends io.pulumi.resources.ResourceAr
     }
 
     private GalleryOSDiskImageArgs() {
-        this.hostCaching = Output.empty();
-        this.source = Output.empty();
+        this.hostCaching = Codegen.empty();
+        this.source = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GalleryOSDiskImageArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder hostCaching(@Nullable HostCaching hostCaching) {
-            this.hostCaching = Output.ofNullable(hostCaching);
+            this.hostCaching = Codegen.ofNullable(hostCaching);
             return this;
         }
         public Builder source(@Nullable Output<GalleryArtifactVersionSourceArgs> source) {
@@ -88,7 +89,7 @@ public final class GalleryOSDiskImageArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder source(@Nullable GalleryArtifactVersionSourceArgs source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }        public GalleryOSDiskImageArgs build() {
             return new GalleryOSDiskImageArgs(hostCaching, source);

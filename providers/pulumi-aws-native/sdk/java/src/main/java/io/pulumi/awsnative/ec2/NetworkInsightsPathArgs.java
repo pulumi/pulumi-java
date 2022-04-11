@@ -7,6 +7,7 @@ import io.pulumi.awsnative.ec2.enums.NetworkInsightsPathProtocol;
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsPathTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -29,14 +30,14 @@ public final class NetworkInsightsPathArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> destinationIp;
 
     public Output<String> getDestinationIp() {
-        return this.destinationIp == null ? Output.empty() : this.destinationIp;
+        return this.destinationIp == null ? Codegen.empty() : this.destinationIp;
     }
 
     @Import(name="destinationPort")
       private final @Nullable Output<Integer> destinationPort;
 
     public Output<Integer> getDestinationPort() {
-        return this.destinationPort == null ? Output.empty() : this.destinationPort;
+        return this.destinationPort == null ? Codegen.empty() : this.destinationPort;
     }
 
     @Import(name="protocol", required=true)
@@ -57,14 +58,14 @@ public final class NetworkInsightsPathArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> sourceIp;
 
     public Output<String> getSourceIp() {
-        return this.sourceIp == null ? Output.empty() : this.sourceIp;
+        return this.sourceIp == null ? Codegen.empty() : this.sourceIp;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<NetworkInsightsPathTagArgs>> tags;
 
     public Output<List<NetworkInsightsPathTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public NetworkInsightsPathArgs(
@@ -85,13 +86,13 @@ public final class NetworkInsightsPathArgs extends io.pulumi.resources.ResourceA
     }
 
     private NetworkInsightsPathArgs() {
-        this.destination = Output.empty();
-        this.destinationIp = Output.empty();
-        this.destinationPort = Output.empty();
-        this.protocol = Output.empty();
-        this.source = Output.empty();
-        this.sourceIp = Output.empty();
-        this.tags = Output.empty();
+        this.destination = Codegen.empty();
+        this.destinationIp = Codegen.empty();
+        this.destinationPort = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.source = Codegen.empty();
+        this.sourceIp = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class NetworkInsightsPathArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder destinationIp(@Nullable String destinationIp) {
-            this.destinationIp = Output.ofNullable(destinationIp);
+            this.destinationIp = Codegen.ofNullable(destinationIp);
             return this;
         }
         public Builder destinationPort(@Nullable Output<Integer> destinationPort) {
@@ -147,7 +148,7 @@ public final class NetworkInsightsPathArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder destinationPort(@Nullable Integer destinationPort) {
-            this.destinationPort = Output.ofNullable(destinationPort);
+            this.destinationPort = Codegen.ofNullable(destinationPort);
             return this;
         }
         public Builder protocol(Output<NetworkInsightsPathProtocol> protocol) {
@@ -171,7 +172,7 @@ public final class NetworkInsightsPathArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder sourceIp(@Nullable String sourceIp) {
-            this.sourceIp = Output.ofNullable(sourceIp);
+            this.sourceIp = Codegen.ofNullable(sourceIp);
             return this;
         }
         public Builder tags(@Nullable Output<List<NetworkInsightsPathTagArgs>> tags) {
@@ -179,7 +180,7 @@ public final class NetworkInsightsPathArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder tags(@Nullable List<NetworkInsightsPathTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(NetworkInsightsPathTagArgs... tags) {

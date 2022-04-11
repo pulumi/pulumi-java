@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -49,7 +50,7 @@ public final class AutomationRunbookReceiverArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class AutomationRunbookReceiverArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> serviceUri;
 
     public Output<String> getServiceUri() {
-        return this.serviceUri == null ? Output.empty() : this.serviceUri;
+        return this.serviceUri == null ? Codegen.empty() : this.serviceUri;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class AutomationRunbookReceiverArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Boolean> useCommonAlertSchema;
 
     public Output<Boolean> getUseCommonAlertSchema() {
-        return this.useCommonAlertSchema == null ? Output.empty() : this.useCommonAlertSchema;
+        return this.useCommonAlertSchema == null ? Codegen.empty() : this.useCommonAlertSchema;
     }
 
     /**
@@ -109,18 +110,18 @@ public final class AutomationRunbookReceiverArgs extends io.pulumi.resources.Res
         this.name = name;
         this.runbookName = Objects.requireNonNull(runbookName, "expected parameter 'runbookName' to be non-null");
         this.serviceUri = serviceUri;
-        this.useCommonAlertSchema = useCommonAlertSchema == null ? Output.ofNullable(false) : useCommonAlertSchema;
+        this.useCommonAlertSchema = useCommonAlertSchema == null ? Codegen.ofNullable(false) : useCommonAlertSchema;
         this.webhookResourceId = Objects.requireNonNull(webhookResourceId, "expected parameter 'webhookResourceId' to be non-null");
     }
 
     private AutomationRunbookReceiverArgs() {
-        this.automationAccountId = Output.empty();
-        this.isGlobalRunbook = Output.empty();
-        this.name = Output.empty();
-        this.runbookName = Output.empty();
-        this.serviceUri = Output.empty();
-        this.useCommonAlertSchema = Output.empty();
-        this.webhookResourceId = Output.empty();
+        this.automationAccountId = Codegen.empty();
+        this.isGlobalRunbook = Codegen.empty();
+        this.name = Codegen.empty();
+        this.runbookName = Codegen.empty();
+        this.serviceUri = Codegen.empty();
+        this.useCommonAlertSchema = Codegen.empty();
+        this.webhookResourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -176,7 +177,7 @@ public final class AutomationRunbookReceiverArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder runbookName(Output<String> runbookName) {
@@ -192,7 +193,7 @@ public final class AutomationRunbookReceiverArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder serviceUri(@Nullable String serviceUri) {
-            this.serviceUri = Output.ofNullable(serviceUri);
+            this.serviceUri = Codegen.ofNullable(serviceUri);
             return this;
         }
         public Builder useCommonAlertSchema(@Nullable Output<Boolean> useCommonAlertSchema) {
@@ -200,7 +201,7 @@ public final class AutomationRunbookReceiverArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
-            this.useCommonAlertSchema = Output.ofNullable(useCommonAlertSchema);
+            this.useCommonAlertSchema = Codegen.ofNullable(useCommonAlertSchema);
             return this;
         }
         public Builder webhookResourceId(Output<String> webhookResourceId) {

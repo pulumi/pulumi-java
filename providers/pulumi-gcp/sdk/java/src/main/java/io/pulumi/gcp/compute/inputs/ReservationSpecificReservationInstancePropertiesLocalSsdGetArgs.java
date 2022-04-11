@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -36,7 +37,7 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsdGetAr
       private final @Nullable Output<String> interface_;
 
     public Output<String> getInterface_() {
-        return this.interface_ == null ? Output.empty() : this.interface_;
+        return this.interface_ == null ? Codegen.empty() : this.interface_;
     }
 
     public ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs(
@@ -47,8 +48,8 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsdGetAr
     }
 
     private ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs() {
-        this.diskSizeGb = Output.empty();
-        this.interface_ = Output.empty();
+        this.diskSizeGb = Codegen.empty();
+        this.interface_ = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -86,7 +87,7 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsdGetAr
             return this;
         }
         public Builder interface_(@Nullable String interface_) {
-            this.interface_ = Output.ofNullable(interface_);
+            this.interface_ = Codegen.ofNullable(interface_);
             return this;
         }        public ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs build() {
             return new ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs(diskSizeGb, interface_);

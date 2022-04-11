@@ -5,6 +5,7 @@ package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import io.pulumi.googlenative.testing_v1.inputs.IosDeviceFileArgs;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class IosTestSetupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<FileReferenceArgs>> additionalIpas;
 
     public Output<List<FileReferenceArgs>> getAdditionalIpas() {
-        return this.additionalIpas == null ? Output.empty() : this.additionalIpas;
+        return this.additionalIpas == null ? Codegen.empty() : this.additionalIpas;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class IosTestSetupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> networkProfile;
 
     public Output<String> getNetworkProfile() {
-        return this.networkProfile == null ? Output.empty() : this.networkProfile;
+        return this.networkProfile == null ? Codegen.empty() : this.networkProfile;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class IosTestSetupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<IosDeviceFileArgs>> pullDirectories;
 
     public Output<List<IosDeviceFileArgs>> getPullDirectories() {
-        return this.pullDirectories == null ? Output.empty() : this.pullDirectories;
+        return this.pullDirectories == null ? Codegen.empty() : this.pullDirectories;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class IosTestSetupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<IosDeviceFileArgs>> pushFiles;
 
     public Output<List<IosDeviceFileArgs>> getPushFiles() {
-        return this.pushFiles == null ? Output.empty() : this.pushFiles;
+        return this.pushFiles == null ? Codegen.empty() : this.pushFiles;
     }
 
     public IosTestSetupArgs(
@@ -77,10 +78,10 @@ public final class IosTestSetupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IosTestSetupArgs() {
-        this.additionalIpas = Output.empty();
-        this.networkProfile = Output.empty();
-        this.pullDirectories = Output.empty();
-        this.pushFiles = Output.empty();
+        this.additionalIpas = Codegen.empty();
+        this.networkProfile = Codegen.empty();
+        this.pullDirectories = Codegen.empty();
+        this.pushFiles = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class IosTestSetupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder additionalIpas(@Nullable List<FileReferenceArgs> additionalIpas) {
-            this.additionalIpas = Output.ofNullable(additionalIpas);
+            this.additionalIpas = Codegen.ofNullable(additionalIpas);
             return this;
         }
         public Builder additionalIpas(FileReferenceArgs... additionalIpas) {
@@ -125,7 +126,7 @@ public final class IosTestSetupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkProfile(@Nullable String networkProfile) {
-            this.networkProfile = Output.ofNullable(networkProfile);
+            this.networkProfile = Codegen.ofNullable(networkProfile);
             return this;
         }
         public Builder pullDirectories(@Nullable Output<List<IosDeviceFileArgs>> pullDirectories) {
@@ -133,7 +134,7 @@ public final class IosTestSetupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pullDirectories(@Nullable List<IosDeviceFileArgs> pullDirectories) {
-            this.pullDirectories = Output.ofNullable(pullDirectories);
+            this.pullDirectories = Codegen.ofNullable(pullDirectories);
             return this;
         }
         public Builder pullDirectories(IosDeviceFileArgs... pullDirectories) {
@@ -144,7 +145,7 @@ public final class IosTestSetupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pushFiles(@Nullable List<IosDeviceFileArgs> pushFiles) {
-            this.pushFiles = Output.ofNullable(pushFiles);
+            this.pushFiles = Codegen.ofNullable(pushFiles);
             return this;
         }
         public Builder pushFiles(IosDeviceFileArgs... pushFiles) {

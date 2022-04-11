@@ -6,6 +6,7 @@ package io.pulumi.awsnative.eks.inputs;
 import io.pulumi.awsnative.eks.inputs.FargateProfileLabelArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ public final class FargateProfileSelectorArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<FargateProfileLabelArgs>> labels;
 
     public Output<List<FargateProfileLabelArgs>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="namespace", required=true)
@@ -38,8 +39,8 @@ public final class FargateProfileSelectorArgs extends io.pulumi.resources.Resour
     }
 
     private FargateProfileSelectorArgs() {
-        this.labels = Output.empty();
-        this.namespace = Output.empty();
+        this.labels = Codegen.empty();
+        this.namespace = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -69,7 +70,7 @@ public final class FargateProfileSelectorArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder labels(@Nullable List<FargateProfileLabelArgs> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder labels(FargateProfileLabelArgs... labels) {

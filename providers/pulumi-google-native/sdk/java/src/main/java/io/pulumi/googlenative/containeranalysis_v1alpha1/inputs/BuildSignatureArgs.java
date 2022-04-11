@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.enums.BuildSignatureKeyType;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class BuildSignatureArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> keyId;
 
     public Output<String> getKeyId() {
-        return this.keyId == null ? Output.empty() : this.keyId;
+        return this.keyId == null ? Codegen.empty() : this.keyId;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class BuildSignatureArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BuildSignatureKeyType> keyType;
 
     public Output<BuildSignatureKeyType> getKeyType() {
-        return this.keyType == null ? Output.empty() : this.keyType;
+        return this.keyType == null ? Codegen.empty() : this.keyType;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class BuildSignatureArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> publicKey;
 
     public Output<String> getPublicKey() {
-        return this.publicKey == null ? Output.empty() : this.publicKey;
+        return this.publicKey == null ? Codegen.empty() : this.publicKey;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class BuildSignatureArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> signature;
 
     public Output<String> getSignature() {
-        return this.signature == null ? Output.empty() : this.signature;
+        return this.signature == null ? Codegen.empty() : this.signature;
     }
 
     public BuildSignatureArgs(
@@ -75,10 +76,10 @@ public final class BuildSignatureArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BuildSignatureArgs() {
-        this.keyId = Output.empty();
-        this.keyType = Output.empty();
-        this.publicKey = Output.empty();
-        this.signature = Output.empty();
+        this.keyId = Codegen.empty();
+        this.keyType = Codegen.empty();
+        this.publicKey = Codegen.empty();
+        this.signature = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class BuildSignatureArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyId(@Nullable String keyId) {
-            this.keyId = Output.ofNullable(keyId);
+            this.keyId = Codegen.ofNullable(keyId);
             return this;
         }
         public Builder keyType(@Nullable Output<BuildSignatureKeyType> keyType) {
@@ -120,7 +121,7 @@ public final class BuildSignatureArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyType(@Nullable BuildSignatureKeyType keyType) {
-            this.keyType = Output.ofNullable(keyType);
+            this.keyType = Codegen.ofNullable(keyType);
             return this;
         }
         public Builder publicKey(@Nullable Output<String> publicKey) {
@@ -128,7 +129,7 @@ public final class BuildSignatureArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicKey(@Nullable String publicKey) {
-            this.publicKey = Output.ofNullable(publicKey);
+            this.publicKey = Codegen.ofNullable(publicKey);
             return this;
         }
         public Builder signature(@Nullable Output<String> signature) {
@@ -136,7 +137,7 @@ public final class BuildSignatureArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder signature(@Nullable String signature) {
-            this.signature = Output.ofNullable(signature);
+            this.signature = Codegen.ofNullable(signature);
             return this;
         }        public BuildSignatureArgs build() {
             return new BuildSignatureArgs(keyId, keyType, publicKey, signature);

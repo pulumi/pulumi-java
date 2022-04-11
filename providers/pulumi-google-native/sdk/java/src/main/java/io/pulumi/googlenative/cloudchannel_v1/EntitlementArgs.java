@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudchannel_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudchannel_v1.inputs.GoogleCloudChannelV1AssociationInfoArgs;
 import io.pulumi.googlenative.cloudchannel_v1.inputs.GoogleCloudChannelV1CommitmentSettingsArgs;
 import io.pulumi.googlenative.cloudchannel_v1.inputs.GoogleCloudChannelV1ParameterArgs;
@@ -33,7 +34,7 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GoogleCloudChannelV1AssociationInfoArgs> associationInfo;
 
     public Output<GoogleCloudChannelV1AssociationInfoArgs> getAssociationInfo() {
-        return this.associationInfo == null ? Output.empty() : this.associationInfo;
+        return this.associationInfo == null ? Codegen.empty() : this.associationInfo;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GoogleCloudChannelV1CommitmentSettingsArgs> commitmentSettings;
 
     public Output<GoogleCloudChannelV1CommitmentSettingsArgs> getCommitmentSettings() {
-        return this.commitmentSettings == null ? Output.empty() : this.commitmentSettings;
+        return this.commitmentSettings == null ? Codegen.empty() : this.commitmentSettings;
     }
 
     @Import(name="customerId", required=true)
@@ -73,7 +74,7 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<GoogleCloudChannelV1ParameterArgs>> parameters;
 
     public Output<List<GoogleCloudChannelV1ParameterArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> purchaseOrderId;
 
     public Output<String> getPurchaseOrderId() {
-        return this.purchaseOrderId == null ? Output.empty() : this.purchaseOrderId;
+        return this.purchaseOrderId == null ? Codegen.empty() : this.purchaseOrderId;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     public EntitlementArgs(
@@ -118,14 +119,14 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EntitlementArgs() {
-        this.accountId = Output.empty();
-        this.associationInfo = Output.empty();
-        this.commitmentSettings = Output.empty();
-        this.customerId = Output.empty();
-        this.offer = Output.empty();
-        this.parameters = Output.empty();
-        this.purchaseOrderId = Output.empty();
-        this.requestId = Output.empty();
+        this.accountId = Codegen.empty();
+        this.associationInfo = Codegen.empty();
+        this.commitmentSettings = Codegen.empty();
+        this.customerId = Codegen.empty();
+        this.offer = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.purchaseOrderId = Codegen.empty();
+        this.requestId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -175,7 +176,7 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder associationInfo(@Nullable GoogleCloudChannelV1AssociationInfoArgs associationInfo) {
-            this.associationInfo = Output.ofNullable(associationInfo);
+            this.associationInfo = Codegen.ofNullable(associationInfo);
             return this;
         }
         public Builder commitmentSettings(@Nullable Output<GoogleCloudChannelV1CommitmentSettingsArgs> commitmentSettings) {
@@ -183,7 +184,7 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder commitmentSettings(@Nullable GoogleCloudChannelV1CommitmentSettingsArgs commitmentSettings) {
-            this.commitmentSettings = Output.ofNullable(commitmentSettings);
+            this.commitmentSettings = Codegen.ofNullable(commitmentSettings);
             return this;
         }
         public Builder customerId(Output<String> customerId) {
@@ -207,7 +208,7 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable List<GoogleCloudChannelV1ParameterArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(GoogleCloudChannelV1ParameterArgs... parameters) {
@@ -218,7 +219,7 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder purchaseOrderId(@Nullable String purchaseOrderId) {
-            this.purchaseOrderId = Output.ofNullable(purchaseOrderId);
+            this.purchaseOrderId = Codegen.ofNullable(purchaseOrderId);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -226,7 +227,7 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }        public EntitlementArgs build() {
             return new EntitlementArgs(accountId, associationInfo, commitmentSettings, customerId, offer, parameters, purchaseOrderId, requestId);

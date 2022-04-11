@@ -7,6 +7,7 @@ import io.pulumi.azurenative.videoanalyzer.enums.EncoderSystemPresetType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -50,8 +51,8 @@ public final class EncoderSystemPresetArgs extends io.pulumi.resources.ResourceA
     }
 
     private EncoderSystemPresetArgs() {
-        this.name = Output.empty();
-        this.type = Output.empty();
+        this.name = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

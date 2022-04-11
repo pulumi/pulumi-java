@@ -5,6 +5,7 @@ package io.pulumi.awsnative.configuration.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class AggregationAuthorizationTagArgs extends io.pulumi.resources.R
     }
 
     private AggregationAuthorizationTagArgs() {
-        this.key = Output.empty();
-        this.value = Output.empty();
+        this.key = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

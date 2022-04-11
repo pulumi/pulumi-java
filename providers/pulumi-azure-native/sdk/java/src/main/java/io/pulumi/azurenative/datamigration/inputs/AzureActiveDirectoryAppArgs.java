@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -60,9 +61,9 @@ public final class AzureActiveDirectoryAppArgs extends io.pulumi.resources.Resou
     }
 
     private AzureActiveDirectoryAppArgs() {
-        this.appKey = Output.empty();
-        this.applicationId = Output.empty();
-        this.tenantId = Output.empty();
+        this.appKey = Codegen.empty();
+        this.applicationId = Codegen.empty();
+        this.tenantId = Codegen.empty();
     }
 
     public static Builder builder() {

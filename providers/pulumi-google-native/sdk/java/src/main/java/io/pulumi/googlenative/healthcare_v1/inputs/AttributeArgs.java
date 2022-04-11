@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class AttributeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> attributeDefinitionId;
 
     public Output<String> getAttributeDefinitionId() {
-        return this.attributeDefinitionId == null ? Output.empty() : this.attributeDefinitionId;
+        return this.attributeDefinitionId == null ? Codegen.empty() : this.attributeDefinitionId;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class AttributeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AttributeArgs() {
-        this.attributeDefinitionId = Output.empty();
-        this.values = Output.empty();
+        this.attributeDefinitionId = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class AttributeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder attributeDefinitionId(@Nullable String attributeDefinitionId) {
-            this.attributeDefinitionId = Output.ofNullable(attributeDefinitionId);
+            this.attributeDefinitionId = Codegen.ofNullable(attributeDefinitionId);
             return this;
         }
         public Builder values(Output<List<String>> values) {

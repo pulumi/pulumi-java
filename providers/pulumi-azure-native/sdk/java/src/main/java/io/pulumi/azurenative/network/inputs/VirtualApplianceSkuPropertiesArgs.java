@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class VirtualApplianceSkuPropertiesArgs extends io.pulumi.resources
       private final @Nullable Output<String> bundledScaleUnit;
 
     public Output<String> getBundledScaleUnit() {
-        return this.bundledScaleUnit == null ? Output.empty() : this.bundledScaleUnit;
+        return this.bundledScaleUnit == null ? Codegen.empty() : this.bundledScaleUnit;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class VirtualApplianceSkuPropertiesArgs extends io.pulumi.resources
       private final @Nullable Output<String> marketPlaceVersion;
 
     public Output<String> getMarketPlaceVersion() {
-        return this.marketPlaceVersion == null ? Output.empty() : this.marketPlaceVersion;
+        return this.marketPlaceVersion == null ? Codegen.empty() : this.marketPlaceVersion;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class VirtualApplianceSkuPropertiesArgs extends io.pulumi.resources
       private final @Nullable Output<String> vendor;
 
     public Output<String> getVendor() {
-        return this.vendor == null ? Output.empty() : this.vendor;
+        return this.vendor == null ? Codegen.empty() : this.vendor;
     }
 
     public VirtualApplianceSkuPropertiesArgs(
@@ -61,9 +62,9 @@ public final class VirtualApplianceSkuPropertiesArgs extends io.pulumi.resources
     }
 
     private VirtualApplianceSkuPropertiesArgs() {
-        this.bundledScaleUnit = Output.empty();
-        this.marketPlaceVersion = Output.empty();
-        this.vendor = Output.empty();
+        this.bundledScaleUnit = Codegen.empty();
+        this.marketPlaceVersion = Codegen.empty();
+        this.vendor = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class VirtualApplianceSkuPropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder bundledScaleUnit(@Nullable String bundledScaleUnit) {
-            this.bundledScaleUnit = Output.ofNullable(bundledScaleUnit);
+            this.bundledScaleUnit = Codegen.ofNullable(bundledScaleUnit);
             return this;
         }
         public Builder marketPlaceVersion(@Nullable Output<String> marketPlaceVersion) {
@@ -103,7 +104,7 @@ public final class VirtualApplianceSkuPropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder marketPlaceVersion(@Nullable String marketPlaceVersion) {
-            this.marketPlaceVersion = Output.ofNullable(marketPlaceVersion);
+            this.marketPlaceVersion = Codegen.ofNullable(marketPlaceVersion);
             return this;
         }
         public Builder vendor(@Nullable Output<String> vendor) {
@@ -111,7 +112,7 @@ public final class VirtualApplianceSkuPropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder vendor(@Nullable String vendor) {
-            this.vendor = Output.ofNullable(vendor);
+            this.vendor = Codegen.ofNullable(vendor);
             return this;
         }        public VirtualApplianceSkuPropertiesArgs build() {
             return new VirtualApplianceSkuPropertiesArgs(bundledScaleUnit, marketPlaceVersion, vendor);

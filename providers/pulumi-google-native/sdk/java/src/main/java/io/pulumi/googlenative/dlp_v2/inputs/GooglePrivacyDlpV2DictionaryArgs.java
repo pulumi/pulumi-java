@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CloudStoragePathArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2WordListArgs;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GooglePrivacyDlpV2DictionaryArgs extends io.pulumi.resources.
       private final @Nullable Output<GooglePrivacyDlpV2CloudStoragePathArgs> cloudStoragePath;
 
     public Output<GooglePrivacyDlpV2CloudStoragePathArgs> getCloudStoragePath() {
-        return this.cloudStoragePath == null ? Output.empty() : this.cloudStoragePath;
+        return this.cloudStoragePath == null ? Codegen.empty() : this.cloudStoragePath;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GooglePrivacyDlpV2DictionaryArgs extends io.pulumi.resources.
       private final @Nullable Output<GooglePrivacyDlpV2WordListArgs> wordList;
 
     public Output<GooglePrivacyDlpV2WordListArgs> getWordList() {
-        return this.wordList == null ? Output.empty() : this.wordList;
+        return this.wordList == null ? Codegen.empty() : this.wordList;
     }
 
     public GooglePrivacyDlpV2DictionaryArgs(
@@ -49,8 +50,8 @@ public final class GooglePrivacyDlpV2DictionaryArgs extends io.pulumi.resources.
     }
 
     private GooglePrivacyDlpV2DictionaryArgs() {
-        this.cloudStoragePath = Output.empty();
-        this.wordList = Output.empty();
+        this.cloudStoragePath = Codegen.empty();
+        this.wordList = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GooglePrivacyDlpV2DictionaryArgs extends io.pulumi.resources.
             return this;
         }
         public Builder cloudStoragePath(@Nullable GooglePrivacyDlpV2CloudStoragePathArgs cloudStoragePath) {
-            this.cloudStoragePath = Output.ofNullable(cloudStoragePath);
+            this.cloudStoragePath = Codegen.ofNullable(cloudStoragePath);
             return this;
         }
         public Builder wordList(@Nullable Output<GooglePrivacyDlpV2WordListArgs> wordList) {
@@ -88,7 +89,7 @@ public final class GooglePrivacyDlpV2DictionaryArgs extends io.pulumi.resources.
             return this;
         }
         public Builder wordList(@Nullable GooglePrivacyDlpV2WordListArgs wordList) {
-            this.wordList = Output.ofNullable(wordList);
+            this.wordList = Codegen.ofNullable(wordList);
             return this;
         }        public GooglePrivacyDlpV2DictionaryArgs build() {
             return new GooglePrivacyDlpV2DictionaryArgs(cloudStoragePath, wordList);

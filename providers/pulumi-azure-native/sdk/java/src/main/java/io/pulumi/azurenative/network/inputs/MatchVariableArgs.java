@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.enums.WebApplicationFirewallMatchVariable;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class MatchVariableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> selector;
 
     public Output<String> getSelector() {
-        return this.selector == null ? Output.empty() : this.selector;
+        return this.selector == null ? Codegen.empty() : this.selector;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class MatchVariableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MatchVariableArgs() {
-        this.selector = Output.empty();
-        this.variableName = Output.empty();
+        this.selector = Codegen.empty();
+        this.variableName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class MatchVariableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selector(@Nullable String selector) {
-            this.selector = Output.ofNullable(selector);
+            this.selector = Codegen.ofNullable(selector);
             return this;
         }
         public Builder variableName(Output<Either<String,WebApplicationFirewallMatchVariable>> variableName) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.recaptcha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class EnterpriseKeyTestingOptionsGetArgs extends io.pulumi.resource
       private final @Nullable Output<String> testingChallenge;
 
     public Output<String> getTestingChallenge() {
-        return this.testingChallenge == null ? Output.empty() : this.testingChallenge;
+        return this.testingChallenge == null ? Codegen.empty() : this.testingChallenge;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class EnterpriseKeyTestingOptionsGetArgs extends io.pulumi.resource
       private final @Nullable Output<Double> testingScore;
 
     public Output<Double> getTestingScore() {
-        return this.testingScore == null ? Output.empty() : this.testingScore;
+        return this.testingScore == null ? Codegen.empty() : this.testingScore;
     }
 
     public EnterpriseKeyTestingOptionsGetArgs(
@@ -45,8 +46,8 @@ public final class EnterpriseKeyTestingOptionsGetArgs extends io.pulumi.resource
     }
 
     private EnterpriseKeyTestingOptionsGetArgs() {
-        this.testingChallenge = Output.empty();
-        this.testingScore = Output.empty();
+        this.testingChallenge = Codegen.empty();
+        this.testingScore = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class EnterpriseKeyTestingOptionsGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder testingChallenge(@Nullable String testingChallenge) {
-            this.testingChallenge = Output.ofNullable(testingChallenge);
+            this.testingChallenge = Codegen.ofNullable(testingChallenge);
             return this;
         }
         public Builder testingScore(@Nullable Output<Double> testingScore) {
@@ -84,7 +85,7 @@ public final class EnterpriseKeyTestingOptionsGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder testingScore(@Nullable Double testingScore) {
-            this.testingScore = Output.ofNullable(testingScore);
+            this.testingScore = Codegen.ofNullable(testingScore);
             return this;
         }        public EnterpriseKeyTestingOptionsGetArgs build() {
             return new EnterpriseKeyTestingOptionsGetArgs(testingChallenge, testingScore);

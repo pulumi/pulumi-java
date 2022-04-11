@@ -6,6 +6,7 @@ package io.pulumi.azurenative.recoveryservices;
 import io.pulumi.azurenative.recoveryservices.inputs.AddVCenterRequestPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class ReplicationvCenterArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<AddVCenterRequestPropertiesArgs> properties;
 
     public Output<AddVCenterRequestPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ReplicationvCenterArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> vCenterName;
 
     public Output<String> getVCenterName() {
-        return this.vCenterName == null ? Output.empty() : this.vCenterName;
+        return this.vCenterName == null ? Codegen.empty() : this.vCenterName;
     }
 
     public ReplicationvCenterArgs(
@@ -84,11 +85,11 @@ public final class ReplicationvCenterArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ReplicationvCenterArgs() {
-        this.fabricName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
-        this.vCenterName = Output.empty();
+        this.fabricName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.vCenterName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class ReplicationvCenterArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder properties(@Nullable AddVCenterRequestPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -156,7 +157,7 @@ public final class ReplicationvCenterArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder vCenterName(@Nullable String vCenterName) {
-            this.vCenterName = Output.ofNullable(vCenterName);
+            this.vCenterName = Codegen.ofNullable(vCenterName);
             return this;
         }        public ReplicationvCenterArgs build() {
             return new ReplicationvCenterArgs(fabricName, properties, resourceGroupName, resourceName, vCenterName);

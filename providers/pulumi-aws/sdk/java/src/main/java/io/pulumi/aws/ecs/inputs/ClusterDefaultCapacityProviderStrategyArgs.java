@@ -5,6 +5,7 @@ package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ClusterDefaultCapacityProviderStrategyArgs extends io.pulumi.
       private final @Nullable Output<Integer> base;
 
     public Output<Integer> getBase() {
-        return this.base == null ? Output.empty() : this.base;
+        return this.base == null ? Codegen.empty() : this.base;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ClusterDefaultCapacityProviderStrategyArgs extends io.pulumi.
       private final @Nullable Output<Integer> weight;
 
     public Output<Integer> getWeight() {
-        return this.weight == null ? Output.empty() : this.weight;
+        return this.weight == null ? Codegen.empty() : this.weight;
     }
 
     public ClusterDefaultCapacityProviderStrategyArgs(
@@ -58,9 +59,9 @@ public final class ClusterDefaultCapacityProviderStrategyArgs extends io.pulumi.
     }
 
     private ClusterDefaultCapacityProviderStrategyArgs() {
-        this.base = Output.empty();
-        this.capacityProvider = Output.empty();
-        this.weight = Output.empty();
+        this.base = Codegen.empty();
+        this.capacityProvider = Codegen.empty();
+        this.weight = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class ClusterDefaultCapacityProviderStrategyArgs extends io.pulumi.
             return this;
         }
         public Builder base(@Nullable Integer base) {
-            this.base = Output.ofNullable(base);
+            this.base = Codegen.ofNullable(base);
             return this;
         }
         public Builder capacityProvider(Output<String> capacityProvider) {
@@ -108,7 +109,7 @@ public final class ClusterDefaultCapacityProviderStrategyArgs extends io.pulumi.
             return this;
         }
         public Builder weight(@Nullable Integer weight) {
-            this.weight = Output.ofNullable(weight);
+            this.weight = Codegen.ofNullable(weight);
             return this;
         }        public ClusterDefaultCapacityProviderStrategyArgs build() {
             return new ClusterDefaultCapacityProviderStrategyArgs(base, capacityProvider, weight);

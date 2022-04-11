@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class URLMapPathMatcherDefaultRouteActionRetryPolicyArgs extends io
       private final @Nullable Output<Integer> numRetries;
 
     public Output<Integer> getNumRetries() {
-        return this.numRetries == null ? Output.empty() : this.numRetries;
+        return this.numRetries == null ? Codegen.empty() : this.numRetries;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class URLMapPathMatcherDefaultRouteActionRetryPolicyArgs extends io
       private final @Nullable Output<URLMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutArgs> perTryTimeout;
 
     public Output<URLMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutArgs> getPerTryTimeout() {
-        return this.perTryTimeout == null ? Output.empty() : this.perTryTimeout;
+        return this.perTryTimeout == null ? Codegen.empty() : this.perTryTimeout;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class URLMapPathMatcherDefaultRouteActionRetryPolicyArgs extends io
       private final @Nullable Output<List<String>> retryConditions;
 
     public Output<List<String>> getRetryConditions() {
-        return this.retryConditions == null ? Output.empty() : this.retryConditions;
+        return this.retryConditions == null ? Codegen.empty() : this.retryConditions;
     }
 
     public URLMapPathMatcherDefaultRouteActionRetryPolicyArgs(
@@ -77,9 +78,9 @@ public final class URLMapPathMatcherDefaultRouteActionRetryPolicyArgs extends io
     }
 
     private URLMapPathMatcherDefaultRouteActionRetryPolicyArgs() {
-        this.numRetries = Output.empty();
-        this.perTryTimeout = Output.empty();
-        this.retryConditions = Output.empty();
+        this.numRetries = Codegen.empty();
+        this.perTryTimeout = Codegen.empty();
+        this.retryConditions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class URLMapPathMatcherDefaultRouteActionRetryPolicyArgs extends io
             return this;
         }
         public Builder numRetries(@Nullable Integer numRetries) {
-            this.numRetries = Output.ofNullable(numRetries);
+            this.numRetries = Codegen.ofNullable(numRetries);
             return this;
         }
         public Builder perTryTimeout(@Nullable Output<URLMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutArgs> perTryTimeout) {
@@ -119,7 +120,7 @@ public final class URLMapPathMatcherDefaultRouteActionRetryPolicyArgs extends io
             return this;
         }
         public Builder perTryTimeout(@Nullable URLMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutArgs perTryTimeout) {
-            this.perTryTimeout = Output.ofNullable(perTryTimeout);
+            this.perTryTimeout = Codegen.ofNullable(perTryTimeout);
             return this;
         }
         public Builder retryConditions(@Nullable Output<List<String>> retryConditions) {
@@ -127,7 +128,7 @@ public final class URLMapPathMatcherDefaultRouteActionRetryPolicyArgs extends io
             return this;
         }
         public Builder retryConditions(@Nullable List<String> retryConditions) {
-            this.retryConditions = Output.ofNullable(retryConditions);
+            this.retryConditions = Codegen.ofNullable(retryConditions);
             return this;
         }
         public Builder retryConditions(String... retryConditions) {

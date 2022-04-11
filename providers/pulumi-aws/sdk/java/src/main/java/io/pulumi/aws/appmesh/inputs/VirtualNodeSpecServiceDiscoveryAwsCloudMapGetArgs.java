@@ -5,6 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class VirtualNodeSpecServiceDiscoveryAwsCloudMapGetArgs extends io.
       private final @Nullable Output<Map<String,String>> attributes;
 
     public Output<Map<String,String>> getAttributes() {
-        return this.attributes == null ? Output.empty() : this.attributes;
+        return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
     /**
@@ -59,9 +60,9 @@ public final class VirtualNodeSpecServiceDiscoveryAwsCloudMapGetArgs extends io.
     }
 
     private VirtualNodeSpecServiceDiscoveryAwsCloudMapGetArgs() {
-        this.attributes = Output.empty();
-        this.namespaceName = Output.empty();
-        this.serviceName = Output.empty();
+        this.attributes = Codegen.empty();
+        this.namespaceName = Codegen.empty();
+        this.serviceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class VirtualNodeSpecServiceDiscoveryAwsCloudMapGetArgs extends io.
             return this;
         }
         public Builder attributes(@Nullable Map<String,String> attributes) {
-            this.attributes = Output.ofNullable(attributes);
+            this.attributes = Codegen.ofNullable(attributes);
             return this;
         }
         public Builder namespaceName(Output<String> namespaceName) {

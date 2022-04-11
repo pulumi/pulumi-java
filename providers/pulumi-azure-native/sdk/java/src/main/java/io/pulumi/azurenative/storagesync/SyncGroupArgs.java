@@ -5,6 +5,7 @@ package io.pulumi.azurenative.storagesync;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -44,7 +45,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> syncGroupName;
 
     public Output<String> getSyncGroupName() {
-        return this.syncGroupName == null ? Output.empty() : this.syncGroupName;
+        return this.syncGroupName == null ? Codegen.empty() : this.syncGroupName;
     }
 
     public SyncGroupArgs(
@@ -57,9 +58,9 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SyncGroupArgs() {
-        this.resourceGroupName = Output.empty();
-        this.storageSyncServiceName = Output.empty();
-        this.syncGroupName = Output.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.storageSyncServiceName = Codegen.empty();
+        this.syncGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder syncGroupName(@Nullable String syncGroupName) {
-            this.syncGroupName = Output.ofNullable(syncGroupName);
+            this.syncGroupName = Codegen.ofNullable(syncGroupName);
             return this;
         }        public SyncGroupArgs build() {
             return new SyncGroupArgs(resourceGroupName, storageSyncServiceName, syncGroupName);

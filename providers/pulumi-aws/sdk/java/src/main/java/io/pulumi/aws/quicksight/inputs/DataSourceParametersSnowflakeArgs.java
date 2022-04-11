@@ -5,6 +5,7 @@ package io.pulumi.aws.quicksight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -56,9 +57,9 @@ public final class DataSourceParametersSnowflakeArgs extends io.pulumi.resources
     }
 
     private DataSourceParametersSnowflakeArgs() {
-        this.database = Output.empty();
-        this.host = Output.empty();
-        this.warehouse = Output.empty();
+        this.database = Codegen.empty();
+        this.host = Codegen.empty();
+        this.warehouse = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ParquetOptionsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableListInference;
 
     public Output<Boolean> getEnableListInference() {
-        return this.enableListInference == null ? Output.empty() : this.enableListInference;
+        return this.enableListInference == null ? Codegen.empty() : this.enableListInference;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ParquetOptionsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enumAsString;
 
     public Output<Boolean> getEnumAsString() {
-        return this.enumAsString == null ? Output.empty() : this.enumAsString;
+        return this.enumAsString == null ? Codegen.empty() : this.enumAsString;
     }
 
     public ParquetOptionsArgs(
@@ -44,8 +45,8 @@ public final class ParquetOptionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ParquetOptionsArgs() {
-        this.enableListInference = Output.empty();
-        this.enumAsString = Output.empty();
+        this.enableListInference = Codegen.empty();
+        this.enumAsString = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class ParquetOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableListInference(@Nullable Boolean enableListInference) {
-            this.enableListInference = Output.ofNullable(enableListInference);
+            this.enableListInference = Codegen.ofNullable(enableListInference);
             return this;
         }
         public Builder enumAsString(@Nullable Output<Boolean> enumAsString) {
@@ -83,7 +84,7 @@ public final class ParquetOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enumAsString(@Nullable Boolean enumAsString) {
-            this.enumAsString = Output.ofNullable(enumAsString);
+            this.enumAsString = Codegen.ofNullable(enumAsString);
             return this;
         }        public ParquetOptionsArgs build() {
             return new ParquetOptionsArgs(enableListInference, enumAsString);

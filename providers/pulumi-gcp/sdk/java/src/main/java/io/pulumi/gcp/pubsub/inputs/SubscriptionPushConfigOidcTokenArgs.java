@@ -5,6 +5,7 @@ package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class SubscriptionPushConfigOidcTokenArgs extends io.pulumi.resourc
       private final @Nullable Output<String> audience;
 
     public Output<String> getAudience() {
-        return this.audience == null ? Output.empty() : this.audience;
+        return this.audience == null ? Codegen.empty() : this.audience;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class SubscriptionPushConfigOidcTokenArgs extends io.pulumi.resourc
     }
 
     private SubscriptionPushConfigOidcTokenArgs() {
-        this.audience = Output.empty();
-        this.serviceAccountEmail = Output.empty();
+        this.audience = Codegen.empty();
+        this.serviceAccountEmail = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class SubscriptionPushConfigOidcTokenArgs extends io.pulumi.resourc
             return this;
         }
         public Builder audience(@Nullable String audience) {
-            this.audience = Output.ofNullable(audience);
+            this.audience = Codegen.ofNullable(audience);
             return this;
         }
         public Builder serviceAccountEmail(Output<String> serviceAccountEmail) {

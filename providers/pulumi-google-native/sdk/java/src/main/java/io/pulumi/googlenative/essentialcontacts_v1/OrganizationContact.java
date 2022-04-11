@@ -6,6 +6,7 @@ package io.pulumi.googlenative.essentialcontacts_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.essentialcontacts_v1.OrganizationContactArgs;
 import java.lang.String;
@@ -126,7 +127,7 @@ public class OrganizationContact extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public OrganizationContact(String name, OrganizationContactArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:essentialcontacts/v1:OrganizationContact", name, args == null ? OrganizationContactArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:essentialcontacts/v1:OrganizationContact", name, args == null ? OrganizationContactArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private OrganizationContact(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

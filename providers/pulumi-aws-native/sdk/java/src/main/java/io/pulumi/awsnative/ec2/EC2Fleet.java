@@ -15,6 +15,7 @@ import io.pulumi.awsnative.ec2.outputs.EC2FleetTargetCapacitySpecificationReques
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -127,7 +128,7 @@ public class EC2Fleet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EC2Fleet(String name, EC2FleetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ec2:EC2Fleet", name, args == null ? EC2FleetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ec2:EC2Fleet", name, args == null ? EC2FleetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EC2Fleet(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

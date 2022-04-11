@@ -5,6 +5,7 @@ package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class UserPoolPasswordPolicyArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Integer> minimumLength;
 
     public Output<Integer> getMinimumLength() {
-        return this.minimumLength == null ? Output.empty() : this.minimumLength;
+        return this.minimumLength == null ? Codegen.empty() : this.minimumLength;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class UserPoolPasswordPolicyArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Boolean> requireLowercase;
 
     public Output<Boolean> getRequireLowercase() {
-        return this.requireLowercase == null ? Output.empty() : this.requireLowercase;
+        return this.requireLowercase == null ? Codegen.empty() : this.requireLowercase;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class UserPoolPasswordPolicyArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Boolean> requireNumbers;
 
     public Output<Boolean> getRequireNumbers() {
-        return this.requireNumbers == null ? Output.empty() : this.requireNumbers;
+        return this.requireNumbers == null ? Codegen.empty() : this.requireNumbers;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class UserPoolPasswordPolicyArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Boolean> requireSymbols;
 
     public Output<Boolean> getRequireSymbols() {
-        return this.requireSymbols == null ? Output.empty() : this.requireSymbols;
+        return this.requireSymbols == null ? Codegen.empty() : this.requireSymbols;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class UserPoolPasswordPolicyArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Boolean> requireUppercase;
 
     public Output<Boolean> getRequireUppercase() {
-        return this.requireUppercase == null ? Output.empty() : this.requireUppercase;
+        return this.requireUppercase == null ? Codegen.empty() : this.requireUppercase;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class UserPoolPasswordPolicyArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Integer> temporaryPasswordValidityDays;
 
     public Output<Integer> getTemporaryPasswordValidityDays() {
-        return this.temporaryPasswordValidityDays == null ? Output.empty() : this.temporaryPasswordValidityDays;
+        return this.temporaryPasswordValidityDays == null ? Codegen.empty() : this.temporaryPasswordValidityDays;
     }
 
     public UserPoolPasswordPolicyArgs(
@@ -97,12 +98,12 @@ public final class UserPoolPasswordPolicyArgs extends io.pulumi.resources.Resour
     }
 
     private UserPoolPasswordPolicyArgs() {
-        this.minimumLength = Output.empty();
-        this.requireLowercase = Output.empty();
-        this.requireNumbers = Output.empty();
-        this.requireSymbols = Output.empty();
-        this.requireUppercase = Output.empty();
-        this.temporaryPasswordValidityDays = Output.empty();
+        this.minimumLength = Codegen.empty();
+        this.requireLowercase = Codegen.empty();
+        this.requireNumbers = Codegen.empty();
+        this.requireSymbols = Codegen.empty();
+        this.requireUppercase = Codegen.empty();
+        this.temporaryPasswordValidityDays = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class UserPoolPasswordPolicyArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder minimumLength(@Nullable Integer minimumLength) {
-            this.minimumLength = Output.ofNullable(minimumLength);
+            this.minimumLength = Codegen.ofNullable(minimumLength);
             return this;
         }
         public Builder requireLowercase(@Nullable Output<Boolean> requireLowercase) {
@@ -148,7 +149,7 @@ public final class UserPoolPasswordPolicyArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder requireLowercase(@Nullable Boolean requireLowercase) {
-            this.requireLowercase = Output.ofNullable(requireLowercase);
+            this.requireLowercase = Codegen.ofNullable(requireLowercase);
             return this;
         }
         public Builder requireNumbers(@Nullable Output<Boolean> requireNumbers) {
@@ -156,7 +157,7 @@ public final class UserPoolPasswordPolicyArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder requireNumbers(@Nullable Boolean requireNumbers) {
-            this.requireNumbers = Output.ofNullable(requireNumbers);
+            this.requireNumbers = Codegen.ofNullable(requireNumbers);
             return this;
         }
         public Builder requireSymbols(@Nullable Output<Boolean> requireSymbols) {
@@ -164,7 +165,7 @@ public final class UserPoolPasswordPolicyArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder requireSymbols(@Nullable Boolean requireSymbols) {
-            this.requireSymbols = Output.ofNullable(requireSymbols);
+            this.requireSymbols = Codegen.ofNullable(requireSymbols);
             return this;
         }
         public Builder requireUppercase(@Nullable Output<Boolean> requireUppercase) {
@@ -172,7 +173,7 @@ public final class UserPoolPasswordPolicyArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder requireUppercase(@Nullable Boolean requireUppercase) {
-            this.requireUppercase = Output.ofNullable(requireUppercase);
+            this.requireUppercase = Codegen.ofNullable(requireUppercase);
             return this;
         }
         public Builder temporaryPasswordValidityDays(@Nullable Output<Integer> temporaryPasswordValidityDays) {
@@ -180,7 +181,7 @@ public final class UserPoolPasswordPolicyArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder temporaryPasswordValidityDays(@Nullable Integer temporaryPasswordValidityDays) {
-            this.temporaryPasswordValidityDays = Output.ofNullable(temporaryPasswordValidityDays);
+            this.temporaryPasswordValidityDays = Codegen.ofNullable(temporaryPasswordValidityDays);
             return this;
         }        public UserPoolPasswordPolicyArgs build() {
             return new UserPoolPasswordPolicyArgs(minimumLength, requireLowercase, requireNumbers, requireSymbols, requireUppercase, temporaryPasswordValidityDays);

@@ -5,6 +5,7 @@ package io.pulumi.aws.opsworks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> allowSelfManagement;
 
     public Output<Boolean> getAllowSelfManagement() {
-        return this.allowSelfManagement == null ? Output.empty() : this.allowSelfManagement;
+        return this.allowSelfManagement == null ? Codegen.empty() : this.allowSelfManagement;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sshPublicKey;
 
     public Output<String> getSshPublicKey() {
-        return this.sshPublicKey == null ? Output.empty() : this.sshPublicKey;
+        return this.sshPublicKey == null ? Codegen.empty() : this.sshPublicKey;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sshUsername;
 
     public Output<String> getSshUsername() {
-        return this.sshUsername == null ? Output.empty() : this.sshUsername;
+        return this.sshUsername == null ? Codegen.empty() : this.sshUsername;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> userArn;
 
     public Output<String> getUserArn() {
-        return this.userArn == null ? Output.empty() : this.userArn;
+        return this.userArn == null ? Codegen.empty() : this.userArn;
     }
 
     public UserProfileState(
@@ -71,10 +72,10 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserProfileState() {
-        this.allowSelfManagement = Output.empty();
-        this.sshPublicKey = Output.empty();
-        this.sshUsername = Output.empty();
-        this.userArn = Output.empty();
+        this.allowSelfManagement = Codegen.empty();
+        this.sshPublicKey = Codegen.empty();
+        this.sshUsername = Codegen.empty();
+        this.userArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowSelfManagement(@Nullable Boolean allowSelfManagement) {
-            this.allowSelfManagement = Output.ofNullable(allowSelfManagement);
+            this.allowSelfManagement = Codegen.ofNullable(allowSelfManagement);
             return this;
         }
         public Builder sshPublicKey(@Nullable Output<String> sshPublicKey) {
@@ -116,7 +117,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sshPublicKey(@Nullable String sshPublicKey) {
-            this.sshPublicKey = Output.ofNullable(sshPublicKey);
+            this.sshPublicKey = Codegen.ofNullable(sshPublicKey);
             return this;
         }
         public Builder sshUsername(@Nullable Output<String> sshUsername) {
@@ -124,7 +125,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sshUsername(@Nullable String sshUsername) {
-            this.sshUsername = Output.ofNullable(sshUsername);
+            this.sshUsername = Codegen.ofNullable(sshUsername);
             return this;
         }
         public Builder userArn(@Nullable Output<String> userArn) {
@@ -132,7 +133,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userArn(@Nullable String userArn) {
-            this.userArn = Output.ofNullable(userArn);
+            this.userArn = Codegen.ofNullable(userArn);
             return this;
         }        public UserProfileState build() {
             return new UserProfileState(allowSelfManagement, sshPublicKey, sshUsername, userArn);

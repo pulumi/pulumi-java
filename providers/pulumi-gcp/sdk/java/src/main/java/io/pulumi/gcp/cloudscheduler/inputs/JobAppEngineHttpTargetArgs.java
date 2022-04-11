@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudscheduler.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudscheduler.inputs.JobAppEngineHttpTargetAppEngineRoutingArgs;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class JobAppEngineHttpTargetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<JobAppEngineHttpTargetAppEngineRoutingArgs> appEngineRouting;
 
     public Output<JobAppEngineHttpTargetAppEngineRoutingArgs> getAppEngineRouting() {
-        return this.appEngineRouting == null ? Output.empty() : this.appEngineRouting;
+        return this.appEngineRouting == null ? Codegen.empty() : this.appEngineRouting;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class JobAppEngineHttpTargetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> body;
 
     public Output<String> getBody() {
-        return this.body == null ? Output.empty() : this.body;
+        return this.body == null ? Codegen.empty() : this.body;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class JobAppEngineHttpTargetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Map<String,String>> headers;
 
     public Output<Map<String,String>> getHeaders() {
-        return this.headers == null ? Output.empty() : this.headers;
+        return this.headers == null ? Codegen.empty() : this.headers;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class JobAppEngineHttpTargetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> httpMethod;
 
     public Output<String> getHttpMethod() {
-        return this.httpMethod == null ? Output.empty() : this.httpMethod;
+        return this.httpMethod == null ? Codegen.empty() : this.httpMethod;
     }
 
     /**
@@ -94,11 +95,11 @@ public final class JobAppEngineHttpTargetArgs extends io.pulumi.resources.Resour
     }
 
     private JobAppEngineHttpTargetArgs() {
-        this.appEngineRouting = Output.empty();
-        this.body = Output.empty();
-        this.headers = Output.empty();
-        this.httpMethod = Output.empty();
-        this.relativeUri = Output.empty();
+        this.appEngineRouting = Codegen.empty();
+        this.body = Codegen.empty();
+        this.headers = Codegen.empty();
+        this.httpMethod = Codegen.empty();
+        this.relativeUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -134,7 +135,7 @@ public final class JobAppEngineHttpTargetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder appEngineRouting(@Nullable JobAppEngineHttpTargetAppEngineRoutingArgs appEngineRouting) {
-            this.appEngineRouting = Output.ofNullable(appEngineRouting);
+            this.appEngineRouting = Codegen.ofNullable(appEngineRouting);
             return this;
         }
         public Builder body(@Nullable Output<String> body) {
@@ -142,7 +143,7 @@ public final class JobAppEngineHttpTargetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder body(@Nullable String body) {
-            this.body = Output.ofNullable(body);
+            this.body = Codegen.ofNullable(body);
             return this;
         }
         public Builder headers(@Nullable Output<Map<String,String>> headers) {
@@ -150,7 +151,7 @@ public final class JobAppEngineHttpTargetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder headers(@Nullable Map<String,String> headers) {
-            this.headers = Output.ofNullable(headers);
+            this.headers = Codegen.ofNullable(headers);
             return this;
         }
         public Builder httpMethod(@Nullable Output<String> httpMethod) {
@@ -158,7 +159,7 @@ public final class JobAppEngineHttpTargetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder httpMethod(@Nullable String httpMethod) {
-            this.httpMethod = Output.ofNullable(httpMethod);
+            this.httpMethod = Codegen.ofNullable(httpMethod);
             return this;
         }
         public Builder relativeUri(Output<String> relativeUri) {

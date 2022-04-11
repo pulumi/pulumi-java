@@ -7,6 +7,7 @@ import io.pulumi.awsnative.applicationinsights.enums.ApplicationComponentMonitor
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationComponentConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
       private final @Nullable Output<String> componentARN;
 
     public Output<String> getComponentARN() {
-        return this.componentARN == null ? Output.empty() : this.componentARN;
+        return this.componentARN == null ? Codegen.empty() : this.componentARN;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
       private final @Nullable Output<String> componentName;
 
     public Output<String> getComponentName() {
-        return this.componentName == null ? Output.empty() : this.componentName;
+        return this.componentName == null ? Codegen.empty() : this.componentName;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
       private final @Nullable Output<ApplicationComponentConfigurationArgs> customComponentConfiguration;
 
     public Output<ApplicationComponentConfigurationArgs> getCustomComponentConfiguration() {
-        return this.customComponentConfiguration == null ? Output.empty() : this.customComponentConfiguration;
+        return this.customComponentConfiguration == null ? Codegen.empty() : this.customComponentConfiguration;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
       private final @Nullable Output<ApplicationComponentConfigurationArgs> defaultOverwriteComponentConfiguration;
 
     public Output<ApplicationComponentConfigurationArgs> getDefaultOverwriteComponentConfiguration() {
-        return this.defaultOverwriteComponentConfiguration == null ? Output.empty() : this.defaultOverwriteComponentConfiguration;
+        return this.defaultOverwriteComponentConfiguration == null ? Codegen.empty() : this.defaultOverwriteComponentConfiguration;
     }
 
     /**
@@ -102,12 +103,12 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
     }
 
     private ApplicationComponentMonitoringSettingArgs() {
-        this.componentARN = Output.empty();
-        this.componentConfigurationMode = Output.empty();
-        this.componentName = Output.empty();
-        this.customComponentConfiguration = Output.empty();
-        this.defaultOverwriteComponentConfiguration = Output.empty();
-        this.tier = Output.empty();
+        this.componentARN = Codegen.empty();
+        this.componentConfigurationMode = Codegen.empty();
+        this.componentName = Codegen.empty();
+        this.customComponentConfiguration = Codegen.empty();
+        this.defaultOverwriteComponentConfiguration = Codegen.empty();
+        this.tier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
             return this;
         }
         public Builder componentARN(@Nullable String componentARN) {
-            this.componentARN = Output.ofNullable(componentARN);
+            this.componentARN = Codegen.ofNullable(componentARN);
             return this;
         }
         public Builder componentConfigurationMode(Output<ApplicationComponentMonitoringSettingComponentConfigurationMode> componentConfigurationMode) {
@@ -161,7 +162,7 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
             return this;
         }
         public Builder componentName(@Nullable String componentName) {
-            this.componentName = Output.ofNullable(componentName);
+            this.componentName = Codegen.ofNullable(componentName);
             return this;
         }
         public Builder customComponentConfiguration(@Nullable Output<ApplicationComponentConfigurationArgs> customComponentConfiguration) {
@@ -169,7 +170,7 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
             return this;
         }
         public Builder customComponentConfiguration(@Nullable ApplicationComponentConfigurationArgs customComponentConfiguration) {
-            this.customComponentConfiguration = Output.ofNullable(customComponentConfiguration);
+            this.customComponentConfiguration = Codegen.ofNullable(customComponentConfiguration);
             return this;
         }
         public Builder defaultOverwriteComponentConfiguration(@Nullable Output<ApplicationComponentConfigurationArgs> defaultOverwriteComponentConfiguration) {
@@ -177,7 +178,7 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
             return this;
         }
         public Builder defaultOverwriteComponentConfiguration(@Nullable ApplicationComponentConfigurationArgs defaultOverwriteComponentConfiguration) {
-            this.defaultOverwriteComponentConfiguration = Output.ofNullable(defaultOverwriteComponentConfiguration);
+            this.defaultOverwriteComponentConfiguration = Codegen.ofNullable(defaultOverwriteComponentConfiguration);
             return this;
         }
         public Builder tier(Output<String> tier) {

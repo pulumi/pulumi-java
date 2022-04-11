@@ -8,6 +8,7 @@ import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceArgs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupStatefulRuleOptionsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +25,7 @@ public final class RuleGroupRuleGroupArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<RuleGroupRuleGroupRuleVariablesArgs> ruleVariables;
 
     public Output<RuleGroupRuleGroupRuleVariablesArgs> getRuleVariables() {
-        return this.ruleVariables == null ? Output.empty() : this.ruleVariables;
+        return this.ruleVariables == null ? Codegen.empty() : this.ruleVariables;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class RuleGroupRuleGroupArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<RuleGroupRuleGroupStatefulRuleOptionsArgs> statefulRuleOptions;
 
     public Output<RuleGroupRuleGroupStatefulRuleOptionsArgs> getStatefulRuleOptions() {
-        return this.statefulRuleOptions == null ? Output.empty() : this.statefulRuleOptions;
+        return this.statefulRuleOptions == null ? Codegen.empty() : this.statefulRuleOptions;
     }
 
     public RuleGroupRuleGroupArgs(
@@ -59,9 +60,9 @@ public final class RuleGroupRuleGroupArgs extends io.pulumi.resources.ResourceAr
     }
 
     private RuleGroupRuleGroupArgs() {
-        this.ruleVariables = Output.empty();
-        this.rulesSource = Output.empty();
-        this.statefulRuleOptions = Output.empty();
+        this.ruleVariables = Codegen.empty();
+        this.rulesSource = Codegen.empty();
+        this.statefulRuleOptions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class RuleGroupRuleGroupArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder ruleVariables(@Nullable RuleGroupRuleGroupRuleVariablesArgs ruleVariables) {
-            this.ruleVariables = Output.ofNullable(ruleVariables);
+            this.ruleVariables = Codegen.ofNullable(ruleVariables);
             return this;
         }
         public Builder rulesSource(Output<RuleGroupRuleGroupRulesSourceArgs> rulesSource) {
@@ -109,7 +110,7 @@ public final class RuleGroupRuleGroupArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder statefulRuleOptions(@Nullable RuleGroupRuleGroupStatefulRuleOptionsArgs statefulRuleOptions) {
-            this.statefulRuleOptions = Output.ofNullable(statefulRuleOptions);
+            this.statefulRuleOptions = Codegen.ofNullable(statefulRuleOptions);
             return this;
         }        public RuleGroupRuleGroupArgs build() {
             return new RuleGroupRuleGroupArgs(ruleVariables, rulesSource, statefulRuleOptions);

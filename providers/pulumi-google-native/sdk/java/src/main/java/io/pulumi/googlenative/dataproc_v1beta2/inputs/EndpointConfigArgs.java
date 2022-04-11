@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class EndpointConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableHttpPortAccess;
 
     public Output<Boolean> getEnableHttpPortAccess() {
-        return this.enableHttpPortAccess == null ? Output.empty() : this.enableHttpPortAccess;
+        return this.enableHttpPortAccess == null ? Codegen.empty() : this.enableHttpPortAccess;
     }
 
     public EndpointConfigArgs(@Nullable Output<Boolean> enableHttpPortAccess) {
@@ -34,7 +35,7 @@ public final class EndpointConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndpointConfigArgs() {
-        this.enableHttpPortAccess = Output.empty();
+        this.enableHttpPortAccess = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class EndpointConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableHttpPortAccess(@Nullable Boolean enableHttpPortAccess) {
-            this.enableHttpPortAccess = Output.ofNullable(enableHttpPortAccess);
+            this.enableHttpPortAccess = Codegen.ofNullable(enableHttpPortAccess);
             return this;
         }        public EndpointConfigArgs build() {
             return new EndpointConfigArgs(enableHttpPortAccess);

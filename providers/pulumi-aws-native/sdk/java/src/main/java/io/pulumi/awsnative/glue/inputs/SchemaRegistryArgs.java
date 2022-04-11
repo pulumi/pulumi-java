@@ -5,6 +5,7 @@ package io.pulumi.awsnative.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public SchemaRegistryArgs(
@@ -48,8 +49,8 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SchemaRegistryArgs() {
-        this.arn = Output.empty();
-        this.name = Output.empty();
+        this.arn = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -87,7 +88,7 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public SchemaRegistryArgs build() {
             return new SchemaRegistryArgs(arn, name);

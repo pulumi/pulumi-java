@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_v1.enums.DistributionPolicyTargetShape;
 import io.pulumi.googlenative.compute_v1.inputs.DistributionPolicyZoneConfigurationArgs;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class DistributionPolicyArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<DistributionPolicyTargetShape> targetShape;
 
     public Output<DistributionPolicyTargetShape> getTargetShape() {
-        return this.targetShape == null ? Output.empty() : this.targetShape;
+        return this.targetShape == null ? Codegen.empty() : this.targetShape;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class DistributionPolicyArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<DistributionPolicyZoneConfigurationArgs>> zones;
 
     public Output<List<DistributionPolicyZoneConfigurationArgs>> getZones() {
-        return this.zones == null ? Output.empty() : this.zones;
+        return this.zones == null ? Codegen.empty() : this.zones;
     }
 
     public DistributionPolicyArgs(
@@ -46,8 +47,8 @@ public final class DistributionPolicyArgs extends io.pulumi.resources.ResourceAr
     }
 
     private DistributionPolicyArgs() {
-        this.targetShape = Output.empty();
-        this.zones = Output.empty();
+        this.targetShape = Codegen.empty();
+        this.zones = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class DistributionPolicyArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder targetShape(@Nullable DistributionPolicyTargetShape targetShape) {
-            this.targetShape = Output.ofNullable(targetShape);
+            this.targetShape = Codegen.ofNullable(targetShape);
             return this;
         }
         public Builder zones(@Nullable Output<List<DistributionPolicyZoneConfigurationArgs>> zones) {
@@ -85,7 +86,7 @@ public final class DistributionPolicyArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder zones(@Nullable List<DistributionPolicyZoneConfigurationArgs> zones) {
-            this.zones = Output.ofNullable(zones);
+            this.zones = Codegen.ofNullable(zones);
             return this;
         }
         public Builder zones(DistributionPolicyZoneConfigurationArgs... zones) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.databricks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -37,7 +38,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> tier;
 
     public Output<String> getTier() {
-        return this.tier == null ? Output.empty() : this.tier;
+        return this.tier == null ? Codegen.empty() : this.tier;
     }
 
     public SkuArgs(
@@ -48,8 +49,8 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SkuArgs() {
-        this.name = Output.empty();
-        this.tier = Output.empty();
+        this.name = Codegen.empty();
+        this.tier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tier(@Nullable String tier) {
-            this.tier = Output.ofNullable(tier);
+            this.tier = Codegen.ofNullable(tier);
             return this;
         }        public SkuArgs build() {
             return new SkuArgs(name, tier);

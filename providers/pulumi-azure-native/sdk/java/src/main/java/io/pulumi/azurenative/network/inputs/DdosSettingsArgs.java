@@ -8,6 +8,7 @@ import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class DdosSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SubResourceArgs> ddosCustomPolicy;
 
     public Output<SubResourceArgs> getDdosCustomPolicy() {
-        return this.ddosCustomPolicy == null ? Output.empty() : this.ddosCustomPolicy;
+        return this.ddosCustomPolicy == null ? Codegen.empty() : this.ddosCustomPolicy;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class DdosSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> protectedIP;
 
     public Output<Boolean> getProtectedIP() {
-        return this.protectedIP == null ? Output.empty() : this.protectedIP;
+        return this.protectedIP == null ? Codegen.empty() : this.protectedIP;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class DdosSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,DdosSettingsProtectionCoverage>> protectionCoverage;
 
     public Output<Either<String,DdosSettingsProtectionCoverage>> getProtectionCoverage() {
-        return this.protectionCoverage == null ? Output.empty() : this.protectionCoverage;
+        return this.protectionCoverage == null ? Codegen.empty() : this.protectionCoverage;
     }
 
     public DdosSettingsArgs(
@@ -65,9 +66,9 @@ public final class DdosSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DdosSettingsArgs() {
-        this.ddosCustomPolicy = Output.empty();
-        this.protectedIP = Output.empty();
-        this.protectionCoverage = Output.empty();
+        this.ddosCustomPolicy = Codegen.empty();
+        this.protectedIP = Codegen.empty();
+        this.protectionCoverage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class DdosSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ddosCustomPolicy(@Nullable SubResourceArgs ddosCustomPolicy) {
-            this.ddosCustomPolicy = Output.ofNullable(ddosCustomPolicy);
+            this.ddosCustomPolicy = Codegen.ofNullable(ddosCustomPolicy);
             return this;
         }
         public Builder protectedIP(@Nullable Output<Boolean> protectedIP) {
@@ -107,7 +108,7 @@ public final class DdosSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder protectedIP(@Nullable Boolean protectedIP) {
-            this.protectedIP = Output.ofNullable(protectedIP);
+            this.protectedIP = Codegen.ofNullable(protectedIP);
             return this;
         }
         public Builder protectionCoverage(@Nullable Output<Either<String,DdosSettingsProtectionCoverage>> protectionCoverage) {
@@ -115,7 +116,7 @@ public final class DdosSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder protectionCoverage(@Nullable Either<String,DdosSettingsProtectionCoverage> protectionCoverage) {
-            this.protectionCoverage = Output.ofNullable(protectionCoverage);
+            this.protectionCoverage = Codegen.ofNullable(protectionCoverage);
             return this;
         }        public DdosSettingsArgs build() {
             return new DdosSettingsArgs(ddosCustomPolicy, protectedIP, protectionCoverage);

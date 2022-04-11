@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ApiCreateOrUpdatePropertiesWsdlSelectorArgs extends io.pulumi
       private final @Nullable Output<String> wsdlEndpointName;
 
     public Output<String> getWsdlEndpointName() {
-        return this.wsdlEndpointName == null ? Output.empty() : this.wsdlEndpointName;
+        return this.wsdlEndpointName == null ? Codegen.empty() : this.wsdlEndpointName;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ApiCreateOrUpdatePropertiesWsdlSelectorArgs extends io.pulumi
       private final @Nullable Output<String> wsdlServiceName;
 
     public Output<String> getWsdlServiceName() {
-        return this.wsdlServiceName == null ? Output.empty() : this.wsdlServiceName;
+        return this.wsdlServiceName == null ? Codegen.empty() : this.wsdlServiceName;
     }
 
     public ApiCreateOrUpdatePropertiesWsdlSelectorArgs(
@@ -48,8 +49,8 @@ public final class ApiCreateOrUpdatePropertiesWsdlSelectorArgs extends io.pulumi
     }
 
     private ApiCreateOrUpdatePropertiesWsdlSelectorArgs() {
-        this.wsdlEndpointName = Output.empty();
-        this.wsdlServiceName = Output.empty();
+        this.wsdlEndpointName = Codegen.empty();
+        this.wsdlServiceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ApiCreateOrUpdatePropertiesWsdlSelectorArgs extends io.pulumi
             return this;
         }
         public Builder wsdlEndpointName(@Nullable String wsdlEndpointName) {
-            this.wsdlEndpointName = Output.ofNullable(wsdlEndpointName);
+            this.wsdlEndpointName = Codegen.ofNullable(wsdlEndpointName);
             return this;
         }
         public Builder wsdlServiceName(@Nullable Output<String> wsdlServiceName) {
@@ -87,7 +88,7 @@ public final class ApiCreateOrUpdatePropertiesWsdlSelectorArgs extends io.pulumi
             return this;
         }
         public Builder wsdlServiceName(@Nullable String wsdlServiceName) {
-            this.wsdlServiceName = Output.ofNullable(wsdlServiceName);
+            this.wsdlServiceName = Codegen.ofNullable(wsdlServiceName);
             return this;
         }        public ApiCreateOrUpdatePropertiesWsdlSelectorArgs build() {
             return new ApiCreateOrUpdatePropertiesWsdlSelectorArgs(wsdlEndpointName, wsdlServiceName);

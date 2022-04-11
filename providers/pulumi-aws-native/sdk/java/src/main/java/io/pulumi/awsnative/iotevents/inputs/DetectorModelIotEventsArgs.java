@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iotevents.inputs;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelPayloadArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class DetectorModelIotEventsArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<DetectorModelPayloadArgs> payload;
 
     public Output<DetectorModelPayloadArgs> getPayload() {
-        return this.payload == null ? Output.empty() : this.payload;
+        return this.payload == null ? Codegen.empty() : this.payload;
     }
 
     public DetectorModelIotEventsArgs(
@@ -45,8 +46,8 @@ public final class DetectorModelIotEventsArgs extends io.pulumi.resources.Resour
     }
 
     private DetectorModelIotEventsArgs() {
-        this.inputName = Output.empty();
-        this.payload = Output.empty();
+        this.inputName = Codegen.empty();
+        this.payload = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class DetectorModelIotEventsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder payload(@Nullable DetectorModelPayloadArgs payload) {
-            this.payload = Output.ofNullable(payload);
+            this.payload = Codegen.ofNullable(payload);
             return this;
         }        public DetectorModelIotEventsArgs build() {
             return new DetectorModelIotEventsArgs(inputName, payload);

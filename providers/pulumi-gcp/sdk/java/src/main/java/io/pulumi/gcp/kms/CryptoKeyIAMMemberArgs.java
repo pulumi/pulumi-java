@@ -5,6 +5,7 @@ package io.pulumi.gcp.kms;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.kms.inputs.CryptoKeyIAMMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class CryptoKeyIAMMemberArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<CryptoKeyIAMMemberConditionArgs> condition;
 
     public Output<CryptoKeyIAMMemberConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -72,10 +73,10 @@ public final class CryptoKeyIAMMemberArgs extends io.pulumi.resources.ResourceAr
     }
 
     private CryptoKeyIAMMemberArgs() {
-        this.condition = Output.empty();
-        this.cryptoKeyId = Output.empty();
-        this.member = Output.empty();
-        this.role = Output.empty();
+        this.condition = Codegen.empty();
+        this.cryptoKeyId = Codegen.empty();
+        this.member = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class CryptoKeyIAMMemberArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder condition(@Nullable CryptoKeyIAMMemberConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder cryptoKeyId(Output<String> cryptoKeyId) {

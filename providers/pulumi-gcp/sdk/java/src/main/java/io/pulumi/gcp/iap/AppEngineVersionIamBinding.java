@@ -6,6 +6,7 @@ package io.pulumi.gcp.iap;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.AppEngineVersionIamBindingArgs;
 import io.pulumi.gcp.iap.inputs.AppEngineVersionIamBindingState;
@@ -197,7 +198,7 @@ public class AppEngineVersionIamBinding extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public AppEngineVersionIamBinding(String name, AppEngineVersionIamBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:iap/appEngineVersionIamBinding:AppEngineVersionIamBinding", name, args == null ? AppEngineVersionIamBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:iap/appEngineVersionIamBinding:AppEngineVersionIamBinding", name, args == null ? AppEngineVersionIamBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AppEngineVersionIamBinding(String name, Output<String> id, @Nullable AppEngineVersionIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.aws.elasticache.inputs;
 import io.pulumi.aws.elasticache.inputs.ClusterCacheNodeGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +28,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> applyImmediately;
 
     public Output<Boolean> getApplyImmediately() {
-        return this.applyImmediately == null ? Output.empty() : this.applyImmediately;
+        return this.applyImmediately == null ? Codegen.empty() : this.applyImmediately;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
+        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> azMode;
 
     public Output<String> getAzMode() {
-        return this.azMode == null ? Output.empty() : this.azMode;
+        return this.azMode == null ? Codegen.empty() : this.azMode;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ClusterCacheNodeGetArgs>> cacheNodes;
 
     public Output<List<ClusterCacheNodeGetArgs>> getCacheNodes() {
-        return this.cacheNodes == null ? Output.empty() : this.cacheNodes;
+        return this.cacheNodes == null ? Codegen.empty() : this.cacheNodes;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> clusterAddress;
 
     public Output<String> getClusterAddress() {
-        return this.clusterAddress == null ? Output.empty() : this.clusterAddress;
+        return this.clusterAddress == null ? Codegen.empty() : this.clusterAddress;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> clusterId;
 
     public Output<String> getClusterId() {
-        return this.clusterId == null ? Output.empty() : this.clusterId;
+        return this.clusterId == null ? Codegen.empty() : this.clusterId;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> configurationEndpoint;
 
     public Output<String> getConfigurationEndpoint() {
-        return this.configurationEndpoint == null ? Output.empty() : this.configurationEndpoint;
+        return this.configurationEndpoint == null ? Codegen.empty() : this.configurationEndpoint;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> engine;
 
     public Output<String> getEngine() {
-        return this.engine == null ? Output.empty() : this.engine;
+        return this.engine == null ? Codegen.empty() : this.engine;
     }
 
     /**
@@ -128,7 +129,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> engineVersion;
 
     public Output<String> getEngineVersion() {
-        return this.engineVersion == null ? Output.empty() : this.engineVersion;
+        return this.engineVersion == null ? Codegen.empty() : this.engineVersion;
     }
 
     /**
@@ -139,7 +140,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> engineVersionActual;
 
     public Output<String> getEngineVersionActual() {
-        return this.engineVersionActual == null ? Output.empty() : this.engineVersionActual;
+        return this.engineVersionActual == null ? Codegen.empty() : this.engineVersionActual;
     }
 
     /**
@@ -150,7 +151,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> finalSnapshotIdentifier;
 
     public Output<String> getFinalSnapshotIdentifier() {
-        return this.finalSnapshotIdentifier == null ? Output.empty() : this.finalSnapshotIdentifier;
+        return this.finalSnapshotIdentifier == null ? Codegen.empty() : this.finalSnapshotIdentifier;
     }
 
     /**
@@ -163,7 +164,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> maintenanceWindow;
 
     public Output<String> getMaintenanceWindow() {
-        return this.maintenanceWindow == null ? Output.empty() : this.maintenanceWindow;
+        return this.maintenanceWindow == null ? Codegen.empty() : this.maintenanceWindow;
     }
 
     /**
@@ -174,7 +175,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> nodeType;
 
     public Output<String> getNodeType() {
-        return this.nodeType == null ? Output.empty() : this.nodeType;
+        return this.nodeType == null ? Codegen.empty() : this.nodeType;
     }
 
     /**
@@ -185,7 +186,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> notificationTopicArn;
 
     public Output<String> getNotificationTopicArn() {
-        return this.notificationTopicArn == null ? Output.empty() : this.notificationTopicArn;
+        return this.notificationTopicArn == null ? Codegen.empty() : this.notificationTopicArn;
     }
 
     /**
@@ -196,7 +197,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> numCacheNodes;
 
     public Output<Integer> getNumCacheNodes() {
-        return this.numCacheNodes == null ? Output.empty() : this.numCacheNodes;
+        return this.numCacheNodes == null ? Codegen.empty() : this.numCacheNodes;
     }
 
     /**
@@ -207,7 +208,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> parameterGroupName;
 
     public Output<String> getParameterGroupName() {
-        return this.parameterGroupName == null ? Output.empty() : this.parameterGroupName;
+        return this.parameterGroupName == null ? Codegen.empty() : this.parameterGroupName;
     }
 
     /**
@@ -218,7 +219,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -229,7 +230,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> preferredAvailabilityZones;
 
     public Output<List<String>> getPreferredAvailabilityZones() {
-        return this.preferredAvailabilityZones == null ? Output.empty() : this.preferredAvailabilityZones;
+        return this.preferredAvailabilityZones == null ? Codegen.empty() : this.preferredAvailabilityZones;
     }
 
     /**
@@ -240,7 +241,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> replicationGroupId;
 
     public Output<String> getReplicationGroupId() {
-        return this.replicationGroupId == null ? Output.empty() : this.replicationGroupId;
+        return this.replicationGroupId == null ? Codegen.empty() : this.replicationGroupId;
     }
 
     /**
@@ -251,7 +252,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
-        return this.securityGroupIds == null ? Output.empty() : this.securityGroupIds;
+        return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
     }
 
     /**
@@ -262,7 +263,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> securityGroupNames;
 
     public Output<List<String>> getSecurityGroupNames() {
-        return this.securityGroupNames == null ? Output.empty() : this.securityGroupNames;
+        return this.securityGroupNames == null ? Codegen.empty() : this.securityGroupNames;
     }
 
     /**
@@ -273,7 +274,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> snapshotArns;
 
     public Output<String> getSnapshotArns() {
-        return this.snapshotArns == null ? Output.empty() : this.snapshotArns;
+        return this.snapshotArns == null ? Codegen.empty() : this.snapshotArns;
     }
 
     /**
@@ -284,7 +285,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> snapshotName;
 
     public Output<String> getSnapshotName() {
-        return this.snapshotName == null ? Output.empty() : this.snapshotName;
+        return this.snapshotName == null ? Codegen.empty() : this.snapshotName;
     }
 
     /**
@@ -295,7 +296,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> snapshotRetentionLimit;
 
     public Output<Integer> getSnapshotRetentionLimit() {
-        return this.snapshotRetentionLimit == null ? Output.empty() : this.snapshotRetentionLimit;
+        return this.snapshotRetentionLimit == null ? Codegen.empty() : this.snapshotRetentionLimit;
     }
 
     /**
@@ -306,7 +307,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> snapshotWindow;
 
     public Output<String> getSnapshotWindow() {
-        return this.snapshotWindow == null ? Output.empty() : this.snapshotWindow;
+        return this.snapshotWindow == null ? Codegen.empty() : this.snapshotWindow;
     }
 
     /**
@@ -317,7 +318,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> subnetGroupName;
 
     public Output<String> getSubnetGroupName() {
-        return this.subnetGroupName == null ? Output.empty() : this.subnetGroupName;
+        return this.subnetGroupName == null ? Codegen.empty() : this.subnetGroupName;
     }
 
     /**
@@ -328,14 +329,14 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public ClusterState(
@@ -400,35 +401,35 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterState() {
-        this.applyImmediately = Output.empty();
-        this.arn = Output.empty();
-        this.availabilityZone = Output.empty();
-        this.azMode = Output.empty();
-        this.cacheNodes = Output.empty();
-        this.clusterAddress = Output.empty();
-        this.clusterId = Output.empty();
-        this.configurationEndpoint = Output.empty();
-        this.engine = Output.empty();
-        this.engineVersion = Output.empty();
-        this.engineVersionActual = Output.empty();
-        this.finalSnapshotIdentifier = Output.empty();
-        this.maintenanceWindow = Output.empty();
-        this.nodeType = Output.empty();
-        this.notificationTopicArn = Output.empty();
-        this.numCacheNodes = Output.empty();
-        this.parameterGroupName = Output.empty();
-        this.port = Output.empty();
-        this.preferredAvailabilityZones = Output.empty();
-        this.replicationGroupId = Output.empty();
-        this.securityGroupIds = Output.empty();
-        this.securityGroupNames = Output.empty();
-        this.snapshotArns = Output.empty();
-        this.snapshotName = Output.empty();
-        this.snapshotRetentionLimit = Output.empty();
-        this.snapshotWindow = Output.empty();
-        this.subnetGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.applyImmediately = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.availabilityZone = Codegen.empty();
+        this.azMode = Codegen.empty();
+        this.cacheNodes = Codegen.empty();
+        this.clusterAddress = Codegen.empty();
+        this.clusterId = Codegen.empty();
+        this.configurationEndpoint = Codegen.empty();
+        this.engine = Codegen.empty();
+        this.engineVersion = Codegen.empty();
+        this.engineVersionActual = Codegen.empty();
+        this.finalSnapshotIdentifier = Codegen.empty();
+        this.maintenanceWindow = Codegen.empty();
+        this.nodeType = Codegen.empty();
+        this.notificationTopicArn = Codegen.empty();
+        this.numCacheNodes = Codegen.empty();
+        this.parameterGroupName = Codegen.empty();
+        this.port = Codegen.empty();
+        this.preferredAvailabilityZones = Codegen.empty();
+        this.replicationGroupId = Codegen.empty();
+        this.securityGroupIds = Codegen.empty();
+        this.securityGroupNames = Codegen.empty();
+        this.snapshotArns = Codegen.empty();
+        this.snapshotName = Codegen.empty();
+        this.snapshotRetentionLimit = Codegen.empty();
+        this.snapshotWindow = Codegen.empty();
+        this.subnetGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -512,7 +513,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder applyImmediately(@Nullable Boolean applyImmediately) {
-            this.applyImmediately = Output.ofNullable(applyImmediately);
+            this.applyImmediately = Codegen.ofNullable(applyImmediately);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -520,7 +521,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
@@ -528,7 +529,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Output.ofNullable(availabilityZone);
+            this.availabilityZone = Codegen.ofNullable(availabilityZone);
             return this;
         }
         public Builder azMode(@Nullable Output<String> azMode) {
@@ -536,7 +537,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder azMode(@Nullable String azMode) {
-            this.azMode = Output.ofNullable(azMode);
+            this.azMode = Codegen.ofNullable(azMode);
             return this;
         }
         public Builder cacheNodes(@Nullable Output<List<ClusterCacheNodeGetArgs>> cacheNodes) {
@@ -544,7 +545,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cacheNodes(@Nullable List<ClusterCacheNodeGetArgs> cacheNodes) {
-            this.cacheNodes = Output.ofNullable(cacheNodes);
+            this.cacheNodes = Codegen.ofNullable(cacheNodes);
             return this;
         }
         public Builder cacheNodes(ClusterCacheNodeGetArgs... cacheNodes) {
@@ -555,7 +556,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterAddress(@Nullable String clusterAddress) {
-            this.clusterAddress = Output.ofNullable(clusterAddress);
+            this.clusterAddress = Codegen.ofNullable(clusterAddress);
             return this;
         }
         public Builder clusterId(@Nullable Output<String> clusterId) {
@@ -563,7 +564,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterId(@Nullable String clusterId) {
-            this.clusterId = Output.ofNullable(clusterId);
+            this.clusterId = Codegen.ofNullable(clusterId);
             return this;
         }
         public Builder configurationEndpoint(@Nullable Output<String> configurationEndpoint) {
@@ -571,7 +572,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder configurationEndpoint(@Nullable String configurationEndpoint) {
-            this.configurationEndpoint = Output.ofNullable(configurationEndpoint);
+            this.configurationEndpoint = Codegen.ofNullable(configurationEndpoint);
             return this;
         }
         public Builder engine(@Nullable Output<String> engine) {
@@ -579,7 +580,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder engine(@Nullable String engine) {
-            this.engine = Output.ofNullable(engine);
+            this.engine = Codegen.ofNullable(engine);
             return this;
         }
         public Builder engineVersion(@Nullable Output<String> engineVersion) {
@@ -587,7 +588,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder engineVersion(@Nullable String engineVersion) {
-            this.engineVersion = Output.ofNullable(engineVersion);
+            this.engineVersion = Codegen.ofNullable(engineVersion);
             return this;
         }
         public Builder engineVersionActual(@Nullable Output<String> engineVersionActual) {
@@ -595,7 +596,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder engineVersionActual(@Nullable String engineVersionActual) {
-            this.engineVersionActual = Output.ofNullable(engineVersionActual);
+            this.engineVersionActual = Codegen.ofNullable(engineVersionActual);
             return this;
         }
         public Builder finalSnapshotIdentifier(@Nullable Output<String> finalSnapshotIdentifier) {
@@ -603,7 +604,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder finalSnapshotIdentifier(@Nullable String finalSnapshotIdentifier) {
-            this.finalSnapshotIdentifier = Output.ofNullable(finalSnapshotIdentifier);
+            this.finalSnapshotIdentifier = Codegen.ofNullable(finalSnapshotIdentifier);
             return this;
         }
         public Builder maintenanceWindow(@Nullable Output<String> maintenanceWindow) {
@@ -611,7 +612,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maintenanceWindow(@Nullable String maintenanceWindow) {
-            this.maintenanceWindow = Output.ofNullable(maintenanceWindow);
+            this.maintenanceWindow = Codegen.ofNullable(maintenanceWindow);
             return this;
         }
         public Builder nodeType(@Nullable Output<String> nodeType) {
@@ -619,7 +620,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nodeType(@Nullable String nodeType) {
-            this.nodeType = Output.ofNullable(nodeType);
+            this.nodeType = Codegen.ofNullable(nodeType);
             return this;
         }
         public Builder notificationTopicArn(@Nullable Output<String> notificationTopicArn) {
@@ -627,7 +628,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notificationTopicArn(@Nullable String notificationTopicArn) {
-            this.notificationTopicArn = Output.ofNullable(notificationTopicArn);
+            this.notificationTopicArn = Codegen.ofNullable(notificationTopicArn);
             return this;
         }
         public Builder numCacheNodes(@Nullable Output<Integer> numCacheNodes) {
@@ -635,7 +636,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder numCacheNodes(@Nullable Integer numCacheNodes) {
-            this.numCacheNodes = Output.ofNullable(numCacheNodes);
+            this.numCacheNodes = Codegen.ofNullable(numCacheNodes);
             return this;
         }
         public Builder parameterGroupName(@Nullable Output<String> parameterGroupName) {
@@ -643,7 +644,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameterGroupName(@Nullable String parameterGroupName) {
-            this.parameterGroupName = Output.ofNullable(parameterGroupName);
+            this.parameterGroupName = Codegen.ofNullable(parameterGroupName);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -651,7 +652,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder preferredAvailabilityZones(@Nullable Output<List<String>> preferredAvailabilityZones) {
@@ -659,7 +660,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder preferredAvailabilityZones(@Nullable List<String> preferredAvailabilityZones) {
-            this.preferredAvailabilityZones = Output.ofNullable(preferredAvailabilityZones);
+            this.preferredAvailabilityZones = Codegen.ofNullable(preferredAvailabilityZones);
             return this;
         }
         public Builder preferredAvailabilityZones(String... preferredAvailabilityZones) {
@@ -670,7 +671,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder replicationGroupId(@Nullable String replicationGroupId) {
-            this.replicationGroupId = Output.ofNullable(replicationGroupId);
+            this.replicationGroupId = Codegen.ofNullable(replicationGroupId);
             return this;
         }
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
@@ -678,7 +679,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Output.ofNullable(securityGroupIds);
+            this.securityGroupIds = Codegen.ofNullable(securityGroupIds);
             return this;
         }
         public Builder securityGroupIds(String... securityGroupIds) {
@@ -689,7 +690,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder securityGroupNames(@Nullable List<String> securityGroupNames) {
-            this.securityGroupNames = Output.ofNullable(securityGroupNames);
+            this.securityGroupNames = Codegen.ofNullable(securityGroupNames);
             return this;
         }
         public Builder securityGroupNames(String... securityGroupNames) {
@@ -700,7 +701,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder snapshotArns(@Nullable String snapshotArns) {
-            this.snapshotArns = Output.ofNullable(snapshotArns);
+            this.snapshotArns = Codegen.ofNullable(snapshotArns);
             return this;
         }
         public Builder snapshotName(@Nullable Output<String> snapshotName) {
@@ -708,7 +709,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder snapshotName(@Nullable String snapshotName) {
-            this.snapshotName = Output.ofNullable(snapshotName);
+            this.snapshotName = Codegen.ofNullable(snapshotName);
             return this;
         }
         public Builder snapshotRetentionLimit(@Nullable Output<Integer> snapshotRetentionLimit) {
@@ -716,7 +717,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder snapshotRetentionLimit(@Nullable Integer snapshotRetentionLimit) {
-            this.snapshotRetentionLimit = Output.ofNullable(snapshotRetentionLimit);
+            this.snapshotRetentionLimit = Codegen.ofNullable(snapshotRetentionLimit);
             return this;
         }
         public Builder snapshotWindow(@Nullable Output<String> snapshotWindow) {
@@ -724,7 +725,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder snapshotWindow(@Nullable String snapshotWindow) {
-            this.snapshotWindow = Output.ofNullable(snapshotWindow);
+            this.snapshotWindow = Codegen.ofNullable(snapshotWindow);
             return this;
         }
         public Builder subnetGroupName(@Nullable Output<String> subnetGroupName) {
@@ -732,7 +733,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetGroupName(@Nullable String subnetGroupName) {
-            this.subnetGroupName = Output.ofNullable(subnetGroupName);
+            this.subnetGroupName = Codegen.ofNullable(subnetGroupName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -740,7 +741,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -748,7 +749,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public ClusterState build() {
             return new ClusterState(applyImmediately, arn, availabilityZone, azMode, cacheNodes, clusterAddress, clusterId, configurationEndpoint, engine, engineVersion, engineVersionActual, finalSnapshotIdentifier, maintenanceWindow, nodeType, notificationTopicArn, numCacheNodes, parameterGroupName, port, preferredAvailabilityZones, replicationGroupId, securityGroupIds, securityGroupNames, snapshotArns, snapshotName, snapshotRetentionLimit, snapshotWindow, subnetGroupName, tags, tagsAll);

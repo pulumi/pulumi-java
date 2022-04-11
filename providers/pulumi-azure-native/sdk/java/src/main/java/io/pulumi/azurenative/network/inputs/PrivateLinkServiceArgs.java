@@ -10,6 +10,7 @@ import io.pulumi.azurenative.network.inputs.PrivateLinkServicePropertiesAutoAppr
 import io.pulumi.azurenative.network.inputs.PrivateLinkServicePropertiesVisibilityArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +35,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<PrivateLinkServicePropertiesAutoApprovalArgs> autoApproval;
 
     public Output<PrivateLinkServicePropertiesAutoApprovalArgs> getAutoApproval() {
-        return this.autoApproval == null ? Output.empty() : this.autoApproval;
+        return this.autoApproval == null ? Codegen.empty() : this.autoApproval;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Boolean> enableProxyProtocol;
 
     public Output<Boolean> getEnableProxyProtocol() {
-        return this.enableProxyProtocol == null ? Output.empty() : this.enableProxyProtocol;
+        return this.enableProxyProtocol == null ? Codegen.empty() : this.enableProxyProtocol;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
     public Output<ExtendedLocationArgs> getExtendedLocation() {
-        return this.extendedLocation == null ? Output.empty() : this.extendedLocation;
+        return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<String>> fqdns;
 
     public Output<List<String>> getFqdns() {
-        return this.fqdns == null ? Output.empty() : this.fqdns;
+        return this.fqdns == null ? Codegen.empty() : this.fqdns;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<PrivateLinkServiceIpConfigurationArgs>> ipConfigurations;
 
     public Output<List<PrivateLinkServiceIpConfigurationArgs>> getIpConfigurations() {
-        return this.ipConfigurations == null ? Output.empty() : this.ipConfigurations;
+        return this.ipConfigurations == null ? Codegen.empty() : this.ipConfigurations;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<FrontendIPConfigurationArgs>> loadBalancerFrontendIpConfigurations;
 
     public Output<List<FrontendIPConfigurationArgs>> getLoadBalancerFrontendIpConfigurations() {
-        return this.loadBalancerFrontendIpConfigurations == null ? Output.empty() : this.loadBalancerFrontendIpConfigurations;
+        return this.loadBalancerFrontendIpConfigurations == null ? Codegen.empty() : this.loadBalancerFrontendIpConfigurations;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -122,7 +123,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -133,7 +134,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<PrivateLinkServicePropertiesVisibilityArgs> visibility;
 
     public Output<PrivateLinkServicePropertiesVisibilityArgs> getVisibility() {
-        return this.visibility == null ? Output.empty() : this.visibility;
+        return this.visibility == null ? Codegen.empty() : this.visibility;
     }
 
     public PrivateLinkServiceArgs(
@@ -160,16 +161,16 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
     }
 
     private PrivateLinkServiceArgs() {
-        this.autoApproval = Output.empty();
-        this.enableProxyProtocol = Output.empty();
-        this.extendedLocation = Output.empty();
-        this.fqdns = Output.empty();
-        this.id = Output.empty();
-        this.ipConfigurations = Output.empty();
-        this.loadBalancerFrontendIpConfigurations = Output.empty();
-        this.location = Output.empty();
-        this.tags = Output.empty();
-        this.visibility = Output.empty();
+        this.autoApproval = Codegen.empty();
+        this.enableProxyProtocol = Codegen.empty();
+        this.extendedLocation = Codegen.empty();
+        this.fqdns = Codegen.empty();
+        this.id = Codegen.empty();
+        this.ipConfigurations = Codegen.empty();
+        this.loadBalancerFrontendIpConfigurations = Codegen.empty();
+        this.location = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.visibility = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -215,7 +216,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder autoApproval(@Nullable PrivateLinkServicePropertiesAutoApprovalArgs autoApproval) {
-            this.autoApproval = Output.ofNullable(autoApproval);
+            this.autoApproval = Codegen.ofNullable(autoApproval);
             return this;
         }
         public Builder enableProxyProtocol(@Nullable Output<Boolean> enableProxyProtocol) {
@@ -223,7 +224,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder enableProxyProtocol(@Nullable Boolean enableProxyProtocol) {
-            this.enableProxyProtocol = Output.ofNullable(enableProxyProtocol);
+            this.enableProxyProtocol = Codegen.ofNullable(enableProxyProtocol);
             return this;
         }
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
@@ -231,7 +232,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Output.ofNullable(extendedLocation);
+            this.extendedLocation = Codegen.ofNullable(extendedLocation);
             return this;
         }
         public Builder fqdns(@Nullable Output<List<String>> fqdns) {
@@ -239,7 +240,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder fqdns(@Nullable List<String> fqdns) {
-            this.fqdns = Output.ofNullable(fqdns);
+            this.fqdns = Codegen.ofNullable(fqdns);
             return this;
         }
         public Builder fqdns(String... fqdns) {
@@ -250,7 +251,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder ipConfigurations(@Nullable Output<List<PrivateLinkServiceIpConfigurationArgs>> ipConfigurations) {
@@ -258,7 +259,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder ipConfigurations(@Nullable List<PrivateLinkServiceIpConfigurationArgs> ipConfigurations) {
-            this.ipConfigurations = Output.ofNullable(ipConfigurations);
+            this.ipConfigurations = Codegen.ofNullable(ipConfigurations);
             return this;
         }
         public Builder ipConfigurations(PrivateLinkServiceIpConfigurationArgs... ipConfigurations) {
@@ -269,7 +270,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder loadBalancerFrontendIpConfigurations(@Nullable List<FrontendIPConfigurationArgs> loadBalancerFrontendIpConfigurations) {
-            this.loadBalancerFrontendIpConfigurations = Output.ofNullable(loadBalancerFrontendIpConfigurations);
+            this.loadBalancerFrontendIpConfigurations = Codegen.ofNullable(loadBalancerFrontendIpConfigurations);
             return this;
         }
         public Builder loadBalancerFrontendIpConfigurations(FrontendIPConfigurationArgs... loadBalancerFrontendIpConfigurations) {
@@ -280,7 +281,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -288,7 +289,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder visibility(@Nullable Output<PrivateLinkServicePropertiesVisibilityArgs> visibility) {
@@ -296,7 +297,7 @@ public final class PrivateLinkServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder visibility(@Nullable PrivateLinkServicePropertiesVisibilityArgs visibility) {
-            this.visibility = Output.ofNullable(visibility);
+            this.visibility = Codegen.ofNullable(visibility);
             return this;
         }        public PrivateLinkServiceArgs build() {
             return new PrivateLinkServiceArgs(autoApproval, enableProxyProtocol, extendedLocation, fqdns, id, ipConfigurations, loadBalancerFrontendIpConfigurations, location, tags, visibility);

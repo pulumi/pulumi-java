@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class NetworkEndpointGroupCloudFunctionArgs extends io.pulumi.resou
       private final @Nullable Output<String> function;
 
     public Output<String> getFunction() {
-        return this.function == null ? Output.empty() : this.function;
+        return this.function == null ? Codegen.empty() : this.function;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class NetworkEndpointGroupCloudFunctionArgs extends io.pulumi.resou
       private final @Nullable Output<String> urlMask;
 
     public Output<String> getUrlMask() {
-        return this.urlMask == null ? Output.empty() : this.urlMask;
+        return this.urlMask == null ? Codegen.empty() : this.urlMask;
     }
 
     public NetworkEndpointGroupCloudFunctionArgs(
@@ -48,8 +49,8 @@ public final class NetworkEndpointGroupCloudFunctionArgs extends io.pulumi.resou
     }
 
     private NetworkEndpointGroupCloudFunctionArgs() {
-        this.function = Output.empty();
-        this.urlMask = Output.empty();
+        this.function = Codegen.empty();
+        this.urlMask = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class NetworkEndpointGroupCloudFunctionArgs extends io.pulumi.resou
             return this;
         }
         public Builder function(@Nullable String function) {
-            this.function = Output.ofNullable(function);
+            this.function = Codegen.ofNullable(function);
             return this;
         }
         public Builder urlMask(@Nullable Output<String> urlMask) {
@@ -87,7 +88,7 @@ public final class NetworkEndpointGroupCloudFunctionArgs extends io.pulumi.resou
             return this;
         }
         public Builder urlMask(@Nullable String urlMask) {
-            this.urlMask = Output.ofNullable(urlMask);
+            this.urlMask = Codegen.ofNullable(urlMask);
             return this;
         }        public NetworkEndpointGroupCloudFunctionArgs build() {
             return new NetworkEndpointGroupCloudFunctionArgs(function, urlMask);

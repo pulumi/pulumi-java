@@ -5,6 +5,7 @@ package io.pulumi.aws.macie2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
-        return this.accountId == null ? Output.empty() : this.accountId;
+        return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> administratorAccountId;
 
     public Output<String> getAdministratorAccountId() {
-        return this.administratorAccountId == null ? Output.empty() : this.administratorAccountId;
+        return this.administratorAccountId == null ? Codegen.empty() : this.administratorAccountId;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> email;
 
     public Output<String> getEmail() {
-        return this.email == null ? Output.empty() : this.email;
+        return this.email == null ? Codegen.empty() : this.email;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> invitationDisableEmailNotification;
 
     public Output<String> getInvitationDisableEmailNotification() {
-        return this.invitationDisableEmailNotification == null ? Output.empty() : this.invitationDisableEmailNotification;
+        return this.invitationDisableEmailNotification == null ? Codegen.empty() : this.invitationDisableEmailNotification;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> invitationMessage;
 
     public Output<String> getInvitationMessage() {
-        return this.invitationMessage == null ? Output.empty() : this.invitationMessage;
+        return this.invitationMessage == null ? Codegen.empty() : this.invitationMessage;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> invite;
 
     public Output<Boolean> getInvite() {
-        return this.invite == null ? Output.empty() : this.invite;
+        return this.invite == null ? Codegen.empty() : this.invite;
     }
 
     /**
@@ -101,14 +102,14 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> invitedAt;
 
     public Output<String> getInvitedAt() {
-        return this.invitedAt == null ? Output.empty() : this.invitedAt;
+        return this.invitedAt == null ? Codegen.empty() : this.invitedAt;
     }
 
     @Import(name="masterAccountId")
       private final @Nullable Output<String> masterAccountId;
 
     public Output<String> getMasterAccountId() {
-        return this.masterAccountId == null ? Output.empty() : this.masterAccountId;
+        return this.masterAccountId == null ? Codegen.empty() : this.masterAccountId;
     }
 
     /**
@@ -119,7 +120,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> relationshipStatus;
 
     public Output<String> getRelationshipStatus() {
-        return this.relationshipStatus == null ? Output.empty() : this.relationshipStatus;
+        return this.relationshipStatus == null ? Codegen.empty() : this.relationshipStatus;
     }
 
     /**
@@ -130,7 +131,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -141,14 +142,14 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -159,7 +160,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> updatedAt;
 
     public Output<String> getUpdatedAt() {
-        return this.updatedAt == null ? Output.empty() : this.updatedAt;
+        return this.updatedAt == null ? Codegen.empty() : this.updatedAt;
     }
 
     public MemberState(
@@ -194,20 +195,20 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     }
 
     private MemberState() {
-        this.accountId = Output.empty();
-        this.administratorAccountId = Output.empty();
-        this.arn = Output.empty();
-        this.email = Output.empty();
-        this.invitationDisableEmailNotification = Output.empty();
-        this.invitationMessage = Output.empty();
-        this.invite = Output.empty();
-        this.invitedAt = Output.empty();
-        this.masterAccountId = Output.empty();
-        this.relationshipStatus = Output.empty();
-        this.status = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.updatedAt = Output.empty();
+        this.accountId = Codegen.empty();
+        this.administratorAccountId = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.email = Codegen.empty();
+        this.invitationDisableEmailNotification = Codegen.empty();
+        this.invitationMessage = Codegen.empty();
+        this.invite = Codegen.empty();
+        this.invitedAt = Codegen.empty();
+        this.masterAccountId = Codegen.empty();
+        this.relationshipStatus = Codegen.empty();
+        this.status = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.updatedAt = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -261,7 +262,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Output.ofNullable(accountId);
+            this.accountId = Codegen.ofNullable(accountId);
             return this;
         }
         public Builder administratorAccountId(@Nullable Output<String> administratorAccountId) {
@@ -269,7 +270,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder administratorAccountId(@Nullable String administratorAccountId) {
-            this.administratorAccountId = Output.ofNullable(administratorAccountId);
+            this.administratorAccountId = Codegen.ofNullable(administratorAccountId);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -277,7 +278,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder email(@Nullable Output<String> email) {
@@ -285,7 +286,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder email(@Nullable String email) {
-            this.email = Output.ofNullable(email);
+            this.email = Codegen.ofNullable(email);
             return this;
         }
         public Builder invitationDisableEmailNotification(@Nullable Output<String> invitationDisableEmailNotification) {
@@ -293,7 +294,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder invitationDisableEmailNotification(@Nullable String invitationDisableEmailNotification) {
-            this.invitationDisableEmailNotification = Output.ofNullable(invitationDisableEmailNotification);
+            this.invitationDisableEmailNotification = Codegen.ofNullable(invitationDisableEmailNotification);
             return this;
         }
         public Builder invitationMessage(@Nullable Output<String> invitationMessage) {
@@ -301,7 +302,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder invitationMessage(@Nullable String invitationMessage) {
-            this.invitationMessage = Output.ofNullable(invitationMessage);
+            this.invitationMessage = Codegen.ofNullable(invitationMessage);
             return this;
         }
         public Builder invite(@Nullable Output<Boolean> invite) {
@@ -309,7 +310,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder invite(@Nullable Boolean invite) {
-            this.invite = Output.ofNullable(invite);
+            this.invite = Codegen.ofNullable(invite);
             return this;
         }
         public Builder invitedAt(@Nullable Output<String> invitedAt) {
@@ -317,7 +318,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder invitedAt(@Nullable String invitedAt) {
-            this.invitedAt = Output.ofNullable(invitedAt);
+            this.invitedAt = Codegen.ofNullable(invitedAt);
             return this;
         }
         public Builder masterAccountId(@Nullable Output<String> masterAccountId) {
@@ -325,7 +326,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder masterAccountId(@Nullable String masterAccountId) {
-            this.masterAccountId = Output.ofNullable(masterAccountId);
+            this.masterAccountId = Codegen.ofNullable(masterAccountId);
             return this;
         }
         public Builder relationshipStatus(@Nullable Output<String> relationshipStatus) {
@@ -333,7 +334,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder relationshipStatus(@Nullable String relationshipStatus) {
-            this.relationshipStatus = Output.ofNullable(relationshipStatus);
+            this.relationshipStatus = Codegen.ofNullable(relationshipStatus);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -341,7 +342,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -349,7 +350,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -357,7 +358,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder updatedAt(@Nullable Output<String> updatedAt) {
@@ -365,7 +366,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updatedAt(@Nullable String updatedAt) {
-            this.updatedAt = Output.ofNullable(updatedAt);
+            this.updatedAt = Codegen.ofNullable(updatedAt);
             return this;
         }        public MemberState build() {
             return new MemberState(accountId, administratorAccountId, arn, email, invitationDisableEmailNotification, invitationMessage, invite, invitedAt, masterAccountId, relationshipStatus, status, tags, tagsAll, updatedAt);

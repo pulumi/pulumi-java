@@ -6,6 +6,7 @@ package io.pulumi.awsnative.acmpca.inputs;
 import io.pulumi.awsnative.acmpca.inputs.CertificateQualifierArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -40,8 +41,8 @@ public final class CertificatePolicyQualifierInfoArgs extends io.pulumi.resource
     }
 
     private CertificatePolicyQualifierInfoArgs() {
-        this.policyQualifierId = Output.empty();
-        this.qualifier = Output.empty();
+        this.policyQualifierId = Codegen.empty();
+        this.qualifier = Codegen.empty();
     }
 
     public static Builder builder() {

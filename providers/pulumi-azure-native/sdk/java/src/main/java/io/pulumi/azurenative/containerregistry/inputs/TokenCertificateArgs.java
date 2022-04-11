@@ -7,6 +7,7 @@ import io.pulumi.azurenative.containerregistry.enums.TokenCertificateName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class TokenCertificateArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> encodedPemCertificate;
 
     public Output<String> getEncodedPemCertificate() {
-        return this.encodedPemCertificate == null ? Output.empty() : this.encodedPemCertificate;
+        return this.encodedPemCertificate == null ? Codegen.empty() : this.encodedPemCertificate;
     }
 
     /**
@@ -39,14 +40,14 @@ public final class TokenCertificateArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> expiry;
 
     public Output<String> getExpiry() {
-        return this.expiry == null ? Output.empty() : this.expiry;
+        return this.expiry == null ? Codegen.empty() : this.expiry;
     }
 
     @Import(name="name")
       private final @Nullable Output<Either<String,TokenCertificateName>> name;
 
     public Output<Either<String,TokenCertificateName>> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class TokenCertificateArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> thumbprint;
 
     public Output<String> getThumbprint() {
-        return this.thumbprint == null ? Output.empty() : this.thumbprint;
+        return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
     }
 
     public TokenCertificateArgs(
@@ -72,10 +73,10 @@ public final class TokenCertificateArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private TokenCertificateArgs() {
-        this.encodedPemCertificate = Output.empty();
-        this.expiry = Output.empty();
-        this.name = Output.empty();
-        this.thumbprint = Output.empty();
+        this.encodedPemCertificate = Codegen.empty();
+        this.expiry = Codegen.empty();
+        this.name = Codegen.empty();
+        this.thumbprint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class TokenCertificateArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder encodedPemCertificate(@Nullable String encodedPemCertificate) {
-            this.encodedPemCertificate = Output.ofNullable(encodedPemCertificate);
+            this.encodedPemCertificate = Codegen.ofNullable(encodedPemCertificate);
             return this;
         }
         public Builder expiry(@Nullable Output<String> expiry) {
@@ -117,7 +118,7 @@ public final class TokenCertificateArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder expiry(@Nullable String expiry) {
-            this.expiry = Output.ofNullable(expiry);
+            this.expiry = Codegen.ofNullable(expiry);
             return this;
         }
         public Builder name(@Nullable Output<Either<String,TokenCertificateName>> name) {
@@ -125,7 +126,7 @@ public final class TokenCertificateArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable Either<String,TokenCertificateName> name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
@@ -133,7 +134,7 @@ public final class TokenCertificateArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = Output.ofNullable(thumbprint);
+            this.thumbprint = Codegen.ofNullable(thumbprint);
             return this;
         }        public TokenCertificateArgs build() {
             return new TokenCertificateArgs(encodedPemCertificate, expiry, name, thumbprint);

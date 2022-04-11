@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudfront.inputs;
 import io.pulumi.aws.cloudfront.inputs.OriginRequestPolicyQueryStringsConfigQueryStringsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class OriginRequestPolicyQueryStringsConfigArgs extends io.pulumi.r
       private final @Nullable Output<OriginRequestPolicyQueryStringsConfigQueryStringsArgs> queryStrings;
 
     public Output<OriginRequestPolicyQueryStringsConfigQueryStringsArgs> getQueryStrings() {
-        return this.queryStrings == null ? Output.empty() : this.queryStrings;
+        return this.queryStrings == null ? Codegen.empty() : this.queryStrings;
     }
 
     public OriginRequestPolicyQueryStringsConfigArgs(
@@ -37,8 +38,8 @@ public final class OriginRequestPolicyQueryStringsConfigArgs extends io.pulumi.r
     }
 
     private OriginRequestPolicyQueryStringsConfigArgs() {
-        this.queryStringBehavior = Output.empty();
-        this.queryStrings = Output.empty();
+        this.queryStringBehavior = Codegen.empty();
+        this.queryStrings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class OriginRequestPolicyQueryStringsConfigArgs extends io.pulumi.r
             return this;
         }
         public Builder queryStrings(@Nullable OriginRequestPolicyQueryStringsConfigQueryStringsArgs queryStrings) {
-            this.queryStrings = Output.ofNullable(queryStrings);
+            this.queryStrings = Codegen.ofNullable(queryStrings);
             return this;
         }        public OriginRequestPolicyQueryStringsConfigArgs build() {
             return new OriginRequestPolicyQueryStringsConfigArgs(queryStringBehavior, queryStrings);

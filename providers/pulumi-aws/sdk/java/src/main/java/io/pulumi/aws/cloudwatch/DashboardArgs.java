@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudwatch;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DashboardArgs() {
-        this.dashboardBody = Output.empty();
-        this.dashboardName = Output.empty();
+        this.dashboardBody = Codegen.empty();
+        this.dashboardName = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -7,6 +7,7 @@ import io.pulumi.awsnative.datasync.enums.LocationObjectStorageServerProtocol;
 import io.pulumi.awsnative.datasync.inputs.LocationObjectStorageTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> accessKey;
 
     public Output<String> getAccessKey() {
-        return this.accessKey == null ? Output.empty() : this.accessKey;
+        return this.accessKey == null ? Codegen.empty() : this.accessKey;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> secretKey;
 
     public Output<String> getSecretKey() {
-        return this.secretKey == null ? Output.empty() : this.secretKey;
+        return this.secretKey == null ? Codegen.empty() : this.secretKey;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Integer> serverPort;
 
     public Output<Integer> getServerPort() {
-        return this.serverPort == null ? Output.empty() : this.serverPort;
+        return this.serverPort == null ? Codegen.empty() : this.serverPort;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<LocationObjectStorageServerProtocol> serverProtocol;
 
     public Output<LocationObjectStorageServerProtocol> getServerProtocol() {
-        return this.serverProtocol == null ? Output.empty() : this.serverProtocol;
+        return this.serverProtocol == null ? Codegen.empty() : this.serverProtocol;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> subdirectory;
 
     public Output<String> getSubdirectory() {
-        return this.subdirectory == null ? Output.empty() : this.subdirectory;
+        return this.subdirectory == null ? Codegen.empty() : this.subdirectory;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<LocationObjectStorageTagArgs>> tags;
 
     public Output<List<LocationObjectStorageTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public LocationObjectStorageArgs(
@@ -139,15 +140,15 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
     }
 
     private LocationObjectStorageArgs() {
-        this.accessKey = Output.empty();
-        this.agentArns = Output.empty();
-        this.bucketName = Output.empty();
-        this.secretKey = Output.empty();
-        this.serverHostname = Output.empty();
-        this.serverPort = Output.empty();
-        this.serverProtocol = Output.empty();
-        this.subdirectory = Output.empty();
-        this.tags = Output.empty();
+        this.accessKey = Codegen.empty();
+        this.agentArns = Codegen.empty();
+        this.bucketName = Codegen.empty();
+        this.secretKey = Codegen.empty();
+        this.serverHostname = Codegen.empty();
+        this.serverPort = Codegen.empty();
+        this.serverProtocol = Codegen.empty();
+        this.subdirectory = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -191,7 +192,7 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder accessKey(@Nullable String accessKey) {
-            this.accessKey = Output.ofNullable(accessKey);
+            this.accessKey = Codegen.ofNullable(accessKey);
             return this;
         }
         public Builder agentArns(Output<List<String>> agentArns) {
@@ -218,7 +219,7 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder secretKey(@Nullable String secretKey) {
-            this.secretKey = Output.ofNullable(secretKey);
+            this.secretKey = Codegen.ofNullable(secretKey);
             return this;
         }
         public Builder serverHostname(Output<String> serverHostname) {
@@ -234,7 +235,7 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder serverPort(@Nullable Integer serverPort) {
-            this.serverPort = Output.ofNullable(serverPort);
+            this.serverPort = Codegen.ofNullable(serverPort);
             return this;
         }
         public Builder serverProtocol(@Nullable Output<LocationObjectStorageServerProtocol> serverProtocol) {
@@ -242,7 +243,7 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder serverProtocol(@Nullable LocationObjectStorageServerProtocol serverProtocol) {
-            this.serverProtocol = Output.ofNullable(serverProtocol);
+            this.serverProtocol = Codegen.ofNullable(serverProtocol);
             return this;
         }
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
@@ -250,7 +251,7 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder subdirectory(@Nullable String subdirectory) {
-            this.subdirectory = Output.ofNullable(subdirectory);
+            this.subdirectory = Codegen.ofNullable(subdirectory);
             return this;
         }
         public Builder tags(@Nullable Output<List<LocationObjectStorageTagArgs>> tags) {
@@ -258,7 +259,7 @@ public final class LocationObjectStorageArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tags(@Nullable List<LocationObjectStorageTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(LocationObjectStorageTagArgs... tags) {

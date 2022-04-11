@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iam.inputs.RolePolicyArgs;
 import io.pulumi.awsnative.iam.inputs.RoleTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -38,7 +39,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> managedPolicyArns;
 
     public Output<List<String>> getManagedPolicyArns() {
-        return this.managedPolicyArns == null ? Output.empty() : this.managedPolicyArns;
+        return this.managedPolicyArns == null ? Codegen.empty() : this.managedPolicyArns;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> maxSessionDuration;
 
     public Output<Integer> getMaxSessionDuration() {
-        return this.maxSessionDuration == null ? Output.empty() : this.maxSessionDuration;
+        return this.maxSessionDuration == null ? Codegen.empty() : this.maxSessionDuration;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> permissionsBoundary;
 
     public Output<String> getPermissionsBoundary() {
-        return this.permissionsBoundary == null ? Output.empty() : this.permissionsBoundary;
+        return this.permissionsBoundary == null ? Codegen.empty() : this.permissionsBoundary;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<RolePolicyArgs>> policies;
 
     public Output<List<RolePolicyArgs>> getPolicies() {
-        return this.policies == null ? Output.empty() : this.policies;
+        return this.policies == null ? Codegen.empty() : this.policies;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> roleName;
 
     public Output<String> getRoleName() {
-        return this.roleName == null ? Output.empty() : this.roleName;
+        return this.roleName == null ? Codegen.empty() : this.roleName;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<RoleTagArgs>> tags;
 
     public Output<List<RoleTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public RoleArgs(
@@ -140,15 +141,15 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RoleArgs() {
-        this.assumeRolePolicyDocument = Output.empty();
-        this.description = Output.empty();
-        this.managedPolicyArns = Output.empty();
-        this.maxSessionDuration = Output.empty();
-        this.path = Output.empty();
-        this.permissionsBoundary = Output.empty();
-        this.policies = Output.empty();
-        this.roleName = Output.empty();
-        this.tags = Output.empty();
+        this.assumeRolePolicyDocument = Codegen.empty();
+        this.description = Codegen.empty();
+        this.managedPolicyArns = Codegen.empty();
+        this.maxSessionDuration = Codegen.empty();
+        this.path = Codegen.empty();
+        this.permissionsBoundary = Codegen.empty();
+        this.policies = Codegen.empty();
+        this.roleName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -200,7 +201,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder managedPolicyArns(@Nullable Output<List<String>> managedPolicyArns) {
@@ -208,7 +209,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder managedPolicyArns(@Nullable List<String> managedPolicyArns) {
-            this.managedPolicyArns = Output.ofNullable(managedPolicyArns);
+            this.managedPolicyArns = Codegen.ofNullable(managedPolicyArns);
             return this;
         }
         public Builder managedPolicyArns(String... managedPolicyArns) {
@@ -219,7 +220,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxSessionDuration(@Nullable Integer maxSessionDuration) {
-            this.maxSessionDuration = Output.ofNullable(maxSessionDuration);
+            this.maxSessionDuration = Codegen.ofNullable(maxSessionDuration);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -227,7 +228,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder permissionsBoundary(@Nullable Output<String> permissionsBoundary) {
@@ -235,7 +236,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder permissionsBoundary(@Nullable String permissionsBoundary) {
-            this.permissionsBoundary = Output.ofNullable(permissionsBoundary);
+            this.permissionsBoundary = Codegen.ofNullable(permissionsBoundary);
             return this;
         }
         public Builder policies(@Nullable Output<List<RolePolicyArgs>> policies) {
@@ -243,7 +244,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder policies(@Nullable List<RolePolicyArgs> policies) {
-            this.policies = Output.ofNullable(policies);
+            this.policies = Codegen.ofNullable(policies);
             return this;
         }
         public Builder policies(RolePolicyArgs... policies) {
@@ -254,7 +255,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roleName(@Nullable String roleName) {
-            this.roleName = Output.ofNullable(roleName);
+            this.roleName = Codegen.ofNullable(roleName);
             return this;
         }
         public Builder tags(@Nullable Output<List<RoleTagArgs>> tags) {
@@ -262,7 +263,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<RoleTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(RoleTagArgs... tags) {

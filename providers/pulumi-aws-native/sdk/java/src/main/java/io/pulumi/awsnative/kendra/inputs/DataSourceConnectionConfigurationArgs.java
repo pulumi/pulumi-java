@@ -5,6 +5,7 @@ package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -63,11 +64,11 @@ public final class DataSourceConnectionConfigurationArgs extends io.pulumi.resou
     }
 
     private DataSourceConnectionConfigurationArgs() {
-        this.databaseHost = Output.empty();
-        this.databaseName = Output.empty();
-        this.databasePort = Output.empty();
-        this.secretArn = Output.empty();
-        this.tableName = Output.empty();
+        this.databaseHost = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.databasePort = Codegen.empty();
+        this.secretArn = Codegen.empty();
+        this.tableName = Codegen.empty();
     }
 
     public static Builder builder() {

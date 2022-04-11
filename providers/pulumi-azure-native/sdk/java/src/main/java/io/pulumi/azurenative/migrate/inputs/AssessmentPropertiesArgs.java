@@ -20,6 +20,7 @@ import io.pulumi.azurenative.migrate.inputs.VmUptimeArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -246,22 +247,22 @@ public final class AssessmentPropertiesArgs extends io.pulumi.resources.Resource
     }
 
     private AssessmentPropertiesArgs() {
-        this.azureDiskType = Output.empty();
-        this.azureHybridUseBenefit = Output.empty();
-        this.azureLocation = Output.empty();
-        this.azureOfferCode = Output.empty();
-        this.azurePricingTier = Output.empty();
-        this.azureStorageRedundancy = Output.empty();
-        this.azureVmFamilies = Output.empty();
-        this.currency = Output.empty();
-        this.discountPercentage = Output.empty();
-        this.percentile = Output.empty();
-        this.reservedInstance = Output.empty();
-        this.scalingFactor = Output.empty();
-        this.sizingCriterion = Output.empty();
-        this.stage = Output.empty();
-        this.timeRange = Output.empty();
-        this.vmUptime = Output.empty();
+        this.azureDiskType = Codegen.empty();
+        this.azureHybridUseBenefit = Codegen.empty();
+        this.azureLocation = Codegen.empty();
+        this.azureOfferCode = Codegen.empty();
+        this.azurePricingTier = Codegen.empty();
+        this.azureStorageRedundancy = Codegen.empty();
+        this.azureVmFamilies = Codegen.empty();
+        this.currency = Codegen.empty();
+        this.discountPercentage = Codegen.empty();
+        this.percentile = Codegen.empty();
+        this.reservedInstance = Codegen.empty();
+        this.scalingFactor = Codegen.empty();
+        this.sizingCriterion = Codegen.empty();
+        this.stage = Codegen.empty();
+        this.timeRange = Codegen.empty();
+        this.vmUptime = Codegen.empty();
     }
 
     public static Builder builder() {

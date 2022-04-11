@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.inputs.InternetGatewayState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -122,7 +123,7 @@ public class InternetGateway extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public InternetGateway(String name, @Nullable InternetGatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/internetGateway:InternetGateway", name, args == null ? InternetGatewayArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/internetGateway:InternetGateway", name, args == null ? InternetGatewayArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private InternetGateway(String name, Output<String> id, @Nullable InternetGatewayState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

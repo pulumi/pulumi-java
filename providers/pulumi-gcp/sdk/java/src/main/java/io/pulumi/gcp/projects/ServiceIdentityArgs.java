@@ -5,6 +5,7 @@ package io.pulumi.gcp.projects;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class ServiceIdentityArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class ServiceIdentityArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ServiceIdentityArgs() {
-        this.project = Output.empty();
-        this.service = Output.empty();
+        this.project = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class ServiceIdentityArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder service(Output<String> service) {

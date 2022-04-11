@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class MachineImageMachineImageEncryptionKeyArgs extends io.pulumi.r
       private final @Nullable Output<String> kmsKeyName;
 
     public Output<String> getKmsKeyName() {
-        return this.kmsKeyName == null ? Output.empty() : this.kmsKeyName;
+        return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class MachineImageMachineImageEncryptionKeyArgs extends io.pulumi.r
       private final @Nullable Output<String> kmsKeyServiceAccount;
 
     public Output<String> getKmsKeyServiceAccount() {
-        return this.kmsKeyServiceAccount == null ? Output.empty() : this.kmsKeyServiceAccount;
+        return this.kmsKeyServiceAccount == null ? Codegen.empty() : this.kmsKeyServiceAccount;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class MachineImageMachineImageEncryptionKeyArgs extends io.pulumi.r
       private final @Nullable Output<String> rawKey;
 
     public Output<String> getRawKey() {
-        return this.rawKey == null ? Output.empty() : this.rawKey;
+        return this.rawKey == null ? Codegen.empty() : this.rawKey;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class MachineImageMachineImageEncryptionKeyArgs extends io.pulumi.r
       private final @Nullable Output<String> sha256;
 
     public Output<String> getSha256() {
-        return this.sha256 == null ? Output.empty() : this.sha256;
+        return this.sha256 == null ? Codegen.empty() : this.sha256;
     }
 
     public MachineImageMachineImageEncryptionKeyArgs(
@@ -74,10 +75,10 @@ public final class MachineImageMachineImageEncryptionKeyArgs extends io.pulumi.r
     }
 
     private MachineImageMachineImageEncryptionKeyArgs() {
-        this.kmsKeyName = Output.empty();
-        this.kmsKeyServiceAccount = Output.empty();
-        this.rawKey = Output.empty();
-        this.sha256 = Output.empty();
+        this.kmsKeyName = Codegen.empty();
+        this.kmsKeyServiceAccount = Codegen.empty();
+        this.rawKey = Codegen.empty();
+        this.sha256 = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class MachineImageMachineImageEncryptionKeyArgs extends io.pulumi.r
             return this;
         }
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Output.ofNullable(kmsKeyName);
+            this.kmsKeyName = Codegen.ofNullable(kmsKeyName);
             return this;
         }
         public Builder kmsKeyServiceAccount(@Nullable Output<String> kmsKeyServiceAccount) {
@@ -119,7 +120,7 @@ public final class MachineImageMachineImageEncryptionKeyArgs extends io.pulumi.r
             return this;
         }
         public Builder kmsKeyServiceAccount(@Nullable String kmsKeyServiceAccount) {
-            this.kmsKeyServiceAccount = Output.ofNullable(kmsKeyServiceAccount);
+            this.kmsKeyServiceAccount = Codegen.ofNullable(kmsKeyServiceAccount);
             return this;
         }
         public Builder rawKey(@Nullable Output<String> rawKey) {
@@ -127,7 +128,7 @@ public final class MachineImageMachineImageEncryptionKeyArgs extends io.pulumi.r
             return this;
         }
         public Builder rawKey(@Nullable String rawKey) {
-            this.rawKey = Output.ofNullable(rawKey);
+            this.rawKey = Codegen.ofNullable(rawKey);
             return this;
         }
         public Builder sha256(@Nullable Output<String> sha256) {
@@ -135,7 +136,7 @@ public final class MachineImageMachineImageEncryptionKeyArgs extends io.pulumi.r
             return this;
         }
         public Builder sha256(@Nullable String sha256) {
-            this.sha256 = Output.ofNullable(sha256);
+            this.sha256 = Codegen.ofNullable(sha256);
             return this;
         }        public MachineImageMachineImageEncryptionKeyArgs build() {
             return new MachineImageMachineImageEncryptionKeyArgs(kmsKeyName, kmsKeyServiceAccount, rawKey, sha256);

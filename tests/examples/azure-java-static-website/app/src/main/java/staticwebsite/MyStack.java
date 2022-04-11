@@ -1,15 +1,23 @@
 package staticwebsite;
 
 import io.pulumi.Stack;
-import io.pulumi.azurenative.cdn.*;
+import io.pulumi.asset.FileAsset;
+import io.pulumi.azurenative.cdn.Endpoint;
+import io.pulumi.azurenative.cdn.EndpointArgs;
+import io.pulumi.azurenative.cdn.Profile;
+import io.pulumi.azurenative.cdn.ProfileArgs;
 import io.pulumi.azurenative.cdn.enums.QueryStringCachingBehavior;
 import io.pulumi.azurenative.cdn.inputs.DeepCreatedOriginArgs;
 import io.pulumi.azurenative.resources.ResourceGroup;
-import io.pulumi.azurenative.storage.*;
+import io.pulumi.azurenative.storage.Blob;
+import io.pulumi.azurenative.storage.BlobArgs;
+import io.pulumi.azurenative.storage.StorageAccount;
+import io.pulumi.azurenative.storage.StorageAccountArgs;
+import io.pulumi.azurenative.storage.StorageAccountStaticWebsite;
+import io.pulumi.azurenative.storage.StorageAccountStaticWebsiteArgs;
 import io.pulumi.azurenative.storage.enums.Kind;
 import io.pulumi.azurenative.storage.enums.SkuName;
 import io.pulumi.azurenative.storage.inputs.SkuArgs;
-import io.pulumi.core.Asset;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
@@ -42,14 +50,14 @@ public final class MyStack extends Stack {
                 BlobArgs.builder().accountName(storageAccount.getName())
                         .resourceGroupName(resourceGroup.getName())
                         .containerName(staticWebsite.getContainerName())
-                        .source(new Asset.FileAsset("./wwwroot/index.html"))
+                        .source(new FileAsset("./wwwroot/index.html"))
                         .contentType("text/html").build());
 
         var notFoundHtml = new Blob("404.html",
                 BlobArgs.builder().accountName(storageAccount.getName())
                         .resourceGroupName(resourceGroup.getName())
                         .containerName(staticWebsite.getContainerName())
-                        .source(new Asset.FileAsset("./wwwroot/404.html"))
+                        .source(new FileAsset("./wwwroot/404.html"))
                         .contentType("text/html").build());
 
         // Web endpoint to the website.

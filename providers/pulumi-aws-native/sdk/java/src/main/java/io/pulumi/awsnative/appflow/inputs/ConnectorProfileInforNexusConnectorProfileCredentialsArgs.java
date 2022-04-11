@@ -5,6 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -69,10 +70,10 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentialsArgs ext
     }
 
     private ConnectorProfileInforNexusConnectorProfileCredentialsArgs() {
-        this.accessKeyId = Output.empty();
-        this.datakey = Output.empty();
-        this.secretAccessKey = Output.empty();
-        this.userId = Output.empty();
+        this.accessKeyId = Codegen.empty();
+        this.datakey = Codegen.empty();
+        this.secretAccessKey = Codegen.empty();
+        this.userId = Codegen.empty();
     }
 
     public static Builder builder() {

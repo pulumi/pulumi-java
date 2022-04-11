@@ -6,6 +6,7 @@ package io.pulumi.googlenative.cloudresourcemanager_v3;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudresourcemanager_v3.TagKeyIamPolicyArgs;
 import io.pulumi.googlenative.cloudresourcemanager_v3.outputs.AuditConfigResponse;
@@ -102,7 +103,7 @@ public class TagKeyIamPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TagKeyIamPolicy(String name, TagKeyIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudresourcemanager/v3:TagKeyIamPolicy", name, args == null ? TagKeyIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:cloudresourcemanager/v3:TagKeyIamPolicy", name, args == null ? TagKeyIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TagKeyIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

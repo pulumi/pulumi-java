@@ -7,6 +7,7 @@ import io.pulumi.azurenative.containerservice.enums.LicenseType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class ManagedClusterWindowsProfileArgs extends io.pulumi.resources.
       private final @Nullable Output<String> adminPassword;
 
     public Output<String> getAdminPassword() {
-        return this.adminPassword == null ? Output.empty() : this.adminPassword;
+        return this.adminPassword == null ? Codegen.empty() : this.adminPassword;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class ManagedClusterWindowsProfileArgs extends io.pulumi.resources.
       private final @Nullable Output<Boolean> enableCSIProxy;
 
     public Output<Boolean> getEnableCSIProxy() {
-        return this.enableCSIProxy == null ? Output.empty() : this.enableCSIProxy;
+        return this.enableCSIProxy == null ? Codegen.empty() : this.enableCSIProxy;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class ManagedClusterWindowsProfileArgs extends io.pulumi.resources.
       private final @Nullable Output<Either<String,LicenseType>> licenseType;
 
     public Output<Either<String,LicenseType>> getLicenseType() {
-        return this.licenseType == null ? Output.empty() : this.licenseType;
+        return this.licenseType == null ? Codegen.empty() : this.licenseType;
     }
 
     public ManagedClusterWindowsProfileArgs(
@@ -77,10 +78,10 @@ public final class ManagedClusterWindowsProfileArgs extends io.pulumi.resources.
     }
 
     private ManagedClusterWindowsProfileArgs() {
-        this.adminPassword = Output.empty();
-        this.adminUsername = Output.empty();
-        this.enableCSIProxy = Output.empty();
-        this.licenseType = Output.empty();
+        this.adminPassword = Codegen.empty();
+        this.adminUsername = Codegen.empty();
+        this.enableCSIProxy = Codegen.empty();
+        this.licenseType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class ManagedClusterWindowsProfileArgs extends io.pulumi.resources.
             return this;
         }
         public Builder adminPassword(@Nullable String adminPassword) {
-            this.adminPassword = Output.ofNullable(adminPassword);
+            this.adminPassword = Codegen.ofNullable(adminPassword);
             return this;
         }
         public Builder adminUsername(Output<String> adminUsername) {
@@ -130,7 +131,7 @@ public final class ManagedClusterWindowsProfileArgs extends io.pulumi.resources.
             return this;
         }
         public Builder enableCSIProxy(@Nullable Boolean enableCSIProxy) {
-            this.enableCSIProxy = Output.ofNullable(enableCSIProxy);
+            this.enableCSIProxy = Codegen.ofNullable(enableCSIProxy);
             return this;
         }
         public Builder licenseType(@Nullable Output<Either<String,LicenseType>> licenseType) {
@@ -138,7 +139,7 @@ public final class ManagedClusterWindowsProfileArgs extends io.pulumi.resources.
             return this;
         }
         public Builder licenseType(@Nullable Either<String,LicenseType> licenseType) {
-            this.licenseType = Output.ofNullable(licenseType);
+            this.licenseType = Codegen.ofNullable(licenseType);
             return this;
         }        public ManagedClusterWindowsProfileArgs build() {
             return new ManagedClusterWindowsProfileArgs(adminPassword, adminUsername, enableCSIProxy, licenseType);

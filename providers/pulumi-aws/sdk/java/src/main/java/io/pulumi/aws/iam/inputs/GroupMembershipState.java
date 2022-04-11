@@ -5,6 +5,7 @@ package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> group;
 
     public Output<String> getGroup() {
-        return this.group == null ? Output.empty() : this.group;
+        return this.group == null ? Codegen.empty() : this.group;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> users;
 
     public Output<List<String>> getUsers() {
-        return this.users == null ? Output.empty() : this.users;
+        return this.users == null ? Codegen.empty() : this.users;
     }
 
     public GroupMembershipState(
@@ -58,9 +59,9 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
     }
 
     private GroupMembershipState() {
-        this.group = Output.empty();
-        this.name = Output.empty();
-        this.users = Output.empty();
+        this.group = Codegen.empty();
+        this.name = Codegen.empty();
+        this.users = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder group(@Nullable String group) {
-            this.group = Output.ofNullable(group);
+            this.group = Codegen.ofNullable(group);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -100,7 +101,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder users(@Nullable Output<List<String>> users) {
@@ -108,7 +109,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder users(@Nullable List<String> users) {
-            this.users = Output.ofNullable(users);
+            this.users = Codegen.ofNullable(users);
             return this;
         }
         public Builder users(String... users) {

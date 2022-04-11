@@ -6,6 +6,7 @@ package io.pulumi.aws.elasticloadbalancing;
 import io.pulumi.aws.elasticloadbalancing.inputs.LoadBalancerPolicyPolicyAttributeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class LoadBalancerPolicyArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<LoadBalancerPolicyPolicyAttributeArgs>> policyAttributes;
 
     public Output<List<LoadBalancerPolicyPolicyAttributeArgs>> getPolicyAttributes() {
-        return this.policyAttributes == null ? Output.empty() : this.policyAttributes;
+        return this.policyAttributes == null ? Codegen.empty() : this.policyAttributes;
     }
 
     /**
@@ -72,10 +73,10 @@ public final class LoadBalancerPolicyArgs extends io.pulumi.resources.ResourceAr
     }
 
     private LoadBalancerPolicyArgs() {
-        this.loadBalancerName = Output.empty();
-        this.policyAttributes = Output.empty();
-        this.policyName = Output.empty();
-        this.policyTypeName = Output.empty();
+        this.loadBalancerName = Codegen.empty();
+        this.policyAttributes = Codegen.empty();
+        this.policyName = Codegen.empty();
+        this.policyTypeName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -117,7 +118,7 @@ public final class LoadBalancerPolicyArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder policyAttributes(@Nullable List<LoadBalancerPolicyPolicyAttributeArgs> policyAttributes) {
-            this.policyAttributes = Output.ofNullable(policyAttributes);
+            this.policyAttributes = Codegen.ofNullable(policyAttributes);
             return this;
         }
         public Builder policyAttributes(LoadBalancerPolicyPolicyAttributeArgs... policyAttributes) {

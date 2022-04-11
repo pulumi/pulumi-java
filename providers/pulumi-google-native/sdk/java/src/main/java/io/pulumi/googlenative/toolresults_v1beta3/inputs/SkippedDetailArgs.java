@@ -5,6 +5,7 @@ package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class SkippedDetailArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> incompatibleAppVersion;
 
     public Output<Boolean> getIncompatibleAppVersion() {
-        return this.incompatibleAppVersion == null ? Output.empty() : this.incompatibleAppVersion;
+        return this.incompatibleAppVersion == null ? Codegen.empty() : this.incompatibleAppVersion;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class SkippedDetailArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> incompatibleArchitecture;
 
     public Output<Boolean> getIncompatibleArchitecture() {
-        return this.incompatibleArchitecture == null ? Output.empty() : this.incompatibleArchitecture;
+        return this.incompatibleArchitecture == null ? Codegen.empty() : this.incompatibleArchitecture;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class SkippedDetailArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> incompatibleDevice;
 
     public Output<Boolean> getIncompatibleDevice() {
-        return this.incompatibleDevice == null ? Output.empty() : this.incompatibleDevice;
+        return this.incompatibleDevice == null ? Codegen.empty() : this.incompatibleDevice;
     }
 
     public SkippedDetailArgs(
@@ -61,9 +62,9 @@ public final class SkippedDetailArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SkippedDetailArgs() {
-        this.incompatibleAppVersion = Output.empty();
-        this.incompatibleArchitecture = Output.empty();
-        this.incompatibleDevice = Output.empty();
+        this.incompatibleAppVersion = Codegen.empty();
+        this.incompatibleArchitecture = Codegen.empty();
+        this.incompatibleDevice = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class SkippedDetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder incompatibleAppVersion(@Nullable Boolean incompatibleAppVersion) {
-            this.incompatibleAppVersion = Output.ofNullable(incompatibleAppVersion);
+            this.incompatibleAppVersion = Codegen.ofNullable(incompatibleAppVersion);
             return this;
         }
         public Builder incompatibleArchitecture(@Nullable Output<Boolean> incompatibleArchitecture) {
@@ -103,7 +104,7 @@ public final class SkippedDetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder incompatibleArchitecture(@Nullable Boolean incompatibleArchitecture) {
-            this.incompatibleArchitecture = Output.ofNullable(incompatibleArchitecture);
+            this.incompatibleArchitecture = Codegen.ofNullable(incompatibleArchitecture);
             return this;
         }
         public Builder incompatibleDevice(@Nullable Output<Boolean> incompatibleDevice) {
@@ -111,7 +112,7 @@ public final class SkippedDetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder incompatibleDevice(@Nullable Boolean incompatibleDevice) {
-            this.incompatibleDevice = Output.ofNullable(incompatibleDevice);
+            this.incompatibleDevice = Codegen.ofNullable(incompatibleDevice);
             return this;
         }        public SkippedDetailArgs build() {
             return new SkippedDetailArgs(incompatibleAppVersion, incompatibleArchitecture, incompatibleDevice);

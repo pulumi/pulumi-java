@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_beta.inputs.DurationArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class CircuitBreakersArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<DurationArgs> connectTimeout;
 
     public Output<DurationArgs> getConnectTimeout() {
-        return this.connectTimeout == null ? Output.empty() : this.connectTimeout;
+        return this.connectTimeout == null ? Codegen.empty() : this.connectTimeout;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class CircuitBreakersArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Integer> maxConnections;
 
     public Output<Integer> getMaxConnections() {
-        return this.maxConnections == null ? Output.empty() : this.maxConnections;
+        return this.maxConnections == null ? Codegen.empty() : this.maxConnections;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class CircuitBreakersArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Integer> maxPendingRequests;
 
     public Output<Integer> getMaxPendingRequests() {
-        return this.maxPendingRequests == null ? Output.empty() : this.maxPendingRequests;
+        return this.maxPendingRequests == null ? Codegen.empty() : this.maxPendingRequests;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class CircuitBreakersArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Integer> maxRequests;
 
     public Output<Integer> getMaxRequests() {
-        return this.maxRequests == null ? Output.empty() : this.maxRequests;
+        return this.maxRequests == null ? Codegen.empty() : this.maxRequests;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class CircuitBreakersArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Integer> maxRequestsPerConnection;
 
     public Output<Integer> getMaxRequestsPerConnection() {
-        return this.maxRequestsPerConnection == null ? Output.empty() : this.maxRequestsPerConnection;
+        return this.maxRequestsPerConnection == null ? Codegen.empty() : this.maxRequestsPerConnection;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class CircuitBreakersArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Integer> maxRetries;
 
     public Output<Integer> getMaxRetries() {
-        return this.maxRetries == null ? Output.empty() : this.maxRetries;
+        return this.maxRetries == null ? Codegen.empty() : this.maxRetries;
     }
 
     public CircuitBreakersArgs(
@@ -101,12 +102,12 @@ public final class CircuitBreakersArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private CircuitBreakersArgs() {
-        this.connectTimeout = Output.empty();
-        this.maxConnections = Output.empty();
-        this.maxPendingRequests = Output.empty();
-        this.maxRequests = Output.empty();
-        this.maxRequestsPerConnection = Output.empty();
-        this.maxRetries = Output.empty();
+        this.connectTimeout = Codegen.empty();
+        this.maxConnections = Codegen.empty();
+        this.maxPendingRequests = Codegen.empty();
+        this.maxRequests = Codegen.empty();
+        this.maxRequestsPerConnection = Codegen.empty();
+        this.maxRetries = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class CircuitBreakersArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder connectTimeout(@Nullable DurationArgs connectTimeout) {
-            this.connectTimeout = Output.ofNullable(connectTimeout);
+            this.connectTimeout = Codegen.ofNullable(connectTimeout);
             return this;
         }
         public Builder maxConnections(@Nullable Output<Integer> maxConnections) {
@@ -152,7 +153,7 @@ public final class CircuitBreakersArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder maxConnections(@Nullable Integer maxConnections) {
-            this.maxConnections = Output.ofNullable(maxConnections);
+            this.maxConnections = Codegen.ofNullable(maxConnections);
             return this;
         }
         public Builder maxPendingRequests(@Nullable Output<Integer> maxPendingRequests) {
@@ -160,7 +161,7 @@ public final class CircuitBreakersArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder maxPendingRequests(@Nullable Integer maxPendingRequests) {
-            this.maxPendingRequests = Output.ofNullable(maxPendingRequests);
+            this.maxPendingRequests = Codegen.ofNullable(maxPendingRequests);
             return this;
         }
         public Builder maxRequests(@Nullable Output<Integer> maxRequests) {
@@ -168,7 +169,7 @@ public final class CircuitBreakersArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder maxRequests(@Nullable Integer maxRequests) {
-            this.maxRequests = Output.ofNullable(maxRequests);
+            this.maxRequests = Codegen.ofNullable(maxRequests);
             return this;
         }
         public Builder maxRequestsPerConnection(@Nullable Output<Integer> maxRequestsPerConnection) {
@@ -176,7 +177,7 @@ public final class CircuitBreakersArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder maxRequestsPerConnection(@Nullable Integer maxRequestsPerConnection) {
-            this.maxRequestsPerConnection = Output.ofNullable(maxRequestsPerConnection);
+            this.maxRequestsPerConnection = Codegen.ofNullable(maxRequestsPerConnection);
             return this;
         }
         public Builder maxRetries(@Nullable Output<Integer> maxRetries) {
@@ -184,7 +185,7 @@ public final class CircuitBreakersArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder maxRetries(@Nullable Integer maxRetries) {
-            this.maxRetries = Output.ofNullable(maxRetries);
+            this.maxRetries = Codegen.ofNullable(maxRetries);
             return this;
         }        public CircuitBreakersArgs build() {
             return new CircuitBreakersArgs(connectTimeout, maxConnections, maxPendingRequests, maxRequests, maxRequestsPerConnection, maxRetries);

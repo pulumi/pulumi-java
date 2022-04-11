@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -49,7 +50,7 @@ public final class SoftwareRecipeStepCopyFileArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Boolean> overwrite;
 
     public Output<Boolean> getOverwrite() {
-        return this.overwrite == null ? Output.empty() : this.overwrite;
+        return this.overwrite == null ? Codegen.empty() : this.overwrite;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class SoftwareRecipeStepCopyFileArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> permissions;
 
     public Output<String> getPermissions() {
-        return this.permissions == null ? Output.empty() : this.permissions;
+        return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 
     public SoftwareRecipeStepCopyFileArgs(
@@ -75,10 +76,10 @@ public final class SoftwareRecipeStepCopyFileArgs extends io.pulumi.resources.Re
     }
 
     private SoftwareRecipeStepCopyFileArgs() {
-        this.artifactId = Output.empty();
-        this.destination = Output.empty();
-        this.overwrite = Output.empty();
-        this.permissions = Output.empty();
+        this.artifactId = Codegen.empty();
+        this.destination = Codegen.empty();
+        this.overwrite = Codegen.empty();
+        this.permissions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class SoftwareRecipeStepCopyFileArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder overwrite(@Nullable Boolean overwrite) {
-            this.overwrite = Output.ofNullable(overwrite);
+            this.overwrite = Codegen.ofNullable(overwrite);
             return this;
         }
         public Builder permissions(@Nullable Output<String> permissions) {
@@ -136,7 +137,7 @@ public final class SoftwareRecipeStepCopyFileArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder permissions(@Nullable String permissions) {
-            this.permissions = Output.ofNullable(permissions);
+            this.permissions = Codegen.ofNullable(permissions);
             return this;
         }        public SoftwareRecipeStepCopyFileArgs build() {
             return new SoftwareRecipeStepCopyFileArgs(artifactId, destination, overwrite, permissions);

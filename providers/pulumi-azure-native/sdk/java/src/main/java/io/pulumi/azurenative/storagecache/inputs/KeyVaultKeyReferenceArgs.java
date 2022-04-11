@@ -6,6 +6,7 @@ package io.pulumi.azurenative.storagecache.inputs;
 import io.pulumi.azurenative.storagecache.inputs.KeyVaultKeyReferenceSourceVaultArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -48,8 +49,8 @@ public final class KeyVaultKeyReferenceArgs extends io.pulumi.resources.Resource
     }
 
     private KeyVaultKeyReferenceArgs() {
-        this.keyUrl = Output.empty();
-        this.sourceVault = Output.empty();
+        this.keyUrl = Codegen.empty();
+        this.sourceVault = Codegen.empty();
     }
 
     public static Builder builder() {

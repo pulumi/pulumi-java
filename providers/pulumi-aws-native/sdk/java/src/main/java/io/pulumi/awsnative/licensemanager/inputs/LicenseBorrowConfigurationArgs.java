@@ -5,6 +5,7 @@ package io.pulumi.awsnative.licensemanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -36,8 +37,8 @@ public final class LicenseBorrowConfigurationArgs extends io.pulumi.resources.Re
     }
 
     private LicenseBorrowConfigurationArgs() {
-        this.allowEarlyCheckIn = Output.empty();
-        this.maxTimeToLiveInMinutes = Output.empty();
+        this.allowEarlyCheckIn = Codegen.empty();
+        this.maxTimeToLiveInMinutes = Codegen.empty();
     }
 
     public static Builder builder() {

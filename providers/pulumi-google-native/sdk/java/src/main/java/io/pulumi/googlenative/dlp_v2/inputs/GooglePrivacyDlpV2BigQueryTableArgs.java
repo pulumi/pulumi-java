@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GooglePrivacyDlpV2BigQueryTableArgs extends io.pulumi.resourc
       private final @Nullable Output<String> datasetId;
 
     public Output<String> getDatasetId() {
-        return this.datasetId == null ? Output.empty() : this.datasetId;
+        return this.datasetId == null ? Codegen.empty() : this.datasetId;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class GooglePrivacyDlpV2BigQueryTableArgs extends io.pulumi.resourc
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class GooglePrivacyDlpV2BigQueryTableArgs extends io.pulumi.resourc
       private final @Nullable Output<String> tableId;
 
     public Output<String> getTableId() {
-        return this.tableId == null ? Output.empty() : this.tableId;
+        return this.tableId == null ? Codegen.empty() : this.tableId;
     }
 
     public GooglePrivacyDlpV2BigQueryTableArgs(
@@ -61,9 +62,9 @@ public final class GooglePrivacyDlpV2BigQueryTableArgs extends io.pulumi.resourc
     }
 
     private GooglePrivacyDlpV2BigQueryTableArgs() {
-        this.datasetId = Output.empty();
-        this.project = Output.empty();
-        this.tableId = Output.empty();
+        this.datasetId = Codegen.empty();
+        this.project = Codegen.empty();
+        this.tableId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class GooglePrivacyDlpV2BigQueryTableArgs extends io.pulumi.resourc
             return this;
         }
         public Builder datasetId(@Nullable String datasetId) {
-            this.datasetId = Output.ofNullable(datasetId);
+            this.datasetId = Codegen.ofNullable(datasetId);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -103,7 +104,7 @@ public final class GooglePrivacyDlpV2BigQueryTableArgs extends io.pulumi.resourc
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder tableId(@Nullable Output<String> tableId) {
@@ -111,7 +112,7 @@ public final class GooglePrivacyDlpV2BigQueryTableArgs extends io.pulumi.resourc
             return this;
         }
         public Builder tableId(@Nullable String tableId) {
-            this.tableId = Output.ofNullable(tableId);
+            this.tableId = Codegen.ofNullable(tableId);
             return this;
         }        public GooglePrivacyDlpV2BigQueryTableArgs build() {
             return new GooglePrivacyDlpV2BigQueryTableArgs(datasetId, project, tableId);

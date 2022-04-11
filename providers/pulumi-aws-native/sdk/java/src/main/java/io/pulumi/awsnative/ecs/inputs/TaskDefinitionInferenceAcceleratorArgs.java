@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +19,14 @@ public final class TaskDefinitionInferenceAcceleratorArgs extends io.pulumi.reso
       private final @Nullable Output<String> deviceName;
 
     public Output<String> getDeviceName() {
-        return this.deviceName == null ? Output.empty() : this.deviceName;
+        return this.deviceName == null ? Codegen.empty() : this.deviceName;
     }
 
     @Import(name="deviceType")
       private final @Nullable Output<String> deviceType;
 
     public Output<String> getDeviceType() {
-        return this.deviceType == null ? Output.empty() : this.deviceType;
+        return this.deviceType == null ? Codegen.empty() : this.deviceType;
     }
 
     public TaskDefinitionInferenceAcceleratorArgs(
@@ -36,8 +37,8 @@ public final class TaskDefinitionInferenceAcceleratorArgs extends io.pulumi.reso
     }
 
     private TaskDefinitionInferenceAcceleratorArgs() {
-        this.deviceName = Output.empty();
-        this.deviceType = Output.empty();
+        this.deviceName = Codegen.empty();
+        this.deviceType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class TaskDefinitionInferenceAcceleratorArgs extends io.pulumi.reso
             return this;
         }
         public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Output.ofNullable(deviceName);
+            this.deviceName = Codegen.ofNullable(deviceName);
             return this;
         }
         public Builder deviceType(@Nullable Output<String> deviceType) {
@@ -75,7 +76,7 @@ public final class TaskDefinitionInferenceAcceleratorArgs extends io.pulumi.reso
             return this;
         }
         public Builder deviceType(@Nullable String deviceType) {
-            this.deviceType = Output.ofNullable(deviceType);
+            this.deviceType = Codegen.ofNullable(deviceType);
             return this;
         }        public TaskDefinitionInferenceAcceleratorArgs build() {
             return new TaskDefinitionInferenceAcceleratorArgs(deviceName, deviceType);

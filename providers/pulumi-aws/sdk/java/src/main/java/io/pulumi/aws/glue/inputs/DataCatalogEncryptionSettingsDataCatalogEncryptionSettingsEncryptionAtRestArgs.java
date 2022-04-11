@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEnc
       private final @Nullable Output<String> sseAwsKmsKeyId;
 
     public Output<String> getSseAwsKmsKeyId() {
-        return this.sseAwsKmsKeyId == null ? Output.empty() : this.sseAwsKmsKeyId;
+        return this.sseAwsKmsKeyId == null ? Codegen.empty() : this.sseAwsKmsKeyId;
     }
 
     public DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs(
@@ -44,8 +45,8 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEnc
     }
 
     private DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs() {
-        this.catalogEncryptionMode = Output.empty();
-        this.sseAwsKmsKeyId = Output.empty();
+        this.catalogEncryptionMode = Codegen.empty();
+        this.sseAwsKmsKeyId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEnc
             return this;
         }
         public Builder sseAwsKmsKeyId(@Nullable String sseAwsKmsKeyId) {
-            this.sseAwsKmsKeyId = Output.ofNullable(sseAwsKmsKeyId);
+            this.sseAwsKmsKeyId = Codegen.ofNullable(sseAwsKmsKeyId);
             return this;
         }        public DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs build() {
             return new DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs(catalogEncryptionMode, sseAwsKmsKeyId);

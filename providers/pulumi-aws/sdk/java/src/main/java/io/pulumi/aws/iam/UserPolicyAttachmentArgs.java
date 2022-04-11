@@ -5,6 +5,7 @@ package io.pulumi.aws.iam;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class UserPolicyAttachmentArgs extends io.pulumi.resources.Resource
     }
 
     private UserPolicyAttachmentArgs() {
-        this.policyArn = Output.empty();
-        this.user = Output.empty();
+        this.policyArn = Codegen.empty();
+        this.user = Codegen.empty();
     }
 
     public static Builder builder() {

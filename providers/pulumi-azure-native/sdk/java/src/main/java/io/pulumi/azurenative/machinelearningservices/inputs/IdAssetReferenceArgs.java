@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -48,8 +49,8 @@ public final class IdAssetReferenceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private IdAssetReferenceArgs() {
-        this.assetId = Output.empty();
-        this.referenceType = Output.empty();
+        this.assetId = Codegen.empty();
+        this.referenceType = Codegen.empty();
     }
 
     public static Builder builder() {

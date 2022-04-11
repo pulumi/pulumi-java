@@ -6,6 +6,7 @@ package io.pulumi.azurenative.migrate;
 import io.pulumi.azurenative.migrate.inputs.MoveResourcePropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class MoveResourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> moveResourceName;
 
     public Output<String> getMoveResourceName() {
-        return this.moveResourceName == null ? Output.empty() : this.moveResourceName;
+        return this.moveResourceName == null ? Codegen.empty() : this.moveResourceName;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class MoveResourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<MoveResourcePropertiesArgs> properties;
 
     public Output<MoveResourcePropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -71,10 +72,10 @@ public final class MoveResourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MoveResourceArgs() {
-        this.moveCollectionName = Output.empty();
-        this.moveResourceName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.moveCollectionName = Codegen.empty();
+        this.moveResourceName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class MoveResourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder moveResourceName(@Nullable String moveResourceName) {
-            this.moveResourceName = Output.ofNullable(moveResourceName);
+            this.moveResourceName = Codegen.ofNullable(moveResourceName);
             return this;
         }
         public Builder properties(@Nullable Output<MoveResourcePropertiesArgs> properties) {
@@ -124,7 +125,7 @@ public final class MoveResourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable MoveResourcePropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datalabeling_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1EvaluationJobConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -75,7 +76,7 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -107,13 +108,13 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EvaluationJobArgs() {
-        this.annotationSpecSet = Output.empty();
-        this.description = Output.empty();
-        this.evaluationJobConfig = Output.empty();
-        this.labelMissingGroundTruth = Output.empty();
-        this.modelVersion = Output.empty();
-        this.project = Output.empty();
-        this.schedule = Output.empty();
+        this.annotationSpecSet = Codegen.empty();
+        this.description = Codegen.empty();
+        this.evaluationJobConfig = Codegen.empty();
+        this.labelMissingGroundTruth = Codegen.empty();
+        this.modelVersion = Codegen.empty();
+        this.project = Codegen.empty();
+        this.schedule = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -193,7 +194,7 @@ public final class EvaluationJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder schedule(Output<String> schedule) {

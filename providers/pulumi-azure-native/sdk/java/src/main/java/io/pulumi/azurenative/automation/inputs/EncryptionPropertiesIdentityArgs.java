@@ -5,6 +5,7 @@ package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class EncryptionPropertiesIdentityArgs extends io.pulumi.resources.
       private final @Nullable Output<Object> userAssignedIdentity;
 
     public Output<Object> getUserAssignedIdentity() {
-        return this.userAssignedIdentity == null ? Output.empty() : this.userAssignedIdentity;
+        return this.userAssignedIdentity == null ? Codegen.empty() : this.userAssignedIdentity;
     }
 
     public EncryptionPropertiesIdentityArgs(@Nullable Output<Object> userAssignedIdentity) {
@@ -34,7 +35,7 @@ public final class EncryptionPropertiesIdentityArgs extends io.pulumi.resources.
     }
 
     private EncryptionPropertiesIdentityArgs() {
-        this.userAssignedIdentity = Output.empty();
+        this.userAssignedIdentity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class EncryptionPropertiesIdentityArgs extends io.pulumi.resources.
             return this;
         }
         public Builder userAssignedIdentity(@Nullable Object userAssignedIdentity) {
-            this.userAssignedIdentity = Output.ofNullable(userAssignedIdentity);
+            this.userAssignedIdentity = Codegen.ofNullable(userAssignedIdentity);
             return this;
         }        public EncryptionPropertiesIdentityArgs build() {
             return new EncryptionPropertiesIdentityArgs(userAssignedIdentity);

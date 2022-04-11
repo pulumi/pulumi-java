@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datapipelines_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datapipelines_v1.inputs.GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -61,7 +62,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
       private final @Nullable Output<Boolean> validateOnly;
 
     public Output<Boolean> getValidateOnly() {
-        return this.validateOnly == null ? Output.empty() : this.validateOnly;
+        return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
     }
 
     public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs(
@@ -76,10 +77,10 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
     }
 
     private GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs() {
-        this.launchParameter = Output.empty();
-        this.location = Output.empty();
-        this.project = Output.empty();
-        this.validateOnly = Output.empty();
+        this.launchParameter = Codegen.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
+        this.validateOnly = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -137,7 +138,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
             return this;
         }
         public Builder validateOnly(@Nullable Boolean validateOnly) {
-            this.validateOnly = Output.ofNullable(validateOnly);
+            this.validateOnly = Codegen.ofNullable(validateOnly);
             return this;
         }        public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs build() {
             return new GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs(launchParameter, location, project, validateOnly);

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.enums.BucketDestinationFormat;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class BucketDestinationArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> bucketAccountId;
 
     public Output<String> getBucketAccountId() {
-        return this.bucketAccountId == null ? Output.empty() : this.bucketAccountId;
+        return this.bucketAccountId == null ? Codegen.empty() : this.bucketAccountId;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class BucketDestinationArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     public BucketDestinationArgs(
@@ -75,10 +76,10 @@ public final class BucketDestinationArgs extends io.pulumi.resources.ResourceArg
     }
 
     private BucketDestinationArgs() {
-        this.bucketAccountId = Output.empty();
-        this.bucketArn = Output.empty();
-        this.format = Output.empty();
-        this.prefix = Output.empty();
+        this.bucketAccountId = Codegen.empty();
+        this.bucketArn = Codegen.empty();
+        this.format = Codegen.empty();
+        this.prefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class BucketDestinationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder bucketAccountId(@Nullable String bucketAccountId) {
-            this.bucketAccountId = Output.ofNullable(bucketAccountId);
+            this.bucketAccountId = Codegen.ofNullable(bucketAccountId);
             return this;
         }
         public Builder bucketArn(Output<String> bucketArn) {
@@ -136,7 +137,7 @@ public final class BucketDestinationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }        public BucketDestinationArgs build() {
             return new BucketDestinationArgs(bucketAccountId, bucketArn, format, prefix);

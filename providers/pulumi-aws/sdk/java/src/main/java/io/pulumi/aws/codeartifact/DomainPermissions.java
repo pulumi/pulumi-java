@@ -9,6 +9,7 @@ import io.pulumi.aws.codeartifact.inputs.DomainPermissionsState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -121,7 +122,7 @@ public class DomainPermissions extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DomainPermissions(String name, DomainPermissionsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:codeartifact/domainPermissions:DomainPermissions", name, args == null ? DomainPermissionsArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:codeartifact/domainPermissions:DomainPermissions", name, args == null ? DomainPermissionsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DomainPermissions(String name, Output<String> id, @Nullable DomainPermissionsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

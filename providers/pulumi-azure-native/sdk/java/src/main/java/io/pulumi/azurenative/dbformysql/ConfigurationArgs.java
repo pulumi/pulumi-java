@@ -5,6 +5,7 @@ package io.pulumi.azurenative.dbformysql;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> configurationName;
 
     public Output<String> getConfigurationName() {
-        return this.configurationName == null ? Output.empty() : this.configurationName;
+        return this.configurationName == null ? Codegen.empty() : this.configurationName;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> source;
 
     public Output<String> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public ConfigurationArgs(
@@ -83,11 +84,11 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConfigurationArgs() {
-        this.configurationName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverName = Output.empty();
-        this.source = Output.empty();
-        this.value = Output.empty();
+        this.configurationName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.source = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder configurationName(@Nullable String configurationName) {
-            this.configurationName = Output.ofNullable(configurationName);
+            this.configurationName = Codegen.ofNullable(configurationName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -147,7 +148,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder source(@Nullable String source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -155,7 +156,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public ConfigurationArgs build() {
             return new ConfigurationArgs(configurationName, resourceGroupName, serverName, source, value);

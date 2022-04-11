@@ -6,6 +6,7 @@ package io.pulumi.aws.mediapackage.inputs;
 import io.pulumi.aws.mediapackage.inputs.ChannelHlsIngestGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class ChannelState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class ChannelState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> channelId;
 
     public Output<String> getChannelId() {
-        return this.channelId == null ? Output.empty() : this.channelId;
+        return this.channelId == null ? Codegen.empty() : this.channelId;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class ChannelState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class ChannelState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ChannelHlsIngestGetArgs>> hlsIngests;
 
     public Output<List<ChannelHlsIngestGetArgs>> getHlsIngests() {
-        return this.hlsIngests == null ? Output.empty() : this.hlsIngests;
+        return this.hlsIngests == null ? Codegen.empty() : this.hlsIngests;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class ChannelState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class ChannelState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public ChannelState(
@@ -92,19 +93,19 @@ public final class ChannelState extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<Map<String,String>> tagsAll) {
         this.arn = arn;
         this.channelId = channelId;
-        this.description = description == null ? Output.ofNullable("Managed by Pulumi") : description;
+        this.description = description == null ? Codegen.ofNullable("Managed by Pulumi") : description;
         this.hlsIngests = hlsIngests;
         this.tags = tags;
         this.tagsAll = tagsAll;
     }
 
     private ChannelState() {
-        this.arn = Output.empty();
-        this.channelId = Output.empty();
-        this.description = Output.empty();
-        this.hlsIngests = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.channelId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.hlsIngests = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class ChannelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder channelId(@Nullable Output<String> channelId) {
@@ -150,7 +151,7 @@ public final class ChannelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder channelId(@Nullable String channelId) {
-            this.channelId = Output.ofNullable(channelId);
+            this.channelId = Codegen.ofNullable(channelId);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -158,7 +159,7 @@ public final class ChannelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder hlsIngests(@Nullable Output<List<ChannelHlsIngestGetArgs>> hlsIngests) {
@@ -166,7 +167,7 @@ public final class ChannelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hlsIngests(@Nullable List<ChannelHlsIngestGetArgs> hlsIngests) {
-            this.hlsIngests = Output.ofNullable(hlsIngests);
+            this.hlsIngests = Codegen.ofNullable(hlsIngests);
             return this;
         }
         public Builder hlsIngests(ChannelHlsIngestGetArgs... hlsIngests) {
@@ -177,7 +178,7 @@ public final class ChannelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -185,7 +186,7 @@ public final class ChannelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public ChannelState build() {
             return new ChannelState(arn, channelId, description, hlsIngests, tags, tagsAll);

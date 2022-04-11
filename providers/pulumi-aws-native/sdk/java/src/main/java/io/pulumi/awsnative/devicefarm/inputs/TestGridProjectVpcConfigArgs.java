@@ -5,6 +5,7 @@ package io.pulumi.awsnative.devicefarm.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -57,9 +58,9 @@ public final class TestGridProjectVpcConfigArgs extends io.pulumi.resources.Reso
     }
 
     private TestGridProjectVpcConfigArgs() {
-        this.securityGroupIds = Output.empty();
-        this.subnetIds = Output.empty();
-        this.vpcId = Output.empty();
+        this.securityGroupIds = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {

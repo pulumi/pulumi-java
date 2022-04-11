@@ -5,6 +5,7 @@ package io.pulumi.googlenative.privateca_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.privateca_v1.inputs.CaOptionsArgs;
 import io.pulumi.googlenative.privateca_v1.inputs.KeyUsageArgs;
 import io.pulumi.googlenative.privateca_v1.inputs.ObjectIdArgs;
@@ -31,7 +32,7 @@ public final class X509ParametersArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<X509ExtensionArgs>> additionalExtensions;
 
     public Output<List<X509ExtensionArgs>> getAdditionalExtensions() {
-        return this.additionalExtensions == null ? Output.empty() : this.additionalExtensions;
+        return this.additionalExtensions == null ? Codegen.empty() : this.additionalExtensions;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class X509ParametersArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> aiaOcspServers;
 
     public Output<List<String>> getAiaOcspServers() {
-        return this.aiaOcspServers == null ? Output.empty() : this.aiaOcspServers;
+        return this.aiaOcspServers == null ? Codegen.empty() : this.aiaOcspServers;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class X509ParametersArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<CaOptionsArgs> caOptions;
 
     public Output<CaOptionsArgs> getCaOptions() {
-        return this.caOptions == null ? Output.empty() : this.caOptions;
+        return this.caOptions == null ? Codegen.empty() : this.caOptions;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class X509ParametersArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<KeyUsageArgs> keyUsage;
 
     public Output<KeyUsageArgs> getKeyUsage() {
-        return this.keyUsage == null ? Output.empty() : this.keyUsage;
+        return this.keyUsage == null ? Codegen.empty() : this.keyUsage;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class X509ParametersArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ObjectIdArgs>> policyIds;
 
     public Output<List<ObjectIdArgs>> getPolicyIds() {
-        return this.policyIds == null ? Output.empty() : this.policyIds;
+        return this.policyIds == null ? Codegen.empty() : this.policyIds;
     }
 
     public X509ParametersArgs(
@@ -92,11 +93,11 @@ public final class X509ParametersArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private X509ParametersArgs() {
-        this.additionalExtensions = Output.empty();
-        this.aiaOcspServers = Output.empty();
-        this.caOptions = Output.empty();
-        this.keyUsage = Output.empty();
-        this.policyIds = Output.empty();
+        this.additionalExtensions = Codegen.empty();
+        this.aiaOcspServers = Codegen.empty();
+        this.caOptions = Codegen.empty();
+        this.keyUsage = Codegen.empty();
+        this.policyIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class X509ParametersArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder additionalExtensions(@Nullable List<X509ExtensionArgs> additionalExtensions) {
-            this.additionalExtensions = Output.ofNullable(additionalExtensions);
+            this.additionalExtensions = Codegen.ofNullable(additionalExtensions);
             return this;
         }
         public Builder additionalExtensions(X509ExtensionArgs... additionalExtensions) {
@@ -143,7 +144,7 @@ public final class X509ParametersArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder aiaOcspServers(@Nullable List<String> aiaOcspServers) {
-            this.aiaOcspServers = Output.ofNullable(aiaOcspServers);
+            this.aiaOcspServers = Codegen.ofNullable(aiaOcspServers);
             return this;
         }
         public Builder aiaOcspServers(String... aiaOcspServers) {
@@ -154,7 +155,7 @@ public final class X509ParametersArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder caOptions(@Nullable CaOptionsArgs caOptions) {
-            this.caOptions = Output.ofNullable(caOptions);
+            this.caOptions = Codegen.ofNullable(caOptions);
             return this;
         }
         public Builder keyUsage(@Nullable Output<KeyUsageArgs> keyUsage) {
@@ -162,7 +163,7 @@ public final class X509ParametersArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyUsage(@Nullable KeyUsageArgs keyUsage) {
-            this.keyUsage = Output.ofNullable(keyUsage);
+            this.keyUsage = Codegen.ofNullable(keyUsage);
             return this;
         }
         public Builder policyIds(@Nullable Output<List<ObjectIdArgs>> policyIds) {
@@ -170,7 +171,7 @@ public final class X509ParametersArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder policyIds(@Nullable List<ObjectIdArgs> policyIds) {
-            this.policyIds = Output.ofNullable(policyIds);
+            this.policyIds = Codegen.ofNullable(policyIds);
             return this;
         }
         public Builder policyIds(ObjectIdArgs... policyIds) {

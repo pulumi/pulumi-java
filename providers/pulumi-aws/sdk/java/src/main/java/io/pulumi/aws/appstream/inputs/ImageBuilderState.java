@@ -8,6 +8,7 @@ import io.pulumi.aws.appstream.inputs.ImageBuilderDomainJoinInfoGetArgs;
 import io.pulumi.aws.appstream.inputs.ImageBuilderVpcConfigGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ImageBuilderAccessEndpointGetArgs>> accessEndpoints;
 
     public Output<List<ImageBuilderAccessEndpointGetArgs>> getAccessEndpoints() {
-        return this.accessEndpoints == null ? Output.empty() : this.accessEndpoints;
+        return this.accessEndpoints == null ? Codegen.empty() : this.accessEndpoints;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> appstreamAgentVersion;
 
     public Output<String> getAppstreamAgentVersion() {
-        return this.appstreamAgentVersion == null ? Output.empty() : this.appstreamAgentVersion;
+        return this.appstreamAgentVersion == null ? Codegen.empty() : this.appstreamAgentVersion;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> createdTime;
 
     public Output<String> getCreatedTime() {
-        return this.createdTime == null ? Output.empty() : this.createdTime;
+        return this.createdTime == null ? Codegen.empty() : this.createdTime;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ImageBuilderDomainJoinInfoGetArgs> domainJoinInfo;
 
     public Output<ImageBuilderDomainJoinInfoGetArgs> getDomainJoinInfo() {
-        return this.domainJoinInfo == null ? Output.empty() : this.domainJoinInfo;
+        return this.domainJoinInfo == null ? Codegen.empty() : this.domainJoinInfo;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableDefaultInternetAccess;
 
     public Output<Boolean> getEnableDefaultInternetAccess() {
-        return this.enableDefaultInternetAccess == null ? Output.empty() : this.enableDefaultInternetAccess;
+        return this.enableDefaultInternetAccess == null ? Codegen.empty() : this.enableDefaultInternetAccess;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> iamRoleArn;
 
     public Output<String> getIamRoleArn() {
-        return this.iamRoleArn == null ? Output.empty() : this.iamRoleArn;
+        return this.iamRoleArn == null ? Codegen.empty() : this.iamRoleArn;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> imageArn;
 
     public Output<String> getImageArn() {
-        return this.imageArn == null ? Output.empty() : this.imageArn;
+        return this.imageArn == null ? Codegen.empty() : this.imageArn;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> imageName;
 
     public Output<String> getImageName() {
-        return this.imageName == null ? Output.empty() : this.imageName;
+        return this.imageName == null ? Codegen.empty() : this.imageName;
     }
 
     /**
@@ -149,7 +150,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
-        return this.instanceType == null ? Output.empty() : this.instanceType;
+        return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     /**
@@ -160,7 +161,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -171,7 +172,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -182,7 +183,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -193,7 +194,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -204,7 +205,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ImageBuilderVpcConfigGetArgs> vpcConfig;
 
     public Output<ImageBuilderVpcConfigGetArgs> getVpcConfig() {
-        return this.vpcConfig == null ? Output.empty() : this.vpcConfig;
+        return this.vpcConfig == null ? Codegen.empty() : this.vpcConfig;
     }
 
     public ImageBuilderState(
@@ -245,23 +246,23 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ImageBuilderState() {
-        this.accessEndpoints = Output.empty();
-        this.appstreamAgentVersion = Output.empty();
-        this.arn = Output.empty();
-        this.createdTime = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.domainJoinInfo = Output.empty();
-        this.enableDefaultInternetAccess = Output.empty();
-        this.iamRoleArn = Output.empty();
-        this.imageArn = Output.empty();
-        this.imageName = Output.empty();
-        this.instanceType = Output.empty();
-        this.name = Output.empty();
-        this.state = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.vpcConfig = Output.empty();
+        this.accessEndpoints = Codegen.empty();
+        this.appstreamAgentVersion = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.createdTime = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.domainJoinInfo = Codegen.empty();
+        this.enableDefaultInternetAccess = Codegen.empty();
+        this.iamRoleArn = Codegen.empty();
+        this.imageArn = Codegen.empty();
+        this.imageName = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.name = Codegen.empty();
+        this.state = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.vpcConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -321,7 +322,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessEndpoints(@Nullable List<ImageBuilderAccessEndpointGetArgs> accessEndpoints) {
-            this.accessEndpoints = Output.ofNullable(accessEndpoints);
+            this.accessEndpoints = Codegen.ofNullable(accessEndpoints);
             return this;
         }
         public Builder accessEndpoints(ImageBuilderAccessEndpointGetArgs... accessEndpoints) {
@@ -332,7 +333,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appstreamAgentVersion(@Nullable String appstreamAgentVersion) {
-            this.appstreamAgentVersion = Output.ofNullable(appstreamAgentVersion);
+            this.appstreamAgentVersion = Codegen.ofNullable(appstreamAgentVersion);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -340,7 +341,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder createdTime(@Nullable Output<String> createdTime) {
@@ -348,7 +349,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Output.ofNullable(createdTime);
+            this.createdTime = Codegen.ofNullable(createdTime);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -356,7 +357,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -364,7 +365,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder domainJoinInfo(@Nullable Output<ImageBuilderDomainJoinInfoGetArgs> domainJoinInfo) {
@@ -372,7 +373,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder domainJoinInfo(@Nullable ImageBuilderDomainJoinInfoGetArgs domainJoinInfo) {
-            this.domainJoinInfo = Output.ofNullable(domainJoinInfo);
+            this.domainJoinInfo = Codegen.ofNullable(domainJoinInfo);
             return this;
         }
         public Builder enableDefaultInternetAccess(@Nullable Output<Boolean> enableDefaultInternetAccess) {
@@ -380,7 +381,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableDefaultInternetAccess(@Nullable Boolean enableDefaultInternetAccess) {
-            this.enableDefaultInternetAccess = Output.ofNullable(enableDefaultInternetAccess);
+            this.enableDefaultInternetAccess = Codegen.ofNullable(enableDefaultInternetAccess);
             return this;
         }
         public Builder iamRoleArn(@Nullable Output<String> iamRoleArn) {
@@ -388,7 +389,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iamRoleArn(@Nullable String iamRoleArn) {
-            this.iamRoleArn = Output.ofNullable(iamRoleArn);
+            this.iamRoleArn = Codegen.ofNullable(iamRoleArn);
             return this;
         }
         public Builder imageArn(@Nullable Output<String> imageArn) {
@@ -396,7 +397,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageArn(@Nullable String imageArn) {
-            this.imageArn = Output.ofNullable(imageArn);
+            this.imageArn = Codegen.ofNullable(imageArn);
             return this;
         }
         public Builder imageName(@Nullable Output<String> imageName) {
@@ -404,7 +405,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageName(@Nullable String imageName) {
-            this.imageName = Output.ofNullable(imageName);
+            this.imageName = Codegen.ofNullable(imageName);
             return this;
         }
         public Builder instanceType(@Nullable Output<String> instanceType) {
@@ -412,7 +413,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Output.ofNullable(instanceType);
+            this.instanceType = Codegen.ofNullable(instanceType);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -420,7 +421,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -428,7 +429,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -436,7 +437,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -444,7 +445,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder vpcConfig(@Nullable Output<ImageBuilderVpcConfigGetArgs> vpcConfig) {
@@ -452,7 +453,7 @@ public final class ImageBuilderState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcConfig(@Nullable ImageBuilderVpcConfigGetArgs vpcConfig) {
-            this.vpcConfig = Output.ofNullable(vpcConfig);
+            this.vpcConfig = Codegen.ofNullable(vpcConfig);
             return this;
         }        public ImageBuilderState build() {
             return new ImageBuilderState(accessEndpoints, appstreamAgentVersion, arn, createdTime, description, displayName, domainJoinInfo, enableDefaultInternetAccess, iamRoleArn, imageArn, imageName, instanceType, name, state, tags, tagsAll, vpcConfig);

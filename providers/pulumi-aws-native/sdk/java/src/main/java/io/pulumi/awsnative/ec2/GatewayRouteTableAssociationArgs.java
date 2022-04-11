@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class GatewayRouteTableAssociationArgs extends io.pulumi.resources.
     }
 
     private GatewayRouteTableAssociationArgs() {
-        this.gatewayId = Output.empty();
-        this.routeTableId = Output.empty();
+        this.gatewayId = Codegen.empty();
+        this.routeTableId = Codegen.empty();
     }
 
     public static Builder builder() {

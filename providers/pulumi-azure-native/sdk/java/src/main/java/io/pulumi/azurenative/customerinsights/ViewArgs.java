@@ -5,6 +5,7 @@ package io.pulumi.azurenative.customerinsights;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> displayName;
 
     public Output<Map<String,String>> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> userId;
 
     public Output<String> getUserId() {
-        return this.userId == null ? Output.empty() : this.userId;
+        return this.userId == null ? Codegen.empty() : this.userId;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> viewName;
 
     public Output<String> getViewName() {
-        return this.viewName == null ? Output.empty() : this.viewName;
+        return this.viewName == null ? Codegen.empty() : this.viewName;
     }
 
     public ViewArgs(
@@ -97,12 +98,12 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ViewArgs() {
-        this.definition = Output.empty();
-        this.displayName = Output.empty();
-        this.hubName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.userId = Output.empty();
-        this.viewName = Output.empty();
+        this.definition = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.hubName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.userId = Codegen.empty();
+        this.viewName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable Map<String,String> displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder hubName(Output<String> hubName) {
@@ -172,7 +173,7 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userId(@Nullable String userId) {
-            this.userId = Output.ofNullable(userId);
+            this.userId = Codegen.ofNullable(userId);
             return this;
         }
         public Builder viewName(@Nullable Output<String> viewName) {
@@ -180,7 +181,7 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder viewName(@Nullable String viewName) {
-            this.viewName = Output.ofNullable(viewName);
+            this.viewName = Codegen.ofNullable(viewName);
             return this;
         }        public ViewArgs build() {
             return new ViewArgs(definition, displayName, hubName, resourceGroupName, userId, viewName);

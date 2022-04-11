@@ -6,6 +6,7 @@ package io.pulumi.awsnative.customerprofiles.inputs;
 import io.pulumi.awsnative.customerprofiles.enums.ObjectTypeKeyStandardIdentifiersItem;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class ObjectTypeKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> fieldNames;
 
     public Output<List<String>> getFieldNames() {
-        return this.fieldNames == null ? Output.empty() : this.fieldNames;
+        return this.fieldNames == null ? Codegen.empty() : this.fieldNames;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ObjectTypeKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ObjectTypeKeyStandardIdentifiersItem>> standardIdentifiers;
 
     public Output<List<ObjectTypeKeyStandardIdentifiersItem>> getStandardIdentifiers() {
-        return this.standardIdentifiers == null ? Output.empty() : this.standardIdentifiers;
+        return this.standardIdentifiers == null ? Codegen.empty() : this.standardIdentifiers;
     }
 
     public ObjectTypeKeyArgs(
@@ -50,8 +51,8 @@ public final class ObjectTypeKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ObjectTypeKeyArgs() {
-        this.fieldNames = Output.empty();
-        this.standardIdentifiers = Output.empty();
+        this.fieldNames = Codegen.empty();
+        this.standardIdentifiers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ObjectTypeKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fieldNames(@Nullable List<String> fieldNames) {
-            this.fieldNames = Output.ofNullable(fieldNames);
+            this.fieldNames = Codegen.ofNullable(fieldNames);
             return this;
         }
         public Builder fieldNames(String... fieldNames) {
@@ -92,7 +93,7 @@ public final class ObjectTypeKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder standardIdentifiers(@Nullable List<ObjectTypeKeyStandardIdentifiersItem> standardIdentifiers) {
-            this.standardIdentifiers = Output.ofNullable(standardIdentifiers);
+            this.standardIdentifiers = Codegen.ofNullable(standardIdentifiers);
             return this;
         }
         public Builder standardIdentifiers(ObjectTypeKeyStandardIdentifiersItem... standardIdentifiers) {

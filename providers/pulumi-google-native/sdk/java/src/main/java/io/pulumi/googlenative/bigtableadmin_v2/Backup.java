@@ -6,6 +6,7 @@ package io.pulumi.googlenative.bigtableadmin_v2;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.bigtableadmin_v2.BackupArgs;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.EncryptionInfoResponse;
@@ -154,7 +155,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Backup(String name, BackupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:bigtableadmin/v2:Backup", name, args == null ? BackupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:bigtableadmin/v2:Backup", name, args == null ? BackupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Backup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

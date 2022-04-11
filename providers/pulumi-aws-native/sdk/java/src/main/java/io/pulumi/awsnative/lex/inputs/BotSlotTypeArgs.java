@@ -8,6 +8,7 @@ import io.pulumi.awsnative.lex.inputs.BotSlotTypeValueArgs;
 import io.pulumi.awsnative.lex.inputs.BotSlotValueSelectionSettingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,14 +27,14 @@ public final class BotSlotTypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="externalSourceSetting")
       private final @Nullable Output<BotExternalSourceSettingArgs> externalSourceSetting;
 
     public Output<BotExternalSourceSettingArgs> getExternalSourceSetting() {
-        return this.externalSourceSetting == null ? Output.empty() : this.externalSourceSetting;
+        return this.externalSourceSetting == null ? Codegen.empty() : this.externalSourceSetting;
     }
 
     @Import(name="name", required=true)
@@ -47,21 +48,21 @@ public final class BotSlotTypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> parentSlotTypeSignature;
 
     public Output<String> getParentSlotTypeSignature() {
-        return this.parentSlotTypeSignature == null ? Output.empty() : this.parentSlotTypeSignature;
+        return this.parentSlotTypeSignature == null ? Codegen.empty() : this.parentSlotTypeSignature;
     }
 
     @Import(name="slotTypeValues")
       private final @Nullable Output<List<BotSlotTypeValueArgs>> slotTypeValues;
 
     public Output<List<BotSlotTypeValueArgs>> getSlotTypeValues() {
-        return this.slotTypeValues == null ? Output.empty() : this.slotTypeValues;
+        return this.slotTypeValues == null ? Codegen.empty() : this.slotTypeValues;
     }
 
     @Import(name="valueSelectionSetting")
       private final @Nullable Output<BotSlotValueSelectionSettingArgs> valueSelectionSetting;
 
     public Output<BotSlotValueSelectionSettingArgs> getValueSelectionSetting() {
-        return this.valueSelectionSetting == null ? Output.empty() : this.valueSelectionSetting;
+        return this.valueSelectionSetting == null ? Codegen.empty() : this.valueSelectionSetting;
     }
 
     public BotSlotTypeArgs(
@@ -80,12 +81,12 @@ public final class BotSlotTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BotSlotTypeArgs() {
-        this.description = Output.empty();
-        this.externalSourceSetting = Output.empty();
-        this.name = Output.empty();
-        this.parentSlotTypeSignature = Output.empty();
-        this.slotTypeValues = Output.empty();
-        this.valueSelectionSetting = Output.empty();
+        this.description = Codegen.empty();
+        this.externalSourceSetting = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parentSlotTypeSignature = Codegen.empty();
+        this.slotTypeValues = Codegen.empty();
+        this.valueSelectionSetting = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class BotSlotTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder externalSourceSetting(@Nullable Output<BotExternalSourceSettingArgs> externalSourceSetting) {
@@ -131,7 +132,7 @@ public final class BotSlotTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder externalSourceSetting(@Nullable BotExternalSourceSettingArgs externalSourceSetting) {
-            this.externalSourceSetting = Output.ofNullable(externalSourceSetting);
+            this.externalSourceSetting = Codegen.ofNullable(externalSourceSetting);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -147,7 +148,7 @@ public final class BotSlotTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parentSlotTypeSignature(@Nullable String parentSlotTypeSignature) {
-            this.parentSlotTypeSignature = Output.ofNullable(parentSlotTypeSignature);
+            this.parentSlotTypeSignature = Codegen.ofNullable(parentSlotTypeSignature);
             return this;
         }
         public Builder slotTypeValues(@Nullable Output<List<BotSlotTypeValueArgs>> slotTypeValues) {
@@ -155,7 +156,7 @@ public final class BotSlotTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder slotTypeValues(@Nullable List<BotSlotTypeValueArgs> slotTypeValues) {
-            this.slotTypeValues = Output.ofNullable(slotTypeValues);
+            this.slotTypeValues = Codegen.ofNullable(slotTypeValues);
             return this;
         }
         public Builder slotTypeValues(BotSlotTypeValueArgs... slotTypeValues) {
@@ -166,7 +167,7 @@ public final class BotSlotTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder valueSelectionSetting(@Nullable BotSlotValueSelectionSettingArgs valueSelectionSetting) {
-            this.valueSelectionSetting = Output.ofNullable(valueSelectionSetting);
+            this.valueSelectionSetting = Codegen.ofNullable(valueSelectionSetting);
             return this;
         }        public BotSlotTypeArgs build() {
             return new BotSlotTypeArgs(description, externalSourceSetting, name, parentSlotTypeSignature, slotTypeValues, valueSelectionSetting);

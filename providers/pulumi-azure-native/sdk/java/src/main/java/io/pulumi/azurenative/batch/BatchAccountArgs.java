@@ -11,6 +11,7 @@ import io.pulumi.azurenative.batch.inputs.EncryptionPropertiesArgs;
 import io.pulumi.azurenative.batch.inputs.KeyVaultReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> accountName;
 
     public Output<String> getAccountName() {
-        return this.accountName == null ? Output.empty() : this.accountName;
+        return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AutoStorageBasePropertiesArgs> autoStorage;
 
     public Output<AutoStorageBasePropertiesArgs> getAutoStorage() {
-        return this.autoStorage == null ? Output.empty() : this.autoStorage;
+        return this.autoStorage == null ? Codegen.empty() : this.autoStorage;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EncryptionPropertiesArgs> encryption;
 
     public Output<EncryptionPropertiesArgs> getEncryption() {
-        return this.encryption == null ? Output.empty() : this.encryption;
+        return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BatchAccountIdentityArgs> identity;
 
     public Output<BatchAccountIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<KeyVaultReferenceArgs> keyVaultReference;
 
     public Output<KeyVaultReferenceArgs> getKeyVaultReference() {
-        return this.keyVaultReference == null ? Output.empty() : this.keyVaultReference;
+        return this.keyVaultReference == null ? Codegen.empty() : this.keyVaultReference;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PoolAllocationMode> poolAllocationMode;
 
     public Output<PoolAllocationMode> getPoolAllocationMode() {
-        return this.poolAllocationMode == null ? Output.empty() : this.poolAllocationMode;
+        return this.poolAllocationMode == null ? Codegen.empty() : this.poolAllocationMode;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PublicNetworkAccessType> publicNetworkAccess;
 
     public Output<PublicNetworkAccessType> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
+        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
     /**
@@ -128,7 +129,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public BatchAccountArgs(
@@ -155,16 +156,16 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BatchAccountArgs() {
-        this.accountName = Output.empty();
-        this.autoStorage = Output.empty();
-        this.encryption = Output.empty();
-        this.identity = Output.empty();
-        this.keyVaultReference = Output.empty();
-        this.location = Output.empty();
-        this.poolAllocationMode = Output.empty();
-        this.publicNetworkAccess = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.accountName = Codegen.empty();
+        this.autoStorage = Codegen.empty();
+        this.encryption = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.keyVaultReference = Codegen.empty();
+        this.location = Codegen.empty();
+        this.poolAllocationMode = Codegen.empty();
+        this.publicNetworkAccess = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -210,7 +211,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = Output.ofNullable(accountName);
+            this.accountName = Codegen.ofNullable(accountName);
             return this;
         }
         public Builder autoStorage(@Nullable Output<AutoStorageBasePropertiesArgs> autoStorage) {
@@ -218,7 +219,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoStorage(@Nullable AutoStorageBasePropertiesArgs autoStorage) {
-            this.autoStorage = Output.ofNullable(autoStorage);
+            this.autoStorage = Codegen.ofNullable(autoStorage);
             return this;
         }
         public Builder encryption(@Nullable Output<EncryptionPropertiesArgs> encryption) {
@@ -226,7 +227,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryption(@Nullable EncryptionPropertiesArgs encryption) {
-            this.encryption = Output.ofNullable(encryption);
+            this.encryption = Codegen.ofNullable(encryption);
             return this;
         }
         public Builder identity(@Nullable Output<BatchAccountIdentityArgs> identity) {
@@ -234,7 +235,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable BatchAccountIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder keyVaultReference(@Nullable Output<KeyVaultReferenceArgs> keyVaultReference) {
@@ -242,7 +243,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyVaultReference(@Nullable KeyVaultReferenceArgs keyVaultReference) {
-            this.keyVaultReference = Output.ofNullable(keyVaultReference);
+            this.keyVaultReference = Codegen.ofNullable(keyVaultReference);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -250,7 +251,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder poolAllocationMode(@Nullable Output<PoolAllocationMode> poolAllocationMode) {
@@ -258,7 +259,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder poolAllocationMode(@Nullable PoolAllocationMode poolAllocationMode) {
-            this.poolAllocationMode = Output.ofNullable(poolAllocationMode);
+            this.poolAllocationMode = Codegen.ofNullable(poolAllocationMode);
             return this;
         }
         public Builder publicNetworkAccess(@Nullable Output<PublicNetworkAccessType> publicNetworkAccess) {
@@ -266,7 +267,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicNetworkAccess(@Nullable PublicNetworkAccessType publicNetworkAccess) {
-            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -282,7 +283,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public BatchAccountArgs build() {
             return new BatchAccountArgs(accountName, autoStorage, encryption, identity, keyVaultReference, location, poolAllocationMode, publicNetworkAccess, resourceGroupName, tags);

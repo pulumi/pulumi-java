@@ -6,6 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.inputs.AlertRuleAnyOfOrLeafConditionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -34,7 +35,7 @@ public final class AlertRuleAllOfConditionArgs extends io.pulumi.resources.Resou
     }
 
     private AlertRuleAllOfConditionArgs() {
-        this.allOf = Output.empty();
+        this.allOf = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.accesscontextmanager;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -56,9 +57,9 @@ public final class GcpUserAccessBindingArgs extends io.pulumi.resources.Resource
     }
 
     private GcpUserAccessBindingArgs() {
-        this.accessLevels = Output.empty();
-        this.groupKey = Output.empty();
-        this.organizationId = Output.empty();
+        this.accessLevels = Codegen.empty();
+        this.groupKey = Codegen.empty();
+        this.organizationId = Codegen.empty();
     }
 
     public static Builder builder() {

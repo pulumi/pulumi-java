@@ -5,6 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,7 +34,7 @@ public final class AutoStorageBasePropertiesArgs extends io.pulumi.resources.Res
     }
 
     private AutoStorageBasePropertiesArgs() {
-        this.storageAccountId = Output.empty();
+        this.storageAccountId = Codegen.empty();
     }
 
     public static Builder builder() {

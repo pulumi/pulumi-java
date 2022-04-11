@@ -5,6 +5,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GatewayResourceRequestsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> cpu;
 
     public Output<String> getCpu() {
-        return this.cpu == null ? Output.empty() : this.cpu;
+        return this.cpu == null ? Codegen.empty() : this.cpu;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class GatewayResourceRequestsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> memory;
 
     public Output<String> getMemory() {
-        return this.memory == null ? Output.empty() : this.memory;
+        return this.memory == null ? Codegen.empty() : this.memory;
     }
 
     public GatewayResourceRequestsArgs(
@@ -48,8 +49,8 @@ public final class GatewayResourceRequestsArgs extends io.pulumi.resources.Resou
     }
 
     private GatewayResourceRequestsArgs() {
-        this.cpu = Output.empty();
-        this.memory = Output.empty();
+        this.cpu = Codegen.empty();
+        this.memory = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class GatewayResourceRequestsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder cpu(@Nullable String cpu) {
-            this.cpu = Output.ofNullable(cpu);
+            this.cpu = Codegen.ofNullable(cpu);
             return this;
         }
         public Builder memory(@Nullable Output<String> memory) {
@@ -87,7 +88,7 @@ public final class GatewayResourceRequestsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder memory(@Nullable String memory) {
-            this.memory = Output.ofNullable(memory);
+            this.memory = Codegen.ofNullable(memory);
             return this;
         }        public GatewayResourceRequestsArgs build() {
             return new GatewayResourceRequestsArgs(cpu, memory);

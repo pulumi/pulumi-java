@@ -10,6 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +35,7 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Output.empty() : this.connectVia;
+        return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Object> encryptedCredential;
 
     public Output<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
+        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -145,7 +146,7 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Object> userName;
 
     public Output<Object> getUserName() {
-        return this.userName == null ? Output.empty() : this.userName;
+        return this.userName == null ? Codegen.empty() : this.userName;
     }
 
     public SapBWLinkedServiceArgs(
@@ -174,17 +175,17 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
     }
 
     private SapBWLinkedServiceArgs() {
-        this.annotations = Output.empty();
-        this.clientId = Output.empty();
-        this.connectVia = Output.empty();
-        this.description = Output.empty();
-        this.encryptedCredential = Output.empty();
-        this.parameters = Output.empty();
-        this.password = Output.empty();
-        this.server = Output.empty();
-        this.systemNumber = Output.empty();
-        this.type = Output.empty();
-        this.userName = Output.empty();
+        this.annotations = Codegen.empty();
+        this.clientId = Codegen.empty();
+        this.connectVia = Codegen.empty();
+        this.description = Codegen.empty();
+        this.encryptedCredential = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.password = Codegen.empty();
+        this.server = Codegen.empty();
+        this.systemNumber = Codegen.empty();
+        this.type = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -232,7 +233,7 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -251,7 +252,7 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Output.ofNullable(connectVia);
+            this.connectVia = Codegen.ofNullable(connectVia);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -259,7 +260,7 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
@@ -267,7 +268,7 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Output.ofNullable(encryptedCredential);
+            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
@@ -275,7 +276,7 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
@@ -283,7 +284,7 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder server(Output<Object> server) {
@@ -315,7 +316,7 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder userName(@Nullable Object userName) {
-            this.userName = Output.ofNullable(userName);
+            this.userName = Codegen.ofNullable(userName);
             return this;
         }        public SapBWLinkedServiceArgs build() {
             return new SapBWLinkedServiceArgs(annotations, clientId, connectVia, description, encryptedCredential, parameters, password, server, systemNumber, type, userName);

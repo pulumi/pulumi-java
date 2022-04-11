@@ -5,6 +5,7 @@ package io.pulumi.awsnative.acmpca.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -39,8 +40,8 @@ public final class CertificateOtherNameArgs extends io.pulumi.resources.Resource
     }
 
     private CertificateOtherNameArgs() {
-        this.typeId = Output.empty();
-        this.value = Output.empty();
+        this.typeId = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

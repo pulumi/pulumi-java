@@ -6,6 +6,7 @@ package io.pulumi.azurenative.blockchain;
 import io.pulumi.azurenative.blockchain.inputs.FirewallRuleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<FirewallRuleArgs>> firewallRules;
 
     public Output<List<FirewallRuleArgs>> getFirewallRules() {
-        return this.firewallRules == null ? Output.empty() : this.firewallRules;
+        return this.firewallRules == null ? Codegen.empty() : this.firewallRules;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> transactionNodeName;
 
     public Output<String> getTransactionNodeName() {
-        return this.transactionNodeName == null ? Output.empty() : this.transactionNodeName;
+        return this.transactionNodeName == null ? Codegen.empty() : this.transactionNodeName;
     }
 
     public TransactionNodeArgs(
@@ -98,12 +99,12 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private TransactionNodeArgs() {
-        this.blockchainMemberName = Output.empty();
-        this.firewallRules = Output.empty();
-        this.location = Output.empty();
-        this.password = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.transactionNodeName = Output.empty();
+        this.blockchainMemberName = Codegen.empty();
+        this.firewallRules = Codegen.empty();
+        this.location = Codegen.empty();
+        this.password = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.transactionNodeName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -149,7 +150,7 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder firewallRules(@Nullable List<FirewallRuleArgs> firewallRules) {
-            this.firewallRules = Output.ofNullable(firewallRules);
+            this.firewallRules = Codegen.ofNullable(firewallRules);
             return this;
         }
         public Builder firewallRules(FirewallRuleArgs... firewallRules) {
@@ -160,7 +161,7 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder password(@Nullable Output<String> password) {
@@ -168,7 +169,7 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -184,7 +185,7 @@ public final class TransactionNodeArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder transactionNodeName(@Nullable String transactionNodeName) {
-            this.transactionNodeName = Output.ofNullable(transactionNodeName);
+            this.transactionNodeName = Codegen.ofNullable(transactionNodeName);
             return this;
         }        public TransactionNodeArgs build() {
             return new TransactionNodeArgs(blockchainMemberName, firewallRules, location, password, resourceGroupName, transactionNodeName);

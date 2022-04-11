@@ -5,6 +5,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -28,7 +29,7 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> blueprint;
 
     public Output<String> getBlueprint() {
-        return this.blueprint == null ? Output.empty() : this.blueprint;
+        return this.blueprint == null ? Codegen.empty() : this.blueprint;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Map<String,String>> componentVersion;
 
     public Output<Map<String,String>> getComponentVersion() {
-        return this.componentVersion == null ? Output.empty() : this.componentVersion;
+        return this.componentVersion == null ? Codegen.empty() : this.componentVersion;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Object> configurations;
 
     public Output<Object> getConfigurations() {
-        return this.configurations == null ? Output.empty() : this.configurations;
+        return this.configurations == null ? Codegen.empty() : this.configurations;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     public ClusterDefinitionArgs(
@@ -76,10 +77,10 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ClusterDefinitionArgs() {
-        this.blueprint = Output.empty();
-        this.componentVersion = Output.empty();
-        this.configurations = Output.empty();
-        this.kind = Output.empty();
+        this.blueprint = Codegen.empty();
+        this.componentVersion = Codegen.empty();
+        this.configurations = Codegen.empty();
+        this.kind = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder blueprint(@Nullable String blueprint) {
-            this.blueprint = Output.ofNullable(blueprint);
+            this.blueprint = Codegen.ofNullable(blueprint);
             return this;
         }
         public Builder componentVersion(@Nullable Output<Map<String,String>> componentVersion) {
@@ -121,7 +122,7 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder componentVersion(@Nullable Map<String,String> componentVersion) {
-            this.componentVersion = Output.ofNullable(componentVersion);
+            this.componentVersion = Codegen.ofNullable(componentVersion);
             return this;
         }
         public Builder configurations(@Nullable Output<Object> configurations) {
@@ -129,7 +130,7 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder configurations(@Nullable Object configurations) {
-            this.configurations = Output.ofNullable(configurations);
+            this.configurations = Codegen.ofNullable(configurations);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -137,7 +138,7 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }        public ClusterDefinitionArgs build() {
             return new ClusterDefinitionArgs(blueprint, componentVersion, configurations, kind);

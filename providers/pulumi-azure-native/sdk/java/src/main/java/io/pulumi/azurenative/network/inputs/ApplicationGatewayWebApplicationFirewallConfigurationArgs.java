@@ -9,6 +9,7 @@ import io.pulumi.azurenative.network.inputs.ApplicationGatewayFirewallExclusionA
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -33,7 +34,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
       private final @Nullable Output<List<ApplicationGatewayFirewallDisabledRuleGroupArgs>> disabledRuleGroups;
 
     public Output<List<ApplicationGatewayFirewallDisabledRuleGroupArgs>> getDisabledRuleGroups() {
-        return this.disabledRuleGroups == null ? Output.empty() : this.disabledRuleGroups;
+        return this.disabledRuleGroups == null ? Codegen.empty() : this.disabledRuleGroups;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
       private final @Nullable Output<List<ApplicationGatewayFirewallExclusionArgs>> exclusions;
 
     public Output<List<ApplicationGatewayFirewallExclusionArgs>> getExclusions() {
-        return this.exclusions == null ? Output.empty() : this.exclusions;
+        return this.exclusions == null ? Codegen.empty() : this.exclusions;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
       private final @Nullable Output<Integer> fileUploadLimitInMb;
 
     public Output<Integer> getFileUploadLimitInMb() {
-        return this.fileUploadLimitInMb == null ? Output.empty() : this.fileUploadLimitInMb;
+        return this.fileUploadLimitInMb == null ? Codegen.empty() : this.fileUploadLimitInMb;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
       private final @Nullable Output<Integer> maxRequestBodySize;
 
     public Output<Integer> getMaxRequestBodySize() {
-        return this.maxRequestBodySize == null ? Output.empty() : this.maxRequestBodySize;
+        return this.maxRequestBodySize == null ? Codegen.empty() : this.maxRequestBodySize;
     }
 
     /**
@@ -99,7 +100,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
       private final @Nullable Output<Integer> maxRequestBodySizeInKb;
 
     public Output<Integer> getMaxRequestBodySizeInKb() {
-        return this.maxRequestBodySizeInKb == null ? Output.empty() : this.maxRequestBodySizeInKb;
+        return this.maxRequestBodySizeInKb == null ? Codegen.empty() : this.maxRequestBodySizeInKb;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
       private final @Nullable Output<Boolean> requestBodyCheck;
 
     public Output<Boolean> getRequestBodyCheck() {
-        return this.requestBodyCheck == null ? Output.empty() : this.requestBodyCheck;
+        return this.requestBodyCheck == null ? Codegen.empty() : this.requestBodyCheck;
     }
 
     /**
@@ -159,16 +160,16 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
     }
 
     private ApplicationGatewayWebApplicationFirewallConfigurationArgs() {
-        this.disabledRuleGroups = Output.empty();
-        this.enabled = Output.empty();
-        this.exclusions = Output.empty();
-        this.fileUploadLimitInMb = Output.empty();
-        this.firewallMode = Output.empty();
-        this.maxRequestBodySize = Output.empty();
-        this.maxRequestBodySizeInKb = Output.empty();
-        this.requestBodyCheck = Output.empty();
-        this.ruleSetType = Output.empty();
-        this.ruleSetVersion = Output.empty();
+        this.disabledRuleGroups = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.exclusions = Codegen.empty();
+        this.fileUploadLimitInMb = Codegen.empty();
+        this.firewallMode = Codegen.empty();
+        this.maxRequestBodySize = Codegen.empty();
+        this.maxRequestBodySizeInKb = Codegen.empty();
+        this.requestBodyCheck = Codegen.empty();
+        this.ruleSetType = Codegen.empty();
+        this.ruleSetVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -214,7 +215,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
             return this;
         }
         public Builder disabledRuleGroups(@Nullable List<ApplicationGatewayFirewallDisabledRuleGroupArgs> disabledRuleGroups) {
-            this.disabledRuleGroups = Output.ofNullable(disabledRuleGroups);
+            this.disabledRuleGroups = Codegen.ofNullable(disabledRuleGroups);
             return this;
         }
         public Builder disabledRuleGroups(ApplicationGatewayFirewallDisabledRuleGroupArgs... disabledRuleGroups) {
@@ -233,7 +234,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
             return this;
         }
         public Builder exclusions(@Nullable List<ApplicationGatewayFirewallExclusionArgs> exclusions) {
-            this.exclusions = Output.ofNullable(exclusions);
+            this.exclusions = Codegen.ofNullable(exclusions);
             return this;
         }
         public Builder exclusions(ApplicationGatewayFirewallExclusionArgs... exclusions) {
@@ -244,7 +245,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
             return this;
         }
         public Builder fileUploadLimitInMb(@Nullable Integer fileUploadLimitInMb) {
-            this.fileUploadLimitInMb = Output.ofNullable(fileUploadLimitInMb);
+            this.fileUploadLimitInMb = Codegen.ofNullable(fileUploadLimitInMb);
             return this;
         }
         public Builder firewallMode(Output<Either<String,ApplicationGatewayFirewallMode>> firewallMode) {
@@ -260,7 +261,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
             return this;
         }
         public Builder maxRequestBodySize(@Nullable Integer maxRequestBodySize) {
-            this.maxRequestBodySize = Output.ofNullable(maxRequestBodySize);
+            this.maxRequestBodySize = Codegen.ofNullable(maxRequestBodySize);
             return this;
         }
         public Builder maxRequestBodySizeInKb(@Nullable Output<Integer> maxRequestBodySizeInKb) {
@@ -268,7 +269,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
             return this;
         }
         public Builder maxRequestBodySizeInKb(@Nullable Integer maxRequestBodySizeInKb) {
-            this.maxRequestBodySizeInKb = Output.ofNullable(maxRequestBodySizeInKb);
+            this.maxRequestBodySizeInKb = Codegen.ofNullable(maxRequestBodySizeInKb);
             return this;
         }
         public Builder requestBodyCheck(@Nullable Output<Boolean> requestBodyCheck) {
@@ -276,7 +277,7 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
             return this;
         }
         public Builder requestBodyCheck(@Nullable Boolean requestBodyCheck) {
-            this.requestBodyCheck = Output.ofNullable(requestBodyCheck);
+            this.requestBodyCheck = Codegen.ofNullable(requestBodyCheck);
             return this;
         }
         public Builder ruleSetType(Output<String> ruleSetType) {

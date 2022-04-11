@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.DiskIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ public final class DiskIamBindingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DiskIamBindingConditionArgs> condition;
 
     public Output<DiskIamBindingConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="members", required=true)
@@ -38,7 +39,7 @@ public final class DiskIamBindingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class DiskIamBindingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class DiskIamBindingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public DiskIamBindingArgs(
@@ -95,12 +96,12 @@ public final class DiskIamBindingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DiskIamBindingArgs() {
-        this.condition = Output.empty();
-        this.members = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.role = Output.empty();
-        this.zone = Output.empty();
+        this.condition = Codegen.empty();
+        this.members = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.role = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -138,7 +139,7 @@ public final class DiskIamBindingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder condition(@Nullable DiskIamBindingConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder members(Output<List<String>> members) {
@@ -157,7 +158,7 @@ public final class DiskIamBindingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -165,7 +166,7 @@ public final class DiskIamBindingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder role(Output<String> role) {
@@ -181,7 +182,7 @@ public final class DiskIamBindingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public DiskIamBindingArgs build() {
             return new DiskIamBindingArgs(condition, members, name, project, role, zone);

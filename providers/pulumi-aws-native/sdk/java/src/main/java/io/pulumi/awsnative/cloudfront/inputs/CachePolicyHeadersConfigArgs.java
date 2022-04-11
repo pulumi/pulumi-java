@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class CachePolicyHeadersConfigArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<List<String>> headers;
 
     public Output<List<String>> getHeaders() {
-        return this.headers == null ? Output.empty() : this.headers;
+        return this.headers == null ? Codegen.empty() : this.headers;
     }
 
     public CachePolicyHeadersConfigArgs(
@@ -37,8 +38,8 @@ public final class CachePolicyHeadersConfigArgs extends io.pulumi.resources.Reso
     }
 
     private CachePolicyHeadersConfigArgs() {
-        this.headerBehavior = Output.empty();
-        this.headers = Output.empty();
+        this.headerBehavior = Codegen.empty();
+        this.headers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class CachePolicyHeadersConfigArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder headers(@Nullable List<String> headers) {
-            this.headers = Output.ofNullable(headers);
+            this.headers = Codegen.ofNullable(headers);
             return this;
         }
         public Builder headers(String... headers) {

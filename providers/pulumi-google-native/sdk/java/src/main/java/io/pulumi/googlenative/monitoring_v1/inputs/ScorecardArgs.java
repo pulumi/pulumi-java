@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.monitoring_v1.inputs.GaugeViewArgs;
 import io.pulumi.googlenative.monitoring_v1.inputs.SparkChartViewArgs;
 import io.pulumi.googlenative.monitoring_v1.inputs.ThresholdArgs;
@@ -30,7 +31,7 @@ public final class ScorecardArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GaugeViewArgs> gaugeView;
 
     public Output<GaugeViewArgs> getGaugeView() {
-        return this.gaugeView == null ? Output.empty() : this.gaugeView;
+        return this.gaugeView == null ? Codegen.empty() : this.gaugeView;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class ScorecardArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SparkChartViewArgs> sparkChartView;
 
     public Output<SparkChartViewArgs> getSparkChartView() {
-        return this.sparkChartView == null ? Output.empty() : this.sparkChartView;
+        return this.sparkChartView == null ? Codegen.empty() : this.sparkChartView;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class ScorecardArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ThresholdArgs>> thresholds;
 
     public Output<List<ThresholdArgs>> getThresholds() {
-        return this.thresholds == null ? Output.empty() : this.thresholds;
+        return this.thresholds == null ? Codegen.empty() : this.thresholds;
     }
 
     /**
@@ -78,10 +79,10 @@ public final class ScorecardArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScorecardArgs() {
-        this.gaugeView = Output.empty();
-        this.sparkChartView = Output.empty();
-        this.thresholds = Output.empty();
-        this.timeSeriesQuery = Output.empty();
+        this.gaugeView = Codegen.empty();
+        this.sparkChartView = Codegen.empty();
+        this.thresholds = Codegen.empty();
+        this.timeSeriesQuery = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class ScorecardArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gaugeView(@Nullable GaugeViewArgs gaugeView) {
-            this.gaugeView = Output.ofNullable(gaugeView);
+            this.gaugeView = Codegen.ofNullable(gaugeView);
             return this;
         }
         public Builder sparkChartView(@Nullable Output<SparkChartViewArgs> sparkChartView) {
@@ -123,7 +124,7 @@ public final class ScorecardArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sparkChartView(@Nullable SparkChartViewArgs sparkChartView) {
-            this.sparkChartView = Output.ofNullable(sparkChartView);
+            this.sparkChartView = Codegen.ofNullable(sparkChartView);
             return this;
         }
         public Builder thresholds(@Nullable Output<List<ThresholdArgs>> thresholds) {
@@ -131,7 +132,7 @@ public final class ScorecardArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder thresholds(@Nullable List<ThresholdArgs> thresholds) {
-            this.thresholds = Output.ofNullable(thresholds);
+            this.thresholds = Codegen.ofNullable(thresholds);
             return this;
         }
         public Builder thresholds(ThresholdArgs... thresholds) {

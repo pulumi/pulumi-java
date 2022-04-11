@@ -5,6 +5,7 @@ package io.pulumi.random.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class RandomUuidState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,Object>> keepers;
 
     public Output<Map<String,Object>> getKeepers() {
-        return this.keepers == null ? Output.empty() : this.keepers;
+        return this.keepers == null ? Codegen.empty() : this.keepers;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class RandomUuidState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> result;
 
     public Output<String> getResult() {
-        return this.result == null ? Output.empty() : this.result;
+        return this.result == null ? Codegen.empty() : this.result;
     }
 
     public RandomUuidState(
@@ -46,8 +47,8 @@ public final class RandomUuidState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RandomUuidState() {
-        this.keepers = Output.empty();
-        this.result = Output.empty();
+        this.keepers = Codegen.empty();
+        this.result = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class RandomUuidState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keepers(@Nullable Map<String,Object> keepers) {
-            this.keepers = Output.ofNullable(keepers);
+            this.keepers = Codegen.ofNullable(keepers);
             return this;
         }
         public Builder result(@Nullable Output<String> result) {
@@ -85,7 +86,7 @@ public final class RandomUuidState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder result(@Nullable String result) {
-            this.result = Output.ofNullable(result);
+            this.result = Codegen.ofNullable(result);
             return this;
         }        public RandomUuidState build() {
             return new RandomUuidState(keepers, result);

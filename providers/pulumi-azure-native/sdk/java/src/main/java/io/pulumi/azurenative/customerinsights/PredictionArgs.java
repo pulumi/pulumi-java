@@ -7,6 +7,7 @@ import io.pulumi.azurenative.customerinsights.inputs.PredictionGradesArgs;
 import io.pulumi.azurenative.customerinsights.inputs.PredictionMappingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +39,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> description;
 
     public Output<Map<String,String>> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> displayName;
 
     public Output<Map<String,String>> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<PredictionGradesArgs>> grades;
 
     public Output<List<PredictionGradesArgs>> getGrades() {
-        return this.grades == null ? Output.empty() : this.grades;
+        return this.grades == null ? Codegen.empty() : this.grades;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> involvedInteractionTypes;
 
     public Output<List<String>> getInvolvedInteractionTypes() {
-        return this.involvedInteractionTypes == null ? Output.empty() : this.involvedInteractionTypes;
+        return this.involvedInteractionTypes == null ? Codegen.empty() : this.involvedInteractionTypes;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> involvedKpiTypes;
 
     public Output<List<String>> getInvolvedKpiTypes() {
-        return this.involvedKpiTypes == null ? Output.empty() : this.involvedKpiTypes;
+        return this.involvedKpiTypes == null ? Codegen.empty() : this.involvedKpiTypes;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> involvedRelationships;
 
     public Output<List<String>> getInvolvedRelationships() {
-        return this.involvedRelationships == null ? Output.empty() : this.involvedRelationships;
+        return this.involvedRelationships == null ? Codegen.empty() : this.involvedRelationships;
     }
 
     /**
@@ -148,7 +149,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> predictionName;
 
     public Output<String> getPredictionName() {
-        return this.predictionName == null ? Output.empty() : this.predictionName;
+        return this.predictionName == null ? Codegen.empty() : this.predictionName;
     }
 
     /**
@@ -231,22 +232,22 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PredictionArgs() {
-        this.autoAnalyze = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.grades = Output.empty();
-        this.hubName = Output.empty();
-        this.involvedInteractionTypes = Output.empty();
-        this.involvedKpiTypes = Output.empty();
-        this.involvedRelationships = Output.empty();
-        this.mappings = Output.empty();
-        this.negativeOutcomeExpression = Output.empty();
-        this.positiveOutcomeExpression = Output.empty();
-        this.predictionName = Output.empty();
-        this.primaryProfileType = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.scopeExpression = Output.empty();
-        this.scoreLabel = Output.empty();
+        this.autoAnalyze = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.grades = Codegen.empty();
+        this.hubName = Codegen.empty();
+        this.involvedInteractionTypes = Codegen.empty();
+        this.involvedKpiTypes = Codegen.empty();
+        this.involvedRelationships = Codegen.empty();
+        this.mappings = Codegen.empty();
+        this.negativeOutcomeExpression = Codegen.empty();
+        this.positiveOutcomeExpression = Codegen.empty();
+        this.predictionName = Codegen.empty();
+        this.primaryProfileType = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.scopeExpression = Codegen.empty();
+        this.scoreLabel = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -312,7 +313,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable Map<String,String> description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
@@ -320,7 +321,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable Map<String,String> displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder grades(@Nullable Output<List<PredictionGradesArgs>> grades) {
@@ -328,7 +329,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder grades(@Nullable List<PredictionGradesArgs> grades) {
-            this.grades = Output.ofNullable(grades);
+            this.grades = Codegen.ofNullable(grades);
             return this;
         }
         public Builder grades(PredictionGradesArgs... grades) {
@@ -347,7 +348,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder involvedInteractionTypes(@Nullable List<String> involvedInteractionTypes) {
-            this.involvedInteractionTypes = Output.ofNullable(involvedInteractionTypes);
+            this.involvedInteractionTypes = Codegen.ofNullable(involvedInteractionTypes);
             return this;
         }
         public Builder involvedInteractionTypes(String... involvedInteractionTypes) {
@@ -358,7 +359,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder involvedKpiTypes(@Nullable List<String> involvedKpiTypes) {
-            this.involvedKpiTypes = Output.ofNullable(involvedKpiTypes);
+            this.involvedKpiTypes = Codegen.ofNullable(involvedKpiTypes);
             return this;
         }
         public Builder involvedKpiTypes(String... involvedKpiTypes) {
@@ -369,7 +370,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder involvedRelationships(@Nullable List<String> involvedRelationships) {
-            this.involvedRelationships = Output.ofNullable(involvedRelationships);
+            this.involvedRelationships = Codegen.ofNullable(involvedRelationships);
             return this;
         }
         public Builder involvedRelationships(String... involvedRelationships) {
@@ -404,7 +405,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder predictionName(@Nullable String predictionName) {
-            this.predictionName = Output.ofNullable(predictionName);
+            this.predictionName = Codegen.ofNullable(predictionName);
             return this;
         }
         public Builder primaryProfileType(Output<String> primaryProfileType) {

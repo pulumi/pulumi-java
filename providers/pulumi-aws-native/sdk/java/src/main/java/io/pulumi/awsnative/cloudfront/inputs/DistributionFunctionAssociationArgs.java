@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +19,14 @@ public final class DistributionFunctionAssociationArgs extends io.pulumi.resourc
       private final @Nullable Output<String> eventType;
 
     public Output<String> getEventType() {
-        return this.eventType == null ? Output.empty() : this.eventType;
+        return this.eventType == null ? Codegen.empty() : this.eventType;
     }
 
     @Import(name="functionARN")
       private final @Nullable Output<String> functionARN;
 
     public Output<String> getFunctionARN() {
-        return this.functionARN == null ? Output.empty() : this.functionARN;
+        return this.functionARN == null ? Codegen.empty() : this.functionARN;
     }
 
     public DistributionFunctionAssociationArgs(
@@ -36,8 +37,8 @@ public final class DistributionFunctionAssociationArgs extends io.pulumi.resourc
     }
 
     private DistributionFunctionAssociationArgs() {
-        this.eventType = Output.empty();
-        this.functionARN = Output.empty();
+        this.eventType = Codegen.empty();
+        this.functionARN = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class DistributionFunctionAssociationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder eventType(@Nullable String eventType) {
-            this.eventType = Output.ofNullable(eventType);
+            this.eventType = Codegen.ofNullable(eventType);
             return this;
         }
         public Builder functionARN(@Nullable Output<String> functionARN) {
@@ -75,7 +76,7 @@ public final class DistributionFunctionAssociationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder functionARN(@Nullable String functionARN) {
-            this.functionARN = Output.ofNullable(functionARN);
+            this.functionARN = Codegen.ofNullable(functionARN);
             return this;
         }        public DistributionFunctionAssociationArgs build() {
             return new DistributionFunctionAssociationArgs(eventType, functionARN);

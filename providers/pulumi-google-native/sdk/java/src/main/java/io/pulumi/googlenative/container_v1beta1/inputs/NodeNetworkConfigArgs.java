@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class NodeNetworkConfigArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Boolean> createPodRange;
 
     public Output<Boolean> getCreatePodRange() {
-        return this.createPodRange == null ? Output.empty() : this.createPodRange;
+        return this.createPodRange == null ? Codegen.empty() : this.createPodRange;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class NodeNetworkConfigArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> podIpv4CidrBlock;
 
     public Output<String> getPodIpv4CidrBlock() {
-        return this.podIpv4CidrBlock == null ? Output.empty() : this.podIpv4CidrBlock;
+        return this.podIpv4CidrBlock == null ? Codegen.empty() : this.podIpv4CidrBlock;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class NodeNetworkConfigArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> podRange;
 
     public Output<String> getPodRange() {
-        return this.podRange == null ? Output.empty() : this.podRange;
+        return this.podRange == null ? Codegen.empty() : this.podRange;
     }
 
     public NodeNetworkConfigArgs(
@@ -62,9 +63,9 @@ public final class NodeNetworkConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     private NodeNetworkConfigArgs() {
-        this.createPodRange = Output.empty();
-        this.podIpv4CidrBlock = Output.empty();
-        this.podRange = Output.empty();
+        this.createPodRange = Codegen.empty();
+        this.podIpv4CidrBlock = Codegen.empty();
+        this.podRange = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class NodeNetworkConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder createPodRange(@Nullable Boolean createPodRange) {
-            this.createPodRange = Output.ofNullable(createPodRange);
+            this.createPodRange = Codegen.ofNullable(createPodRange);
             return this;
         }
         public Builder podIpv4CidrBlock(@Nullable Output<String> podIpv4CidrBlock) {
@@ -104,7 +105,7 @@ public final class NodeNetworkConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder podIpv4CidrBlock(@Nullable String podIpv4CidrBlock) {
-            this.podIpv4CidrBlock = Output.ofNullable(podIpv4CidrBlock);
+            this.podIpv4CidrBlock = Codegen.ofNullable(podIpv4CidrBlock);
             return this;
         }
         public Builder podRange(@Nullable Output<String> podRange) {
@@ -112,7 +113,7 @@ public final class NodeNetworkConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder podRange(@Nullable String podRange) {
-            this.podRange = Output.ofNullable(podRange);
+            this.podRange = Codegen.ofNullable(podRange);
             return this;
         }        public NodeNetworkConfigArgs build() {
             return new NodeNetworkConfigArgs(createPodRange, podIpv4CidrBlock, podRange);

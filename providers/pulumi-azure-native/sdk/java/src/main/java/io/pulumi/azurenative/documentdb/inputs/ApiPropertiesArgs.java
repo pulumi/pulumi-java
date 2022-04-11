@@ -7,6 +7,7 @@ import io.pulumi.azurenative.documentdb.enums.ServerVersion;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class ApiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,ServerVersion>> serverVersion;
 
     public Output<Either<String,ServerVersion>> getServerVersion() {
-        return this.serverVersion == null ? Output.empty() : this.serverVersion;
+        return this.serverVersion == null ? Codegen.empty() : this.serverVersion;
     }
 
     public ApiPropertiesArgs(@Nullable Output<Either<String,ServerVersion>> serverVersion) {
@@ -32,7 +33,7 @@ public final class ApiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApiPropertiesArgs() {
-        this.serverVersion = Output.empty();
+        this.serverVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -60,7 +61,7 @@ public final class ApiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serverVersion(@Nullable Either<String,ServerVersion> serverVersion) {
-            this.serverVersion = Output.ofNullable(serverVersion);
+            this.serverVersion = Codegen.ofNullable(serverVersion);
             return this;
         }        public ApiPropertiesArgs build() {
             return new ApiPropertiesArgs(serverVersion);

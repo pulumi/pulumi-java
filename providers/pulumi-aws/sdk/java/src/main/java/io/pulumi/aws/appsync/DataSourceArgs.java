@@ -10,6 +10,7 @@ import io.pulumi.aws.appsync.inputs.DataSourceLambdaConfigArgs;
 import io.pulumi.aws.appsync.inputs.DataSourceRelationalDatabaseConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -38,7 +39,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DataSourceDynamodbConfigArgs> dynamodbConfig;
 
     public Output<DataSourceDynamodbConfigArgs> getDynamodbConfig() {
-        return this.dynamodbConfig == null ? Output.empty() : this.dynamodbConfig;
+        return this.dynamodbConfig == null ? Codegen.empty() : this.dynamodbConfig;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DataSourceElasticsearchConfigArgs> elasticsearchConfig;
 
     public Output<DataSourceElasticsearchConfigArgs> getElasticsearchConfig() {
-        return this.elasticsearchConfig == null ? Output.empty() : this.elasticsearchConfig;
+        return this.elasticsearchConfig == null ? Codegen.empty() : this.elasticsearchConfig;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DataSourceHttpConfigArgs> httpConfig;
 
     public Output<DataSourceHttpConfigArgs> getHttpConfig() {
-        return this.httpConfig == null ? Output.empty() : this.httpConfig;
+        return this.httpConfig == null ? Codegen.empty() : this.httpConfig;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DataSourceLambdaConfigArgs> lambdaConfig;
 
     public Output<DataSourceLambdaConfigArgs> getLambdaConfig() {
-        return this.lambdaConfig == null ? Output.empty() : this.lambdaConfig;
+        return this.lambdaConfig == null ? Codegen.empty() : this.lambdaConfig;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DataSourceRelationalDatabaseConfigArgs> relationalDatabaseConfig;
 
     public Output<DataSourceRelationalDatabaseConfigArgs> getRelationalDatabaseConfig() {
-        return this.relationalDatabaseConfig == null ? Output.empty() : this.relationalDatabaseConfig;
+        return this.relationalDatabaseConfig == null ? Codegen.empty() : this.relationalDatabaseConfig;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serviceRoleArn;
 
     public Output<String> getServiceRoleArn() {
-        return this.serviceRoleArn == null ? Output.empty() : this.serviceRoleArn;
+        return this.serviceRoleArn == null ? Codegen.empty() : this.serviceRoleArn;
     }
 
     /**
@@ -153,16 +154,16 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataSourceArgs() {
-        this.apiId = Output.empty();
-        this.description = Output.empty();
-        this.dynamodbConfig = Output.empty();
-        this.elasticsearchConfig = Output.empty();
-        this.httpConfig = Output.empty();
-        this.lambdaConfig = Output.empty();
-        this.name = Output.empty();
-        this.relationalDatabaseConfig = Output.empty();
-        this.serviceRoleArn = Output.empty();
-        this.type = Output.empty();
+        this.apiId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.dynamodbConfig = Codegen.empty();
+        this.elasticsearchConfig = Codegen.empty();
+        this.httpConfig = Codegen.empty();
+        this.lambdaConfig = Codegen.empty();
+        this.name = Codegen.empty();
+        this.relationalDatabaseConfig = Codegen.empty();
+        this.serviceRoleArn = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -216,7 +217,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder dynamodbConfig(@Nullable Output<DataSourceDynamodbConfigArgs> dynamodbConfig) {
@@ -224,7 +225,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dynamodbConfig(@Nullable DataSourceDynamodbConfigArgs dynamodbConfig) {
-            this.dynamodbConfig = Output.ofNullable(dynamodbConfig);
+            this.dynamodbConfig = Codegen.ofNullable(dynamodbConfig);
             return this;
         }
         public Builder elasticsearchConfig(@Nullable Output<DataSourceElasticsearchConfigArgs> elasticsearchConfig) {
@@ -232,7 +233,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder elasticsearchConfig(@Nullable DataSourceElasticsearchConfigArgs elasticsearchConfig) {
-            this.elasticsearchConfig = Output.ofNullable(elasticsearchConfig);
+            this.elasticsearchConfig = Codegen.ofNullable(elasticsearchConfig);
             return this;
         }
         public Builder httpConfig(@Nullable Output<DataSourceHttpConfigArgs> httpConfig) {
@@ -240,7 +241,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder httpConfig(@Nullable DataSourceHttpConfigArgs httpConfig) {
-            this.httpConfig = Output.ofNullable(httpConfig);
+            this.httpConfig = Codegen.ofNullable(httpConfig);
             return this;
         }
         public Builder lambdaConfig(@Nullable Output<DataSourceLambdaConfigArgs> lambdaConfig) {
@@ -248,7 +249,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lambdaConfig(@Nullable DataSourceLambdaConfigArgs lambdaConfig) {
-            this.lambdaConfig = Output.ofNullable(lambdaConfig);
+            this.lambdaConfig = Codegen.ofNullable(lambdaConfig);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -256,7 +257,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder relationalDatabaseConfig(@Nullable Output<DataSourceRelationalDatabaseConfigArgs> relationalDatabaseConfig) {
@@ -264,7 +265,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder relationalDatabaseConfig(@Nullable DataSourceRelationalDatabaseConfigArgs relationalDatabaseConfig) {
-            this.relationalDatabaseConfig = Output.ofNullable(relationalDatabaseConfig);
+            this.relationalDatabaseConfig = Codegen.ofNullable(relationalDatabaseConfig);
             return this;
         }
         public Builder serviceRoleArn(@Nullable Output<String> serviceRoleArn) {
@@ -272,7 +273,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceRoleArn(@Nullable String serviceRoleArn) {
-            this.serviceRoleArn = Output.ofNullable(serviceRoleArn);
+            this.serviceRoleArn = Codegen.ofNullable(serviceRoleArn);
             return this;
         }
         public Builder type(Output<String> type) {

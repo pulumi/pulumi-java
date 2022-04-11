@@ -5,6 +5,7 @@ package io.pulumi.aws.lightsail;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -58,7 +59,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> keyPairName;
 
     public Output<String> getKeyPairName() {
-        return this.keyPairName == null ? Output.empty() : this.keyPairName;
+        return this.keyPairName == null ? Codegen.empty() : this.keyPairName;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> userData;
 
     public Output<String> getUserData() {
-        return this.userData == null ? Output.empty() : this.userData;
+        return this.userData == null ? Codegen.empty() : this.userData;
     }
 
     public InstanceArgs(
@@ -112,13 +113,13 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceArgs() {
-        this.availabilityZone = Output.empty();
-        this.blueprintId = Output.empty();
-        this.bundleId = Output.empty();
-        this.keyPairName = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
-        this.userData = Output.empty();
+        this.availabilityZone = Codegen.empty();
+        this.blueprintId = Codegen.empty();
+        this.bundleId = Codegen.empty();
+        this.keyPairName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.userData = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -182,7 +183,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyPairName(@Nullable String keyPairName) {
-            this.keyPairName = Output.ofNullable(keyPairName);
+            this.keyPairName = Codegen.ofNullable(keyPairName);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -190,7 +191,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -198,7 +199,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder userData(@Nullable Output<String> userData) {
@@ -206,7 +207,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userData(@Nullable String userData) {
-            this.userData = Output.ofNullable(userData);
+            this.userData = Codegen.ofNullable(userData);
             return this;
         }        public InstanceArgs build() {
             return new InstanceArgs(availabilityZone, blueprintId, bundleId, keyPairName, name, tags, userData);

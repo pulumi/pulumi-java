@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1InputAudioConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GoogleCloudDialogflowCxV3beta1AudioInputArgs extends io.pulum
       private final @Nullable Output<String> audio;
 
     public Output<String> getAudio() {
-        return this.audio == null ? Output.empty() : this.audio;
+        return this.audio == null ? Codegen.empty() : this.audio;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class GoogleCloudDialogflowCxV3beta1AudioInputArgs extends io.pulum
     }
 
     private GoogleCloudDialogflowCxV3beta1AudioInputArgs() {
-        this.audio = Output.empty();
-        this.config = Output.empty();
+        this.audio = Codegen.empty();
+        this.config = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GoogleCloudDialogflowCxV3beta1AudioInputArgs extends io.pulum
             return this;
         }
         public Builder audio(@Nullable String audio) {
-            this.audio = Output.ofNullable(audio);
+            this.audio = Codegen.ofNullable(audio);
             return this;
         }
         public Builder config(Output<GoogleCloudDialogflowCxV3beta1InputAudioConfigArgs> config) {

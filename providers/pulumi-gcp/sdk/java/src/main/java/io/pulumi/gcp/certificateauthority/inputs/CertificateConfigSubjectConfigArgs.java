@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigSubjectConfigSubjectAltNameArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigSubjectConfigSubjectArgs;
 import java.util.Objects;
@@ -36,7 +37,7 @@ public final class CertificateConfigSubjectConfigArgs extends io.pulumi.resource
       private final @Nullable Output<CertificateConfigSubjectConfigSubjectAltNameArgs> subjectAltName;
 
     public Output<CertificateConfigSubjectConfigSubjectAltNameArgs> getSubjectAltName() {
-        return this.subjectAltName == null ? Output.empty() : this.subjectAltName;
+        return this.subjectAltName == null ? Codegen.empty() : this.subjectAltName;
     }
 
     public CertificateConfigSubjectConfigArgs(
@@ -47,8 +48,8 @@ public final class CertificateConfigSubjectConfigArgs extends io.pulumi.resource
     }
 
     private CertificateConfigSubjectConfigArgs() {
-        this.subject = Output.empty();
-        this.subjectAltName = Output.empty();
+        this.subject = Codegen.empty();
+        this.subjectAltName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -86,7 +87,7 @@ public final class CertificateConfigSubjectConfigArgs extends io.pulumi.resource
             return this;
         }
         public Builder subjectAltName(@Nullable CertificateConfigSubjectConfigSubjectAltNameArgs subjectAltName) {
-            this.subjectAltName = Output.ofNullable(subjectAltName);
+            this.subjectAltName = Codegen.ofNullable(subjectAltName);
             return this;
         }        public CertificateConfigSubjectConfigArgs build() {
             return new CertificateConfigSubjectConfigArgs(subject, subjectAltName);

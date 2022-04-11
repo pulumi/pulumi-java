@@ -5,6 +5,7 @@ package io.pulumi.aws.codecommit;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class ApprovalRuleTemplateAssociationArgs extends io.pulumi.resourc
     }
 
     private ApprovalRuleTemplateAssociationArgs() {
-        this.approvalRuleTemplateName = Output.empty();
-        this.repositoryName = Output.empty();
+        this.approvalRuleTemplateName = Codegen.empty();
+        this.repositoryName = Codegen.empty();
     }
 
     public static Builder builder() {

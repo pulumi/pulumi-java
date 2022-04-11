@@ -6,6 +6,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 import io.pulumi.awsnative.quicksight.enums.DashboardBehavior;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +23,7 @@ public final class DashboardExportToCSVOptionArgs extends io.pulumi.resources.Re
       private final @Nullable Output<DashboardBehavior> availabilityStatus;
 
     public Output<DashboardBehavior> getAvailabilityStatus() {
-        return this.availabilityStatus == null ? Output.empty() : this.availabilityStatus;
+        return this.availabilityStatus == null ? Codegen.empty() : this.availabilityStatus;
     }
 
     public DashboardExportToCSVOptionArgs(@Nullable Output<DashboardBehavior> availabilityStatus) {
@@ -30,7 +31,7 @@ public final class DashboardExportToCSVOptionArgs extends io.pulumi.resources.Re
     }
 
     private DashboardExportToCSVOptionArgs() {
-        this.availabilityStatus = Output.empty();
+        this.availabilityStatus = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class DashboardExportToCSVOptionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder availabilityStatus(@Nullable DashboardBehavior availabilityStatus) {
-            this.availabilityStatus = Output.ofNullable(availabilityStatus);
+            this.availabilityStatus = Codegen.ofNullable(availabilityStatus);
             return this;
         }        public DashboardExportToCSVOptionArgs build() {
             return new DashboardExportToCSVOptionArgs(availabilityStatus);

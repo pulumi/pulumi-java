@@ -12,6 +12,7 @@ import io.pulumi.awsnative.iotsitewise.outputs.AssetModelTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -157,7 +158,7 @@ public class AssetModel extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AssetModel(String name, @Nullable AssetModelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:iotsitewise:AssetModel", name, args == null ? AssetModelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:iotsitewise:AssetModel", name, args == null ? AssetModelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AssetModel(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

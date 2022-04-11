@@ -6,6 +6,7 @@ package io.pulumi.azurenative.sql.inputs;
 import io.pulumi.azurenative.sql.inputs.SyncGroupSchemaTableArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class SyncGroupSchemaArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> masterSyncMemberName;
 
     public Output<String> getMasterSyncMemberName() {
-        return this.masterSyncMemberName == null ? Output.empty() : this.masterSyncMemberName;
+        return this.masterSyncMemberName == null ? Codegen.empty() : this.masterSyncMemberName;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class SyncGroupSchemaArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<SyncGroupSchemaTableArgs>> tables;
 
     public Output<List<SyncGroupSchemaTableArgs>> getTables() {
-        return this.tables == null ? Output.empty() : this.tables;
+        return this.tables == null ? Codegen.empty() : this.tables;
     }
 
     public SyncGroupSchemaArgs(
@@ -50,8 +51,8 @@ public final class SyncGroupSchemaArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private SyncGroupSchemaArgs() {
-        this.masterSyncMemberName = Output.empty();
-        this.tables = Output.empty();
+        this.masterSyncMemberName = Codegen.empty();
+        this.tables = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class SyncGroupSchemaArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder masterSyncMemberName(@Nullable String masterSyncMemberName) {
-            this.masterSyncMemberName = Output.ofNullable(masterSyncMemberName);
+            this.masterSyncMemberName = Codegen.ofNullable(masterSyncMemberName);
             return this;
         }
         public Builder tables(@Nullable Output<List<SyncGroupSchemaTableArgs>> tables) {
@@ -89,7 +90,7 @@ public final class SyncGroupSchemaArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tables(@Nullable List<SyncGroupSchemaTableArgs> tables) {
-            this.tables = Output.ofNullable(tables);
+            this.tables = Codegen.ofNullable(tables);
             return this;
         }
         public Builder tables(SyncGroupSchemaTableArgs... tables) {

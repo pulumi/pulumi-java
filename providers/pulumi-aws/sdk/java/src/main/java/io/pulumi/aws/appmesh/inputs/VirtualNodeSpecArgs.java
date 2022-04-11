@@ -10,6 +10,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecLoggingArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecServiceDiscoveryArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class VirtualNodeSpecArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<VirtualNodeSpecBackendDefaultsArgs> backendDefaults;
 
     public Output<VirtualNodeSpecBackendDefaultsArgs> getBackendDefaults() {
-        return this.backendDefaults == null ? Output.empty() : this.backendDefaults;
+        return this.backendDefaults == null ? Codegen.empty() : this.backendDefaults;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class VirtualNodeSpecArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<VirtualNodeSpecBackendArgs>> backends;
 
     public Output<List<VirtualNodeSpecBackendArgs>> getBackends() {
-        return this.backends == null ? Output.empty() : this.backends;
+        return this.backends == null ? Codegen.empty() : this.backends;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class VirtualNodeSpecArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<VirtualNodeSpecListenerArgs> listener;
 
     public Output<VirtualNodeSpecListenerArgs> getListener() {
-        return this.listener == null ? Output.empty() : this.listener;
+        return this.listener == null ? Codegen.empty() : this.listener;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class VirtualNodeSpecArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<VirtualNodeSpecLoggingArgs> logging;
 
     public Output<VirtualNodeSpecLoggingArgs> getLogging() {
-        return this.logging == null ? Output.empty() : this.logging;
+        return this.logging == null ? Codegen.empty() : this.logging;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class VirtualNodeSpecArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<VirtualNodeSpecServiceDiscoveryArgs> serviceDiscovery;
 
     public Output<VirtualNodeSpecServiceDiscoveryArgs> getServiceDiscovery() {
-        return this.serviceDiscovery == null ? Output.empty() : this.serviceDiscovery;
+        return this.serviceDiscovery == null ? Codegen.empty() : this.serviceDiscovery;
     }
 
     public VirtualNodeSpecArgs(
@@ -88,11 +89,11 @@ public final class VirtualNodeSpecArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private VirtualNodeSpecArgs() {
-        this.backendDefaults = Output.empty();
-        this.backends = Output.empty();
-        this.listener = Output.empty();
-        this.logging = Output.empty();
-        this.serviceDiscovery = Output.empty();
+        this.backendDefaults = Codegen.empty();
+        this.backends = Codegen.empty();
+        this.listener = Codegen.empty();
+        this.logging = Codegen.empty();
+        this.serviceDiscovery = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class VirtualNodeSpecArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder backendDefaults(@Nullable VirtualNodeSpecBackendDefaultsArgs backendDefaults) {
-            this.backendDefaults = Output.ofNullable(backendDefaults);
+            this.backendDefaults = Codegen.ofNullable(backendDefaults);
             return this;
         }
         public Builder backends(@Nullable Output<List<VirtualNodeSpecBackendArgs>> backends) {
@@ -136,7 +137,7 @@ public final class VirtualNodeSpecArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder backends(@Nullable List<VirtualNodeSpecBackendArgs> backends) {
-            this.backends = Output.ofNullable(backends);
+            this.backends = Codegen.ofNullable(backends);
             return this;
         }
         public Builder backends(VirtualNodeSpecBackendArgs... backends) {
@@ -147,7 +148,7 @@ public final class VirtualNodeSpecArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder listener(@Nullable VirtualNodeSpecListenerArgs listener) {
-            this.listener = Output.ofNullable(listener);
+            this.listener = Codegen.ofNullable(listener);
             return this;
         }
         public Builder logging(@Nullable Output<VirtualNodeSpecLoggingArgs> logging) {
@@ -155,7 +156,7 @@ public final class VirtualNodeSpecArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder logging(@Nullable VirtualNodeSpecLoggingArgs logging) {
-            this.logging = Output.ofNullable(logging);
+            this.logging = Codegen.ofNullable(logging);
             return this;
         }
         public Builder serviceDiscovery(@Nullable Output<VirtualNodeSpecServiceDiscoveryArgs> serviceDiscovery) {
@@ -163,7 +164,7 @@ public final class VirtualNodeSpecArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder serviceDiscovery(@Nullable VirtualNodeSpecServiceDiscoveryArgs serviceDiscovery) {
-            this.serviceDiscovery = Output.ofNullable(serviceDiscovery);
+            this.serviceDiscovery = Codegen.ofNullable(serviceDiscovery);
             return this;
         }        public VirtualNodeSpecArgs build() {
             return new VirtualNodeSpecArgs(backendDefaults, backends, listener, logging, serviceDiscovery);

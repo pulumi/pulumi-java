@@ -8,6 +8,7 @@ import io.pulumi.azurenative.insights.inputs.MyWorkbookManagedIdentityArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -48,7 +49,7 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<MyWorkbookManagedIdentityArgs> identity;
 
     public Output<MyWorkbookManagedIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,Kind>> kind;
 
     public Output<Either<String,Kind>> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
-        return this.resourceName == null ? Output.empty() : this.resourceName;
+        return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sourceId;
 
     public Output<String> getSourceId() {
-        return this.sourceId == null ? Output.empty() : this.sourceId;
+        return this.sourceId == null ? Codegen.empty() : this.sourceId;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> storageUri;
 
     public Output<String> getStorageUri() {
-        return this.storageUri == null ? Output.empty() : this.storageUri;
+        return this.storageUri == null ? Codegen.empty() : this.storageUri;
     }
 
     /**
@@ -158,7 +159,7 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -169,7 +170,7 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -180,7 +181,7 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public MyWorkbookArgs(
@@ -217,21 +218,21 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MyWorkbookArgs() {
-        this.category = Output.empty();
-        this.displayName = Output.empty();
-        this.id = Output.empty();
-        this.identity = Output.empty();
-        this.kind = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
-        this.serializedData = Output.empty();
-        this.sourceId = Output.empty();
-        this.storageUri = Output.empty();
-        this.tags = Output.empty();
-        this.type = Output.empty();
-        this.version = Output.empty();
+        this.category = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.id = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.serializedData = Codegen.empty();
+        this.sourceId = Codegen.empty();
+        this.storageUri = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.type = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -303,7 +304,7 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder identity(@Nullable Output<MyWorkbookManagedIdentityArgs> identity) {
@@ -311,7 +312,7 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable MyWorkbookManagedIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder kind(@Nullable Output<Either<String,Kind>> kind) {
@@ -319,7 +320,7 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable Either<String,Kind> kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -327,7 +328,7 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -335,7 +336,7 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -351,7 +352,7 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Output.ofNullable(resourceName);
+            this.resourceName = Codegen.ofNullable(resourceName);
             return this;
         }
         public Builder serializedData(Output<String> serializedData) {
@@ -367,7 +368,7 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceId(@Nullable String sourceId) {
-            this.sourceId = Output.ofNullable(sourceId);
+            this.sourceId = Codegen.ofNullable(sourceId);
             return this;
         }
         public Builder storageUri(@Nullable Output<String> storageUri) {
@@ -375,7 +376,7 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageUri(@Nullable String storageUri) {
-            this.storageUri = Output.ofNullable(storageUri);
+            this.storageUri = Codegen.ofNullable(storageUri);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -383,7 +384,7 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -391,7 +392,7 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -399,7 +400,7 @@ public final class MyWorkbookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public MyWorkbookArgs build() {
             return new MyWorkbookArgs(category, displayName, id, identity, kind, location, name, resourceGroupName, resourceName, serializedData, sourceId, storageUri, tags, type, version);

@@ -9,6 +9,7 @@ import io.pulumi.aws.amplify.inputs.BackendEnvironmentState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -121,7 +122,7 @@ public class BackendEnvironment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BackendEnvironment(String name, BackendEnvironmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:amplify/backendEnvironment:BackendEnvironment", name, args == null ? BackendEnvironmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:amplify/backendEnvironment:BackendEnvironment", name, args == null ? BackendEnvironmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BackendEnvironment(String name, Output<String> id, @Nullable BackendEnvironmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

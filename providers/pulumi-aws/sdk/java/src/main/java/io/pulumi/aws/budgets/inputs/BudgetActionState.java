@@ -8,6 +8,7 @@ import io.pulumi.aws.budgets.inputs.BudgetActionDefinitionGetArgs;
 import io.pulumi.aws.budgets.inputs.BudgetActionSubscriberGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
-        return this.accountId == null ? Output.empty() : this.accountId;
+        return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> actionId;
 
     public Output<String> getActionId() {
-        return this.actionId == null ? Output.empty() : this.actionId;
+        return this.actionId == null ? Codegen.empty() : this.actionId;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BudgetActionActionThresholdGetArgs> actionThreshold;
 
     public Output<BudgetActionActionThresholdGetArgs> getActionThreshold() {
-        return this.actionThreshold == null ? Output.empty() : this.actionThreshold;
+        return this.actionThreshold == null ? Codegen.empty() : this.actionThreshold;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> actionType;
 
     public Output<String> getActionType() {
-        return this.actionType == null ? Output.empty() : this.actionType;
+        return this.actionType == null ? Codegen.empty() : this.actionType;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> approvalModel;
 
     public Output<String> getApprovalModel() {
-        return this.approvalModel == null ? Output.empty() : this.approvalModel;
+        return this.approvalModel == null ? Codegen.empty() : this.approvalModel;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> budgetName;
 
     public Output<String> getBudgetName() {
-        return this.budgetName == null ? Output.empty() : this.budgetName;
+        return this.budgetName == null ? Codegen.empty() : this.budgetName;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BudgetActionDefinitionGetArgs> definition;
 
     public Output<BudgetActionDefinitionGetArgs> getDefinition() {
-        return this.definition == null ? Output.empty() : this.definition;
+        return this.definition == null ? Codegen.empty() : this.definition;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> executionRoleArn;
 
     public Output<String> getExecutionRoleArn() {
-        return this.executionRoleArn == null ? Output.empty() : this.executionRoleArn;
+        return this.executionRoleArn == null ? Codegen.empty() : this.executionRoleArn;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> notificationType;
 
     public Output<String> getNotificationType() {
-        return this.notificationType == null ? Output.empty() : this.notificationType;
+        return this.notificationType == null ? Codegen.empty() : this.notificationType;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<BudgetActionSubscriberGetArgs>> subscribers;
 
     public Output<List<BudgetActionSubscriberGetArgs>> getSubscribers() {
-        return this.subscribers == null ? Output.empty() : this.subscribers;
+        return this.subscribers == null ? Codegen.empty() : this.subscribers;
     }
 
     public BudgetActionState(
@@ -178,18 +179,18 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
     }
 
     private BudgetActionState() {
-        this.accountId = Output.empty();
-        this.actionId = Output.empty();
-        this.actionThreshold = Output.empty();
-        this.actionType = Output.empty();
-        this.approvalModel = Output.empty();
-        this.arn = Output.empty();
-        this.budgetName = Output.empty();
-        this.definition = Output.empty();
-        this.executionRoleArn = Output.empty();
-        this.notificationType = Output.empty();
-        this.status = Output.empty();
-        this.subscribers = Output.empty();
+        this.accountId = Codegen.empty();
+        this.actionId = Codegen.empty();
+        this.actionThreshold = Codegen.empty();
+        this.actionType = Codegen.empty();
+        this.approvalModel = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.budgetName = Codegen.empty();
+        this.definition = Codegen.empty();
+        this.executionRoleArn = Codegen.empty();
+        this.notificationType = Codegen.empty();
+        this.status = Codegen.empty();
+        this.subscribers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -239,7 +240,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Output.ofNullable(accountId);
+            this.accountId = Codegen.ofNullable(accountId);
             return this;
         }
         public Builder actionId(@Nullable Output<String> actionId) {
@@ -247,7 +248,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder actionId(@Nullable String actionId) {
-            this.actionId = Output.ofNullable(actionId);
+            this.actionId = Codegen.ofNullable(actionId);
             return this;
         }
         public Builder actionThreshold(@Nullable Output<BudgetActionActionThresholdGetArgs> actionThreshold) {
@@ -255,7 +256,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder actionThreshold(@Nullable BudgetActionActionThresholdGetArgs actionThreshold) {
-            this.actionThreshold = Output.ofNullable(actionThreshold);
+            this.actionThreshold = Codegen.ofNullable(actionThreshold);
             return this;
         }
         public Builder actionType(@Nullable Output<String> actionType) {
@@ -263,7 +264,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder actionType(@Nullable String actionType) {
-            this.actionType = Output.ofNullable(actionType);
+            this.actionType = Codegen.ofNullable(actionType);
             return this;
         }
         public Builder approvalModel(@Nullable Output<String> approvalModel) {
@@ -271,7 +272,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder approvalModel(@Nullable String approvalModel) {
-            this.approvalModel = Output.ofNullable(approvalModel);
+            this.approvalModel = Codegen.ofNullable(approvalModel);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -279,7 +280,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder budgetName(@Nullable Output<String> budgetName) {
@@ -287,7 +288,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder budgetName(@Nullable String budgetName) {
-            this.budgetName = Output.ofNullable(budgetName);
+            this.budgetName = Codegen.ofNullable(budgetName);
             return this;
         }
         public Builder definition(@Nullable Output<BudgetActionDefinitionGetArgs> definition) {
@@ -295,7 +296,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder definition(@Nullable BudgetActionDefinitionGetArgs definition) {
-            this.definition = Output.ofNullable(definition);
+            this.definition = Codegen.ofNullable(definition);
             return this;
         }
         public Builder executionRoleArn(@Nullable Output<String> executionRoleArn) {
@@ -303,7 +304,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder executionRoleArn(@Nullable String executionRoleArn) {
-            this.executionRoleArn = Output.ofNullable(executionRoleArn);
+            this.executionRoleArn = Codegen.ofNullable(executionRoleArn);
             return this;
         }
         public Builder notificationType(@Nullable Output<String> notificationType) {
@@ -311,7 +312,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notificationType(@Nullable String notificationType) {
-            this.notificationType = Output.ofNullable(notificationType);
+            this.notificationType = Codegen.ofNullable(notificationType);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -319,7 +320,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder subscribers(@Nullable Output<List<BudgetActionSubscriberGetArgs>> subscribers) {
@@ -327,7 +328,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subscribers(@Nullable List<BudgetActionSubscriberGetArgs> subscribers) {
-            this.subscribers = Output.ofNullable(subscribers);
+            this.subscribers = Codegen.ofNullable(subscribers);
             return this;
         }
         public Builder subscribers(BudgetActionSubscriberGetArgs... subscribers) {

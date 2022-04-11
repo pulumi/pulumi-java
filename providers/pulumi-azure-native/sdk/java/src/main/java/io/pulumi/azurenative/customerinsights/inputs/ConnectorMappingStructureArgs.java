@@ -5,6 +5,7 @@ package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class ConnectorMappingStructureArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> customFormatSpecifier;
 
     public Output<String> getCustomFormatSpecifier() {
-        return this.customFormatSpecifier == null ? Output.empty() : this.customFormatSpecifier;
+        return this.customFormatSpecifier == null ? Codegen.empty() : this.customFormatSpecifier;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ConnectorMappingStructureArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Boolean> isEncrypted;
 
     public Output<Boolean> getIsEncrypted() {
-        return this.isEncrypted == null ? Output.empty() : this.isEncrypted;
+        return this.isEncrypted == null ? Codegen.empty() : this.isEncrypted;
     }
 
     /**
@@ -75,10 +76,10 @@ public final class ConnectorMappingStructureArgs extends io.pulumi.resources.Res
     }
 
     private ConnectorMappingStructureArgs() {
-        this.columnName = Output.empty();
-        this.customFormatSpecifier = Output.empty();
-        this.isEncrypted = Output.empty();
-        this.propertyName = Output.empty();
+        this.columnName = Codegen.empty();
+        this.customFormatSpecifier = Codegen.empty();
+        this.isEncrypted = Codegen.empty();
+        this.propertyName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class ConnectorMappingStructureArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder customFormatSpecifier(@Nullable String customFormatSpecifier) {
-            this.customFormatSpecifier = Output.ofNullable(customFormatSpecifier);
+            this.customFormatSpecifier = Codegen.ofNullable(customFormatSpecifier);
             return this;
         }
         public Builder isEncrypted(@Nullable Output<Boolean> isEncrypted) {
@@ -128,7 +129,7 @@ public final class ConnectorMappingStructureArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder isEncrypted(@Nullable Boolean isEncrypted) {
-            this.isEncrypted = Output.ofNullable(isEncrypted);
+            this.isEncrypted = Codegen.ofNullable(isEncrypted);
             return this;
         }
         public Builder propertyName(Output<String> propertyName) {

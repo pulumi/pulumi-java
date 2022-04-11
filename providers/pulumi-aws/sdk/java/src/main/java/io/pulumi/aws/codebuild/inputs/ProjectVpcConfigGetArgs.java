@@ -5,6 +5,7 @@ package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -57,9 +58,9 @@ public final class ProjectVpcConfigGetArgs extends io.pulumi.resources.ResourceA
     }
 
     private ProjectVpcConfigGetArgs() {
-        this.securityGroupIds = Output.empty();
-        this.subnets = Output.empty();
-        this.vpcId = Output.empty();
+        this.securityGroupIds = Codegen.empty();
+        this.subnets = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {

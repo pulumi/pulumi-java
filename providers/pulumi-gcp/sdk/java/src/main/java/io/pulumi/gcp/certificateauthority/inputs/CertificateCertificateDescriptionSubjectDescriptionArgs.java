@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionSubjectDescriptionSubjectArgs;
 import java.lang.String;
@@ -21,7 +22,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionArgs exten
       private final @Nullable Output<String> hexSerialNumber;
 
     public Output<String> getHexSerialNumber() {
-        return this.hexSerialNumber == null ? Output.empty() : this.hexSerialNumber;
+        return this.hexSerialNumber == null ? Codegen.empty() : this.hexSerialNumber;
     }
 
     /**
@@ -34,21 +35,21 @@ public final class CertificateCertificateDescriptionSubjectDescriptionArgs exten
       private final @Nullable Output<String> lifetime;
 
     public Output<String> getLifetime() {
-        return this.lifetime == null ? Output.empty() : this.lifetime;
+        return this.lifetime == null ? Codegen.empty() : this.lifetime;
     }
 
     @Import(name="notAfterTime")
       private final @Nullable Output<String> notAfterTime;
 
     public Output<String> getNotAfterTime() {
-        return this.notAfterTime == null ? Output.empty() : this.notAfterTime;
+        return this.notAfterTime == null ? Codegen.empty() : this.notAfterTime;
     }
 
     @Import(name="notBeforeTime")
       private final @Nullable Output<String> notBeforeTime;
 
     public Output<String> getNotBeforeTime() {
-        return this.notBeforeTime == null ? Output.empty() : this.notBeforeTime;
+        return this.notBeforeTime == null ? Codegen.empty() : this.notBeforeTime;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionArgs exten
       private final @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs>> subjectAltNames;
 
     public Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs>> getSubjectAltNames() {
-        return this.subjectAltNames == null ? Output.empty() : this.subjectAltNames;
+        return this.subjectAltNames == null ? Codegen.empty() : this.subjectAltNames;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionArgs exten
       private final @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectArgs>> subjects;
 
     public Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectArgs>> getSubjects() {
-        return this.subjects == null ? Output.empty() : this.subjects;
+        return this.subjects == null ? Codegen.empty() : this.subjects;
     }
 
     public CertificateCertificateDescriptionSubjectDescriptionArgs(
@@ -91,12 +92,12 @@ public final class CertificateCertificateDescriptionSubjectDescriptionArgs exten
     }
 
     private CertificateCertificateDescriptionSubjectDescriptionArgs() {
-        this.hexSerialNumber = Output.empty();
-        this.lifetime = Output.empty();
-        this.notAfterTime = Output.empty();
-        this.notBeforeTime = Output.empty();
-        this.subjectAltNames = Output.empty();
-        this.subjects = Output.empty();
+        this.hexSerialNumber = Codegen.empty();
+        this.lifetime = Codegen.empty();
+        this.notAfterTime = Codegen.empty();
+        this.notBeforeTime = Codegen.empty();
+        this.subjectAltNames = Codegen.empty();
+        this.subjects = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -134,7 +135,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionArgs exten
             return this;
         }
         public Builder hexSerialNumber(@Nullable String hexSerialNumber) {
-            this.hexSerialNumber = Output.ofNullable(hexSerialNumber);
+            this.hexSerialNumber = Codegen.ofNullable(hexSerialNumber);
             return this;
         }
         public Builder lifetime(@Nullable Output<String> lifetime) {
@@ -142,7 +143,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionArgs exten
             return this;
         }
         public Builder lifetime(@Nullable String lifetime) {
-            this.lifetime = Output.ofNullable(lifetime);
+            this.lifetime = Codegen.ofNullable(lifetime);
             return this;
         }
         public Builder notAfterTime(@Nullable Output<String> notAfterTime) {
@@ -150,7 +151,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionArgs exten
             return this;
         }
         public Builder notAfterTime(@Nullable String notAfterTime) {
-            this.notAfterTime = Output.ofNullable(notAfterTime);
+            this.notAfterTime = Codegen.ofNullable(notAfterTime);
             return this;
         }
         public Builder notBeforeTime(@Nullable Output<String> notBeforeTime) {
@@ -158,7 +159,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionArgs exten
             return this;
         }
         public Builder notBeforeTime(@Nullable String notBeforeTime) {
-            this.notBeforeTime = Output.ofNullable(notBeforeTime);
+            this.notBeforeTime = Codegen.ofNullable(notBeforeTime);
             return this;
         }
         public Builder subjectAltNames(@Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs>> subjectAltNames) {
@@ -166,7 +167,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionArgs exten
             return this;
         }
         public Builder subjectAltNames(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs> subjectAltNames) {
-            this.subjectAltNames = Output.ofNullable(subjectAltNames);
+            this.subjectAltNames = Codegen.ofNullable(subjectAltNames);
             return this;
         }
         public Builder subjectAltNames(CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs... subjectAltNames) {
@@ -177,7 +178,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionArgs exten
             return this;
         }
         public Builder subjects(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectArgs> subjects) {
-            this.subjects = Output.ofNullable(subjects);
+            this.subjects = Codegen.ofNullable(subjects);
             return this;
         }
         public Builder subjects(CertificateCertificateDescriptionSubjectDescriptionSubjectArgs... subjects) {

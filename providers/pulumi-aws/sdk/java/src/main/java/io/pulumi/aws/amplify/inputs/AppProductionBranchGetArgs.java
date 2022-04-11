@@ -5,6 +5,7 @@ package io.pulumi.aws.amplify.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class AppProductionBranchGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> branchName;
 
     public Output<String> getBranchName() {
-        return this.branchName == null ? Output.empty() : this.branchName;
+        return this.branchName == null ? Codegen.empty() : this.branchName;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class AppProductionBranchGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> lastDeployTime;
 
     public Output<String> getLastDeployTime() {
-        return this.lastDeployTime == null ? Output.empty() : this.lastDeployTime;
+        return this.lastDeployTime == null ? Codegen.empty() : this.lastDeployTime;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class AppProductionBranchGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class AppProductionBranchGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> thumbnailUrl;
 
     public Output<String> getThumbnailUrl() {
-        return this.thumbnailUrl == null ? Output.empty() : this.thumbnailUrl;
+        return this.thumbnailUrl == null ? Codegen.empty() : this.thumbnailUrl;
     }
 
     public AppProductionBranchGetArgs(
@@ -70,10 +71,10 @@ public final class AppProductionBranchGetArgs extends io.pulumi.resources.Resour
     }
 
     private AppProductionBranchGetArgs() {
-        this.branchName = Output.empty();
-        this.lastDeployTime = Output.empty();
-        this.status = Output.empty();
-        this.thumbnailUrl = Output.empty();
+        this.branchName = Codegen.empty();
+        this.lastDeployTime = Codegen.empty();
+        this.status = Codegen.empty();
+        this.thumbnailUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class AppProductionBranchGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder branchName(@Nullable String branchName) {
-            this.branchName = Output.ofNullable(branchName);
+            this.branchName = Codegen.ofNullable(branchName);
             return this;
         }
         public Builder lastDeployTime(@Nullable Output<String> lastDeployTime) {
@@ -115,7 +116,7 @@ public final class AppProductionBranchGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder lastDeployTime(@Nullable String lastDeployTime) {
-            this.lastDeployTime = Output.ofNullable(lastDeployTime);
+            this.lastDeployTime = Codegen.ofNullable(lastDeployTime);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -123,7 +124,7 @@ public final class AppProductionBranchGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder thumbnailUrl(@Nullable Output<String> thumbnailUrl) {
@@ -131,7 +132,7 @@ public final class AppProductionBranchGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder thumbnailUrl(@Nullable String thumbnailUrl) {
-            this.thumbnailUrl = Output.ofNullable(thumbnailUrl);
+            this.thumbnailUrl = Codegen.ofNullable(thumbnailUrl);
             return this;
         }        public AppProductionBranchGetArgs build() {
             return new AppProductionBranchGetArgs(branchName, lastDeployTime, status, thumbnailUrl);

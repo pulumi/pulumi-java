@@ -6,6 +6,7 @@ package io.pulumi.aws.route53recoveryreadiness;
 import io.pulumi.aws.route53recoveryreadiness.inputs.ResourceSetResourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -58,7 +59,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ResourceSetArgs(
@@ -73,10 +74,10 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourceSetArgs() {
-        this.resourceSetName = Output.empty();
-        this.resourceSetType = Output.empty();
-        this.resources = Output.empty();
-        this.tags = Output.empty();
+        this.resourceSetName = Codegen.empty();
+        this.resourceSetType = Codegen.empty();
+        this.resources = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -137,7 +138,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ResourceSetArgs build() {
             return new ResourceSetArgs(resourceSetName, resourceSetType, resources, tags);

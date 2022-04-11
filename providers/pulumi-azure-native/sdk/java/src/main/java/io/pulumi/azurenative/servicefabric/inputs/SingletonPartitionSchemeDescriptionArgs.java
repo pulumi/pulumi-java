@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -34,7 +35,7 @@ public final class SingletonPartitionSchemeDescriptionArgs extends io.pulumi.res
     }
 
     private SingletonPartitionSchemeDescriptionArgs() {
-        this.partitionScheme = Output.empty();
+        this.partitionScheme = Codegen.empty();
     }
 
     public static Builder builder() {

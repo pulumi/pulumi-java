@@ -9,6 +9,7 @@ import io.pulumi.aws.iot.inputs.ThingGroupMembershipState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -94,7 +95,7 @@ public class ThingGroupMembership extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ThingGroupMembership(String name, ThingGroupMembershipArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:iot/thingGroupMembership:ThingGroupMembership", name, args == null ? ThingGroupMembershipArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:iot/thingGroupMembership:ThingGroupMembership", name, args == null ? ThingGroupMembershipArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ThingGroupMembership(String name, Output<String> id, @Nullable ThingGroupMembershipState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

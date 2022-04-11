@@ -5,6 +5,7 @@ package io.pulumi.gcp.dns.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dns.inputs.ManagedZoneServiceDirectoryConfigNamespaceGetArgs;
 import java.util.Objects;
 
@@ -30,7 +31,7 @@ public final class ManagedZoneServiceDirectoryConfigGetArgs extends io.pulumi.re
     }
 
     private ManagedZoneServiceDirectoryConfigGetArgs() {
-        this.namespace = Output.empty();
+        this.namespace = Codegen.empty();
     }
 
     public static Builder builder() {

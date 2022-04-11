@@ -5,6 +5,7 @@ package io.pulumi.gcp.firebase.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> projectNumber;
 
     public Output<String> getProjectNumber() {
-        return this.projectNumber == null ? Output.empty() : this.projectNumber;
+        return this.projectNumber == null ? Codegen.empty() : this.projectNumber;
     }
 
     public ProjectState(
@@ -58,9 +59,9 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProjectState() {
-        this.displayName = Output.empty();
-        this.project = Output.empty();
-        this.projectNumber = Output.empty();
+        this.displayName = Codegen.empty();
+        this.project = Codegen.empty();
+        this.projectNumber = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -100,7 +101,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder projectNumber(@Nullable Output<String> projectNumber) {
@@ -108,7 +109,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder projectNumber(@Nullable String projectNumber) {
-            this.projectNumber = Output.ofNullable(projectNumber);
+            this.projectNumber = Codegen.ofNullable(projectNumber);
             return this;
         }        public ProjectState build() {
             return new ProjectState(displayName, project, projectNumber);

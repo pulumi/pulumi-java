@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.storage.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.PersistentVolumeSpecArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class VolumeAttachmentSourceArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<PersistentVolumeSpecArgs> inlineVolumeSpec;
 
     public Output<PersistentVolumeSpecArgs> getInlineVolumeSpec() {
-        return this.inlineVolumeSpec == null ? Output.empty() : this.inlineVolumeSpec;
+        return this.inlineVolumeSpec == null ? Codegen.empty() : this.inlineVolumeSpec;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class VolumeAttachmentSourceArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> persistentVolumeName;
 
     public Output<String> getPersistentVolumeName() {
-        return this.persistentVolumeName == null ? Output.empty() : this.persistentVolumeName;
+        return this.persistentVolumeName == null ? Codegen.empty() : this.persistentVolumeName;
     }
 
     public VolumeAttachmentSourceArgs(
@@ -49,8 +50,8 @@ public final class VolumeAttachmentSourceArgs extends io.pulumi.resources.Resour
     }
 
     private VolumeAttachmentSourceArgs() {
-        this.inlineVolumeSpec = Output.empty();
-        this.persistentVolumeName = Output.empty();
+        this.inlineVolumeSpec = Codegen.empty();
+        this.persistentVolumeName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class VolumeAttachmentSourceArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder inlineVolumeSpec(@Nullable PersistentVolumeSpecArgs inlineVolumeSpec) {
-            this.inlineVolumeSpec = Output.ofNullable(inlineVolumeSpec);
+            this.inlineVolumeSpec = Codegen.ofNullable(inlineVolumeSpec);
             return this;
         }
         public Builder persistentVolumeName(@Nullable Output<String> persistentVolumeName) {
@@ -88,7 +89,7 @@ public final class VolumeAttachmentSourceArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder persistentVolumeName(@Nullable String persistentVolumeName) {
-            this.persistentVolumeName = Output.ofNullable(persistentVolumeName);
+            this.persistentVolumeName = Codegen.ofNullable(persistentVolumeName);
             return this;
         }        public VolumeAttachmentSourceArgs build() {
             return new VolumeAttachmentSourceArgs(inlineVolumeSpec, persistentVolumeName);

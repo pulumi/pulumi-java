@@ -5,6 +5,7 @@ package io.pulumi.gcp.logging.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class BillingAccountSinkExclusionGetArgs extends io.pulumi.resource
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class BillingAccountSinkExclusionGetArgs extends io.pulumi.resource
       private final @Nullable Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
-        return this.disabled == null ? Output.empty() : this.disabled;
+        return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
     /**
@@ -72,10 +73,10 @@ public final class BillingAccountSinkExclusionGetArgs extends io.pulumi.resource
     }
 
     private BillingAccountSinkExclusionGetArgs() {
-        this.description = Output.empty();
-        this.disabled = Output.empty();
-        this.filter = Output.empty();
-        this.name = Output.empty();
+        this.description = Codegen.empty();
+        this.disabled = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class BillingAccountSinkExclusionGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder disabled(@Nullable Output<Boolean> disabled) {
@@ -117,7 +118,7 @@ public final class BillingAccountSinkExclusionGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Output.ofNullable(disabled);
+            this.disabled = Codegen.ofNullable(disabled);
             return this;
         }
         public Builder filter(Output<String> filter) {

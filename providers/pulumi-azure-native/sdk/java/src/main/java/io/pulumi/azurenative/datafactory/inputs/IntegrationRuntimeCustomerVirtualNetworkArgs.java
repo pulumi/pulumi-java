@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class IntegrationRuntimeCustomerVirtualNetworkArgs extends io.pulum
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
-        return this.subnetId == null ? Output.empty() : this.subnetId;
+        return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
     public IntegrationRuntimeCustomerVirtualNetworkArgs(@Nullable Output<String> subnetId) {
@@ -34,7 +35,7 @@ public final class IntegrationRuntimeCustomerVirtualNetworkArgs extends io.pulum
     }
 
     private IntegrationRuntimeCustomerVirtualNetworkArgs() {
-        this.subnetId = Output.empty();
+        this.subnetId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class IntegrationRuntimeCustomerVirtualNetworkArgs extends io.pulum
             return this;
         }
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Output.ofNullable(subnetId);
+            this.subnetId = Codegen.ofNullable(subnetId);
             return this;
         }        public IntegrationRuntimeCustomerVirtualNetworkArgs build() {
             return new IntegrationRuntimeCustomerVirtualNetworkArgs(subnetId);

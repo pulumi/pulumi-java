@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
       private final @Nullable Output<String> clientId;
 
     public Output<String> getClientId() {
-        return this.clientId == null ? Output.empty() : this.clientId;
+        return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
       private final @Nullable Output<String> clientSecretCertificateIssuer;
 
     public Output<String> getClientSecretCertificateIssuer() {
-        return this.clientSecretCertificateIssuer == null ? Output.empty() : this.clientSecretCertificateIssuer;
+        return this.clientSecretCertificateIssuer == null ? Codegen.empty() : this.clientSecretCertificateIssuer;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
       private final @Nullable Output<String> clientSecretCertificateSubjectAlternativeName;
 
     public Output<String> getClientSecretCertificateSubjectAlternativeName() {
-        return this.clientSecretCertificateSubjectAlternativeName == null ? Output.empty() : this.clientSecretCertificateSubjectAlternativeName;
+        return this.clientSecretCertificateSubjectAlternativeName == null ? Codegen.empty() : this.clientSecretCertificateSubjectAlternativeName;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
       private final @Nullable Output<String> clientSecretCertificateThumbprint;
 
     public Output<String> getClientSecretCertificateThumbprint() {
-        return this.clientSecretCertificateThumbprint == null ? Output.empty() : this.clientSecretCertificateThumbprint;
+        return this.clientSecretCertificateThumbprint == null ? Codegen.empty() : this.clientSecretCertificateThumbprint;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
       private final @Nullable Output<String> clientSecretSettingName;
 
     public Output<String> getClientSecretSettingName() {
-        return this.clientSecretSettingName == null ? Output.empty() : this.clientSecretSettingName;
+        return this.clientSecretSettingName == null ? Codegen.empty() : this.clientSecretSettingName;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
       private final @Nullable Output<String> openIdIssuer;
 
     public Output<String> getOpenIdIssuer() {
-        return this.openIdIssuer == null ? Output.empty() : this.openIdIssuer;
+        return this.openIdIssuer == null ? Codegen.empty() : this.openIdIssuer;
     }
 
     public AzureActiveDirectoryRegistrationArgs(
@@ -109,12 +110,12 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
     }
 
     private AzureActiveDirectoryRegistrationArgs() {
-        this.clientId = Output.empty();
-        this.clientSecretCertificateIssuer = Output.empty();
-        this.clientSecretCertificateSubjectAlternativeName = Output.empty();
-        this.clientSecretCertificateThumbprint = Output.empty();
-        this.clientSecretSettingName = Output.empty();
-        this.openIdIssuer = Output.empty();
+        this.clientId = Codegen.empty();
+        this.clientSecretCertificateIssuer = Codegen.empty();
+        this.clientSecretCertificateSubjectAlternativeName = Codegen.empty();
+        this.clientSecretCertificateThumbprint = Codegen.empty();
+        this.clientSecretSettingName = Codegen.empty();
+        this.openIdIssuer = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -152,7 +153,7 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
             return this;
         }
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Output.ofNullable(clientId);
+            this.clientId = Codegen.ofNullable(clientId);
             return this;
         }
         public Builder clientSecretCertificateIssuer(@Nullable Output<String> clientSecretCertificateIssuer) {
@@ -160,7 +161,7 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
             return this;
         }
         public Builder clientSecretCertificateIssuer(@Nullable String clientSecretCertificateIssuer) {
-            this.clientSecretCertificateIssuer = Output.ofNullable(clientSecretCertificateIssuer);
+            this.clientSecretCertificateIssuer = Codegen.ofNullable(clientSecretCertificateIssuer);
             return this;
         }
         public Builder clientSecretCertificateSubjectAlternativeName(@Nullable Output<String> clientSecretCertificateSubjectAlternativeName) {
@@ -168,7 +169,7 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
             return this;
         }
         public Builder clientSecretCertificateSubjectAlternativeName(@Nullable String clientSecretCertificateSubjectAlternativeName) {
-            this.clientSecretCertificateSubjectAlternativeName = Output.ofNullable(clientSecretCertificateSubjectAlternativeName);
+            this.clientSecretCertificateSubjectAlternativeName = Codegen.ofNullable(clientSecretCertificateSubjectAlternativeName);
             return this;
         }
         public Builder clientSecretCertificateThumbprint(@Nullable Output<String> clientSecretCertificateThumbprint) {
@@ -176,7 +177,7 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
             return this;
         }
         public Builder clientSecretCertificateThumbprint(@Nullable String clientSecretCertificateThumbprint) {
-            this.clientSecretCertificateThumbprint = Output.ofNullable(clientSecretCertificateThumbprint);
+            this.clientSecretCertificateThumbprint = Codegen.ofNullable(clientSecretCertificateThumbprint);
             return this;
         }
         public Builder clientSecretSettingName(@Nullable Output<String> clientSecretSettingName) {
@@ -184,7 +185,7 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
             return this;
         }
         public Builder clientSecretSettingName(@Nullable String clientSecretSettingName) {
-            this.clientSecretSettingName = Output.ofNullable(clientSecretSettingName);
+            this.clientSecretSettingName = Codegen.ofNullable(clientSecretSettingName);
             return this;
         }
         public Builder openIdIssuer(@Nullable Output<String> openIdIssuer) {
@@ -192,7 +193,7 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
             return this;
         }
         public Builder openIdIssuer(@Nullable String openIdIssuer) {
-            this.openIdIssuer = Output.ofNullable(openIdIssuer);
+            this.openIdIssuer = Codegen.ofNullable(openIdIssuer);
             return this;
         }        public AzureActiveDirectoryRegistrationArgs build() {
             return new AzureActiveDirectoryRegistrationArgs(clientId, clientSecretCertificateIssuer, clientSecretCertificateSubjectAlternativeName, clientSecretCertificateThumbprint, clientSecretSettingName, openIdIssuer);

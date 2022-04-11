@@ -5,6 +5,7 @@ package io.pulumi.azurenative.cache.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> args;
 
     public Output<String> getArgs() {
-        return this.args == null ? Output.empty() : this.args;
+        return this.args == null ? Codegen.empty() : this.args;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ModuleArgs() {
-        this.args = Output.empty();
-        this.name = Output.empty();
+        this.args = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder args(@Nullable String args) {
-            this.args = Output.ofNullable(args);
+            this.args = Codegen.ofNullable(args);
             return this;
         }
         public Builder name(Output<String> name) {

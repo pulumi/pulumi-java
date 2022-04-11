@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class DelimitedTextWriteSettingsArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Object> fileNamePrefix;
 
     public Output<Object> getFileNamePrefix() {
-        return this.fileNamePrefix == null ? Output.empty() : this.fileNamePrefix;
+        return this.fileNamePrefix == null ? Codegen.empty() : this.fileNamePrefix;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class DelimitedTextWriteSettingsArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Object> maxRowsPerFile;
 
     public Output<Object> getMaxRowsPerFile() {
-        return this.maxRowsPerFile == null ? Output.empty() : this.maxRowsPerFile;
+        return this.maxRowsPerFile == null ? Codegen.empty() : this.maxRowsPerFile;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class DelimitedTextWriteSettingsArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Object> quoteAllText;
 
     public Output<Object> getQuoteAllText() {
-        return this.quoteAllText == null ? Output.empty() : this.quoteAllText;
+        return this.quoteAllText == null ? Codegen.empty() : this.quoteAllText;
     }
 
     /**
@@ -89,11 +90,11 @@ public final class DelimitedTextWriteSettingsArgs extends io.pulumi.resources.Re
     }
 
     private DelimitedTextWriteSettingsArgs() {
-        this.fileExtension = Output.empty();
-        this.fileNamePrefix = Output.empty();
-        this.maxRowsPerFile = Output.empty();
-        this.quoteAllText = Output.empty();
-        this.type = Output.empty();
+        this.fileExtension = Codegen.empty();
+        this.fileNamePrefix = Codegen.empty();
+        this.maxRowsPerFile = Codegen.empty();
+        this.quoteAllText = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -137,7 +138,7 @@ public final class DelimitedTextWriteSettingsArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder fileNamePrefix(@Nullable Object fileNamePrefix) {
-            this.fileNamePrefix = Output.ofNullable(fileNamePrefix);
+            this.fileNamePrefix = Codegen.ofNullable(fileNamePrefix);
             return this;
         }
         public Builder maxRowsPerFile(@Nullable Output<Object> maxRowsPerFile) {
@@ -145,7 +146,7 @@ public final class DelimitedTextWriteSettingsArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder maxRowsPerFile(@Nullable Object maxRowsPerFile) {
-            this.maxRowsPerFile = Output.ofNullable(maxRowsPerFile);
+            this.maxRowsPerFile = Codegen.ofNullable(maxRowsPerFile);
             return this;
         }
         public Builder quoteAllText(@Nullable Output<Object> quoteAllText) {
@@ -153,7 +154,7 @@ public final class DelimitedTextWriteSettingsArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder quoteAllText(@Nullable Object quoteAllText) {
-            this.quoteAllText = Output.ofNullable(quoteAllText);
+            this.quoteAllText = Codegen.ofNullable(quoteAllText);
             return this;
         }
         public Builder type(Output<String> type) {

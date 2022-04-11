@@ -7,6 +7,7 @@ import io.pulumi.azurenative.dataprotection.inputs.RetentionTagArgs;
 import io.pulumi.azurenative.dataprotection.inputs.ScheduleBasedBackupCriteriaArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.List;
@@ -30,7 +31,7 @@ public final class TaggingCriteriaArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<ScheduleBasedBackupCriteriaArgs>> criteria;
 
     public Output<List<ScheduleBasedBackupCriteriaArgs>> getCriteria() {
-        return this.criteria == null ? Output.empty() : this.criteria;
+        return this.criteria == null ? Codegen.empty() : this.criteria;
     }
 
     /**
@@ -78,10 +79,10 @@ public final class TaggingCriteriaArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private TaggingCriteriaArgs() {
-        this.criteria = Output.empty();
-        this.isDefault = Output.empty();
-        this.tagInfo = Output.empty();
-        this.taggingPriority = Output.empty();
+        this.criteria = Codegen.empty();
+        this.isDefault = Codegen.empty();
+        this.tagInfo = Codegen.empty();
+        this.taggingPriority = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class TaggingCriteriaArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder criteria(@Nullable List<ScheduleBasedBackupCriteriaArgs> criteria) {
-            this.criteria = Output.ofNullable(criteria);
+            this.criteria = Codegen.ofNullable(criteria);
             return this;
         }
         public Builder criteria(ScheduleBasedBackupCriteriaArgs... criteria) {

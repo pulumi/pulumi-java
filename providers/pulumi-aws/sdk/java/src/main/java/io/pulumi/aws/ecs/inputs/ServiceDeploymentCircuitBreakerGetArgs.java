@@ -5,6 +5,7 @@ package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class ServiceDeploymentCircuitBreakerGetArgs extends io.pulumi.reso
     }
 
     private ServiceDeploymentCircuitBreakerGetArgs() {
-        this.enable = Output.empty();
-        this.rollback = Output.empty();
+        this.enable = Codegen.empty();
+        this.rollback = Codegen.empty();
     }
 
     public static Builder builder() {

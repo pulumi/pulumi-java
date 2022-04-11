@@ -6,6 +6,7 @@ package io.pulumi.awsnative.forecast.inputs;
 import io.pulumi.awsnative.forecast.enums.DatasetAttributesItemPropertiesAttributeType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class AttributesItemPropertiesArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> attributeName;
 
     public Output<String> getAttributeName() {
-        return this.attributeName == null ? Output.empty() : this.attributeName;
+        return this.attributeName == null ? Codegen.empty() : this.attributeName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class AttributesItemPropertiesArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<DatasetAttributesItemPropertiesAttributeType> attributeType;
 
     public Output<DatasetAttributesItemPropertiesAttributeType> getAttributeType() {
-        return this.attributeType == null ? Output.empty() : this.attributeType;
+        return this.attributeType == null ? Codegen.empty() : this.attributeType;
     }
 
     public AttributesItemPropertiesArgs(
@@ -45,8 +46,8 @@ public final class AttributesItemPropertiesArgs extends io.pulumi.resources.Reso
     }
 
     private AttributesItemPropertiesArgs() {
-        this.attributeName = Output.empty();
-        this.attributeType = Output.empty();
+        this.attributeName = Codegen.empty();
+        this.attributeType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class AttributesItemPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder attributeName(@Nullable String attributeName) {
-            this.attributeName = Output.ofNullable(attributeName);
+            this.attributeName = Codegen.ofNullable(attributeName);
             return this;
         }
         public Builder attributeType(@Nullable Output<DatasetAttributesItemPropertiesAttributeType> attributeType) {
@@ -84,7 +85,7 @@ public final class AttributesItemPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder attributeType(@Nullable DatasetAttributesItemPropertiesAttributeType attributeType) {
-            this.attributeType = Output.ofNullable(attributeType);
+            this.attributeType = Codegen.ofNullable(attributeType);
             return this;
         }        public AttributesItemPropertiesArgs build() {
             return new AttributesItemPropertiesArgs(attributeName, attributeType);

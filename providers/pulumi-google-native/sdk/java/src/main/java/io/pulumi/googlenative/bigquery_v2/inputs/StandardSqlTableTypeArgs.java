@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.bigquery_v2.inputs.StandardSqlFieldArgs;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class StandardSqlTableTypeArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<StandardSqlFieldArgs>> columns;
 
     public Output<List<StandardSqlFieldArgs>> getColumns() {
-        return this.columns == null ? Output.empty() : this.columns;
+        return this.columns == null ? Codegen.empty() : this.columns;
     }
 
     public StandardSqlTableTypeArgs(@Nullable Output<List<StandardSqlFieldArgs>> columns) {
@@ -35,7 +36,7 @@ public final class StandardSqlTableTypeArgs extends io.pulumi.resources.Resource
     }
 
     private StandardSqlTableTypeArgs() {
-        this.columns = Output.empty();
+        this.columns = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class StandardSqlTableTypeArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder columns(@Nullable List<StandardSqlFieldArgs> columns) {
-            this.columns = Output.ofNullable(columns);
+            this.columns = Codegen.ofNullable(columns);
             return this;
         }
         public Builder columns(StandardSqlFieldArgs... columns) {

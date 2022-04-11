@@ -6,6 +6,7 @@ package io.pulumi.azurenative.keyvault.inputs;
 import io.pulumi.azurenative.keyvault.inputs.SecretAttributesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class SecretPropertiesArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<SecretAttributesArgs> attributes;
 
     public Output<SecretAttributesArgs> getAttributes() {
-        return this.attributes == null ? Output.empty() : this.attributes;
+        return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class SecretPropertiesArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
-        return this.contentType == null ? Output.empty() : this.contentType;
+        return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class SecretPropertiesArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public SecretPropertiesArgs(
@@ -62,9 +63,9 @@ public final class SecretPropertiesArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private SecretPropertiesArgs() {
-        this.attributes = Output.empty();
-        this.contentType = Output.empty();
-        this.value = Output.empty();
+        this.attributes = Codegen.empty();
+        this.contentType = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class SecretPropertiesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder attributes(@Nullable SecretAttributesArgs attributes) {
-            this.attributes = Output.ofNullable(attributes);
+            this.attributes = Codegen.ofNullable(attributes);
             return this;
         }
         public Builder contentType(@Nullable Output<String> contentType) {
@@ -104,7 +105,7 @@ public final class SecretPropertiesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Output.ofNullable(contentType);
+            this.contentType = Codegen.ofNullable(contentType);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -112,7 +113,7 @@ public final class SecretPropertiesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public SecretPropertiesArgs build() {
             return new SecretPropertiesArgs(attributes, contentType, value);

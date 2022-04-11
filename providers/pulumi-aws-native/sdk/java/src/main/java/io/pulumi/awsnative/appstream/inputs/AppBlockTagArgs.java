@@ -5,6 +5,7 @@ package io.pulumi.awsnative.appstream.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -35,8 +36,8 @@ public final class AppBlockTagArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AppBlockTagArgs() {
-        this.tagKey = Output.empty();
-        this.tagValue = Output.empty();
+        this.tagKey = Codegen.empty();
+        this.tagValue = Codegen.empty();
     }
 
     public static Builder builder() {

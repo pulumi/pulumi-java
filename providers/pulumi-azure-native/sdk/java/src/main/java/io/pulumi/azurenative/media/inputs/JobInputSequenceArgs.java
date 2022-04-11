@@ -6,6 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.inputs.JobInputClipArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class JobInputSequenceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<JobInputClipArgs>> inputs;
 
     public Output<List<JobInputClipArgs>> getInputs() {
-        return this.inputs == null ? Output.empty() : this.inputs;
+        return this.inputs == null ? Codegen.empty() : this.inputs;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class JobInputSequenceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private JobInputSequenceArgs() {
-        this.inputs = Output.empty();
-        this.odataType = Output.empty();
+        this.inputs = Codegen.empty();
+        this.odataType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class JobInputSequenceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder inputs(@Nullable List<JobInputClipArgs> inputs) {
-            this.inputs = Output.ofNullable(inputs);
+            this.inputs = Codegen.ofNullable(inputs);
             return this;
         }
         public Builder inputs(JobInputClipArgs... inputs) {

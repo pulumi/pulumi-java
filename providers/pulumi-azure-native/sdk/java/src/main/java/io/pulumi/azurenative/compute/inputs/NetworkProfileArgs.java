@@ -9,6 +9,7 @@ import io.pulumi.azurenative.compute.inputs.VirtualMachineNetworkInterfaceConfig
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -31,7 +32,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,NetworkApiVersion>> networkApiVersion;
 
     public Output<Either<String,NetworkApiVersion>> getNetworkApiVersion() {
-        return this.networkApiVersion == null ? Output.empty() : this.networkApiVersion;
+        return this.networkApiVersion == null ? Codegen.empty() : this.networkApiVersion;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<VirtualMachineNetworkInterfaceConfigurationArgs>> networkInterfaceConfigurations;
 
     public Output<List<VirtualMachineNetworkInterfaceConfigurationArgs>> getNetworkInterfaceConfigurations() {
-        return this.networkInterfaceConfigurations == null ? Output.empty() : this.networkInterfaceConfigurations;
+        return this.networkInterfaceConfigurations == null ? Codegen.empty() : this.networkInterfaceConfigurations;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<NetworkInterfaceReferenceArgs>> networkInterfaces;
 
     public Output<List<NetworkInterfaceReferenceArgs>> getNetworkInterfaces() {
-        return this.networkInterfaces == null ? Output.empty() : this.networkInterfaces;
+        return this.networkInterfaces == null ? Codegen.empty() : this.networkInterfaces;
     }
 
     public NetworkProfileArgs(
@@ -66,9 +67,9 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NetworkProfileArgs() {
-        this.networkApiVersion = Output.empty();
-        this.networkInterfaceConfigurations = Output.empty();
-        this.networkInterfaces = Output.empty();
+        this.networkApiVersion = Codegen.empty();
+        this.networkInterfaceConfigurations = Codegen.empty();
+        this.networkInterfaces = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkApiVersion(@Nullable Either<String,NetworkApiVersion> networkApiVersion) {
-            this.networkApiVersion = Output.ofNullable(networkApiVersion);
+            this.networkApiVersion = Codegen.ofNullable(networkApiVersion);
             return this;
         }
         public Builder networkInterfaceConfigurations(@Nullable Output<List<VirtualMachineNetworkInterfaceConfigurationArgs>> networkInterfaceConfigurations) {
@@ -108,7 +109,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkInterfaceConfigurations(@Nullable List<VirtualMachineNetworkInterfaceConfigurationArgs> networkInterfaceConfigurations) {
-            this.networkInterfaceConfigurations = Output.ofNullable(networkInterfaceConfigurations);
+            this.networkInterfaceConfigurations = Codegen.ofNullable(networkInterfaceConfigurations);
             return this;
         }
         public Builder networkInterfaceConfigurations(VirtualMachineNetworkInterfaceConfigurationArgs... networkInterfaceConfigurations) {
@@ -119,7 +120,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkInterfaces(@Nullable List<NetworkInterfaceReferenceArgs> networkInterfaces) {
-            this.networkInterfaces = Output.ofNullable(networkInterfaces);
+            this.networkInterfaces = Codegen.ofNullable(networkInterfaces);
             return this;
         }
         public Builder networkInterfaces(NetworkInterfaceReferenceArgs... networkInterfaces) {

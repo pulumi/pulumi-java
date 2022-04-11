@@ -5,6 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -37,7 +38,7 @@ public final class X12SecuritySettingsArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> authorizationValue;
 
     public Output<String> getAuthorizationValue() {
-        return this.authorizationValue == null ? Output.empty() : this.authorizationValue;
+        return this.authorizationValue == null ? Codegen.empty() : this.authorizationValue;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class X12SecuritySettingsArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> passwordValue;
 
     public Output<String> getPasswordValue() {
-        return this.passwordValue == null ? Output.empty() : this.passwordValue;
+        return this.passwordValue == null ? Codegen.empty() : this.passwordValue;
     }
 
     /**
@@ -74,10 +75,10 @@ public final class X12SecuritySettingsArgs extends io.pulumi.resources.ResourceA
     }
 
     private X12SecuritySettingsArgs() {
-        this.authorizationQualifier = Output.empty();
-        this.authorizationValue = Output.empty();
-        this.passwordValue = Output.empty();
-        this.securityQualifier = Output.empty();
+        this.authorizationQualifier = Codegen.empty();
+        this.authorizationValue = Codegen.empty();
+        this.passwordValue = Codegen.empty();
+        this.securityQualifier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -119,7 +120,7 @@ public final class X12SecuritySettingsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder authorizationValue(@Nullable String authorizationValue) {
-            this.authorizationValue = Output.ofNullable(authorizationValue);
+            this.authorizationValue = Codegen.ofNullable(authorizationValue);
             return this;
         }
         public Builder passwordValue(@Nullable Output<String> passwordValue) {
@@ -127,7 +128,7 @@ public final class X12SecuritySettingsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder passwordValue(@Nullable String passwordValue) {
-            this.passwordValue = Output.ofNullable(passwordValue);
+            this.passwordValue = Codegen.ofNullable(passwordValue);
             return this;
         }
         public Builder securityQualifier(Output<String> securityQualifier) {

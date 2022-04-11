@@ -6,6 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.inputs.BucketObjectLockRuleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +20,14 @@ public final class BucketObjectLockConfigurationArgs extends io.pulumi.resources
       private final @Nullable Output<String> objectLockEnabled;
 
     public Output<String> getObjectLockEnabled() {
-        return this.objectLockEnabled == null ? Output.empty() : this.objectLockEnabled;
+        return this.objectLockEnabled == null ? Codegen.empty() : this.objectLockEnabled;
     }
 
     @Import(name="rule")
       private final @Nullable Output<BucketObjectLockRuleArgs> rule;
 
     public Output<BucketObjectLockRuleArgs> getRule() {
-        return this.rule == null ? Output.empty() : this.rule;
+        return this.rule == null ? Codegen.empty() : this.rule;
     }
 
     public BucketObjectLockConfigurationArgs(
@@ -37,8 +38,8 @@ public final class BucketObjectLockConfigurationArgs extends io.pulumi.resources
     }
 
     private BucketObjectLockConfigurationArgs() {
-        this.objectLockEnabled = Output.empty();
-        this.rule = Output.empty();
+        this.objectLockEnabled = Codegen.empty();
+        this.rule = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class BucketObjectLockConfigurationArgs extends io.pulumi.resources
             return this;
         }
         public Builder objectLockEnabled(@Nullable String objectLockEnabled) {
-            this.objectLockEnabled = Output.ofNullable(objectLockEnabled);
+            this.objectLockEnabled = Codegen.ofNullable(objectLockEnabled);
             return this;
         }
         public Builder rule(@Nullable Output<BucketObjectLockRuleArgs> rule) {
@@ -76,7 +77,7 @@ public final class BucketObjectLockConfigurationArgs extends io.pulumi.resources
             return this;
         }
         public Builder rule(@Nullable BucketObjectLockRuleArgs rule) {
-            this.rule = Output.ofNullable(rule);
+            this.rule = Codegen.ofNullable(rule);
             return this;
         }        public BucketObjectLockConfigurationArgs build() {
             return new BucketObjectLockConfigurationArgs(objectLockEnabled, rule);

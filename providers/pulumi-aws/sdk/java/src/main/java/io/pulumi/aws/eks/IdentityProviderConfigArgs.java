@@ -6,6 +6,7 @@ package io.pulumi.aws.eks;
 import io.pulumi.aws.eks.inputs.IdentityProviderConfigOidcArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -46,7 +47,7 @@ public final class IdentityProviderConfigArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public IdentityProviderConfigArgs(
@@ -59,9 +60,9 @@ public final class IdentityProviderConfigArgs extends io.pulumi.resources.Resour
     }
 
     private IdentityProviderConfigArgs() {
-        this.clusterName = Output.empty();
-        this.oidc = Output.empty();
-        this.tags = Output.empty();
+        this.clusterName = Codegen.empty();
+        this.oidc = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class IdentityProviderConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public IdentityProviderConfigArgs build() {
             return new IdentityProviderConfigArgs(clusterName, oidc, tags);

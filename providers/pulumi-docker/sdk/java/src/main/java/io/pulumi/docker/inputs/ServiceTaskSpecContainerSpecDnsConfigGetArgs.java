@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,14 +27,14 @@ public final class ServiceTaskSpecContainerSpecDnsConfigGetArgs extends io.pulum
       private final @Nullable Output<List<String>> options;
 
     public Output<List<String>> getOptions() {
-        return this.options == null ? Output.empty() : this.options;
+        return this.options == null ? Codegen.empty() : this.options;
     }
 
     @Import(name="searches")
       private final @Nullable Output<List<String>> searches;
 
     public Output<List<String>> getSearches() {
-        return this.searches == null ? Output.empty() : this.searches;
+        return this.searches == null ? Codegen.empty() : this.searches;
     }
 
     public ServiceTaskSpecContainerSpecDnsConfigGetArgs(
@@ -46,9 +47,9 @@ public final class ServiceTaskSpecContainerSpecDnsConfigGetArgs extends io.pulum
     }
 
     private ServiceTaskSpecContainerSpecDnsConfigGetArgs() {
-        this.nameservers = Output.empty();
-        this.options = Output.empty();
-        this.searches = Output.empty();
+        this.nameservers = Codegen.empty();
+        this.options = Codegen.empty();
+        this.searches = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class ServiceTaskSpecContainerSpecDnsConfigGetArgs extends io.pulum
             return this;
         }
         public Builder options(@Nullable List<String> options) {
-            this.options = Output.ofNullable(options);
+            this.options = Codegen.ofNullable(options);
             return this;
         }
         public Builder options(String... options) {
@@ -102,7 +103,7 @@ public final class ServiceTaskSpecContainerSpecDnsConfigGetArgs extends io.pulum
             return this;
         }
         public Builder searches(@Nullable List<String> searches) {
-            this.searches = Output.ofNullable(searches);
+            this.searches = Codegen.ofNullable(searches);
             return this;
         }
         public Builder searches(String... searches) {

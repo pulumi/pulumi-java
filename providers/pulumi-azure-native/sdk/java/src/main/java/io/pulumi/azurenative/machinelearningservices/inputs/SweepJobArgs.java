@@ -15,6 +15,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.TruncationSelectionP
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -61,7 +62,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> earlyTermination;
 
     public Output<Object> getEarlyTermination() {
-        return this.earlyTermination == null ? Output.empty() : this.earlyTermination;
+        return this.earlyTermination == null ? Codegen.empty() : this.earlyTermination;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> experimentName;
 
     public Output<String> getExperimentName() {
-        return this.experimentName == null ? Output.empty() : this.experimentName;
+        return this.experimentName == null ? Codegen.empty() : this.experimentName;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<AmlTokenArgs,ManagedIdentityArgs>> identity;
 
     public Output<Either<AmlTokenArgs,ManagedIdentityArgs>> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -118,7 +119,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> maxConcurrentTrials;
 
     public Output<Integer> getMaxConcurrentTrials() {
-        return this.maxConcurrentTrials == null ? Output.empty() : this.maxConcurrentTrials;
+        return this.maxConcurrentTrials == null ? Codegen.empty() : this.maxConcurrentTrials;
     }
 
     /**
@@ -129,7 +130,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> maxTotalTrials;
 
     public Output<Integer> getMaxTotalTrials() {
-        return this.maxTotalTrials == null ? Output.empty() : this.maxTotalTrials;
+        return this.maxTotalTrials == null ? Codegen.empty() : this.maxTotalTrials;
     }
 
     /**
@@ -152,7 +153,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     /**
@@ -163,7 +164,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -185,7 +186,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -196,7 +197,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> timeout;
 
     public Output<String> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     /**
@@ -207,7 +208,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TrialComponentArgs> trial;
 
     public Output<TrialComponentArgs> getTrial() {
-        return this.trial == null ? Output.empty() : this.trial;
+        return this.trial == null ? Codegen.empty() : this.trial;
     }
 
     public SweepJobArgs(
@@ -246,22 +247,22 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SweepJobArgs() {
-        this.algorithm = Output.empty();
-        this.compute = Output.empty();
-        this.description = Output.empty();
-        this.earlyTermination = Output.empty();
-        this.experimentName = Output.empty();
-        this.identity = Output.empty();
-        this.jobType = Output.empty();
-        this.maxConcurrentTrials = Output.empty();
-        this.maxTotalTrials = Output.empty();
-        this.objective = Output.empty();
-        this.priority = Output.empty();
-        this.properties = Output.empty();
-        this.searchSpace = Output.empty();
-        this.tags = Output.empty();
-        this.timeout = Output.empty();
-        this.trial = Output.empty();
+        this.algorithm = Codegen.empty();
+        this.compute = Codegen.empty();
+        this.description = Codegen.empty();
+        this.earlyTermination = Codegen.empty();
+        this.experimentName = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.jobType = Codegen.empty();
+        this.maxConcurrentTrials = Codegen.empty();
+        this.maxTotalTrials = Codegen.empty();
+        this.objective = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.searchSpace = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.timeout = Codegen.empty();
+        this.trial = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -335,7 +336,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder earlyTermination(@Nullable Output<Object> earlyTermination) {
@@ -343,7 +344,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder earlyTermination(@Nullable Object earlyTermination) {
-            this.earlyTermination = Output.ofNullable(earlyTermination);
+            this.earlyTermination = Codegen.ofNullable(earlyTermination);
             return this;
         }
         public Builder experimentName(@Nullable Output<String> experimentName) {
@@ -351,7 +352,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder experimentName(@Nullable String experimentName) {
-            this.experimentName = Output.ofNullable(experimentName);
+            this.experimentName = Codegen.ofNullable(experimentName);
             return this;
         }
         public Builder identity(@Nullable Output<Either<AmlTokenArgs,ManagedIdentityArgs>> identity) {
@@ -359,7 +360,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable Either<AmlTokenArgs,ManagedIdentityArgs> identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder jobType(Output<String> jobType) {
@@ -375,7 +376,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxConcurrentTrials(@Nullable Integer maxConcurrentTrials) {
-            this.maxConcurrentTrials = Output.ofNullable(maxConcurrentTrials);
+            this.maxConcurrentTrials = Codegen.ofNullable(maxConcurrentTrials);
             return this;
         }
         public Builder maxTotalTrials(@Nullable Output<Integer> maxTotalTrials) {
@@ -383,7 +384,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxTotalTrials(@Nullable Integer maxTotalTrials) {
-            this.maxTotalTrials = Output.ofNullable(maxTotalTrials);
+            this.maxTotalTrials = Codegen.ofNullable(maxTotalTrials);
             return this;
         }
         public Builder objective(Output<ObjectiveArgs> objective) {
@@ -399,7 +400,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
@@ -407,7 +408,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder searchSpace(Output<Map<String,Object>> searchSpace) {
@@ -423,7 +424,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder timeout(@Nullable Output<String> timeout) {
@@ -431,7 +432,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }
         public Builder trial(@Nullable Output<TrialComponentArgs> trial) {
@@ -439,7 +440,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder trial(@Nullable TrialComponentArgs trial) {
-            this.trial = Output.ofNullable(trial);
+            this.trial = Codegen.ofNullable(trial);
             return this;
         }        public SweepJobArgs build() {
             return new SweepJobArgs(algorithm, compute, description, earlyTermination, experimentName, identity, jobType, maxConcurrentTrials, maxTotalTrials, objective, priority, properties, searchSpace, tags, timeout, trial);

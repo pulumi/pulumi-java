@@ -8,6 +8,7 @@ import io.pulumi.azurenative.datamigration.inputs.MigrationValidationOptionsArgs
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -62,7 +63,7 @@ public final class MigrateSqlServerSqlDbSyncTaskInputArgs extends io.pulumi.reso
       private final @Nullable Output<MigrationValidationOptionsArgs> validationOptions;
 
     public Output<MigrationValidationOptionsArgs> getValidationOptions() {
-        return this.validationOptions == null ? Output.empty() : this.validationOptions;
+        return this.validationOptions == null ? Codegen.empty() : this.validationOptions;
     }
 
     public MigrateSqlServerSqlDbSyncTaskInputArgs(
@@ -77,10 +78,10 @@ public final class MigrateSqlServerSqlDbSyncTaskInputArgs extends io.pulumi.reso
     }
 
     private MigrateSqlServerSqlDbSyncTaskInputArgs() {
-        this.selectedDatabases = Output.empty();
-        this.sourceConnectionInfo = Output.empty();
-        this.targetConnectionInfo = Output.empty();
-        this.validationOptions = Output.empty();
+        this.selectedDatabases = Codegen.empty();
+        this.sourceConnectionInfo = Codegen.empty();
+        this.targetConnectionInfo = Codegen.empty();
+        this.validationOptions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class MigrateSqlServerSqlDbSyncTaskInputArgs extends io.pulumi.reso
             return this;
         }
         public Builder validationOptions(@Nullable MigrationValidationOptionsArgs validationOptions) {
-            this.validationOptions = Output.ofNullable(validationOptions);
+            this.validationOptions = Codegen.ofNullable(validationOptions);
             return this;
         }        public MigrateSqlServerSqlDbSyncTaskInputArgs build() {
             return new MigrateSqlServerSqlDbSyncTaskInputArgs(selectedDatabases, sourceConnectionInfo, targetConnectionInfo, validationOptions);

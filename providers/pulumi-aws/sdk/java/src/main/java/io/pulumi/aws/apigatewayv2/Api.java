@@ -10,6 +10,7 @@ import io.pulumi.aws.apigatewayv2.outputs.ApiCorsConfiguration;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -326,7 +327,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Api(String name, ApiArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:apigatewayv2/api:Api", name, args == null ? ApiArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:apigatewayv2/api:Api", name, args == null ? ApiArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Api(String name, Output<String> id, @Nullable ApiState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

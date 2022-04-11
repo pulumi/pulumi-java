@@ -6,6 +6,7 @@ package io.pulumi.azurenative.batch.inputs;
 import io.pulumi.azurenative.batch.enums.DiskEncryptionTarget;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class DiskEncryptionConfigurationArgs extends io.pulumi.resources.R
       private final @Nullable Output<List<DiskEncryptionTarget>> targets;
 
     public Output<List<DiskEncryptionTarget>> getTargets() {
-        return this.targets == null ? Output.empty() : this.targets;
+        return this.targets == null ? Codegen.empty() : this.targets;
     }
 
     public DiskEncryptionConfigurationArgs(@Nullable Output<List<DiskEncryptionTarget>> targets) {
@@ -35,7 +36,7 @@ public final class DiskEncryptionConfigurationArgs extends io.pulumi.resources.R
     }
 
     private DiskEncryptionConfigurationArgs() {
-        this.targets = Output.empty();
+        this.targets = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class DiskEncryptionConfigurationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder targets(@Nullable List<DiskEncryptionTarget> targets) {
-            this.targets = Output.ofNullable(targets);
+            this.targets = Codegen.ofNullable(targets);
             return this;
         }
         public Builder targets(DiskEncryptionTarget... targets) {

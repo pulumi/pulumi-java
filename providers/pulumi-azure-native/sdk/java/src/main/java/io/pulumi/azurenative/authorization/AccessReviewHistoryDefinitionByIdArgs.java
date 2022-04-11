@@ -10,6 +10,7 @@ import io.pulumi.azurenative.authorization.inputs.AccessReviewScopeArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +30,7 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
       private final @Nullable Output<List<Either<String,AccessReviewResult>>> decisions;
 
     public Output<List<Either<String,AccessReviewResult>>> getDecisions() {
-        return this.decisions == null ? Output.empty() : this.decisions;
+        return this.decisions == null ? Codegen.empty() : this.decisions;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
       private final @Nullable Output<String> endDate;
 
     public Output<String> getEndDate() {
-        return this.endDate == null ? Output.empty() : this.endDate;
+        return this.endDate == null ? Codegen.empty() : this.endDate;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
       private final @Nullable Output<String> historyDefinitionId;
 
     public Output<String> getHistoryDefinitionId() {
-        return this.historyDefinitionId == null ? Output.empty() : this.historyDefinitionId;
+        return this.historyDefinitionId == null ? Codegen.empty() : this.historyDefinitionId;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
       private final @Nullable Output<List<AccessReviewHistoryInstanceArgs>> instances;
 
     public Output<List<AccessReviewHistoryInstanceArgs>> getInstances() {
-        return this.instances == null ? Output.empty() : this.instances;
+        return this.instances == null ? Codegen.empty() : this.instances;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
       private final @Nullable Output<Integer> interval;
 
     public Output<Integer> getInterval() {
-        return this.interval == null ? Output.empty() : this.interval;
+        return this.interval == null ? Codegen.empty() : this.interval;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
       private final @Nullable Output<Integer> numberOfOccurrences;
 
     public Output<Integer> getNumberOfOccurrences() {
-        return this.numberOfOccurrences == null ? Output.empty() : this.numberOfOccurrences;
+        return this.numberOfOccurrences == null ? Codegen.empty() : this.numberOfOccurrences;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
       private final @Nullable Output<List<AccessReviewScopeArgs>> scopes;
 
     public Output<List<AccessReviewScopeArgs>> getScopes() {
-        return this.scopes == null ? Output.empty() : this.scopes;
+        return this.scopes == null ? Codegen.empty() : this.scopes;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
       private final @Nullable Output<String> startDate;
 
     public Output<String> getStartDate() {
-        return this.startDate == null ? Output.empty() : this.startDate;
+        return this.startDate == null ? Codegen.empty() : this.startDate;
     }
 
     /**
@@ -128,7 +129,7 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
       private final @Nullable Output<Either<String,AccessReviewRecurrenceRangeType>> type;
 
     public Output<Either<String,AccessReviewRecurrenceRangeType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public AccessReviewHistoryDefinitionByIdArgs(
@@ -155,16 +156,16 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
     }
 
     private AccessReviewHistoryDefinitionByIdArgs() {
-        this.decisions = Output.empty();
-        this.displayName = Output.empty();
-        this.endDate = Output.empty();
-        this.historyDefinitionId = Output.empty();
-        this.instances = Output.empty();
-        this.interval = Output.empty();
-        this.numberOfOccurrences = Output.empty();
-        this.scopes = Output.empty();
-        this.startDate = Output.empty();
-        this.type = Output.empty();
+        this.decisions = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.endDate = Codegen.empty();
+        this.historyDefinitionId = Codegen.empty();
+        this.instances = Codegen.empty();
+        this.interval = Codegen.empty();
+        this.numberOfOccurrences = Codegen.empty();
+        this.scopes = Codegen.empty();
+        this.startDate = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -210,7 +211,7 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
             return this;
         }
         public Builder decisions(@Nullable List<Either<String,AccessReviewResult>> decisions) {
-            this.decisions = Output.ofNullable(decisions);
+            this.decisions = Codegen.ofNullable(decisions);
             return this;
         }
         public Builder decisions(Either<String,AccessReviewResult>... decisions) {
@@ -221,7 +222,7 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder endDate(@Nullable Output<String> endDate) {
@@ -229,7 +230,7 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
             return this;
         }
         public Builder endDate(@Nullable String endDate) {
-            this.endDate = Output.ofNullable(endDate);
+            this.endDate = Codegen.ofNullable(endDate);
             return this;
         }
         public Builder historyDefinitionId(@Nullable Output<String> historyDefinitionId) {
@@ -237,7 +238,7 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
             return this;
         }
         public Builder historyDefinitionId(@Nullable String historyDefinitionId) {
-            this.historyDefinitionId = Output.ofNullable(historyDefinitionId);
+            this.historyDefinitionId = Codegen.ofNullable(historyDefinitionId);
             return this;
         }
         public Builder instances(@Nullable Output<List<AccessReviewHistoryInstanceArgs>> instances) {
@@ -245,7 +246,7 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
             return this;
         }
         public Builder instances(@Nullable List<AccessReviewHistoryInstanceArgs> instances) {
-            this.instances = Output.ofNullable(instances);
+            this.instances = Codegen.ofNullable(instances);
             return this;
         }
         public Builder instances(AccessReviewHistoryInstanceArgs... instances) {
@@ -256,7 +257,7 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
             return this;
         }
         public Builder interval(@Nullable Integer interval) {
-            this.interval = Output.ofNullable(interval);
+            this.interval = Codegen.ofNullable(interval);
             return this;
         }
         public Builder numberOfOccurrences(@Nullable Output<Integer> numberOfOccurrences) {
@@ -264,7 +265,7 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
             return this;
         }
         public Builder numberOfOccurrences(@Nullable Integer numberOfOccurrences) {
-            this.numberOfOccurrences = Output.ofNullable(numberOfOccurrences);
+            this.numberOfOccurrences = Codegen.ofNullable(numberOfOccurrences);
             return this;
         }
         public Builder scopes(@Nullable Output<List<AccessReviewScopeArgs>> scopes) {
@@ -272,7 +273,7 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
             return this;
         }
         public Builder scopes(@Nullable List<AccessReviewScopeArgs> scopes) {
-            this.scopes = Output.ofNullable(scopes);
+            this.scopes = Codegen.ofNullable(scopes);
             return this;
         }
         public Builder scopes(AccessReviewScopeArgs... scopes) {
@@ -283,7 +284,7 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
             return this;
         }
         public Builder startDate(@Nullable String startDate) {
-            this.startDate = Output.ofNullable(startDate);
+            this.startDate = Codegen.ofNullable(startDate);
             return this;
         }
         public Builder type(@Nullable Output<Either<String,AccessReviewRecurrenceRangeType>> type) {
@@ -291,7 +292,7 @@ public final class AccessReviewHistoryDefinitionByIdArgs extends io.pulumi.resou
             return this;
         }
         public Builder type(@Nullable Either<String,AccessReviewRecurrenceRangeType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public AccessReviewHistoryDefinitionByIdArgs build() {
             return new AccessReviewHistoryDefinitionByIdArgs(decisions, displayName, endDate, historyDefinitionId, instances, interval, numberOfOccurrences, scopes, startDate, type);

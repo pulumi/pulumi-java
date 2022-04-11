@@ -7,6 +7,7 @@ import io.pulumi.azurenative.recoveryservices.enums.SetMultiVmSyncStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> appConsistentFrequencyInMinutes;
 
     public Output<Integer> getAppConsistentFrequencyInMinutes() {
-        return this.appConsistentFrequencyInMinutes == null ? Output.empty() : this.appConsistentFrequencyInMinutes;
+        return this.appConsistentFrequencyInMinutes == null ? Codegen.empty() : this.appConsistentFrequencyInMinutes;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
-        return this.instanceType == null ? Output.empty() : this.instanceType;
+        return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> recoveryPointHistory;
 
     public Output<Integer> getRecoveryPointHistory() {
-        return this.recoveryPointHistory == null ? Output.empty() : this.recoveryPointHistory;
+        return this.recoveryPointHistory == null ? Codegen.empty() : this.recoveryPointHistory;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> recoveryPointThresholdInMinutes;
 
     public Output<Integer> getRecoveryPointThresholdInMinutes() {
-        return this.recoveryPointThresholdInMinutes == null ? Output.empty() : this.recoveryPointThresholdInMinutes;
+        return this.recoveryPointThresholdInMinutes == null ? Codegen.empty() : this.recoveryPointThresholdInMinutes;
     }
 
     public InMagePolicyInputArgs(
@@ -91,11 +92,11 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
     }
 
     private InMagePolicyInputArgs() {
-        this.appConsistentFrequencyInMinutes = Output.empty();
-        this.instanceType = Output.empty();
-        this.multiVmSyncStatus = Output.empty();
-        this.recoveryPointHistory = Output.empty();
-        this.recoveryPointThresholdInMinutes = Output.empty();
+        this.appConsistentFrequencyInMinutes = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.multiVmSyncStatus = Codegen.empty();
+        this.recoveryPointHistory = Codegen.empty();
+        this.recoveryPointThresholdInMinutes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder appConsistentFrequencyInMinutes(@Nullable Integer appConsistentFrequencyInMinutes) {
-            this.appConsistentFrequencyInMinutes = Output.ofNullable(appConsistentFrequencyInMinutes);
+            this.appConsistentFrequencyInMinutes = Codegen.ofNullable(appConsistentFrequencyInMinutes);
             return this;
         }
         public Builder instanceType(@Nullable Output<String> instanceType) {
@@ -139,7 +140,7 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Output.ofNullable(instanceType);
+            this.instanceType = Codegen.ofNullable(instanceType);
             return this;
         }
         public Builder multiVmSyncStatus(Output<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus) {
@@ -155,7 +156,7 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder recoveryPointHistory(@Nullable Integer recoveryPointHistory) {
-            this.recoveryPointHistory = Output.ofNullable(recoveryPointHistory);
+            this.recoveryPointHistory = Codegen.ofNullable(recoveryPointHistory);
             return this;
         }
         public Builder recoveryPointThresholdInMinutes(@Nullable Output<Integer> recoveryPointThresholdInMinutes) {
@@ -163,7 +164,7 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder recoveryPointThresholdInMinutes(@Nullable Integer recoveryPointThresholdInMinutes) {
-            this.recoveryPointThresholdInMinutes = Output.ofNullable(recoveryPointThresholdInMinutes);
+            this.recoveryPointThresholdInMinutes = Codegen.ofNullable(recoveryPointThresholdInMinutes);
             return this;
         }        public InMagePolicyInputArgs build() {
             return new InMagePolicyInputArgs(appConsistentFrequencyInMinutes, instanceType, multiVmSyncStatus, recoveryPointHistory, recoveryPointThresholdInMinutes);

@@ -11,6 +11,7 @@ import io.pulumi.azurenative.media.inputs.VideoOverlayArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,7 +34,7 @@ public final class FiltersArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RectangleArgs> crop;
 
     public Output<RectangleArgs> getCrop() {
-        return this.crop == null ? Output.empty() : this.crop;
+        return this.crop == null ? Codegen.empty() : this.crop;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class FiltersArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DeinterlaceArgs> deinterlace;
 
     public Output<DeinterlaceArgs> getDeinterlace() {
-        return this.deinterlace == null ? Output.empty() : this.deinterlace;
+        return this.deinterlace == null ? Codegen.empty() : this.deinterlace;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class FiltersArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<Either<AudioOverlayArgs,VideoOverlayArgs>>> overlays;
 
     public Output<List<Either<AudioOverlayArgs,VideoOverlayArgs>>> getOverlays() {
-        return this.overlays == null ? Output.empty() : this.overlays;
+        return this.overlays == null ? Codegen.empty() : this.overlays;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class FiltersArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,Rotation>> rotation;
 
     public Output<Either<String,Rotation>> getRotation() {
-        return this.rotation == null ? Output.empty() : this.rotation;
+        return this.rotation == null ? Codegen.empty() : this.rotation;
     }
 
     public FiltersArgs(
@@ -81,10 +82,10 @@ public final class FiltersArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FiltersArgs() {
-        this.crop = Output.empty();
-        this.deinterlace = Output.empty();
-        this.overlays = Output.empty();
-        this.rotation = Output.empty();
+        this.crop = Codegen.empty();
+        this.deinterlace = Codegen.empty();
+        this.overlays = Codegen.empty();
+        this.rotation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -118,7 +119,7 @@ public final class FiltersArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder crop(@Nullable RectangleArgs crop) {
-            this.crop = Output.ofNullable(crop);
+            this.crop = Codegen.ofNullable(crop);
             return this;
         }
         public Builder deinterlace(@Nullable Output<DeinterlaceArgs> deinterlace) {
@@ -126,7 +127,7 @@ public final class FiltersArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deinterlace(@Nullable DeinterlaceArgs deinterlace) {
-            this.deinterlace = Output.ofNullable(deinterlace);
+            this.deinterlace = Codegen.ofNullable(deinterlace);
             return this;
         }
         public Builder overlays(@Nullable Output<List<Either<AudioOverlayArgs,VideoOverlayArgs>>> overlays) {
@@ -134,7 +135,7 @@ public final class FiltersArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder overlays(@Nullable List<Either<AudioOverlayArgs,VideoOverlayArgs>> overlays) {
-            this.overlays = Output.ofNullable(overlays);
+            this.overlays = Codegen.ofNullable(overlays);
             return this;
         }
         public Builder overlays(Either<AudioOverlayArgs,VideoOverlayArgs>... overlays) {
@@ -145,7 +146,7 @@ public final class FiltersArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rotation(@Nullable Either<String,Rotation> rotation) {
-            this.rotation = Output.ofNullable(rotation);
+            this.rotation = Codegen.ofNullable(rotation);
             return this;
         }        public FiltersArgs build() {
             return new FiltersArgs(crop, deinterlace, overlays, rotation);

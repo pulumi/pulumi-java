@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.DisplayDataArgs;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.ExecutionStageSummaryArgs;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.TransformSummaryArgs;
@@ -29,7 +30,7 @@ public final class PipelineDescriptionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<DisplayDataArgs>> displayData;
 
     public Output<List<DisplayDataArgs>> getDisplayData() {
-        return this.displayData == null ? Output.empty() : this.displayData;
+        return this.displayData == null ? Codegen.empty() : this.displayData;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class PipelineDescriptionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<ExecutionStageSummaryArgs>> executionPipelineStage;
 
     public Output<List<ExecutionStageSummaryArgs>> getExecutionPipelineStage() {
-        return this.executionPipelineStage == null ? Output.empty() : this.executionPipelineStage;
+        return this.executionPipelineStage == null ? Codegen.empty() : this.executionPipelineStage;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class PipelineDescriptionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<TransformSummaryArgs>> originalPipelineTransform;
 
     public Output<List<TransformSummaryArgs>> getOriginalPipelineTransform() {
-        return this.originalPipelineTransform == null ? Output.empty() : this.originalPipelineTransform;
+        return this.originalPipelineTransform == null ? Codegen.empty() : this.originalPipelineTransform;
     }
 
     public PipelineDescriptionArgs(
@@ -64,9 +65,9 @@ public final class PipelineDescriptionArgs extends io.pulumi.resources.ResourceA
     }
 
     private PipelineDescriptionArgs() {
-        this.displayData = Output.empty();
-        this.executionPipelineStage = Output.empty();
-        this.originalPipelineTransform = Output.empty();
+        this.displayData = Codegen.empty();
+        this.executionPipelineStage = Codegen.empty();
+        this.originalPipelineTransform = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class PipelineDescriptionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder displayData(@Nullable List<DisplayDataArgs> displayData) {
-            this.displayData = Output.ofNullable(displayData);
+            this.displayData = Codegen.ofNullable(displayData);
             return this;
         }
         public Builder displayData(DisplayDataArgs... displayData) {
@@ -109,7 +110,7 @@ public final class PipelineDescriptionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder executionPipelineStage(@Nullable List<ExecutionStageSummaryArgs> executionPipelineStage) {
-            this.executionPipelineStage = Output.ofNullable(executionPipelineStage);
+            this.executionPipelineStage = Codegen.ofNullable(executionPipelineStage);
             return this;
         }
         public Builder executionPipelineStage(ExecutionStageSummaryArgs... executionPipelineStage) {
@@ -120,7 +121,7 @@ public final class PipelineDescriptionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder originalPipelineTransform(@Nullable List<TransformSummaryArgs> originalPipelineTransform) {
-            this.originalPipelineTransform = Output.ofNullable(originalPipelineTransform);
+            this.originalPipelineTransform = Codegen.ofNullable(originalPipelineTransform);
             return this;
         }
         public Builder originalPipelineTransform(TransformSummaryArgs... originalPipelineTransform) {

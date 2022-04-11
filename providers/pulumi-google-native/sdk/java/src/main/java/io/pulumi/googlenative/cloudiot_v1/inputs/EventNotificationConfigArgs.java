@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudiot_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class EventNotificationConfigArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> pubsubTopicName;
 
     public Output<String> getPubsubTopicName() {
-        return this.pubsubTopicName == null ? Output.empty() : this.pubsubTopicName;
+        return this.pubsubTopicName == null ? Codegen.empty() : this.pubsubTopicName;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class EventNotificationConfigArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> subfolderMatches;
 
     public Output<String> getSubfolderMatches() {
-        return this.subfolderMatches == null ? Output.empty() : this.subfolderMatches;
+        return this.subfolderMatches == null ? Codegen.empty() : this.subfolderMatches;
     }
 
     public EventNotificationConfigArgs(
@@ -48,8 +49,8 @@ public final class EventNotificationConfigArgs extends io.pulumi.resources.Resou
     }
 
     private EventNotificationConfigArgs() {
-        this.pubsubTopicName = Output.empty();
-        this.subfolderMatches = Output.empty();
+        this.pubsubTopicName = Codegen.empty();
+        this.subfolderMatches = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class EventNotificationConfigArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder pubsubTopicName(@Nullable String pubsubTopicName) {
-            this.pubsubTopicName = Output.ofNullable(pubsubTopicName);
+            this.pubsubTopicName = Codegen.ofNullable(pubsubTopicName);
             return this;
         }
         public Builder subfolderMatches(@Nullable Output<String> subfolderMatches) {
@@ -87,7 +88,7 @@ public final class EventNotificationConfigArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder subfolderMatches(@Nullable String subfolderMatches) {
-            this.subfolderMatches = Output.ofNullable(subfolderMatches);
+            this.subfolderMatches = Codegen.ofNullable(subfolderMatches);
             return this;
         }        public EventNotificationConfigArgs build() {
             return new EventNotificationConfigArgs(pubsubTopicName, subfolderMatches);

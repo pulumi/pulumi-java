@@ -6,6 +6,7 @@ package io.pulumi.googlenative.networkservices_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.networkservices_v1.EdgeCacheOriginIamPolicyArgs;
 import io.pulumi.googlenative.networkservices_v1.outputs.AuditConfigResponse;
@@ -102,7 +103,7 @@ public class EdgeCacheOriginIamPolicy extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public EdgeCacheOriginIamPolicy(String name, EdgeCacheOriginIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:networkservices/v1:EdgeCacheOriginIamPolicy", name, args == null ? EdgeCacheOriginIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:networkservices/v1:EdgeCacheOriginIamPolicy", name, args == null ? EdgeCacheOriginIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EdgeCacheOriginIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.licensemanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> licenseConfigurationArn;
 
     public Output<String> getLicenseConfigurationArn() {
-        return this.licenseConfigurationArn == null ? Output.empty() : this.licenseConfigurationArn;
+        return this.licenseConfigurationArn == null ? Codegen.empty() : this.licenseConfigurationArn;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> resourceArn;
 
     public Output<String> getResourceArn() {
-        return this.resourceArn == null ? Output.empty() : this.resourceArn;
+        return this.resourceArn == null ? Codegen.empty() : this.resourceArn;
     }
 
     public AssociationState(
@@ -44,8 +45,8 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AssociationState() {
-        this.licenseConfigurationArn = Output.empty();
-        this.resourceArn = Output.empty();
+        this.licenseConfigurationArn = Codegen.empty();
+        this.resourceArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder licenseConfigurationArn(@Nullable String licenseConfigurationArn) {
-            this.licenseConfigurationArn = Output.ofNullable(licenseConfigurationArn);
+            this.licenseConfigurationArn = Codegen.ofNullable(licenseConfigurationArn);
             return this;
         }
         public Builder resourceArn(@Nullable Output<String> resourceArn) {
@@ -83,7 +84,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceArn(@Nullable String resourceArn) {
-            this.resourceArn = Output.ofNullable(resourceArn);
+            this.resourceArn = Codegen.ofNullable(resourceArn);
             return this;
         }        public AssociationState build() {
             return new AssociationState(licenseConfigurationArn, resourceArn);

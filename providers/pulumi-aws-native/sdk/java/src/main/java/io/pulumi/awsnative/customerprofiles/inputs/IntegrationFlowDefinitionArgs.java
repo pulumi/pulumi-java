@@ -8,6 +8,7 @@ import io.pulumi.awsnative.customerprofiles.inputs.IntegrationTaskArgs;
 import io.pulumi.awsnative.customerprofiles.inputs.IntegrationTriggerConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class IntegrationFlowDefinitionArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="flowName", required=true)
@@ -76,12 +77,12 @@ public final class IntegrationFlowDefinitionArgs extends io.pulumi.resources.Res
     }
 
     private IntegrationFlowDefinitionArgs() {
-        this.description = Output.empty();
-        this.flowName = Output.empty();
-        this.kmsArn = Output.empty();
-        this.sourceFlowConfig = Output.empty();
-        this.tasks = Output.empty();
-        this.triggerConfig = Output.empty();
+        this.description = Codegen.empty();
+        this.flowName = Codegen.empty();
+        this.kmsArn = Codegen.empty();
+        this.sourceFlowConfig = Codegen.empty();
+        this.tasks = Codegen.empty();
+        this.triggerConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -119,7 +120,7 @@ public final class IntegrationFlowDefinitionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder flowName(Output<String> flowName) {

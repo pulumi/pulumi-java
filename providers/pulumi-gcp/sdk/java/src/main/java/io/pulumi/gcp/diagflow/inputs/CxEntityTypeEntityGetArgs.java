@@ -5,6 +5,7 @@ package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class CxEntityTypeEntityGetArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<String>> synonyms;
 
     public Output<List<String>> getSynonyms() {
-        return this.synonyms == null ? Output.empty() : this.synonyms;
+        return this.synonyms == null ? Codegen.empty() : this.synonyms;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class CxEntityTypeEntityGetArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public CxEntityTypeEntityGetArgs(
@@ -46,8 +47,8 @@ public final class CxEntityTypeEntityGetArgs extends io.pulumi.resources.Resourc
     }
 
     private CxEntityTypeEntityGetArgs() {
-        this.synonyms = Output.empty();
-        this.value = Output.empty();
+        this.synonyms = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class CxEntityTypeEntityGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder synonyms(@Nullable List<String> synonyms) {
-            this.synonyms = Output.ofNullable(synonyms);
+            this.synonyms = Codegen.ofNullable(synonyms);
             return this;
         }
         public Builder synonyms(String... synonyms) {
@@ -88,7 +89,7 @@ public final class CxEntityTypeEntityGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public CxEntityTypeEntityGetArgs build() {
             return new CxEntityTypeEntityGetArgs(synonyms, value);

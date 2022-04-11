@@ -6,6 +6,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 import io.pulumi.aws.networkfirewall.inputs.FirewallPolicyFirewallPolicyGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<FirewallPolicyFirewallPolicyGetArgs> firewallPolicy;
 
     public Output<FirewallPolicyFirewallPolicyGetArgs> getFirewallPolicy() {
-        return this.firewallPolicy == null ? Output.empty() : this.firewallPolicy;
+        return this.firewallPolicy == null ? Codegen.empty() : this.firewallPolicy;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> updateToken;
 
     public Output<String> getUpdateToken() {
-        return this.updateToken == null ? Output.empty() : this.updateToken;
+        return this.updateToken == null ? Codegen.empty() : this.updateToken;
     }
 
     public FirewallPolicyState(
@@ -111,13 +112,13 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
     }
 
     private FirewallPolicyState() {
-        this.arn = Output.empty();
-        this.description = Output.empty();
-        this.firewallPolicy = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.updateToken = Output.empty();
+        this.arn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.firewallPolicy = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.updateToken = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -165,7 +166,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder firewallPolicy(@Nullable Output<FirewallPolicyFirewallPolicyGetArgs> firewallPolicy) {
@@ -173,7 +174,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder firewallPolicy(@Nullable FirewallPolicyFirewallPolicyGetArgs firewallPolicy) {
-            this.firewallPolicy = Output.ofNullable(firewallPolicy);
+            this.firewallPolicy = Codegen.ofNullable(firewallPolicy);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -181,7 +182,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -189,7 +190,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -197,7 +198,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder updateToken(@Nullable Output<String> updateToken) {
@@ -205,7 +206,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder updateToken(@Nullable String updateToken) {
-            this.updateToken = Output.ofNullable(updateToken);
+            this.updateToken = Codegen.ofNullable(updateToken);
             return this;
         }        public FirewallPolicyState build() {
             return new FirewallPolicyState(arn, description, firewallPolicy, name, tags, tagsAll, updateToken);

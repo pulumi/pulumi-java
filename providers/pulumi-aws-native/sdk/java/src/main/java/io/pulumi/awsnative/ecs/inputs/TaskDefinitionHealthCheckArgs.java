@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
       private final @Nullable Output<List<String>> command;
 
     public Output<List<String>> getCommand() {
-        return this.command == null ? Output.empty() : this.command;
+        return this.command == null ? Codegen.empty() : this.command;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Integer> interval;
 
     public Output<Integer> getInterval() {
-        return this.interval == null ? Output.empty() : this.interval;
+        return this.interval == null ? Codegen.empty() : this.interval;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Integer> retries;
 
     public Output<Integer> getRetries() {
-        return this.retries == null ? Output.empty() : this.retries;
+        return this.retries == null ? Codegen.empty() : this.retries;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Integer> startPeriod;
 
     public Output<Integer> getStartPeriod() {
-        return this.startPeriod == null ? Output.empty() : this.startPeriod;
+        return this.startPeriod == null ? Codegen.empty() : this.startPeriod;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Integer> timeout;
 
     public Output<Integer> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     public TaskDefinitionHealthCheckArgs(
@@ -89,11 +90,11 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
     }
 
     private TaskDefinitionHealthCheckArgs() {
-        this.command = Output.empty();
-        this.interval = Output.empty();
-        this.retries = Output.empty();
-        this.startPeriod = Output.empty();
-        this.timeout = Output.empty();
+        this.command = Codegen.empty();
+        this.interval = Codegen.empty();
+        this.retries = Codegen.empty();
+        this.startPeriod = Codegen.empty();
+        this.timeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder command(@Nullable List<String> command) {
-            this.command = Output.ofNullable(command);
+            this.command = Codegen.ofNullable(command);
             return this;
         }
         public Builder command(String... command) {
@@ -140,7 +141,7 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder interval(@Nullable Integer interval) {
-            this.interval = Output.ofNullable(interval);
+            this.interval = Codegen.ofNullable(interval);
             return this;
         }
         public Builder retries(@Nullable Output<Integer> retries) {
@@ -148,7 +149,7 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder retries(@Nullable Integer retries) {
-            this.retries = Output.ofNullable(retries);
+            this.retries = Codegen.ofNullable(retries);
             return this;
         }
         public Builder startPeriod(@Nullable Output<Integer> startPeriod) {
@@ -156,7 +157,7 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder startPeriod(@Nullable Integer startPeriod) {
-            this.startPeriod = Output.ofNullable(startPeriod);
+            this.startPeriod = Codegen.ofNullable(startPeriod);
             return this;
         }
         public Builder timeout(@Nullable Output<Integer> timeout) {
@@ -164,7 +165,7 @@ public final class TaskDefinitionHealthCheckArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }        public TaskDefinitionHealthCheckArgs build() {
             return new TaskDefinitionHealthCheckArgs(command, interval, retries, startPeriod, timeout);

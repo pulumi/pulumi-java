@@ -7,6 +7,7 @@ import io.pulumi.azurenative.webpubsub.enums.WebPubSubRequestType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class NetworkACLArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<Either<String,WebPubSubRequestType>>> allow;
 
     public Output<List<Either<String,WebPubSubRequestType>>> getAllow() {
-        return this.allow == null ? Output.empty() : this.allow;
+        return this.allow == null ? Codegen.empty() : this.allow;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class NetworkACLArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<Either<String,WebPubSubRequestType>>> deny;
 
     public Output<List<Either<String,WebPubSubRequestType>>> getDeny() {
-        return this.deny == null ? Output.empty() : this.deny;
+        return this.deny == null ? Codegen.empty() : this.deny;
     }
 
     public NetworkACLArgs(
@@ -51,8 +52,8 @@ public final class NetworkACLArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NetworkACLArgs() {
-        this.allow = Output.empty();
-        this.deny = Output.empty();
+        this.allow = Codegen.empty();
+        this.deny = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class NetworkACLArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allow(@Nullable List<Either<String,WebPubSubRequestType>> allow) {
-            this.allow = Output.ofNullable(allow);
+            this.allow = Codegen.ofNullable(allow);
             return this;
         }
         public Builder allow(Either<String,WebPubSubRequestType>... allow) {
@@ -93,7 +94,7 @@ public final class NetworkACLArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deny(@Nullable List<Either<String,WebPubSubRequestType>> deny) {
-            this.deny = Output.ofNullable(deny);
+            this.deny = Codegen.ofNullable(deny);
             return this;
         }
         public Builder deny(Either<String,WebPubSubRequestType>... deny) {

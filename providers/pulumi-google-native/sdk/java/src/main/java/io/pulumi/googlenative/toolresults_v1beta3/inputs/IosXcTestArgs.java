@@ -5,6 +5,7 @@ package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> bundleId;
 
     public Output<String> getBundleId() {
-        return this.bundleId == null ? Output.empty() : this.bundleId;
+        return this.bundleId == null ? Codegen.empty() : this.bundleId;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> xcodeVersion;
 
     public Output<String> getXcodeVersion() {
-        return this.xcodeVersion == null ? Output.empty() : this.xcodeVersion;
+        return this.xcodeVersion == null ? Codegen.empty() : this.xcodeVersion;
     }
 
     public IosXcTestArgs(
@@ -48,8 +49,8 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IosXcTestArgs() {
-        this.bundleId = Output.empty();
-        this.xcodeVersion = Output.empty();
+        this.bundleId = Codegen.empty();
+        this.xcodeVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bundleId(@Nullable String bundleId) {
-            this.bundleId = Output.ofNullable(bundleId);
+            this.bundleId = Codegen.ofNullable(bundleId);
             return this;
         }
         public Builder xcodeVersion(@Nullable Output<String> xcodeVersion) {
@@ -87,7 +88,7 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder xcodeVersion(@Nullable String xcodeVersion) {
-            this.xcodeVersion = Output.ofNullable(xcodeVersion);
+            this.xcodeVersion = Codegen.ofNullable(xcodeVersion);
             return this;
         }        public IosXcTestArgs build() {
             return new IosXcTestArgs(bundleId, xcodeVersion);

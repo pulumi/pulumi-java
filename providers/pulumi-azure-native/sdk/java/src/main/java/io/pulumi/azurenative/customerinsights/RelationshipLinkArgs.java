@@ -7,6 +7,7 @@ import io.pulumi.azurenative.customerinsights.inputs.ParticipantProfilePropertyR
 import io.pulumi.azurenative.customerinsights.inputs.RelationshipLinkFieldMappingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +27,7 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,String>> description;
 
     public Output<Map<String,String>> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,String>> displayName;
 
     public Output<Map<String,String>> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<RelationshipLinkFieldMappingArgs>> mappings;
 
     public Output<List<RelationshipLinkFieldMappingArgs>> getMappings() {
-        return this.mappings == null ? Output.empty() : this.mappings;
+        return this.mappings == null ? Codegen.empty() : this.mappings;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> relationshipLinkName;
 
     public Output<String> getRelationshipLinkName() {
-        return this.relationshipLinkName == null ? Output.empty() : this.relationshipLinkName;
+        return this.relationshipLinkName == null ? Codegen.empty() : this.relationshipLinkName;
     }
 
     /**
@@ -152,16 +153,16 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private RelationshipLinkArgs() {
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.hubName = Output.empty();
-        this.interactionType = Output.empty();
-        this.mappings = Output.empty();
-        this.profilePropertyReferences = Output.empty();
-        this.relatedProfilePropertyReferences = Output.empty();
-        this.relationshipLinkName = Output.empty();
-        this.relationshipName = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.hubName = Codegen.empty();
+        this.interactionType = Codegen.empty();
+        this.mappings = Codegen.empty();
+        this.profilePropertyReferences = Codegen.empty();
+        this.relatedProfilePropertyReferences = Codegen.empty();
+        this.relationshipLinkName = Codegen.empty();
+        this.relationshipName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -207,7 +208,7 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder description(@Nullable Map<String,String> description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
@@ -215,7 +216,7 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder displayName(@Nullable Map<String,String> displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder hubName(Output<String> hubName) {
@@ -239,7 +240,7 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder mappings(@Nullable List<RelationshipLinkFieldMappingArgs> mappings) {
-            this.mappings = Output.ofNullable(mappings);
+            this.mappings = Codegen.ofNullable(mappings);
             return this;
         }
         public Builder mappings(RelationshipLinkFieldMappingArgs... mappings) {
@@ -272,7 +273,7 @@ public final class RelationshipLinkArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder relationshipLinkName(@Nullable String relationshipLinkName) {
-            this.relationshipLinkName = Output.ofNullable(relationshipLinkName);
+            this.relationshipLinkName = Codegen.ofNullable(relationshipLinkName);
             return this;
         }
         public Builder relationshipName(Output<String> relationshipName) {

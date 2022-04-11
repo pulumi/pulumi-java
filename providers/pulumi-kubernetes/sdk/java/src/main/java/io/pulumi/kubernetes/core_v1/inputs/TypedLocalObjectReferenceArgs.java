@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class TypedLocalObjectReferenceArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> apiGroup;
 
     public Output<String> getApiGroup() {
-        return this.apiGroup == null ? Output.empty() : this.apiGroup;
+        return this.apiGroup == null ? Codegen.empty() : this.apiGroup;
     }
 
     /**
@@ -61,9 +62,9 @@ public final class TypedLocalObjectReferenceArgs extends io.pulumi.resources.Res
     }
 
     private TypedLocalObjectReferenceArgs() {
-        this.apiGroup = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
+        this.apiGroup = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class TypedLocalObjectReferenceArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder apiGroup(@Nullable String apiGroup) {
-            this.apiGroup = Output.ofNullable(apiGroup);
+            this.apiGroup = Codegen.ofNullable(apiGroup);
             return this;
         }
         public Builder kind(Output<String> kind) {

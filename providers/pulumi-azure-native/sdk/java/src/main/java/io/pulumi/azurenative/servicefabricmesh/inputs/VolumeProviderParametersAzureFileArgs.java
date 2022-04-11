@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class VolumeProviderParametersAzureFileArgs extends io.pulumi.resou
       private final @Nullable Output<String> accountKey;
 
     public Output<String> getAccountKey() {
-        return this.accountKey == null ? Output.empty() : this.accountKey;
+        return this.accountKey == null ? Codegen.empty() : this.accountKey;
     }
 
     /**
@@ -61,9 +62,9 @@ public final class VolumeProviderParametersAzureFileArgs extends io.pulumi.resou
     }
 
     private VolumeProviderParametersAzureFileArgs() {
-        this.accountKey = Output.empty();
-        this.accountName = Output.empty();
-        this.shareName = Output.empty();
+        this.accountKey = Codegen.empty();
+        this.accountName = Codegen.empty();
+        this.shareName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class VolumeProviderParametersAzureFileArgs extends io.pulumi.resou
             return this;
         }
         public Builder accountKey(@Nullable String accountKey) {
-            this.accountKey = Output.ofNullable(accountKey);
+            this.accountKey = Codegen.ofNullable(accountKey);
             return this;
         }
         public Builder accountName(Output<String> accountName) {

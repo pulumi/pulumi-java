@@ -5,6 +5,7 @@ package io.pulumi.aws.cfg.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class DeliveryChannelSnapshotDeliveryPropertiesGetArgs extends io.p
       private final @Nullable Output<String> deliveryFrequency;
 
     public Output<String> getDeliveryFrequency() {
-        return this.deliveryFrequency == null ? Output.empty() : this.deliveryFrequency;
+        return this.deliveryFrequency == null ? Codegen.empty() : this.deliveryFrequency;
     }
 
     public DeliveryChannelSnapshotDeliveryPropertiesGetArgs(@Nullable Output<String> deliveryFrequency) {
@@ -30,7 +31,7 @@ public final class DeliveryChannelSnapshotDeliveryPropertiesGetArgs extends io.p
     }
 
     private DeliveryChannelSnapshotDeliveryPropertiesGetArgs() {
-        this.deliveryFrequency = Output.empty();
+        this.deliveryFrequency = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class DeliveryChannelSnapshotDeliveryPropertiesGetArgs extends io.p
             return this;
         }
         public Builder deliveryFrequency(@Nullable String deliveryFrequency) {
-            this.deliveryFrequency = Output.ofNullable(deliveryFrequency);
+            this.deliveryFrequency = Codegen.ofNullable(deliveryFrequency);
             return this;
         }        public DeliveryChannelSnapshotDeliveryPropertiesGetArgs build() {
             return new DeliveryChannelSnapshotDeliveryPropertiesGetArgs(deliveryFrequency);

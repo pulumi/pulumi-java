@@ -7,6 +7,7 @@ import io.pulumi.aws.codedeploy.inputs.DeploymentConfigMinimumHealthyHostsGetArg
 import io.pulumi.aws.codedeploy.inputs.DeploymentConfigTrafficRoutingConfigGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> computePlatform;
 
     public Output<String> getComputePlatform() {
-        return this.computePlatform == null ? Output.empty() : this.computePlatform;
+        return this.computePlatform == null ? Codegen.empty() : this.computePlatform;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> deploymentConfigId;
 
     public Output<String> getDeploymentConfigId() {
-        return this.deploymentConfigId == null ? Output.empty() : this.deploymentConfigId;
+        return this.deploymentConfigId == null ? Codegen.empty() : this.deploymentConfigId;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> deploymentConfigName;
 
     public Output<String> getDeploymentConfigName() {
-        return this.deploymentConfigName == null ? Output.empty() : this.deploymentConfigName;
+        return this.deploymentConfigName == null ? Codegen.empty() : this.deploymentConfigName;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<DeploymentConfigMinimumHealthyHostsGetArgs> minimumHealthyHosts;
 
     public Output<DeploymentConfigMinimumHealthyHostsGetArgs> getMinimumHealthyHosts() {
-        return this.minimumHealthyHosts == null ? Output.empty() : this.minimumHealthyHosts;
+        return this.minimumHealthyHosts == null ? Codegen.empty() : this.minimumHealthyHosts;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<DeploymentConfigTrafficRoutingConfigGetArgs> trafficRoutingConfig;
 
     public Output<DeploymentConfigTrafficRoutingConfigGetArgs> getTrafficRoutingConfig() {
-        return this.trafficRoutingConfig == null ? Output.empty() : this.trafficRoutingConfig;
+        return this.trafficRoutingConfig == null ? Codegen.empty() : this.trafficRoutingConfig;
     }
 
     public DeploymentConfigState(
@@ -85,11 +86,11 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
     }
 
     private DeploymentConfigState() {
-        this.computePlatform = Output.empty();
-        this.deploymentConfigId = Output.empty();
-        this.deploymentConfigName = Output.empty();
-        this.minimumHealthyHosts = Output.empty();
-        this.trafficRoutingConfig = Output.empty();
+        this.computePlatform = Codegen.empty();
+        this.deploymentConfigId = Codegen.empty();
+        this.deploymentConfigName = Codegen.empty();
+        this.minimumHealthyHosts = Codegen.empty();
+        this.trafficRoutingConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder computePlatform(@Nullable String computePlatform) {
-            this.computePlatform = Output.ofNullable(computePlatform);
+            this.computePlatform = Codegen.ofNullable(computePlatform);
             return this;
         }
         public Builder deploymentConfigId(@Nullable Output<String> deploymentConfigId) {
@@ -133,7 +134,7 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder deploymentConfigId(@Nullable String deploymentConfigId) {
-            this.deploymentConfigId = Output.ofNullable(deploymentConfigId);
+            this.deploymentConfigId = Codegen.ofNullable(deploymentConfigId);
             return this;
         }
         public Builder deploymentConfigName(@Nullable Output<String> deploymentConfigName) {
@@ -141,7 +142,7 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder deploymentConfigName(@Nullable String deploymentConfigName) {
-            this.deploymentConfigName = Output.ofNullable(deploymentConfigName);
+            this.deploymentConfigName = Codegen.ofNullable(deploymentConfigName);
             return this;
         }
         public Builder minimumHealthyHosts(@Nullable Output<DeploymentConfigMinimumHealthyHostsGetArgs> minimumHealthyHosts) {
@@ -149,7 +150,7 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder minimumHealthyHosts(@Nullable DeploymentConfigMinimumHealthyHostsGetArgs minimumHealthyHosts) {
-            this.minimumHealthyHosts = Output.ofNullable(minimumHealthyHosts);
+            this.minimumHealthyHosts = Codegen.ofNullable(minimumHealthyHosts);
             return this;
         }
         public Builder trafficRoutingConfig(@Nullable Output<DeploymentConfigTrafficRoutingConfigGetArgs> trafficRoutingConfig) {
@@ -157,7 +158,7 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder trafficRoutingConfig(@Nullable DeploymentConfigTrafficRoutingConfigGetArgs trafficRoutingConfig) {
-            this.trafficRoutingConfig = Output.ofNullable(trafficRoutingConfig);
+            this.trafficRoutingConfig = Codegen.ofNullable(trafficRoutingConfig);
             return this;
         }        public DeploymentConfigState build() {
             return new DeploymentConfigState(computePlatform, deploymentConfigId, deploymentConfigName, minimumHealthyHosts, trafficRoutingConfig);

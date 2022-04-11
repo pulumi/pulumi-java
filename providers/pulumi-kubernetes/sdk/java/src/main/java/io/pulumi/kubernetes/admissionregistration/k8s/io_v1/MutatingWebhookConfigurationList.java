@@ -6,6 +6,7 @@ package io.pulumi.kubernetes.admissionregistration.k8s.io_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1.MutatingWebhookConfigurationListArgs;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1.outputs.MutatingWebhookConfiguration;
@@ -99,7 +100,7 @@ public class MutatingWebhookConfigurationList extends io.pulumi.resources.Custom
      * @param options A bag of options that control this resource's behavior.
      */
     public MutatingWebhookConfigurationList(String name, MutatingWebhookConfigurationListArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:admissionregistration.k8s.io/v1:MutatingWebhookConfigurationList", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:admissionregistration.k8s.io/v1:MutatingWebhookConfigurationList", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private MutatingWebhookConfigurationList(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

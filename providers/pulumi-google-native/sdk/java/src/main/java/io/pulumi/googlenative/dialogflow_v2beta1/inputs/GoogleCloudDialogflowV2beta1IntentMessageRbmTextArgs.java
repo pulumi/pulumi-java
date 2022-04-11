@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs extends 
       private final @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> rbmSuggestion;
 
     public Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> getRbmSuggestion() {
-        return this.rbmSuggestion == null ? Output.empty() : this.rbmSuggestion;
+        return this.rbmSuggestion == null ? Codegen.empty() : this.rbmSuggestion;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs extends 
     }
 
     private GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs() {
-        this.rbmSuggestion = Output.empty();
-        this.text = Output.empty();
+        this.rbmSuggestion = Codegen.empty();
+        this.text = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs extends 
             return this;
         }
         public Builder rbmSuggestion(@Nullable List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs> rbmSuggestion) {
-            this.rbmSuggestion = Output.ofNullable(rbmSuggestion);
+            this.rbmSuggestion = Codegen.ofNullable(rbmSuggestion);
             return this;
         }
         public Builder rbmSuggestion(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs... rbmSuggestion) {

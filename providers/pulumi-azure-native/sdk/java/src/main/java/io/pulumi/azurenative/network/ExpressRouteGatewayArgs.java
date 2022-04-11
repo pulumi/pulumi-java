@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.inputs.ExpressRouteGatewayPropertiesAutoSca
 import io.pulumi.azurenative.network.inputs.VirtualHubIdArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class ExpressRouteGatewayArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs> autoScaleConfiguration;
 
     public Output<ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs> getAutoScaleConfiguration() {
-        return this.autoScaleConfiguration == null ? Output.empty() : this.autoScaleConfiguration;
+        return this.autoScaleConfiguration == null ? Codegen.empty() : this.autoScaleConfiguration;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class ExpressRouteGatewayArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> expressRouteGatewayName;
 
     public Output<String> getExpressRouteGatewayName() {
-        return this.expressRouteGatewayName == null ? Output.empty() : this.expressRouteGatewayName;
+        return this.expressRouteGatewayName == null ? Codegen.empty() : this.expressRouteGatewayName;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class ExpressRouteGatewayArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class ExpressRouteGatewayArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class ExpressRouteGatewayArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -112,13 +113,13 @@ public final class ExpressRouteGatewayArgs extends io.pulumi.resources.ResourceA
     }
 
     private ExpressRouteGatewayArgs() {
-        this.autoScaleConfiguration = Output.empty();
-        this.expressRouteGatewayName = Output.empty();
-        this.id = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.virtualHub = Output.empty();
+        this.autoScaleConfiguration = Codegen.empty();
+        this.expressRouteGatewayName = Codegen.empty();
+        this.id = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.virtualHub = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class ExpressRouteGatewayArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder autoScaleConfiguration(@Nullable ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs autoScaleConfiguration) {
-            this.autoScaleConfiguration = Output.ofNullable(autoScaleConfiguration);
+            this.autoScaleConfiguration = Codegen.ofNullable(autoScaleConfiguration);
             return this;
         }
         public Builder expressRouteGatewayName(@Nullable Output<String> expressRouteGatewayName) {
@@ -166,7 +167,7 @@ public final class ExpressRouteGatewayArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder expressRouteGatewayName(@Nullable String expressRouteGatewayName) {
-            this.expressRouteGatewayName = Output.ofNullable(expressRouteGatewayName);
+            this.expressRouteGatewayName = Codegen.ofNullable(expressRouteGatewayName);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -174,7 +175,7 @@ public final class ExpressRouteGatewayArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -182,7 +183,7 @@ public final class ExpressRouteGatewayArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -198,7 +199,7 @@ public final class ExpressRouteGatewayArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder virtualHub(Output<VirtualHubIdArgs> virtualHub) {

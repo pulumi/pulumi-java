@@ -5,6 +5,7 @@ package io.pulumi.gcp.vertex.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class AiFeatureStoreOnlineServingConfigArgs extends io.pulumi.resou
     }
 
     private AiFeatureStoreOnlineServingConfigArgs() {
-        this.fixedNodeCount = Output.empty();
+        this.fixedNodeCount = Codegen.empty();
     }
 
     public static Builder builder() {

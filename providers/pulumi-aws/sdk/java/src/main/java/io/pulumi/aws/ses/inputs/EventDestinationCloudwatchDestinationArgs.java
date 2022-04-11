@@ -5,6 +5,7 @@ package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -56,9 +57,9 @@ public final class EventDestinationCloudwatchDestinationArgs extends io.pulumi.r
     }
 
     private EventDestinationCloudwatchDestinationArgs() {
-        this.defaultValue = Output.empty();
-        this.dimensionName = Output.empty();
-        this.valueSource = Output.empty();
+        this.defaultValue = Codegen.empty();
+        this.dimensionName = Codegen.empty();
+        this.valueSource = Codegen.empty();
     }
 
     public static Builder builder() {

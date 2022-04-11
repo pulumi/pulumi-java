@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_v1.enums.RouterBgpAdvertiseMode;
 import io.pulumi.googlenative.compute_v1.enums.RouterBgpAdvertisedGroupsItem;
 import io.pulumi.googlenative.compute_v1.inputs.RouterAdvertisedIpRangeArgs;
@@ -26,7 +27,7 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RouterBgpAdvertiseMode> advertiseMode;
 
     public Output<RouterBgpAdvertiseMode> getAdvertiseMode() {
-        return this.advertiseMode == null ? Output.empty() : this.advertiseMode;
+        return this.advertiseMode == null ? Codegen.empty() : this.advertiseMode;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<RouterBgpAdvertisedGroupsItem>> advertisedGroups;
 
     public Output<List<RouterBgpAdvertisedGroupsItem>> getAdvertisedGroups() {
-        return this.advertisedGroups == null ? Output.empty() : this.advertisedGroups;
+        return this.advertisedGroups == null ? Codegen.empty() : this.advertisedGroups;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges;
 
     public Output<List<RouterAdvertisedIpRangeArgs>> getAdvertisedIpRanges() {
-        return this.advertisedIpRanges == null ? Output.empty() : this.advertisedIpRanges;
+        return this.advertisedIpRanges == null ? Codegen.empty() : this.advertisedIpRanges;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> asn;
 
     public Output<Integer> getAsn() {
-        return this.asn == null ? Output.empty() : this.asn;
+        return this.asn == null ? Codegen.empty() : this.asn;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> keepaliveInterval;
 
     public Output<Integer> getKeepaliveInterval() {
-        return this.keepaliveInterval == null ? Output.empty() : this.keepaliveInterval;
+        return this.keepaliveInterval == null ? Codegen.empty() : this.keepaliveInterval;
     }
 
     public RouterBgpArgs(
@@ -87,11 +88,11 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouterBgpArgs() {
-        this.advertiseMode = Output.empty();
-        this.advertisedGroups = Output.empty();
-        this.advertisedIpRanges = Output.empty();
-        this.asn = Output.empty();
-        this.keepaliveInterval = Output.empty();
+        this.advertiseMode = Codegen.empty();
+        this.advertisedGroups = Codegen.empty();
+        this.advertisedIpRanges = Codegen.empty();
+        this.asn = Codegen.empty();
+        this.keepaliveInterval = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder advertiseMode(@Nullable RouterBgpAdvertiseMode advertiseMode) {
-            this.advertiseMode = Output.ofNullable(advertiseMode);
+            this.advertiseMode = Codegen.ofNullable(advertiseMode);
             return this;
         }
         public Builder advertisedGroups(@Nullable Output<List<RouterBgpAdvertisedGroupsItem>> advertisedGroups) {
@@ -135,7 +136,7 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder advertisedGroups(@Nullable List<RouterBgpAdvertisedGroupsItem> advertisedGroups) {
-            this.advertisedGroups = Output.ofNullable(advertisedGroups);
+            this.advertisedGroups = Codegen.ofNullable(advertisedGroups);
             return this;
         }
         public Builder advertisedGroups(RouterBgpAdvertisedGroupsItem... advertisedGroups) {
@@ -146,7 +147,7 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder advertisedIpRanges(@Nullable List<RouterAdvertisedIpRangeArgs> advertisedIpRanges) {
-            this.advertisedIpRanges = Output.ofNullable(advertisedIpRanges);
+            this.advertisedIpRanges = Codegen.ofNullable(advertisedIpRanges);
             return this;
         }
         public Builder advertisedIpRanges(RouterAdvertisedIpRangeArgs... advertisedIpRanges) {
@@ -157,7 +158,7 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder asn(@Nullable Integer asn) {
-            this.asn = Output.ofNullable(asn);
+            this.asn = Codegen.ofNullable(asn);
             return this;
         }
         public Builder keepaliveInterval(@Nullable Output<Integer> keepaliveInterval) {
@@ -165,7 +166,7 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keepaliveInterval(@Nullable Integer keepaliveInterval) {
-            this.keepaliveInterval = Output.ofNullable(keepaliveInterval);
+            this.keepaliveInterval = Codegen.ofNullable(keepaliveInterval);
             return this;
         }        public RouterBgpArgs build() {
             return new RouterBgpArgs(advertiseMode, advertisedGroups, advertisedIpRanges, asn, keepaliveInterval);

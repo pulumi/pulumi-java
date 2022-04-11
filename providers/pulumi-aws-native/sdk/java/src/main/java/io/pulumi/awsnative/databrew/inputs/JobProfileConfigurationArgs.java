@@ -9,6 +9,7 @@ import io.pulumi.awsnative.databrew.inputs.JobEntityDetectorConfigurationArgs;
 import io.pulumi.awsnative.databrew.inputs.JobStatisticsConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,28 +23,28 @@ public final class JobProfileConfigurationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<List<JobColumnStatisticsConfigurationArgs>> columnStatisticsConfigurations;
 
     public Output<List<JobColumnStatisticsConfigurationArgs>> getColumnStatisticsConfigurations() {
-        return this.columnStatisticsConfigurations == null ? Output.empty() : this.columnStatisticsConfigurations;
+        return this.columnStatisticsConfigurations == null ? Codegen.empty() : this.columnStatisticsConfigurations;
     }
 
     @Import(name="datasetStatisticsConfiguration")
       private final @Nullable Output<JobStatisticsConfigurationArgs> datasetStatisticsConfiguration;
 
     public Output<JobStatisticsConfigurationArgs> getDatasetStatisticsConfiguration() {
-        return this.datasetStatisticsConfiguration == null ? Output.empty() : this.datasetStatisticsConfiguration;
+        return this.datasetStatisticsConfiguration == null ? Codegen.empty() : this.datasetStatisticsConfiguration;
     }
 
     @Import(name="entityDetectorConfiguration")
       private final @Nullable Output<JobEntityDetectorConfigurationArgs> entityDetectorConfiguration;
 
     public Output<JobEntityDetectorConfigurationArgs> getEntityDetectorConfiguration() {
-        return this.entityDetectorConfiguration == null ? Output.empty() : this.entityDetectorConfiguration;
+        return this.entityDetectorConfiguration == null ? Codegen.empty() : this.entityDetectorConfiguration;
     }
 
     @Import(name="profileColumns")
       private final @Nullable Output<List<JobColumnSelectorArgs>> profileColumns;
 
     public Output<List<JobColumnSelectorArgs>> getProfileColumns() {
-        return this.profileColumns == null ? Output.empty() : this.profileColumns;
+        return this.profileColumns == null ? Codegen.empty() : this.profileColumns;
     }
 
     public JobProfileConfigurationArgs(
@@ -58,10 +59,10 @@ public final class JobProfileConfigurationArgs extends io.pulumi.resources.Resou
     }
 
     private JobProfileConfigurationArgs() {
-        this.columnStatisticsConfigurations = Output.empty();
-        this.datasetStatisticsConfiguration = Output.empty();
-        this.entityDetectorConfiguration = Output.empty();
-        this.profileColumns = Output.empty();
+        this.columnStatisticsConfigurations = Codegen.empty();
+        this.datasetStatisticsConfiguration = Codegen.empty();
+        this.entityDetectorConfiguration = Codegen.empty();
+        this.profileColumns = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class JobProfileConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder columnStatisticsConfigurations(@Nullable List<JobColumnStatisticsConfigurationArgs> columnStatisticsConfigurations) {
-            this.columnStatisticsConfigurations = Output.ofNullable(columnStatisticsConfigurations);
+            this.columnStatisticsConfigurations = Codegen.ofNullable(columnStatisticsConfigurations);
             return this;
         }
         public Builder columnStatisticsConfigurations(JobColumnStatisticsConfigurationArgs... columnStatisticsConfigurations) {
@@ -106,7 +107,7 @@ public final class JobProfileConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder datasetStatisticsConfiguration(@Nullable JobStatisticsConfigurationArgs datasetStatisticsConfiguration) {
-            this.datasetStatisticsConfiguration = Output.ofNullable(datasetStatisticsConfiguration);
+            this.datasetStatisticsConfiguration = Codegen.ofNullable(datasetStatisticsConfiguration);
             return this;
         }
         public Builder entityDetectorConfiguration(@Nullable Output<JobEntityDetectorConfigurationArgs> entityDetectorConfiguration) {
@@ -114,7 +115,7 @@ public final class JobProfileConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder entityDetectorConfiguration(@Nullable JobEntityDetectorConfigurationArgs entityDetectorConfiguration) {
-            this.entityDetectorConfiguration = Output.ofNullable(entityDetectorConfiguration);
+            this.entityDetectorConfiguration = Codegen.ofNullable(entityDetectorConfiguration);
             return this;
         }
         public Builder profileColumns(@Nullable Output<List<JobColumnSelectorArgs>> profileColumns) {
@@ -122,7 +123,7 @@ public final class JobProfileConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder profileColumns(@Nullable List<JobColumnSelectorArgs> profileColumns) {
-            this.profileColumns = Output.ofNullable(profileColumns);
+            this.profileColumns = Codegen.ofNullable(profileColumns);
             return this;
         }
         public Builder profileColumns(JobColumnSelectorArgs... profileColumns) {

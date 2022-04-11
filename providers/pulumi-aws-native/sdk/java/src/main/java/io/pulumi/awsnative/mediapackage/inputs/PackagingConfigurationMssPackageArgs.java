@@ -7,6 +7,7 @@ import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationMssEncrypti
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationMssManifestArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class PackagingConfigurationMssPackageArgs extends io.pulumi.resour
       private final @Nullable Output<PackagingConfigurationMssEncryptionArgs> encryption;
 
     public Output<PackagingConfigurationMssEncryptionArgs> getEncryption() {
-        return this.encryption == null ? Output.empty() : this.encryption;
+        return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class PackagingConfigurationMssPackageArgs extends io.pulumi.resour
       private final @Nullable Output<Integer> segmentDurationSeconds;
 
     public Output<Integer> getSegmentDurationSeconds() {
-        return this.segmentDurationSeconds == null ? Output.empty() : this.segmentDurationSeconds;
+        return this.segmentDurationSeconds == null ? Codegen.empty() : this.segmentDurationSeconds;
     }
 
     public PackagingConfigurationMssPackageArgs(
@@ -56,9 +57,9 @@ public final class PackagingConfigurationMssPackageArgs extends io.pulumi.resour
     }
 
     private PackagingConfigurationMssPackageArgs() {
-        this.encryption = Output.empty();
-        this.mssManifests = Output.empty();
-        this.segmentDurationSeconds = Output.empty();
+        this.encryption = Codegen.empty();
+        this.mssManifests = Codegen.empty();
+        this.segmentDurationSeconds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -90,7 +91,7 @@ public final class PackagingConfigurationMssPackageArgs extends io.pulumi.resour
             return this;
         }
         public Builder encryption(@Nullable PackagingConfigurationMssEncryptionArgs encryption) {
-            this.encryption = Output.ofNullable(encryption);
+            this.encryption = Codegen.ofNullable(encryption);
             return this;
         }
         public Builder mssManifests(Output<List<PackagingConfigurationMssManifestArgs>> mssManifests) {
@@ -109,7 +110,7 @@ public final class PackagingConfigurationMssPackageArgs extends io.pulumi.resour
             return this;
         }
         public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
-            this.segmentDurationSeconds = Output.ofNullable(segmentDurationSeconds);
+            this.segmentDurationSeconds = Codegen.ofNullable(segmentDurationSeconds);
             return this;
         }        public PackagingConfigurationMssPackageArgs build() {
             return new PackagingConfigurationMssPackageArgs(encryption, mssManifests, segmentDurationSeconds);

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 import io.pulumi.awsnative.sagemaker.enums.ModelQualityJobDefinitionS3OutputS3UploadMode;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -38,7 +39,7 @@ public final class ModelQualityJobDefinitionS3OutputArgs extends io.pulumi.resou
       private final @Nullable Output<ModelQualityJobDefinitionS3OutputS3UploadMode> s3UploadMode;
 
     public Output<ModelQualityJobDefinitionS3OutputS3UploadMode> getS3UploadMode() {
-        return this.s3UploadMode == null ? Output.empty() : this.s3UploadMode;
+        return this.s3UploadMode == null ? Codegen.empty() : this.s3UploadMode;
     }
 
     /**
@@ -62,9 +63,9 @@ public final class ModelQualityJobDefinitionS3OutputArgs extends io.pulumi.resou
     }
 
     private ModelQualityJobDefinitionS3OutputArgs() {
-        this.localPath = Output.empty();
-        this.s3UploadMode = Output.empty();
-        this.s3Uri = Output.empty();
+        this.localPath = Codegen.empty();
+        this.s3UploadMode = Codegen.empty();
+        this.s3Uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class ModelQualityJobDefinitionS3OutputArgs extends io.pulumi.resou
             return this;
         }
         public Builder s3UploadMode(@Nullable ModelQualityJobDefinitionS3OutputS3UploadMode s3UploadMode) {
-            this.s3UploadMode = Output.ofNullable(s3UploadMode);
+            this.s3UploadMode = Codegen.ofNullable(s3UploadMode);
             return this;
         }
         public Builder s3Uri(Output<String> s3Uri) {

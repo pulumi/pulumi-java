@@ -6,6 +6,7 @@ package io.pulumi.aws.kinesis;
 import io.pulumi.aws.kinesis.inputs.StreamStreamModeDetailsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +28,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> encryptionType;
 
     public Output<String> getEncryptionType() {
-        return this.encryptionType == null ? Output.empty() : this.encryptionType;
+        return this.encryptionType == null ? Codegen.empty() : this.encryptionType;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enforceConsumerDeletion;
 
     public Output<Boolean> getEnforceConsumerDeletion() {
-        return this.enforceConsumerDeletion == null ? Output.empty() : this.enforceConsumerDeletion;
+        return this.enforceConsumerDeletion == null ? Codegen.empty() : this.enforceConsumerDeletion;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> retentionPeriod;
 
     public Output<Integer> getRetentionPeriod() {
-        return this.retentionPeriod == null ? Output.empty() : this.retentionPeriod;
+        return this.retentionPeriod == null ? Codegen.empty() : this.retentionPeriod;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> shardCount;
 
     public Output<Integer> getShardCount() {
-        return this.shardCount == null ? Output.empty() : this.shardCount;
+        return this.shardCount == null ? Codegen.empty() : this.shardCount;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> shardLevelMetrics;
 
     public Output<List<String>> getShardLevelMetrics() {
-        return this.shardLevelMetrics == null ? Output.empty() : this.shardLevelMetrics;
+        return this.shardLevelMetrics == null ? Codegen.empty() : this.shardLevelMetrics;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<StreamStreamModeDetailsArgs> streamModeDetails;
 
     public Output<StreamStreamModeDetailsArgs> getStreamModeDetails() {
-        return this.streamModeDetails == null ? Output.empty() : this.streamModeDetails;
+        return this.streamModeDetails == null ? Codegen.empty() : this.streamModeDetails;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public StreamArgs(
@@ -154,16 +155,16 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StreamArgs() {
-        this.arn = Output.empty();
-        this.encryptionType = Output.empty();
-        this.enforceConsumerDeletion = Output.empty();
-        this.kmsKeyId = Output.empty();
-        this.name = Output.empty();
-        this.retentionPeriod = Output.empty();
-        this.shardCount = Output.empty();
-        this.shardLevelMetrics = Output.empty();
-        this.streamModeDetails = Output.empty();
-        this.tags = Output.empty();
+        this.arn = Codegen.empty();
+        this.encryptionType = Codegen.empty();
+        this.enforceConsumerDeletion = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.retentionPeriod = Codegen.empty();
+        this.shardCount = Codegen.empty();
+        this.shardLevelMetrics = Codegen.empty();
+        this.streamModeDetails = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -209,7 +210,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder encryptionType(@Nullable Output<String> encryptionType) {
@@ -217,7 +218,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptionType(@Nullable String encryptionType) {
-            this.encryptionType = Output.ofNullable(encryptionType);
+            this.encryptionType = Codegen.ofNullable(encryptionType);
             return this;
         }
         public Builder enforceConsumerDeletion(@Nullable Output<Boolean> enforceConsumerDeletion) {
@@ -225,7 +226,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enforceConsumerDeletion(@Nullable Boolean enforceConsumerDeletion) {
-            this.enforceConsumerDeletion = Output.ofNullable(enforceConsumerDeletion);
+            this.enforceConsumerDeletion = Codegen.ofNullable(enforceConsumerDeletion);
             return this;
         }
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
@@ -233,7 +234,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -241,7 +242,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder retentionPeriod(@Nullable Output<Integer> retentionPeriod) {
@@ -249,7 +250,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retentionPeriod(@Nullable Integer retentionPeriod) {
-            this.retentionPeriod = Output.ofNullable(retentionPeriod);
+            this.retentionPeriod = Codegen.ofNullable(retentionPeriod);
             return this;
         }
         public Builder shardCount(@Nullable Output<Integer> shardCount) {
@@ -257,7 +258,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shardCount(@Nullable Integer shardCount) {
-            this.shardCount = Output.ofNullable(shardCount);
+            this.shardCount = Codegen.ofNullable(shardCount);
             return this;
         }
         public Builder shardLevelMetrics(@Nullable Output<List<String>> shardLevelMetrics) {
@@ -265,7 +266,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shardLevelMetrics(@Nullable List<String> shardLevelMetrics) {
-            this.shardLevelMetrics = Output.ofNullable(shardLevelMetrics);
+            this.shardLevelMetrics = Codegen.ofNullable(shardLevelMetrics);
             return this;
         }
         public Builder shardLevelMetrics(String... shardLevelMetrics) {
@@ -276,7 +277,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder streamModeDetails(@Nullable StreamStreamModeDetailsArgs streamModeDetails) {
-            this.streamModeDetails = Output.ofNullable(streamModeDetails);
+            this.streamModeDetails = Codegen.ofNullable(streamModeDetails);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -284,7 +285,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public StreamArgs build() {
             return new StreamArgs(arn, encryptionType, enforceConsumerDeletion, kmsKeyId, name, retentionPeriod, shardCount, shardLevelMetrics, streamModeDetails, tags);

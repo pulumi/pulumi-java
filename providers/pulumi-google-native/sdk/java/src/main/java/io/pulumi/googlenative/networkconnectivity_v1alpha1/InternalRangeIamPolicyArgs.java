@@ -5,6 +5,7 @@ package io.pulumi.googlenative.networkconnectivity_v1alpha1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.networkconnectivity_v1alpha1.inputs.AuditConfigArgs;
 import io.pulumi.googlenative.networkconnectivity_v1alpha1.inputs.BindingArgs;
 import java.lang.Integer;
@@ -26,7 +27,7 @@ public final class InternalRangeIamPolicyArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<AuditConfigArgs>> auditConfigs;
 
     public Output<List<AuditConfigArgs>> getAuditConfigs() {
-        return this.auditConfigs == null ? Output.empty() : this.auditConfigs;
+        return this.auditConfigs == null ? Codegen.empty() : this.auditConfigs;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class InternalRangeIamPolicyArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<BindingArgs>> bindings;
 
     public Output<List<BindingArgs>> getBindings() {
-        return this.bindings == null ? Output.empty() : this.bindings;
+        return this.bindings == null ? Codegen.empty() : this.bindings;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class InternalRangeIamPolicyArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="internalRangeId", required=true)
@@ -62,14 +63,14 @@ public final class InternalRangeIamPolicyArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class InternalRangeIamPolicyArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> updateMask;
 
     public Output<String> getUpdateMask() {
-        return this.updateMask == null ? Output.empty() : this.updateMask;
+        return this.updateMask == null ? Codegen.empty() : this.updateMask;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class InternalRangeIamPolicyArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Integer> version;
 
     public Output<Integer> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public InternalRangeIamPolicyArgs(
@@ -114,14 +115,14 @@ public final class InternalRangeIamPolicyArgs extends io.pulumi.resources.Resour
     }
 
     private InternalRangeIamPolicyArgs() {
-        this.auditConfigs = Output.empty();
-        this.bindings = Output.empty();
-        this.etag = Output.empty();
-        this.internalRangeId = Output.empty();
-        this.location = Output.empty();
-        this.project = Output.empty();
-        this.updateMask = Output.empty();
-        this.version = Output.empty();
+        this.auditConfigs = Codegen.empty();
+        this.bindings = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.internalRangeId = Codegen.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
+        this.updateMask = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -163,7 +164,7 @@ public final class InternalRangeIamPolicyArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder auditConfigs(@Nullable List<AuditConfigArgs> auditConfigs) {
-            this.auditConfigs = Output.ofNullable(auditConfigs);
+            this.auditConfigs = Codegen.ofNullable(auditConfigs);
             return this;
         }
         public Builder auditConfigs(AuditConfigArgs... auditConfigs) {
@@ -174,7 +175,7 @@ public final class InternalRangeIamPolicyArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Output.ofNullable(bindings);
+            this.bindings = Codegen.ofNullable(bindings);
             return this;
         }
         public Builder bindings(BindingArgs... bindings) {
@@ -185,7 +186,7 @@ public final class InternalRangeIamPolicyArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder internalRangeId(Output<String> internalRangeId) {
@@ -201,7 +202,7 @@ public final class InternalRangeIamPolicyArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -209,7 +210,7 @@ public final class InternalRangeIamPolicyArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder updateMask(@Nullable Output<String> updateMask) {
@@ -217,7 +218,7 @@ public final class InternalRangeIamPolicyArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder updateMask(@Nullable String updateMask) {
-            this.updateMask = Output.ofNullable(updateMask);
+            this.updateMask = Codegen.ofNullable(updateMask);
             return this;
         }
         public Builder version(@Nullable Output<Integer> version) {
@@ -225,7 +226,7 @@ public final class InternalRangeIamPolicyArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder version(@Nullable Integer version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public InternalRangeIamPolicyArgs build() {
             return new InternalRangeIamPolicyArgs(auditConfigs, bindings, etag, internalRangeId, location, project, updateMask, version);

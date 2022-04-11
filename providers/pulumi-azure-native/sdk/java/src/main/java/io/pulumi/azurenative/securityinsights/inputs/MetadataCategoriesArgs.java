@@ -5,6 +5,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class MetadataCategoriesArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<String>> domains;
 
     public Output<List<String>> getDomains() {
-        return this.domains == null ? Output.empty() : this.domains;
+        return this.domains == null ? Codegen.empty() : this.domains;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class MetadataCategoriesArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<String>> verticals;
 
     public Output<List<String>> getVerticals() {
-        return this.verticals == null ? Output.empty() : this.verticals;
+        return this.verticals == null ? Codegen.empty() : this.verticals;
     }
 
     public MetadataCategoriesArgs(
@@ -49,8 +50,8 @@ public final class MetadataCategoriesArgs extends io.pulumi.resources.ResourceAr
     }
 
     private MetadataCategoriesArgs() {
-        this.domains = Output.empty();
-        this.verticals = Output.empty();
+        this.domains = Codegen.empty();
+        this.verticals = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class MetadataCategoriesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder domains(@Nullable List<String> domains) {
-            this.domains = Output.ofNullable(domains);
+            this.domains = Codegen.ofNullable(domains);
             return this;
         }
         public Builder domains(String... domains) {
@@ -91,7 +92,7 @@ public final class MetadataCategoriesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder verticals(@Nullable List<String> verticals) {
-            this.verticals = Output.ofNullable(verticals);
+            this.verticals = Codegen.ofNullable(verticals);
             return this;
         }
         public Builder verticals(String... verticals) {

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.media.enums.TrackPropertyType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -51,7 +52,7 @@ public final class TrackPropertyConditionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public TrackPropertyConditionArgs(
@@ -64,9 +65,9 @@ public final class TrackPropertyConditionArgs extends io.pulumi.resources.Resour
     }
 
     private TrackPropertyConditionArgs() {
-        this.operation = Output.empty();
-        this.property = Output.empty();
-        this.value = Output.empty();
+        this.operation = Codegen.empty();
+        this.property = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class TrackPropertyConditionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public TrackPropertyConditionArgs build() {
             return new TrackPropertyConditionArgs(operation, property, value);

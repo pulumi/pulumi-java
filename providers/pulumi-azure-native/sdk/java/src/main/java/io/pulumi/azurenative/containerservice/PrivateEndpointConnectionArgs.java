@@ -7,6 +7,7 @@ import io.pulumi.azurenative.containerservice.inputs.PrivateEndpointArgs;
 import io.pulumi.azurenative.containerservice.inputs.PrivateLinkServiceConnectionStateArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
       private final @Nullable Output<PrivateEndpointArgs> privateEndpoint;
 
     public Output<PrivateEndpointArgs> getPrivateEndpoint() {
-        return this.privateEndpoint == null ? Output.empty() : this.privateEndpoint;
+        return this.privateEndpoint == null ? Codegen.empty() : this.privateEndpoint;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> privateEndpointConnectionName;
 
     public Output<String> getPrivateEndpointConnectionName() {
-        return this.privateEndpointConnectionName == null ? Output.empty() : this.privateEndpointConnectionName;
+        return this.privateEndpointConnectionName == null ? Codegen.empty() : this.privateEndpointConnectionName;
     }
 
     /**
@@ -85,11 +86,11 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     }
 
     private PrivateEndpointConnectionArgs() {
-        this.privateEndpoint = Output.empty();
-        this.privateEndpointConnectionName = Output.empty();
-        this.privateLinkServiceConnectionState = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
+        this.privateEndpoint = Codegen.empty();
+        this.privateEndpointConnectionName = Codegen.empty();
+        this.privateLinkServiceConnectionState = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder privateEndpoint(@Nullable PrivateEndpointArgs privateEndpoint) {
-            this.privateEndpoint = Output.ofNullable(privateEndpoint);
+            this.privateEndpoint = Codegen.ofNullable(privateEndpoint);
             return this;
         }
         public Builder privateEndpointConnectionName(@Nullable Output<String> privateEndpointConnectionName) {
@@ -133,7 +134,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder privateEndpointConnectionName(@Nullable String privateEndpointConnectionName) {
-            this.privateEndpointConnectionName = Output.ofNullable(privateEndpointConnectionName);
+            this.privateEndpointConnectionName = Codegen.ofNullable(privateEndpointConnectionName);
             return this;
         }
         public Builder privateLinkServiceConnectionState(Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {

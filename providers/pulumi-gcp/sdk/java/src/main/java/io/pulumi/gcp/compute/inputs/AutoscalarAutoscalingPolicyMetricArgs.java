@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -49,7 +50,7 @@ public final class AutoscalarAutoscalingPolicyMetricArgs extends io.pulumi.resou
       private final @Nullable Output<String> filter;
 
     public Output<String> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class AutoscalarAutoscalingPolicyMetricArgs extends io.pulumi.resou
       private final @Nullable Output<Double> singleInstanceAssignment;
 
     public Output<Double> getSingleInstanceAssignment() {
-        return this.singleInstanceAssignment == null ? Output.empty() : this.singleInstanceAssignment;
+        return this.singleInstanceAssignment == null ? Codegen.empty() : this.singleInstanceAssignment;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class AutoscalarAutoscalingPolicyMetricArgs extends io.pulumi.resou
       private final @Nullable Output<Double> target;
 
     public Output<Double> getTarget() {
-        return this.target == null ? Output.empty() : this.target;
+        return this.target == null ? Codegen.empty() : this.target;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class AutoscalarAutoscalingPolicyMetricArgs extends io.pulumi.resou
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public AutoscalarAutoscalingPolicyMetricArgs(
@@ -127,11 +128,11 @@ public final class AutoscalarAutoscalingPolicyMetricArgs extends io.pulumi.resou
     }
 
     private AutoscalarAutoscalingPolicyMetricArgs() {
-        this.filter = Output.empty();
-        this.name = Output.empty();
-        this.singleInstanceAssignment = Output.empty();
-        this.target = Output.empty();
-        this.type = Output.empty();
+        this.filter = Codegen.empty();
+        this.name = Codegen.empty();
+        this.singleInstanceAssignment = Codegen.empty();
+        this.target = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -167,7 +168,7 @@ public final class AutoscalarAutoscalingPolicyMetricArgs extends io.pulumi.resou
             return this;
         }
         public Builder filter(@Nullable String filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -183,7 +184,7 @@ public final class AutoscalarAutoscalingPolicyMetricArgs extends io.pulumi.resou
             return this;
         }
         public Builder singleInstanceAssignment(@Nullable Double singleInstanceAssignment) {
-            this.singleInstanceAssignment = Output.ofNullable(singleInstanceAssignment);
+            this.singleInstanceAssignment = Codegen.ofNullable(singleInstanceAssignment);
             return this;
         }
         public Builder target(@Nullable Output<Double> target) {
@@ -191,7 +192,7 @@ public final class AutoscalarAutoscalingPolicyMetricArgs extends io.pulumi.resou
             return this;
         }
         public Builder target(@Nullable Double target) {
-            this.target = Output.ofNullable(target);
+            this.target = Codegen.ofNullable(target);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -199,7 +200,7 @@ public final class AutoscalarAutoscalingPolicyMetricArgs extends io.pulumi.resou
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public AutoscalarAutoscalingPolicyMetricArgs build() {
             return new AutoscalarAutoscalingPolicyMetricArgs(filter, name, singleInstanceAssignment, target, type);

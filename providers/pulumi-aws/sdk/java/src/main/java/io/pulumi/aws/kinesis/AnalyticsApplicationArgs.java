@@ -9,6 +9,7 @@ import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationOutputArgs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationReferenceDataSourcesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +31,7 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<AnalyticsApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
 
     public Output<AnalyticsApplicationCloudwatchLoggingOptionsArgs> getCloudwatchLoggingOptions() {
-        return this.cloudwatchLoggingOptions == null ? Output.empty() : this.cloudwatchLoggingOptions;
+        return this.cloudwatchLoggingOptions == null ? Codegen.empty() : this.cloudwatchLoggingOptions;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> code;
 
     public Output<String> getCode() {
-        return this.code == null ? Output.empty() : this.code;
+        return this.code == null ? Codegen.empty() : this.code;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<AnalyticsApplicationInputsArgs> inputs;
 
     public Output<AnalyticsApplicationInputsArgs> getInputs() {
-        return this.inputs == null ? Output.empty() : this.inputs;
+        return this.inputs == null ? Codegen.empty() : this.inputs;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<AnalyticsApplicationOutputArgs>> outputs;
 
     public Output<List<AnalyticsApplicationOutputArgs>> getOutputs() {
-        return this.outputs == null ? Output.empty() : this.outputs;
+        return this.outputs == null ? Codegen.empty() : this.outputs;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<AnalyticsApplicationReferenceDataSourcesArgs> referenceDataSources;
 
     public Output<AnalyticsApplicationReferenceDataSourcesArgs> getReferenceDataSources() {
-        return this.referenceDataSources == null ? Output.empty() : this.referenceDataSources;
+        return this.referenceDataSources == null ? Codegen.empty() : this.referenceDataSources;
     }
 
     /**
@@ -109,7 +110,7 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> startApplication;
 
     public Output<Boolean> getStartApplication() {
-        return this.startApplication == null ? Output.empty() : this.startApplication;
+        return this.startApplication == null ? Codegen.empty() : this.startApplication;
     }
 
     /**
@@ -120,7 +121,7 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public AnalyticsApplicationArgs(
@@ -145,15 +146,15 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
     }
 
     private AnalyticsApplicationArgs() {
-        this.cloudwatchLoggingOptions = Output.empty();
-        this.code = Output.empty();
-        this.description = Output.empty();
-        this.inputs = Output.empty();
-        this.name = Output.empty();
-        this.outputs = Output.empty();
-        this.referenceDataSources = Output.empty();
-        this.startApplication = Output.empty();
-        this.tags = Output.empty();
+        this.cloudwatchLoggingOptions = Codegen.empty();
+        this.code = Codegen.empty();
+        this.description = Codegen.empty();
+        this.inputs = Codegen.empty();
+        this.name = Codegen.empty();
+        this.outputs = Codegen.empty();
+        this.referenceDataSources = Codegen.empty();
+        this.startApplication = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -197,7 +198,7 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder cloudwatchLoggingOptions(@Nullable AnalyticsApplicationCloudwatchLoggingOptionsArgs cloudwatchLoggingOptions) {
-            this.cloudwatchLoggingOptions = Output.ofNullable(cloudwatchLoggingOptions);
+            this.cloudwatchLoggingOptions = Codegen.ofNullable(cloudwatchLoggingOptions);
             return this;
         }
         public Builder code(@Nullable Output<String> code) {
@@ -205,7 +206,7 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder code(@Nullable String code) {
-            this.code = Output.ofNullable(code);
+            this.code = Codegen.ofNullable(code);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -213,7 +214,7 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder inputs(@Nullable Output<AnalyticsApplicationInputsArgs> inputs) {
@@ -221,7 +222,7 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder inputs(@Nullable AnalyticsApplicationInputsArgs inputs) {
-            this.inputs = Output.ofNullable(inputs);
+            this.inputs = Codegen.ofNullable(inputs);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -229,7 +230,7 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder outputs(@Nullable Output<List<AnalyticsApplicationOutputArgs>> outputs) {
@@ -237,7 +238,7 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder outputs(@Nullable List<AnalyticsApplicationOutputArgs> outputs) {
-            this.outputs = Output.ofNullable(outputs);
+            this.outputs = Codegen.ofNullable(outputs);
             return this;
         }
         public Builder outputs(AnalyticsApplicationOutputArgs... outputs) {
@@ -248,7 +249,7 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder referenceDataSources(@Nullable AnalyticsApplicationReferenceDataSourcesArgs referenceDataSources) {
-            this.referenceDataSources = Output.ofNullable(referenceDataSources);
+            this.referenceDataSources = Codegen.ofNullable(referenceDataSources);
             return this;
         }
         public Builder startApplication(@Nullable Output<Boolean> startApplication) {
@@ -256,7 +257,7 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder startApplication(@Nullable Boolean startApplication) {
-            this.startApplication = Output.ofNullable(startApplication);
+            this.startApplication = Codegen.ofNullable(startApplication);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -264,7 +265,7 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public AnalyticsApplicationArgs build() {
             return new AnalyticsApplicationArgs(cloudwatchLoggingOptions, code, description, inputs, name, outputs, referenceDataSources, startApplication, tags);

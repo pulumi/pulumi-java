@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidth;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs;
 import java.util.List;
@@ -49,8 +50,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs 
     }
 
     private GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardArgs() {
-        this.cardContents = Output.empty();
-        this.cardWidth = Output.empty();
+        this.cardContents = Codegen.empty();
+        this.cardWidth = Codegen.empty();
     }
 
     public static Builder builder() {

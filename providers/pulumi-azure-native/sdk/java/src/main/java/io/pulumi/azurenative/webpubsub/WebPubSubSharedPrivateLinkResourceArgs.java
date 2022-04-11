@@ -5,6 +5,7 @@ package io.pulumi.azurenative.webpubsub;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -44,7 +45,7 @@ public final class WebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.reso
       private final @Nullable Output<String> requestMessage;
 
     public Output<String> getRequestMessage() {
-        return this.requestMessage == null ? Output.empty() : this.requestMessage;
+        return this.requestMessage == null ? Codegen.empty() : this.requestMessage;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class WebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.reso
       private final @Nullable Output<String> sharedPrivateLinkResourceName;
 
     public Output<String> getSharedPrivateLinkResourceName() {
-        return this.sharedPrivateLinkResourceName == null ? Output.empty() : this.sharedPrivateLinkResourceName;
+        return this.sharedPrivateLinkResourceName == null ? Codegen.empty() : this.sharedPrivateLinkResourceName;
     }
 
     public WebPubSubSharedPrivateLinkResourceArgs(
@@ -96,12 +97,12 @@ public final class WebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.reso
     }
 
     private WebPubSubSharedPrivateLinkResourceArgs() {
-        this.groupId = Output.empty();
-        this.privateLinkResourceId = Output.empty();
-        this.requestMessage = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
-        this.sharedPrivateLinkResourceName = Output.empty();
+        this.groupId = Codegen.empty();
+        this.privateLinkResourceId = Codegen.empty();
+        this.requestMessage = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.sharedPrivateLinkResourceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -155,7 +156,7 @@ public final class WebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.reso
             return this;
         }
         public Builder requestMessage(@Nullable String requestMessage) {
-            this.requestMessage = Output.ofNullable(requestMessage);
+            this.requestMessage = Codegen.ofNullable(requestMessage);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -179,7 +180,7 @@ public final class WebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.reso
             return this;
         }
         public Builder sharedPrivateLinkResourceName(@Nullable String sharedPrivateLinkResourceName) {
-            this.sharedPrivateLinkResourceName = Output.ofNullable(sharedPrivateLinkResourceName);
+            this.sharedPrivateLinkResourceName = Codegen.ofNullable(sharedPrivateLinkResourceName);
             return this;
         }        public WebPubSubSharedPrivateLinkResourceArgs build() {
             return new WebPubSubSharedPrivateLinkResourceArgs(groupId, privateLinkResourceId, requestMessage, resourceGroupName, resourceName, sharedPrivateLinkResourceName);

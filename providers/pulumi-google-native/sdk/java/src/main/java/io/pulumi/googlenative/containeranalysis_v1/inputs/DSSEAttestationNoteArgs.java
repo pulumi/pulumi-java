@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.DSSEHintArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class DSSEAttestationNoteArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<DSSEHintArgs> hint;
 
     public Output<DSSEHintArgs> getHint() {
-        return this.hint == null ? Output.empty() : this.hint;
+        return this.hint == null ? Codegen.empty() : this.hint;
     }
 
     public DSSEAttestationNoteArgs(@Nullable Output<DSSEHintArgs> hint) {
@@ -30,7 +31,7 @@ public final class DSSEAttestationNoteArgs extends io.pulumi.resources.ResourceA
     }
 
     private DSSEAttestationNoteArgs() {
-        this.hint = Output.empty();
+        this.hint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class DSSEAttestationNoteArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder hint(@Nullable DSSEHintArgs hint) {
-            this.hint = Output.ofNullable(hint);
+            this.hint = Codegen.ofNullable(hint);
             return this;
         }        public DSSEAttestationNoteArgs build() {
             return new DSSEAttestationNoteArgs(hint);

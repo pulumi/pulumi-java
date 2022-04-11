@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class FlockerVolumeSourceArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> datasetName;
 
     public Output<String> getDatasetName() {
-        return this.datasetName == null ? Output.empty() : this.datasetName;
+        return this.datasetName == null ? Codegen.empty() : this.datasetName;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class FlockerVolumeSourceArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> datasetUUID;
 
     public Output<String> getDatasetUUID() {
-        return this.datasetUUID == null ? Output.empty() : this.datasetUUID;
+        return this.datasetUUID == null ? Codegen.empty() : this.datasetUUID;
     }
 
     public FlockerVolumeSourceArgs(
@@ -48,8 +49,8 @@ public final class FlockerVolumeSourceArgs extends io.pulumi.resources.ResourceA
     }
 
     private FlockerVolumeSourceArgs() {
-        this.datasetName = Output.empty();
-        this.datasetUUID = Output.empty();
+        this.datasetName = Codegen.empty();
+        this.datasetUUID = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class FlockerVolumeSourceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder datasetName(@Nullable String datasetName) {
-            this.datasetName = Output.ofNullable(datasetName);
+            this.datasetName = Codegen.ofNullable(datasetName);
             return this;
         }
         public Builder datasetUUID(@Nullable Output<String> datasetUUID) {
@@ -87,7 +88,7 @@ public final class FlockerVolumeSourceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder datasetUUID(@Nullable String datasetUUID) {
-            this.datasetUUID = Output.ofNullable(datasetUUID);
+            this.datasetUUID = Codegen.ofNullable(datasetUUID);
             return this;
         }        public FlockerVolumeSourceArgs build() {
             return new FlockerVolumeSourceArgs(datasetName, datasetUUID);

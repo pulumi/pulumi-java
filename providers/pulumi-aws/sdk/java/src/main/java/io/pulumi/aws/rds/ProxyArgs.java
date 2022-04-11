@@ -6,6 +6,7 @@ package io.pulumi.aws.rds;
 import io.pulumi.aws.rds.inputs.ProxyAuthArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -38,7 +39,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> debugLogging;
 
     public Output<Boolean> getDebugLogging() {
-        return this.debugLogging == null ? Output.empty() : this.debugLogging;
+        return this.debugLogging == null ? Codegen.empty() : this.debugLogging;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> idleClientTimeout;
 
     public Output<Integer> getIdleClientTimeout() {
-        return this.idleClientTimeout == null ? Output.empty() : this.idleClientTimeout;
+        return this.idleClientTimeout == null ? Codegen.empty() : this.idleClientTimeout;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> requireTls;
 
     public Output<Boolean> getRequireTls() {
-        return this.requireTls == null ? Output.empty() : this.requireTls;
+        return this.requireTls == null ? Codegen.empty() : this.requireTls;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
     public Output<List<String>> getVpcSecurityGroupIds() {
-        return this.vpcSecurityGroupIds == null ? Output.empty() : this.vpcSecurityGroupIds;
+        return this.vpcSecurityGroupIds == null ? Codegen.empty() : this.vpcSecurityGroupIds;
     }
 
     /**
@@ -153,16 +154,16 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProxyArgs() {
-        this.auths = Output.empty();
-        this.debugLogging = Output.empty();
-        this.engineFamily = Output.empty();
-        this.idleClientTimeout = Output.empty();
-        this.name = Output.empty();
-        this.requireTls = Output.empty();
-        this.roleArn = Output.empty();
-        this.tags = Output.empty();
-        this.vpcSecurityGroupIds = Output.empty();
-        this.vpcSubnetIds = Output.empty();
+        this.auths = Codegen.empty();
+        this.debugLogging = Codegen.empty();
+        this.engineFamily = Codegen.empty();
+        this.idleClientTimeout = Codegen.empty();
+        this.name = Codegen.empty();
+        this.requireTls = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vpcSecurityGroupIds = Codegen.empty();
+        this.vpcSubnetIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -219,7 +220,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder debugLogging(@Nullable Boolean debugLogging) {
-            this.debugLogging = Output.ofNullable(debugLogging);
+            this.debugLogging = Codegen.ofNullable(debugLogging);
             return this;
         }
         public Builder engineFamily(Output<String> engineFamily) {
@@ -235,7 +236,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder idleClientTimeout(@Nullable Integer idleClientTimeout) {
-            this.idleClientTimeout = Output.ofNullable(idleClientTimeout);
+            this.idleClientTimeout = Codegen.ofNullable(idleClientTimeout);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -243,7 +244,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder requireTls(@Nullable Output<Boolean> requireTls) {
@@ -251,7 +252,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requireTls(@Nullable Boolean requireTls) {
-            this.requireTls = Output.ofNullable(requireTls);
+            this.requireTls = Codegen.ofNullable(requireTls);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {
@@ -267,7 +268,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
@@ -275,7 +276,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
-            this.vpcSecurityGroupIds = Output.ofNullable(vpcSecurityGroupIds);
+            this.vpcSecurityGroupIds = Codegen.ofNullable(vpcSecurityGroupIds);
             return this;
         }
         public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {

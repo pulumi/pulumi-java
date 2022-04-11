@@ -6,6 +6,7 @@ package io.pulumi.azurenative.deploymentmanager.inputs;
 import io.pulumi.azurenative.deploymentmanager.inputs.RestHealthCheckArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -50,7 +51,7 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
       private final @Nullable Output<String> maxElasticDuration;
 
     public Output<String> getMaxElasticDuration() {
-        return this.maxElasticDuration == null ? Output.empty() : this.maxElasticDuration;
+        return this.maxElasticDuration == null ? Codegen.empty() : this.maxElasticDuration;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
       private final @Nullable Output<String> waitDuration;
 
     public Output<String> getWaitDuration() {
-        return this.waitDuration == null ? Output.empty() : this.waitDuration;
+        return this.waitDuration == null ? Codegen.empty() : this.waitDuration;
     }
 
     public RestHealthCheckStepAttributesArgs(
@@ -90,11 +91,11 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
     }
 
     private RestHealthCheckStepAttributesArgs() {
-        this.healthChecks = Output.empty();
-        this.healthyStateDuration = Output.empty();
-        this.maxElasticDuration = Output.empty();
-        this.type = Output.empty();
-        this.waitDuration = Output.empty();
+        this.healthChecks = Codegen.empty();
+        this.healthyStateDuration = Codegen.empty();
+        this.maxElasticDuration = Codegen.empty();
+        this.type = Codegen.empty();
+        this.waitDuration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -149,7 +150,7 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
             return this;
         }
         public Builder maxElasticDuration(@Nullable String maxElasticDuration) {
-            this.maxElasticDuration = Output.ofNullable(maxElasticDuration);
+            this.maxElasticDuration = Codegen.ofNullable(maxElasticDuration);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -165,7 +166,7 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
             return this;
         }
         public Builder waitDuration(@Nullable String waitDuration) {
-            this.waitDuration = Output.ofNullable(waitDuration);
+            this.waitDuration = Codegen.ofNullable(waitDuration);
             return this;
         }        public RestHealthCheckStepAttributesArgs build() {
             return new RestHealthCheckStepAttributesArgs(healthChecks, healthyStateDuration, maxElasticDuration, type, waitDuration);

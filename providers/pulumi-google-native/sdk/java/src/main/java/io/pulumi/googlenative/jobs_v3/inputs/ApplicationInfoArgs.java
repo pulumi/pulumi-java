@@ -5,6 +5,7 @@ package io.pulumi.googlenative.jobs_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ApplicationInfoArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<String>> emails;
 
     public Output<List<String>> getEmails() {
-        return this.emails == null ? Output.empty() : this.emails;
+        return this.emails == null ? Codegen.empty() : this.emails;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ApplicationInfoArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> instruction;
 
     public Output<String> getInstruction() {
-        return this.instruction == null ? Output.empty() : this.instruction;
+        return this.instruction == null ? Codegen.empty() : this.instruction;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ApplicationInfoArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<String>> uris;
 
     public Output<List<String>> getUris() {
-        return this.uris == null ? Output.empty() : this.uris;
+        return this.uris == null ? Codegen.empty() : this.uris;
     }
 
     public ApplicationInfoArgs(
@@ -62,9 +63,9 @@ public final class ApplicationInfoArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ApplicationInfoArgs() {
-        this.emails = Output.empty();
-        this.instruction = Output.empty();
-        this.uris = Output.empty();
+        this.emails = Codegen.empty();
+        this.instruction = Codegen.empty();
+        this.uris = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ApplicationInfoArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder emails(@Nullable List<String> emails) {
-            this.emails = Output.ofNullable(emails);
+            this.emails = Codegen.ofNullable(emails);
             return this;
         }
         public Builder emails(String... emails) {
@@ -107,7 +108,7 @@ public final class ApplicationInfoArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder instruction(@Nullable String instruction) {
-            this.instruction = Output.ofNullable(instruction);
+            this.instruction = Codegen.ofNullable(instruction);
             return this;
         }
         public Builder uris(@Nullable Output<List<String>> uris) {
@@ -115,7 +116,7 @@ public final class ApplicationInfoArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder uris(@Nullable List<String> uris) {
-            this.uris = Output.ofNullable(uris);
+            this.uris = Codegen.ofNullable(uris);
             return this;
         }
         public Builder uris(String... uris) {

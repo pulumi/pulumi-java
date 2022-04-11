@@ -5,6 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class ImageDiskReferenceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Integer> lun;
 
     public Output<Integer> getLun() {
-        return this.lun == null ? Output.empty() : this.lun;
+        return this.lun == null ? Codegen.empty() : this.lun;
     }
 
     public ImageDiskReferenceArgs(
@@ -49,8 +50,8 @@ public final class ImageDiskReferenceArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ImageDiskReferenceArgs() {
-        this.id = Output.empty();
-        this.lun = Output.empty();
+        this.id = Codegen.empty();
+        this.lun = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class ImageDiskReferenceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder lun(@Nullable Integer lun) {
-            this.lun = Output.ofNullable(lun);
+            this.lun = Codegen.ofNullable(lun);
             return this;
         }        public ImageDiskReferenceArgs build() {
             return new ImageDiskReferenceArgs(id, lun);

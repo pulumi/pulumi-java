@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudtrail.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class TrailDataResourceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<String>> values;
 
     public Output<List<String>> getValues() {
-        return this.values == null ? Output.empty() : this.values;
+        return this.values == null ? Codegen.empty() : this.values;
     }
 
     public TrailDataResourceArgs(
@@ -49,8 +50,8 @@ public final class TrailDataResourceArgs extends io.pulumi.resources.ResourceArg
     }
 
     private TrailDataResourceArgs() {
-        this.type = Output.empty();
-        this.values = Output.empty();
+        this.type = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class TrailDataResourceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder values(@Nullable List<String> values) {
-            this.values = Output.ofNullable(values);
+            this.values = Codegen.ofNullable(values);
             return this;
         }
         public Builder values(String... values) {

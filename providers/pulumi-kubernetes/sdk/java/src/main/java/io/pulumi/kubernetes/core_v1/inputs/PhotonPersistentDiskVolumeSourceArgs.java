@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class PhotonPersistentDiskVolumeSourceArgs extends io.pulumi.resour
       private final @Nullable Output<String> fsType;
 
     public Output<String> getFsType() {
-        return this.fsType == null ? Output.empty() : this.fsType;
+        return this.fsType == null ? Codegen.empty() : this.fsType;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class PhotonPersistentDiskVolumeSourceArgs extends io.pulumi.resour
     }
 
     private PhotonPersistentDiskVolumeSourceArgs() {
-        this.fsType = Output.empty();
-        this.pdID = Output.empty();
+        this.fsType = Codegen.empty();
+        this.pdID = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class PhotonPersistentDiskVolumeSourceArgs extends io.pulumi.resour
             return this;
         }
         public Builder fsType(@Nullable String fsType) {
-            this.fsType = Output.ofNullable(fsType);
+            this.fsType = Codegen.ofNullable(fsType);
             return this;
         }
         public Builder pdID(Output<String> pdID) {

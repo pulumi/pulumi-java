@@ -5,6 +5,7 @@ package io.pulumi.aws.route53recoverycontrol;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class RoutingControlArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> controlPanelArn;
 
     public Output<String> getControlPanelArn() {
-        return this.controlPanelArn == null ? Output.empty() : this.controlPanelArn;
+        return this.controlPanelArn == null ? Codegen.empty() : this.controlPanelArn;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class RoutingControlArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public RoutingControlArgs(
@@ -57,9 +58,9 @@ public final class RoutingControlArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RoutingControlArgs() {
-        this.clusterArn = Output.empty();
-        this.controlPanelArn = Output.empty();
-        this.name = Output.empty();
+        this.clusterArn = Codegen.empty();
+        this.controlPanelArn = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class RoutingControlArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder controlPanelArn(@Nullable String controlPanelArn) {
-            this.controlPanelArn = Output.ofNullable(controlPanelArn);
+            this.controlPanelArn = Codegen.ofNullable(controlPanelArn);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -107,7 +108,7 @@ public final class RoutingControlArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public RoutingControlArgs build() {
             return new RoutingControlArgs(clusterArn, controlPanelArn, name);

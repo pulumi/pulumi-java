@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.inputs.AzureFirewallNetworkRuleArgs;
 import io.pulumi.azurenative.network.inputs.AzureFirewallRCActionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +31,7 @@ public final class AzureFirewallNetworkRuleCollectionArgs extends io.pulumi.reso
       private final @Nullable Output<AzureFirewallRCActionArgs> action;
 
     public Output<AzureFirewallRCActionArgs> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class AzureFirewallNetworkRuleCollectionArgs extends io.pulumi.reso
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class AzureFirewallNetworkRuleCollectionArgs extends io.pulumi.reso
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class AzureFirewallNetworkRuleCollectionArgs extends io.pulumi.reso
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class AzureFirewallNetworkRuleCollectionArgs extends io.pulumi.reso
       private final @Nullable Output<List<AzureFirewallNetworkRuleArgs>> rules;
 
     public Output<List<AzureFirewallNetworkRuleArgs>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     public AzureFirewallNetworkRuleCollectionArgs(
@@ -91,11 +92,11 @@ public final class AzureFirewallNetworkRuleCollectionArgs extends io.pulumi.reso
     }
 
     private AzureFirewallNetworkRuleCollectionArgs() {
-        this.action = Output.empty();
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.priority = Output.empty();
-        this.rules = Output.empty();
+        this.action = Codegen.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.rules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class AzureFirewallNetworkRuleCollectionArgs extends io.pulumi.reso
             return this;
         }
         public Builder action(@Nullable AzureFirewallRCActionArgs action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -139,7 +140,7 @@ public final class AzureFirewallNetworkRuleCollectionArgs extends io.pulumi.reso
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -147,7 +148,7 @@ public final class AzureFirewallNetworkRuleCollectionArgs extends io.pulumi.reso
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder priority(@Nullable Output<Integer> priority) {
@@ -155,7 +156,7 @@ public final class AzureFirewallNetworkRuleCollectionArgs extends io.pulumi.reso
             return this;
         }
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder rules(@Nullable Output<List<AzureFirewallNetworkRuleArgs>> rules) {
@@ -163,7 +164,7 @@ public final class AzureFirewallNetworkRuleCollectionArgs extends io.pulumi.reso
             return this;
         }
         public Builder rules(@Nullable List<AzureFirewallNetworkRuleArgs> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(AzureFirewallNetworkRuleArgs... rules) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,7 +34,7 @@ public final class HintArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HintArgs() {
-        this.humanReadableName = Output.empty();
+        this.humanReadableName = Codegen.empty();
     }
 
     public static Builder builder() {

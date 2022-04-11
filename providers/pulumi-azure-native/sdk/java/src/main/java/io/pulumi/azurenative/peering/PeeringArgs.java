@@ -10,6 +10,7 @@ import io.pulumi.azurenative.peering.inputs.PeeringSkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PeeringPropertiesDirectArgs> direct;
 
     public Output<PeeringPropertiesDirectArgs> getDirect() {
-        return this.direct == null ? Output.empty() : this.direct;
+        return this.direct == null ? Codegen.empty() : this.direct;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PeeringPropertiesExchangeArgs> exchange;
 
     public Output<PeeringPropertiesExchangeArgs> getExchange() {
-        return this.exchange == null ? Output.empty() : this.exchange;
+        return this.exchange == null ? Codegen.empty() : this.exchange;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> peeringLocation;
 
     public Output<String> getPeeringLocation() {
-        return this.peeringLocation == null ? Output.empty() : this.peeringLocation;
+        return this.peeringLocation == null ? Codegen.empty() : this.peeringLocation;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> peeringName;
 
     public Output<String> getPeeringName() {
-        return this.peeringName == null ? Output.empty() : this.peeringName;
+        return this.peeringName == null ? Codegen.empty() : this.peeringName;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public PeeringArgs(
@@ -141,15 +142,15 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PeeringArgs() {
-        this.direct = Output.empty();
-        this.exchange = Output.empty();
-        this.kind = Output.empty();
-        this.location = Output.empty();
-        this.peeringLocation = Output.empty();
-        this.peeringName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
+        this.direct = Codegen.empty();
+        this.exchange = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.peeringLocation = Codegen.empty();
+        this.peeringName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -193,7 +194,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder direct(@Nullable PeeringPropertiesDirectArgs direct) {
-            this.direct = Output.ofNullable(direct);
+            this.direct = Codegen.ofNullable(direct);
             return this;
         }
         public Builder exchange(@Nullable Output<PeeringPropertiesExchangeArgs> exchange) {
@@ -201,7 +202,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder exchange(@Nullable PeeringPropertiesExchangeArgs exchange) {
-            this.exchange = Output.ofNullable(exchange);
+            this.exchange = Codegen.ofNullable(exchange);
             return this;
         }
         public Builder kind(Output<Either<String,Kind>> kind) {
@@ -217,7 +218,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder peeringLocation(@Nullable Output<String> peeringLocation) {
@@ -225,7 +226,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder peeringLocation(@Nullable String peeringLocation) {
-            this.peeringLocation = Output.ofNullable(peeringLocation);
+            this.peeringLocation = Codegen.ofNullable(peeringLocation);
             return this;
         }
         public Builder peeringName(@Nullable Output<String> peeringName) {
@@ -233,7 +234,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder peeringName(@Nullable String peeringName) {
-            this.peeringName = Output.ofNullable(peeringName);
+            this.peeringName = Codegen.ofNullable(peeringName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -257,7 +258,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public PeeringArgs build() {
             return new PeeringArgs(direct, exchange, kind, location, peeringLocation, peeringName, resourceGroupName, sku, tags);

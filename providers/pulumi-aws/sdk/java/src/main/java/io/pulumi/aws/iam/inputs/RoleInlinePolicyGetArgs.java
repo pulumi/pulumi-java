@@ -5,6 +5,7 @@ package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class RoleInlinePolicyGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class RoleInlinePolicyGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     public RoleInlinePolicyGetArgs(
@@ -44,8 +45,8 @@ public final class RoleInlinePolicyGetArgs extends io.pulumi.resources.ResourceA
     }
 
     private RoleInlinePolicyGetArgs() {
-        this.name = Output.empty();
-        this.policy = Output.empty();
+        this.name = Codegen.empty();
+        this.policy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class RoleInlinePolicyGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder policy(@Nullable Output<String> policy) {
@@ -83,7 +84,7 @@ public final class RoleInlinePolicyGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder policy(@Nullable String policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }        public RoleInlinePolicyGetArgs build() {
             return new RoleInlinePolicyGetArgs(name, policy);

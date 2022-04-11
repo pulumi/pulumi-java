@@ -9,6 +9,7 @@ import io.pulumi.awsnative.ssm.inputs.AssociationInstanceAssociationOutputLocati
 import io.pulumi.awsnative.ssm.inputs.AssociationTargetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -26,7 +27,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> applyOnlyAtCronInterval;
 
     public Output<Boolean> getApplyOnlyAtCronInterval() {
-        return this.applyOnlyAtCronInterval == null ? Output.empty() : this.applyOnlyAtCronInterval;
+        return this.applyOnlyAtCronInterval == null ? Codegen.empty() : this.applyOnlyAtCronInterval;
     }
 
     /**
@@ -37,28 +38,28 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> associationName;
 
     public Output<String> getAssociationName() {
-        return this.associationName == null ? Output.empty() : this.associationName;
+        return this.associationName == null ? Codegen.empty() : this.associationName;
     }
 
     @Import(name="automationTargetParameterName")
       private final @Nullable Output<String> automationTargetParameterName;
 
     public Output<String> getAutomationTargetParameterName() {
-        return this.automationTargetParameterName == null ? Output.empty() : this.automationTargetParameterName;
+        return this.automationTargetParameterName == null ? Codegen.empty() : this.automationTargetParameterName;
     }
 
     @Import(name="calendarNames")
       private final @Nullable Output<List<String>> calendarNames;
 
     public Output<List<String>> getCalendarNames() {
-        return this.calendarNames == null ? Output.empty() : this.calendarNames;
+        return this.calendarNames == null ? Codegen.empty() : this.calendarNames;
     }
 
     @Import(name="complianceSeverity")
       private final @Nullable Output<AssociationComplianceSeverity> complianceSeverity;
 
     public Output<AssociationComplianceSeverity> getComplianceSeverity() {
-        return this.complianceSeverity == null ? Output.empty() : this.complianceSeverity;
+        return this.complianceSeverity == null ? Codegen.empty() : this.complianceSeverity;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> documentVersion;
 
     public Output<String> getDocumentVersion() {
-        return this.documentVersion == null ? Output.empty() : this.documentVersion;
+        return this.documentVersion == null ? Codegen.empty() : this.documentVersion;
     }
 
     /**
@@ -80,21 +81,21 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> instanceId;
 
     public Output<String> getInstanceId() {
-        return this.instanceId == null ? Output.empty() : this.instanceId;
+        return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
     @Import(name="maxConcurrency")
       private final @Nullable Output<String> maxConcurrency;
 
     public Output<String> getMaxConcurrency() {
-        return this.maxConcurrency == null ? Output.empty() : this.maxConcurrency;
+        return this.maxConcurrency == null ? Codegen.empty() : this.maxConcurrency;
     }
 
     @Import(name="maxErrors")
       private final @Nullable Output<String> maxErrors;
 
     public Output<String> getMaxErrors() {
-        return this.maxErrors == null ? Output.empty() : this.maxErrors;
+        return this.maxErrors == null ? Codegen.empty() : this.maxErrors;
     }
 
     /**
@@ -105,14 +106,14 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="outputLocation")
       private final @Nullable Output<AssociationInstanceAssociationOutputLocationArgs> outputLocation;
 
     public Output<AssociationInstanceAssociationOutputLocationArgs> getOutputLocation() {
-        return this.outputLocation == null ? Output.empty() : this.outputLocation;
+        return this.outputLocation == null ? Codegen.empty() : this.outputLocation;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> parameters;
 
     public Output<Object> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -134,14 +135,14 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> scheduleExpression;
 
     public Output<String> getScheduleExpression() {
-        return this.scheduleExpression == null ? Output.empty() : this.scheduleExpression;
+        return this.scheduleExpression == null ? Codegen.empty() : this.scheduleExpression;
     }
 
     @Import(name="syncCompliance")
       private final @Nullable Output<AssociationSyncCompliance> syncCompliance;
 
     public Output<AssociationSyncCompliance> getSyncCompliance() {
-        return this.syncCompliance == null ? Output.empty() : this.syncCompliance;
+        return this.syncCompliance == null ? Codegen.empty() : this.syncCompliance;
     }
 
     /**
@@ -152,14 +153,14 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<AssociationTargetArgs>> targets;
 
     public Output<List<AssociationTargetArgs>> getTargets() {
-        return this.targets == null ? Output.empty() : this.targets;
+        return this.targets == null ? Codegen.empty() : this.targets;
     }
 
     @Import(name="waitForSuccessTimeoutSeconds")
       private final @Nullable Output<Integer> waitForSuccessTimeoutSeconds;
 
     public Output<Integer> getWaitForSuccessTimeoutSeconds() {
-        return this.waitForSuccessTimeoutSeconds == null ? Output.empty() : this.waitForSuccessTimeoutSeconds;
+        return this.waitForSuccessTimeoutSeconds == null ? Codegen.empty() : this.waitForSuccessTimeoutSeconds;
     }
 
     public AssociationArgs(
@@ -198,22 +199,22 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AssociationArgs() {
-        this.applyOnlyAtCronInterval = Output.empty();
-        this.associationName = Output.empty();
-        this.automationTargetParameterName = Output.empty();
-        this.calendarNames = Output.empty();
-        this.complianceSeverity = Output.empty();
-        this.documentVersion = Output.empty();
-        this.instanceId = Output.empty();
-        this.maxConcurrency = Output.empty();
-        this.maxErrors = Output.empty();
-        this.name = Output.empty();
-        this.outputLocation = Output.empty();
-        this.parameters = Output.empty();
-        this.scheduleExpression = Output.empty();
-        this.syncCompliance = Output.empty();
-        this.targets = Output.empty();
-        this.waitForSuccessTimeoutSeconds = Output.empty();
+        this.applyOnlyAtCronInterval = Codegen.empty();
+        this.associationName = Codegen.empty();
+        this.automationTargetParameterName = Codegen.empty();
+        this.calendarNames = Codegen.empty();
+        this.complianceSeverity = Codegen.empty();
+        this.documentVersion = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.maxConcurrency = Codegen.empty();
+        this.maxErrors = Codegen.empty();
+        this.name = Codegen.empty();
+        this.outputLocation = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.scheduleExpression = Codegen.empty();
+        this.syncCompliance = Codegen.empty();
+        this.targets = Codegen.empty();
+        this.waitForSuccessTimeoutSeconds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -271,7 +272,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder applyOnlyAtCronInterval(@Nullable Boolean applyOnlyAtCronInterval) {
-            this.applyOnlyAtCronInterval = Output.ofNullable(applyOnlyAtCronInterval);
+            this.applyOnlyAtCronInterval = Codegen.ofNullable(applyOnlyAtCronInterval);
             return this;
         }
         public Builder associationName(@Nullable Output<String> associationName) {
@@ -279,7 +280,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder associationName(@Nullable String associationName) {
-            this.associationName = Output.ofNullable(associationName);
+            this.associationName = Codegen.ofNullable(associationName);
             return this;
         }
         public Builder automationTargetParameterName(@Nullable Output<String> automationTargetParameterName) {
@@ -287,7 +288,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder automationTargetParameterName(@Nullable String automationTargetParameterName) {
-            this.automationTargetParameterName = Output.ofNullable(automationTargetParameterName);
+            this.automationTargetParameterName = Codegen.ofNullable(automationTargetParameterName);
             return this;
         }
         public Builder calendarNames(@Nullable Output<List<String>> calendarNames) {
@@ -295,7 +296,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder calendarNames(@Nullable List<String> calendarNames) {
-            this.calendarNames = Output.ofNullable(calendarNames);
+            this.calendarNames = Codegen.ofNullable(calendarNames);
             return this;
         }
         public Builder calendarNames(String... calendarNames) {
@@ -306,7 +307,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder complianceSeverity(@Nullable AssociationComplianceSeverity complianceSeverity) {
-            this.complianceSeverity = Output.ofNullable(complianceSeverity);
+            this.complianceSeverity = Codegen.ofNullable(complianceSeverity);
             return this;
         }
         public Builder documentVersion(@Nullable Output<String> documentVersion) {
@@ -314,7 +315,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder documentVersion(@Nullable String documentVersion) {
-            this.documentVersion = Output.ofNullable(documentVersion);
+            this.documentVersion = Codegen.ofNullable(documentVersion);
             return this;
         }
         public Builder instanceId(@Nullable Output<String> instanceId) {
@@ -322,7 +323,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Output.ofNullable(instanceId);
+            this.instanceId = Codegen.ofNullable(instanceId);
             return this;
         }
         public Builder maxConcurrency(@Nullable Output<String> maxConcurrency) {
@@ -330,7 +331,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxConcurrency(@Nullable String maxConcurrency) {
-            this.maxConcurrency = Output.ofNullable(maxConcurrency);
+            this.maxConcurrency = Codegen.ofNullable(maxConcurrency);
             return this;
         }
         public Builder maxErrors(@Nullable Output<String> maxErrors) {
@@ -338,7 +339,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxErrors(@Nullable String maxErrors) {
-            this.maxErrors = Output.ofNullable(maxErrors);
+            this.maxErrors = Codegen.ofNullable(maxErrors);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -346,7 +347,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder outputLocation(@Nullable Output<AssociationInstanceAssociationOutputLocationArgs> outputLocation) {
@@ -354,7 +355,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder outputLocation(@Nullable AssociationInstanceAssociationOutputLocationArgs outputLocation) {
-            this.outputLocation = Output.ofNullable(outputLocation);
+            this.outputLocation = Codegen.ofNullable(outputLocation);
             return this;
         }
         public Builder parameters(@Nullable Output<Object> parameters) {
@@ -362,7 +363,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable Object parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder scheduleExpression(@Nullable Output<String> scheduleExpression) {
@@ -370,7 +371,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scheduleExpression(@Nullable String scheduleExpression) {
-            this.scheduleExpression = Output.ofNullable(scheduleExpression);
+            this.scheduleExpression = Codegen.ofNullable(scheduleExpression);
             return this;
         }
         public Builder syncCompliance(@Nullable Output<AssociationSyncCompliance> syncCompliance) {
@@ -378,7 +379,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder syncCompliance(@Nullable AssociationSyncCompliance syncCompliance) {
-            this.syncCompliance = Output.ofNullable(syncCompliance);
+            this.syncCompliance = Codegen.ofNullable(syncCompliance);
             return this;
         }
         public Builder targets(@Nullable Output<List<AssociationTargetArgs>> targets) {
@@ -386,7 +387,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targets(@Nullable List<AssociationTargetArgs> targets) {
-            this.targets = Output.ofNullable(targets);
+            this.targets = Codegen.ofNullable(targets);
             return this;
         }
         public Builder targets(AssociationTargetArgs... targets) {
@@ -397,7 +398,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder waitForSuccessTimeoutSeconds(@Nullable Integer waitForSuccessTimeoutSeconds) {
-            this.waitForSuccessTimeoutSeconds = Output.ofNullable(waitForSuccessTimeoutSeconds);
+            this.waitForSuccessTimeoutSeconds = Codegen.ofNullable(waitForSuccessTimeoutSeconds);
             return this;
         }        public AssociationArgs build() {
             return new AssociationArgs(applyOnlyAtCronInterval, associationName, automationTargetParameterName, calendarNames, complianceSeverity, documentVersion, instanceId, maxConcurrency, maxErrors, name, outputLocation, parameters, scheduleExpression, syncCompliance, targets, waitForSuccessTimeoutSeconds);

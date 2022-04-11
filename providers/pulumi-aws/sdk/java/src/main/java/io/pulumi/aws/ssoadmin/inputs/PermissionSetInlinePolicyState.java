@@ -5,6 +5,7 @@ package io.pulumi.aws.ssoadmin.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class PermissionSetInlinePolicyState extends io.pulumi.resources.Re
       private final @Nullable Output<String> inlinePolicy;
 
     public Output<String> getInlinePolicy() {
-        return this.inlinePolicy == null ? Output.empty() : this.inlinePolicy;
+        return this.inlinePolicy == null ? Codegen.empty() : this.inlinePolicy;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class PermissionSetInlinePolicyState extends io.pulumi.resources.Re
       private final @Nullable Output<String> instanceArn;
 
     public Output<String> getInstanceArn() {
-        return this.instanceArn == null ? Output.empty() : this.instanceArn;
+        return this.instanceArn == null ? Codegen.empty() : this.instanceArn;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class PermissionSetInlinePolicyState extends io.pulumi.resources.Re
       private final @Nullable Output<String> permissionSetArn;
 
     public Output<String> getPermissionSetArn() {
-        return this.permissionSetArn == null ? Output.empty() : this.permissionSetArn;
+        return this.permissionSetArn == null ? Codegen.empty() : this.permissionSetArn;
     }
 
     public PermissionSetInlinePolicyState(
@@ -57,9 +58,9 @@ public final class PermissionSetInlinePolicyState extends io.pulumi.resources.Re
     }
 
     private PermissionSetInlinePolicyState() {
-        this.inlinePolicy = Output.empty();
-        this.instanceArn = Output.empty();
-        this.permissionSetArn = Output.empty();
+        this.inlinePolicy = Codegen.empty();
+        this.instanceArn = Codegen.empty();
+        this.permissionSetArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class PermissionSetInlinePolicyState extends io.pulumi.resources.Re
             return this;
         }
         public Builder inlinePolicy(@Nullable String inlinePolicy) {
-            this.inlinePolicy = Output.ofNullable(inlinePolicy);
+            this.inlinePolicy = Codegen.ofNullable(inlinePolicy);
             return this;
         }
         public Builder instanceArn(@Nullable Output<String> instanceArn) {
@@ -99,7 +100,7 @@ public final class PermissionSetInlinePolicyState extends io.pulumi.resources.Re
             return this;
         }
         public Builder instanceArn(@Nullable String instanceArn) {
-            this.instanceArn = Output.ofNullable(instanceArn);
+            this.instanceArn = Codegen.ofNullable(instanceArn);
             return this;
         }
         public Builder permissionSetArn(@Nullable Output<String> permissionSetArn) {
@@ -107,7 +108,7 @@ public final class PermissionSetInlinePolicyState extends io.pulumi.resources.Re
             return this;
         }
         public Builder permissionSetArn(@Nullable String permissionSetArn) {
-            this.permissionSetArn = Output.ofNullable(permissionSetArn);
+            this.permissionSetArn = Codegen.ofNullable(permissionSetArn);
             return this;
         }        public PermissionSetInlinePolicyState build() {
             return new PermissionSetInlinePolicyState(inlinePolicy, instanceArn, permissionSetArn);

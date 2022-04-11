@@ -5,6 +5,7 @@ package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerCon
       private final @Nullable Output<Integer> authorizerResultTtlInSeconds;
 
     public Output<Integer> getAuthorizerResultTtlInSeconds() {
-        return this.authorizerResultTtlInSeconds == null ? Output.empty() : this.authorizerResultTtlInSeconds;
+        return this.authorizerResultTtlInSeconds == null ? Codegen.empty() : this.authorizerResultTtlInSeconds;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerCon
       private final @Nullable Output<String> identityValidationExpression;
 
     public Output<String> getIdentityValidationExpression() {
-        return this.identityValidationExpression == null ? Output.empty() : this.identityValidationExpression;
+        return this.identityValidationExpression == null ? Codegen.empty() : this.identityValidationExpression;
     }
 
     public GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfigArgs(
@@ -58,9 +59,9 @@ public final class GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerCon
     }
 
     private GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfigArgs() {
-        this.authorizerResultTtlInSeconds = Output.empty();
-        this.authorizerUri = Output.empty();
-        this.identityValidationExpression = Output.empty();
+        this.authorizerResultTtlInSeconds = Codegen.empty();
+        this.authorizerUri = Codegen.empty();
+        this.identityValidationExpression = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerCon
             return this;
         }
         public Builder authorizerResultTtlInSeconds(@Nullable Integer authorizerResultTtlInSeconds) {
-            this.authorizerResultTtlInSeconds = Output.ofNullable(authorizerResultTtlInSeconds);
+            this.authorizerResultTtlInSeconds = Codegen.ofNullable(authorizerResultTtlInSeconds);
             return this;
         }
         public Builder authorizerUri(Output<String> authorizerUri) {
@@ -108,7 +109,7 @@ public final class GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerCon
             return this;
         }
         public Builder identityValidationExpression(@Nullable String identityValidationExpression) {
-            this.identityValidationExpression = Output.ofNullable(identityValidationExpression);
+            this.identityValidationExpression = Codegen.ofNullable(identityValidationExpression);
             return this;
         }        public GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfigArgs build() {
             return new GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfigArgs(authorizerResultTtlInSeconds, authorizerUri, identityValidationExpression);

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.automation.inputs;
 import io.pulumi.azurenative.automation.enums.TagOperators;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -29,7 +30,7 @@ public final class TagSettingsPropertiesArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<TagOperators> filterOperator;
 
     public Output<TagOperators> getFilterOperator() {
-        return this.filterOperator == null ? Output.empty() : this.filterOperator;
+        return this.filterOperator == null ? Codegen.empty() : this.filterOperator;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class TagSettingsPropertiesArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Map<String,List<String>>> tags;
 
     public Output<Map<String,List<String>>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public TagSettingsPropertiesArgs(
@@ -51,8 +52,8 @@ public final class TagSettingsPropertiesArgs extends io.pulumi.resources.Resourc
     }
 
     private TagSettingsPropertiesArgs() {
-        this.filterOperator = Output.empty();
-        this.tags = Output.empty();
+        this.filterOperator = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class TagSettingsPropertiesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder filterOperator(@Nullable TagOperators filterOperator) {
-            this.filterOperator = Output.ofNullable(filterOperator);
+            this.filterOperator = Codegen.ofNullable(filterOperator);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,List<String>>> tags) {
@@ -90,7 +91,7 @@ public final class TagSettingsPropertiesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tags(@Nullable Map<String,List<String>> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public TagSettingsPropertiesArgs build() {
             return new TagSettingsPropertiesArgs(filterOperator, tags);

@@ -5,6 +5,7 @@ package io.pulumi.aws.account;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
-        return this.accountId == null ? Output.empty() : this.accountId;
+        return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -96,12 +97,12 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
     }
 
     private AlternativeContactArgs() {
-        this.accountId = Output.empty();
-        this.alternateContactType = Output.empty();
-        this.emailAddress = Output.empty();
-        this.name = Output.empty();
-        this.phoneNumber = Output.empty();
-        this.title = Output.empty();
+        this.accountId = Codegen.empty();
+        this.alternateContactType = Codegen.empty();
+        this.emailAddress = Codegen.empty();
+        this.name = Codegen.empty();
+        this.phoneNumber = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Output.ofNullable(accountId);
+            this.accountId = Codegen.ofNullable(accountId);
             return this;
         }
         public Builder alternateContactType(Output<String> alternateContactType) {
@@ -163,7 +164,7 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder phoneNumber(Output<String> phoneNumber) {

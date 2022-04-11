@@ -5,6 +5,7 @@ package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -57,9 +58,9 @@ public final class TopicRuleErrorActionSqsArgs extends io.pulumi.resources.Resou
     }
 
     private TopicRuleErrorActionSqsArgs() {
-        this.queueUrl = Output.empty();
-        this.roleArn = Output.empty();
-        this.useBase64 = Output.empty();
+        this.queueUrl = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.useBase64 = Codegen.empty();
     }
 
     public static Builder builder() {

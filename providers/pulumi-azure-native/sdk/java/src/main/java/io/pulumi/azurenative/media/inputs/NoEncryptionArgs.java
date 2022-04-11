@@ -6,6 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.inputs.EnabledProtocolsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,7 +27,7 @@ public final class NoEncryptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EnabledProtocolsArgs> enabledProtocols;
 
     public Output<EnabledProtocolsArgs> getEnabledProtocols() {
-        return this.enabledProtocols == null ? Output.empty() : this.enabledProtocols;
+        return this.enabledProtocols == null ? Codegen.empty() : this.enabledProtocols;
     }
 
     public NoEncryptionArgs(@Nullable Output<EnabledProtocolsArgs> enabledProtocols) {
@@ -34,7 +35,7 @@ public final class NoEncryptionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NoEncryptionArgs() {
-        this.enabledProtocols = Output.empty();
+        this.enabledProtocols = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class NoEncryptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabledProtocols(@Nullable EnabledProtocolsArgs enabledProtocols) {
-            this.enabledProtocols = Output.ofNullable(enabledProtocols);
+            this.enabledProtocols = Codegen.ofNullable(enabledProtocols);
             return this;
         }        public NoEncryptionArgs build() {
             return new NoEncryptionArgs(enabledProtocols);

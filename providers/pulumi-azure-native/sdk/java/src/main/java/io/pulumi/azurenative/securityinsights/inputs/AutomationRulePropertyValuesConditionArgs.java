@@ -6,6 +6,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 import io.pulumi.azurenative.securityinsights.inputs.AutomationRulePropertyValuesConditionConditionPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -49,8 +50,8 @@ public final class AutomationRulePropertyValuesConditionArgs extends io.pulumi.r
     }
 
     private AutomationRulePropertyValuesConditionArgs() {
-        this.conditionProperties = Output.empty();
-        this.conditionType = Output.empty();
+        this.conditionProperties = Codegen.empty();
+        this.conditionType = Codegen.empty();
     }
 
     public static Builder builder() {

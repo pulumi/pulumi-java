@@ -5,6 +5,7 @@ package io.pulumi.azurenative.operationalinsights;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> createdDate;
 
     public Output<String> getCreatedDate() {
-        return this.createdDate == null ? Output.empty() : this.createdDate;
+        return this.createdDate == null ? Codegen.empty() : this.createdDate;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> dataExportId;
 
     public Output<String> getDataExportId() {
-        return this.dataExportId == null ? Output.empty() : this.dataExportId;
+        return this.dataExportId == null ? Codegen.empty() : this.dataExportId;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> dataExportName;
 
     public Output<String> getDataExportName() {
-        return this.dataExportName == null ? Output.empty() : this.dataExportName;
+        return this.dataExportName == null ? Codegen.empty() : this.dataExportName;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enable;
 
     public Output<Boolean> getEnable() {
-        return this.enable == null ? Output.empty() : this.enable;
+        return this.enable == null ? Codegen.empty() : this.enable;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> eventHubName;
 
     public Output<String> getEventHubName() {
-        return this.eventHubName == null ? Output.empty() : this.eventHubName;
+        return this.eventHubName == null ? Codegen.empty() : this.eventHubName;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> lastModifiedDate;
 
     public Output<String> getLastModifiedDate() {
-        return this.lastModifiedDate == null ? Output.empty() : this.lastModifiedDate;
+        return this.lastModifiedDate == null ? Codegen.empty() : this.lastModifiedDate;
     }
 
     /**
@@ -150,16 +151,16 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataExportArgs() {
-        this.createdDate = Output.empty();
-        this.dataExportId = Output.empty();
-        this.dataExportName = Output.empty();
-        this.enable = Output.empty();
-        this.eventHubName = Output.empty();
-        this.lastModifiedDate = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceId = Output.empty();
-        this.tableNames = Output.empty();
-        this.workspaceName = Output.empty();
+        this.createdDate = Codegen.empty();
+        this.dataExportId = Codegen.empty();
+        this.dataExportName = Codegen.empty();
+        this.enable = Codegen.empty();
+        this.eventHubName = Codegen.empty();
+        this.lastModifiedDate = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceId = Codegen.empty();
+        this.tableNames = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -205,7 +206,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdDate(@Nullable String createdDate) {
-            this.createdDate = Output.ofNullable(createdDate);
+            this.createdDate = Codegen.ofNullable(createdDate);
             return this;
         }
         public Builder dataExportId(@Nullable Output<String> dataExportId) {
@@ -213,7 +214,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataExportId(@Nullable String dataExportId) {
-            this.dataExportId = Output.ofNullable(dataExportId);
+            this.dataExportId = Codegen.ofNullable(dataExportId);
             return this;
         }
         public Builder dataExportName(@Nullable Output<String> dataExportName) {
@@ -221,7 +222,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataExportName(@Nullable String dataExportName) {
-            this.dataExportName = Output.ofNullable(dataExportName);
+            this.dataExportName = Codegen.ofNullable(dataExportName);
             return this;
         }
         public Builder enable(@Nullable Output<Boolean> enable) {
@@ -229,7 +230,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enable(@Nullable Boolean enable) {
-            this.enable = Output.ofNullable(enable);
+            this.enable = Codegen.ofNullable(enable);
             return this;
         }
         public Builder eventHubName(@Nullable Output<String> eventHubName) {
@@ -237,7 +238,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eventHubName(@Nullable String eventHubName) {
-            this.eventHubName = Output.ofNullable(eventHubName);
+            this.eventHubName = Codegen.ofNullable(eventHubName);
             return this;
         }
         public Builder lastModifiedDate(@Nullable Output<String> lastModifiedDate) {
@@ -245,7 +246,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastModifiedDate(@Nullable String lastModifiedDate) {
-            this.lastModifiedDate = Output.ofNullable(lastModifiedDate);
+            this.lastModifiedDate = Codegen.ofNullable(lastModifiedDate);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

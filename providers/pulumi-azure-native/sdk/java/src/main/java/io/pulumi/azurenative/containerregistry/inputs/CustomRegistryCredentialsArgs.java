@@ -6,6 +6,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 import io.pulumi.azurenative.containerregistry.inputs.SecretObjectArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -31,7 +32,7 @@ public final class CustomRegistryCredentialsArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> identity;
 
     public Output<String> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class CustomRegistryCredentialsArgs extends io.pulumi.resources.Res
       private final @Nullable Output<SecretObjectArgs> password;
 
     public Output<SecretObjectArgs> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class CustomRegistryCredentialsArgs extends io.pulumi.resources.Res
       private final @Nullable Output<SecretObjectArgs> userName;
 
     public Output<SecretObjectArgs> getUserName() {
-        return this.userName == null ? Output.empty() : this.userName;
+        return this.userName == null ? Codegen.empty() : this.userName;
     }
 
     public CustomRegistryCredentialsArgs(
@@ -67,9 +68,9 @@ public final class CustomRegistryCredentialsArgs extends io.pulumi.resources.Res
     }
 
     private CustomRegistryCredentialsArgs() {
-        this.identity = Output.empty();
-        this.password = Output.empty();
-        this.userName = Output.empty();
+        this.identity = Codegen.empty();
+        this.password = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -101,7 +102,7 @@ public final class CustomRegistryCredentialsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder identity(@Nullable String identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder password(@Nullable Output<SecretObjectArgs> password) {
@@ -109,7 +110,7 @@ public final class CustomRegistryCredentialsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder password(@Nullable SecretObjectArgs password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder userName(@Nullable Output<SecretObjectArgs> userName) {
@@ -117,7 +118,7 @@ public final class CustomRegistryCredentialsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder userName(@Nullable SecretObjectArgs userName) {
-            this.userName = Output.ofNullable(userName);
+            this.userName = Codegen.ofNullable(userName);
             return this;
         }        public CustomRegistryCredentialsArgs build() {
             return new CustomRegistryCredentialsArgs(identity, password, userName);

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.cdn.inputs;
 import io.pulumi.azurenative.cdn.inputs.OriginGroupOverrideActionParametersArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -49,8 +50,8 @@ public final class OriginGroupOverrideActionArgs extends io.pulumi.resources.Res
     }
 
     private OriginGroupOverrideActionArgs() {
-        this.name = Output.empty();
-        this.parameters = Output.empty();
+        this.name = Codegen.empty();
+        this.parameters = Codegen.empty();
     }
 
     public static Builder builder() {

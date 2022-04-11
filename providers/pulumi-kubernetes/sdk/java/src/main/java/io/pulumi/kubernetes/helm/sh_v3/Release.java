@@ -3,10 +3,11 @@
 
 package io.pulumi.kubernetes.helm.sh_v3;
 
-import io.pulumi.core.AssetOrArchive;
+import io.pulumi.asset.AssetOrArchive;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.helm.sh_v3.ReleaseArgs;
 import io.pulumi.kubernetes.helm.sh_v3.outputs.ReleaseStatus;
@@ -539,7 +540,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Release(String name, ReleaseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:helm.sh/v3:Release", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:helm.sh/v3:Release", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private Release(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.ml_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.ml_v1.TrialArgs;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1_Trial_ParameterResponse;
@@ -185,7 +186,7 @@ public class Trial extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Trial(String name, TrialArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:ml/v1:Trial", name, args == null ? TrialArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:ml/v1:Trial", name, args == null ? TrialArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Trial(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

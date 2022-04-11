@@ -5,6 +5,7 @@ package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRangeArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -53,8 +54,8 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
     }
 
     private SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutArgs() {
-        this.distributionFilter = Output.empty();
-        this.range = Output.empty();
+        this.distributionFilter = Codegen.empty();
+        this.range = Codegen.empty();
     }
 
     public static Builder builder() {

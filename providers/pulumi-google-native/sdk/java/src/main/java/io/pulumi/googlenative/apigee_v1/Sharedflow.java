@@ -6,6 +6,7 @@ package io.pulumi.googlenative.apigee_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.SharedflowArgs;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1EntityMetadataResponse;
@@ -98,7 +99,7 @@ public class Sharedflow extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Sharedflow(String name, SharedflowArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:apigee/v1:Sharedflow", name, args == null ? SharedflowArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:apigee/v1:Sharedflow", name, args == null ? SharedflowArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Sharedflow(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

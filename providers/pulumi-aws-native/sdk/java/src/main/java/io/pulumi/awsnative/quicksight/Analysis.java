@@ -15,6 +15,7 @@ import io.pulumi.awsnative.quicksight.outputs.AnalysisTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -230,7 +231,7 @@ public class Analysis extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Analysis(String name, AnalysisArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:quicksight:Analysis", name, args == null ? AnalysisArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:quicksight:Analysis", name, args == null ? AnalysisArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Analysis(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

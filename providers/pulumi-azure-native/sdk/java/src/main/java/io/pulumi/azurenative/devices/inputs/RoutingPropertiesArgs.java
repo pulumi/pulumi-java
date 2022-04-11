@@ -9,6 +9,7 @@ import io.pulumi.azurenative.devices.inputs.RoutePropertiesArgs;
 import io.pulumi.azurenative.devices.inputs.RoutingEndpointsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -30,7 +31,7 @@ public final class RoutingPropertiesArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<RoutingEndpointsArgs> endpoints;
 
     public Output<RoutingEndpointsArgs> getEndpoints() {
-        return this.endpoints == null ? Output.empty() : this.endpoints;
+        return this.endpoints == null ? Codegen.empty() : this.endpoints;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class RoutingPropertiesArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<EnrichmentPropertiesArgs>> enrichments;
 
     public Output<List<EnrichmentPropertiesArgs>> getEnrichments() {
-        return this.enrichments == null ? Output.empty() : this.enrichments;
+        return this.enrichments == null ? Codegen.empty() : this.enrichments;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class RoutingPropertiesArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<FallbackRoutePropertiesArgs> fallbackRoute;
 
     public Output<FallbackRoutePropertiesArgs> getFallbackRoute() {
-        return this.fallbackRoute == null ? Output.empty() : this.fallbackRoute;
+        return this.fallbackRoute == null ? Codegen.empty() : this.fallbackRoute;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class RoutingPropertiesArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<RoutePropertiesArgs>> routes;
 
     public Output<List<RoutePropertiesArgs>> getRoutes() {
-        return this.routes == null ? Output.empty() : this.routes;
+        return this.routes == null ? Codegen.empty() : this.routes;
     }
 
     public RoutingPropertiesArgs(
@@ -78,10 +79,10 @@ public final class RoutingPropertiesArgs extends io.pulumi.resources.ResourceArg
     }
 
     private RoutingPropertiesArgs() {
-        this.endpoints = Output.empty();
-        this.enrichments = Output.empty();
-        this.fallbackRoute = Output.empty();
-        this.routes = Output.empty();
+        this.endpoints = Codegen.empty();
+        this.enrichments = Codegen.empty();
+        this.fallbackRoute = Codegen.empty();
+        this.routes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class RoutingPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder endpoints(@Nullable RoutingEndpointsArgs endpoints) {
-            this.endpoints = Output.ofNullable(endpoints);
+            this.endpoints = Codegen.ofNullable(endpoints);
             return this;
         }
         public Builder enrichments(@Nullable Output<List<EnrichmentPropertiesArgs>> enrichments) {
@@ -123,7 +124,7 @@ public final class RoutingPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder enrichments(@Nullable List<EnrichmentPropertiesArgs> enrichments) {
-            this.enrichments = Output.ofNullable(enrichments);
+            this.enrichments = Codegen.ofNullable(enrichments);
             return this;
         }
         public Builder enrichments(EnrichmentPropertiesArgs... enrichments) {
@@ -134,7 +135,7 @@ public final class RoutingPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder fallbackRoute(@Nullable FallbackRoutePropertiesArgs fallbackRoute) {
-            this.fallbackRoute = Output.ofNullable(fallbackRoute);
+            this.fallbackRoute = Codegen.ofNullable(fallbackRoute);
             return this;
         }
         public Builder routes(@Nullable Output<List<RoutePropertiesArgs>> routes) {
@@ -142,7 +143,7 @@ public final class RoutingPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder routes(@Nullable List<RoutePropertiesArgs> routes) {
-            this.routes = Output.ofNullable(routes);
+            this.routes = Codegen.ofNullable(routes);
             return this;
         }
         public Builder routes(RoutePropertiesArgs... routes) {

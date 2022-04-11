@@ -5,6 +5,7 @@ package io.pulumi.azurenative.logz.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class PlanDataArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> billingCycle;
 
     public Output<String> getBillingCycle() {
-        return this.billingCycle == null ? Output.empty() : this.billingCycle;
+        return this.billingCycle == null ? Codegen.empty() : this.billingCycle;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class PlanDataArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> effectiveDate;
 
     public Output<String> getEffectiveDate() {
-        return this.effectiveDate == null ? Output.empty() : this.effectiveDate;
+        return this.effectiveDate == null ? Codegen.empty() : this.effectiveDate;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class PlanDataArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> planDetails;
 
     public Output<String> getPlanDetails() {
-        return this.planDetails == null ? Output.empty() : this.planDetails;
+        return this.planDetails == null ? Codegen.empty() : this.planDetails;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class PlanDataArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> usageType;
 
     public Output<String> getUsageType() {
-        return this.usageType == null ? Output.empty() : this.usageType;
+        return this.usageType == null ? Codegen.empty() : this.usageType;
     }
 
     public PlanDataArgs(
@@ -70,10 +71,10 @@ public final class PlanDataArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PlanDataArgs() {
-        this.billingCycle = Output.empty();
-        this.effectiveDate = Output.empty();
-        this.planDetails = Output.empty();
-        this.usageType = Output.empty();
+        this.billingCycle = Codegen.empty();
+        this.effectiveDate = Codegen.empty();
+        this.planDetails = Codegen.empty();
+        this.usageType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class PlanDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder billingCycle(@Nullable String billingCycle) {
-            this.billingCycle = Output.ofNullable(billingCycle);
+            this.billingCycle = Codegen.ofNullable(billingCycle);
             return this;
         }
         public Builder effectiveDate(@Nullable Output<String> effectiveDate) {
@@ -115,7 +116,7 @@ public final class PlanDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder effectiveDate(@Nullable String effectiveDate) {
-            this.effectiveDate = Output.ofNullable(effectiveDate);
+            this.effectiveDate = Codegen.ofNullable(effectiveDate);
             return this;
         }
         public Builder planDetails(@Nullable Output<String> planDetails) {
@@ -123,7 +124,7 @@ public final class PlanDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder planDetails(@Nullable String planDetails) {
-            this.planDetails = Output.ofNullable(planDetails);
+            this.planDetails = Codegen.ofNullable(planDetails);
             return this;
         }
         public Builder usageType(@Nullable Output<String> usageType) {
@@ -131,7 +132,7 @@ public final class PlanDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder usageType(@Nullable String usageType) {
-            this.usageType = Output.ofNullable(usageType);
+            this.usageType = Codegen.ofNullable(usageType);
             return this;
         }        public PlanDataArgs build() {
             return new PlanDataArgs(billingCycle, effectiveDate, planDetails, usageType);

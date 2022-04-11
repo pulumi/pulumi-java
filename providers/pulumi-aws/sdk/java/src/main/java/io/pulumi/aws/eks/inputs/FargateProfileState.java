@@ -6,6 +6,7 @@ package io.pulumi.aws.eks.inputs;
 import io.pulumi.aws.eks.inputs.FargateProfileSelectorGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> clusterName;
 
     public Output<String> getClusterName() {
-        return this.clusterName == null ? Output.empty() : this.clusterName;
+        return this.clusterName == null ? Codegen.empty() : this.clusterName;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> fargateProfileName;
 
     public Output<String> getFargateProfileName() {
-        return this.fargateProfileName == null ? Output.empty() : this.fargateProfileName;
+        return this.fargateProfileName == null ? Codegen.empty() : this.fargateProfileName;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> podExecutionRoleArn;
 
     public Output<String> getPodExecutionRoleArn() {
-        return this.podExecutionRoleArn == null ? Output.empty() : this.podExecutionRoleArn;
+        return this.podExecutionRoleArn == null ? Codegen.empty() : this.podExecutionRoleArn;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<FargateProfileSelectorGetArgs>> selectors;
 
     public Output<List<FargateProfileSelectorGetArgs>> getSelectors() {
-        return this.selectors == null ? Output.empty() : this.selectors;
+        return this.selectors == null ? Codegen.empty() : this.selectors;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Output.empty() : this.subnetIds;
+        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public FargateProfileState(
@@ -138,15 +139,15 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
     }
 
     private FargateProfileState() {
-        this.arn = Output.empty();
-        this.clusterName = Output.empty();
-        this.fargateProfileName = Output.empty();
-        this.podExecutionRoleArn = Output.empty();
-        this.selectors = Output.empty();
-        this.status = Output.empty();
-        this.subnetIds = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.clusterName = Codegen.empty();
+        this.fargateProfileName = Codegen.empty();
+        this.podExecutionRoleArn = Codegen.empty();
+        this.selectors = Codegen.empty();
+        this.status = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -190,7 +191,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder clusterName(@Nullable Output<String> clusterName) {
@@ -198,7 +199,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Output.ofNullable(clusterName);
+            this.clusterName = Codegen.ofNullable(clusterName);
             return this;
         }
         public Builder fargateProfileName(@Nullable Output<String> fargateProfileName) {
@@ -206,7 +207,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder fargateProfileName(@Nullable String fargateProfileName) {
-            this.fargateProfileName = Output.ofNullable(fargateProfileName);
+            this.fargateProfileName = Codegen.ofNullable(fargateProfileName);
             return this;
         }
         public Builder podExecutionRoleArn(@Nullable Output<String> podExecutionRoleArn) {
@@ -214,7 +215,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder podExecutionRoleArn(@Nullable String podExecutionRoleArn) {
-            this.podExecutionRoleArn = Output.ofNullable(podExecutionRoleArn);
+            this.podExecutionRoleArn = Codegen.ofNullable(podExecutionRoleArn);
             return this;
         }
         public Builder selectors(@Nullable Output<List<FargateProfileSelectorGetArgs>> selectors) {
@@ -222,7 +223,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder selectors(@Nullable List<FargateProfileSelectorGetArgs> selectors) {
-            this.selectors = Output.ofNullable(selectors);
+            this.selectors = Codegen.ofNullable(selectors);
             return this;
         }
         public Builder selectors(FargateProfileSelectorGetArgs... selectors) {
@@ -233,7 +234,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
@@ -241,7 +242,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Output.ofNullable(subnetIds);
+            this.subnetIds = Codegen.ofNullable(subnetIds);
             return this;
         }
         public Builder subnetIds(String... subnetIds) {
@@ -252,7 +253,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -260,7 +261,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public FargateProfileState build() {
             return new FargateProfileState(arn, clusterName, fargateProfileName, podExecutionRoleArn, selectors, status, subnetIds, tags, tagsAll);

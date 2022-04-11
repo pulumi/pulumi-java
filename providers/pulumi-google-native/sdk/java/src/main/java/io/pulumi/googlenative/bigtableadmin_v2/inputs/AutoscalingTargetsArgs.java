@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigtableadmin_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class AutoscalingTargetsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Integer> cpuUtilizationPercent;
 
     public Output<Integer> getCpuUtilizationPercent() {
-        return this.cpuUtilizationPercent == null ? Output.empty() : this.cpuUtilizationPercent;
+        return this.cpuUtilizationPercent == null ? Codegen.empty() : this.cpuUtilizationPercent;
     }
 
     public AutoscalingTargetsArgs(@Nullable Output<Integer> cpuUtilizationPercent) {
@@ -34,7 +35,7 @@ public final class AutoscalingTargetsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private AutoscalingTargetsArgs() {
-        this.cpuUtilizationPercent = Output.empty();
+        this.cpuUtilizationPercent = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class AutoscalingTargetsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder cpuUtilizationPercent(@Nullable Integer cpuUtilizationPercent) {
-            this.cpuUtilizationPercent = Output.ofNullable(cpuUtilizationPercent);
+            this.cpuUtilizationPercent = Codegen.ofNullable(cpuUtilizationPercent);
             return this;
         }        public AutoscalingTargetsArgs build() {
             return new AutoscalingTargetsArgs(cpuUtilizationPercent);

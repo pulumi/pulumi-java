@@ -6,6 +6,7 @@ package io.pulumi.aws.msk.inputs;
 import io.pulumi.aws.msk.inputs.ClusterOpenMonitoringPrometheusArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -29,7 +30,7 @@ public final class ClusterOpenMonitoringArgs extends io.pulumi.resources.Resourc
     }
 
     private ClusterOpenMonitoringArgs() {
-        this.prometheus = Output.empty();
+        this.prometheus = Codegen.empty();
     }
 
     public static Builder builder() {

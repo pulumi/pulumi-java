@@ -8,6 +8,7 @@ import io.pulumi.azurenative.streamanalytics.inputs.StreamInputPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> inputName;
 
     public Output<String> getInputName() {
-        return this.inputName == null ? Output.empty() : this.inputName;
+        return this.inputName == null ? Codegen.empty() : this.inputName;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> properties;
 
     public Output<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -86,11 +87,11 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InputArgs() {
-        this.inputName = Output.empty();
-        this.jobName = Output.empty();
-        this.name = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.inputName = Codegen.empty();
+        this.jobName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inputName(@Nullable String inputName) {
-            this.inputName = Output.ofNullable(inputName);
+            this.inputName = Codegen.ofNullable(inputName);
             return this;
         }
         public Builder jobName(Output<String> jobName) {
@@ -142,7 +143,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder properties(@Nullable Output<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> properties) {
@@ -150,7 +151,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

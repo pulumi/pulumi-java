@@ -7,6 +7,7 @@ import io.pulumi.awsnative.rum.inputs.AppMonitorConfigurationArgs;
 import io.pulumi.awsnative.rum.inputs.AppMonitorTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +23,7 @@ public final class AppMonitorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AppMonitorConfigurationArgs> appMonitorConfiguration;
 
     public Output<AppMonitorConfigurationArgs> getAppMonitorConfiguration() {
-        return this.appMonitorConfiguration == null ? Output.empty() : this.appMonitorConfiguration;
+        return this.appMonitorConfiguration == null ? Codegen.empty() : this.appMonitorConfiguration;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class AppMonitorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> cwLogEnabled;
 
     public Output<Boolean> getCwLogEnabled() {
-        return this.cwLogEnabled == null ? Output.empty() : this.cwLogEnabled;
+        return this.cwLogEnabled == null ? Codegen.empty() : this.cwLogEnabled;
     }
 
     /**
@@ -55,14 +56,14 @@ public final class AppMonitorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<AppMonitorTagArgs>> tags;
 
     public Output<List<AppMonitorTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public AppMonitorArgs(
@@ -79,11 +80,11 @@ public final class AppMonitorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AppMonitorArgs() {
-        this.appMonitorConfiguration = Output.empty();
-        this.cwLogEnabled = Output.empty();
-        this.domain = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
+        this.appMonitorConfiguration = Codegen.empty();
+        this.cwLogEnabled = Codegen.empty();
+        this.domain = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -119,7 +120,7 @@ public final class AppMonitorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appMonitorConfiguration(@Nullable AppMonitorConfigurationArgs appMonitorConfiguration) {
-            this.appMonitorConfiguration = Output.ofNullable(appMonitorConfiguration);
+            this.appMonitorConfiguration = Codegen.ofNullable(appMonitorConfiguration);
             return this;
         }
         public Builder cwLogEnabled(@Nullable Output<Boolean> cwLogEnabled) {
@@ -127,7 +128,7 @@ public final class AppMonitorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cwLogEnabled(@Nullable Boolean cwLogEnabled) {
-            this.cwLogEnabled = Output.ofNullable(cwLogEnabled);
+            this.cwLogEnabled = Codegen.ofNullable(cwLogEnabled);
             return this;
         }
         public Builder domain(Output<String> domain) {
@@ -143,7 +144,7 @@ public final class AppMonitorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<List<AppMonitorTagArgs>> tags) {
@@ -151,7 +152,7 @@ public final class AppMonitorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<AppMonitorTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(AppMonitorTagArgs... tags) {

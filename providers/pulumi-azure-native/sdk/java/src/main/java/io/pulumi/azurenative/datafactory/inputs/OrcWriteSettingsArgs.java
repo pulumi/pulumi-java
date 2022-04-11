@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class OrcWriteSettingsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Object> fileNamePrefix;
 
     public Output<Object> getFileNamePrefix() {
-        return this.fileNamePrefix == null ? Output.empty() : this.fileNamePrefix;
+        return this.fileNamePrefix == null ? Codegen.empty() : this.fileNamePrefix;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class OrcWriteSettingsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Object> maxRowsPerFile;
 
     public Output<Object> getMaxRowsPerFile() {
-        return this.maxRowsPerFile == null ? Output.empty() : this.maxRowsPerFile;
+        return this.maxRowsPerFile == null ? Codegen.empty() : this.maxRowsPerFile;
     }
 
     /**
@@ -63,9 +64,9 @@ public final class OrcWriteSettingsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private OrcWriteSettingsArgs() {
-        this.fileNamePrefix = Output.empty();
-        this.maxRowsPerFile = Output.empty();
-        this.type = Output.empty();
+        this.fileNamePrefix = Codegen.empty();
+        this.maxRowsPerFile = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class OrcWriteSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder fileNamePrefix(@Nullable Object fileNamePrefix) {
-            this.fileNamePrefix = Output.ofNullable(fileNamePrefix);
+            this.fileNamePrefix = Codegen.ofNullable(fileNamePrefix);
             return this;
         }
         public Builder maxRowsPerFile(@Nullable Output<Object> maxRowsPerFile) {
@@ -105,7 +106,7 @@ public final class OrcWriteSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder maxRowsPerFile(@Nullable Object maxRowsPerFile) {
-            this.maxRowsPerFile = Output.ofNullable(maxRowsPerFile);
+            this.maxRowsPerFile = Codegen.ofNullable(maxRowsPerFile);
             return this;
         }
         public Builder type(Output<String> type) {

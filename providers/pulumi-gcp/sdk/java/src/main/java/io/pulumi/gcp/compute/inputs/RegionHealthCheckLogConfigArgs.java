@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class RegionHealthCheckLogConfigArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Boolean> enable;
 
     public Output<Boolean> getEnable() {
-        return this.enable == null ? Output.empty() : this.enable;
+        return this.enable == null ? Codegen.empty() : this.enable;
     }
 
     public RegionHealthCheckLogConfigArgs(@Nullable Output<Boolean> enable) {
@@ -31,7 +32,7 @@ public final class RegionHealthCheckLogConfigArgs extends io.pulumi.resources.Re
     }
 
     private RegionHealthCheckLogConfigArgs() {
-        this.enable = Output.empty();
+        this.enable = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class RegionHealthCheckLogConfigArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder enable(@Nullable Boolean enable) {
-            this.enable = Output.ofNullable(enable);
+            this.enable = Codegen.ofNullable(enable);
             return this;
         }        public RegionHealthCheckLogConfigArgs build() {
             return new RegionHealthCheckLogConfigArgs(enable);

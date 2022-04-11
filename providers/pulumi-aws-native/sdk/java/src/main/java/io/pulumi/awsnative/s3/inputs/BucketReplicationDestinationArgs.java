@@ -10,6 +10,7 @@ import io.pulumi.awsnative.s3.inputs.BucketMetricsArgs;
 import io.pulumi.awsnative.s3.inputs.BucketReplicationTimeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,14 +28,14 @@ public final class BucketReplicationDestinationArgs extends io.pulumi.resources.
       private final @Nullable Output<BucketAccessControlTranslationArgs> accessControlTranslation;
 
     public Output<BucketAccessControlTranslationArgs> getAccessControlTranslation() {
-        return this.accessControlTranslation == null ? Output.empty() : this.accessControlTranslation;
+        return this.accessControlTranslation == null ? Codegen.empty() : this.accessControlTranslation;
     }
 
     @Import(name="account")
       private final @Nullable Output<String> account;
 
     public Output<String> getAccount() {
-        return this.account == null ? Output.empty() : this.account;
+        return this.account == null ? Codegen.empty() : this.account;
     }
 
     @Import(name="bucket", required=true)
@@ -48,21 +49,21 @@ public final class BucketReplicationDestinationArgs extends io.pulumi.resources.
       private final @Nullable Output<BucketEncryptionConfigurationArgs> encryptionConfiguration;
 
     public Output<BucketEncryptionConfigurationArgs> getEncryptionConfiguration() {
-        return this.encryptionConfiguration == null ? Output.empty() : this.encryptionConfiguration;
+        return this.encryptionConfiguration == null ? Codegen.empty() : this.encryptionConfiguration;
     }
 
     @Import(name="metrics")
       private final @Nullable Output<BucketMetricsArgs> metrics;
 
     public Output<BucketMetricsArgs> getMetrics() {
-        return this.metrics == null ? Output.empty() : this.metrics;
+        return this.metrics == null ? Codegen.empty() : this.metrics;
     }
 
     @Import(name="replicationTime")
       private final @Nullable Output<BucketReplicationTimeArgs> replicationTime;
 
     public Output<BucketReplicationTimeArgs> getReplicationTime() {
-        return this.replicationTime == null ? Output.empty() : this.replicationTime;
+        return this.replicationTime == null ? Codegen.empty() : this.replicationTime;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class BucketReplicationDestinationArgs extends io.pulumi.resources.
       private final @Nullable Output<BucketReplicationDestinationStorageClass> storageClass;
 
     public Output<BucketReplicationDestinationStorageClass> getStorageClass() {
-        return this.storageClass == null ? Output.empty() : this.storageClass;
+        return this.storageClass == null ? Codegen.empty() : this.storageClass;
     }
 
     public BucketReplicationDestinationArgs(
@@ -94,13 +95,13 @@ public final class BucketReplicationDestinationArgs extends io.pulumi.resources.
     }
 
     private BucketReplicationDestinationArgs() {
-        this.accessControlTranslation = Output.empty();
-        this.account = Output.empty();
-        this.bucket = Output.empty();
-        this.encryptionConfiguration = Output.empty();
-        this.metrics = Output.empty();
-        this.replicationTime = Output.empty();
-        this.storageClass = Output.empty();
+        this.accessControlTranslation = Codegen.empty();
+        this.account = Codegen.empty();
+        this.bucket = Codegen.empty();
+        this.encryptionConfiguration = Codegen.empty();
+        this.metrics = Codegen.empty();
+        this.replicationTime = Codegen.empty();
+        this.storageClass = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class BucketReplicationDestinationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder accessControlTranslation(@Nullable BucketAccessControlTranslationArgs accessControlTranslation) {
-            this.accessControlTranslation = Output.ofNullable(accessControlTranslation);
+            this.accessControlTranslation = Codegen.ofNullable(accessControlTranslation);
             return this;
         }
         public Builder account(@Nullable Output<String> account) {
@@ -148,7 +149,7 @@ public final class BucketReplicationDestinationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder account(@Nullable String account) {
-            this.account = Output.ofNullable(account);
+            this.account = Codegen.ofNullable(account);
             return this;
         }
         public Builder bucket(Output<String> bucket) {
@@ -164,7 +165,7 @@ public final class BucketReplicationDestinationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder encryptionConfiguration(@Nullable BucketEncryptionConfigurationArgs encryptionConfiguration) {
-            this.encryptionConfiguration = Output.ofNullable(encryptionConfiguration);
+            this.encryptionConfiguration = Codegen.ofNullable(encryptionConfiguration);
             return this;
         }
         public Builder metrics(@Nullable Output<BucketMetricsArgs> metrics) {
@@ -172,7 +173,7 @@ public final class BucketReplicationDestinationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder metrics(@Nullable BucketMetricsArgs metrics) {
-            this.metrics = Output.ofNullable(metrics);
+            this.metrics = Codegen.ofNullable(metrics);
             return this;
         }
         public Builder replicationTime(@Nullable Output<BucketReplicationTimeArgs> replicationTime) {
@@ -180,7 +181,7 @@ public final class BucketReplicationDestinationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder replicationTime(@Nullable BucketReplicationTimeArgs replicationTime) {
-            this.replicationTime = Output.ofNullable(replicationTime);
+            this.replicationTime = Codegen.ofNullable(replicationTime);
             return this;
         }
         public Builder storageClass(@Nullable Output<BucketReplicationDestinationStorageClass> storageClass) {
@@ -188,7 +189,7 @@ public final class BucketReplicationDestinationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder storageClass(@Nullable BucketReplicationDestinationStorageClass storageClass) {
-            this.storageClass = Output.ofNullable(storageClass);
+            this.storageClass = Codegen.ofNullable(storageClass);
             return this;
         }        public BucketReplicationDestinationArgs build() {
             return new BucketReplicationDestinationArgs(accessControlTranslation, account, bucket, encryptionConfiguration, metrics, replicationTime, storageClass);

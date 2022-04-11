@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class JobCommandArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class JobCommandArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> pythonVersion;
 
     public Output<String> getPythonVersion() {
-        return this.pythonVersion == null ? Output.empty() : this.pythonVersion;
+        return this.pythonVersion == null ? Codegen.empty() : this.pythonVersion;
     }
 
     /**
@@ -57,9 +58,9 @@ public final class JobCommandArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobCommandArgs() {
-        this.name = Output.empty();
-        this.pythonVersion = Output.empty();
-        this.scriptLocation = Output.empty();
+        this.name = Codegen.empty();
+        this.pythonVersion = Codegen.empty();
+        this.scriptLocation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class JobCommandArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder pythonVersion(@Nullable Output<String> pythonVersion) {
@@ -99,7 +100,7 @@ public final class JobCommandArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pythonVersion(@Nullable String pythonVersion) {
-            this.pythonVersion = Output.ofNullable(pythonVersion);
+            this.pythonVersion = Codegen.ofNullable(pythonVersion);
             return this;
         }
         public Builder scriptLocation(Output<String> scriptLocation) {

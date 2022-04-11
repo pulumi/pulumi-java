@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class SecurityConfigurationEncryptionConfigurationS3EncryptionGetAr
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
+        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class SecurityConfigurationEncryptionConfigurationS3EncryptionGetAr
       private final @Nullable Output<String> s3EncryptionMode;
 
     public Output<String> getS3EncryptionMode() {
-        return this.s3EncryptionMode == null ? Output.empty() : this.s3EncryptionMode;
+        return this.s3EncryptionMode == null ? Codegen.empty() : this.s3EncryptionMode;
     }
 
     public SecurityConfigurationEncryptionConfigurationS3EncryptionGetArgs(
@@ -44,8 +45,8 @@ public final class SecurityConfigurationEncryptionConfigurationS3EncryptionGetAr
     }
 
     private SecurityConfigurationEncryptionConfigurationS3EncryptionGetArgs() {
-        this.kmsKeyArn = Output.empty();
-        this.s3EncryptionMode = Output.empty();
+        this.kmsKeyArn = Codegen.empty();
+        this.s3EncryptionMode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class SecurityConfigurationEncryptionConfigurationS3EncryptionGetAr
             return this;
         }
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
             return this;
         }
         public Builder s3EncryptionMode(@Nullable Output<String> s3EncryptionMode) {
@@ -83,7 +84,7 @@ public final class SecurityConfigurationEncryptionConfigurationS3EncryptionGetAr
             return this;
         }
         public Builder s3EncryptionMode(@Nullable String s3EncryptionMode) {
-            this.s3EncryptionMode = Output.ofNullable(s3EncryptionMode);
+            this.s3EncryptionMode = Codegen.ofNullable(s3EncryptionMode);
             return this;
         }        public SecurityConfigurationEncryptionConfigurationS3EncryptionGetArgs build() {
             return new SecurityConfigurationEncryptionConfigurationS3EncryptionGetArgs(kmsKeyArn, s3EncryptionMode);

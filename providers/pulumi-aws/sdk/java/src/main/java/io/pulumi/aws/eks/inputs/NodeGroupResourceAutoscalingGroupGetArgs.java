@@ -5,6 +5,7 @@ package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class NodeGroupResourceAutoscalingGroupGetArgs extends io.pulumi.re
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public NodeGroupResourceAutoscalingGroupGetArgs(@Nullable Output<String> name) {
@@ -30,7 +31,7 @@ public final class NodeGroupResourceAutoscalingGroupGetArgs extends io.pulumi.re
     }
 
     private NodeGroupResourceAutoscalingGroupGetArgs() {
-        this.name = Output.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class NodeGroupResourceAutoscalingGroupGetArgs extends io.pulumi.re
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public NodeGroupResourceAutoscalingGroupGetArgs build() {
             return new NodeGroupResourceAutoscalingGroupGetArgs(name);

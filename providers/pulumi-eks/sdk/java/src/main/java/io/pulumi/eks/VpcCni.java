@@ -5,6 +5,7 @@ package io.pulumi.eks;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.eks.Utilities;
 import io.pulumi.eks.VpcCniArgs;
 import javax.annotation.Nullable;
@@ -37,7 +38,7 @@ public class VpcCni extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VpcCni(String name, VpcCniArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("eks:index:VpcCni", name, args == null ? VpcCniArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("eks:index:VpcCni", name, args == null ? VpcCniArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VpcCni(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

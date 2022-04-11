@@ -8,6 +8,7 @@ import io.pulumi.azurenative.network.inputs.RetentionPolicyParametersArgs;
 import io.pulumi.azurenative.network.inputs.TrafficAnalyticsPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -27,7 +28,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TrafficAnalyticsPropertiesArgs> flowAnalyticsConfiguration;
 
     public Output<TrafficAnalyticsPropertiesArgs> getFlowAnalyticsConfiguration() {
-        return this.flowAnalyticsConfiguration == null ? Output.empty() : this.flowAnalyticsConfiguration;
+        return this.flowAnalyticsConfiguration == null ? Codegen.empty() : this.flowAnalyticsConfiguration;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> flowLogName;
 
     public Output<String> getFlowLogName() {
-        return this.flowLogName == null ? Output.empty() : this.flowLogName;
+        return this.flowLogName == null ? Codegen.empty() : this.flowLogName;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FlowLogFormatParametersArgs> format;
 
     public Output<FlowLogFormatParametersArgs> getFormat() {
-        return this.format == null ? Output.empty() : this.format;
+        return this.format == null ? Codegen.empty() : this.format;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RetentionPolicyParametersArgs> retentionPolicy;
 
     public Output<RetentionPolicyParametersArgs> getRetentionPolicy() {
-        return this.retentionPolicy == null ? Output.empty() : this.retentionPolicy;
+        return this.retentionPolicy == null ? Codegen.empty() : this.retentionPolicy;
     }
 
     /**
@@ -137,7 +138,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -179,18 +180,18 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FlowLogArgs() {
-        this.enabled = Output.empty();
-        this.flowAnalyticsConfiguration = Output.empty();
-        this.flowLogName = Output.empty();
-        this.format = Output.empty();
-        this.id = Output.empty();
-        this.location = Output.empty();
-        this.networkWatcherName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.retentionPolicy = Output.empty();
-        this.storageId = Output.empty();
-        this.tags = Output.empty();
-        this.targetResourceId = Output.empty();
+        this.enabled = Codegen.empty();
+        this.flowAnalyticsConfiguration = Codegen.empty();
+        this.flowLogName = Codegen.empty();
+        this.format = Codegen.empty();
+        this.id = Codegen.empty();
+        this.location = Codegen.empty();
+        this.networkWatcherName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.retentionPolicy = Codegen.empty();
+        this.storageId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.targetResourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -240,7 +241,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder flowAnalyticsConfiguration(@Nullable Output<TrafficAnalyticsPropertiesArgs> flowAnalyticsConfiguration) {
@@ -248,7 +249,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder flowAnalyticsConfiguration(@Nullable TrafficAnalyticsPropertiesArgs flowAnalyticsConfiguration) {
-            this.flowAnalyticsConfiguration = Output.ofNullable(flowAnalyticsConfiguration);
+            this.flowAnalyticsConfiguration = Codegen.ofNullable(flowAnalyticsConfiguration);
             return this;
         }
         public Builder flowLogName(@Nullable Output<String> flowLogName) {
@@ -256,7 +257,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder flowLogName(@Nullable String flowLogName) {
-            this.flowLogName = Output.ofNullable(flowLogName);
+            this.flowLogName = Codegen.ofNullable(flowLogName);
             return this;
         }
         public Builder format(@Nullable Output<FlowLogFormatParametersArgs> format) {
@@ -264,7 +265,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder format(@Nullable FlowLogFormatParametersArgs format) {
-            this.format = Output.ofNullable(format);
+            this.format = Codegen.ofNullable(format);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -272,7 +273,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -280,7 +281,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder networkWatcherName(Output<String> networkWatcherName) {
@@ -304,7 +305,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retentionPolicy(@Nullable RetentionPolicyParametersArgs retentionPolicy) {
-            this.retentionPolicy = Output.ofNullable(retentionPolicy);
+            this.retentionPolicy = Codegen.ofNullable(retentionPolicy);
             return this;
         }
         public Builder storageId(Output<String> storageId) {
@@ -320,7 +321,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder targetResourceId(Output<String> targetResourceId) {

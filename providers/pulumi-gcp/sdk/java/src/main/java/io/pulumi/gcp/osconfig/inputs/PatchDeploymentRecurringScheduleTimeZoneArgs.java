@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class PatchDeploymentRecurringScheduleTimeZoneArgs extends io.pulum
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public PatchDeploymentRecurringScheduleTimeZoneArgs(
@@ -44,8 +45,8 @@ public final class PatchDeploymentRecurringScheduleTimeZoneArgs extends io.pulum
     }
 
     private PatchDeploymentRecurringScheduleTimeZoneArgs() {
-        this.id = Output.empty();
-        this.version = Output.empty();
+        this.id = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class PatchDeploymentRecurringScheduleTimeZoneArgs extends io.pulum
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public PatchDeploymentRecurringScheduleTimeZoneArgs build() {
             return new PatchDeploymentRecurringScheduleTimeZoneArgs(id, version);

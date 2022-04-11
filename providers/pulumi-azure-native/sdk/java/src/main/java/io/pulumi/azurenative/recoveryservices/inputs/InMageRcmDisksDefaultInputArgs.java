@@ -7,6 +7,7 @@ import io.pulumi.azurenative.recoveryservices.enums.DiskAccountType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class InMageRcmDisksDefaultInputArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> diskEncryptionSetId;
 
     public Output<String> getDiskEncryptionSetId() {
-        return this.diskEncryptionSetId == null ? Output.empty() : this.diskEncryptionSetId;
+        return this.diskEncryptionSetId == null ? Codegen.empty() : this.diskEncryptionSetId;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class InMageRcmDisksDefaultInputArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Either<String,DiskAccountType>> diskType;
 
     public Output<Either<String,DiskAccountType>> getDiskType() {
-        return this.diskType == null ? Output.empty() : this.diskType;
+        return this.diskType == null ? Codegen.empty() : this.diskType;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class InMageRcmDisksDefaultInputArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> logStorageAccountId;
 
     public Output<String> getLogStorageAccountId() {
-        return this.logStorageAccountId == null ? Output.empty() : this.logStorageAccountId;
+        return this.logStorageAccountId == null ? Codegen.empty() : this.logStorageAccountId;
     }
 
     public InMageRcmDisksDefaultInputArgs(
@@ -63,9 +64,9 @@ public final class InMageRcmDisksDefaultInputArgs extends io.pulumi.resources.Re
     }
 
     private InMageRcmDisksDefaultInputArgs() {
-        this.diskEncryptionSetId = Output.empty();
-        this.diskType = Output.empty();
-        this.logStorageAccountId = Output.empty();
+        this.diskEncryptionSetId = Codegen.empty();
+        this.diskType = Codegen.empty();
+        this.logStorageAccountId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class InMageRcmDisksDefaultInputArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder diskEncryptionSetId(@Nullable String diskEncryptionSetId) {
-            this.diskEncryptionSetId = Output.ofNullable(diskEncryptionSetId);
+            this.diskEncryptionSetId = Codegen.ofNullable(diskEncryptionSetId);
             return this;
         }
         public Builder diskType(@Nullable Output<Either<String,DiskAccountType>> diskType) {
@@ -105,7 +106,7 @@ public final class InMageRcmDisksDefaultInputArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder diskType(@Nullable Either<String,DiskAccountType> diskType) {
-            this.diskType = Output.ofNullable(diskType);
+            this.diskType = Codegen.ofNullable(diskType);
             return this;
         }
         public Builder logStorageAccountId(@Nullable Output<String> logStorageAccountId) {
@@ -113,7 +114,7 @@ public final class InMageRcmDisksDefaultInputArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder logStorageAccountId(@Nullable String logStorageAccountId) {
-            this.logStorageAccountId = Output.ofNullable(logStorageAccountId);
+            this.logStorageAccountId = Codegen.ofNullable(logStorageAccountId);
             return this;
         }        public InMageRcmDisksDefaultInputArgs build() {
             return new InMageRcmDisksDefaultInputArgs(diskEncryptionSetId, diskType, logStorageAccountId);

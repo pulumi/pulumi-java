@@ -7,6 +7,7 @@ import io.pulumi.awsnative.ses.inputs.ContactListTagArgs;
 import io.pulumi.awsnative.ses.inputs.ContactListTopicArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> contactListName;
 
     public Output<String> getContactListName() {
-        return this.contactListName == null ? Output.empty() : this.contactListName;
+        return this.contactListName == null ? Codegen.empty() : this.contactListName;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ContactListTagArgs>> tags;
 
     public Output<List<ContactListTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ContactListTopicArgs>> topics;
 
     public Output<List<ContactListTopicArgs>> getTopics() {
-        return this.topics == null ? Output.empty() : this.topics;
+        return this.topics == null ? Codegen.empty() : this.topics;
     }
 
     public ContactListArgs(
@@ -73,10 +74,10 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContactListArgs() {
-        this.contactListName = Output.empty();
-        this.description = Output.empty();
-        this.tags = Output.empty();
-        this.topics = Output.empty();
+        this.contactListName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.topics = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contactListName(@Nullable String contactListName) {
-            this.contactListName = Output.ofNullable(contactListName);
+            this.contactListName = Codegen.ofNullable(contactListName);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -118,7 +119,7 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder tags(@Nullable Output<List<ContactListTagArgs>> tags) {
@@ -126,7 +127,7 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<ContactListTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ContactListTagArgs... tags) {
@@ -137,7 +138,7 @@ public final class ContactListArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder topics(@Nullable List<ContactListTopicArgs> topics) {
-            this.topics = Output.ofNullable(topics);
+            this.topics = Codegen.ofNullable(topics);
             return this;
         }
         public Builder topics(ContactListTopicArgs... topics) {

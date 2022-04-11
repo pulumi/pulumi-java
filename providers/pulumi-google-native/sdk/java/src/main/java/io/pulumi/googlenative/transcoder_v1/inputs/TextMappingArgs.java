@@ -5,6 +5,7 @@ package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -61,9 +62,9 @@ public final class TextMappingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TextMappingArgs() {
-        this.atomKey = Output.empty();
-        this.inputKey = Output.empty();
-        this.inputTrack = Output.empty();
+        this.atomKey = Codegen.empty();
+        this.inputKey = Codegen.empty();
+        this.inputTrack = Codegen.empty();
     }
 
     public static Builder builder() {

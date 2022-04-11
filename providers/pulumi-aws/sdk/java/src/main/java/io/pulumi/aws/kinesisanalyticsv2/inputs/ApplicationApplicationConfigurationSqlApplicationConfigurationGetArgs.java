@@ -8,6 +8,7 @@ import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurati
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
       private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputGetArgs> input;
 
     public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputGetArgs> getInput() {
-        return this.input == null ? Output.empty() : this.input;
+        return this.input == null ? Codegen.empty() : this.input;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
       private final @Nullable Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs>> outputs;
 
     public Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs>> getOutputs() {
-        return this.outputs == null ? Output.empty() : this.outputs;
+        return this.outputs == null ? Codegen.empty() : this.outputs;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
       private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs> referenceDataSource;
 
     public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs> getReferenceDataSource() {
-        return this.referenceDataSource == null ? Output.empty() : this.referenceDataSource;
+        return this.referenceDataSource == null ? Codegen.empty() : this.referenceDataSource;
     }
 
     public ApplicationApplicationConfigurationSqlApplicationConfigurationGetArgs(
@@ -60,9 +61,9 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
 
     private ApplicationApplicationConfigurationSqlApplicationConfigurationGetArgs() {
-        this.input = Output.empty();
-        this.outputs = Output.empty();
-        this.referenceDataSource = Output.empty();
+        this.input = Codegen.empty();
+        this.outputs = Codegen.empty();
+        this.referenceDataSource = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             return this;
         }
         public Builder input(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInputGetArgs input) {
-            this.input = Output.ofNullable(input);
+            this.input = Codegen.ofNullable(input);
             return this;
         }
         public Builder outputs(@Nullable Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs>> outputs) {
@@ -102,7 +103,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             return this;
         }
         public Builder outputs(@Nullable List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs> outputs) {
-            this.outputs = Output.ofNullable(outputs);
+            this.outputs = Codegen.ofNullable(outputs);
             return this;
         }
         public Builder outputs(ApplicationApplicationConfigurationSqlApplicationConfigurationOutputGetArgs... outputs) {
@@ -113,7 +114,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             return this;
         }
         public Builder referenceDataSource(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs referenceDataSource) {
-            this.referenceDataSource = Output.ofNullable(referenceDataSource);
+            this.referenceDataSource = Codegen.ofNullable(referenceDataSource);
             return this;
         }        public ApplicationApplicationConfigurationSqlApplicationConfigurationGetArgs build() {
             return new ApplicationApplicationConfigurationSqlApplicationConfigurationGetArgs(input, outputs, referenceDataSource);

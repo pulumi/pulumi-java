@@ -5,6 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -48,8 +49,8 @@ public final class MonitoringScheduleVpcConfigArgs extends io.pulumi.resources.R
     }
 
     private MonitoringScheduleVpcConfigArgs() {
-        this.securityGroupIds = Output.empty();
-        this.subnets = Output.empty();
+        this.securityGroupIds = Codegen.empty();
+        this.subnets = Codegen.empty();
     }
 
     public static Builder builder() {

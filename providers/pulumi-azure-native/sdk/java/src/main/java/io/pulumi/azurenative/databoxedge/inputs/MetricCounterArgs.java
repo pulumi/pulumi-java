@@ -6,6 +6,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 import io.pulumi.azurenative.databoxedge.inputs.MetricDimensionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class MetricCounterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<MetricDimensionArgs>> additionalDimensions;
 
     public Output<List<MetricDimensionArgs>> getAdditionalDimensions() {
-        return this.additionalDimensions == null ? Output.empty() : this.additionalDimensions;
+        return this.additionalDimensions == null ? Codegen.empty() : this.additionalDimensions;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class MetricCounterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<MetricDimensionArgs>> dimensionFilter;
 
     public Output<List<MetricDimensionArgs>> getDimensionFilter() {
-        return this.dimensionFilter == null ? Output.empty() : this.dimensionFilter;
+        return this.dimensionFilter == null ? Codegen.empty() : this.dimensionFilter;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class MetricCounterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> instance;
 
     public Output<String> getInstance() {
-        return this.instance == null ? Output.empty() : this.instance;
+        return this.instance == null ? Codegen.empty() : this.instance;
     }
 
     /**
@@ -76,10 +77,10 @@ public final class MetricCounterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MetricCounterArgs() {
-        this.additionalDimensions = Output.empty();
-        this.dimensionFilter = Output.empty();
-        this.instance = Output.empty();
-        this.name = Output.empty();
+        this.additionalDimensions = Codegen.empty();
+        this.dimensionFilter = Codegen.empty();
+        this.instance = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class MetricCounterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder additionalDimensions(@Nullable List<MetricDimensionArgs> additionalDimensions) {
-            this.additionalDimensions = Output.ofNullable(additionalDimensions);
+            this.additionalDimensions = Codegen.ofNullable(additionalDimensions);
             return this;
         }
         public Builder additionalDimensions(MetricDimensionArgs... additionalDimensions) {
@@ -124,7 +125,7 @@ public final class MetricCounterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dimensionFilter(@Nullable List<MetricDimensionArgs> dimensionFilter) {
-            this.dimensionFilter = Output.ofNullable(dimensionFilter);
+            this.dimensionFilter = Codegen.ofNullable(dimensionFilter);
             return this;
         }
         public Builder dimensionFilter(MetricDimensionArgs... dimensionFilter) {
@@ -135,7 +136,7 @@ public final class MetricCounterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instance(@Nullable String instance) {
-            this.instance = Output.ofNullable(instance);
+            this.instance = Codegen.ofNullable(instance);
             return this;
         }
         public Builder name(Output<String> name) {

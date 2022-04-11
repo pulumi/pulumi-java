@@ -5,6 +5,7 @@ package io.pulumi.awsnative.acmpca.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,35 +25,35 @@ public final class CertificateAuthorityCrlConfigurationArgs extends io.pulumi.re
       private final @Nullable Output<String> customCname;
 
     public Output<String> getCustomCname() {
-        return this.customCname == null ? Output.empty() : this.customCname;
+        return this.customCname == null ? Codegen.empty() : this.customCname;
     }
 
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     @Import(name="expirationInDays")
       private final @Nullable Output<Integer> expirationInDays;
 
     public Output<Integer> getExpirationInDays() {
-        return this.expirationInDays == null ? Output.empty() : this.expirationInDays;
+        return this.expirationInDays == null ? Codegen.empty() : this.expirationInDays;
     }
 
     @Import(name="s3BucketName")
       private final @Nullable Output<String> s3BucketName;
 
     public Output<String> getS3BucketName() {
-        return this.s3BucketName == null ? Output.empty() : this.s3BucketName;
+        return this.s3BucketName == null ? Codegen.empty() : this.s3BucketName;
     }
 
     @Import(name="s3ObjectAcl")
       private final @Nullable Output<String> s3ObjectAcl;
 
     public Output<String> getS3ObjectAcl() {
-        return this.s3ObjectAcl == null ? Output.empty() : this.s3ObjectAcl;
+        return this.s3ObjectAcl == null ? Codegen.empty() : this.s3ObjectAcl;
     }
 
     public CertificateAuthorityCrlConfigurationArgs(
@@ -69,11 +70,11 @@ public final class CertificateAuthorityCrlConfigurationArgs extends io.pulumi.re
     }
 
     private CertificateAuthorityCrlConfigurationArgs() {
-        this.customCname = Output.empty();
-        this.enabled = Output.empty();
-        this.expirationInDays = Output.empty();
-        this.s3BucketName = Output.empty();
-        this.s3ObjectAcl = Output.empty();
+        this.customCname = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.expirationInDays = Codegen.empty();
+        this.s3BucketName = Codegen.empty();
+        this.s3ObjectAcl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class CertificateAuthorityCrlConfigurationArgs extends io.pulumi.re
             return this;
         }
         public Builder customCname(@Nullable String customCname) {
-            this.customCname = Output.ofNullable(customCname);
+            this.customCname = Codegen.ofNullable(customCname);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -117,7 +118,7 @@ public final class CertificateAuthorityCrlConfigurationArgs extends io.pulumi.re
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder expirationInDays(@Nullable Output<Integer> expirationInDays) {
@@ -125,7 +126,7 @@ public final class CertificateAuthorityCrlConfigurationArgs extends io.pulumi.re
             return this;
         }
         public Builder expirationInDays(@Nullable Integer expirationInDays) {
-            this.expirationInDays = Output.ofNullable(expirationInDays);
+            this.expirationInDays = Codegen.ofNullable(expirationInDays);
             return this;
         }
         public Builder s3BucketName(@Nullable Output<String> s3BucketName) {
@@ -133,7 +134,7 @@ public final class CertificateAuthorityCrlConfigurationArgs extends io.pulumi.re
             return this;
         }
         public Builder s3BucketName(@Nullable String s3BucketName) {
-            this.s3BucketName = Output.ofNullable(s3BucketName);
+            this.s3BucketName = Codegen.ofNullable(s3BucketName);
             return this;
         }
         public Builder s3ObjectAcl(@Nullable Output<String> s3ObjectAcl) {
@@ -141,7 +142,7 @@ public final class CertificateAuthorityCrlConfigurationArgs extends io.pulumi.re
             return this;
         }
         public Builder s3ObjectAcl(@Nullable String s3ObjectAcl) {
-            this.s3ObjectAcl = Output.ofNullable(s3ObjectAcl);
+            this.s3ObjectAcl = Codegen.ofNullable(s3ObjectAcl);
             return this;
         }        public CertificateAuthorityCrlConfigurationArgs build() {
             return new CertificateAuthorityCrlConfigurationArgs(customCname, enabled, expirationInDays, s3BucketName, s3ObjectAcl);

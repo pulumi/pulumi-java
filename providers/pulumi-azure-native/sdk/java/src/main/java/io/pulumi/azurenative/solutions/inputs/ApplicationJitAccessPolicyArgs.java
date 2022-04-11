@@ -8,6 +8,7 @@ import io.pulumi.azurenative.solutions.inputs.JitApproverDefinitionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public final class ApplicationJitAccessPolicyArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Either<String,JitApprovalMode>> jitApprovalMode;
 
     public Output<Either<String,JitApprovalMode>> getJitApprovalMode() {
-        return this.jitApprovalMode == null ? Output.empty() : this.jitApprovalMode;
+        return this.jitApprovalMode == null ? Codegen.empty() : this.jitApprovalMode;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class ApplicationJitAccessPolicyArgs extends io.pulumi.resources.Re
       private final @Nullable Output<List<JitApproverDefinitionArgs>> jitApprovers;
 
     public Output<List<JitApproverDefinitionArgs>> getJitApprovers() {
-        return this.jitApprovers == null ? Output.empty() : this.jitApprovers;
+        return this.jitApprovers == null ? Codegen.empty() : this.jitApprovers;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class ApplicationJitAccessPolicyArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> maximumJitAccessDuration;
 
     public Output<String> getMaximumJitAccessDuration() {
-        return this.maximumJitAccessDuration == null ? Output.empty() : this.maximumJitAccessDuration;
+        return this.maximumJitAccessDuration == null ? Codegen.empty() : this.maximumJitAccessDuration;
     }
 
     public ApplicationJitAccessPolicyArgs(
@@ -79,10 +80,10 @@ public final class ApplicationJitAccessPolicyArgs extends io.pulumi.resources.Re
     }
 
     private ApplicationJitAccessPolicyArgs() {
-        this.jitAccessEnabled = Output.empty();
-        this.jitApprovalMode = Output.empty();
-        this.jitApprovers = Output.empty();
-        this.maximumJitAccessDuration = Output.empty();
+        this.jitAccessEnabled = Codegen.empty();
+        this.jitApprovalMode = Codegen.empty();
+        this.jitApprovers = Codegen.empty();
+        this.maximumJitAccessDuration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class ApplicationJitAccessPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder jitApprovalMode(@Nullable Either<String,JitApprovalMode> jitApprovalMode) {
-            this.jitApprovalMode = Output.ofNullable(jitApprovalMode);
+            this.jitApprovalMode = Codegen.ofNullable(jitApprovalMode);
             return this;
         }
         public Builder jitApprovers(@Nullable Output<List<JitApproverDefinitionArgs>> jitApprovers) {
@@ -132,7 +133,7 @@ public final class ApplicationJitAccessPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder jitApprovers(@Nullable List<JitApproverDefinitionArgs> jitApprovers) {
-            this.jitApprovers = Output.ofNullable(jitApprovers);
+            this.jitApprovers = Codegen.ofNullable(jitApprovers);
             return this;
         }
         public Builder jitApprovers(JitApproverDefinitionArgs... jitApprovers) {
@@ -143,7 +144,7 @@ public final class ApplicationJitAccessPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder maximumJitAccessDuration(@Nullable String maximumJitAccessDuration) {
-            this.maximumJitAccessDuration = Output.ofNullable(maximumJitAccessDuration);
+            this.maximumJitAccessDuration = Codegen.ofNullable(maximumJitAccessDuration);
             return this;
         }        public ApplicationJitAccessPolicyArgs build() {
             return new ApplicationJitAccessPolicyArgs(jitAccessEnabled, jitApprovalMode, jitApprovers, maximumJitAccessDuration);

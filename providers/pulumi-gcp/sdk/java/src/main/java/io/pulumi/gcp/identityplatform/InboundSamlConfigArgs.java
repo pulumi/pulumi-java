@@ -5,6 +5,7 @@ package io.pulumi.gcp.identityplatform;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.identityplatform.inputs.InboundSamlConfigIdpConfigArgs;
 import io.pulumi.gcp.identityplatform.inputs.InboundSamlConfigSpConfigArgs;
 import java.lang.Boolean;
@@ -36,7 +37,7 @@ public final class InboundSamlConfigArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class InboundSamlConfigArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class InboundSamlConfigArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -105,12 +106,12 @@ public final class InboundSamlConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     private InboundSamlConfigArgs() {
-        this.displayName = Output.empty();
-        this.enabled = Output.empty();
-        this.idpConfig = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.spConfig = Output.empty();
+        this.displayName = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.idpConfig = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.spConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class InboundSamlConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder idpConfig(Output<InboundSamlConfigIdpConfigArgs> idpConfig) {
@@ -172,7 +173,7 @@ public final class InboundSamlConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -180,7 +181,7 @@ public final class InboundSamlConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder spConfig(Output<InboundSamlConfigSpConfigArgs> spConfig) {

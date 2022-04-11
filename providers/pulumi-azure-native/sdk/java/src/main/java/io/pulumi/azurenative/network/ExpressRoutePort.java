@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -297,7 +298,7 @@ public class ExpressRoutePort extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ExpressRoutePort(String name, ExpressRoutePortArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:ExpressRoutePort", name, args == null ? ExpressRoutePortArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:ExpressRoutePort", name, args == null ? ExpressRoutePortArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ExpressRoutePort(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class DatabricksPropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> databricksAccessToken;
 
     public Output<String> getDatabricksAccessToken() {
-        return this.databricksAccessToken == null ? Output.empty() : this.databricksAccessToken;
+        return this.databricksAccessToken == null ? Codegen.empty() : this.databricksAccessToken;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class DatabricksPropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> workspaceUrl;
 
     public Output<String> getWorkspaceUrl() {
-        return this.workspaceUrl == null ? Output.empty() : this.workspaceUrl;
+        return this.workspaceUrl == null ? Codegen.empty() : this.workspaceUrl;
     }
 
     public DatabricksPropertiesArgs(
@@ -44,8 +45,8 @@ public final class DatabricksPropertiesArgs extends io.pulumi.resources.Resource
     }
 
     private DatabricksPropertiesArgs() {
-        this.databricksAccessToken = Output.empty();
-        this.workspaceUrl = Output.empty();
+        this.databricksAccessToken = Codegen.empty();
+        this.workspaceUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class DatabricksPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder databricksAccessToken(@Nullable String databricksAccessToken) {
-            this.databricksAccessToken = Output.ofNullable(databricksAccessToken);
+            this.databricksAccessToken = Codegen.ofNullable(databricksAccessToken);
             return this;
         }
         public Builder workspaceUrl(@Nullable Output<String> workspaceUrl) {
@@ -83,7 +84,7 @@ public final class DatabricksPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder workspaceUrl(@Nullable String workspaceUrl) {
-            this.workspaceUrl = Output.ofNullable(workspaceUrl);
+            this.workspaceUrl = Codegen.ofNullable(workspaceUrl);
             return this;
         }        public DatabricksPropertiesArgs build() {
             return new DatabricksPropertiesArgs(databricksAccessToken, workspaceUrl);

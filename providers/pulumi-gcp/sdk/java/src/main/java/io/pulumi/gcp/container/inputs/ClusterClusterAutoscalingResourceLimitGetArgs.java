@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ClusterClusterAutoscalingResourceLimitGetArgs extends io.pulu
       private final @Nullable Output<Integer> maximum;
 
     public Output<Integer> getMaximum() {
-        return this.maximum == null ? Output.empty() : this.maximum;
+        return this.maximum == null ? Codegen.empty() : this.maximum;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ClusterClusterAutoscalingResourceLimitGetArgs extends io.pulu
       private final @Nullable Output<Integer> minimum;
 
     public Output<Integer> getMinimum() {
-        return this.minimum == null ? Output.empty() : this.minimum;
+        return this.minimum == null ? Codegen.empty() : this.minimum;
     }
 
     /**
@@ -60,9 +61,9 @@ public final class ClusterClusterAutoscalingResourceLimitGetArgs extends io.pulu
     }
 
     private ClusterClusterAutoscalingResourceLimitGetArgs() {
-        this.maximum = Output.empty();
-        this.minimum = Output.empty();
-        this.resourceType = Output.empty();
+        this.maximum = Codegen.empty();
+        this.minimum = Codegen.empty();
+        this.resourceType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class ClusterClusterAutoscalingResourceLimitGetArgs extends io.pulu
             return this;
         }
         public Builder maximum(@Nullable Integer maximum) {
-            this.maximum = Output.ofNullable(maximum);
+            this.maximum = Codegen.ofNullable(maximum);
             return this;
         }
         public Builder minimum(@Nullable Output<Integer> minimum) {
@@ -102,7 +103,7 @@ public final class ClusterClusterAutoscalingResourceLimitGetArgs extends io.pulu
             return this;
         }
         public Builder minimum(@Nullable Integer minimum) {
-            this.minimum = Output.ofNullable(minimum);
+            this.minimum = Codegen.ofNullable(minimum);
             return this;
         }
         public Builder resourceType(Output<String> resourceType) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.portal.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -40,7 +41,7 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Map<String,Object>> metadata;
 
     public Output<Map<String,Object>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -90,11 +91,11 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
     }
 
     private DashboardPartsPositionArgs() {
-        this.colSpan = Output.empty();
-        this.metadata = Output.empty();
-        this.rowSpan = Output.empty();
-        this.x = Output.empty();
-        this.y = Output.empty();
+        this.colSpan = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.rowSpan = Codegen.empty();
+        this.x = Codegen.empty();
+        this.y = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -138,7 +139,7 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder metadata(@Nullable Map<String,Object> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder rowSpan(Output<Integer> rowSpan) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -30,7 +31,7 @@ public final class DataTransferConfigSensitiveParamsGetArgs extends io.pulumi.re
     }
 
     private DataTransferConfigSensitiveParamsGetArgs() {
-        this.secretAccessKey = Output.empty();
+        this.secretAccessKey = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.appengine_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class CloudBuildOptionsArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> appYamlPath;
 
     public Output<String> getAppYamlPath() {
-        return this.appYamlPath == null ? Output.empty() : this.appYamlPath;
+        return this.appYamlPath == null ? Codegen.empty() : this.appYamlPath;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class CloudBuildOptionsArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> cloudBuildTimeout;
 
     public Output<String> getCloudBuildTimeout() {
-        return this.cloudBuildTimeout == null ? Output.empty() : this.cloudBuildTimeout;
+        return this.cloudBuildTimeout == null ? Codegen.empty() : this.cloudBuildTimeout;
     }
 
     public CloudBuildOptionsArgs(
@@ -48,8 +49,8 @@ public final class CloudBuildOptionsArgs extends io.pulumi.resources.ResourceArg
     }
 
     private CloudBuildOptionsArgs() {
-        this.appYamlPath = Output.empty();
-        this.cloudBuildTimeout = Output.empty();
+        this.appYamlPath = Codegen.empty();
+        this.cloudBuildTimeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class CloudBuildOptionsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder appYamlPath(@Nullable String appYamlPath) {
-            this.appYamlPath = Output.ofNullable(appYamlPath);
+            this.appYamlPath = Codegen.ofNullable(appYamlPath);
             return this;
         }
         public Builder cloudBuildTimeout(@Nullable Output<String> cloudBuildTimeout) {
@@ -87,7 +88,7 @@ public final class CloudBuildOptionsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder cloudBuildTimeout(@Nullable String cloudBuildTimeout) {
-            this.cloudBuildTimeout = Output.ofNullable(cloudBuildTimeout);
+            this.cloudBuildTimeout = Codegen.ofNullable(cloudBuildTimeout);
             return this;
         }        public CloudBuildOptionsArgs build() {
             return new CloudBuildOptionsArgs(appYamlPath, cloudBuildTimeout);

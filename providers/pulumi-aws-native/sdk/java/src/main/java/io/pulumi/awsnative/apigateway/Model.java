@@ -8,6 +8,7 @@ import io.pulumi.awsnative.apigateway.ModelArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -111,7 +112,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Model(String name, ModelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:apigateway:Model", name, args == null ? ModelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:apigateway:Model", name, args == null ? ModelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Model(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

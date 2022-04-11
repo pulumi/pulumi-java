@@ -6,6 +6,7 @@ package io.pulumi.azurenative.orbital.inputs;
 import io.pulumi.azurenative.orbital.inputs.EndPointArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -50,7 +51,7 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> decodingConfiguration;
 
     public Output<String> getDecodingConfiguration() {
-        return this.decodingConfiguration == null ? Output.empty() : this.decodingConfiguration;
+        return this.decodingConfiguration == null ? Codegen.empty() : this.decodingConfiguration;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> demodulationConfiguration;
 
     public Output<String> getDemodulationConfiguration() {
-        return this.demodulationConfiguration == null ? Output.empty() : this.demodulationConfiguration;
+        return this.demodulationConfiguration == null ? Codegen.empty() : this.demodulationConfiguration;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> encodingConfiguration;
 
     public Output<String> getEncodingConfiguration() {
-        return this.encodingConfiguration == null ? Output.empty() : this.encodingConfiguration;
+        return this.encodingConfiguration == null ? Codegen.empty() : this.encodingConfiguration;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> modulationConfiguration;
 
     public Output<String> getModulationConfiguration() {
-        return this.modulationConfiguration == null ? Output.empty() : this.modulationConfiguration;
+        return this.modulationConfiguration == null ? Codegen.empty() : this.modulationConfiguration;
     }
 
     public ContactProfileLinkChannelArgs(
@@ -115,13 +116,13 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
     }
 
     private ContactProfileLinkChannelArgs() {
-        this.bandwidthMHz = Output.empty();
-        this.centerFrequencyMHz = Output.empty();
-        this.decodingConfiguration = Output.empty();
-        this.demodulationConfiguration = Output.empty();
-        this.encodingConfiguration = Output.empty();
-        this.endPoint = Output.empty();
-        this.modulationConfiguration = Output.empty();
+        this.bandwidthMHz = Codegen.empty();
+        this.centerFrequencyMHz = Codegen.empty();
+        this.decodingConfiguration = Codegen.empty();
+        this.demodulationConfiguration = Codegen.empty();
+        this.encodingConfiguration = Codegen.empty();
+        this.endPoint = Codegen.empty();
+        this.modulationConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -177,7 +178,7 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder decodingConfiguration(@Nullable String decodingConfiguration) {
-            this.decodingConfiguration = Output.ofNullable(decodingConfiguration);
+            this.decodingConfiguration = Codegen.ofNullable(decodingConfiguration);
             return this;
         }
         public Builder demodulationConfiguration(@Nullable Output<String> demodulationConfiguration) {
@@ -185,7 +186,7 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder demodulationConfiguration(@Nullable String demodulationConfiguration) {
-            this.demodulationConfiguration = Output.ofNullable(demodulationConfiguration);
+            this.demodulationConfiguration = Codegen.ofNullable(demodulationConfiguration);
             return this;
         }
         public Builder encodingConfiguration(@Nullable Output<String> encodingConfiguration) {
@@ -193,7 +194,7 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder encodingConfiguration(@Nullable String encodingConfiguration) {
-            this.encodingConfiguration = Output.ofNullable(encodingConfiguration);
+            this.encodingConfiguration = Codegen.ofNullable(encodingConfiguration);
             return this;
         }
         public Builder endPoint(Output<EndPointArgs> endPoint) {
@@ -209,7 +210,7 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder modulationConfiguration(@Nullable String modulationConfiguration) {
-            this.modulationConfiguration = Output.ofNullable(modulationConfiguration);
+            this.modulationConfiguration = Codegen.ofNullable(modulationConfiguration);
             return this;
         }        public ContactProfileLinkChannelArgs build() {
             return new ContactProfileLinkChannelArgs(bandwidthMHz, centerFrequencyMHz, decodingConfiguration, demodulationConfiguration, encodingConfiguration, endPoint, modulationConfiguration);

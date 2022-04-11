@@ -6,6 +6,7 @@ package io.pulumi.kubernetes.apps_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.apps_v1beta1.ControllerRevisionListArgs;
 import io.pulumi.kubernetes.apps_v1beta1.outputs.ControllerRevision;
@@ -99,7 +100,7 @@ public class ControllerRevisionList extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ControllerRevisionList(String name, ControllerRevisionListArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:apps/v1beta1:ControllerRevisionList", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:apps/v1beta1:ControllerRevisionList", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ControllerRevisionList(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

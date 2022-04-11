@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_beta.enums.FirewallLogConfigMetadata;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class FirewallLogConfigArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Boolean> enable;
 
     public Output<Boolean> getEnable() {
-        return this.enable == null ? Output.empty() : this.enable;
+        return this.enable == null ? Codegen.empty() : this.enable;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class FirewallLogConfigArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<FirewallLogConfigMetadata> metadata;
 
     public Output<FirewallLogConfigMetadata> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     public FirewallLogConfigArgs(
@@ -49,8 +50,8 @@ public final class FirewallLogConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     private FirewallLogConfigArgs() {
-        this.enable = Output.empty();
-        this.metadata = Output.empty();
+        this.enable = Codegen.empty();
+        this.metadata = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class FirewallLogConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder enable(@Nullable Boolean enable) {
-            this.enable = Output.ofNullable(enable);
+            this.enable = Codegen.ofNullable(enable);
             return this;
         }
         public Builder metadata(@Nullable Output<FirewallLogConfigMetadata> metadata) {
@@ -88,7 +89,7 @@ public final class FirewallLogConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder metadata(@Nullable FirewallLogConfigMetadata metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }        public FirewallLogConfigArgs build() {
             return new FirewallLogConfigArgs(enable, metadata);

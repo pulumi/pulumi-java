@@ -7,6 +7,7 @@ import io.pulumi.aws.codeartifact.inputs.RepositoryExternalConnectionsArgs;
 import io.pulumi.aws.codeartifact.inputs.RepositoryUpstreamArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +27,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> domainOwner;
 
     public Output<String> getDomainOwner() {
-        return this.domainOwner == null ? Output.empty() : this.domainOwner;
+        return this.domainOwner == null ? Codegen.empty() : this.domainOwner;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RepositoryExternalConnectionsArgs> externalConnections;
 
     public Output<RepositoryExternalConnectionsArgs> getExternalConnections() {
-        return this.externalConnections == null ? Output.empty() : this.externalConnections;
+        return this.externalConnections == null ? Codegen.empty() : this.externalConnections;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<RepositoryUpstreamArgs>> upstreams;
 
     public Output<List<RepositoryUpstreamArgs>> getUpstreams() {
-        return this.upstreams == null ? Output.empty() : this.upstreams;
+        return this.upstreams == null ? Codegen.empty() : this.upstreams;
     }
 
     public RepositoryArgs(
@@ -113,13 +114,13 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RepositoryArgs() {
-        this.description = Output.empty();
-        this.domain = Output.empty();
-        this.domainOwner = Output.empty();
-        this.externalConnections = Output.empty();
-        this.repository = Output.empty();
-        this.tags = Output.empty();
-        this.upstreams = Output.empty();
+        this.description = Codegen.empty();
+        this.domain = Codegen.empty();
+        this.domainOwner = Codegen.empty();
+        this.externalConnections = Codegen.empty();
+        this.repository = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.upstreams = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder domain(Output<String> domain) {
@@ -175,7 +176,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder domainOwner(@Nullable String domainOwner) {
-            this.domainOwner = Output.ofNullable(domainOwner);
+            this.domainOwner = Codegen.ofNullable(domainOwner);
             return this;
         }
         public Builder externalConnections(@Nullable Output<RepositoryExternalConnectionsArgs> externalConnections) {
@@ -183,7 +184,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder externalConnections(@Nullable RepositoryExternalConnectionsArgs externalConnections) {
-            this.externalConnections = Output.ofNullable(externalConnections);
+            this.externalConnections = Codegen.ofNullable(externalConnections);
             return this;
         }
         public Builder repository(Output<String> repository) {
@@ -199,7 +200,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder upstreams(@Nullable Output<List<RepositoryUpstreamArgs>> upstreams) {
@@ -207,7 +208,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder upstreams(@Nullable List<RepositoryUpstreamArgs> upstreams) {
-            this.upstreams = Output.ofNullable(upstreams);
+            this.upstreams = Codegen.ofNullable(upstreams);
             return this;
         }
         public Builder upstreams(RepositoryUpstreamArgs... upstreams) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.TypeArgs;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.VersionSourceArgs;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class Hl7TypesConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<TypeArgs>> type;
 
     public Output<List<TypeArgs>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class Hl7TypesConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<VersionSourceArgs>> version;
 
     public Output<List<VersionSourceArgs>> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public Hl7TypesConfigArgs(
@@ -50,8 +51,8 @@ public final class Hl7TypesConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private Hl7TypesConfigArgs() {
-        this.type = Output.empty();
-        this.version = Output.empty();
+        this.type = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class Hl7TypesConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable List<TypeArgs> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder type(TypeArgs... type) {
@@ -92,7 +93,7 @@ public final class Hl7TypesConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable List<VersionSourceArgs> version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }
         public Builder version(VersionSourceArgs... version) {

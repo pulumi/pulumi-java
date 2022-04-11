@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -49,7 +50,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentParameterArgs extends io.
       private final @Nullable Output<Boolean> isList;
 
     public Output<Boolean> getIsList() {
-        return this.isList == null ? Output.empty() : this.isList;
+        return this.isList == null ? Codegen.empty() : this.isList;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentParameterArgs extends io.
       private final @Nullable Output<Boolean> redact;
 
     public Output<Boolean> getRedact() {
-        return this.redact == null ? Output.empty() : this.redact;
+        return this.redact == null ? Codegen.empty() : this.redact;
     }
 
     public GoogleCloudDialogflowCxV3beta1IntentParameterArgs(
@@ -75,10 +76,10 @@ public final class GoogleCloudDialogflowCxV3beta1IntentParameterArgs extends io.
     }
 
     private GoogleCloudDialogflowCxV3beta1IntentParameterArgs() {
-        this.entityType = Output.empty();
-        this.id = Output.empty();
-        this.isList = Output.empty();
-        this.redact = Output.empty();
+        this.entityType = Codegen.empty();
+        this.id = Codegen.empty();
+        this.isList = Codegen.empty();
+        this.redact = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentParameterArgs extends io.
             return this;
         }
         public Builder isList(@Nullable Boolean isList) {
-            this.isList = Output.ofNullable(isList);
+            this.isList = Codegen.ofNullable(isList);
             return this;
         }
         public Builder redact(@Nullable Output<Boolean> redact) {
@@ -136,7 +137,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentParameterArgs extends io.
             return this;
         }
         public Builder redact(@Nullable Boolean redact) {
-            this.redact = Output.ofNullable(redact);
+            this.redact = Codegen.ofNullable(redact);
             return this;
         }        public GoogleCloudDialogflowCxV3beta1IntentParameterArgs build() {
             return new GoogleCloudDialogflowCxV3beta1IntentParameterArgs(entityType, id, isList, redact);

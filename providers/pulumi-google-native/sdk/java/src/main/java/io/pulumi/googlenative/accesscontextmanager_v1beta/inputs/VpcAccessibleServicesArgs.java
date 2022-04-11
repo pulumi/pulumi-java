@@ -5,6 +5,7 @@ package io.pulumi.googlenative.accesscontextmanager_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class VpcAccessibleServicesArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<String>> allowedServices;
 
     public Output<List<String>> getAllowedServices() {
-        return this.allowedServices == null ? Output.empty() : this.allowedServices;
+        return this.allowedServices == null ? Codegen.empty() : this.allowedServices;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class VpcAccessibleServicesArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Boolean> enableRestriction;
 
     public Output<Boolean> getEnableRestriction() {
-        return this.enableRestriction == null ? Output.empty() : this.enableRestriction;
+        return this.enableRestriction == null ? Codegen.empty() : this.enableRestriction;
     }
 
     public VpcAccessibleServicesArgs(
@@ -50,8 +51,8 @@ public final class VpcAccessibleServicesArgs extends io.pulumi.resources.Resourc
     }
 
     private VpcAccessibleServicesArgs() {
-        this.allowedServices = Output.empty();
-        this.enableRestriction = Output.empty();
+        this.allowedServices = Codegen.empty();
+        this.enableRestriction = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class VpcAccessibleServicesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder allowedServices(@Nullable List<String> allowedServices) {
-            this.allowedServices = Output.ofNullable(allowedServices);
+            this.allowedServices = Codegen.ofNullable(allowedServices);
             return this;
         }
         public Builder allowedServices(String... allowedServices) {
@@ -92,7 +93,7 @@ public final class VpcAccessibleServicesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder enableRestriction(@Nullable Boolean enableRestriction) {
-            this.enableRestriction = Output.ofNullable(enableRestriction);
+            this.enableRestriction = Codegen.ofNullable(enableRestriction);
             return this;
         }        public VpcAccessibleServicesArgs build() {
             return new VpcAccessibleServicesArgs(allowedServices, enableRestriction);

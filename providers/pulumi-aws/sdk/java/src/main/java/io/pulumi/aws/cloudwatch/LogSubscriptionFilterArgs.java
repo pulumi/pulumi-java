@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudwatch;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class LogSubscriptionFilterArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> distribution;
 
     public Output<String> getDistribution() {
-        return this.distribution == null ? Output.empty() : this.distribution;
+        return this.distribution == null ? Codegen.empty() : this.distribution;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class LogSubscriptionFilterArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class LogSubscriptionFilterArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     public LogSubscriptionFilterArgs(
@@ -96,12 +97,12 @@ public final class LogSubscriptionFilterArgs extends io.pulumi.resources.Resourc
     }
 
     private LogSubscriptionFilterArgs() {
-        this.destinationArn = Output.empty();
-        this.distribution = Output.empty();
-        this.filterPattern = Output.empty();
-        this.logGroup = Output.empty();
-        this.name = Output.empty();
-        this.roleArn = Output.empty();
+        this.destinationArn = Codegen.empty();
+        this.distribution = Codegen.empty();
+        this.filterPattern = Codegen.empty();
+        this.logGroup = Codegen.empty();
+        this.name = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class LogSubscriptionFilterArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder distribution(@Nullable String distribution) {
-            this.distribution = Output.ofNullable(distribution);
+            this.distribution = Codegen.ofNullable(distribution);
             return this;
         }
         public Builder filterPattern(Output<String> filterPattern) {
@@ -167,7 +168,7 @@ public final class LogSubscriptionFilterArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder roleArn(@Nullable Output<String> roleArn) {
@@ -175,7 +176,7 @@ public final class LogSubscriptionFilterArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }        public LogSubscriptionFilterArgs build() {
             return new LogSubscriptionFilterArgs(destinationArn, distribution, filterPattern, logGroup, name, roleArn);

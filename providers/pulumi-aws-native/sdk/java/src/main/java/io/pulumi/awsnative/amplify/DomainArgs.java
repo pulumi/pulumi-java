@@ -6,6 +6,7 @@ package io.pulumi.awsnative.amplify;
 import io.pulumi.awsnative.amplify.inputs.DomainSubDomainSettingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,28 +29,28 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> autoSubDomainCreationPatterns;
 
     public Output<List<String>> getAutoSubDomainCreationPatterns() {
-        return this.autoSubDomainCreationPatterns == null ? Output.empty() : this.autoSubDomainCreationPatterns;
+        return this.autoSubDomainCreationPatterns == null ? Codegen.empty() : this.autoSubDomainCreationPatterns;
     }
 
     @Import(name="autoSubDomainIAMRole")
       private final @Nullable Output<String> autoSubDomainIAMRole;
 
     public Output<String> getAutoSubDomainIAMRole() {
-        return this.autoSubDomainIAMRole == null ? Output.empty() : this.autoSubDomainIAMRole;
+        return this.autoSubDomainIAMRole == null ? Codegen.empty() : this.autoSubDomainIAMRole;
     }
 
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
-        return this.domainName == null ? Output.empty() : this.domainName;
+        return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
     @Import(name="enableAutoSubDomain")
       private final @Nullable Output<Boolean> enableAutoSubDomain;
 
     public Output<Boolean> getEnableAutoSubDomain() {
-        return this.enableAutoSubDomain == null ? Output.empty() : this.enableAutoSubDomain;
+        return this.enableAutoSubDomain == null ? Codegen.empty() : this.enableAutoSubDomain;
     }
 
     @Import(name="subDomainSettings", required=true)
@@ -75,12 +76,12 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainArgs() {
-        this.appId = Output.empty();
-        this.autoSubDomainCreationPatterns = Output.empty();
-        this.autoSubDomainIAMRole = Output.empty();
-        this.domainName = Output.empty();
-        this.enableAutoSubDomain = Output.empty();
-        this.subDomainSettings = Output.empty();
+        this.appId = Codegen.empty();
+        this.autoSubDomainCreationPatterns = Codegen.empty();
+        this.autoSubDomainIAMRole = Codegen.empty();
+        this.domainName = Codegen.empty();
+        this.enableAutoSubDomain = Codegen.empty();
+        this.subDomainSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoSubDomainCreationPatterns(@Nullable List<String> autoSubDomainCreationPatterns) {
-            this.autoSubDomainCreationPatterns = Output.ofNullable(autoSubDomainCreationPatterns);
+            this.autoSubDomainCreationPatterns = Codegen.ofNullable(autoSubDomainCreationPatterns);
             return this;
         }
         public Builder autoSubDomainCreationPatterns(String... autoSubDomainCreationPatterns) {
@@ -137,7 +138,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoSubDomainIAMRole(@Nullable String autoSubDomainIAMRole) {
-            this.autoSubDomainIAMRole = Output.ofNullable(autoSubDomainIAMRole);
+            this.autoSubDomainIAMRole = Codegen.ofNullable(autoSubDomainIAMRole);
             return this;
         }
         public Builder domainName(@Nullable Output<String> domainName) {
@@ -145,7 +146,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Output.ofNullable(domainName);
+            this.domainName = Codegen.ofNullable(domainName);
             return this;
         }
         public Builder enableAutoSubDomain(@Nullable Output<Boolean> enableAutoSubDomain) {
@@ -153,7 +154,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableAutoSubDomain(@Nullable Boolean enableAutoSubDomain) {
-            this.enableAutoSubDomain = Output.ofNullable(enableAutoSubDomain);
+            this.enableAutoSubDomain = Codegen.ofNullable(enableAutoSubDomain);
             return this;
         }
         public Builder subDomainSettings(Output<List<DomainSubDomainSettingArgs>> subDomainSettings) {

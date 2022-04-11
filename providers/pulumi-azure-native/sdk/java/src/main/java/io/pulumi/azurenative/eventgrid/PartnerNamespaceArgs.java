@@ -8,6 +8,7 @@ import io.pulumi.azurenative.eventgrid.inputs.InboundIpRuleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Boolean> disableLocalAuth;
 
     public Output<Boolean> getDisableLocalAuth() {
-        return this.disableLocalAuth == null ? Output.empty() : this.disableLocalAuth;
+        return this.disableLocalAuth == null ? Codegen.empty() : this.disableLocalAuth;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<InboundIpRuleArgs>> inboundIpRules;
 
     public Output<List<InboundIpRuleArgs>> getInboundIpRules() {
-        return this.inboundIpRules == null ? Output.empty() : this.inboundIpRules;
+        return this.inboundIpRules == null ? Codegen.empty() : this.inboundIpRules;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> partnerNamespaceName;
 
     public Output<String> getPartnerNamespaceName() {
-        return this.partnerNamespaceName == null ? Output.empty() : this.partnerNamespaceName;
+        return this.partnerNamespaceName == null ? Codegen.empty() : this.partnerNamespaceName;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> partnerRegistrationFullyQualifiedId;
 
     public Output<String> getPartnerRegistrationFullyQualifiedId() {
-        return this.partnerRegistrationFullyQualifiedId == null ? Output.empty() : this.partnerRegistrationFullyQualifiedId;
+        return this.partnerRegistrationFullyQualifiedId == null ? Codegen.empty() : this.partnerRegistrationFullyQualifiedId;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
     public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
+        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public PartnerNamespaceArgs(
@@ -119,7 +120,7 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
         @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess,
         Output<String> resourceGroupName,
         @Nullable Output<Map<String,String>> tags) {
-        this.disableLocalAuth = disableLocalAuth == null ? Output.ofNullable(false) : disableLocalAuth;
+        this.disableLocalAuth = disableLocalAuth == null ? Codegen.ofNullable(false) : disableLocalAuth;
         this.inboundIpRules = inboundIpRules;
         this.location = location;
         this.partnerNamespaceName = partnerNamespaceName;
@@ -130,14 +131,14 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private PartnerNamespaceArgs() {
-        this.disableLocalAuth = Output.empty();
-        this.inboundIpRules = Output.empty();
-        this.location = Output.empty();
-        this.partnerNamespaceName = Output.empty();
-        this.partnerRegistrationFullyQualifiedId = Output.empty();
-        this.publicNetworkAccess = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.disableLocalAuth = Codegen.empty();
+        this.inboundIpRules = Codegen.empty();
+        this.location = Codegen.empty();
+        this.partnerNamespaceName = Codegen.empty();
+        this.partnerRegistrationFullyQualifiedId = Codegen.empty();
+        this.publicNetworkAccess = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -179,7 +180,7 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder disableLocalAuth(@Nullable Boolean disableLocalAuth) {
-            this.disableLocalAuth = Output.ofNullable(disableLocalAuth);
+            this.disableLocalAuth = Codegen.ofNullable(disableLocalAuth);
             return this;
         }
         public Builder inboundIpRules(@Nullable Output<List<InboundIpRuleArgs>> inboundIpRules) {
@@ -187,7 +188,7 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder inboundIpRules(@Nullable List<InboundIpRuleArgs> inboundIpRules) {
-            this.inboundIpRules = Output.ofNullable(inboundIpRules);
+            this.inboundIpRules = Codegen.ofNullable(inboundIpRules);
             return this;
         }
         public Builder inboundIpRules(InboundIpRuleArgs... inboundIpRules) {
@@ -198,7 +199,7 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder partnerNamespaceName(@Nullable Output<String> partnerNamespaceName) {
@@ -206,7 +207,7 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder partnerNamespaceName(@Nullable String partnerNamespaceName) {
-            this.partnerNamespaceName = Output.ofNullable(partnerNamespaceName);
+            this.partnerNamespaceName = Codegen.ofNullable(partnerNamespaceName);
             return this;
         }
         public Builder partnerRegistrationFullyQualifiedId(@Nullable Output<String> partnerRegistrationFullyQualifiedId) {
@@ -214,7 +215,7 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder partnerRegistrationFullyQualifiedId(@Nullable String partnerRegistrationFullyQualifiedId) {
-            this.partnerRegistrationFullyQualifiedId = Output.ofNullable(partnerRegistrationFullyQualifiedId);
+            this.partnerRegistrationFullyQualifiedId = Codegen.ofNullable(partnerRegistrationFullyQualifiedId);
             return this;
         }
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
@@ -222,7 +223,7 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
-            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -238,7 +239,7 @@ public final class PartnerNamespaceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public PartnerNamespaceArgs build() {
             return new PartnerNamespaceArgs(disableLocalAuth, inboundIpRules, location, partnerNamespaceName, partnerRegistrationFullyQualifiedId, publicNetworkAccess, resourceGroupName, tags);

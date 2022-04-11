@@ -6,6 +6,7 @@ package io.pulumi.aws.mediaconvert.inputs;
 import io.pulumi.aws.mediaconvert.inputs.QueueReservationPlanSettingsGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> pricingPlan;
 
     public Output<String> getPricingPlan() {
-        return this.pricingPlan == null ? Output.empty() : this.pricingPlan;
+        return this.pricingPlan == null ? Codegen.empty() : this.pricingPlan;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<QueueReservationPlanSettingsGetArgs> reservationPlanSettings;
 
     public Output<QueueReservationPlanSettingsGetArgs> getReservationPlanSettings() {
-        return this.reservationPlanSettings == null ? Output.empty() : this.reservationPlanSettings;
+        return this.reservationPlanSettings == null ? Codegen.empty() : this.reservationPlanSettings;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public QueueState(
@@ -124,14 +125,14 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
     }
 
     private QueueState() {
-        this.arn = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.pricingPlan = Output.empty();
-        this.reservationPlanSettings = Output.empty();
-        this.status = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.pricingPlan = Codegen.empty();
+        this.reservationPlanSettings = Codegen.empty();
+        this.status = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -173,7 +174,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -181,7 +182,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -189,7 +190,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder pricingPlan(@Nullable Output<String> pricingPlan) {
@@ -197,7 +198,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pricingPlan(@Nullable String pricingPlan) {
-            this.pricingPlan = Output.ofNullable(pricingPlan);
+            this.pricingPlan = Codegen.ofNullable(pricingPlan);
             return this;
         }
         public Builder reservationPlanSettings(@Nullable Output<QueueReservationPlanSettingsGetArgs> reservationPlanSettings) {
@@ -205,7 +206,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reservationPlanSettings(@Nullable QueueReservationPlanSettingsGetArgs reservationPlanSettings) {
-            this.reservationPlanSettings = Output.ofNullable(reservationPlanSettings);
+            this.reservationPlanSettings = Codegen.ofNullable(reservationPlanSettings);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -213,7 +214,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -221,7 +222,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -229,7 +230,7 @@ public final class QueueState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public QueueState build() {
             return new QueueState(arn, description, name, pricingPlan, reservationPlanSettings, status, tags, tagsAll);

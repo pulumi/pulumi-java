@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v2.enums.GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardImageDisplayOptions;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs ex
       private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardImageDisplayOptions> imageDisplayOptions;
 
     public Output<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardImageDisplayOptions> getImageDisplayOptions() {
-        return this.imageDisplayOptions == null ? Output.empty() : this.imageDisplayOptions;
+        return this.imageDisplayOptions == null ? Codegen.empty() : this.imageDisplayOptions;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs ex
     }
 
     private GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs() {
-        this.imageDisplayOptions = Output.empty();
-        this.items = Output.empty();
+        this.imageDisplayOptions = Codegen.empty();
+        this.items = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs ex
             return this;
         }
         public Builder imageDisplayOptions(@Nullable GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardImageDisplayOptions imageDisplayOptions) {
-            this.imageDisplayOptions = Output.ofNullable(imageDisplayOptions);
+            this.imageDisplayOptions = Codegen.ofNullable(imageDisplayOptions);
             return this;
         }
         public Builder items(Output<List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs>> items) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.netapp.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> activeDirectoryId;
 
     public Output<String> getActiveDirectoryId() {
-        return this.activeDirectoryId == null ? Output.empty() : this.activeDirectoryId;
+        return this.activeDirectoryId == null ? Codegen.empty() : this.activeDirectoryId;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> adName;
 
     public Output<String> getAdName() {
-        return this.adName == null ? Output.empty() : this.adName;
+        return this.adName == null ? Codegen.empty() : this.adName;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Boolean> aesEncryption;
 
     public Output<Boolean> getAesEncryption() {
-        return this.aesEncryption == null ? Output.empty() : this.aesEncryption;
+        return this.aesEncryption == null ? Codegen.empty() : this.aesEncryption;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Boolean> allowLocalNfsUsersWithLdap;
 
     public Output<Boolean> getAllowLocalNfsUsersWithLdap() {
-        return this.allowLocalNfsUsersWithLdap == null ? Output.empty() : this.allowLocalNfsUsersWithLdap;
+        return this.allowLocalNfsUsersWithLdap == null ? Codegen.empty() : this.allowLocalNfsUsersWithLdap;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<String>> backupOperators;
 
     public Output<List<String>> getBackupOperators() {
-        return this.backupOperators == null ? Output.empty() : this.backupOperators;
+        return this.backupOperators == null ? Codegen.empty() : this.backupOperators;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> dns;
 
     public Output<String> getDns() {
-        return this.dns == null ? Output.empty() : this.dns;
+        return this.dns == null ? Codegen.empty() : this.dns;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> domain;
 
     public Output<String> getDomain() {
-        return this.domain == null ? Output.empty() : this.domain;
+        return this.domain == null ? Codegen.empty() : this.domain;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> kdcIP;
 
     public Output<String> getKdcIP() {
-        return this.kdcIP == null ? Output.empty() : this.kdcIP;
+        return this.kdcIP == null ? Codegen.empty() : this.kdcIP;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Boolean> ldapOverTLS;
 
     public Output<Boolean> getLdapOverTLS() {
-        return this.ldapOverTLS == null ? Output.empty() : this.ldapOverTLS;
+        return this.ldapOverTLS == null ? Codegen.empty() : this.ldapOverTLS;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Boolean> ldapSigning;
 
     public Output<Boolean> getLdapSigning() {
-        return this.ldapSigning == null ? Output.empty() : this.ldapSigning;
+        return this.ldapSigning == null ? Codegen.empty() : this.ldapSigning;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> organizationalUnit;
 
     public Output<String> getOrganizationalUnit() {
-        return this.organizationalUnit == null ? Output.empty() : this.organizationalUnit;
+        return this.organizationalUnit == null ? Codegen.empty() : this.organizationalUnit;
     }
 
     /**
@@ -149,7 +150,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -160,7 +161,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<String>> securityOperators;
 
     public Output<List<String>> getSecurityOperators() {
-        return this.securityOperators == null ? Output.empty() : this.securityOperators;
+        return this.securityOperators == null ? Codegen.empty() : this.securityOperators;
     }
 
     /**
@@ -171,7 +172,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> serverRootCACertificate;
 
     public Output<String> getServerRootCACertificate() {
-        return this.serverRootCACertificate == null ? Output.empty() : this.serverRootCACertificate;
+        return this.serverRootCACertificate == null ? Codegen.empty() : this.serverRootCACertificate;
     }
 
     /**
@@ -182,7 +183,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> site;
 
     public Output<String> getSite() {
-        return this.site == null ? Output.empty() : this.site;
+        return this.site == null ? Codegen.empty() : this.site;
     }
 
     /**
@@ -193,7 +194,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> smbServerName;
 
     public Output<String> getSmbServerName() {
-        return this.smbServerName == null ? Output.empty() : this.smbServerName;
+        return this.smbServerName == null ? Codegen.empty() : this.smbServerName;
     }
 
     /**
@@ -204,7 +205,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     public ActiveDirectoryArgs(
@@ -235,7 +236,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
         this.kdcIP = kdcIP;
         this.ldapOverTLS = ldapOverTLS;
         this.ldapSigning = ldapSigning;
-        this.organizationalUnit = organizationalUnit == null ? Output.ofNullable("CN=Computers") : organizationalUnit;
+        this.organizationalUnit = organizationalUnit == null ? Codegen.ofNullable("CN=Computers") : organizationalUnit;
         this.password = password;
         this.securityOperators = securityOperators;
         this.serverRootCACertificate = serverRootCACertificate;
@@ -245,23 +246,23 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ActiveDirectoryArgs() {
-        this.activeDirectoryId = Output.empty();
-        this.adName = Output.empty();
-        this.aesEncryption = Output.empty();
-        this.allowLocalNfsUsersWithLdap = Output.empty();
-        this.backupOperators = Output.empty();
-        this.dns = Output.empty();
-        this.domain = Output.empty();
-        this.kdcIP = Output.empty();
-        this.ldapOverTLS = Output.empty();
-        this.ldapSigning = Output.empty();
-        this.organizationalUnit = Output.empty();
-        this.password = Output.empty();
-        this.securityOperators = Output.empty();
-        this.serverRootCACertificate = Output.empty();
-        this.site = Output.empty();
-        this.smbServerName = Output.empty();
-        this.username = Output.empty();
+        this.activeDirectoryId = Codegen.empty();
+        this.adName = Codegen.empty();
+        this.aesEncryption = Codegen.empty();
+        this.allowLocalNfsUsersWithLdap = Codegen.empty();
+        this.backupOperators = Codegen.empty();
+        this.dns = Codegen.empty();
+        this.domain = Codegen.empty();
+        this.kdcIP = Codegen.empty();
+        this.ldapOverTLS = Codegen.empty();
+        this.ldapSigning = Codegen.empty();
+        this.organizationalUnit = Codegen.empty();
+        this.password = Codegen.empty();
+        this.securityOperators = Codegen.empty();
+        this.serverRootCACertificate = Codegen.empty();
+        this.site = Codegen.empty();
+        this.smbServerName = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -321,7 +322,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder activeDirectoryId(@Nullable String activeDirectoryId) {
-            this.activeDirectoryId = Output.ofNullable(activeDirectoryId);
+            this.activeDirectoryId = Codegen.ofNullable(activeDirectoryId);
             return this;
         }
         public Builder adName(@Nullable Output<String> adName) {
@@ -329,7 +330,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder adName(@Nullable String adName) {
-            this.adName = Output.ofNullable(adName);
+            this.adName = Codegen.ofNullable(adName);
             return this;
         }
         public Builder aesEncryption(@Nullable Output<Boolean> aesEncryption) {
@@ -337,7 +338,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder aesEncryption(@Nullable Boolean aesEncryption) {
-            this.aesEncryption = Output.ofNullable(aesEncryption);
+            this.aesEncryption = Codegen.ofNullable(aesEncryption);
             return this;
         }
         public Builder allowLocalNfsUsersWithLdap(@Nullable Output<Boolean> allowLocalNfsUsersWithLdap) {
@@ -345,7 +346,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder allowLocalNfsUsersWithLdap(@Nullable Boolean allowLocalNfsUsersWithLdap) {
-            this.allowLocalNfsUsersWithLdap = Output.ofNullable(allowLocalNfsUsersWithLdap);
+            this.allowLocalNfsUsersWithLdap = Codegen.ofNullable(allowLocalNfsUsersWithLdap);
             return this;
         }
         public Builder backupOperators(@Nullable Output<List<String>> backupOperators) {
@@ -353,7 +354,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder backupOperators(@Nullable List<String> backupOperators) {
-            this.backupOperators = Output.ofNullable(backupOperators);
+            this.backupOperators = Codegen.ofNullable(backupOperators);
             return this;
         }
         public Builder backupOperators(String... backupOperators) {
@@ -364,7 +365,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder dns(@Nullable String dns) {
-            this.dns = Output.ofNullable(dns);
+            this.dns = Codegen.ofNullable(dns);
             return this;
         }
         public Builder domain(@Nullable Output<String> domain) {
@@ -372,7 +373,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder domain(@Nullable String domain) {
-            this.domain = Output.ofNullable(domain);
+            this.domain = Codegen.ofNullable(domain);
             return this;
         }
         public Builder kdcIP(@Nullable Output<String> kdcIP) {
@@ -380,7 +381,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder kdcIP(@Nullable String kdcIP) {
-            this.kdcIP = Output.ofNullable(kdcIP);
+            this.kdcIP = Codegen.ofNullable(kdcIP);
             return this;
         }
         public Builder ldapOverTLS(@Nullable Output<Boolean> ldapOverTLS) {
@@ -388,7 +389,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder ldapOverTLS(@Nullable Boolean ldapOverTLS) {
-            this.ldapOverTLS = Output.ofNullable(ldapOverTLS);
+            this.ldapOverTLS = Codegen.ofNullable(ldapOverTLS);
             return this;
         }
         public Builder ldapSigning(@Nullable Output<Boolean> ldapSigning) {
@@ -396,7 +397,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder ldapSigning(@Nullable Boolean ldapSigning) {
-            this.ldapSigning = Output.ofNullable(ldapSigning);
+            this.ldapSigning = Codegen.ofNullable(ldapSigning);
             return this;
         }
         public Builder organizationalUnit(@Nullable Output<String> organizationalUnit) {
@@ -404,7 +405,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder organizationalUnit(@Nullable String organizationalUnit) {
-            this.organizationalUnit = Output.ofNullable(organizationalUnit);
+            this.organizationalUnit = Codegen.ofNullable(organizationalUnit);
             return this;
         }
         public Builder password(@Nullable Output<String> password) {
@@ -412,7 +413,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder securityOperators(@Nullable Output<List<String>> securityOperators) {
@@ -420,7 +421,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder securityOperators(@Nullable List<String> securityOperators) {
-            this.securityOperators = Output.ofNullable(securityOperators);
+            this.securityOperators = Codegen.ofNullable(securityOperators);
             return this;
         }
         public Builder securityOperators(String... securityOperators) {
@@ -431,7 +432,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder serverRootCACertificate(@Nullable String serverRootCACertificate) {
-            this.serverRootCACertificate = Output.ofNullable(serverRootCACertificate);
+            this.serverRootCACertificate = Codegen.ofNullable(serverRootCACertificate);
             return this;
         }
         public Builder site(@Nullable Output<String> site) {
@@ -439,7 +440,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder site(@Nullable String site) {
-            this.site = Output.ofNullable(site);
+            this.site = Codegen.ofNullable(site);
             return this;
         }
         public Builder smbServerName(@Nullable Output<String> smbServerName) {
@@ -447,7 +448,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder smbServerName(@Nullable String smbServerName) {
-            this.smbServerName = Output.ofNullable(smbServerName);
+            this.smbServerName = Codegen.ofNullable(smbServerName);
             return this;
         }
         public Builder username(@Nullable Output<String> username) {
@@ -455,7 +456,7 @@ public final class ActiveDirectoryArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder username(@Nullable String username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }        public ActiveDirectoryArgs build() {
             return new ActiveDirectoryArgs(activeDirectoryId, adName, aesEncryption, allowLocalNfsUsersWithLdap, backupOperators, dns, domain, kdcIP, ldapOverTLS, ldapSigning, organizationalUnit, password, securityOperators, serverRootCACertificate, site, smbServerName, username);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.run_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.run_v1.inputs.ContainerArgs;
 import io.pulumi.googlenative.run_v1.inputs.LocalObjectReferenceArgs;
 import io.pulumi.googlenative.run_v1.inputs.VolumeArgs;
@@ -32,7 +33,7 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> containerConcurrency;
 
     public Output<Integer> getContainerConcurrency() {
-        return this.containerConcurrency == null ? Output.empty() : this.containerConcurrency;
+        return this.containerConcurrency == null ? Codegen.empty() : this.containerConcurrency;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ContainerArgs>> containers;
 
     public Output<List<ContainerArgs>> getContainers() {
-        return this.containers == null ? Output.empty() : this.containers;
+        return this.containers == null ? Codegen.empty() : this.containers;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableServiceLinks;
 
     public Output<Boolean> getEnableServiceLinks() {
-        return this.enableServiceLinks == null ? Output.empty() : this.enableServiceLinks;
+        return this.enableServiceLinks == null ? Codegen.empty() : this.enableServiceLinks;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets;
 
     public Output<List<LocalObjectReferenceArgs>> getImagePullSecrets() {
-        return this.imagePullSecrets == null ? Output.empty() : this.imagePullSecrets;
+        return this.imagePullSecrets == null ? Codegen.empty() : this.imagePullSecrets;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serviceAccountName;
 
     public Output<String> getServiceAccountName() {
-        return this.serviceAccountName == null ? Output.empty() : this.serviceAccountName;
+        return this.serviceAccountName == null ? Codegen.empty() : this.serviceAccountName;
     }
 
     /**
@@ -87,14 +88,14 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> timeoutSeconds;
 
     public Output<Integer> getTimeoutSeconds() {
-        return this.timeoutSeconds == null ? Output.empty() : this.timeoutSeconds;
+        return this.timeoutSeconds == null ? Codegen.empty() : this.timeoutSeconds;
     }
 
     @Import(name="volumes")
       private final @Nullable Output<List<VolumeArgs>> volumes;
 
     public Output<List<VolumeArgs>> getVolumes() {
-        return this.volumes == null ? Output.empty() : this.volumes;
+        return this.volumes == null ? Codegen.empty() : this.volumes;
     }
 
     public RevisionSpecArgs(
@@ -115,13 +116,13 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RevisionSpecArgs() {
-        this.containerConcurrency = Output.empty();
-        this.containers = Output.empty();
-        this.enableServiceLinks = Output.empty();
-        this.imagePullSecrets = Output.empty();
-        this.serviceAccountName = Output.empty();
-        this.timeoutSeconds = Output.empty();
-        this.volumes = Output.empty();
+        this.containerConcurrency = Codegen.empty();
+        this.containers = Codegen.empty();
+        this.enableServiceLinks = Codegen.empty();
+        this.imagePullSecrets = Codegen.empty();
+        this.serviceAccountName = Codegen.empty();
+        this.timeoutSeconds = Codegen.empty();
+        this.volumes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -161,7 +162,7 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder containerConcurrency(@Nullable Integer containerConcurrency) {
-            this.containerConcurrency = Output.ofNullable(containerConcurrency);
+            this.containerConcurrency = Codegen.ofNullable(containerConcurrency);
             return this;
         }
         public Builder containers(@Nullable Output<List<ContainerArgs>> containers) {
@@ -169,7 +170,7 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder containers(@Nullable List<ContainerArgs> containers) {
-            this.containers = Output.ofNullable(containers);
+            this.containers = Codegen.ofNullable(containers);
             return this;
         }
         public Builder containers(ContainerArgs... containers) {
@@ -180,7 +181,7 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableServiceLinks(@Nullable Boolean enableServiceLinks) {
-            this.enableServiceLinks = Output.ofNullable(enableServiceLinks);
+            this.enableServiceLinks = Codegen.ofNullable(enableServiceLinks);
             return this;
         }
         public Builder imagePullSecrets(@Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets) {
@@ -188,7 +189,7 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imagePullSecrets(@Nullable List<LocalObjectReferenceArgs> imagePullSecrets) {
-            this.imagePullSecrets = Output.ofNullable(imagePullSecrets);
+            this.imagePullSecrets = Codegen.ofNullable(imagePullSecrets);
             return this;
         }
         public Builder imagePullSecrets(LocalObjectReferenceArgs... imagePullSecrets) {
@@ -199,7 +200,7 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceAccountName(@Nullable String serviceAccountName) {
-            this.serviceAccountName = Output.ofNullable(serviceAccountName);
+            this.serviceAccountName = Codegen.ofNullable(serviceAccountName);
             return this;
         }
         public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
@@ -207,7 +208,7 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
-            this.timeoutSeconds = Output.ofNullable(timeoutSeconds);
+            this.timeoutSeconds = Codegen.ofNullable(timeoutSeconds);
             return this;
         }
         public Builder volumes(@Nullable Output<List<VolumeArgs>> volumes) {
@@ -215,7 +216,7 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder volumes(@Nullable List<VolumeArgs> volumes) {
-            this.volumes = Output.ofNullable(volumes);
+            this.volumes = Codegen.ofNullable(volumes);
             return this;
         }
         public Builder volumes(VolumeArgs... volumes) {

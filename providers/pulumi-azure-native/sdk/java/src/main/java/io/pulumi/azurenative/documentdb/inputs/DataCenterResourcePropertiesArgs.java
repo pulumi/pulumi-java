@@ -7,6 +7,7 @@ import io.pulumi.azurenative.documentdb.enums.ManagedCassandraProvisioningState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class DataCenterResourcePropertiesArgs extends io.pulumi.resources.
       private final @Nullable Output<String> base64EncodedCassandraYamlFragment;
 
     public Output<String> getBase64EncodedCassandraYamlFragment() {
-        return this.base64EncodedCassandraYamlFragment == null ? Output.empty() : this.base64EncodedCassandraYamlFragment;
+        return this.base64EncodedCassandraYamlFragment == null ? Codegen.empty() : this.base64EncodedCassandraYamlFragment;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class DataCenterResourcePropertiesArgs extends io.pulumi.resources.
       private final @Nullable Output<String> dataCenterLocation;
 
     public Output<String> getDataCenterLocation() {
-        return this.dataCenterLocation == null ? Output.empty() : this.dataCenterLocation;
+        return this.dataCenterLocation == null ? Codegen.empty() : this.dataCenterLocation;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class DataCenterResourcePropertiesArgs extends io.pulumi.resources.
       private final @Nullable Output<String> delegatedSubnetId;
 
     public Output<String> getDelegatedSubnetId() {
-        return this.delegatedSubnetId == null ? Output.empty() : this.delegatedSubnetId;
+        return this.delegatedSubnetId == null ? Codegen.empty() : this.delegatedSubnetId;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class DataCenterResourcePropertiesArgs extends io.pulumi.resources.
       private final @Nullable Output<Integer> nodeCount;
 
     public Output<Integer> getNodeCount() {
-        return this.nodeCount == null ? Output.empty() : this.nodeCount;
+        return this.nodeCount == null ? Codegen.empty() : this.nodeCount;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class DataCenterResourcePropertiesArgs extends io.pulumi.resources.
       private final @Nullable Output<Either<String,ManagedCassandraProvisioningState>> provisioningState;
 
     public Output<Either<String,ManagedCassandraProvisioningState>> getProvisioningState() {
-        return this.provisioningState == null ? Output.empty() : this.provisioningState;
+        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     public DataCenterResourcePropertiesArgs(
@@ -90,11 +91,11 @@ public final class DataCenterResourcePropertiesArgs extends io.pulumi.resources.
     }
 
     private DataCenterResourcePropertiesArgs() {
-        this.base64EncodedCassandraYamlFragment = Output.empty();
-        this.dataCenterLocation = Output.empty();
-        this.delegatedSubnetId = Output.empty();
-        this.nodeCount = Output.empty();
-        this.provisioningState = Output.empty();
+        this.base64EncodedCassandraYamlFragment = Codegen.empty();
+        this.dataCenterLocation = Codegen.empty();
+        this.delegatedSubnetId = Codegen.empty();
+        this.nodeCount = Codegen.empty();
+        this.provisioningState = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class DataCenterResourcePropertiesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder base64EncodedCassandraYamlFragment(@Nullable String base64EncodedCassandraYamlFragment) {
-            this.base64EncodedCassandraYamlFragment = Output.ofNullable(base64EncodedCassandraYamlFragment);
+            this.base64EncodedCassandraYamlFragment = Codegen.ofNullable(base64EncodedCassandraYamlFragment);
             return this;
         }
         public Builder dataCenterLocation(@Nullable Output<String> dataCenterLocation) {
@@ -138,7 +139,7 @@ public final class DataCenterResourcePropertiesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder dataCenterLocation(@Nullable String dataCenterLocation) {
-            this.dataCenterLocation = Output.ofNullable(dataCenterLocation);
+            this.dataCenterLocation = Codegen.ofNullable(dataCenterLocation);
             return this;
         }
         public Builder delegatedSubnetId(@Nullable Output<String> delegatedSubnetId) {
@@ -146,7 +147,7 @@ public final class DataCenterResourcePropertiesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder delegatedSubnetId(@Nullable String delegatedSubnetId) {
-            this.delegatedSubnetId = Output.ofNullable(delegatedSubnetId);
+            this.delegatedSubnetId = Codegen.ofNullable(delegatedSubnetId);
             return this;
         }
         public Builder nodeCount(@Nullable Output<Integer> nodeCount) {
@@ -154,7 +155,7 @@ public final class DataCenterResourcePropertiesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder nodeCount(@Nullable Integer nodeCount) {
-            this.nodeCount = Output.ofNullable(nodeCount);
+            this.nodeCount = Codegen.ofNullable(nodeCount);
             return this;
         }
         public Builder provisioningState(@Nullable Output<Either<String,ManagedCassandraProvisioningState>> provisioningState) {
@@ -162,7 +163,7 @@ public final class DataCenterResourcePropertiesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder provisioningState(@Nullable Either<String,ManagedCassandraProvisioningState> provisioningState) {
-            this.provisioningState = Output.ofNullable(provisioningState);
+            this.provisioningState = Codegen.ofNullable(provisioningState);
             return this;
         }        public DataCenterResourcePropertiesArgs build() {
             return new DataCenterResourcePropertiesArgs(base64EncodedCassandraYamlFragment, dataCenterLocation, delegatedSubnetId, nodeCount, provisioningState);

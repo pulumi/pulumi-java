@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dataproc_v1.inputs.ParameterValidationArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class TemplateParameterArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class TemplateParameterArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<ParameterValidationArgs> validation;
 
     public Output<ParameterValidationArgs> getValidation() {
-        return this.validation == null ? Output.empty() : this.validation;
+        return this.validation == null ? Codegen.empty() : this.validation;
     }
 
     public TemplateParameterArgs(
@@ -76,10 +77,10 @@ public final class TemplateParameterArgs extends io.pulumi.resources.ResourceArg
     }
 
     private TemplateParameterArgs() {
-        this.description = Output.empty();
-        this.fields = Output.empty();
-        this.name = Output.empty();
-        this.validation = Output.empty();
+        this.description = Codegen.empty();
+        this.fields = Codegen.empty();
+        this.name = Codegen.empty();
+        this.validation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class TemplateParameterArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder fields(Output<List<String>> fields) {
@@ -140,7 +141,7 @@ public final class TemplateParameterArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder validation(@Nullable ParameterValidationArgs validation) {
-            this.validation = Output.ofNullable(validation);
+            this.validation = Codegen.ofNullable(validation);
             return this;
         }        public TemplateParameterArgs build() {
             return new TemplateParameterArgs(description, fields, name, validation);

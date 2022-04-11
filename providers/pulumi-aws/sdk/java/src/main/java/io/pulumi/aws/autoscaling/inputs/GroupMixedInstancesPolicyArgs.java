@@ -7,6 +7,7 @@ import io.pulumi.aws.autoscaling.inputs.GroupMixedInstancesPolicyInstancesDistri
 import io.pulumi.aws.autoscaling.inputs.GroupMixedInstancesPolicyLaunchTemplateArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +24,7 @@ public final class GroupMixedInstancesPolicyArgs extends io.pulumi.resources.Res
       private final @Nullable Output<GroupMixedInstancesPolicyInstancesDistributionArgs> instancesDistribution;
 
     public Output<GroupMixedInstancesPolicyInstancesDistributionArgs> getInstancesDistribution() {
-        return this.instancesDistribution == null ? Output.empty() : this.instancesDistribution;
+        return this.instancesDistribution == null ? Codegen.empty() : this.instancesDistribution;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class GroupMixedInstancesPolicyArgs extends io.pulumi.resources.Res
     }
 
     private GroupMixedInstancesPolicyArgs() {
-        this.instancesDistribution = Output.empty();
-        this.launchTemplate = Output.empty();
+        this.instancesDistribution = Codegen.empty();
+        this.launchTemplate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class GroupMixedInstancesPolicyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder instancesDistribution(@Nullable GroupMixedInstancesPolicyInstancesDistributionArgs instancesDistribution) {
-            this.instancesDistribution = Output.ofNullable(instancesDistribution);
+            this.instancesDistribution = Codegen.ofNullable(instancesDistribution);
             return this;
         }
         public Builder launchTemplate(Output<GroupMixedInstancesPolicyLaunchTemplateArgs> launchTemplate) {

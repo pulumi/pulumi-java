@@ -6,6 +6,7 @@ package io.pulumi.awsnative.networkfirewall;
 import io.pulumi.awsnative.networkfirewall.inputs.FirewallPolicyTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="firewallPolicy", required=true)
@@ -34,14 +35,14 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> firewallPolicyName;
 
     public Output<String> getFirewallPolicyName() {
-        return this.firewallPolicyName == null ? Output.empty() : this.firewallPolicyName;
+        return this.firewallPolicyName == null ? Codegen.empty() : this.firewallPolicyName;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<FirewallPolicyTagArgs>> tags;
 
     public Output<List<FirewallPolicyTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public FirewallPolicyArgs(
@@ -56,10 +57,10 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FirewallPolicyArgs() {
-        this.description = Output.empty();
-        this.firewallPolicy = Output.empty();
-        this.firewallPolicyName = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.firewallPolicy = Codegen.empty();
+        this.firewallPolicyName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder firewallPolicy(Output<io.pulumi.awsnative.networkfirewall.inputs.FirewallPolicyArgs> firewallPolicy) {
@@ -109,7 +110,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder firewallPolicyName(@Nullable String firewallPolicyName) {
-            this.firewallPolicyName = Output.ofNullable(firewallPolicyName);
+            this.firewallPolicyName = Codegen.ofNullable(firewallPolicyName);
             return this;
         }
         public Builder tags(@Nullable Output<List<FirewallPolicyTagArgs>> tags) {
@@ -117,7 +118,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<FirewallPolicyTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(FirewallPolicyTagArgs... tags) {

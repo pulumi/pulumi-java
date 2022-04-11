@@ -5,6 +5,7 @@ package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     }
 
     private DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepositoryArgs() {
-        this.repositoryName = Output.empty();
-        this.service = Output.empty();
+        this.repositoryName = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -16,6 +16,7 @@ import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamSplunkDestinatio
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,84 +31,84 @@ public final class DeliveryStreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DeliveryStreamAmazonopensearchserviceDestinationConfigurationArgs> amazonopensearchserviceDestinationConfiguration;
 
     public Output<DeliveryStreamAmazonopensearchserviceDestinationConfigurationArgs> getAmazonopensearchserviceDestinationConfiguration() {
-        return this.amazonopensearchserviceDestinationConfiguration == null ? Output.empty() : this.amazonopensearchserviceDestinationConfiguration;
+        return this.amazonopensearchserviceDestinationConfiguration == null ? Codegen.empty() : this.amazonopensearchserviceDestinationConfiguration;
     }
 
     @Import(name="deliveryStreamEncryptionConfigurationInput")
       private final @Nullable Output<DeliveryStreamEncryptionConfigurationInputArgs> deliveryStreamEncryptionConfigurationInput;
 
     public Output<DeliveryStreamEncryptionConfigurationInputArgs> getDeliveryStreamEncryptionConfigurationInput() {
-        return this.deliveryStreamEncryptionConfigurationInput == null ? Output.empty() : this.deliveryStreamEncryptionConfigurationInput;
+        return this.deliveryStreamEncryptionConfigurationInput == null ? Codegen.empty() : this.deliveryStreamEncryptionConfigurationInput;
     }
 
     @Import(name="deliveryStreamName")
       private final @Nullable Output<String> deliveryStreamName;
 
     public Output<String> getDeliveryStreamName() {
-        return this.deliveryStreamName == null ? Output.empty() : this.deliveryStreamName;
+        return this.deliveryStreamName == null ? Codegen.empty() : this.deliveryStreamName;
     }
 
     @Import(name="deliveryStreamType")
       private final @Nullable Output<DeliveryStreamType> deliveryStreamType;
 
     public Output<DeliveryStreamType> getDeliveryStreamType() {
-        return this.deliveryStreamType == null ? Output.empty() : this.deliveryStreamType;
+        return this.deliveryStreamType == null ? Codegen.empty() : this.deliveryStreamType;
     }
 
     @Import(name="elasticsearchDestinationConfiguration")
       private final @Nullable Output<DeliveryStreamElasticsearchDestinationConfigurationArgs> elasticsearchDestinationConfiguration;
 
     public Output<DeliveryStreamElasticsearchDestinationConfigurationArgs> getElasticsearchDestinationConfiguration() {
-        return this.elasticsearchDestinationConfiguration == null ? Output.empty() : this.elasticsearchDestinationConfiguration;
+        return this.elasticsearchDestinationConfiguration == null ? Codegen.empty() : this.elasticsearchDestinationConfiguration;
     }
 
     @Import(name="extendedS3DestinationConfiguration")
       private final @Nullable Output<DeliveryStreamExtendedS3DestinationConfigurationArgs> extendedS3DestinationConfiguration;
 
     public Output<DeliveryStreamExtendedS3DestinationConfigurationArgs> getExtendedS3DestinationConfiguration() {
-        return this.extendedS3DestinationConfiguration == null ? Output.empty() : this.extendedS3DestinationConfiguration;
+        return this.extendedS3DestinationConfiguration == null ? Codegen.empty() : this.extendedS3DestinationConfiguration;
     }
 
     @Import(name="httpEndpointDestinationConfiguration")
       private final @Nullable Output<DeliveryStreamHttpEndpointDestinationConfigurationArgs> httpEndpointDestinationConfiguration;
 
     public Output<DeliveryStreamHttpEndpointDestinationConfigurationArgs> getHttpEndpointDestinationConfiguration() {
-        return this.httpEndpointDestinationConfiguration == null ? Output.empty() : this.httpEndpointDestinationConfiguration;
+        return this.httpEndpointDestinationConfiguration == null ? Codegen.empty() : this.httpEndpointDestinationConfiguration;
     }
 
     @Import(name="kinesisStreamSourceConfiguration")
       private final @Nullable Output<DeliveryStreamKinesisStreamSourceConfigurationArgs> kinesisStreamSourceConfiguration;
 
     public Output<DeliveryStreamKinesisStreamSourceConfigurationArgs> getKinesisStreamSourceConfiguration() {
-        return this.kinesisStreamSourceConfiguration == null ? Output.empty() : this.kinesisStreamSourceConfiguration;
+        return this.kinesisStreamSourceConfiguration == null ? Codegen.empty() : this.kinesisStreamSourceConfiguration;
     }
 
     @Import(name="redshiftDestinationConfiguration")
       private final @Nullable Output<DeliveryStreamRedshiftDestinationConfigurationArgs> redshiftDestinationConfiguration;
 
     public Output<DeliveryStreamRedshiftDestinationConfigurationArgs> getRedshiftDestinationConfiguration() {
-        return this.redshiftDestinationConfiguration == null ? Output.empty() : this.redshiftDestinationConfiguration;
+        return this.redshiftDestinationConfiguration == null ? Codegen.empty() : this.redshiftDestinationConfiguration;
     }
 
     @Import(name="s3DestinationConfiguration")
       private final @Nullable Output<DeliveryStreamS3DestinationConfigurationArgs> s3DestinationConfiguration;
 
     public Output<DeliveryStreamS3DestinationConfigurationArgs> getS3DestinationConfiguration() {
-        return this.s3DestinationConfiguration == null ? Output.empty() : this.s3DestinationConfiguration;
+        return this.s3DestinationConfiguration == null ? Codegen.empty() : this.s3DestinationConfiguration;
     }
 
     @Import(name="splunkDestinationConfiguration")
       private final @Nullable Output<DeliveryStreamSplunkDestinationConfigurationArgs> splunkDestinationConfiguration;
 
     public Output<DeliveryStreamSplunkDestinationConfigurationArgs> getSplunkDestinationConfiguration() {
-        return this.splunkDestinationConfiguration == null ? Output.empty() : this.splunkDestinationConfiguration;
+        return this.splunkDestinationConfiguration == null ? Codegen.empty() : this.splunkDestinationConfiguration;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<DeliveryStreamTagArgs>> tags;
 
     public Output<List<DeliveryStreamTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DeliveryStreamArgs(
@@ -138,18 +139,18 @@ public final class DeliveryStreamArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeliveryStreamArgs() {
-        this.amazonopensearchserviceDestinationConfiguration = Output.empty();
-        this.deliveryStreamEncryptionConfigurationInput = Output.empty();
-        this.deliveryStreamName = Output.empty();
-        this.deliveryStreamType = Output.empty();
-        this.elasticsearchDestinationConfiguration = Output.empty();
-        this.extendedS3DestinationConfiguration = Output.empty();
-        this.httpEndpointDestinationConfiguration = Output.empty();
-        this.kinesisStreamSourceConfiguration = Output.empty();
-        this.redshiftDestinationConfiguration = Output.empty();
-        this.s3DestinationConfiguration = Output.empty();
-        this.splunkDestinationConfiguration = Output.empty();
-        this.tags = Output.empty();
+        this.amazonopensearchserviceDestinationConfiguration = Codegen.empty();
+        this.deliveryStreamEncryptionConfigurationInput = Codegen.empty();
+        this.deliveryStreamName = Codegen.empty();
+        this.deliveryStreamType = Codegen.empty();
+        this.elasticsearchDestinationConfiguration = Codegen.empty();
+        this.extendedS3DestinationConfiguration = Codegen.empty();
+        this.httpEndpointDestinationConfiguration = Codegen.empty();
+        this.kinesisStreamSourceConfiguration = Codegen.empty();
+        this.redshiftDestinationConfiguration = Codegen.empty();
+        this.s3DestinationConfiguration = Codegen.empty();
+        this.splunkDestinationConfiguration = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -199,7 +200,7 @@ public final class DeliveryStreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder amazonopensearchserviceDestinationConfiguration(@Nullable DeliveryStreamAmazonopensearchserviceDestinationConfigurationArgs amazonopensearchserviceDestinationConfiguration) {
-            this.amazonopensearchserviceDestinationConfiguration = Output.ofNullable(amazonopensearchserviceDestinationConfiguration);
+            this.amazonopensearchserviceDestinationConfiguration = Codegen.ofNullable(amazonopensearchserviceDestinationConfiguration);
             return this;
         }
         public Builder deliveryStreamEncryptionConfigurationInput(@Nullable Output<DeliveryStreamEncryptionConfigurationInputArgs> deliveryStreamEncryptionConfigurationInput) {
@@ -207,7 +208,7 @@ public final class DeliveryStreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deliveryStreamEncryptionConfigurationInput(@Nullable DeliveryStreamEncryptionConfigurationInputArgs deliveryStreamEncryptionConfigurationInput) {
-            this.deliveryStreamEncryptionConfigurationInput = Output.ofNullable(deliveryStreamEncryptionConfigurationInput);
+            this.deliveryStreamEncryptionConfigurationInput = Codegen.ofNullable(deliveryStreamEncryptionConfigurationInput);
             return this;
         }
         public Builder deliveryStreamName(@Nullable Output<String> deliveryStreamName) {
@@ -215,7 +216,7 @@ public final class DeliveryStreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deliveryStreamName(@Nullable String deliveryStreamName) {
-            this.deliveryStreamName = Output.ofNullable(deliveryStreamName);
+            this.deliveryStreamName = Codegen.ofNullable(deliveryStreamName);
             return this;
         }
         public Builder deliveryStreamType(@Nullable Output<DeliveryStreamType> deliveryStreamType) {
@@ -223,7 +224,7 @@ public final class DeliveryStreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deliveryStreamType(@Nullable DeliveryStreamType deliveryStreamType) {
-            this.deliveryStreamType = Output.ofNullable(deliveryStreamType);
+            this.deliveryStreamType = Codegen.ofNullable(deliveryStreamType);
             return this;
         }
         public Builder elasticsearchDestinationConfiguration(@Nullable Output<DeliveryStreamElasticsearchDestinationConfigurationArgs> elasticsearchDestinationConfiguration) {
@@ -231,7 +232,7 @@ public final class DeliveryStreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder elasticsearchDestinationConfiguration(@Nullable DeliveryStreamElasticsearchDestinationConfigurationArgs elasticsearchDestinationConfiguration) {
-            this.elasticsearchDestinationConfiguration = Output.ofNullable(elasticsearchDestinationConfiguration);
+            this.elasticsearchDestinationConfiguration = Codegen.ofNullable(elasticsearchDestinationConfiguration);
             return this;
         }
         public Builder extendedS3DestinationConfiguration(@Nullable Output<DeliveryStreamExtendedS3DestinationConfigurationArgs> extendedS3DestinationConfiguration) {
@@ -239,7 +240,7 @@ public final class DeliveryStreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder extendedS3DestinationConfiguration(@Nullable DeliveryStreamExtendedS3DestinationConfigurationArgs extendedS3DestinationConfiguration) {
-            this.extendedS3DestinationConfiguration = Output.ofNullable(extendedS3DestinationConfiguration);
+            this.extendedS3DestinationConfiguration = Codegen.ofNullable(extendedS3DestinationConfiguration);
             return this;
         }
         public Builder httpEndpointDestinationConfiguration(@Nullable Output<DeliveryStreamHttpEndpointDestinationConfigurationArgs> httpEndpointDestinationConfiguration) {
@@ -247,7 +248,7 @@ public final class DeliveryStreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder httpEndpointDestinationConfiguration(@Nullable DeliveryStreamHttpEndpointDestinationConfigurationArgs httpEndpointDestinationConfiguration) {
-            this.httpEndpointDestinationConfiguration = Output.ofNullable(httpEndpointDestinationConfiguration);
+            this.httpEndpointDestinationConfiguration = Codegen.ofNullable(httpEndpointDestinationConfiguration);
             return this;
         }
         public Builder kinesisStreamSourceConfiguration(@Nullable Output<DeliveryStreamKinesisStreamSourceConfigurationArgs> kinesisStreamSourceConfiguration) {
@@ -255,7 +256,7 @@ public final class DeliveryStreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kinesisStreamSourceConfiguration(@Nullable DeliveryStreamKinesisStreamSourceConfigurationArgs kinesisStreamSourceConfiguration) {
-            this.kinesisStreamSourceConfiguration = Output.ofNullable(kinesisStreamSourceConfiguration);
+            this.kinesisStreamSourceConfiguration = Codegen.ofNullable(kinesisStreamSourceConfiguration);
             return this;
         }
         public Builder redshiftDestinationConfiguration(@Nullable Output<DeliveryStreamRedshiftDestinationConfigurationArgs> redshiftDestinationConfiguration) {
@@ -263,7 +264,7 @@ public final class DeliveryStreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder redshiftDestinationConfiguration(@Nullable DeliveryStreamRedshiftDestinationConfigurationArgs redshiftDestinationConfiguration) {
-            this.redshiftDestinationConfiguration = Output.ofNullable(redshiftDestinationConfiguration);
+            this.redshiftDestinationConfiguration = Codegen.ofNullable(redshiftDestinationConfiguration);
             return this;
         }
         public Builder s3DestinationConfiguration(@Nullable Output<DeliveryStreamS3DestinationConfigurationArgs> s3DestinationConfiguration) {
@@ -271,7 +272,7 @@ public final class DeliveryStreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder s3DestinationConfiguration(@Nullable DeliveryStreamS3DestinationConfigurationArgs s3DestinationConfiguration) {
-            this.s3DestinationConfiguration = Output.ofNullable(s3DestinationConfiguration);
+            this.s3DestinationConfiguration = Codegen.ofNullable(s3DestinationConfiguration);
             return this;
         }
         public Builder splunkDestinationConfiguration(@Nullable Output<DeliveryStreamSplunkDestinationConfigurationArgs> splunkDestinationConfiguration) {
@@ -279,7 +280,7 @@ public final class DeliveryStreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder splunkDestinationConfiguration(@Nullable DeliveryStreamSplunkDestinationConfigurationArgs splunkDestinationConfiguration) {
-            this.splunkDestinationConfiguration = Output.ofNullable(splunkDestinationConfiguration);
+            this.splunkDestinationConfiguration = Codegen.ofNullable(splunkDestinationConfiguration);
             return this;
         }
         public Builder tags(@Nullable Output<List<DeliveryStreamTagArgs>> tags) {
@@ -287,7 +288,7 @@ public final class DeliveryStreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<DeliveryStreamTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(DeliveryStreamTagArgs... tags) {

@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.inputs.VpcIpamOrganizationAdminAccountState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -113,7 +114,7 @@ public class VpcIpamOrganizationAdminAccount extends io.pulumi.resources.CustomR
      * @param options A bag of options that control this resource's behavior.
      */
     public VpcIpamOrganizationAdminAccount(String name, VpcIpamOrganizationAdminAccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/vpcIpamOrganizationAdminAccount:VpcIpamOrganizationAdminAccount", name, args == null ? VpcIpamOrganizationAdminAccountArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/vpcIpamOrganizationAdminAccount:VpcIpamOrganizationAdminAccount", name, args == null ? VpcIpamOrganizationAdminAccountArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VpcIpamOrganizationAdminAccount(String name, Output<String> id, @Nullable VpcIpamOrganizationAdminAccountState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

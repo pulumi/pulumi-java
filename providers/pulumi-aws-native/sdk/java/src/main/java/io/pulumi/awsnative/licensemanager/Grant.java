@@ -8,6 +8,7 @@ import io.pulumi.awsnative.licensemanager.GrantArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -129,7 +130,7 @@ public class Grant extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Grant(String name, @Nullable GrantArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:licensemanager:Grant", name, args == null ? GrantArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:licensemanager:Grant", name, args == null ? GrantArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Grant(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

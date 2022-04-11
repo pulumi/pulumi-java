@@ -5,6 +5,7 @@ package io.pulumi.aws.mediaconvert.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -57,9 +58,9 @@ public final class QueueReservationPlanSettingsGetArgs extends io.pulumi.resourc
     }
 
     private QueueReservationPlanSettingsGetArgs() {
-        this.commitment = Output.empty();
-        this.renewalType = Output.empty();
-        this.reservedSlots = Output.empty();
+        this.commitment = Codegen.empty();
+        this.renewalType = Codegen.empty();
+        this.reservedSlots = Codegen.empty();
     }
 
     public static Builder builder() {

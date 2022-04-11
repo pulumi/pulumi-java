@@ -5,6 +5,7 @@ package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ThingGroupMembershipState extends io.pulumi.resources.Resourc
       private final @Nullable Output<Boolean> overrideDynamicGroup;
 
     public Output<Boolean> getOverrideDynamicGroup() {
-        return this.overrideDynamicGroup == null ? Output.empty() : this.overrideDynamicGroup;
+        return this.overrideDynamicGroup == null ? Codegen.empty() : this.overrideDynamicGroup;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ThingGroupMembershipState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> thingGroupName;
 
     public Output<String> getThingGroupName() {
-        return this.thingGroupName == null ? Output.empty() : this.thingGroupName;
+        return this.thingGroupName == null ? Codegen.empty() : this.thingGroupName;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ThingGroupMembershipState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> thingName;
 
     public Output<String> getThingName() {
-        return this.thingName == null ? Output.empty() : this.thingName;
+        return this.thingName == null ? Codegen.empty() : this.thingName;
     }
 
     public ThingGroupMembershipState(
@@ -58,9 +59,9 @@ public final class ThingGroupMembershipState extends io.pulumi.resources.Resourc
     }
 
     private ThingGroupMembershipState() {
-        this.overrideDynamicGroup = Output.empty();
-        this.thingGroupName = Output.empty();
-        this.thingName = Output.empty();
+        this.overrideDynamicGroup = Codegen.empty();
+        this.thingGroupName = Codegen.empty();
+        this.thingName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class ThingGroupMembershipState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder overrideDynamicGroup(@Nullable Boolean overrideDynamicGroup) {
-            this.overrideDynamicGroup = Output.ofNullable(overrideDynamicGroup);
+            this.overrideDynamicGroup = Codegen.ofNullable(overrideDynamicGroup);
             return this;
         }
         public Builder thingGroupName(@Nullable Output<String> thingGroupName) {
@@ -100,7 +101,7 @@ public final class ThingGroupMembershipState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder thingGroupName(@Nullable String thingGroupName) {
-            this.thingGroupName = Output.ofNullable(thingGroupName);
+            this.thingGroupName = Codegen.ofNullable(thingGroupName);
             return this;
         }
         public Builder thingName(@Nullable Output<String> thingName) {
@@ -108,7 +109,7 @@ public final class ThingGroupMembershipState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder thingName(@Nullable String thingName) {
-            this.thingName = Output.ofNullable(thingName);
+            this.thingName = Codegen.ofNullable(thingName);
             return this;
         }        public ThingGroupMembershipState build() {
             return new ThingGroupMembershipState(overrideDynamicGroup, thingGroupName, thingName);

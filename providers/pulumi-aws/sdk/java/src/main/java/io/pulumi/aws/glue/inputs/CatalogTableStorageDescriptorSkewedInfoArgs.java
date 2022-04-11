@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class CatalogTableStorageDescriptorSkewedInfoArgs extends io.pulumi
       private final @Nullable Output<List<String>> skewedColumnNames;
 
     public Output<List<String>> getSkewedColumnNames() {
-        return this.skewedColumnNames == null ? Output.empty() : this.skewedColumnNames;
+        return this.skewedColumnNames == null ? Codegen.empty() : this.skewedColumnNames;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class CatalogTableStorageDescriptorSkewedInfoArgs extends io.pulumi
       private final @Nullable Output<Map<String,String>> skewedColumnValueLocationMaps;
 
     public Output<Map<String,String>> getSkewedColumnValueLocationMaps() {
-        return this.skewedColumnValueLocationMaps == null ? Output.empty() : this.skewedColumnValueLocationMaps;
+        return this.skewedColumnValueLocationMaps == null ? Codegen.empty() : this.skewedColumnValueLocationMaps;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class CatalogTableStorageDescriptorSkewedInfoArgs extends io.pulumi
       private final @Nullable Output<List<String>> skewedColumnValues;
 
     public Output<List<String>> getSkewedColumnValues() {
-        return this.skewedColumnValues == null ? Output.empty() : this.skewedColumnValues;
+        return this.skewedColumnValues == null ? Codegen.empty() : this.skewedColumnValues;
     }
 
     public CatalogTableStorageDescriptorSkewedInfoArgs(
@@ -59,9 +60,9 @@ public final class CatalogTableStorageDescriptorSkewedInfoArgs extends io.pulumi
     }
 
     private CatalogTableStorageDescriptorSkewedInfoArgs() {
-        this.skewedColumnNames = Output.empty();
-        this.skewedColumnValueLocationMaps = Output.empty();
-        this.skewedColumnValues = Output.empty();
+        this.skewedColumnNames = Codegen.empty();
+        this.skewedColumnValueLocationMaps = Codegen.empty();
+        this.skewedColumnValues = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class CatalogTableStorageDescriptorSkewedInfoArgs extends io.pulumi
             return this;
         }
         public Builder skewedColumnNames(@Nullable List<String> skewedColumnNames) {
-            this.skewedColumnNames = Output.ofNullable(skewedColumnNames);
+            this.skewedColumnNames = Codegen.ofNullable(skewedColumnNames);
             return this;
         }
         public Builder skewedColumnNames(String... skewedColumnNames) {
@@ -104,7 +105,7 @@ public final class CatalogTableStorageDescriptorSkewedInfoArgs extends io.pulumi
             return this;
         }
         public Builder skewedColumnValueLocationMaps(@Nullable Map<String,String> skewedColumnValueLocationMaps) {
-            this.skewedColumnValueLocationMaps = Output.ofNullable(skewedColumnValueLocationMaps);
+            this.skewedColumnValueLocationMaps = Codegen.ofNullable(skewedColumnValueLocationMaps);
             return this;
         }
         public Builder skewedColumnValues(@Nullable Output<List<String>> skewedColumnValues) {
@@ -112,7 +113,7 @@ public final class CatalogTableStorageDescriptorSkewedInfoArgs extends io.pulumi
             return this;
         }
         public Builder skewedColumnValues(@Nullable List<String> skewedColumnValues) {
-            this.skewedColumnValues = Output.ofNullable(skewedColumnValues);
+            this.skewedColumnValues = Codegen.ofNullable(skewedColumnValues);
             return this;
         }
         public Builder skewedColumnValues(String... skewedColumnValues) {

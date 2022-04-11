@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class SecurityPolicyCloudArmorConfigArgs extends io.pulumi.resource
       private final @Nullable Output<Boolean> enableMl;
 
     public Output<Boolean> getEnableMl() {
-        return this.enableMl == null ? Output.empty() : this.enableMl;
+        return this.enableMl == null ? Codegen.empty() : this.enableMl;
     }
 
     public SecurityPolicyCloudArmorConfigArgs(@Nullable Output<Boolean> enableMl) {
@@ -34,7 +35,7 @@ public final class SecurityPolicyCloudArmorConfigArgs extends io.pulumi.resource
     }
 
     private SecurityPolicyCloudArmorConfigArgs() {
-        this.enableMl = Output.empty();
+        this.enableMl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class SecurityPolicyCloudArmorConfigArgs extends io.pulumi.resource
             return this;
         }
         public Builder enableMl(@Nullable Boolean enableMl) {
-            this.enableMl = Output.ofNullable(enableMl);
+            this.enableMl = Codegen.ofNullable(enableMl);
             return this;
         }        public SecurityPolicyCloudArmorConfigArgs build() {
             return new SecurityPolicyCloudArmorConfigArgs(enableMl);

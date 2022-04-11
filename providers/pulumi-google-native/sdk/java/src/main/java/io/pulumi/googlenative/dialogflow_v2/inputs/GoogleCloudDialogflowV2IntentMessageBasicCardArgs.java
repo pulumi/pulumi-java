@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageImageArgs;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends io.
       private final @Nullable Output<List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs>> buttons;
 
     public Output<List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs>> getButtons() {
-        return this.buttons == null ? Output.empty() : this.buttons;
+        return this.buttons == null ? Codegen.empty() : this.buttons;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends io.
       private final @Nullable Output<String> formattedText;
 
     public Output<String> getFormattedText() {
-        return this.formattedText == null ? Output.empty() : this.formattedText;
+        return this.formattedText == null ? Codegen.empty() : this.formattedText;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends io.
       private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageImageArgs> image;
 
     public Output<GoogleCloudDialogflowV2IntentMessageImageArgs> getImage() {
-        return this.image == null ? Output.empty() : this.image;
+        return this.image == null ? Codegen.empty() : this.image;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends io.
       private final @Nullable Output<String> subtitle;
 
     public Output<String> getSubtitle() {
-        return this.subtitle == null ? Output.empty() : this.subtitle;
+        return this.subtitle == null ? Codegen.empty() : this.subtitle;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends io.
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     public GoogleCloudDialogflowV2IntentMessageBasicCardArgs(
@@ -90,11 +91,11 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends io.
     }
 
     private GoogleCloudDialogflowV2IntentMessageBasicCardArgs() {
-        this.buttons = Output.empty();
-        this.formattedText = Output.empty();
-        this.image = Output.empty();
-        this.subtitle = Output.empty();
-        this.title = Output.empty();
+        this.buttons = Codegen.empty();
+        this.formattedText = Codegen.empty();
+        this.image = Codegen.empty();
+        this.subtitle = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends io.
             return this;
         }
         public Builder buttons(@Nullable List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs> buttons) {
-            this.buttons = Output.ofNullable(buttons);
+            this.buttons = Codegen.ofNullable(buttons);
             return this;
         }
         public Builder buttons(GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs... buttons) {
@@ -141,7 +142,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends io.
             return this;
         }
         public Builder formattedText(@Nullable String formattedText) {
-            this.formattedText = Output.ofNullable(formattedText);
+            this.formattedText = Codegen.ofNullable(formattedText);
             return this;
         }
         public Builder image(@Nullable Output<GoogleCloudDialogflowV2IntentMessageImageArgs> image) {
@@ -149,7 +150,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends io.
             return this;
         }
         public Builder image(@Nullable GoogleCloudDialogflowV2IntentMessageImageArgs image) {
-            this.image = Output.ofNullable(image);
+            this.image = Codegen.ofNullable(image);
             return this;
         }
         public Builder subtitle(@Nullable Output<String> subtitle) {
@@ -157,7 +158,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends io.
             return this;
         }
         public Builder subtitle(@Nullable String subtitle) {
-            this.subtitle = Output.ofNullable(subtitle);
+            this.subtitle = Codegen.ofNullable(subtitle);
             return this;
         }
         public Builder title(@Nullable Output<String> title) {
@@ -165,7 +166,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends io.
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }        public GoogleCloudDialogflowV2IntentMessageBasicCardArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageBasicCardArgs(buttons, formattedText, image, subtitle, title);

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ivs;
 import io.pulumi.awsnative.ivs.inputs.PlaybackKeyPairTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class PlaybackKeyPairArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class PlaybackKeyPairArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<PlaybackKeyPairTagArgs>> tags;
 
     public Output<List<PlaybackKeyPairTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public PlaybackKeyPairArgs(
@@ -59,9 +60,9 @@ public final class PlaybackKeyPairArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private PlaybackKeyPairArgs() {
-        this.name = Output.empty();
-        this.publicKeyMaterial = Output.empty();
-        this.tags = Output.empty();
+        this.name = Codegen.empty();
+        this.publicKeyMaterial = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class PlaybackKeyPairArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder publicKeyMaterial(Output<String> publicKeyMaterial) {
@@ -109,7 +110,7 @@ public final class PlaybackKeyPairArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable List<PlaybackKeyPairTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(PlaybackKeyPairTagArgs... tags) {

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.web.inputs.PrivateLinkConnectionStateArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class WebAppPrivateEndpointConnectionSlotArgs extends io.pulumi.res
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class WebAppPrivateEndpointConnectionSlotArgs extends io.pulumi.res
       private final @Nullable Output<String> privateEndpointConnectionName;
 
     public Output<String> getPrivateEndpointConnectionName() {
-        return this.privateEndpointConnectionName == null ? Output.empty() : this.privateEndpointConnectionName;
+        return this.privateEndpointConnectionName == null ? Codegen.empty() : this.privateEndpointConnectionName;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class WebAppPrivateEndpointConnectionSlotArgs extends io.pulumi.res
       private final @Nullable Output<PrivateLinkConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Output<PrivateLinkConnectionStateArgs> getPrivateLinkServiceConnectionState() {
-        return this.privateLinkServiceConnectionState == null ? Output.empty() : this.privateLinkServiceConnectionState;
+        return this.privateLinkServiceConnectionState == null ? Codegen.empty() : this.privateLinkServiceConnectionState;
     }
 
     /**
@@ -89,12 +90,12 @@ public final class WebAppPrivateEndpointConnectionSlotArgs extends io.pulumi.res
     }
 
     private WebAppPrivateEndpointConnectionSlotArgs() {
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.privateEndpointConnectionName = Output.empty();
-        this.privateLinkServiceConnectionState = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.slot = Output.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.privateEndpointConnectionName = Codegen.empty();
+        this.privateLinkServiceConnectionState = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.slot = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class WebAppPrivateEndpointConnectionSlotArgs extends io.pulumi.res
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -148,7 +149,7 @@ public final class WebAppPrivateEndpointConnectionSlotArgs extends io.pulumi.res
             return this;
         }
         public Builder privateEndpointConnectionName(@Nullable String privateEndpointConnectionName) {
-            this.privateEndpointConnectionName = Output.ofNullable(privateEndpointConnectionName);
+            this.privateEndpointConnectionName = Codegen.ofNullable(privateEndpointConnectionName);
             return this;
         }
         public Builder privateLinkServiceConnectionState(@Nullable Output<PrivateLinkConnectionStateArgs> privateLinkServiceConnectionState) {
@@ -156,7 +157,7 @@ public final class WebAppPrivateEndpointConnectionSlotArgs extends io.pulumi.res
             return this;
         }
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkConnectionStateArgs privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Output.ofNullable(privateLinkServiceConnectionState);
+            this.privateLinkServiceConnectionState = Codegen.ofNullable(privateLinkServiceConnectionState);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

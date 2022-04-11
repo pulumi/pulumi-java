@@ -10,6 +10,7 @@ import io.pulumi.azurenative.costmanagement.inputs.ReportScheduleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -49,7 +50,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,FormatType>> format;
 
     public Output<Either<String,FormatType>> getFormat() {
-        return this.format == null ? Output.empty() : this.format;
+        return this.format == null ? Codegen.empty() : this.format;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> reportName;
 
     public Output<String> getReportName() {
-        return this.reportName == null ? Output.empty() : this.reportName;
+        return this.reportName == null ? Codegen.empty() : this.reportName;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ReportScheduleArgs> schedule;
 
     public Output<ReportScheduleArgs> getSchedule() {
-        return this.schedule == null ? Output.empty() : this.schedule;
+        return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
     public ReportArgs(
@@ -88,11 +89,11 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReportArgs() {
-        this.definition = Output.empty();
-        this.deliveryInfo = Output.empty();
-        this.format = Output.empty();
-        this.reportName = Output.empty();
-        this.schedule = Output.empty();
+        this.definition = Codegen.empty();
+        this.deliveryInfo = Codegen.empty();
+        this.format = Codegen.empty();
+        this.reportName = Codegen.empty();
+        this.schedule = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder format(@Nullable Either<String,FormatType> format) {
-            this.format = Output.ofNullable(format);
+            this.format = Codegen.ofNullable(format);
             return this;
         }
         public Builder reportName(@Nullable Output<String> reportName) {
@@ -152,7 +153,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reportName(@Nullable String reportName) {
-            this.reportName = Output.ofNullable(reportName);
+            this.reportName = Codegen.ofNullable(reportName);
             return this;
         }
         public Builder schedule(@Nullable Output<ReportScheduleArgs> schedule) {
@@ -160,7 +161,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schedule(@Nullable ReportScheduleArgs schedule) {
-            this.schedule = Output.ofNullable(schedule);
+            this.schedule = Codegen.ofNullable(schedule);
             return this;
         }        public ReportArgs build() {
             return new ReportArgs(definition, deliveryInfo, format, reportName, schedule);

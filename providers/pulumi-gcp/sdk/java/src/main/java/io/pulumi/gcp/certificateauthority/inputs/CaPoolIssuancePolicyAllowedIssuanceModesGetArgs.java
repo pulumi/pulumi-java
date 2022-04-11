@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class CaPoolIssuancePolicyAllowedIssuanceModesGetArgs extends io.pu
     }
 
     private CaPoolIssuancePolicyAllowedIssuanceModesGetArgs() {
-        this.allowConfigBasedIssuance = Output.empty();
-        this.allowCsrBasedIssuance = Output.empty();
+        this.allowConfigBasedIssuance = Codegen.empty();
+        this.allowCsrBasedIssuance = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class RequestValidatorState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class RequestValidatorState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> restApi;
 
     public Output<String> getRestApi() {
-        return this.restApi == null ? Output.empty() : this.restApi;
+        return this.restApi == null ? Codegen.empty() : this.restApi;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class RequestValidatorState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Boolean> validateRequestBody;
 
     public Output<Boolean> getValidateRequestBody() {
-        return this.validateRequestBody == null ? Output.empty() : this.validateRequestBody;
+        return this.validateRequestBody == null ? Codegen.empty() : this.validateRequestBody;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class RequestValidatorState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Boolean> validateRequestParameters;
 
     public Output<Boolean> getValidateRequestParameters() {
-        return this.validateRequestParameters == null ? Output.empty() : this.validateRequestParameters;
+        return this.validateRequestParameters == null ? Codegen.empty() : this.validateRequestParameters;
     }
 
     public RequestValidatorState(
@@ -71,10 +72,10 @@ public final class RequestValidatorState extends io.pulumi.resources.ResourceArg
     }
 
     private RequestValidatorState() {
-        this.name = Output.empty();
-        this.restApi = Output.empty();
-        this.validateRequestBody = Output.empty();
-        this.validateRequestParameters = Output.empty();
+        this.name = Codegen.empty();
+        this.restApi = Codegen.empty();
+        this.validateRequestBody = Codegen.empty();
+        this.validateRequestParameters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class RequestValidatorState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder restApi(@Nullable Output<String> restApi) {
@@ -120,7 +121,7 @@ public final class RequestValidatorState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder validateRequestBody(@Nullable Boolean validateRequestBody) {
-            this.validateRequestBody = Output.ofNullable(validateRequestBody);
+            this.validateRequestBody = Codegen.ofNullable(validateRequestBody);
             return this;
         }
         public Builder validateRequestParameters(@Nullable Output<Boolean> validateRequestParameters) {
@@ -128,7 +129,7 @@ public final class RequestValidatorState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder validateRequestParameters(@Nullable Boolean validateRequestParameters) {
-            this.validateRequestParameters = Output.ofNullable(validateRequestParameters);
+            this.validateRequestParameters = Codegen.ofNullable(validateRequestParameters);
             return this;
         }        public RequestValidatorState build() {
             return new RequestValidatorState(name, restApi, validateRequestBody, validateRequestParameters);

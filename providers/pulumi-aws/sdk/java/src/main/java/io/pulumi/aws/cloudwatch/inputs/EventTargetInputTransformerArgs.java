@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class EventTargetInputTransformerArgs extends io.pulumi.resources.R
       private final @Nullable Output<Map<String,String>> inputPaths;
 
     public Output<Map<String,String>> getInputPaths() {
-        return this.inputPaths == null ? Output.empty() : this.inputPaths;
+        return this.inputPaths == null ? Codegen.empty() : this.inputPaths;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class EventTargetInputTransformerArgs extends io.pulumi.resources.R
     }
 
     private EventTargetInputTransformerArgs() {
-        this.inputPaths = Output.empty();
-        this.inputTemplate = Output.empty();
+        this.inputPaths = Codegen.empty();
+        this.inputTemplate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class EventTargetInputTransformerArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder inputPaths(@Nullable Map<String,String> inputPaths) {
-            this.inputPaths = Output.ofNullable(inputPaths);
+            this.inputPaths = Codegen.ofNullable(inputPaths);
             return this;
         }
         public Builder inputTemplate(Output<String> inputTemplate) {

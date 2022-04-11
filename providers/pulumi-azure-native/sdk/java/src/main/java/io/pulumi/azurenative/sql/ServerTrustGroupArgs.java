@@ -6,6 +6,7 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.sql.inputs.ServerInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -57,7 +58,7 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> serverTrustGroupName;
 
     public Output<String> getServerTrustGroupName() {
-        return this.serverTrustGroupName == null ? Output.empty() : this.serverTrustGroupName;
+        return this.serverTrustGroupName == null ? Codegen.empty() : this.serverTrustGroupName;
     }
 
     /**
@@ -85,11 +86,11 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ServerTrustGroupArgs() {
-        this.groupMembers = Output.empty();
-        this.locationName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverTrustGroupName = Output.empty();
-        this.trustScopes = Output.empty();
+        this.groupMembers = Codegen.empty();
+        this.locationName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverTrustGroupName = Codegen.empty();
+        this.trustScopes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -152,7 +153,7 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder serverTrustGroupName(@Nullable String serverTrustGroupName) {
-            this.serverTrustGroupName = Output.ofNullable(serverTrustGroupName);
+            this.serverTrustGroupName = Codegen.ofNullable(serverTrustGroupName);
             return this;
         }
         public Builder trustScopes(Output<List<String>> trustScopes) {

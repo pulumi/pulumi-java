@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class DebugOptionsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableHotKeyLogging;
 
     public Output<Boolean> getEnableHotKeyLogging() {
-        return this.enableHotKeyLogging == null ? Output.empty() : this.enableHotKeyLogging;
+        return this.enableHotKeyLogging == null ? Codegen.empty() : this.enableHotKeyLogging;
     }
 
     public DebugOptionsArgs(@Nullable Output<Boolean> enableHotKeyLogging) {
@@ -34,7 +35,7 @@ public final class DebugOptionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DebugOptionsArgs() {
-        this.enableHotKeyLogging = Output.empty();
+        this.enableHotKeyLogging = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class DebugOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableHotKeyLogging(@Nullable Boolean enableHotKeyLogging) {
-            this.enableHotKeyLogging = Output.ofNullable(enableHotKeyLogging);
+            this.enableHotKeyLogging = Codegen.ofNullable(enableHotKeyLogging);
             return this;
         }        public DebugOptionsArgs build() {
             return new DebugOptionsArgs(enableHotKeyLogging);

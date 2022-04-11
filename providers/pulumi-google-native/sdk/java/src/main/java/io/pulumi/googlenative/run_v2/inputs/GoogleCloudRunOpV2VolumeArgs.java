@@ -5,6 +5,7 @@ package io.pulumi.googlenative.run_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2CloudSqlInstanceArgs;
 import io.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2SecretVolumeSourceArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class GoogleCloudRunOpV2VolumeArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<GoogleCloudRunOpV2CloudSqlInstanceArgs> cloudSqlInstance;
 
     public Output<GoogleCloudRunOpV2CloudSqlInstanceArgs> getCloudSqlInstance() {
-        return this.cloudSqlInstance == null ? Output.empty() : this.cloudSqlInstance;
+        return this.cloudSqlInstance == null ? Codegen.empty() : this.cloudSqlInstance;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class GoogleCloudRunOpV2VolumeArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<GoogleCloudRunOpV2SecretVolumeSourceArgs> secret;
 
     public Output<GoogleCloudRunOpV2SecretVolumeSourceArgs> getSecret() {
-        return this.secret == null ? Output.empty() : this.secret;
+        return this.secret == null ? Codegen.empty() : this.secret;
     }
 
     public GoogleCloudRunOpV2VolumeArgs(
@@ -63,9 +64,9 @@ public final class GoogleCloudRunOpV2VolumeArgs extends io.pulumi.resources.Reso
     }
 
     private GoogleCloudRunOpV2VolumeArgs() {
-        this.cloudSqlInstance = Output.empty();
-        this.name = Output.empty();
-        this.secret = Output.empty();
+        this.cloudSqlInstance = Codegen.empty();
+        this.name = Codegen.empty();
+        this.secret = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class GoogleCloudRunOpV2VolumeArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder cloudSqlInstance(@Nullable GoogleCloudRunOpV2CloudSqlInstanceArgs cloudSqlInstance) {
-            this.cloudSqlInstance = Output.ofNullable(cloudSqlInstance);
+            this.cloudSqlInstance = Codegen.ofNullable(cloudSqlInstance);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -113,7 +114,7 @@ public final class GoogleCloudRunOpV2VolumeArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder secret(@Nullable GoogleCloudRunOpV2SecretVolumeSourceArgs secret) {
-            this.secret = Output.ofNullable(secret);
+            this.secret = Codegen.ofNullable(secret);
             return this;
         }        public GoogleCloudRunOpV2VolumeArgs build() {
             return new GoogleCloudRunOpV2VolumeArgs(cloudSqlInstance, name, secret);

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.devtestlab.inputs.SubnetArgs;
 import io.pulumi.azurenative.devtestlab.inputs.SubnetOverrideArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +27,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<SubnetArgs>> allowedSubnets;
 
     public Output<List<SubnetArgs>> getAllowedSubnets() {
-        return this.allowedSubnets == null ? Output.empty() : this.allowedSubnets;
+        return this.allowedSubnets == null ? Codegen.empty() : this.allowedSubnets;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> externalProviderResourceId;
 
     public Output<String> getExternalProviderResourceId() {
-        return this.externalProviderResourceId == null ? Output.empty() : this.externalProviderResourceId;
+        return this.externalProviderResourceId == null ? Codegen.empty() : this.externalProviderResourceId;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<SubnetOverrideArgs>> subnetOverrides;
 
     public Output<List<SubnetOverrideArgs>> getSubnetOverrides() {
-        return this.subnetOverrides == null ? Output.empty() : this.subnetOverrides;
+        return this.subnetOverrides == null ? Codegen.empty() : this.subnetOverrides;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public VirtualNetworkArgs(
@@ -139,15 +140,15 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VirtualNetworkArgs() {
-        this.allowedSubnets = Output.empty();
-        this.description = Output.empty();
-        this.externalProviderResourceId = Output.empty();
-        this.labName = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.subnetOverrides = Output.empty();
-        this.tags = Output.empty();
+        this.allowedSubnets = Codegen.empty();
+        this.description = Codegen.empty();
+        this.externalProviderResourceId = Codegen.empty();
+        this.labName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.subnetOverrides = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -191,7 +192,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowedSubnets(@Nullable List<SubnetArgs> allowedSubnets) {
-            this.allowedSubnets = Output.ofNullable(allowedSubnets);
+            this.allowedSubnets = Codegen.ofNullable(allowedSubnets);
             return this;
         }
         public Builder allowedSubnets(SubnetArgs... allowedSubnets) {
@@ -202,7 +203,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder externalProviderResourceId(@Nullable Output<String> externalProviderResourceId) {
@@ -210,7 +211,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder externalProviderResourceId(@Nullable String externalProviderResourceId) {
-            this.externalProviderResourceId = Output.ofNullable(externalProviderResourceId);
+            this.externalProviderResourceId = Codegen.ofNullable(externalProviderResourceId);
             return this;
         }
         public Builder labName(Output<String> labName) {
@@ -226,7 +227,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -234,7 +235,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -250,7 +251,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetOverrides(@Nullable List<SubnetOverrideArgs> subnetOverrides) {
-            this.subnetOverrides = Output.ofNullable(subnetOverrides);
+            this.subnetOverrides = Codegen.ofNullable(subnetOverrides);
             return this;
         }
         public Builder subnetOverrides(SubnetOverrideArgs... subnetOverrides) {
@@ -261,7 +262,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public VirtualNetworkArgs build() {
             return new VirtualNetworkArgs(allowedSubnets, description, externalProviderResourceId, labName, location, name, resourceGroupName, subnetOverrides, tags);

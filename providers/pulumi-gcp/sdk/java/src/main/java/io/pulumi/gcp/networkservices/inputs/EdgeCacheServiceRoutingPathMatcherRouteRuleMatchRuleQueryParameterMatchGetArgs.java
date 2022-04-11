@@ -5,6 +5,7 @@ package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
       private final @Nullable Output<String> exactMatch;
 
     public Output<String> getExactMatch() {
-        return this.exactMatch == null ? Output.empty() : this.exactMatch;
+        return this.exactMatch == null ? Codegen.empty() : this.exactMatch;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
       private final @Nullable Output<Boolean> presentMatch;
 
     public Output<Boolean> getPresentMatch() {
-        return this.presentMatch == null ? Output.empty() : this.presentMatch;
+        return this.presentMatch == null ? Codegen.empty() : this.presentMatch;
     }
 
     public EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs(
@@ -58,9 +59,9 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
     }
 
     private EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs() {
-        this.exactMatch = Output.empty();
-        this.name = Output.empty();
-        this.presentMatch = Output.empty();
+        this.exactMatch = Codegen.empty();
+        this.name = Codegen.empty();
+        this.presentMatch = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
             return this;
         }
         public Builder exactMatch(@Nullable String exactMatch) {
-            this.exactMatch = Output.ofNullable(exactMatch);
+            this.exactMatch = Codegen.ofNullable(exactMatch);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -108,7 +109,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
             return this;
         }
         public Builder presentMatch(@Nullable Boolean presentMatch) {
-            this.presentMatch = Output.ofNullable(presentMatch);
+            this.presentMatch = Codegen.ofNullable(presentMatch);
             return this;
         }        public EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs(exactMatch, name, presentMatch);

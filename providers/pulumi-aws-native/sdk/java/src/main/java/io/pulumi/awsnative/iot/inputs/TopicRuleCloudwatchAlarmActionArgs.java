@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -53,10 +54,10 @@ public final class TopicRuleCloudwatchAlarmActionArgs extends io.pulumi.resource
     }
 
     private TopicRuleCloudwatchAlarmActionArgs() {
-        this.alarmName = Output.empty();
-        this.roleArn = Output.empty();
-        this.stateReason = Output.empty();
-        this.stateValue = Output.empty();
+        this.alarmName = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.stateReason = Codegen.empty();
+        this.stateValue = Codegen.empty();
     }
 
     public static Builder builder() {

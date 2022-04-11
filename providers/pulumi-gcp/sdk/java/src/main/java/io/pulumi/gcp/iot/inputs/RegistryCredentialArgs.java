@@ -5,6 +5,7 @@ package io.pulumi.gcp.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -31,7 +32,7 @@ public final class RegistryCredentialArgs extends io.pulumi.resources.ResourceAr
     }
 
     private RegistryCredentialArgs() {
-        this.publicKeyCertificate = Output.empty();
+        this.publicKeyCertificate = Codegen.empty();
     }
 
     public static Builder builder() {

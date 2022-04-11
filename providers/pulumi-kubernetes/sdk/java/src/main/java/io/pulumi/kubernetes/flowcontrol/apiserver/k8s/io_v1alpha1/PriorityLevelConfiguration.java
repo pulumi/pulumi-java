@@ -7,6 +7,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.PriorityLevelConfigurationArgs;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.outputs.PriorityLevelConfigurationSpec;
@@ -115,7 +116,7 @@ public class PriorityLevelConfiguration extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public PriorityLevelConfiguration(String name, @Nullable PriorityLevelConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:flowcontrol.apiserver.k8s.io/v1alpha1:PriorityLevelConfiguration", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:flowcontrol.apiserver.k8s.io/v1alpha1:PriorityLevelConfiguration", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private PriorityLevelConfiguration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

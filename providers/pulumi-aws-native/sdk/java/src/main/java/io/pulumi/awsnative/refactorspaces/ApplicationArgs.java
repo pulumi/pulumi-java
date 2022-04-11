@@ -8,6 +8,7 @@ import io.pulumi.awsnative.refactorspaces.inputs.ApplicationApiGatewayProxyInput
 import io.pulumi.awsnative.refactorspaces.inputs.ApplicationTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,28 +23,28 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ApplicationApiGatewayProxyInputArgs> apiGatewayProxy;
 
     public Output<ApplicationApiGatewayProxyInputArgs> getApiGatewayProxy() {
-        return this.apiGatewayProxy == null ? Output.empty() : this.apiGatewayProxy;
+        return this.apiGatewayProxy == null ? Codegen.empty() : this.apiGatewayProxy;
     }
 
     @Import(name="environmentIdentifier")
       private final @Nullable Output<String> environmentIdentifier;
 
     public Output<String> getEnvironmentIdentifier() {
-        return this.environmentIdentifier == null ? Output.empty() : this.environmentIdentifier;
+        return this.environmentIdentifier == null ? Codegen.empty() : this.environmentIdentifier;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="proxyType")
       private final @Nullable Output<ApplicationProxyType> proxyType;
 
     public Output<ApplicationProxyType> getProxyType() {
-        return this.proxyType == null ? Output.empty() : this.proxyType;
+        return this.proxyType == null ? Codegen.empty() : this.proxyType;
     }
 
     /**
@@ -54,14 +55,14 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ApplicationTagArgs>> tags;
 
     public Output<List<ApplicationTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     public ApplicationArgs(
@@ -80,12 +81,12 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApplicationArgs() {
-        this.apiGatewayProxy = Output.empty();
-        this.environmentIdentifier = Output.empty();
-        this.name = Output.empty();
-        this.proxyType = Output.empty();
-        this.tags = Output.empty();
-        this.vpcId = Output.empty();
+        this.apiGatewayProxy = Codegen.empty();
+        this.environmentIdentifier = Codegen.empty();
+        this.name = Codegen.empty();
+        this.proxyType = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiGatewayProxy(@Nullable ApplicationApiGatewayProxyInputArgs apiGatewayProxy) {
-            this.apiGatewayProxy = Output.ofNullable(apiGatewayProxy);
+            this.apiGatewayProxy = Codegen.ofNullable(apiGatewayProxy);
             return this;
         }
         public Builder environmentIdentifier(@Nullable Output<String> environmentIdentifier) {
@@ -131,7 +132,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder environmentIdentifier(@Nullable String environmentIdentifier) {
-            this.environmentIdentifier = Output.ofNullable(environmentIdentifier);
+            this.environmentIdentifier = Codegen.ofNullable(environmentIdentifier);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -139,7 +140,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder proxyType(@Nullable Output<ApplicationProxyType> proxyType) {
@@ -147,7 +148,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder proxyType(@Nullable ApplicationProxyType proxyType) {
-            this.proxyType = Output.ofNullable(proxyType);
+            this.proxyType = Codegen.ofNullable(proxyType);
             return this;
         }
         public Builder tags(@Nullable Output<List<ApplicationTagArgs>> tags) {
@@ -155,7 +156,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<ApplicationTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ApplicationTagArgs... tags) {
@@ -166,7 +167,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }        public ApplicationArgs build() {
             return new ApplicationArgs(apiGatewayProxy, environmentIdentifier, name, proxyType, tags, vpcId);

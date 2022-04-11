@@ -6,6 +6,7 @@ package io.pulumi.azurenative.automation.inputs;
 import io.pulumi.azurenative.automation.inputs.AdvancedScheduleMonthlyOccurrenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +30,7 @@ public final class AdvancedScheduleArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<Integer>> monthDays;
 
     public Output<List<Integer>> getMonthDays() {
-        return this.monthDays == null ? Output.empty() : this.monthDays;
+        return this.monthDays == null ? Codegen.empty() : this.monthDays;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class AdvancedScheduleArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<AdvancedScheduleMonthlyOccurrenceArgs>> monthlyOccurrences;
 
     public Output<List<AdvancedScheduleMonthlyOccurrenceArgs>> getMonthlyOccurrences() {
-        return this.monthlyOccurrences == null ? Output.empty() : this.monthlyOccurrences;
+        return this.monthlyOccurrences == null ? Codegen.empty() : this.monthlyOccurrences;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class AdvancedScheduleArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> weekDays;
 
     public Output<List<String>> getWeekDays() {
-        return this.weekDays == null ? Output.empty() : this.weekDays;
+        return this.weekDays == null ? Codegen.empty() : this.weekDays;
     }
 
     public AdvancedScheduleArgs(
@@ -64,9 +65,9 @@ public final class AdvancedScheduleArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private AdvancedScheduleArgs() {
-        this.monthDays = Output.empty();
-        this.monthlyOccurrences = Output.empty();
-        this.weekDays = Output.empty();
+        this.monthDays = Codegen.empty();
+        this.monthlyOccurrences = Codegen.empty();
+        this.weekDays = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class AdvancedScheduleArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder monthDays(@Nullable List<Integer> monthDays) {
-            this.monthDays = Output.ofNullable(monthDays);
+            this.monthDays = Codegen.ofNullable(monthDays);
             return this;
         }
         public Builder monthDays(Integer... monthDays) {
@@ -109,7 +110,7 @@ public final class AdvancedScheduleArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder monthlyOccurrences(@Nullable List<AdvancedScheduleMonthlyOccurrenceArgs> monthlyOccurrences) {
-            this.monthlyOccurrences = Output.ofNullable(monthlyOccurrences);
+            this.monthlyOccurrences = Codegen.ofNullable(monthlyOccurrences);
             return this;
         }
         public Builder monthlyOccurrences(AdvancedScheduleMonthlyOccurrenceArgs... monthlyOccurrences) {
@@ -120,7 +121,7 @@ public final class AdvancedScheduleArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder weekDays(@Nullable List<String> weekDays) {
-            this.weekDays = Output.ofNullable(weekDays);
+            this.weekDays = Codegen.ofNullable(weekDays);
             return this;
         }
         public Builder weekDays(String... weekDays) {

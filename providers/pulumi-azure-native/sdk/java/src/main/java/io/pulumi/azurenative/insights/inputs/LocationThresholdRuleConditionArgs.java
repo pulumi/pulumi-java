@@ -8,6 +8,7 @@ import io.pulumi.azurenative.insights.inputs.RuleMetricDataSourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class LocationThresholdRuleConditionArgs extends io.pulumi.resource
       private final @Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
 
     public Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> getDataSource() {
-        return this.dataSource == null ? Output.empty() : this.dataSource;
+        return this.dataSource == null ? Codegen.empty() : this.dataSource;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class LocationThresholdRuleConditionArgs extends io.pulumi.resource
       private final @Nullable Output<String> windowSize;
 
     public Output<String> getWindowSize() {
-        return this.windowSize == null ? Output.empty() : this.windowSize;
+        return this.windowSize == null ? Codegen.empty() : this.windowSize;
     }
 
     public LocationThresholdRuleConditionArgs(
@@ -79,10 +80,10 @@ public final class LocationThresholdRuleConditionArgs extends io.pulumi.resource
     }
 
     private LocationThresholdRuleConditionArgs() {
-        this.dataSource = Output.empty();
-        this.failedLocationCount = Output.empty();
-        this.odataType = Output.empty();
-        this.windowSize = Output.empty();
+        this.dataSource = Codegen.empty();
+        this.failedLocationCount = Codegen.empty();
+        this.odataType = Codegen.empty();
+        this.windowSize = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class LocationThresholdRuleConditionArgs extends io.pulumi.resource
             return this;
         }
         public Builder dataSource(@Nullable Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs> dataSource) {
-            this.dataSource = Output.ofNullable(dataSource);
+            this.dataSource = Codegen.ofNullable(dataSource);
             return this;
         }
         public Builder failedLocationCount(Output<Integer> failedLocationCount) {
@@ -140,7 +141,7 @@ public final class LocationThresholdRuleConditionArgs extends io.pulumi.resource
             return this;
         }
         public Builder windowSize(@Nullable String windowSize) {
-            this.windowSize = Output.ofNullable(windowSize);
+            this.windowSize = Codegen.ofNullable(windowSize);
             return this;
         }        public LocationThresholdRuleConditionArgs build() {
             return new LocationThresholdRuleConditionArgs(dataSource, failedLocationCount, odataType, windowSize);

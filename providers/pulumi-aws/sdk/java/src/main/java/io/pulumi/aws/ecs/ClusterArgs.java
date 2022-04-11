@@ -8,6 +8,7 @@ import io.pulumi.aws.ecs.inputs.ClusterDefaultCapacityProviderStrategyArgs;
 import io.pulumi.aws.ecs.inputs.ClusterSettingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -27,7 +28,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> capacityProviders;
 
     public Output<List<String>> getCapacityProviders() {
-        return this.capacityProviders == null ? Output.empty() : this.capacityProviders;
+        return this.capacityProviders == null ? Codegen.empty() : this.capacityProviders;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ClusterConfigurationArgs> configuration;
 
     public Output<ClusterConfigurationArgs> getConfiguration() {
-        return this.configuration == null ? Output.empty() : this.configuration;
+        return this.configuration == null ? Codegen.empty() : this.configuration;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ClusterDefaultCapacityProviderStrategyArgs>> defaultCapacityProviderStrategies;
 
     public Output<List<ClusterDefaultCapacityProviderStrategyArgs>> getDefaultCapacityProviderStrategies() {
-        return this.defaultCapacityProviderStrategies == null ? Output.empty() : this.defaultCapacityProviderStrategies;
+        return this.defaultCapacityProviderStrategies == null ? Codegen.empty() : this.defaultCapacityProviderStrategies;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ClusterSettingArgs>> settings;
 
     public Output<List<ClusterSettingArgs>> getSettings() {
-        return this.settings == null ? Output.empty() : this.settings;
+        return this.settings == null ? Codegen.empty() : this.settings;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ClusterArgs(
@@ -101,12 +102,12 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterArgs() {
-        this.capacityProviders = Output.empty();
-        this.configuration = Output.empty();
-        this.defaultCapacityProviderStrategies = Output.empty();
-        this.name = Output.empty();
-        this.settings = Output.empty();
-        this.tags = Output.empty();
+        this.capacityProviders = Codegen.empty();
+        this.configuration = Codegen.empty();
+        this.defaultCapacityProviderStrategies = Codegen.empty();
+        this.name = Codegen.empty();
+        this.settings = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder capacityProviders(@Nullable List<String> capacityProviders) {
-            this.capacityProviders = Output.ofNullable(capacityProviders);
+            this.capacityProviders = Codegen.ofNullable(capacityProviders);
             return this;
         }
         public Builder capacityProviders(String... capacityProviders) {
@@ -155,7 +156,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder configuration(@Nullable ClusterConfigurationArgs configuration) {
-            this.configuration = Output.ofNullable(configuration);
+            this.configuration = Codegen.ofNullable(configuration);
             return this;
         }
         public Builder defaultCapacityProviderStrategies(@Nullable Output<List<ClusterDefaultCapacityProviderStrategyArgs>> defaultCapacityProviderStrategies) {
@@ -163,7 +164,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultCapacityProviderStrategies(@Nullable List<ClusterDefaultCapacityProviderStrategyArgs> defaultCapacityProviderStrategies) {
-            this.defaultCapacityProviderStrategies = Output.ofNullable(defaultCapacityProviderStrategies);
+            this.defaultCapacityProviderStrategies = Codegen.ofNullable(defaultCapacityProviderStrategies);
             return this;
         }
         public Builder defaultCapacityProviderStrategies(ClusterDefaultCapacityProviderStrategyArgs... defaultCapacityProviderStrategies) {
@@ -174,7 +175,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder settings(@Nullable Output<List<ClusterSettingArgs>> settings) {
@@ -182,7 +183,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder settings(@Nullable List<ClusterSettingArgs> settings) {
-            this.settings = Output.ofNullable(settings);
+            this.settings = Codegen.ofNullable(settings);
             return this;
         }
         public Builder settings(ClusterSettingArgs... settings) {
@@ -193,7 +194,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ClusterArgs build() {
             return new ClusterArgs(capacityProviders, configuration, defaultCapacityProviderStrategies, name, settings, tags);

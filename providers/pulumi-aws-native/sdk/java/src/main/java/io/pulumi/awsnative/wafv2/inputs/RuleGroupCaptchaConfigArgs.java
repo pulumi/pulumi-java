@@ -6,6 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupImmunityTimePropertyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +19,7 @@ public final class RuleGroupCaptchaConfigArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<RuleGroupImmunityTimePropertyArgs> immunityTimeProperty;
 
     public Output<RuleGroupImmunityTimePropertyArgs> getImmunityTimeProperty() {
-        return this.immunityTimeProperty == null ? Output.empty() : this.immunityTimeProperty;
+        return this.immunityTimeProperty == null ? Codegen.empty() : this.immunityTimeProperty;
     }
 
     public RuleGroupCaptchaConfigArgs(@Nullable Output<RuleGroupImmunityTimePropertyArgs> immunityTimeProperty) {
@@ -26,7 +27,7 @@ public final class RuleGroupCaptchaConfigArgs extends io.pulumi.resources.Resour
     }
 
     private RuleGroupCaptchaConfigArgs() {
-        this.immunityTimeProperty = Output.empty();
+        this.immunityTimeProperty = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class RuleGroupCaptchaConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder immunityTimeProperty(@Nullable RuleGroupImmunityTimePropertyArgs immunityTimeProperty) {
-            this.immunityTimeProperty = Output.ofNullable(immunityTimeProperty);
+            this.immunityTimeProperty = Codegen.ofNullable(immunityTimeProperty);
             return this;
         }        public RuleGroupCaptchaConfigArgs build() {
             return new RuleGroupCaptchaConfigArgs(immunityTimeProperty);

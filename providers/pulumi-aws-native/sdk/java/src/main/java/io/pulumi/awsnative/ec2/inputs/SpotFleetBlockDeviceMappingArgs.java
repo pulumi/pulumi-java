@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ec2.inputs;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetEbsBlockDeviceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,21 +27,21 @@ public final class SpotFleetBlockDeviceMappingArgs extends io.pulumi.resources.R
       private final @Nullable Output<SpotFleetEbsBlockDeviceArgs> ebs;
 
     public Output<SpotFleetEbsBlockDeviceArgs> getEbs() {
-        return this.ebs == null ? Output.empty() : this.ebs;
+        return this.ebs == null ? Codegen.empty() : this.ebs;
     }
 
     @Import(name="noDevice")
       private final @Nullable Output<String> noDevice;
 
     public Output<String> getNoDevice() {
-        return this.noDevice == null ? Output.empty() : this.noDevice;
+        return this.noDevice == null ? Codegen.empty() : this.noDevice;
     }
 
     @Import(name="virtualName")
       private final @Nullable Output<String> virtualName;
 
     public Output<String> getVirtualName() {
-        return this.virtualName == null ? Output.empty() : this.virtualName;
+        return this.virtualName == null ? Codegen.empty() : this.virtualName;
     }
 
     public SpotFleetBlockDeviceMappingArgs(
@@ -55,10 +56,10 @@ public final class SpotFleetBlockDeviceMappingArgs extends io.pulumi.resources.R
     }
 
     private SpotFleetBlockDeviceMappingArgs() {
-        this.deviceName = Output.empty();
-        this.ebs = Output.empty();
-        this.noDevice = Output.empty();
-        this.virtualName = Output.empty();
+        this.deviceName = Codegen.empty();
+        this.ebs = Codegen.empty();
+        this.noDevice = Codegen.empty();
+        this.virtualName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class SpotFleetBlockDeviceMappingArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder ebs(@Nullable SpotFleetEbsBlockDeviceArgs ebs) {
-            this.ebs = Output.ofNullable(ebs);
+            this.ebs = Codegen.ofNullable(ebs);
             return this;
         }
         public Builder noDevice(@Nullable Output<String> noDevice) {
@@ -108,7 +109,7 @@ public final class SpotFleetBlockDeviceMappingArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder noDevice(@Nullable String noDevice) {
-            this.noDevice = Output.ofNullable(noDevice);
+            this.noDevice = Codegen.ofNullable(noDevice);
             return this;
         }
         public Builder virtualName(@Nullable Output<String> virtualName) {
@@ -116,7 +117,7 @@ public final class SpotFleetBlockDeviceMappingArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder virtualName(@Nullable String virtualName) {
-            this.virtualName = Output.ofNullable(virtualName);
+            this.virtualName = Codegen.ofNullable(virtualName);
             return this;
         }        public SpotFleetBlockDeviceMappingArgs build() {
             return new SpotFleetBlockDeviceMappingArgs(deviceName, ebs, noDevice, virtualName);

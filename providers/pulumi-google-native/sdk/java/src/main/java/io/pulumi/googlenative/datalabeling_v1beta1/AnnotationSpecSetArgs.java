@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datalabeling_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1AnnotationSpecArgs;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +36,7 @@ public final class AnnotationSpecSetArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class AnnotationSpecSetArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public AnnotationSpecSetArgs(
@@ -68,10 +69,10 @@ public final class AnnotationSpecSetArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AnnotationSpecSetArgs() {
-        this.annotationSpecs = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.project = Output.empty();
+        this.annotationSpecs = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class AnnotationSpecSetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -132,7 +133,7 @@ public final class AnnotationSpecSetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public AnnotationSpecSetArgs build() {
             return new AnnotationSpecSetArgs(annotationSpecs, description, displayName, project);

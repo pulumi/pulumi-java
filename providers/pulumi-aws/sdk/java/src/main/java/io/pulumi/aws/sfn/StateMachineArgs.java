@@ -7,6 +7,7 @@ import io.pulumi.aws.sfn.inputs.StateMachineLoggingConfigurationArgs;
 import io.pulumi.aws.sfn.inputs.StateMachineTracingConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -36,7 +37,7 @@ public final class StateMachineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<StateMachineLoggingConfigurationArgs> loggingConfiguration;
 
     public Output<StateMachineLoggingConfigurationArgs> getLoggingConfiguration() {
-        return this.loggingConfiguration == null ? Output.empty() : this.loggingConfiguration;
+        return this.loggingConfiguration == null ? Codegen.empty() : this.loggingConfiguration;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class StateMachineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class StateMachineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class StateMachineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<StateMachineTracingConfigurationArgs> tracingConfiguration;
 
     public Output<StateMachineTracingConfigurationArgs> getTracingConfiguration() {
-        return this.tracingConfiguration == null ? Output.empty() : this.tracingConfiguration;
+        return this.tracingConfiguration == null ? Codegen.empty() : this.tracingConfiguration;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class StateMachineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public StateMachineArgs(
@@ -112,13 +113,13 @@ public final class StateMachineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StateMachineArgs() {
-        this.definition = Output.empty();
-        this.loggingConfiguration = Output.empty();
-        this.name = Output.empty();
-        this.roleArn = Output.empty();
-        this.tags = Output.empty();
-        this.tracingConfiguration = Output.empty();
-        this.type = Output.empty();
+        this.definition = Codegen.empty();
+        this.loggingConfiguration = Codegen.empty();
+        this.name = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tracingConfiguration = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -166,7 +167,7 @@ public final class StateMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder loggingConfiguration(@Nullable StateMachineLoggingConfigurationArgs loggingConfiguration) {
-            this.loggingConfiguration = Output.ofNullable(loggingConfiguration);
+            this.loggingConfiguration = Codegen.ofNullable(loggingConfiguration);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -174,7 +175,7 @@ public final class StateMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {
@@ -190,7 +191,7 @@ public final class StateMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tracingConfiguration(@Nullable Output<StateMachineTracingConfigurationArgs> tracingConfiguration) {
@@ -198,7 +199,7 @@ public final class StateMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tracingConfiguration(@Nullable StateMachineTracingConfigurationArgs tracingConfiguration) {
-            this.tracingConfiguration = Output.ofNullable(tracingConfiguration);
+            this.tracingConfiguration = Codegen.ofNullable(tracingConfiguration);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -206,7 +207,7 @@ public final class StateMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public StateMachineArgs build() {
             return new StateMachineArgs(definition, loggingConfiguration, name, roleArn, tags, tracingConfiguration, type);

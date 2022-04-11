@@ -8,6 +8,7 @@ import io.pulumi.azurenative.scheduler.inputs.ServiceBusAuthenticationArgs;
 import io.pulumi.azurenative.scheduler.inputs.ServiceBusBrokeredMessagePropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class ServiceBusTopicMessageArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<ServiceBusAuthenticationArgs> authentication;
 
     public Output<ServiceBusAuthenticationArgs> getAuthentication() {
-        return this.authentication == null ? Output.empty() : this.authentication;
+        return this.authentication == null ? Codegen.empty() : this.authentication;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ServiceBusTopicMessageArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<ServiceBusBrokeredMessagePropertiesArgs> brokeredMessageProperties;
 
     public Output<ServiceBusBrokeredMessagePropertiesArgs> getBrokeredMessageProperties() {
-        return this.brokeredMessageProperties == null ? Output.empty() : this.brokeredMessageProperties;
+        return this.brokeredMessageProperties == null ? Codegen.empty() : this.brokeredMessageProperties;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ServiceBusTopicMessageArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Map<String,String>> customMessageProperties;
 
     public Output<Map<String,String>> getCustomMessageProperties() {
-        return this.customMessageProperties == null ? Output.empty() : this.customMessageProperties;
+        return this.customMessageProperties == null ? Codegen.empty() : this.customMessageProperties;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ServiceBusTopicMessageArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {
-        return this.message == null ? Output.empty() : this.message;
+        return this.message == null ? Codegen.empty() : this.message;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class ServiceBusTopicMessageArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> namespace;
 
     public Output<String> getNamespace() {
-        return this.namespace == null ? Output.empty() : this.namespace;
+        return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class ServiceBusTopicMessageArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> topicPath;
 
     public Output<String> getTopicPath() {
-        return this.topicPath == null ? Output.empty() : this.topicPath;
+        return this.topicPath == null ? Codegen.empty() : this.topicPath;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class ServiceBusTopicMessageArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<ServiceBusTransportType> transportType;
 
     public Output<ServiceBusTransportType> getTransportType() {
-        return this.transportType == null ? Output.empty() : this.transportType;
+        return this.transportType == null ? Codegen.empty() : this.transportType;
     }
 
     public ServiceBusTopicMessageArgs(
@@ -113,13 +114,13 @@ public final class ServiceBusTopicMessageArgs extends io.pulumi.resources.Resour
     }
 
     private ServiceBusTopicMessageArgs() {
-        this.authentication = Output.empty();
-        this.brokeredMessageProperties = Output.empty();
-        this.customMessageProperties = Output.empty();
-        this.message = Output.empty();
-        this.namespace = Output.empty();
-        this.topicPath = Output.empty();
-        this.transportType = Output.empty();
+        this.authentication = Codegen.empty();
+        this.brokeredMessageProperties = Codegen.empty();
+        this.customMessageProperties = Codegen.empty();
+        this.message = Codegen.empty();
+        this.namespace = Codegen.empty();
+        this.topicPath = Codegen.empty();
+        this.transportType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class ServiceBusTopicMessageArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder authentication(@Nullable ServiceBusAuthenticationArgs authentication) {
-            this.authentication = Output.ofNullable(authentication);
+            this.authentication = Codegen.ofNullable(authentication);
             return this;
         }
         public Builder brokeredMessageProperties(@Nullable Output<ServiceBusBrokeredMessagePropertiesArgs> brokeredMessageProperties) {
@@ -167,7 +168,7 @@ public final class ServiceBusTopicMessageArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder brokeredMessageProperties(@Nullable ServiceBusBrokeredMessagePropertiesArgs brokeredMessageProperties) {
-            this.brokeredMessageProperties = Output.ofNullable(brokeredMessageProperties);
+            this.brokeredMessageProperties = Codegen.ofNullable(brokeredMessageProperties);
             return this;
         }
         public Builder customMessageProperties(@Nullable Output<Map<String,String>> customMessageProperties) {
@@ -175,7 +176,7 @@ public final class ServiceBusTopicMessageArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder customMessageProperties(@Nullable Map<String,String> customMessageProperties) {
-            this.customMessageProperties = Output.ofNullable(customMessageProperties);
+            this.customMessageProperties = Codegen.ofNullable(customMessageProperties);
             return this;
         }
         public Builder message(@Nullable Output<String> message) {
@@ -183,7 +184,7 @@ public final class ServiceBusTopicMessageArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder message(@Nullable String message) {
-            this.message = Output.ofNullable(message);
+            this.message = Codegen.ofNullable(message);
             return this;
         }
         public Builder namespace(@Nullable Output<String> namespace) {
@@ -191,7 +192,7 @@ public final class ServiceBusTopicMessageArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Output.ofNullable(namespace);
+            this.namespace = Codegen.ofNullable(namespace);
             return this;
         }
         public Builder topicPath(@Nullable Output<String> topicPath) {
@@ -199,7 +200,7 @@ public final class ServiceBusTopicMessageArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder topicPath(@Nullable String topicPath) {
-            this.topicPath = Output.ofNullable(topicPath);
+            this.topicPath = Codegen.ofNullable(topicPath);
             return this;
         }
         public Builder transportType(@Nullable Output<ServiceBusTransportType> transportType) {
@@ -207,7 +208,7 @@ public final class ServiceBusTopicMessageArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder transportType(@Nullable ServiceBusTransportType transportType) {
-            this.transportType = Output.ofNullable(transportType);
+            this.transportType = Codegen.ofNullable(transportType);
             return this;
         }        public ServiceBusTopicMessageArgs build() {
             return new ServiceBusTopicMessageArgs(authentication, brokeredMessageProperties, customMessageProperties, message, namespace, topicPath, transportType);

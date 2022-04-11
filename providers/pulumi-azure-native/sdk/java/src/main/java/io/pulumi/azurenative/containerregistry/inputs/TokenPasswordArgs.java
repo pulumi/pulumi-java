@@ -7,6 +7,7 @@ import io.pulumi.azurenative.containerregistry.enums.TokenPasswordName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class TokenPasswordArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> creationTime;
 
     public Output<String> getCreationTime() {
-        return this.creationTime == null ? Output.empty() : this.creationTime;
+        return this.creationTime == null ? Codegen.empty() : this.creationTime;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class TokenPasswordArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> expiry;
 
     public Output<String> getExpiry() {
-        return this.expiry == null ? Output.empty() : this.expiry;
+        return this.expiry == null ? Codegen.empty() : this.expiry;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class TokenPasswordArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,TokenPasswordName>> name;
 
     public Output<Either<String,TokenPasswordName>> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public TokenPasswordArgs(
@@ -63,9 +64,9 @@ public final class TokenPasswordArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TokenPasswordArgs() {
-        this.creationTime = Output.empty();
-        this.expiry = Output.empty();
-        this.name = Output.empty();
+        this.creationTime = Codegen.empty();
+        this.expiry = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class TokenPasswordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder creationTime(@Nullable String creationTime) {
-            this.creationTime = Output.ofNullable(creationTime);
+            this.creationTime = Codegen.ofNullable(creationTime);
             return this;
         }
         public Builder expiry(@Nullable Output<String> expiry) {
@@ -105,7 +106,7 @@ public final class TokenPasswordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expiry(@Nullable String expiry) {
-            this.expiry = Output.ofNullable(expiry);
+            this.expiry = Codegen.ofNullable(expiry);
             return this;
         }
         public Builder name(@Nullable Output<Either<String,TokenPasswordName>> name) {
@@ -113,7 +114,7 @@ public final class TokenPasswordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable Either<String,TokenPasswordName> name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public TokenPasswordArgs build() {
             return new TokenPasswordArgs(creationTime, expiry, name);

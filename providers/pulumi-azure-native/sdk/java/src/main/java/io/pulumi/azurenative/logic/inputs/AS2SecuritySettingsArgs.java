@@ -5,6 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -93,7 +94,7 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> encryptionCertificateName;
 
     public Output<String> getEncryptionCertificateName() {
-        return this.encryptionCertificateName == null ? Output.empty() : this.encryptionCertificateName;
+        return this.encryptionCertificateName == null ? Codegen.empty() : this.encryptionCertificateName;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> sha2AlgorithmFormat;
 
     public Output<String> getSha2AlgorithmFormat() {
-        return this.sha2AlgorithmFormat == null ? Output.empty() : this.sha2AlgorithmFormat;
+        return this.sha2AlgorithmFormat == null ? Codegen.empty() : this.sha2AlgorithmFormat;
     }
 
     /**
@@ -126,7 +127,7 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> signingCertificateName;
 
     public Output<String> getSigningCertificateName() {
-        return this.signingCertificateName == null ? Output.empty() : this.signingCertificateName;
+        return this.signingCertificateName == null ? Codegen.empty() : this.signingCertificateName;
     }
 
     public AS2SecuritySettingsArgs(
@@ -153,16 +154,16 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
     }
 
     private AS2SecuritySettingsArgs() {
-        this.enableNRRForInboundDecodedMessages = Output.empty();
-        this.enableNRRForInboundEncodedMessages = Output.empty();
-        this.enableNRRForInboundMDN = Output.empty();
-        this.enableNRRForOutboundDecodedMessages = Output.empty();
-        this.enableNRRForOutboundEncodedMessages = Output.empty();
-        this.enableNRRForOutboundMDN = Output.empty();
-        this.encryptionCertificateName = Output.empty();
-        this.overrideGroupSigningCertificate = Output.empty();
-        this.sha2AlgorithmFormat = Output.empty();
-        this.signingCertificateName = Output.empty();
+        this.enableNRRForInboundDecodedMessages = Codegen.empty();
+        this.enableNRRForInboundEncodedMessages = Codegen.empty();
+        this.enableNRRForInboundMDN = Codegen.empty();
+        this.enableNRRForOutboundDecodedMessages = Codegen.empty();
+        this.enableNRRForOutboundEncodedMessages = Codegen.empty();
+        this.enableNRRForOutboundMDN = Codegen.empty();
+        this.encryptionCertificateName = Codegen.empty();
+        this.overrideGroupSigningCertificate = Codegen.empty();
+        this.sha2AlgorithmFormat = Codegen.empty();
+        this.signingCertificateName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -256,7 +257,7 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder encryptionCertificateName(@Nullable String encryptionCertificateName) {
-            this.encryptionCertificateName = Output.ofNullable(encryptionCertificateName);
+            this.encryptionCertificateName = Codegen.ofNullable(encryptionCertificateName);
             return this;
         }
         public Builder overrideGroupSigningCertificate(Output<Boolean> overrideGroupSigningCertificate) {
@@ -272,7 +273,7 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder sha2AlgorithmFormat(@Nullable String sha2AlgorithmFormat) {
-            this.sha2AlgorithmFormat = Output.ofNullable(sha2AlgorithmFormat);
+            this.sha2AlgorithmFormat = Codegen.ofNullable(sha2AlgorithmFormat);
             return this;
         }
         public Builder signingCertificateName(@Nullable Output<String> signingCertificateName) {
@@ -280,7 +281,7 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder signingCertificateName(@Nullable String signingCertificateName) {
-            this.signingCertificateName = Output.ofNullable(signingCertificateName);
+            this.signingCertificateName = Codegen.ofNullable(signingCertificateName);
             return this;
         }        public AS2SecuritySettingsArgs build() {
             return new AS2SecuritySettingsArgs(enableNRRForInboundDecodedMessages, enableNRRForInboundEncodedMessages, enableNRRForInboundMDN, enableNRRForOutboundDecodedMessages, enableNRRForOutboundEncodedMessages, enableNRRForOutboundMDN, encryptionCertificateName, overrideGroupSigningCertificate, sha2AlgorithmFormat, signingCertificateName);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -45,7 +46,7 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> definitions;
 
     public Output<Object> getDefinitions() {
-        return this.definitions == null ? Output.empty() : this.definitions;
+        return this.definitions == null ? Codegen.empty() : this.definitions;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> schemaId;
 
     public Output<String> getSchemaId() {
-        return this.schemaId == null ? Output.empty() : this.schemaId;
+        return this.schemaId == null ? Codegen.empty() : this.schemaId;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public ApiSchemaArgs(
@@ -110,13 +111,13 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApiSchemaArgs() {
-        this.apiId = Output.empty();
-        this.contentType = Output.empty();
-        this.definitions = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.schemaId = Output.empty();
-        this.serviceName = Output.empty();
-        this.value = Output.empty();
+        this.apiId = Codegen.empty();
+        this.contentType = Codegen.empty();
+        this.definitions = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.schemaId = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -172,7 +173,7 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder definitions(@Nullable Object definitions) {
-            this.definitions = Output.ofNullable(definitions);
+            this.definitions = Codegen.ofNullable(definitions);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -188,7 +189,7 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schemaId(@Nullable String schemaId) {
-            this.schemaId = Output.ofNullable(schemaId);
+            this.schemaId = Codegen.ofNullable(schemaId);
             return this;
         }
         public Builder serviceName(Output<String> serviceName) {
@@ -204,7 +205,7 @@ public final class ApiSchemaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public ApiSchemaArgs build() {
             return new ApiSchemaArgs(apiId, contentType, definitions, resourceGroupName, schemaId, serviceName, value);

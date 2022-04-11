@@ -8,6 +8,7 @@ import io.pulumi.aws.datasync.inputs.TaskOptionsArgs;
 import io.pulumi.aws.datasync.inputs.TaskScheduleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> cloudwatchLogGroupArn;
 
     public Output<String> getCloudwatchLogGroupArn() {
-        return this.cloudwatchLogGroupArn == null ? Output.empty() : this.cloudwatchLogGroupArn;
+        return this.cloudwatchLogGroupArn == null ? Codegen.empty() : this.cloudwatchLogGroupArn;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TaskExcludesArgs> excludes;
 
     public Output<TaskExcludesArgs> getExcludes() {
-        return this.excludes == null ? Output.empty() : this.excludes;
+        return this.excludes == null ? Codegen.empty() : this.excludes;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TaskOptionsArgs> options;
 
     public Output<TaskOptionsArgs> getOptions() {
-        return this.options == null ? Output.empty() : this.options;
+        return this.options == null ? Codegen.empty() : this.options;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TaskScheduleArgs> schedule;
 
     public Output<TaskScheduleArgs> getSchedule() {
-        return this.schedule == null ? Output.empty() : this.schedule;
+        return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public TaskArgs(
@@ -126,14 +127,14 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TaskArgs() {
-        this.cloudwatchLogGroupArn = Output.empty();
-        this.destinationLocationArn = Output.empty();
-        this.excludes = Output.empty();
-        this.name = Output.empty();
-        this.options = Output.empty();
-        this.schedule = Output.empty();
-        this.sourceLocationArn = Output.empty();
-        this.tags = Output.empty();
+        this.cloudwatchLogGroupArn = Codegen.empty();
+        this.destinationLocationArn = Codegen.empty();
+        this.excludes = Codegen.empty();
+        this.name = Codegen.empty();
+        this.options = Codegen.empty();
+        this.schedule = Codegen.empty();
+        this.sourceLocationArn = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -175,7 +176,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cloudwatchLogGroupArn(@Nullable String cloudwatchLogGroupArn) {
-            this.cloudwatchLogGroupArn = Output.ofNullable(cloudwatchLogGroupArn);
+            this.cloudwatchLogGroupArn = Codegen.ofNullable(cloudwatchLogGroupArn);
             return this;
         }
         public Builder destinationLocationArn(Output<String> destinationLocationArn) {
@@ -191,7 +192,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder excludes(@Nullable TaskExcludesArgs excludes) {
-            this.excludes = Output.ofNullable(excludes);
+            this.excludes = Codegen.ofNullable(excludes);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -199,7 +200,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder options(@Nullable Output<TaskOptionsArgs> options) {
@@ -207,7 +208,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder options(@Nullable TaskOptionsArgs options) {
-            this.options = Output.ofNullable(options);
+            this.options = Codegen.ofNullable(options);
             return this;
         }
         public Builder schedule(@Nullable Output<TaskScheduleArgs> schedule) {
@@ -215,7 +216,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schedule(@Nullable TaskScheduleArgs schedule) {
-            this.schedule = Output.ofNullable(schedule);
+            this.schedule = Codegen.ofNullable(schedule);
             return this;
         }
         public Builder sourceLocationArn(Output<String> sourceLocationArn) {
@@ -231,7 +232,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public TaskArgs build() {
             return new TaskArgs(cloudwatchLogGroupArn, destinationLocationArn, excludes, name, options, schedule, sourceLocationArn, tags);

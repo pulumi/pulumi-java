@@ -6,6 +6,7 @@ package io.pulumi.aws.imagebuilder.inputs;
 import io.pulumi.aws.imagebuilder.inputs.ImageRecipeBlockDeviceMappingEbsGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class ImageRecipeBlockDeviceMappingGetArgs extends io.pulumi.resour
       private final @Nullable Output<String> deviceName;
 
     public Output<String> getDeviceName() {
-        return this.deviceName == null ? Output.empty() : this.deviceName;
+        return this.deviceName == null ? Codegen.empty() : this.deviceName;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ImageRecipeBlockDeviceMappingGetArgs extends io.pulumi.resour
       private final @Nullable Output<ImageRecipeBlockDeviceMappingEbsGetArgs> ebs;
 
     public Output<ImageRecipeBlockDeviceMappingEbsGetArgs> getEbs() {
-        return this.ebs == null ? Output.empty() : this.ebs;
+        return this.ebs == null ? Codegen.empty() : this.ebs;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ImageRecipeBlockDeviceMappingGetArgs extends io.pulumi.resour
       private final @Nullable Output<Boolean> noDevice;
 
     public Output<Boolean> getNoDevice() {
-        return this.noDevice == null ? Output.empty() : this.noDevice;
+        return this.noDevice == null ? Codegen.empty() : this.noDevice;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class ImageRecipeBlockDeviceMappingGetArgs extends io.pulumi.resour
       private final @Nullable Output<String> virtualName;
 
     public Output<String> getVirtualName() {
-        return this.virtualName == null ? Output.empty() : this.virtualName;
+        return this.virtualName == null ? Codegen.empty() : this.virtualName;
     }
 
     public ImageRecipeBlockDeviceMappingGetArgs(
@@ -72,10 +73,10 @@ public final class ImageRecipeBlockDeviceMappingGetArgs extends io.pulumi.resour
     }
 
     private ImageRecipeBlockDeviceMappingGetArgs() {
-        this.deviceName = Output.empty();
-        this.ebs = Output.empty();
-        this.noDevice = Output.empty();
-        this.virtualName = Output.empty();
+        this.deviceName = Codegen.empty();
+        this.ebs = Codegen.empty();
+        this.noDevice = Codegen.empty();
+        this.virtualName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class ImageRecipeBlockDeviceMappingGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Output.ofNullable(deviceName);
+            this.deviceName = Codegen.ofNullable(deviceName);
             return this;
         }
         public Builder ebs(@Nullable Output<ImageRecipeBlockDeviceMappingEbsGetArgs> ebs) {
@@ -117,7 +118,7 @@ public final class ImageRecipeBlockDeviceMappingGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder ebs(@Nullable ImageRecipeBlockDeviceMappingEbsGetArgs ebs) {
-            this.ebs = Output.ofNullable(ebs);
+            this.ebs = Codegen.ofNullable(ebs);
             return this;
         }
         public Builder noDevice(@Nullable Output<Boolean> noDevice) {
@@ -125,7 +126,7 @@ public final class ImageRecipeBlockDeviceMappingGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder noDevice(@Nullable Boolean noDevice) {
-            this.noDevice = Output.ofNullable(noDevice);
+            this.noDevice = Codegen.ofNullable(noDevice);
             return this;
         }
         public Builder virtualName(@Nullable Output<String> virtualName) {
@@ -133,7 +134,7 @@ public final class ImageRecipeBlockDeviceMappingGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder virtualName(@Nullable String virtualName) {
-            this.virtualName = Output.ofNullable(virtualName);
+            this.virtualName = Codegen.ofNullable(virtualName);
             return this;
         }        public ImageRecipeBlockDeviceMappingGetArgs build() {
             return new ImageRecipeBlockDeviceMappingGetArgs(deviceName, ebs, noDevice, virtualName);

@@ -6,6 +6,7 @@ package io.pulumi.aws.codebuild.inputs;
 import io.pulumi.aws.codebuild.inputs.ReportGroupExportConfigS3DestinationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class ReportGroupExportConfigArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<ReportGroupExportConfigS3DestinationArgs> s3Destination;
 
     public Output<ReportGroupExportConfigS3DestinationArgs> getS3Destination() {
-        return this.s3Destination == null ? Output.empty() : this.s3Destination;
+        return this.s3Destination == null ? Codegen.empty() : this.s3Destination;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class ReportGroupExportConfigArgs extends io.pulumi.resources.Resou
     }
 
     private ReportGroupExportConfigArgs() {
-        this.s3Destination = Output.empty();
-        this.type = Output.empty();
+        this.s3Destination = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class ReportGroupExportConfigArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder s3Destination(@Nullable ReportGroupExportConfigS3DestinationArgs s3Destination) {
-            this.s3Destination = Output.ofNullable(s3Destination);
+            this.s3Destination = Codegen.ofNullable(s3Destination);
             return this;
         }
         public Builder type(Output<String> type) {

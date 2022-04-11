@@ -9,6 +9,7 @@ import io.pulumi.aws.iam.inputs.GroupPolicyAttachmentState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -81,7 +82,7 @@ public class GroupPolicyAttachment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GroupPolicyAttachment(String name, GroupPolicyAttachmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:iam/groupPolicyAttachment:GroupPolicyAttachment", name, args == null ? GroupPolicyAttachmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:iam/groupPolicyAttachment:GroupPolicyAttachment", name, args == null ? GroupPolicyAttachmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private GroupPolicyAttachment(String name, Output<String> id, @Nullable GroupPolicyAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

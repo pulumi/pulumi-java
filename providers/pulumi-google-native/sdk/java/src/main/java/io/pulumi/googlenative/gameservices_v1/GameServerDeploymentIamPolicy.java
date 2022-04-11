@@ -6,6 +6,7 @@ package io.pulumi.googlenative.gameservices_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.gameservices_v1.GameServerDeploymentIamPolicyArgs;
 import io.pulumi.googlenative.gameservices_v1.outputs.AuditConfigResponse;
@@ -117,7 +118,7 @@ public class GameServerDeploymentIamPolicy extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public GameServerDeploymentIamPolicy(String name, GameServerDeploymentIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:gameservices/v1:GameServerDeploymentIamPolicy", name, args == null ? GameServerDeploymentIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:gameservices/v1:GameServerDeploymentIamPolicy", name, args == null ? GameServerDeploymentIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private GameServerDeploymentIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

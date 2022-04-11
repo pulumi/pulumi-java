@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class AvroOptionsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> useAvroLogicalTypes;
 
     public Output<Boolean> getUseAvroLogicalTypes() {
-        return this.useAvroLogicalTypes == null ? Output.empty() : this.useAvroLogicalTypes;
+        return this.useAvroLogicalTypes == null ? Codegen.empty() : this.useAvroLogicalTypes;
     }
 
     public AvroOptionsArgs(@Nullable Output<Boolean> useAvroLogicalTypes) {
@@ -30,7 +31,7 @@ public final class AvroOptionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AvroOptionsArgs() {
-        this.useAvroLogicalTypes = Output.empty();
+        this.useAvroLogicalTypes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class AvroOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder useAvroLogicalTypes(@Nullable Boolean useAvroLogicalTypes) {
-            this.useAvroLogicalTypes = Output.ofNullable(useAvroLogicalTypes);
+            this.useAvroLogicalTypes = Codegen.ofNullable(useAvroLogicalTypes);
             return this;
         }        public AvroOptionsArgs build() {
             return new AvroOptionsArgs(useAvroLogicalTypes);

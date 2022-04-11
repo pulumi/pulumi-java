@@ -8,6 +8,7 @@ import io.pulumi.azurenative.logic.enums.X12CharacterSet;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -117,13 +118,13 @@ public final class X12FramingSettingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private X12FramingSettingsArgs() {
-        this.characterSet = Output.empty();
-        this.componentSeparator = Output.empty();
-        this.dataElementSeparator = Output.empty();
-        this.replaceCharacter = Output.empty();
-        this.replaceSeparatorsInPayload = Output.empty();
-        this.segmentTerminator = Output.empty();
-        this.segmentTerminatorSuffix = Output.empty();
+        this.characterSet = Codegen.empty();
+        this.componentSeparator = Codegen.empty();
+        this.dataElementSeparator = Codegen.empty();
+        this.replaceCharacter = Codegen.empty();
+        this.replaceSeparatorsInPayload = Codegen.empty();
+        this.segmentTerminator = Codegen.empty();
+        this.segmentTerminatorSuffix = Codegen.empty();
     }
 
     public static Builder builder() {

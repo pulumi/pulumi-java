@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudasset_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudasset_v1.inputs.QueryContentArgs;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<QueryContentArgs> content;
 
     public Output<QueryContentArgs> getContent() {
-        return this.content == null ? Output.empty() : this.content;
+        return this.content == null ? Codegen.empty() : this.content;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="savedQueryId", required=true)
@@ -99,13 +100,13 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SavedQueryArgs() {
-        this.content = Output.empty();
-        this.description = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.savedQueryId = Output.empty();
-        this.v1Id = Output.empty();
-        this.v1Id1 = Output.empty();
+        this.content = Codegen.empty();
+        this.description = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.savedQueryId = Codegen.empty();
+        this.v1Id = Codegen.empty();
+        this.v1Id1 = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder content(@Nullable QueryContentArgs content) {
-            this.content = Output.ofNullable(content);
+            this.content = Codegen.ofNullable(content);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -153,7 +154,7 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -161,7 +162,7 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -169,7 +170,7 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder savedQueryId(Output<String> savedQueryId) {

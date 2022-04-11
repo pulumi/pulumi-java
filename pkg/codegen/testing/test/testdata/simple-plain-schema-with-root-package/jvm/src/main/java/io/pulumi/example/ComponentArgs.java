@@ -5,6 +5,7 @@ package io.pulumi.example;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.example.inputs.Foo;
 import io.pulumi.example.inputs.FooArgs;
 import java.lang.Boolean;
@@ -80,7 +81,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FooArgs> foo;
 
     public Output<FooArgs> getFoo() {
-        return this.foo == null ? Output.empty() : this.foo;
+        return this.foo == null ? Codegen.empty() : this.foo;
     }
 
     public ComponentArgs(
@@ -113,7 +114,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
         this.d = null;
         this.e = null;
         this.f = null;
-        this.foo = Output.empty();
+        this.foo = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -192,7 +193,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder foo(@Nullable FooArgs foo) {
-            this.foo = Output.ofNullable(foo);
+            this.foo = Codegen.ofNullable(foo);
             return this;
         }        public ComponentArgs build() {
             return new ComponentArgs(a, b, bar, baz, c, d, e, f, foo);

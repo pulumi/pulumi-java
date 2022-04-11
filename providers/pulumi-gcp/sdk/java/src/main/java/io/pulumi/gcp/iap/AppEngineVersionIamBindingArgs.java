@@ -5,6 +5,7 @@ package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.iap.inputs.AppEngineVersionIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +37,7 @@ public final class AppEngineVersionIamBindingArgs extends io.pulumi.resources.Re
       private final @Nullable Output<AppEngineVersionIamBindingConditionArgs> condition;
 
     public Output<AppEngineVersionIamBindingConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="members", required=true)
@@ -55,7 +56,7 @@ public final class AppEngineVersionIamBindingArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -111,13 +112,13 @@ public final class AppEngineVersionIamBindingArgs extends io.pulumi.resources.Re
     }
 
     private AppEngineVersionIamBindingArgs() {
-        this.appId = Output.empty();
-        this.condition = Output.empty();
-        this.members = Output.empty();
-        this.project = Output.empty();
-        this.role = Output.empty();
-        this.service = Output.empty();
-        this.versionId = Output.empty();
+        this.appId = Codegen.empty();
+        this.condition = Codegen.empty();
+        this.members = Codegen.empty();
+        this.project = Codegen.empty();
+        this.role = Codegen.empty();
+        this.service = Codegen.empty();
+        this.versionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -165,7 +166,7 @@ public final class AppEngineVersionIamBindingArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder condition(@Nullable AppEngineVersionIamBindingConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder members(Output<List<String>> members) {
@@ -184,7 +185,7 @@ public final class AppEngineVersionIamBindingArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder role(Output<String> role) {

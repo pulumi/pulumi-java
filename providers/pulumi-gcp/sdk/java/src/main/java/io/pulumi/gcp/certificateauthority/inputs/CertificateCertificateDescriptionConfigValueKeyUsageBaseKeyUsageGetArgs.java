@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionGetArgs;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUs
       private final @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionGetArgs>> keyUsageOptions;
 
     public Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionGetArgs>> getKeyUsageOptions() {
-        return this.keyUsageOptions == null ? Output.empty() : this.keyUsageOptions;
+        return this.keyUsageOptions == null ? Codegen.empty() : this.keyUsageOptions;
     }
 
     public CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageGetArgs(@Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionGetArgs>> keyUsageOptions) {
@@ -27,7 +28,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUs
     }
 
     private CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageGetArgs() {
-        this.keyUsageOptions = Output.empty();
+        this.keyUsageOptions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -55,7 +56,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUs
             return this;
         }
         public Builder keyUsageOptions(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionGetArgs> keyUsageOptions) {
-            this.keyUsageOptions = Output.ofNullable(keyUsageOptions);
+            this.keyUsageOptions = Codegen.ofNullable(keyUsageOptions);
             return this;
         }
         public Builder keyUsageOptions(CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionGetArgs... keyUsageOptions) {

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ce;
 import io.pulumi.awsnative.ce.enums.CostCategoryRuleVersion;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,14 +24,14 @@ public final class CostCategoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> defaultValue;
 
     public Output<String> getDefaultValue() {
-        return this.defaultValue == null ? Output.empty() : this.defaultValue;
+        return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="ruleVersion", required=true)
@@ -59,7 +60,7 @@ public final class CostCategoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> splitChargeRules;
 
     public Output<String> getSplitChargeRules() {
-        return this.splitChargeRules == null ? Output.empty() : this.splitChargeRules;
+        return this.splitChargeRules == null ? Codegen.empty() : this.splitChargeRules;
     }
 
     public CostCategoryArgs(
@@ -76,11 +77,11 @@ public final class CostCategoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CostCategoryArgs() {
-        this.defaultValue = Output.empty();
-        this.name = Output.empty();
-        this.ruleVersion = Output.empty();
-        this.rules = Output.empty();
-        this.splitChargeRules = Output.empty();
+        this.defaultValue = Codegen.empty();
+        this.name = Codegen.empty();
+        this.ruleVersion = Codegen.empty();
+        this.rules = Codegen.empty();
+        this.splitChargeRules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class CostCategoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = Output.ofNullable(defaultValue);
+            this.defaultValue = Codegen.ofNullable(defaultValue);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -124,7 +125,7 @@ public final class CostCategoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder ruleVersion(Output<CostCategoryRuleVersion> ruleVersion) {
@@ -148,7 +149,7 @@ public final class CostCategoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder splitChargeRules(@Nullable String splitChargeRules) {
-            this.splitChargeRules = Output.ofNullable(splitChargeRules);
+            this.splitChargeRules = Codegen.ofNullable(splitChargeRules);
             return this;
         }        public CostCategoryArgs build() {
             return new CostCategoryArgs(defaultValue, name, ruleVersion, rules, splitChargeRules);

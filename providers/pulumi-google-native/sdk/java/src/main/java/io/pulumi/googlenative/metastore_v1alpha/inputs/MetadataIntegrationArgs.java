@@ -5,6 +5,7 @@ package io.pulumi.googlenative.metastore_v1alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.metastore_v1alpha.inputs.DataCatalogConfigArgs;
 import io.pulumi.googlenative.metastore_v1alpha.inputs.DataplexConfigArgs;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class MetadataIntegrationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<DataCatalogConfigArgs> dataCatalogConfig;
 
     public Output<DataCatalogConfigArgs> getDataCatalogConfig() {
-        return this.dataCatalogConfig == null ? Output.empty() : this.dataCatalogConfig;
+        return this.dataCatalogConfig == null ? Codegen.empty() : this.dataCatalogConfig;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class MetadataIntegrationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<DataplexConfigArgs> dataplexConfig;
 
     public Output<DataplexConfigArgs> getDataplexConfig() {
-        return this.dataplexConfig == null ? Output.empty() : this.dataplexConfig;
+        return this.dataplexConfig == null ? Codegen.empty() : this.dataplexConfig;
     }
 
     public MetadataIntegrationArgs(
@@ -49,8 +50,8 @@ public final class MetadataIntegrationArgs extends io.pulumi.resources.ResourceA
     }
 
     private MetadataIntegrationArgs() {
-        this.dataCatalogConfig = Output.empty();
-        this.dataplexConfig = Output.empty();
+        this.dataCatalogConfig = Codegen.empty();
+        this.dataplexConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class MetadataIntegrationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder dataCatalogConfig(@Nullable DataCatalogConfigArgs dataCatalogConfig) {
-            this.dataCatalogConfig = Output.ofNullable(dataCatalogConfig);
+            this.dataCatalogConfig = Codegen.ofNullable(dataCatalogConfig);
             return this;
         }
         public Builder dataplexConfig(@Nullable Output<DataplexConfigArgs> dataplexConfig) {
@@ -88,7 +89,7 @@ public final class MetadataIntegrationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder dataplexConfig(@Nullable DataplexConfigArgs dataplexConfig) {
-            this.dataplexConfig = Output.ofNullable(dataplexConfig);
+            this.dataplexConfig = Codegen.ofNullable(dataplexConfig);
             return this;
         }        public MetadataIntegrationArgs build() {
             return new MetadataIntegrationArgs(dataCatalogConfig, dataplexConfig);

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.dataprotection.inputs.DatasourceSetArgs;
 import io.pulumi.azurenative.dataprotection.inputs.PolicyInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DatasourceSetArgs> dataSourceSetInfo;
 
     public Output<DatasourceSetArgs> getDataSourceSetInfo() {
-        return this.dataSourceSetInfo == null ? Output.empty() : this.dataSourceSetInfo;
+        return this.dataSourceSetInfo == null ? Codegen.empty() : this.dataSourceSetInfo;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
-        return this.friendlyName == null ? Output.empty() : this.friendlyName;
+        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
     @Import(name="objectType", required=true)
@@ -86,11 +87,11 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackupInstanceArgs() {
-        this.dataSourceInfo = Output.empty();
-        this.dataSourceSetInfo = Output.empty();
-        this.friendlyName = Output.empty();
-        this.objectType = Output.empty();
-        this.policyInfo = Output.empty();
+        this.dataSourceInfo = Codegen.empty();
+        this.dataSourceSetInfo = Codegen.empty();
+        this.friendlyName = Codegen.empty();
+        this.objectType = Codegen.empty();
+        this.policyInfo = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -134,7 +135,7 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataSourceSetInfo(@Nullable DatasourceSetArgs dataSourceSetInfo) {
-            this.dataSourceSetInfo = Output.ofNullable(dataSourceSetInfo);
+            this.dataSourceSetInfo = Codegen.ofNullable(dataSourceSetInfo);
             return this;
         }
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
@@ -142,7 +143,7 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Output.ofNullable(friendlyName);
+            this.friendlyName = Codegen.ofNullable(friendlyName);
             return this;
         }
         public Builder objectType(Output<String> objectType) {

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class RulesetSubstitutionValueArgs extends io.pulumi.resources.Reso
     }
 
     private RulesetSubstitutionValueArgs() {
-        this.value = Output.empty();
-        this.valueReference = Output.empty();
+        this.value = Codegen.empty();
+        this.valueReference = Codegen.empty();
     }
 
     public static Builder builder() {

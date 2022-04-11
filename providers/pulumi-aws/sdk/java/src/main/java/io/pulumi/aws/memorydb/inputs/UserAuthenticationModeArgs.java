@@ -5,6 +5,7 @@ package io.pulumi.aws.memorydb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class UserAuthenticationModeArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Integer> passwordCount;
 
     public Output<Integer> getPasswordCount() {
-        return this.passwordCount == null ? Output.empty() : this.passwordCount;
+        return this.passwordCount == null ? Codegen.empty() : this.passwordCount;
     }
 
     /**
@@ -59,9 +60,9 @@ public final class UserAuthenticationModeArgs extends io.pulumi.resources.Resour
     }
 
     private UserAuthenticationModeArgs() {
-        this.passwordCount = Output.empty();
-        this.passwords = Output.empty();
-        this.type = Output.empty();
+        this.passwordCount = Codegen.empty();
+        this.passwords = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class UserAuthenticationModeArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder passwordCount(@Nullable Integer passwordCount) {
-            this.passwordCount = Output.ofNullable(passwordCount);
+            this.passwordCount = Codegen.ofNullable(passwordCount);
             return this;
         }
         public Builder passwords(Output<List<String>> passwords) {

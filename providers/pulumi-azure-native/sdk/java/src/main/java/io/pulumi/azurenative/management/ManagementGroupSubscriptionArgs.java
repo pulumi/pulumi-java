@@ -5,6 +5,7 @@ package io.pulumi.azurenative.management;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class ManagementGroupSubscriptionArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> subscriptionId;
 
     public Output<String> getSubscriptionId() {
-        return this.subscriptionId == null ? Output.empty() : this.subscriptionId;
+        return this.subscriptionId == null ? Codegen.empty() : this.subscriptionId;
     }
 
     public ManagementGroupSubscriptionArgs(
@@ -44,8 +45,8 @@ public final class ManagementGroupSubscriptionArgs extends io.pulumi.resources.R
     }
 
     private ManagementGroupSubscriptionArgs() {
-        this.groupId = Output.empty();
-        this.subscriptionId = Output.empty();
+        this.groupId = Codegen.empty();
+        this.subscriptionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class ManagementGroupSubscriptionArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Output.ofNullable(subscriptionId);
+            this.subscriptionId = Codegen.ofNullable(subscriptionId);
             return this;
         }        public ManagementGroupSubscriptionArgs build() {
             return new ManagementGroupSubscriptionArgs(groupId, subscriptionId);

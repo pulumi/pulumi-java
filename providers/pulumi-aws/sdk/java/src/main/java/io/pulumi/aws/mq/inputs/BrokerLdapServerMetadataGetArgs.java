@@ -5,6 +5,7 @@ package io.pulumi.aws.mq.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<List<String>> hosts;
 
     public Output<List<String>> getHosts() {
-        return this.hosts == null ? Output.empty() : this.hosts;
+        return this.hosts == null ? Codegen.empty() : this.hosts;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> roleBase;
 
     public Output<String> getRoleBase() {
-        return this.roleBase == null ? Output.empty() : this.roleBase;
+        return this.roleBase == null ? Codegen.empty() : this.roleBase;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> roleName;
 
     public Output<String> getRoleName() {
-        return this.roleName == null ? Output.empty() : this.roleName;
+        return this.roleName == null ? Codegen.empty() : this.roleName;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> roleSearchMatching;
 
     public Output<String> getRoleSearchMatching() {
-        return this.roleSearchMatching == null ? Output.empty() : this.roleSearchMatching;
+        return this.roleSearchMatching == null ? Codegen.empty() : this.roleSearchMatching;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<Boolean> roleSearchSubtree;
 
     public Output<Boolean> getRoleSearchSubtree() {
-        return this.roleSearchSubtree == null ? Output.empty() : this.roleSearchSubtree;
+        return this.roleSearchSubtree == null ? Codegen.empty() : this.roleSearchSubtree;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> serviceAccountPassword;
 
     public Output<String> getServiceAccountPassword() {
-        return this.serviceAccountPassword == null ? Output.empty() : this.serviceAccountPassword;
+        return this.serviceAccountPassword == null ? Codegen.empty() : this.serviceAccountPassword;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> serviceAccountUsername;
 
     public Output<String> getServiceAccountUsername() {
-        return this.serviceAccountUsername == null ? Output.empty() : this.serviceAccountUsername;
+        return this.serviceAccountUsername == null ? Codegen.empty() : this.serviceAccountUsername;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> userBase;
 
     public Output<String> getUserBase() {
-        return this.userBase == null ? Output.empty() : this.userBase;
+        return this.userBase == null ? Codegen.empty() : this.userBase;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> userRoleName;
 
     public Output<String> getUserRoleName() {
-        return this.userRoleName == null ? Output.empty() : this.userRoleName;
+        return this.userRoleName == null ? Codegen.empty() : this.userRoleName;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> userSearchMatching;
 
     public Output<String> getUserSearchMatching() {
-        return this.userSearchMatching == null ? Output.empty() : this.userSearchMatching;
+        return this.userSearchMatching == null ? Codegen.empty() : this.userSearchMatching;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<Boolean> userSearchSubtree;
 
     public Output<Boolean> getUserSearchSubtree() {
-        return this.userSearchSubtree == null ? Output.empty() : this.userSearchSubtree;
+        return this.userSearchSubtree == null ? Codegen.empty() : this.userSearchSubtree;
     }
 
     public BrokerLdapServerMetadataGetArgs(
@@ -163,17 +164,17 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
     }
 
     private BrokerLdapServerMetadataGetArgs() {
-        this.hosts = Output.empty();
-        this.roleBase = Output.empty();
-        this.roleName = Output.empty();
-        this.roleSearchMatching = Output.empty();
-        this.roleSearchSubtree = Output.empty();
-        this.serviceAccountPassword = Output.empty();
-        this.serviceAccountUsername = Output.empty();
-        this.userBase = Output.empty();
-        this.userRoleName = Output.empty();
-        this.userSearchMatching = Output.empty();
-        this.userSearchSubtree = Output.empty();
+        this.hosts = Codegen.empty();
+        this.roleBase = Codegen.empty();
+        this.roleName = Codegen.empty();
+        this.roleSearchMatching = Codegen.empty();
+        this.roleSearchSubtree = Codegen.empty();
+        this.serviceAccountPassword = Codegen.empty();
+        this.serviceAccountUsername = Codegen.empty();
+        this.userBase = Codegen.empty();
+        this.userRoleName = Codegen.empty();
+        this.userSearchMatching = Codegen.empty();
+        this.userSearchSubtree = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -221,7 +222,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder hosts(@Nullable List<String> hosts) {
-            this.hosts = Output.ofNullable(hosts);
+            this.hosts = Codegen.ofNullable(hosts);
             return this;
         }
         public Builder hosts(String... hosts) {
@@ -232,7 +233,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder roleBase(@Nullable String roleBase) {
-            this.roleBase = Output.ofNullable(roleBase);
+            this.roleBase = Codegen.ofNullable(roleBase);
             return this;
         }
         public Builder roleName(@Nullable Output<String> roleName) {
@@ -240,7 +241,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder roleName(@Nullable String roleName) {
-            this.roleName = Output.ofNullable(roleName);
+            this.roleName = Codegen.ofNullable(roleName);
             return this;
         }
         public Builder roleSearchMatching(@Nullable Output<String> roleSearchMatching) {
@@ -248,7 +249,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder roleSearchMatching(@Nullable String roleSearchMatching) {
-            this.roleSearchMatching = Output.ofNullable(roleSearchMatching);
+            this.roleSearchMatching = Codegen.ofNullable(roleSearchMatching);
             return this;
         }
         public Builder roleSearchSubtree(@Nullable Output<Boolean> roleSearchSubtree) {
@@ -256,7 +257,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder roleSearchSubtree(@Nullable Boolean roleSearchSubtree) {
-            this.roleSearchSubtree = Output.ofNullable(roleSearchSubtree);
+            this.roleSearchSubtree = Codegen.ofNullable(roleSearchSubtree);
             return this;
         }
         public Builder serviceAccountPassword(@Nullable Output<String> serviceAccountPassword) {
@@ -264,7 +265,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder serviceAccountPassword(@Nullable String serviceAccountPassword) {
-            this.serviceAccountPassword = Output.ofNullable(serviceAccountPassword);
+            this.serviceAccountPassword = Codegen.ofNullable(serviceAccountPassword);
             return this;
         }
         public Builder serviceAccountUsername(@Nullable Output<String> serviceAccountUsername) {
@@ -272,7 +273,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder serviceAccountUsername(@Nullable String serviceAccountUsername) {
-            this.serviceAccountUsername = Output.ofNullable(serviceAccountUsername);
+            this.serviceAccountUsername = Codegen.ofNullable(serviceAccountUsername);
             return this;
         }
         public Builder userBase(@Nullable Output<String> userBase) {
@@ -280,7 +281,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder userBase(@Nullable String userBase) {
-            this.userBase = Output.ofNullable(userBase);
+            this.userBase = Codegen.ofNullable(userBase);
             return this;
         }
         public Builder userRoleName(@Nullable Output<String> userRoleName) {
@@ -288,7 +289,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder userRoleName(@Nullable String userRoleName) {
-            this.userRoleName = Output.ofNullable(userRoleName);
+            this.userRoleName = Codegen.ofNullable(userRoleName);
             return this;
         }
         public Builder userSearchMatching(@Nullable Output<String> userSearchMatching) {
@@ -296,7 +297,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder userSearchMatching(@Nullable String userSearchMatching) {
-            this.userSearchMatching = Output.ofNullable(userSearchMatching);
+            this.userSearchMatching = Codegen.ofNullable(userSearchMatching);
             return this;
         }
         public Builder userSearchSubtree(@Nullable Output<Boolean> userSearchSubtree) {
@@ -304,7 +305,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder userSearchSubtree(@Nullable Boolean userSearchSubtree) {
-            this.userSearchSubtree = Output.ofNullable(userSearchSubtree);
+            this.userSearchSubtree = Codegen.ofNullable(userSearchSubtree);
             return this;
         }        public BrokerLdapServerMetadataGetArgs build() {
             return new BrokerLdapServerMetadataGetArgs(hosts, roleBase, roleName, roleSearchMatching, roleSearchSubtree, serviceAccountPassword, serviceAccountUsername, userBase, userRoleName, userSearchMatching, userSearchSubtree);

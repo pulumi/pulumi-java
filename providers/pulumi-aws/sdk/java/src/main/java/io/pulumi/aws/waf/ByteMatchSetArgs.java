@@ -6,6 +6,7 @@ package io.pulumi.aws.waf;
 import io.pulumi.aws.waf.inputs.ByteMatchSetByteMatchTupleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class ByteMatchSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ByteMatchSetByteMatchTupleArgs>> byteMatchTuples;
 
     public Output<List<ByteMatchSetByteMatchTupleArgs>> getByteMatchTuples() {
-        return this.byteMatchTuples == null ? Output.empty() : this.byteMatchTuples;
+        return this.byteMatchTuples == null ? Codegen.empty() : this.byteMatchTuples;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ByteMatchSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public ByteMatchSetArgs(
@@ -48,8 +49,8 @@ public final class ByteMatchSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ByteMatchSetArgs() {
-        this.byteMatchTuples = Output.empty();
-        this.name = Output.empty();
+        this.byteMatchTuples = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ByteMatchSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder byteMatchTuples(@Nullable List<ByteMatchSetByteMatchTupleArgs> byteMatchTuples) {
-            this.byteMatchTuples = Output.ofNullable(byteMatchTuples);
+            this.byteMatchTuples = Codegen.ofNullable(byteMatchTuples);
             return this;
         }
         public Builder byteMatchTuples(ByteMatchSetByteMatchTupleArgs... byteMatchTuples) {
@@ -90,7 +91,7 @@ public final class ByteMatchSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public ByteMatchSetArgs build() {
             return new ByteMatchSetArgs(byteMatchTuples, name);

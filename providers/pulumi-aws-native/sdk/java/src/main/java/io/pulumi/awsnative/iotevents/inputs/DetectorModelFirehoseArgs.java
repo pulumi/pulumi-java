@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iotevents.inputs;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelPayloadArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class DetectorModelFirehoseArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<DetectorModelPayloadArgs> payload;
 
     public Output<DetectorModelPayloadArgs> getPayload() {
-        return this.payload == null ? Output.empty() : this.payload;
+        return this.payload == null ? Codegen.empty() : this.payload;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class DetectorModelFirehoseArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> separator;
 
     public Output<String> getSeparator() {
-        return this.separator == null ? Output.empty() : this.separator;
+        return this.separator == null ? Codegen.empty() : this.separator;
     }
 
     public DetectorModelFirehoseArgs(
@@ -58,9 +59,9 @@ public final class DetectorModelFirehoseArgs extends io.pulumi.resources.Resourc
     }
 
     private DetectorModelFirehoseArgs() {
-        this.deliveryStreamName = Output.empty();
-        this.payload = Output.empty();
-        this.separator = Output.empty();
+        this.deliveryStreamName = Codegen.empty();
+        this.payload = Codegen.empty();
+        this.separator = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class DetectorModelFirehoseArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder payload(@Nullable DetectorModelPayloadArgs payload) {
-            this.payload = Output.ofNullable(payload);
+            this.payload = Codegen.ofNullable(payload);
             return this;
         }
         public Builder separator(@Nullable Output<String> separator) {
@@ -108,7 +109,7 @@ public final class DetectorModelFirehoseArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder separator(@Nullable String separator) {
-            this.separator = Output.ofNullable(separator);
+            this.separator = Codegen.ofNullable(separator);
             return this;
         }        public DetectorModelFirehoseArgs build() {
             return new DetectorModelFirehoseArgs(deliveryStreamName, payload, separator);

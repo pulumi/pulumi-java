@@ -6,6 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.enums.DayOfWeek;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class RecurrenceScheduleOccurrenceArgs extends io.pulumi.resources.
       private final @Nullable Output<DayOfWeek> day;
 
     public Output<DayOfWeek> getDay() {
-        return this.day == null ? Output.empty() : this.day;
+        return this.day == null ? Codegen.empty() : this.day;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class RecurrenceScheduleOccurrenceArgs extends io.pulumi.resources.
       private final @Nullable Output<Integer> occurrence;
 
     public Output<Integer> getOccurrence() {
-        return this.occurrence == null ? Output.empty() : this.occurrence;
+        return this.occurrence == null ? Codegen.empty() : this.occurrence;
     }
 
     public RecurrenceScheduleOccurrenceArgs(
@@ -49,8 +50,8 @@ public final class RecurrenceScheduleOccurrenceArgs extends io.pulumi.resources.
     }
 
     private RecurrenceScheduleOccurrenceArgs() {
-        this.day = Output.empty();
-        this.occurrence = Output.empty();
+        this.day = Codegen.empty();
+        this.occurrence = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class RecurrenceScheduleOccurrenceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder day(@Nullable DayOfWeek day) {
-            this.day = Output.ofNullable(day);
+            this.day = Codegen.ofNullable(day);
             return this;
         }
         public Builder occurrence(@Nullable Output<Integer> occurrence) {
@@ -88,7 +89,7 @@ public final class RecurrenceScheduleOccurrenceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder occurrence(@Nullable Integer occurrence) {
-            this.occurrence = Output.ofNullable(occurrence);
+            this.occurrence = Codegen.ofNullable(occurrence);
             return this;
         }        public RecurrenceScheduleOccurrenceArgs build() {
             return new RecurrenceScheduleOccurrenceArgs(day, occurrence);

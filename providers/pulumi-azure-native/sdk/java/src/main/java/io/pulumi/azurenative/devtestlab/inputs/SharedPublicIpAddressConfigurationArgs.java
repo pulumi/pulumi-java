@@ -6,6 +6,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 import io.pulumi.azurenative.devtestlab.inputs.InboundNatRuleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class SharedPublicIpAddressConfigurationArgs extends io.pulumi.reso
       private final @Nullable Output<List<InboundNatRuleArgs>> inboundNatRules;
 
     public Output<List<InboundNatRuleArgs>> getInboundNatRules() {
-        return this.inboundNatRules == null ? Output.empty() : this.inboundNatRules;
+        return this.inboundNatRules == null ? Codegen.empty() : this.inboundNatRules;
     }
 
     public SharedPublicIpAddressConfigurationArgs(@Nullable Output<List<InboundNatRuleArgs>> inboundNatRules) {
@@ -35,7 +36,7 @@ public final class SharedPublicIpAddressConfigurationArgs extends io.pulumi.reso
     }
 
     private SharedPublicIpAddressConfigurationArgs() {
-        this.inboundNatRules = Output.empty();
+        this.inboundNatRules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class SharedPublicIpAddressConfigurationArgs extends io.pulumi.reso
             return this;
         }
         public Builder inboundNatRules(@Nullable List<InboundNatRuleArgs> inboundNatRules) {
-            this.inboundNatRules = Output.ofNullable(inboundNatRules);
+            this.inboundNatRules = Codegen.ofNullable(inboundNatRules);
             return this;
         }
         public Builder inboundNatRules(InboundNatRuleArgs... inboundNatRules) {

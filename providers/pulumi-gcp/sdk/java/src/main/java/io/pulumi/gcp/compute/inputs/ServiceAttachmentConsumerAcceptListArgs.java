@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -45,8 +46,8 @@ public final class ServiceAttachmentConsumerAcceptListArgs extends io.pulumi.res
     }
 
     private ServiceAttachmentConsumerAcceptListArgs() {
-        this.connectionLimit = Output.empty();
-        this.projectIdOrNum = Output.empty();
+        this.connectionLimit = Codegen.empty();
+        this.projectIdOrNum = Codegen.empty();
     }
 
     public static Builder builder() {

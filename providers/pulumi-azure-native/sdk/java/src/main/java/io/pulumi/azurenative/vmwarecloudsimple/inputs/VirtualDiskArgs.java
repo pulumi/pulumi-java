@@ -6,6 +6,7 @@ package io.pulumi.azurenative.vmwarecloudsimple.inputs;
 import io.pulumi.azurenative.vmwarecloudsimple.enums.DiskIndependenceMode;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -61,7 +62,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> virtualDiskId;
 
     public Output<String> getVirtualDiskId() {
-        return this.virtualDiskId == null ? Output.empty() : this.virtualDiskId;
+        return this.virtualDiskId == null ? Codegen.empty() : this.virtualDiskId;
     }
 
     public VirtualDiskArgs(
@@ -76,10 +77,10 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VirtualDiskArgs() {
-        this.controllerId = Output.empty();
-        this.independenceMode = Output.empty();
-        this.totalSize = Output.empty();
-        this.virtualDiskId = Output.empty();
+        this.controllerId = Codegen.empty();
+        this.independenceMode = Codegen.empty();
+        this.totalSize = Codegen.empty();
+        this.virtualDiskId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -137,7 +138,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder virtualDiskId(@Nullable String virtualDiskId) {
-            this.virtualDiskId = Output.ofNullable(virtualDiskId);
+            this.virtualDiskId = Codegen.ofNullable(virtualDiskId);
             return this;
         }        public VirtualDiskArgs build() {
             return new VirtualDiskArgs(controllerId, independenceMode, totalSize, virtualDiskId);

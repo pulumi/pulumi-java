@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -48,8 +49,8 @@ public final class BackendServiceSecuritySettingsArgs extends io.pulumi.resource
     }
 
     private BackendServiceSecuritySettingsArgs() {
-        this.clientTlsPolicy = Output.empty();
-        this.subjectAltNames = Output.empty();
+        this.clientTlsPolicy = Codegen.empty();
+        this.subjectAltNames = Codegen.empty();
     }
 
     public static Builder builder() {

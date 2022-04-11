@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -46,7 +47,7 @@ public final class MachineImageIamPolicyArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public MachineImageIamPolicyArgs(
@@ -59,9 +60,9 @@ public final class MachineImageIamPolicyArgs extends io.pulumi.resources.Resourc
     }
 
     private MachineImageIamPolicyArgs() {
-        this.machineImage = Output.empty();
-        this.policyData = Output.empty();
-        this.project = Output.empty();
+        this.machineImage = Codegen.empty();
+        this.policyData = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class MachineImageIamPolicyArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public MachineImageIamPolicyArgs build() {
             return new MachineImageIamPolicyArgs(machineImage, policyData, project);
