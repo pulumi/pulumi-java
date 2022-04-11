@@ -431,7 +431,7 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		g.newline(w)
 		g.Indented(func() {
 			g.makeIndent(w)
-			g.genDictionary(w, expr.Args[0])
+			g.genJson(w, expr.Args[0])
 		})
 		g.Fgen(w, ")")
 	case "sha1":
@@ -448,7 +448,7 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 	}
 }
 
-func (g *generator) genDictionary(w io.Writer, expr model.Expression) {
+func (g *generator) genJson(w io.Writer, expr model.Expression) {
 	switch expr := expr.(type) {
 	case *model.ObjectConsExpression:
 		g.Fgen(w, "JObject(")
@@ -458,7 +458,7 @@ func (g *generator) genDictionary(w io.Writer, expr model.Expression) {
 
 				g.makeIndent(w)
 				g.Fgenf(w, "JProperty(%s, ", item.Key)
-				g.genDictionary(w, item.Value)
+				g.genJson(w, item.Value)
 				g.Fgen(w, ")")
 				if index < len(expr.Items)-1 {
 					// elements
@@ -472,29 +472,28 @@ func (g *generator) genDictionary(w io.Writer, expr model.Expression) {
 	case *model.TupleConsExpression:
 		if len(expr.Expressions) == 1 {
 			g.Fgen(w, "JArray(")
-			g.genDictionary(w, expr.Expressions[0])
+			g.genJson(w, expr.Expressions[0])
 			g.Fgen(w, ")")
 			return
 		}
-		g.newline(w)
-		g.makeIndent(w)
 		g.Fgen(w, "JArray(")
+		g.newline(w)
 		g.Indented(func() {
-			g.Indented(func() {
-				for index, value := range expr.Expressions {
-					g.makeIndent(w)
-					if index == len(expr.Expressions)-1 {
-						// last element: no trailing comma
-						g.genDictionary(w, value)
-					} else {
-						g.genDictionary(w, value)
-						g.Fgen(w, ", ")
-						g.newline(w)
-					}
+			for index, value := range expr.Expressions {
+				g.makeIndent(w)
+				if index == len(expr.Expressions)-1 {
+					// last element: no trailing comma
+					g.genJson(w, value)
+					g.newline(w)
+				} else {
+					g.genJson(w, value)
+					g.Fgen(w, ", ")
+					g.newline(w)
 				}
-			})
-			g.Fgenf(w, "%s)", g.Indent)
+			}
 		})
+		g.Fgenf(w, "%s)", g.Indent)
+
 	default:
 		g.Fgenf(w, "%.v", expr)
 	}

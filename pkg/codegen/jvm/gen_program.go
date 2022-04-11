@@ -149,11 +149,6 @@ func GenerateProgram(program *pcl.Program) (map[string][]byte, hcl.Diagnostics, 
 	g.genPreamble(&index, nodes)
 
 	g.Indented(func() {
-		// Emit async Initialize if needed
-		if g.asyncInit {
-			g.genInitialize(&index, nodes)
-		}
-
 		g.Indented(func() {
 			for _, n := range nodes {
 				g.genNode(&index, n)
@@ -183,13 +178,27 @@ func (g *generator) newline(w io.Writer) {
 func (g *generator) emitOutputFields(w io.Writer, nodes []pcl.Node) {
 	for _, node := range nodes {
 		if outputVariable, isOutput := node.(*pcl.OutputVariable); isOutput {
+			outputType := "Object"
+
+			if outputVariable.Type().AssignableFrom(model.BoolType) {
+				outputType = "Boolean"
+			}
+
+			if outputVariable.Type().AssignableFrom(model.NumberType) {
+				outputType = "Integer"
+			}
+
+			if outputVariable.Type().AssignableFrom(model.StringType) {
+				outputType = "String"
+			}
+
 			g.Indented(func() {
 				g.makeIndent(w)
 				g.Fgenf(w, "@Export(type = String.class)")
 				g.newline(w)
 
 				g.makeIndent(w)
-				g.Fgenf(w, "private final Output<String> %s;", outputVariable.Name())
+				g.Fgenf(w, "private final Output<%s> %s;", outputType, outputVariable.Name())
 				g.newline(w)
 			})
 		}
@@ -227,12 +236,6 @@ func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 	if containConfigVariables(nodes) {
 		g.Fprint(w, "        final var config = Config.of();\n")
 	}
-}
-
-// genInitialize generates the declaration and the call to the async Initialize method, and also fills stack
-// outputs from the initialization result.
-func (g *generator) genInitialize(w io.Writer, nodes []pcl.Node) {
-	// TODO
 }
 
 func (g *generator) generateRangeClass(w io.Writer) {
@@ -396,7 +399,6 @@ func (g *generator) findFunctionSchema(w io.Writer, function string) (bool, *sch
 	for _, pkg := range g.program.Packages() {
 		if pkg.Functions != nil {
 			for _, functionSchame := range pkg.Functions {
-				//g.Fgenf(w, "\n// %s Checking function %s against input %s", g.Indent, functionSchame.Token, function)
 				if functionSchame != nil && strings.HasSuffix(functionSchame.Token, toLowerCase(function)) {
 					return true, functionSchame
 				}
@@ -431,7 +433,6 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 				for _, attr := range resource.Inputs {
 					attributeType := resourceProperties[attr.Name]
 					g.currentResourcePropertyType = attributeType
-					//g.Fgenf(w, "%s// %s of type (%s)\n", g.Indent, makeValidIdentifier(attr.Name), attributeType)
 					g.Fgenf(w, "%s.%s(%.v)\n", g.Indent, makeValidIdentifier(attr.Name), attr.Value)
 				}
 
