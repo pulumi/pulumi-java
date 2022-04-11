@@ -284,12 +284,53 @@ func (g *generator) generateReadDirMethod(w io.Writer) {
 	g.Fgenf(w, "%s}\n", g.Indent)
 }
 
+func (g *generator) generateJsonMethods(w io.Writer) {
+	// entry point
+	g.Fgenf(w, "\n%sstatic String ToJson(Map<String, Object> map) {\n", g.Indent)
+	g.Indented(func() {
+		g.Fgenf(w, "%s// Bring your own JSON library here to serialize map", g.Indent)
+		g.newline(w)
+		g.Fgenf(w, "%sreturn \"{}\";\n", g.Indent)
+	})
+	g.Fgenf(w, "%s}\n", g.Indent)
+	g.newline(w)
+
+	g.makeIndent(w)
+	g.Fgen(w, "@SafeVarargs")
+	g.Fgenf(w, "\n%sstatic Map<String, Object> JObject(java.util.Map.Entry<String, Object> ...entries) {\n", g.Indent)
+	g.Indented(func() {
+		g.Fgenf(w, "%svar map = new HashMap<String, Object>();\n", g.Indent)
+		g.Fgenf(w, "%sfor (var entry : entries)  {  map.put(entry.getKey(), entry.getValue()); }\n", g.Indent)
+		g.Fgenf(w, "%sreturn map;\n", g.Indent)
+	})
+	g.Fgenf(w, "%s}\n", g.Indent)
+	g.newline(w)
+
+	g.Fgenf(w, "\n%sstatic java.util.Map.Entry<String, Object> JProperty(String key, Object value) {\n", g.Indent)
+	g.Indented(func() {
+		g.Fgenf(w, "%sreturn java.util.Map.entry(key, value);\n", g.Indent)
+	})
+	g.Fgenf(w, "%s}\n", g.Indent)
+	g.newline(w)
+
+	g.Fgenf(w, "\n%sObject[] JArray(Object ...items) {\n", g.Indent)
+	g.Indented(func() {
+		g.Fgenf(w, "%sreturn items;\n", g.Indent)
+	})
+	g.Fgenf(w, "%s}\n", g.Indent)
+	g.newline(w)
+}
+
 // genPostamble closes the method and the class and declares stack output statements.
 func (g *generator) genPostamble(w io.Writer, nodes []pcl.Node) {
 	g.Indented(func() {
 		g.Fprintf(w, "%s}\n", g.Indent)
 		if containsFunctionCall("readDir", nodes) {
 			g.generateReadDirMethod(w)
+		}
+
+		if containsFunctionCall("toJSON", nodes) {
+			g.generateJsonMethods(w)
 		}
 	})
 	g.Fprint(w, "}\n")
