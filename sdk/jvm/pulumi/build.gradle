@@ -76,7 +76,7 @@ sourceSets {
     main {
         proto {
             // In addition to the default 'src/main/proto'
-            srcDir "$rootDir/../proto"
+            srcDir "$rootDir/../../pulumi/sdk/proto"
         }
         java {
             srcDirs "src/main/java"
