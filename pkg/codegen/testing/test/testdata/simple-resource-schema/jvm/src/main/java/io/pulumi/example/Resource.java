@@ -21,6 +21,12 @@ public class Resource extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getBar() {
         return this.bar;
     }
+    @Export(name="baz", type=String.class, parameters={})
+    private Output</* @Nullable */ String> baz;
+
+    public Output</* @Nullable */ String> getBaz() {
+        return this.baz;
+    }
 
     /**
      *
@@ -55,7 +61,8 @@ public class Resource extends io.pulumi.resources.CustomResource {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .additionalSecretOutputs(List.of(
-                "bar"
+                "bar",
+                "baz"
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

@@ -27,6 +27,7 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v2
+      - run: make submodule_update
       - name: Set up JDK 11
         uses: actions/setup-java@v2
         with:
@@ -89,6 +90,7 @@ jobs:
         - eks
     steps:
       - uses: actions/checkout@v2
+      - run: make submodule_update
       - name: Set up JDK 11
         uses: actions/setup-java@v2
         with:
@@ -148,7 +150,8 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.event.pull_request.base.ref }}
-      - name: Build old JVM SDK provider
+      - run: make submodule_update
+      - name: Build JVM SDK provider
         continue-on-error: true
         run: make provider.${PROVIDER}.install
         env:
@@ -197,6 +200,7 @@ jobs:
         - eks-minimal
     steps:
       - uses: actions/checkout@v2
+      - run: make submodule_update
       - name: Set up JDK 11
         uses: actions/setup-java@v2
         with:
@@ -260,6 +264,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: ${{ env.PR_COMMIT_SHA }}
+      - run: make submodule_update
       - name: Lint ${{ matrix.directory }}
         run: |
           cd ${{ matrix.directory }} && golangci-lint run -c ../.golangci.yml
@@ -283,6 +288,7 @@ jobs:
         - random
     steps:
       - uses: actions/checkout@v2
+      - run: make submodule_update
       - name: Set up JDK 11
         uses: actions/setup-java@v2
         with:
@@ -309,6 +315,7 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v2
+      - run: make submodule_update
       - name: Set up JDK 11
         uses: actions/setup-java@v2
         with:
