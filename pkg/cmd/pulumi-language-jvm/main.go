@@ -421,7 +421,8 @@ func (host *jvmLanguageHost) InstallDependencies(req *pulumirpc.InstallDependenc
 	}
 	defer closer.Close()
 
-	cmd := exec.Command(host.exec.cmd, host.exec.buildArgs...) // nolint: gas // intentionally running dynamic program name.
+	// intentionally running dynamic program name.
+	cmd := exec.Command(host.exec.cmd, host.exec.buildArgs...) // nolint: gas
 	cmd.Stdout = stdout
 	cmd.Stderr = stderr
 
