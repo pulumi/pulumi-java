@@ -62,7 +62,7 @@ func TestGenerateProgram(t *testing.T) {
 		}
 
 		outputFile := filepath.Join(outputDir, "MyStack.java")
-		err = ioutil.WriteFile(outputFile, compiledFile, 0644)
+		err = ioutil.WriteFile(outputFile, compiledFile, 0600)
 		assert.Nilf(t, err, "Could not write compiled Java file %s", outputFile)
 		t.Logf("Written compiled file %s", outputFile)
 	}
@@ -91,7 +91,7 @@ func compileSingleFile(name string, t *testing.T) {
 			}
 
 			outputFile := filepath.Join(outputDir, "MyStack.java")
-			err = ioutil.WriteFile(outputFile, compiledFile, 0644)
+			err = ioutil.WriteFile(outputFile, compiledFile, 0600)
 			assert.Nilf(t, err, "Could not write compiled Java file %s", outputFile)
 			t.Logf("Written compiled file %s", outputFile)
 		}
@@ -100,4 +100,8 @@ func compileSingleFile(name string, t *testing.T) {
 
 func TestAwsStaticWebsite(t *testing.T) {
 	compileSingleFile("aws-s3-folder.pp", t)
+}
+
+func TestSimpleInvokeWithRange(t *testing.T) {
+	compileSingleFile("simple-invoke-with-range.pp", t)
 }
