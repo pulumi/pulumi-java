@@ -142,7 +142,7 @@ public class App {
 
     private static Output<String> getSASToken(Output<String> storageAccountName, Output<String> storageContainerName,
                                               Output<String> blobName, Output<String> resourceGroupName) {
-        var blobSAS = Output.tuple(resourceGroupName, storageAccountName, storageContainerName).applyFuture(t ->
+        var blobSAS = Output.tuple(resourceGroupName, storageAccountName, storageContainerName).apply(t -> Output.of(
                 ListStorageAccountServiceSAS.invokeAsync(
                         ListStorageAccountServiceSASArgs.builder().resourceGroupName(t.t1)
                                 .accountName(t.t2)
@@ -157,7 +157,7 @@ public class App {
                                 .contentDisposition("inline")
                                 .contentEncoding("deflate")
                                 .build(),
-                        InvokeOptions.Empty));
+                        InvokeOptions.Empty)));
         var token = blobSAS.applyValue(ListStorageAccountServiceSASResult::getServiceSasToken);
         return Output.format("https://%s.blob.core.windows.net/%s/%s?%s", storageAccountName, storageContainerName, blobName, token);
     }
