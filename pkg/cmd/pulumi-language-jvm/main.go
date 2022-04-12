@@ -107,6 +107,7 @@ func main() {
 
 type jvmExecutor struct {
 	cmd        string
+	buildArgs  []string
 	runArgs    []string
 	pluginArgs []string
 }
@@ -405,6 +406,31 @@ func (host *jvmLanguageHost) GetPluginInfo(ctx context.Context, req *pbempty.Emp
 
 func (host *jvmLanguageHost) InstallDependencies(req *pulumirpc.InstallDependenciesRequest,
 	server pulumirpc.LanguageRuntime_InstallDependenciesServer) error {
+
+	// Executor may not support the build command (for example, jar executor).
+	if host.exec.buildArgs == nil {
+		logging.V(5).Infof("InstallDependencies(Directory=%s): skipping", req.Directory)
+		return nil
+	}
+
+	logging.V(5).Infof("InstallDependencies(Directory=%s): starting", req.Directory)
+
+	closer, stdout, stderr, err := rpcutil.MakeStreams(server, req.IsTerminal)
+	if err != nil {
+		return err
+	}
+	defer closer.Close()
+
+	cmd := exec.Command(host.exec.cmd, host.exec.buildArgs...) // nolint: gas // intentionally running dynamic program name.
+	cmd.Stdout = stdout
+	cmd.Stderr = stderr
+
+	if err := runCommand(cmd); err != nil {
+		logging.V(5).Infof("InstallDependencies(Directory=%s): failed", req.Directory)
+		return err
+	}
+
+	logging.V(5).Infof("InstallDependencies(Directory=%s): done", req.Directory)
 	return nil
 }
 
@@ -467,8 +493,9 @@ func resolveExecutor(exec string) (*jvmExecutor, error) {
 
 func newGradleExecutor(cmd string) (*jvmExecutor, error) {
 	return &jvmExecutor{
-		cmd:     cmd,
-		runArgs: []string{"run", "--console=plain"},
+		cmd:       cmd,
+		buildArgs: []string{"build", "--console=plain"},
+		runArgs:   []string{"run", "--console=plain"},
 		pluginArgs: []string{
 			"-q", // must first due to a bug https://github.com/gradle/gradle/issues/5098
 			"run", "--console=plain",
@@ -480,8 +507,9 @@ func newGradleExecutor(cmd string) (*jvmExecutor, error) {
 
 func newMavenExecutor(cmd string) (*jvmExecutor, error) {
 	return &jvmExecutor{
-		cmd:     cmd,
-		runArgs: []string{"--no-transfer-progress", "compile", "exec:java"},
+		cmd:       cmd,
+		buildArgs: []string{"--no-transfer-progress", "compile"},
+		runArgs:   []string{"--no-transfer-progress", "compile", "exec:java"},
 		pluginArgs: []string{
 			"--quiet", "--no-transfer-progress", "compile", "exec:java",
 			"-DmainClass=io.pulumi.bootstrap.internal.Main",
@@ -493,6 +521,7 @@ func newMavenExecutor(cmd string) (*jvmExecutor, error) {
 func newJarExecutor(cmd string, path string) (*jvmExecutor, error) {
 	return &jvmExecutor{
 		cmd:        cmd,
+		buildArgs:  nil, // not supported
 		runArgs:    []string{"-jar", filepath.Clean(path)},
 		pluginArgs: []string{"-cp", filepath.Clean(path), "io.pulumi.bootstrap.internal.Main", "packages"},
 	}, nil
