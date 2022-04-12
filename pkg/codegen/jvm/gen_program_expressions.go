@@ -701,7 +701,6 @@ func (g *generator) genObjectConsExpressionWithTypeName(
 				lit := item.Key.(*model.LiteralValueExpression)
 				key := toLowerCase(lit.Value.AsString())
 				attributeType := objectProperties[key]
-				//g.Fgenf(w, "// %s of type (%s)\n", makeValidIdentifier(key), attributeType)
 				g.makeIndent(w)
 				g.typedObjectExprScope(attributeType, func() {
 					g.Fgenf(w, ".%s(%.v)", key, item.Value)
@@ -805,6 +804,7 @@ func (g *generator) GenTemplateJoinExpression(w io.Writer, expr *model.TemplateJ
 	g.genNYI(w, "TemplateJoinExpression")
 }
 
+// Generates an array of elements where each element is of type Union<Object1, Object2, ..., ObjectN>
 func (g *generator) genArrayOfUnion(w io.Writer, union *schema.UnionType, exprs []*model.ObjectConsExpression) {
 	if len(exprs) > 0 {
 		if len(exprs) == 1 {
@@ -841,6 +841,7 @@ func (g *generator) genArrayOfUnion(w io.Writer, union *schema.UnionType, exprs 
 	}
 }
 
+// Returns whether the Union type has elements only of type Object
 func unionOfObjectTypes(union *schema.UnionType) bool {
 	for _, unionType := range union.ElementTypes {
 		if !isObjectType(unionType) {
@@ -850,6 +851,7 @@ func unionOfObjectTypes(union *schema.UnionType) bool {
 	return true
 }
 
+// GenTupleConsExpression generates a list of expressions
 func (g *generator) GenTupleConsExpression(w io.Writer, expr *model.TupleConsExpression) {
 	// Make special case for Array<Union<ObjectType1, ObjectType2, ..., ObjectTypeN>>
 	switch g.currentResourcePropertyType.(type) {
